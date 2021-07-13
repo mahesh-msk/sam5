@@ -1,0 +1,49 @@
+target "photon" with source requirements
+
+// Tentative sur photon...
+location "http://download.eclipse.org/releases/photon" {
+	
+	// Use 2019-03 because of bug 475833 : https://bugs.eclipse.org/bugs/show_bug.cgi?id=475833
+	// Removing TableTreeItem : https://help.eclipse.org/2021-06/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fporting%2Fremovals.html
+	
+	
+	org.eclipse.rcp.feature.group
+	org.eclipse.ui.workbench
+	
+	org.eclipse.emf.databinding.feature.group
+	org.eclipse.ui.cheatsheets
+	org.eclipse.help.ui
+	org.eclipse.compare
+	//org.eclipse.emf.common.feature.group
+	//org.eclipse.emf.ecore.feature.group
+	org.eclipse.jdt.junit.runtime
+	org.eclipse.equinox.executable.feature.group
+	org.eclipse.equinox.ds
+		
+	
+	
+}
+
+// Add support for java 11 (removed javax.annotation)...$
+// See ; https://download.eclipse.org/tools/orbit/downloads/
+location "http://download.eclipse.org/tools/orbit/downloads/drops/R20180606145124/repository" {
+	javax.annotation
+	javax.xml.bind
+}
+
+location "http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest/" {
+	org.eclipse.e4.tools.spies.feature.feature.group
+}
+
+
+// Add delta pack
+location "http://download.eclipse.org/eclipse/updates/4.8" {
+	org.eclipse.equinox.sdk.feature.group
+}
+
+// Add the new E4 test platform from opcoach website
+//location "https://dl.bintray.com/opcoach/E4Tester/" {
+/*location "https://www.opcoach.com/repository/2021-06" {
+   com.opcoach.e4tester.feature.feature.group
+   com.opcoach.e4.preferences.feature.feature.group
+} */
