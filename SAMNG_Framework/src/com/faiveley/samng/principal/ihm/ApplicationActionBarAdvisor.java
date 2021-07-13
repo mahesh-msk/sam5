@@ -448,7 +448,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 	 * @param coolBar
 	 */
 	protected final void fillCoolBar(final ICoolBarManager coolBar) {
-		getActionBarConfigurer().getCoolBarManager().removeAll();
+		//getActionBarConfigurer().getCoolBarManager().removeAll();
 		IToolBarManager toolbar1 = new ToolBarManager(SWT.FLAT | SWT.RIGHT);
 		toolbar1.add(this.ouvrirAction);
 		toolbar1.add(this.saveRemarksAction);
