@@ -169,8 +169,8 @@ public class RupturesLegendeGUI extends Canvas implements IGrapheCursorListener 
 							x=text.length()*6;
 							Display display = RupturesLegendeGUI.this.drawingAreaComposite.getDisplay(); 
 
-							int x1=e.display.msg.x+10;
-							int y1=e.display.msg.y+18;
+							int x1=e.display.getClientArea().x+10;
+							int y1=e.display.getClientArea().y+18;
 							int x2=text.length()*6;
 							int y2=dims[3]+5;
 
