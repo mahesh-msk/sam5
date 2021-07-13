@@ -29,6 +29,7 @@ location "http://download.eclipse.org/releases/photon" {
 location "http://download.eclipse.org/tools/orbit/downloads/drops/R20180606145124/repository" {
 	javax.annotation
 	javax.xml.bind
+	javax.xml.stream
 }
 
 location "http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest/" {
