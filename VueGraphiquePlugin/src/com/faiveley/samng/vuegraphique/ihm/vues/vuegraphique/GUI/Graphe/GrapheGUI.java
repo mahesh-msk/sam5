@@ -313,7 +313,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 						this.label = new Label(this.tip, SWT.NONE);
 						this.label.setBackground(display.getSystemColor(SWT.COLOR_WHITE));
 						this.label.setText(libelle);
-						this.tip.setBounds(e.display.msg.x + 15,e.display.msg.y,larg,longu);
+						this.tip.setBounds(e.display.getClientArea().x + 15,e.display.getClientArea().y,larg,longu);
 						this.tip.setVisible(true);
 						InfosBullesRefZero.getInstance().setAffiche(true);
 					}else{
@@ -336,7 +336,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 								this.label = new Label(this.tip, SWT.NONE);
 								this.label.setBackground(display.getSystemColor(SWT.COLOR_WHITE));
 								this.label.setText(libelle);
-								this.tip.setBounds(e.display.msg.x + 15,e.display.msg.y,larg,longu);
+								this.tip.setBounds(e.display.getClientArea().x + 15,e.display.getClientArea().y,larg,longu);
 								this.tip.setVisible(true);	
 								InfosBullesMarqueurs.getInstance().setNumeroMarker(i);
 								break;
