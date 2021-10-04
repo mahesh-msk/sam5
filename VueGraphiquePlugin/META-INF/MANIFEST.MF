@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: VueGraphiquePlugin Plug-in
+Bundle-SymbolicName: VueGraphiquePlugin; singleton:=true
+Bundle-Version: 5.5.11.111
+Bundle-Activator: com.faiveley.samng.vuegraphique.ihm.ActivatorVueGraphique
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ SAMNG
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,
+ lib/FiltresGraphiqueXMLParser.jar,
+ lib/xbean.jar,
+ lib/ConfigVueGraphiqueXMLParser.jar
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: Faiveley Transport
+

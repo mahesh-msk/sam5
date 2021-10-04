@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="liste">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="marqueur"/>
+        <xs:element minOccurs="0" maxOccurs="1" ref="marqueur-parcours"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="marqueur-parcours" type="xs:string"></xs:element>
+  <xs:element name="marqueur">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.marqueur"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.marqueur">
+    <xs:attribute name="nom" use="required" type="xs:string"/>
+    <xs:attribute name="commentaire" use="required" type="xs:string"/>
+    <xs:attribute name="idMessage" use="required" type="xs:int"/>
+  </xs:attributeGroup>
+
+    
+</xs:schema>

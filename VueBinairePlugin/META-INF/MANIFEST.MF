@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: VueBinairePlugin Plug-in
+Bundle-SymbolicName: VueBinairePlugin; singleton:=true
+Bundle-Version: 5.5.11.111
+Bundle-Activator: com.faiveley.samng.vuebinaire.ihm.ActivatorVueBinaire
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ SAMNG
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: Faiveley Transport

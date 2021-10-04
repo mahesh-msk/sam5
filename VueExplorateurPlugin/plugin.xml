@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="SAMNG_Framework.DataViewsCategory"
+            class="com.faiveley.samng.vueexplorateur.ihm.vue.VueExplorateurFichiersDeParcours"
+            icon="icons/filenav_nav.gif"
+            id="SAMNG.Vue.VueExplorateur"
+            name="%data_view_descr">
+      </view>
+   </extension>
+
+</plugin>

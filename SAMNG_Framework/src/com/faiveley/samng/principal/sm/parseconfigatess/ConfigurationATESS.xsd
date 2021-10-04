@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by PHILIPPE CHRISTIAN (FAIVELEY TRANSPORT TOURS SAS) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" elementFormDefault="qualified">
+	<xs:element name="configuration-atess">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="fichier-description"/>
+				<xs:element ref="liste-identifiants-etendus"/>
+				<xs:element ref="liste-maximum-compteur"/>
+				<xs:element ref="table-evenements-variables"/>
+				<xs:element ref="signature"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="fichier-description">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.fichier-description"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.fichier-description">
+		<xs:attribute name="xml-associe" type="xs:string" use="required"/>
+	</xs:attributeGroup>
+	<xs:element name="liste-identifiants-etendus">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="identifiant" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="liste-maximum-compteur">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="compteur-temps"/>
+				<xs:element ref="compteur-distance"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="table-evenements-variables">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="evenement-variables" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="signature">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.signature"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.signature">
+		<xs:attribute name="CRC" type="xs:string" use="required"/>
+	</xs:attributeGroup>
+	<xs:element name="identifiant">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.identifiant"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.identifiant">
+		<xs:attribute name="code" type="xs:string" use="required"/>
+		<xs:attribute name="nb_octets" type="xs:int" use="required"/>
+	</xs:attributeGroup>
+	<xs:element name="compteur-temps">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.compteur-temps"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.compteur-temps">
+		<xs:attribute name="max" type="xs:int" use="required"/>
+	</xs:attributeGroup>
+	<xs:element name="compteur-distance">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.compteur-distance"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.compteur-distance">
+		<xs:attribute name="max" type="xs:int" use="required"/>
+	</xs:attributeGroup>
+	<xs:element name="evenement-variables">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="liste-variables-atess" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="entree-logique" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attributeGroup ref="attlist.evenement-variables"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.evenement-variables">
+		<xs:attribute name="code-evt" type="xs:int" use="required"/>
+		<xs:attribute name="longueur" type="xs:int" use="required"/>
+	</xs:attributeGroup>
+	<xs:element name="liste-variables-atess">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="variable-atess" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="entree-logique">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.entree-logique"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.entree-logique">
+		<xs:attribute name="code-entree-logique" type="xs:int" use="required"/>
+		<xs:attribute name="valeur-entree-logique" default="false">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="true"/>
+					<xs:enumeration value="false"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:element name="variable-atess">
+		<xs:complexType>
+			<xs:attributeGroup ref="attlist.variable-atess"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="attlist.variable-atess">
+		<xs:attribute name="code-var" type="xs:int" use="required"/>
+	</xs:attributeGroup>
+</xs:schema>

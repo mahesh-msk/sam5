@@ -1,0 +1,14 @@
+<?xml encoding="UTF-8"?>
+<!ELEMENT liste-segments (liste-segments-temps,
+                         liste-segments-distance)>
+<!ELEMENT liste-segments-temps (segment-temps*)>     
+<!ELEMENT liste-segments-distance (segment-distance*)> 
+<!ELEMENT segment-temps EMPTY>   
+<!ATTLIST segment-temps
+  numero CDATA #REQUIRED
+  temps CDATA #REQUIRED >   
+  <!ELEMENT segment-distance EMPTY>   
+<!ATTLIST segment-distance
+  numero CDATA #REQUIRED
+  diametre CDATA #REQUIRED >  
+           

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="SAMNG_Framework.DataViewsCategory"
+            class="com.faiveley.samng.vuetabulaire.ihm.vues.vuetabulaire.VueTabulaire"
+            icon="icons/menu/appli_vue_tabulaire.png"
+            id="SAMNG.Vue.Tabulaire"
+            name="%data_view_descr">
+      </view>
+      <view
+            allowMultiple="false"
+            category="SAMNG_Framework.FiltresCategory"
+            class="com.faiveley.samng.vuetabulaire.ihm.vues.vuefiltre.VueTabulaireFiltre"
+            fastViewWidthRatio="0.75"
+            icon="icons/vueTabulaire/vue_tabulaire_filtre.png"
+            id="SAMNG.Vue.Filtre.TabularVueFiltre"
+            name="%data_tabular_filter_view_descr"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.faiveley.samng.vuetabulaire.ihm.perspectives.PerspectiveVueTabulaire"
+            id="VueTabulairePlugin.perspectiveVueTabulaire"
+            name="%perspective.name.0"/>
+   </extension>
+   <!--<extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension targetID="VueTabulairePlugin.perspectiveExtension1">
+         <view
+               closeable="true"
+               id="SAMNG.Vue.Tabulaire"
+               moveable="false"
+               relationship="stack"
+               showTitle="true"
+               standalone="true"
+               visible="true"/>
+      </perspectiveExtension>
+   </extension>
+-->
+</plugin>

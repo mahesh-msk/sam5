@@ -1,0 +1,7 @@
+CRC du message incorrect : 0x4968; Numéro de ligne dans la vue liste: 2; CRC enregistré: 0x5185
+Longueur de message invalide.; codeFinBloc attendu.; Numéro de ligne dans la vue liste: 4
+Code de bloc de départ invalide; Numéro de ligne dans la vue liste: 16
+Code de bloc de départ invalide; Numéro de ligne dans la vue liste: 17
+Code de bloc de départ invalide; Numéro de ligne dans la vue liste: 18
+Longueur de message invalide.; codeContinueFinBloc attendu.; Numéro de ligne dans la vue liste: 35
+BadEventCodeException: ID d'événement invalide trouvé dans le message; Id de l'événement:0; Numéro de ligne dans la vue liste: 36

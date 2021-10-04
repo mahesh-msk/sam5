@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="SAMNG_Framework.DataViewsCategory"
+            class="com.faiveley.samng.vuebinaire.ihm.vues.VueBinaire"
+            icon="icons/menu/appli_vue_binaire.png"
+            id="SAMNG.Vue.Binaire"
+            name="%data_view_descr">
+      </view>
+   </extension>
+
+</plugin>

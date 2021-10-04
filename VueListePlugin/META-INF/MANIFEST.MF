@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: VueListePlugin Plug-in
+Bundle-SymbolicName: VueListePlugin;singleton:=true
+Bundle-Version: 5.5.11.111
+Bundle-Activator: com.faiveley.samng.vueliste.ihm.ActivatorVueListe
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ SAMNG,
+ KVBDecoderPlugin
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib/FiltresListeXMLParser.jar,
+ lib/xbean.jar,
+ .,
+ lib/log4j-1.2.8.jar,
+ lib/ConfigVuesXMLParser.jar
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: Faiveley Transport

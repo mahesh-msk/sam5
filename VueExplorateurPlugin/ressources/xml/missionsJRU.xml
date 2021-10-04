@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="missions.xsd">
+	<ListeMission>
+		<Mission id="mission1" numero="1">
+			<DateDebut>2001-12-01T12:00:00</DateDebut>
+			<DateFin>2001-12-04T12:00:00</DateFin>
+			<OffsetDebut>0</OffsetDebut>
+			<OffsetFin>500</OffsetFin>
+			<IdMessageDebut>1</IdMessageDebut>
+		</Mission>
+		<Mission id="mission2" numero="2">
+			<DateDebut>2001-12-04T12:00:00</DateDebut>
+			<DateFin>2001-12-31T12:00:00</DateFin>
+			<OffsetDebut>501</OffsetDebut>
+			<OffsetFin>1000</OffsetFin>
+			<IdMessageDebut>101</IdMessageDebut>
+		</Mission>
+	</ListeMission>
+	<ListeRegoupementTemps>
+		<RegroupementTemps id="idvalue1" numero="1">
+			<Mois>2001-12-01T00:00:00</Mois>
+			<ListeMission>
+				<Mission reference="mission1" />
+				<Mission reference="mission2" />
+			</ListeMission>
+		</RegroupementTemps>
+	</ListeRegoupementTemps>
+</document>

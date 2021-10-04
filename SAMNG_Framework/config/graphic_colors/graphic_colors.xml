@@ -1,0 +1,36 @@
+<!--
+22/11/2007
+Colors pallet for graphic view signals
+
+======================================================
+Rules :
+ - one color is defined with :
+      "colorKey = redCode, greenCode, blueCode"
+      (example : COLOR_1 = 0, 255, 255 for "cyan")
+ - COLOR_TIME_BREAKS must be defined for time breaks
+ - COLOR_DISTANCE_BREAKS must be defined for distance breaks
+ - COLOR_i , i=1..n , are defined for signals colors
+ - n must be greater than max count of signals per graphic
+ - all colors must be defined from 1 to n
+ - all colors pallet must be single
+======================================================
+-->
+<liste_couleurs xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="graphic_colors.xsd">
+
+	<couleur nom = "COLOR_1" redCode="0" greenCode="0" blueCode="255"/> <!-- blue -->
+	<couleur nom = "COLOR_2" redCode="0" greenCode="255" blueCode="255"/> <!-- cyan -->
+	<couleur nom = "COLOR_3" redCode="150" greenCode="0" blueCode="0"/> <!-- dark red -->
+	<couleur nom = "COLOR_4" redCode="255" greenCode="0" blueCode="0"/> <!-- red -->
+	<couleur nom = "COLOR_5" redCode="0" greenCode="128" blueCode="0"/> <!-- dark green -->
+	<couleur nom = "COLOR_6" redCode="0" greenCode="255" blueCode="0"/> <!-- green -->
+	<couleur nom = "COLOR_7" redCode="170" greenCode="80" blueCode="255"/> <!-- violet -->
+	<couleur nom = "COLOR_8" redCode="255" greenCode="0" blueCode="255"/> <!-- magenta -->
+	<couleur nom = "COLOR_9" redCode="240" greenCode="110" blueCode="0"/> <!-- dark orange -->
+	<couleur nom = "COLOR_10" redCode="255" greenCode="255" blueCode="0"/> <!-- yellow -->
+	<couleur nom = "COLOR_11" redCode="0" greenCode="0" blueCode="150"/> <!-- dark blue -->
+	<couleur nom = "COLOR_12" redCode="255" greenCode="175" blueCode="175"/> <!-- pink -->
+	<couleur nom = "COLOR_13" redCode="255" greenCode="200" blueCode="0"/> <!-- orange -->
+	<couleur nom = "COLOR_14" redCode="1" greenCode="1" blueCode="1"/> <!-- black -->
+	<couleur nom = "COLOR_15" redCode="90" greenCode="90" blueCode="90"/> <!-- dark grey -->
+	<couleur nom = "COLOR_16" redCode="230" greenCode="230" blueCode="230"/> <!-- light grey -->
+</liste_couleurs>

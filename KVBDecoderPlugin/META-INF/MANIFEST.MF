@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: KVBDecoderPlugin Plug-in
+Bundle-SymbolicName: KVBDecoderPlugin;singleton:=true
+Bundle-Version: 5.5.11.111
+Bundle-Activator: com.faiveley.kvbdecoder.kvbdecoderplugin.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: com.faiveley.kvbdecoder.decoder,
+ com.faiveley.kvbdecoder.exception,
+ com.faiveley.kvbdecoder.exception.decoder,
+ com.faiveley.kvbdecoder.exception.model.ip,
+ com.faiveley.kvbdecoder.exception.model.marker,
+ com.faiveley.kvbdecoder.exception.model.train,
+ com.faiveley.kvbdecoder.exception.model.variable,
+ com.faiveley.kvbdecoder.exception.xml,
+ com.faiveley.kvbdecoder.kvbdecoderplugin,
+ com.faiveley.kvbdecoder.model.atess.event,
+ com.faiveley.kvbdecoder.model.atess.variable,
+ com.faiveley.kvbdecoder.model.kvb.event,
+ com.faiveley.kvbdecoder.model.kvb.ip,
+ com.faiveley.kvbdecoder.model.kvb.marker,
+ com.faiveley.kvbdecoder.model.kvb.train,
+ com.faiveley.kvbdecoder.model.kvb.variable,
+ com.faiveley.kvbdecoder.model.kvb.xml,
+ com.faiveley.kvbdecoder.services.decoder,
+ com.faiveley.kvbdecoder.services.json,
+ com.faiveley.kvbdecoder.services.loader,
+ com.faiveley.kvbdecoder.services.message,
+ com.faiveley.kvbdecoder.services.xml,
+ com.faiveley.kvbdecoder.services.xml.sam,
+ org.json
+Bundle-Vendor: Faiveley Transport
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,
+ lib/org.json.jar

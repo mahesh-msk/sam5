@@ -1,0 +1,12 @@
+<!ELEMENT liste(marqueur*,marqueur-parcours?)>
+<!ELEMENT marqueur EMPTY>
+<!ATTLIST marqueur
+	nom CDATA #REQUIRED
+	commentaire CDATA #REQUIRED
+	idMessage CDATA #REQUIRED
+>
+<!ELEMENT marqueur-parcours CDATA >
+
+
+
+

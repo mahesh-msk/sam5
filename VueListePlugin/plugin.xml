@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="SAMNG_Framework.DataViewsCategory"
+            class="com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe"
+            icon="icons/menu/appli_vue_liste.png"
+            id="SAMNG.Vue.Liste"
+            name="%data_view_descr"/>
+      <view
+            allowMultiple="false"
+            category="SAMNG_Framework.FiltresCategory"
+            class="com.faiveley.samng.vueliste.ihm.vues.vuefiltre.VueListeFiltre"
+            fastViewWidthRatio="0.75"
+            icon="icons/vueListe/vue_liste_filtre.png"
+            id="SAMNG.Vue.Filtre.VueListeFiltre"
+            name="%data_list_filter_view_descr"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.faiveley.samng.vueliste.ihm.perspectives.PerspectiveVueListe"
+            id="VueListePlugin.perspectiveVueListe"
+            name="%perspective.name.0"/>
+   </extension>
+   
+   <!--<extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension targetID="VueListePlugin.perspectiveExtension4">
+         <view
+               closeable="true"
+               id="SAMNG.Vue.Liste"
+               moveable="false"
+               relationship="stack"
+               showTitle="true"
+               standalone="true"
+               visible="true"/>
+      </perspectiveExtension>
+     
+   </extension>
+ -->
+</plugin>

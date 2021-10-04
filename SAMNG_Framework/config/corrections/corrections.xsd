@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="liste-segments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="liste-segments-temps"/>
+        <xs:element ref="liste-segments-distance"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="liste-segments-temps">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="segment-temps"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="liste-segments-distance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="segment-distance"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="segment-temps">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.segment-temps"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.segment-temps">
+    <xs:attribute name="numero" use="required" type="xs:int"/>
+    <xs:attribute name="temps" use="required" type="xs:dateTime"/>
+  </xs:attributeGroup>
+  <xs:element name="segment-distance">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.segment-distance"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.segment-distance">
+    <xs:attribute name="numero" use="required" type="xs:int"/>
+    <xs:attribute name="diametre" use="required" type="xs:int"/>
+  </xs:attributeGroup>
+</xs:schema>

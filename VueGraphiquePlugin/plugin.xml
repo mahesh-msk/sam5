@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="SAMNG_Framework.DataViewsCategory"
+            class="com.faiveley.samng.vuegraphique.ihm.vues.vuegraphique.VueGraphique"
+            icon="icons/menu/appli_vue_graphique.png"
+            id="SAMNG.Vue.Graphique"
+            name="%data_view_descr">
+      </view>
+      <view
+            allowMultiple="false"
+            category="SAMNG_Framework.FiltresCategory"
+            class="com.faiveley.samng.vuegraphique.ihm.vues.vuefiltre.VueGraphiqueFiltre"
+            fastViewWidthRatio="0.75"
+            icon="icons/vueGraphique/vue_graphique_filtre.png"
+            id="SAMNG.Vue.Filtre.GraphiqueVueFiltre"
+            name="%data_graphic_filter_view_descr"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.faiveley.samng.vuegraphique.ihm.perspectives.PerspectiveVueGraphique"
+            id="VueGraphiquePlugin.perspectiveVueGraphique"
+            name="%perspective.name.0"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+          <category
+          id="SAMNG_Framework.vueGraphique"
+          name="%category.name.0"/>
+    <command
+          description="%command.description.0"
+          id="SAMNG.previousZoom"
+          name="%command.name.0"/>
+   
+   </extension>
+
+</plugin>
