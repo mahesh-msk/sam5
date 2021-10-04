@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.wabtec.sam5</groupId>
+	<artifactId>com.wabtec.sam5.parent</artifactId>
+	<version>5.5.11.111</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<tycho-version>2.5.0</tycho-version>
+		<e4TargetVersion>4.8.0-SNAPSHOT</e4TargetVersion>
+	</properties>
+
+
+	<profiles>
+
+		<!-- DO NOT CHANGE THE *ORDER* IN WHICH THESE PROFILES ARE DEFINED! -->
+		<profile>
+			<!-- This profile is used to test the build on macosx -->
+			<!-- To launch it use : mvn clean verify -P macosx -->
+			<id>macosx</id>
+		</profile>
+		<profile>
+			<!-- This profile is for build on windows (default profile) -->
+			<id>windows</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>VueMultimediaPlugin.win32.x86</module>
+			</modules>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- enable tycho build extension -->
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<compilerArgument>-warn:none</compilerArgument>
+					<compilerArgument>-err:none</compilerArgument>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<!-- <dependency-resolution> <optionalDependencies>ignore</optionalDependencies> 
+						</dependency-resolution> -->
+					<target>
+						<artifact>
+							<groupId>com.wabtec.sam5</groupId>
+							<artifactId>com.wabtec.sam5.tp</artifactId>
+							<version>${e4TargetVersion}</version>
+						</artifact>
+					</target>
+					<environments>
+						<!-- <environment> <os>macosx</os> <ws>cocoa</ws> <arch>x86_64</arch> 
+							</environment> -->
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<!-- <environment> <os>linux</os> <ws>gtk</ws> <arch>x86_64</arch> 
+							</environment> -->
+					</environments>
+				</configuration>
+			</plugin>
+
+
+	<!--  		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-toolchains-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>toolchain</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<toolchains>
+						<jdk>
+							<version>JavaSE-15</version>
+							<vendor>openjdk</vendor>
+						</jdk>
+					</toolchains>
+				</configuration>
+			</plugin>
+-->
+			<!-- Use this config to remove the pom files from delivery ! -->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+					</archive>
+				</configuration>
+			</plugin>
+
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.maven.plugins
+										</groupId>
+										<artifactId>
+											maven-toolchains-plugin
+										</artifactId>
+										<versionRange>
+											[1.1,)
+										</versionRange>
+										<goals>
+											<goal>toolchain</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<!-- the modules that should be built together -->
+	<modules>
+		<module>com.wabtec.sam5.tp</module>
+		<module>SAMNG_Framework</module>
+		<module>KVBDecoderPlugin</module>
+		<module>VueBinairePlugin</module>
+		<module>VueExplorateurPlugin</module>
+		<module>VueGraphiquePlugin</module>
+		<module>VueMultimediaPlugin</module>
+		<module>VueTabulairePlugin</module>
+		<module>com.wabtec.sam5.feature</module>
+		<module>com.wabtec.sam5.repository</module>
+
+
+	</modules>
+
+</project>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="SAM5" uid="SAM5" id="SAMNG.product" application="SAMNG.application" version="5.5.11" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/SAMNG_Framework/apropos.gif"/>
+   </aboutInfo>
+
+   <configIni use="default" path="/SAMNG_Framework/config.ini">
+   </configIni>
+
+   <launcherArgs>
+   </launcherArgs>
+
+   <windowImages i16="/SAMNG_Framework/icons/SAM_NG_wind16.png" i32="/SAMNG_Framework/icons/SAM_NG_wind32.png" i48="/SAMNG_Framework/icons/SAM_NG_wind48.png" i64="/SAMNG_Framework/icons/SAM_NG_wind64.png" i128="/SAMNG_Framework/icons/SAM_NG_wind128.png"/>
+
+   <splash
+      location="SAMNG"
+      startupProgressRect="270,266,100,12"
+      startupMessageRect="10,262,250,20"
+      startupForegroundColor="FFFFFF" />
+   <launcher name="SAM5">
+      <win useIco="true">
+         <ico path="/SAMNG_Framework/icons/SAM_NG_launcher.ico"/>
+         <bmp
+            winSmallHigh="/SAMNG_Framework/icons/sam-16x16-32.bmp"
+            winSmallLow="/SAMNG_Framework/icons/sam-16x16-8.bmp"
+            winMediumHigh="/SAMNG_Framework/icons/sam-32x32-32.bmp"
+            winMediumLow="/SAMNG_Framework/icons/sam-32x32-8.bmp"
+            winLargeHigh="/SAMNG_Framework/icons/sam-48x48-32.bmp"
+            winLargeLow="/SAMNG_Framework/icons/sam-48x48-8.bmp"/>
+      </win>
+   </launcher>
+
+   <vm>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</windows>
+   </vm>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="com.wabtec.sam5.feature"/>
+      <feature id="org.eclipse.e4.rcp"/>
+      <feature id="org.eclipse.emf.ecore"/>
+      <feature id="org.eclipse.emf.common"/>
+   </features>
+
+
+</product>
