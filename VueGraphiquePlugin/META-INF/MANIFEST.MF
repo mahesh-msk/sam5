@@ -7,7 +7,8 @@ Bundle-Activator: com.faiveley.samng.vuegraphique.ihm.ActivatorVueGraphique
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- SAMNG
+ SAMNG,
+ javax.xml.bind
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
  lib/FiltresGraphiqueXMLParser.jar,

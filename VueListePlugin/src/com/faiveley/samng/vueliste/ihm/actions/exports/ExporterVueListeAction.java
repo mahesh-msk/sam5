@@ -114,8 +114,10 @@ public class ExporterVueListeAction extends Action {
 			
 			TableTreeDetailViewer tableTreeDetailViewer = isKVB ? fctv.getTableTreeKVBDetailViewer() : fctv.getTableTreeDetailViewer();
 			
-			// La vue détaillée doit etre dépliée pour faire l'export			
-			tableTreeDetailViewer.expandAll();
+			// La vue détaillée doit etre dépliée pour faire l'export	
+			
+			// E34 : Revoir le expandALL
+			// tableTreeDetailViewer.expandAll();
 
 			String chaineExportVueDetaillee = creerChaineExportVueDetaillee(tableTreeDetailViewer);
 			
