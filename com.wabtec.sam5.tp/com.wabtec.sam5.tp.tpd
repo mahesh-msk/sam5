@@ -20,10 +20,19 @@ location "http://download.eclipse.org/releases/photon" {
 	org.eclipse.equinox.executable.feature.group
 	org.eclipse.equinox.ds
 		
-	
-	
 }
 
+location "https://archive.eclipse.org/technology/babel/update-site/R0.17.0/photon/" {
+	org.eclipse.babel.nls_eclipse_de.feature.group
+	org.eclipse.babel.nls_eclipse_es.feature.group
+	org.eclipse.babel.nls_eclipse_fr.feature.group
+	org.eclipse.babel.nls_eclipse_it.feature.group
+	org.eclipse.babel.nls_eclipse_nl.feature.group
+	org.eclipse.babel.nls_eclipse_pt.feature.group
+	org.eclipse.babel.nls_eclipse_tr.feature.group
+	org.eclipse.babel.nls_eclipse_zh.feature.group
+	
+}
 // Add support for java 11 (removed javax.annotation)...$
 // See ; https://download.eclipse.org/tools/orbit/downloads/
 location "http://download.eclipse.org/tools/orbit/downloads/drops/R20180606145124/repository" {

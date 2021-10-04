@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="photon" sequenceNumber="1626206352">
+<target name="photon" sequenceNumber="1633381056">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.rcp.feature.group" version="4.8.0.v20180611-0656"/>
@@ -14,6 +14,17 @@
       <unit id="org.eclipse.equinox.executable.feature.group" version="3.8.0.v20180518-2029"/>
       <unit id="org.eclipse.equinox.ds" version="1.5.100.v20171221-2204"/>
       <repository location="http://download.eclipse.org/releases/photon"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.babel.nls_eclipse_de.feature.group" version="4.8.0.v20190713101254"/>
+      <unit id="org.eclipse.babel.nls_eclipse_es.feature.group" version="4.8.0.v20190713101254"/>
+      <unit id="org.eclipse.babel.nls_eclipse_fr.feature.group" version="4.8.0.v20190713101254"/>
+      <unit id="org.eclipse.babel.nls_eclipse_it.feature.group" version="4.8.0.v20190713101254"/>
+      <unit id="org.eclipse.babel.nls_eclipse_nl.feature.group" version="4.8.0.v20190713101254"/>
+      <unit id="org.eclipse.babel.nls_eclipse_pt.feature.group" version="4.8.0.v20190713101254"/>
+      <unit id="org.eclipse.babel.nls_eclipse_tr.feature.group" version="4.8.0.v20190713101254"/>
+      <unit id="org.eclipse.babel.nls_eclipse_zh.feature.group" version="4.8.0.v20190713101254"/>
+      <repository location="https://archive.eclipse.org/technology/babel/update-site/R0.17.0/photon/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="javax.annotation" version="1.2.0.v201602091430"/>
