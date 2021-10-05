@@ -5,3 +5,5 @@ target/
 
 # remove bin directories
 bin/
+
+workspace/
