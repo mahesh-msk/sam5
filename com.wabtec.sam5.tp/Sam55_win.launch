@@ -14,8 +14,8 @@
     <setAttribute key="deselected_workspace_bundles">
         <setEntry value="VueMultimediaPlugin.win32.x86"/>
     </setAttribute>
-    <booleanAttribute key="includeOptional" value="true"/>
-    <stringAttribute key="location" value="${workspace_loc}/../runtime-SamNG"/>
+    <booleanAttribute key="includeOptional" value="false"/>
+    <stringAttribute key="location" value="C:\Users\interindep\opcoach\wabtec\AppDataTest\SAM_data\workspace"/>
     <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
         <listEntry value="org.eclipse.debug.ui.launchGroup.debug"/>
         <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
@@ -530,6 +530,7 @@
         <setEntry value="VueExplorateurPlugin@default:default"/>
         <setEntry value="VueGraphiquePlugin@default:default"/>
         <setEntry value="VueListePlugin@default:default"/>
+        <setEntry value="VueMultimediaPlugin.win32.x86_64@default:false"/>
         <setEntry value="VueMultimediaPlugin@default:default"/>
         <setEntry value="VueTabulairePlugin@default:default"/>
     </setAttribute>
