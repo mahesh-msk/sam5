@@ -14,28 +14,6 @@
 	</properties>
 
 
-	<profiles>
-
-		<!-- DO NOT CHANGE THE *ORDER* IN WHICH THESE PROFILES ARE DEFINED! -->
-		<profile>
-			<!-- This profile is used to test the build on macosx -->
-			<!-- To launch it use : mvn clean verify -P macosx -->
-			<id>macosx</id>
-		</profile>
-		<profile>
-			<!-- This profile is for build on windows (default profile) for windows 
-				32 bit x86 and x86_64 -->
-			<!-- To launch it use : mvn clean verify -->
-			<id>default</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<modules>
-				<module>VueMultimediaPlugin.win32.x86</module>
-			</modules>
-		</profile>
-	</profiles>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -70,11 +48,8 @@
 						</artifact>
 					</target>
 					<environments>
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
-							<arch>x86_64</arch>
-						</environment>
+						<!-- <environment> <os>macosx</os> <ws>cocoa</ws> <arch>x86_64</arch> 
+							</environment> -->
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
@@ -160,6 +135,9 @@
 		<module>VueTabulairePlugin</module>
 		<module>com.wabtec.sam5.feature</module>
 		<module>com.wabtec.sam5.repository</module>
+		<module>VueMultimediaPlugin.win32.x86</module>
+		<module>VueMultimediaPlugin.win32.x86_64</module>
+
 
 
 	</modules>
