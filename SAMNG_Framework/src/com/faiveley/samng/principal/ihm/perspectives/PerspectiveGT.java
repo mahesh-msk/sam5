@@ -64,7 +64,7 @@ public class PerspectiveGT implements IPerspectiveFactory {
 		layout.getViewLayout("SAMNG.Vue.Tabulaire").setMoveable(false);
 
 		
-		layout.addFastView("SAMNG.Vue.Filtre.TabularVueFiltre");
+	/*	layout.addFastView("SAMNG.Vue.Filtre.TabularVueFiltre");
 		layout.addFastView("SAMNG.Vue.Filtre.VueListeFiltre");
 		layout.addFastView("SAMNG.Vue.Filtre.GraphiqueVueFiltre");
 		
@@ -72,6 +72,7 @@ public class PerspectiveGT implements IPerspectiveFactory {
 		layout.getViewLayout("SAMNG.Vue.Filtre.TabularVueFiltre").setCloseable(false);
 		layout.getViewLayout("SAMNG.Vue.Filtre.VueListeFiltre").setCloseable(false);
 		layout.getViewLayout("SAMNG.Vue.Filtre.GraphiqueVueFiltre").setCloseable(false);
+		*/
 		}
 	}
 

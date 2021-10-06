@@ -40,8 +40,9 @@ public class PerspectiveVueTabulaire implements IPerspectiveFactory {
 			folder.addView(listeVues.get(i));
 			layout.getViewLayout(listeVues.get(i)).setCloseable(false);
 		}
-		layout.addFastView("SAMNG.Vue.Filtre.TabularVueFiltre");
+	/*	layout.addFastView("SAMNG.Vue.Filtre.TabularVueFiltre");
 		layout.getViewLayout("SAMNG.Vue.Filtre.TabularVueFiltre").setCloseable(false);
+		*/
 
 	
 	}	

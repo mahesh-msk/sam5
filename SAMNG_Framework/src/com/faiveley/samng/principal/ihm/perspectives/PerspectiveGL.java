@@ -42,13 +42,13 @@ public class PerspectiveGL implements IPerspectiveFactory {
 			layout.getViewLayout("SAMNG.Vue.Liste").setCloseable(false);
 			layout.getViewLayout("SAMNG.Vue.Liste").setMoveable(false);
 
-			layout.addFastView("SAMNG.Vue.Filtre.TabularVueFiltre");
+	/*		layout.addFastView("SAMNG.Vue.Filtre.TabularVueFiltre");
 			layout.addFastView("SAMNG.Vue.Filtre.VueListeFiltre");
 			layout.addFastView("SAMNG.Vue.Filtre.GraphiqueVueFiltre");
 
 			layout.getViewLayout("SAMNG.Vue.Filtre.TabularVueFiltre").setCloseable(false);
 			layout.getViewLayout("SAMNG.Vue.Filtre.VueListeFiltre").setCloseable(false);
-			layout.getViewLayout("SAMNG.Vue.Filtre.GraphiqueVueFiltre").setCloseable(false);
+			layout.getViewLayout("SAMNG.Vue.Filtre.GraphiqueVueFiltre").setCloseable(false);*/
 		}
 	}
 	/**

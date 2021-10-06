@@ -40,10 +40,11 @@ public class PerspectiveVueGraphique implements IPerspectiveFactory {
 			folder.addView(listeVues.get(i));
 			layout.getViewLayout(listeVues.get(i)).setCloseable(false);
 		}
-		layout.addFastView("SAMNG.Vue.Filtre.GraphiqueVueFiltre");
+		/*layout.addFastView("SAMNG.Vue.Filtre.GraphiqueVueFiltre");
 		
 
 		layout.getViewLayout("SAMNG.Vue.Filtre.GraphiqueVueFiltre").setCloseable(false);
+		*/
 		}
 	}
 

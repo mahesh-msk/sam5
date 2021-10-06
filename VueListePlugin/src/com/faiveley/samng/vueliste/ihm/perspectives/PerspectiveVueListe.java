@@ -41,10 +41,10 @@ public class PerspectiveVueListe implements IPerspectiveFactory {
 			layout.getViewLayout(listeVues.get(i)).setCloseable(false);
 		}
 		
-		layout.addFastView("SAMNG.Vue.Filtre.VueListeFiltre");
+/*		layout.addFastView("SAMNG.Vue.Filtre.VueListeFiltre");
 
 		layout.getViewLayout("SAMNG.Vue.Filtre.VueListeFiltre").setCloseable(false);
-	
+	*/
 		
 		}
 		
