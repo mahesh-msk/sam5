@@ -3678,7 +3678,8 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 	public void addMultimediaFile(Message msg, int indexInParcoursList) {
 		if (msg.getVariablesDiscrete().size() > 0) {
 			VariableDiscrete fileName = msg.getVariablesDiscrete().get(0);
-			File file = new File(RepertoiresAdresses.RepertoireTravail + MultimediaFile.FOLDER_SEPARATOR + fileName);
+			String strFilename = fileName.toString().trim(); // OPCoach : Warning toString generates spaces at the end. Must trim !!
+			File file = new File(RepertoiresAdresses.RepertoireTravail + MultimediaFile.FOLDER_SEPARATOR + strFilename);
 			
 			if (file.exists()) {				
 				ActivatorData.getInstance().addMultimediaFile(file, msg, indexInParcoursList);
