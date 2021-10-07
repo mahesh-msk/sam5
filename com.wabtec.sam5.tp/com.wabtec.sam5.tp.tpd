@@ -1,9 +1,9 @@
-target "photon" with source requirements
+target "2018-09" with source requirements
 
 // Tentative sur photon...
-location "http://download.eclipse.org/releases/photon" {
+location "http://download.eclipse.org/releases/2018-09" {
 	
-	// Use 2019-03 because of bug 475833 : https://bugs.eclipse.org/bugs/show_bug.cgi?id=475833
+	// Use photon because of bug 475833 : https://bugs.eclipse.org/bugs/show_bug.cgi?id=475833
 	// Removing TableTreeItem : https://help.eclipse.org/2021-06/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fporting%2Fremovals.html
 	
 	
@@ -22,7 +22,9 @@ location "http://download.eclipse.org/releases/photon" {
 		
 }
 
-location "https://archive.eclipse.org/technology/babel/update-site/R0.17.0/photon/" {
+//location "https://archive.eclipse.org/technology/babel/update-site/R0.17.0/photon/" {
+location "https://archive.eclipse.org/technology/babel/update-site/R0.16.0/photon/" {
+	
 	org.eclipse.babel.nls_eclipse_de.feature.group
 	org.eclipse.babel.nls_eclipse_es.feature.group
 	org.eclipse.babel.nls_eclipse_fr.feature.group
@@ -35,7 +37,7 @@ location "https://archive.eclipse.org/technology/babel/update-site/R0.17.0/photo
 }
 // Add support for java 11 (removed javax.annotation)...$
 // See ; https://download.eclipse.org/tools/orbit/downloads/
-location "http://download.eclipse.org/tools/orbit/downloads/drops/R20180606145124/repository" {
+location "http://download.eclipse.org/tools/orbit/downloads/drops/R20180905201904/repository" {
 	javax.annotation
 	javax.xml.bind
 	javax.xml.stream
@@ -56,7 +58,8 @@ location "http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest/"
 
 
 // Add delta pack
-location "http://download.eclipse.org/eclipse/updates/4.8" {
+//location "http://download.eclipse.org/eclipse/updates/4.8" {   // for photon
+location "http://download.eclipse.org/eclipse/updates/4.9" {
 	org.eclipse.equinox.sdk.feature.group
 }
 
