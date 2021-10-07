@@ -8,7 +8,6 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Item;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
@@ -16,10 +15,9 @@ import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.sm.data.enregistrement.Message;
 import com.faiveley.samng.principal.sm.data.enregistrement.atess.AtessMessage;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailViewer;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetail;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailViewer;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
-import com.sun.org.apache.bcel.internal.generic.INSTANCEOF;
 
 @SuppressWarnings("deprecation")
 public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
