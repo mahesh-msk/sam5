@@ -121,16 +121,16 @@
              name="startupProgressRect"
              value="270,266,100,12"/>
        <property
-             name="preferenceCustomization"
-             value="plugin_customization.ini">
-       </property>
-       <property
              name="startupMessageRect"
              value="10,262,250,20">
        </property>
        <property
              name="startupForegroundColor"
              value="FFFFFF">
+       </property>
+       <property
+             name="preferenceCustomization"
+             value="plugin_customization.ini">
        </property>
 
     </product>
