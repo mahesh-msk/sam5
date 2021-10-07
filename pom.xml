@@ -38,6 +38,7 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
+        			<executionEnvironment>org.eclipse.justj.openjdk.hotspot.jre.full-11</executionEnvironment>
 					<!-- <dependency-resolution> <optionalDependencies>ignore</optionalDependencies> 
 						</dependency-resolution> -->
 					<target>
@@ -50,11 +51,7 @@
 					<environments>
 						<!-- <environment> <os>macosx</os> <ws>cocoa</ws> <arch>x86_64</arch> 
 							</environment> -->
-						<environment>
-							<os>win32</os>
-							<ws>win32</ws>
-							<arch>x86</arch>
-						</environment>
+						<!-- <environment> <os>win32</os> <ws>win32</ws> <arch>x86</arch> </environment> -->
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
@@ -67,11 +64,6 @@
 				</configuration>
 			</plugin>
 
-
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-toolchains-plugin</artifactId> 
-				<version>1.1</version> <executions> <execution> <goals> <goal>toolchain</goal> 
-				</goals> </execution> </executions> <configuration> <toolchains> <jdk> <version>JavaSE-15</version> 
-				<vendor>openjdk</vendor> </jdk> </toolchains> </configuration> </plugin> -->
 			<!-- Use this config to remove the pom files from delivery ! -->
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
@@ -131,14 +123,13 @@
 		<module>VueBinairePlugin</module>
 		<module>VueExplorateurPlugin</module>
 		<module>VueGraphiquePlugin</module>
+		<module>VueListePlugin</module>
 		<module>VueMultimediaPlugin</module>
 		<module>VueTabulairePlugin</module>
 		<module>com.wabtec.sam5.feature</module>
 		<module>com.wabtec.sam5.repository</module>
-		<module>VueMultimediaPlugin.win32.x86</module>
+		<!--   <module>VueMultimediaPlugin.win32.x86</module> -->
 		<module>VueMultimediaPlugin.win32.x86_64</module>
-
-
 
 	</modules>
 

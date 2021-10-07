@@ -41,6 +41,15 @@ location "http://download.eclipse.org/tools/orbit/downloads/drops/R2018060614512
 	javax.xml.stream
 }
 
+
+// Add jre 11 include
+location "https://download.eclipse.org/justj/jres/11/updates/release/latest/" jre11    
+ {
+	org.eclipse.justj.openjdk.hotspot.jre.full.feature.group
+}
+
+
+// Add spies
 location "http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest/" {
 	org.eclipse.e4.tools.spies.feature.feature.group
 }

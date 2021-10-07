@@ -11,6 +11,8 @@
    </configIni>
 
    <launcherArgs>
+      <programArgsWin>-consoleLog -workspace &quot;C:\\Users\\interindep\\opcoach\\wabtec\\AppDataTest\\SAM_data&quot; -data &quot;C:\\Users\\interindep\\opcoach\\wabtec\\AppDataTest\\SAM_data\\workspace&quot;
+      </programArgsWin>
    </launcherArgs>
 
    <windowImages i16="/SAMNG_Framework/icons/SAM_NG_wind16.png" i32="/SAMNG_Framework/icons/SAM_NG_wind32.png" i48="/SAMNG_Framework/icons/SAM_NG_wind48.png" i64="/SAMNG_Framework/icons/SAM_NG_wind64.png" i128="/SAMNG_Framework/icons/SAM_NG_wind128.png"/>
@@ -34,18 +36,27 @@
    </launcher>
 
    <vm>
-      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</windows>
+      <windows include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</windows>
    </vm>
 
    <plugins>
    </plugins>
 
    <features>
-      <feature id="com.wabtec.sam5.feature"/>
+      <feature id="com.wabtec.sam5.feature" installMode="root"/>
       <feature id="org.eclipse.e4.rcp"/>
       <feature id="org.eclipse.emf.ecore"/>
       <feature id="org.eclipse.emf.common"/>
+      <feature id="org.eclipse.rcp"/>
+      <feature id="org.eclipse.justj.openjdk.hotspot.jre.full"/>
    </features>
 
+   <configurations>
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+   </configurations>
 
 </product>
