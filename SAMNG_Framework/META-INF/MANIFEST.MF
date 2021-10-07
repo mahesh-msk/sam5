@@ -118,5 +118,6 @@ Export-Package: com.faiveley.samng.principal.data,
  com.faiveley.samng.principal.sm.util
 Import-Package: com.faiveley.samng.principal.ihm.progbar,
  com.faiveley.samng.principal.sm.fabriques
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: Faiveley Transport
+Automatic-Module-Name: SAMNG

@@ -9,3 +9,4 @@ Bundle-Vendor: Faiveley Transport
 Eclipse-PlatformFilter: (& (osgi.ws=win32) (osgi.os=win32) (osgi.arch=x86))
 Bundle-ClassPath: .
 Eclipse-BundleShape: dir
+Automatic-Module-Name: VueMultimediaPlugin.win32.x86
