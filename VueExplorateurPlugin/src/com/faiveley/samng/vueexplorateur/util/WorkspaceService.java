@@ -95,6 +95,6 @@ public class WorkspaceService {
 	}
 	
 	private String getDefaultWorkspaceDirectory() {
-		return System.getProperty("user.home") + File.separator + "workspaceSam";
+		return System.getProperty("user.home") + File.separator + "Documents";
 	}
 }

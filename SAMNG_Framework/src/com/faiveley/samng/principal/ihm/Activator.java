@@ -165,8 +165,8 @@ public class Activator extends AbstractUIPlugin {
 			System.exit(1);
 		}
 		
-		if (!res.endsWith("/")) {
-			res += "/";
+		if (!res.endsWith("\\")) {
+			res += "\\";
 		}
 		return res;
 	}
