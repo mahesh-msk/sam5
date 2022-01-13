@@ -470,7 +470,7 @@ public abstract class AbstractProviderFiltre implements IDataChangedListener {
 				if(trouve 
 					&& this.getAppliedFilter()!=filtersMng.getFiltreCourant().getNom()
 					&& ((ActivatorData.getInstance().getPoolDonneesVues().get("axeDistanceCorrige")==null)
-					|| ActivatorData.getInstance().getPoolDonneesVues().get("axeDistanceCorrige").equals(new Boolean(false)))
+					|| ActivatorData.getInstance().getPoolDonneesVues().get("axeDistanceCorrige").equals(Boolean.valueOf(false)))
 				){
 					applyFilter = false;
 				}

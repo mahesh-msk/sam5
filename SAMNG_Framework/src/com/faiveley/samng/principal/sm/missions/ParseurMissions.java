@@ -126,7 +126,7 @@ public class ParseurMissions {
 		try {
 			jaxbContext = JAXBContext.newInstance(packageName);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, new Boolean(true));
+			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.valueOf(true));
 			File xmlFile = new File(nomFichierParcours+".xml");
 			jaxbMarshaller.marshal(doc, xmlFile); //$NON-NLS-1$
 		} catch (JAXBException e) {

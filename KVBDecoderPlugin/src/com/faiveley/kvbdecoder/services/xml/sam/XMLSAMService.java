@@ -10,7 +10,7 @@ import com.faiveley.kvbdecoder.exception.xml.XMLException;
 import com.faiveley.kvbdecoder.services.xml.sam.CRC16Xml.CrcValue;
 
 /**
- * Service contenant des méthodes directement copiées depuis SAM, pouvant être adaptées. Les autres classes du package sont aussi copiées depuis SAM.
+ * Service contenant des mï¿½thodes directement copiï¿½es depuis SAM, pouvant ï¿½tre adaptï¿½es. Les autres classes du package sont aussi copiï¿½es depuis SAM.
  * 
  * @author jthoumelin
  *
@@ -34,7 +34,7 @@ public class XMLSAMService {
 	}	
 
 	/**
-	 * Vérification du CRC du fichier (0 si OK, le CRC indiqué dans le fichier XML sinon)
+	 * Vï¿½rification du CRC du fichier (0 si OK, le CRC indiquï¿½ dans le fichier XML sinon)
 	 * 
 	 * @param xmlFile
 	 * @param CRC
@@ -78,7 +78,7 @@ public class XMLSAMService {
 				
 				finData = new byte[totalData.length - i];
 				System.arraycopy(totalData, i, finData, 0, finData.length);
-				intDebFin = new Integer(i);
+				intDebFin = Integer.valueOf(i);
 				
 				break;
 			}
@@ -97,7 +97,7 @@ public class XMLSAMService {
 				
 				debData = new byte[i + tailleaux];
 				System.arraycopy(totalData, 0, debData, 0, debData.length);
-				intFinDeb = new Integer(i + tailleaux);
+				intFinDeb = Integer.valueOf(i + tailleaux);
 				
 				break;
 			}

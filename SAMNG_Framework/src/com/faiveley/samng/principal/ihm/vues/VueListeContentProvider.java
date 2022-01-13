@@ -338,7 +338,7 @@ public class VueListeContentProvider extends AVueTableContentProvider {
 		
 		this.elements = list.toArray(new Object[list.size()]);
 		ActivatorData.getInstance().getPoolDonneesVues().put("tabVueListe", this.elements);
-		ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueList", new Boolean(false));
+		ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueList", Boolean.valueOf(false));
 		if (this.filterName == null)
 			ActivatorData.getInstance().getPoolDonneesVues().put("fullTabVueListe",this.elements);
 		ActivatorData.getInstance().getPoolDonneesVues().put("correction", "");

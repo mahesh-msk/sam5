@@ -125,7 +125,7 @@ public class GestionnaireCorrection {
 			// Looks for any changes values of the segments
 			if (!segTemp.getTempCorrige().equals(segTemp.getTempInitial())) {
 				ActivatorData.getInstance().getPoolDonneesVues().put("correction", "applyCorrection");
-				ActivatorData.getInstance().getPoolDonneesVues().put("axeTpsCorrige", new Boolean(true));
+				ActivatorData.getInstance().getPoolDonneesVues().put("axeTpsCorrige", Boolean.valueOf(true));
 
 				// Calculates the difference
 				long difference = ConversionTemps.calculatePeriodAsLong(segTemp.getTempInitial(), segTemp.getTempCorrige());
@@ -197,7 +197,7 @@ public class GestionnaireCorrection {
 	 * Remove all the corrections from the messages
 	 */
 	public void doNotApplyTempChanges() {
-		ActivatorData.getInstance().getPoolDonneesVues().put("axeTpsCorrige", new Boolean(false));
+		ActivatorData.getInstance().getPoolDonneesVues().put("axeTpsCorrige", Boolean.valueOf(false));
 		ActivatorData.getInstance().getPoolDonneesVues().put("correction", "disapplyCorrection");
 		List<SegmentTemps> listeSegs = TableSegments.getInstance().classerSegmentsTemps();
 		
@@ -254,7 +254,7 @@ public class GestionnaireCorrection {
 		for (SegmentDistance segDist : segDistMap.values()) {
 			// Find if there are any changes in the table
 			if (segDist.getDiameterCorrige() != segDist.getInitialDiameter()) {
-				ActivatorData.getInstance().getPoolDonneesVues().put("axeDistanceCorrige", new Boolean(true));
+				ActivatorData.getInstance().getPoolDonneesVues().put("axeDistanceCorrige", Boolean.valueOf(true));
 				ActivatorData.getInstance().getPoolDonneesVues().put("correction", "applyCorrection");
 				
 				// Calculate the difference
@@ -281,7 +281,7 @@ public class GestionnaireCorrection {
 							if (varSpeed != null) {
 								try {
 									String speedChaine = varSpeed.toString();
-									Float varSpeedValue = new Float(speedChaine);
+									Float varSpeedValue = Float.valueOf(speedChaine);
 									speed = Math.abs(varSpeedValue * factor);
 								} catch (Exception e) {
 									speed = -1;
@@ -352,7 +352,7 @@ public class GestionnaireCorrection {
 	 * Remove the correction distance variables from all the messages
 	 */
 	public void doNotApplyDistanceChanges() {
-		ActivatorData.getInstance().getPoolDonneesVues().put("axeDistanceCorrige",new Boolean(false));
+		ActivatorData.getInstance().getPoolDonneesVues().put("axeDistanceCorrige",Boolean.valueOf(false));
 		ActivatorData.getInstance().getPoolDonneesVues().put("correction","disapplyCorrection");
 		HashMap<Integer, SegmentDistance> segDistMap = TableSegments.getInstance().getSegmentsDistance();
 
@@ -516,13 +516,13 @@ public class GestionnaireCorrection {
 		for (SegmentTemps segTmp : listeSegs) {
 			// Find if there are any changes in the table
 			if (segTempsMapSaved.size() > 0) {
-				if (segTempsMapSaved.get(new Integer(segTmp.getNumeroSegment())) != null) {
+				if (segTempsMapSaved.get(Integer.valueOf(segTmp.getNumeroSegment())) != null) {
 					// On doit tester les 2 dates en tenant compte de la resolution
 					SimpleDateFormat format = ConversionTemps.FORMATER;
 					
 					try {
 						Date date1 = format.parse(segTmp.getTempCorrige());
-						Date date2 = format.parse(segTempsMapSaved.get(new Integer(segTmp.getNumeroSegment())).getTempCorrige());
+						Date date2 = format.parse(segTempsMapSaved.get(Integer.valueOf(segTmp.getNumeroSegment())).getTempCorrige());
 						
 						if (!date1.equals(date2)) {
 							change = true;
@@ -554,8 +554,8 @@ public class GestionnaireCorrection {
 		for (SegmentDistance segDist : segDistMap.values()) {
 			// Find if there are any changes in the table
 			if (segDistMapSaved.size() > 0) {
-				if (segDistMapSaved.get(new Integer(segDist.getNumeroSegment())) != null) {
-					if (segDist.getDiameterCorrige() != segDistMapSaved.get(new Integer(segDist.getNumeroSegment())).getDiameterCorrige()) {
+				if (segDistMapSaved.get(Integer.valueOf(segDist.getNumeroSegment())) != null) {
+					if (segDist.getDiameterCorrige() != segDistMapSaved.get(Integer.valueOf(segDist.getNumeroSegment())).getDiameterCorrige()) {
 						change = true;
 					}
 				}
@@ -584,8 +584,8 @@ public class GestionnaireCorrection {
 		for (SegmentDistance segDist : segDistMap.values()) {
 			// Find if there are any changes in the table
 			if (segDistMapSaved.size() > 0) {
-				if (segDistMapSaved.get(new Integer(segDist.getNumeroSegment())) != null) {
-					if (segDist.getDiameterCorrige() != segDistMapSaved.get(new Integer(segDist.getNumeroSegment())).getDiameterCorrige()) {
+				if (segDistMapSaved.get(Integer.valueOf(segDist.getNumeroSegment())) != null) {
+					if (segDist.getDiameterCorrige() != segDistMapSaved.get(Integer.valueOf(segDist.getNumeroSegment())).getDiameterCorrige()) {
 						change = true;
 					}
 				}
@@ -594,7 +594,7 @@ public class GestionnaireCorrection {
 		for (SegmentTemps segTmp : listeSegs) {
 			// Find if there are any changes in the table
 			if (segTempsMapSaved.size() > 0) {
-				if (segTempsMapSaved.get(new Integer(segTmp.getNumeroSegment())) != null) {
+				if (segTempsMapSaved.get(Integer.valueOf(segTmp.getNumeroSegment())) != null) {
 					// on doit tester les 2 dates en tenant compte de la resolution
 					SimpleDateFormat format = ConversionTemps.FORMATER;
 					
@@ -603,7 +603,7 @@ public class GestionnaireCorrection {
 							change = false;
 						} else{
 							String tempCorrige = segTmp.getTempCorrige();
-							String tempCorrigeSauvegarde = segTempsMapSaved.get(new Integer(segTmp.getNumeroSegment())).getTempCorrige();
+							String tempCorrigeSauvegarde = segTempsMapSaved.get(Integer.valueOf(segTmp.getNumeroSegment())).getTempCorrige();
 
 							if (tempCorrige.length()<tempCorrigeSauvegarde.length()) {
 								while (tempCorrige.length()<tempCorrigeSauvegarde.length()) {

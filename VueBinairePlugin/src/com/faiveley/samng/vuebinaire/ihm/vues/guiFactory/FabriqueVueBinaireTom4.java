@@ -81,8 +81,8 @@ public class FabriqueVueBinaireTom4 extends AFabriqueVueBinaire {
 			row.setBlockId(i + 1);
 			row.setLabels(labels);			
 
-			if ((crcEnreg.get(new Integer(i + 1))!=null)) {
-				if (!crcEnreg.get(new Integer(i + 1))){
+			if ((crcEnreg.get(Integer.valueOf(i + 1))!=null)) {
+				if (!crcEnreg.get(Integer.valueOf(i + 1))){
 					row.setError(ErrorType.CRC);
 				}
 				rows.add(row);

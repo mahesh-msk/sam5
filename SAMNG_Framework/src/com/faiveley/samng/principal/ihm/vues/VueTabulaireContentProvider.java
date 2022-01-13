@@ -454,7 +454,7 @@ public class VueTabulaireContentProvider extends AVueTableContentProvider {
 			this.elements = list.toArray(new Object[list.size()]);
 
 			ActivatorData.getInstance().getPoolDonneesVues().put("correction", "");
-			ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueTab",new Boolean(false));
+			ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueTab",Boolean.valueOf(false));
 			ActivatorData.getInstance().getPoolDonneesVues().put("tabVueTabulaire",this.elements);
 			ActivatorData.getInstance().getPoolDonneesVues().put(new String("modifMarqueurTab"), false);
 

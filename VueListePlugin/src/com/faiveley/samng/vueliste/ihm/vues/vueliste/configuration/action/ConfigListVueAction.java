@@ -48,11 +48,11 @@ public class ConfigListVueAction extends VueAction {
 				}
 				//just a data change is enough
 				//vueListe.getTop().layout();
-				ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueList", new Boolean(true));
+				ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueList", Boolean.valueOf(true));
 				vueListe.reloadTable();
 			}
 			else{
-				ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueList", new Boolean(false));
+				ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueList", Boolean.valueOf(false));
 				}
 		}
 	}

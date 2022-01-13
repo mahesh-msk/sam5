@@ -1704,9 +1704,9 @@ public class ManualZoomDialog extends Dialog {
 			ActivatorData.getInstance().getPoolDonneesVues().put("ongletZoom", "X");
 			if (GestionnaireAxes.getInstance().getCurrentAxeX().m_TypeAxe == TypeAxe.AXE_TEMPS
 					|| GestionnaireAxes.getInstance().getCurrentAxeX().m_TypeAxe == TypeAxe.AXE_TEMPS_CORRIGE) {
-				textMinDate.setText(ConversionTemps.getFormattedDate(new Long(
+				textMinDate.setText(ConversionTemps.getFormattedDate(Long.valueOf(
 						firstValue), true));
-				textMaxDate.setText(ConversionTemps.getFormattedDate(new Long(
+				textMaxDate.setText(ConversionTemps.getFormattedDate(Long.valueOf(
 						lastValue), true));
 			} else {
 				textMinDate.setText(firstValue);

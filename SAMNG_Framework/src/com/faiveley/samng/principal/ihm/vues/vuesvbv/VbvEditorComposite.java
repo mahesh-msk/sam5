@@ -560,7 +560,7 @@ operande2Composite.addKeyListener(new KeyAdapter() {
 		if(secondOperand == null)
 			secondOperand = operande2Composite.getValueString();
 		Operateur operator = (Operateur)operatorComposite.getValueObject();
-		ActivatorData.getInstance().getPoolDonneesVues().put("isVBVListChanged",new Boolean(true));
+		ActivatorData.getInstance().getPoolDonneesVues().put("isVBVListChanged",Boolean.valueOf(true));
 		vbvsProvider.saveVbv(editingVbv, vbvNameText.getText(), firstOperand, operator, secondOperand);
 
 	}

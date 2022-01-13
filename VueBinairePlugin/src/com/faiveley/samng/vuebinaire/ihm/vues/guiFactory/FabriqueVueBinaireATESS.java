@@ -63,7 +63,7 @@ public class FabriqueVueBinaireATESS extends AFabriqueVueBinaire {
 			row.setBlockId(i + 1);
 			row.setLabels(labels);
 			try {
-				if (!crcEnreg.get(new Integer(i + 1)))
+				if (!crcEnreg.get(Integer.valueOf(i + 1)))
 					row.setError(ErrorType.CRC);
 			} catch (Exception e) {
 				// System.out.println("probleme CRC enreg");

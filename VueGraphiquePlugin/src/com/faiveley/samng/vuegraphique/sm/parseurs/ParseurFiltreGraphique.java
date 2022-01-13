@@ -128,7 +128,7 @@ public class ParseurFiltreGraphique implements IParseurFiltre {
 					graphiqueFiltre = new GraphiqueFiltreComposite();
 
 					try {
-						graphiqueFiltre.setActif(new Boolean(xmlGraphique.getActif().getStringValue()).booleanValue());                 	
+						graphiqueFiltre.setActif(Boolean.valueOf(xmlGraphique.getActif().getStringValue()).booleanValue());                 	
 					} catch (Exception e) {
 						graphiqueFiltre.setActif(true);
 					}
@@ -247,7 +247,7 @@ public class ParseurFiltreGraphique implements IParseurFiltre {
 
 
 			name=xmlGraphique.addNewActif();
-			name.setStringValue(new Boolean(graphiqueFiltre.isActif()).toString());
+			name.setStringValue(Boolean.valueOf(graphiqueFiltre.isActif()).toString());
 
 
 			if(graphiqueFiltre.getTypeGraphique()!=null){
@@ -273,7 +273,7 @@ public class ParseurFiltreGraphique implements IParseurFiltre {
 					}
 					else{
 						name=xmlGraphique.addNewActif();
-						name.setStringValue(new Boolean(false).toString());
+						name.setStringValue(Boolean.valueOf(false).toString());
 					}
 				}
 

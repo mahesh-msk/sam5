@@ -237,7 +237,7 @@ public class PixelBuffer {
 		
 									if(variableValueInfo != null && variableValueInfo.getValue() != null) {
 										variableValue = variableValueInfo.getValue().doubleValue();
-										abscisse = new Long(mygraphe.getWidth() - MARGE_LATERALE); //calcul of abscisse
+										abscisse = Long.valueOf(mygraphe.getWidth() - MARGE_LATERALE); //calcul of abscisse
 		
 										if(mygraphe.getGrapheCourante().getTypeGraphe() == TypeGraphe.ANALOGIC) {
 											ordonnee = origineY - (long)((variableValue - minVar) / resoVerticale); //calcul of ordonnee
@@ -259,7 +259,7 @@ public class PixelBuffer {
 										}
 									}else if(variableValueInfo != null && variableValueInfo.getValue() == null) {
 									    // TODO faire qq chose ?
-										abscisse = new Long(mygraphe.getWidth() - MARGE_LATERALE); //calcul of abscisse
+										abscisse = Long.valueOf(mygraphe.getWidth() - MARGE_LATERALE); //calcul of abscisse
 										//add the last point in case of a zoom
 										if (ordonneeDernierPoint != null) {
 											//	                        if (abscisse != abscisseDernierPoint) {
@@ -316,7 +316,7 @@ public class PixelBuffer {
 
 								if(variableValueInfo != null && variableValueInfo.getValue() != null) {
 									variableValue = variableValueInfo.getValue().doubleValue();
-									abscisse = new Long(mygraphe.getWidth() - MARGE_LATERALE); //calcul of abscisse
+									abscisse = Long.valueOf(mygraphe.getWidth() - MARGE_LATERALE); //calcul of abscisse
 
 									if(mygraphe.getGrapheCourante().getTypeGraphe() == TypeGraphe.ANALOGIC) {
 										ordonnee = origineY - (long)((variableValue - minVar) / resoVerticale); //calcul of ordonnee
@@ -337,7 +337,7 @@ public class PixelBuffer {
 									// Pour exploiter GrapheGUI.dessinerPointApointUsingLinkedList()
 									listRPValues.add(new VirtualPoint(abscisse.intValue(),ordonnee,variableValue));
 								}else if(variableValueInfo != null && variableValueInfo.getValue() == null){
-									abscisse = new Long(mygraphe.getWidth() - MARGE_LATERALE); //calcul of abscisse									
+									abscisse = Long.valueOf(mygraphe.getWidth() - MARGE_LATERALE); //calcul of abscisse									
 									//add the last point in case of a zoom
 									if (ordonneeDernierPoint != null) {
 										//Add the current pixel to the courve pixels info

@@ -49,11 +49,11 @@ public class ConfigTabulaireVueAction extends VueAction {
 				if(vueTabulaire == null) {	
 					return;				//nothing more to do - the tabulaire view is not opened
 				}
-				ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueTab", new Boolean(true));
+				ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueTab", Boolean.valueOf(true));
 				//just a data change is enough
 				vueTabulaire.reloadTable();
 			}else{
-			ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueTab", new Boolean(false));
+			ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueTab", Boolean.valueOf(false));
 			}
 		}
 	}
