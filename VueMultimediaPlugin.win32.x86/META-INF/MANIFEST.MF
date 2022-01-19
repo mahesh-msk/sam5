@@ -4,7 +4,7 @@ Bundle-Name: VueMultimediaPlugin.win32.x86 Plug-in
 Bundle-SymbolicName: VueMultimediaPlugin.win32.x86
 Bundle-Version: 5.5.11.111
 Fragment-Host: VueMultimediaPlugin;bundle-version="5.5.6.96"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Vendor: Faiveley Transport
 Eclipse-PlatformFilter: (& (osgi.ws=win32) (osgi.os=win32) (osgi.arch=x86))
 Bundle-ClassPath: .

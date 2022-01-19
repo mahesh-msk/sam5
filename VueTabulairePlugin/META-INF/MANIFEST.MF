@@ -13,6 +13,6 @@ Bundle-ClassPath: lib/ConfigVuesXMLParser.jar,
  lib/FiltresTabulaireXMLParser.jar,
  lib/xbean.jar,
  .
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Vendor: Faiveley Transport
 Automatic-Module-Name: VueTabulairePlugin
