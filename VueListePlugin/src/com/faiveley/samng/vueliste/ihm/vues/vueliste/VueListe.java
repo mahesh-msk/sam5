@@ -1189,12 +1189,12 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 						}
 						
 						this.tblFix.dispose();
-						((FixedColumnTableViewerDetail) this.tblFix).getTableTreeDetailViewer().getTableTree().dispose();
+						((FixedColumnTableViewerDetail) this.tblFix).getTableTreeDetailViewer().getTree().dispose();
 						
 						TableTreeKVBDetailViewer ttvKVB = ((FixedColumnTableViewerDetail) this.tblFix).getTableTreeKVBDetailViewer();
 						
 						if (ttvKVB != null) {
-							ttvKVB.getTableTree().dispose();
+							ttvKVB.getTree().dispose();
 						}
 					}
 

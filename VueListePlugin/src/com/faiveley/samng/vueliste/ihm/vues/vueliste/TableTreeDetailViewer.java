@@ -6,6 +6,7 @@ import java.util.List;
 import org.eclipse.jface.viewers.AbstractTreeViewer;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TableTreeViewer;
+import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.TableTree;
 import org.eclipse.swt.events.ControlAdapter;
@@ -44,7 +45,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetai
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
 
 @SuppressWarnings("deprecation")
-public class TableTreeDetailViewer extends TableTreeViewer {	
+public class TableTreeDetailViewer extends TreeViewer {	
 	protected String[] columnNames = new String[] {GestionnaireVueDetaillee.VARIABLE_NAME_COL_NAME.getLabel(), GestionnaireVueDetaillee.CRUDE_VALUE_COL_NAME.getLabel(), GestionnaireVueDetaillee.DECODED_VALUE_COL_NAME.getLabel()};
 	private GestionnaireVueDetaillee gestionnaireColonne;
 	

@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
-import org.eclipse.swt.custom.TableTree;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
@@ -33,6 +32,7 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
+import org.eclipse.swt.widgets.Tree;
 
 import com.faiveley.kvbdecoder.decoder.KVBDecoderResult;
 import com.faiveley.samng.principal.ihm.ICommandIds;
@@ -104,9 +104,9 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 		this.tableTreeDetailViewer.setUseHashlookup(true);
 		this.tableTreeDetailViewer.setAutoExpandLevel(1);
 		
-		TableTree treeTable = this.tableTreeDetailViewer.getTableTree();
-		treeTable.getTable().getHorizontalBar().setEnabled(true);
-		treeTable.getTable().getHorizontalBar().setVisible(true);
+		Tree treeTable = this.tableTreeDetailViewer.getTree();
+		treeTable.getHorizontalBar().setEnabled(true);
+		treeTable.getHorizontalBar().setVisible(true);
 
 		this.tableTreeDetailViewer.createContents(vueListe);
 		this.tableTreeDetailViewer.modifierConfigurationColonnes();
@@ -165,9 +165,9 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 			codeVars.add(ar);
 		}
 		
-		Message m = ((Message) this.tableTreeDetailViewer.getTableTree().getData());
+		Message m = ((Message) this.tableTreeDetailViewer.getTree().getData());
 		int code = m.getEvenement().getM_ADescripteurComposant().getM_AIdentificateurComposant().getCode();
-		int posVScroll = this.tableTreeDetailViewer.getTableTree().getTable().getVerticalBar() == null ? 0: this.tableTreeDetailViewer.getTableTree().getTable().getVerticalBar().getSelection();
+		int posVScroll = this.tableTreeDetailViewer.getTree().getVerticalBar() == null ? 0: this.tableTreeDetailViewer.getTree().getVerticalBar().getSelection();
 		
 		InstancePresentationVueDetaillee.getInstance().enregistrerPresentation(code, posVScroll, codeVars);
 	}
@@ -177,8 +177,8 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 		Evenement fixedTableEvenement = ((Message) ((Row) this.fixedTable.getSelection()[0].getData()).getData()).getEvenement();
 		refreshOnglets(fixedTableEvenement);
 		
-		Message treeTableMessage = (Message) this.tableTreeDetailViewer.getTableTree().getData();
-		if (this.tableTreeDetailViewer.getTableTree().getData() != null && fixedTableEvenement != null && treeTableMessage.getEvenement() != null) {
+		Message treeTableMessage = (Message) this.tableTreeDetailViewer.getTree().getData();
+		if (this.tableTreeDetailViewer.getTree().getData() != null && fixedTableEvenement != null && treeTableMessage.getEvenement() != null) {
 			int fixedTableMessageCode = fixedTableEvenement.getM_ADescripteurComposant().getM_AIdentificateurComposant().getCode();
 			int treeTableMessageCode = treeTableMessage.getEvenement().getM_ADescripteurComposant().getM_AIdentificateurComposant().getCode();
 			
@@ -224,9 +224,9 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 			this.tableTreeKVBDetailViewer.setUseHashlookup(true);
 			this.tableTreeKVBDetailViewer.setMenu(buildMenuListener(true));
 			
-			TableTree treeTableKVB = this.tableTreeKVBDetailViewer.getTableTree();
-			treeTableKVB.getTable().getHorizontalBar().setEnabled(true);
-			treeTableKVB.getTable().getHorizontalBar().setVisible(true);
+			Tree treeTableKVB = this.tableTreeKVBDetailViewer.getTree();
+			treeTableKVB.getHorizontalBar().setEnabled(true);
+			treeTableKVB.getHorizontalBar().setVisible(true);
 			
 			this.tableTreeKVBDetailViewer.createContents(vueListe);
 			this.tableTreeKVBDetailViewer.modifierConfigurationColonnes();
@@ -238,7 +238,7 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 			
 			this.tabFolder.setSelection(1);
 		} else if (fixedTableEvenement != null && !fixedTableEvenement.isKVBEvent() && isKVBEnabled()) {
-			this.tableTreeKVBDetailViewer.getTableTree().dispose();
+			this.tableTreeKVBDetailViewer.getTree().dispose();
 			this.tableTreeKVBDetailViewer = null;
 			
 			this.tableTreeInformationPointDetailViewer.getTableTree().dispose();
