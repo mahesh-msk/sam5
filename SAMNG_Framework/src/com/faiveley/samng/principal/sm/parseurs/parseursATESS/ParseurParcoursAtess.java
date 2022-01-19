@@ -247,7 +247,7 @@ public class ParseurParcoursAtess extends AParseurParcours {
 	}
 
 	private static String getNomTableEvenementVariable() {
-		return (RepertoiresAdresses.xml + "/ConfigurationATESS.xml");
+		return (RepertoiresAdresses.xml + File.separator + "ConfigurationATESS.xml");
 	}
 
 	protected void chargerConstantes() {
@@ -316,7 +316,7 @@ public class ParseurParcoursAtess extends AParseurParcours {
 		}
 
 		String nomFichierXML = ParseurTableAssociationEvVars.getInstance().getFichierDescr();
-		GestionnairePool.getInstance().chargerFichierXml(RepertoiresAdresses.xml + "/" + nomFichierXML, fileName);
+		GestionnairePool.getInstance().chargerFichierXml(RepertoiresAdresses.xml + File.separator + nomFichierXML, fileName);
 
 
 		// Chargement de la table evt/var

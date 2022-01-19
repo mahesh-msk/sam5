@@ -38,7 +38,7 @@ public class XMLService {
 	private static String XML_SIGNATURE_TAG = "signature";
 	private static String XML_SIGNATURE_ATTRIBUTE_CRC_TAG = "CRC";
 
-	private boolean dataSuccessfullyLoaded = false; // Indique si les données ont déjà été chargées
+	private boolean dataSuccessfullyLoaded = false; // Indique si les donnï¿½es ont dï¿½jï¿½ ï¿½tï¿½ chargï¿½es
 	//private CrcValue[] crcValues = null;
 	
 	/**
@@ -67,17 +67,18 @@ public class XMLService {
 	}
 
 	/**
-	 * Définit l'emplacement des fichiers XML et charge toutes les données
+	 * Dï¿½finit l'emplacement des fichiers XML et charge toutes les donnï¿½es
 	 * 
 	 * @param path : l'emplacement des fichiers XML
-	 * @param checkAtessFilesCrc : booléen qui indique si la vérification du CRC doit être faite pour les fichiers autres que TablesKVB.xml (ex: depuis SAM, non ; depuis autre: oui)
-	 * @return la valeur de la vérification du CRC de chaque fichier (0 si OK, le CRC indiqué dans le fichier XML sinon)
+	 * @param checkAtessFilesCrc : boolï¿½en qui indique si la vï¿½rification du CRC doit ï¿½tre faite pour les fichiers autres que TablesKVB.xml (ex: depuis SAM, non ; depuis autre: oui)
+	 * @return la valeur de la vï¿½rification du CRC de chaque fichier (0 si OK, le CRC indiquï¿½ dans le fichier XML sinon)
 	 * @throws XMLException 
 	 */	
 	public CrcValue[] loadAllXMLData(String path, boolean checkAtessFilesCrc) throws XMLException {
 		JSONObject jsonObject = new JSONObject(path);
 		XML_FOLDER = jsonObject.get(JSONService.JSON_XMLLOADER_PATH_LABEL).toString();
 		
+		// OPC : json path files are already encoded with "/" -> Must not setup File.separator here ! 
 		if (!XML_FOLDER.endsWith("/")) {
 			XML_FOLDER += "/";
 		}
@@ -93,9 +94,9 @@ public class XMLService {
 	 * Obtention d'un fichier XML au format org.w3c.dom.Document
 	 * 
 	 * @param fileName : le nom du fichier
-	 * @param bodyTag : la balise englobante à considérer
-	 * @param checkAtessFilesCrc : booléen qui indique si la vérification du CRC doit être faite pour les fichiers autres que TablesKVB.xml (ex: depuis SAM, non ; depuis autre: oui)
-	 * @return le contenu du fichier (objet au format org.w3c.dom.Document + la vérification du CRC du fichier : 0 si OK, le CRC indiqué dans le fichier XML sinon) 
+	 * @param bodyTag : la balise englobante ï¿½ considï¿½rer
+	 * @param checkAtessFilesCrc : boolï¿½en qui indique si la vï¿½rification du CRC doit ï¿½tre faite pour les fichiers autres que TablesKVB.xml (ex: depuis SAM, non ; depuis autre: oui)
+	 * @return le contenu du fichier (objet au format org.w3c.dom.Document + la vï¿½rification du CRC du fichier : 0 si OK, le CRC indiquï¿½ dans le fichier XML sinon) 
 	 * @throws XMLException 
 	 */
 	public XmlFileContent getXmlFileContent(String fileName, String bodyTag, boolean checkAtessFilesCrc) throws XMLException {

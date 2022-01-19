@@ -156,13 +156,13 @@ public class ParseurTableAssociationEvVars implements IParseurInterface {
 		try {
 			JAXBContext jc = JAXBContext.newInstance("com.faiveley.samng.principal.sm.parseconfigatess", getClass().getClassLoader());
 			Unmarshaller unmarshaller = jc.createUnmarshaller();		
-			config = (ConfigurationAtess) unmarshaller.unmarshal(new File(RepertoiresAdresses.xml + "/" + ConfigurationATESSxml));
+			config = (ConfigurationAtess) unmarshaller.unmarshal(new File(RepertoiresAdresses.xml + File.separator + ConfigurationATESSxml));
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
 		
 		fichierDescr = config.getFichierDescription().getXmlAssocie();
-		ParseurUtils.verifCRC(RepertoiresAdresses.xml + "/" + ConfigurationATESSxml, Integer.parseInt(config.getSignature().getCRC(), 16));
+		ParseurUtils.verifCRC(RepertoiresAdresses.xml + File.separator + ConfigurationATESSxml, Integer.parseInt(config.getSignature().getCRC(), 16));
 		
 		return ConfigurationATESSxml;
 	}
@@ -257,7 +257,7 @@ public class ParseurTableAssociationEvVars implements IParseurInterface {
 	}
 
 	public String gererFichierAccompagnement(String fileName){
-		int cesure = fileName.lastIndexOf("\\");
+		int cesure = fileName.lastIndexOf(File.separator);
 		String chemin = fileName.substring(0, cesure);
 		File repertoire = new File(chemin);
 
@@ -267,7 +267,7 @@ public class ParseurTableAssociationEvVars implements IParseurInterface {
 			if (list != null){
 				for ( int i = 0; i < list.length; i++) {
 					if(list[i].getAbsolutePath().toUpperCase().contains(fileName.toUpperCase())){
-						String[] listS = list[i].getAbsolutePath().toUpperCase().split("\\.");
+						String[] listS = list[i].getAbsolutePath().toUpperCase().split(File.separator + ".");
 						
 						if (listS.length>1 && listS[listS.length-2].equals("TYP")) {
 							String typeEngin=listS[listS.length-1];
@@ -286,7 +286,7 @@ public class ParseurTableAssociationEvVars implements IParseurInterface {
 
 		Display.getDefault().syncExec(new Runnable(){
 			public void run() {
-				int cesure=ParseurTableAssociationEvVars.fileName.lastIndexOf("\\");
+				int cesure=ParseurTableAssociationEvVars.fileName.lastIndexOf(File.separator);
 				String file=ParseurTableAssociationEvVars.fileName;
 
 				ficXML.getListLibelles();

@@ -167,7 +167,7 @@ public class GestionnaireMarqueurs {
 		if((dotPos = fileName.indexOf('.')) != -1)
 			fileName = fileName.substring(0, dotPos);
 		
-		String fullMarkersFileName = folder+"\\" + fileName + RepertoiresAdresses.marqueursXML;
+		String fullMarkersFileName = folder+ File.separator + fileName + RepertoiresAdresses.marqueursXML;
 		this.parser = new ParseurMarqueurs();
 		this.parser.parseRessource(fullMarkersFileName,false,0,-1);
 		this.listeMarqueurs = this.parser.chargerMarqueurs();

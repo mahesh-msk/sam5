@@ -173,7 +173,7 @@ public class SearchInFoldersExecutor {
 						}else if (format==FormatSAM.TOM4) {
 							//on récupère le modèle d'enregistreur pour utiliser le bon parseur
 							ParseurXML1 parseurXml = ParseurXML1.getInstance();
-							parseurXml.parseRessource(RepertoiresAdresses.xml + "/" + nomFichierXml,false,0,-1);
+							parseurXml.parseRessource(RepertoiresAdresses.xml + File.separator + nomFichierXml,false,0,-1);
 							String modele = parseurXml.chargerType();
 							if(modele.equals("TOM_UK")){				
 								parser = ParseurParcoursTomUk.getInstance();

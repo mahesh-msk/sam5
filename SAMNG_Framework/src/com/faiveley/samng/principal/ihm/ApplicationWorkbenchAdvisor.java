@@ -1,5 +1,6 @@
 package com.faiveley.samng.principal.ihm;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -60,8 +61,8 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 				if (!RepertoiresAdresses.RepertoireTravail.equals("")) {
 					stream = new FileOutputStream(RepertoiresAdresses.temp_directory);
 					String path=RepertoiresAdresses.RepertoireTravail;
-					if (!path.endsWith("\\")) {
-						path=path+"\\";
+					if (!path.endsWith(File.separator)) {
+						path=path + File.separator;
 					}
 					p.setProperty("dir",path);
 					p.store(stream, null);

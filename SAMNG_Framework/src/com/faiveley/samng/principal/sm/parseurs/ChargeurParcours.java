@@ -55,12 +55,12 @@ public class ChargeurParcours {
 				if(nomFichierXml==null)
 					throw new ParseurXMLException(Messages.getString("ChargeurParcours.7"),true);
 				//cas où le fichier xml est absent
-				File f = new File(RepertoiresAdresses.xml + "/" + nomFichierXml);
+				File f = new File(RepertoiresAdresses.xml + File.separator + nomFichierXml);
 				if(!f.exists())
 					throw new ParseurXMLException(Messages.getString("ChargeurParcours.9") + nomFichierXml,true);
 
 				ParseurXML1 parseur = ParseurXML1.getInstance(fileName);
-				parseur.parseRessource(RepertoiresAdresses.xml + "/" + nomFichierXml,false,0,-1);
+				parseur.parseRessource(RepertoiresAdresses.xml + File.separator + nomFichierXml,false,0,-1);
 
 				String modele = parseur.chargerType();
 				if(modele.equals("TOM_UK")){

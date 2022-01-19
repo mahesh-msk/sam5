@@ -553,7 +553,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						.getVersion() + ".xml";
 		
 		GestionnairePool.getInstance().chargerFichierXml(
-				RepertoiresAdresses.xml + "/" + nomFichierXML, fileName);
+				RepertoiresAdresses.xml + File.separator + nomFichierXML, fileName);
 
 		ConstantesParcoursJRU.nbBitsLongueurL_Message = GestionnairePool
 				.getInstance()

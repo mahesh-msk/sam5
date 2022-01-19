@@ -249,7 +249,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		nomFichierXML = new String(Arrays.copyOfRange(this.message, 4,
 				tailleNomFichierXML + 4)).trim();
 		// test de présente du fichier xml dans le répertoire ressources/xml
-		File f = new File(RepertoiresAdresses.xml + "/" + nomFichierXML.trim());
+		File f = new File(RepertoiresAdresses.xml + File.separator + nomFichierXML.trim());
 		if (!f.exists())
 			throw new ParseurXMLException(
 					com.faiveley.samng.principal.sm.parseurs.parseursTomNg.Messages
@@ -2693,7 +2693,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 
 		// ************ PARSE XML file ********/
 		GestionnairePool.getInstance().chargerFichierXml(
-				RepertoiresAdresses.xml + "/" + nomFichierXML.trim(), fileName);
+				RepertoiresAdresses.xml + File.separator + nomFichierXML.trim(), fileName);
 
 		// ******** LOAD association TABLE of events and variables ******
 
@@ -3679,7 +3679,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		if (msg.getVariablesDiscrete().size() > 0) {
 			VariableDiscrete fileName = msg.getVariablesDiscrete().get(0);
 			String strFilename = fileName.toString().trim(); // OPCoach : Warning toString generates spaces at the end. Must trim !!
-			File file = new File(RepertoiresAdresses.RepertoireTravail + MultimediaFile.FOLDER_SEPARATOR + strFilename);
+			File file = new File(RepertoiresAdresses.RepertoireTravail + File.separator + strFilename);
 			
 			if (file.exists()) {				
 				ActivatorData.getInstance().addMultimediaFile(file, msg, indexInParcoursList);

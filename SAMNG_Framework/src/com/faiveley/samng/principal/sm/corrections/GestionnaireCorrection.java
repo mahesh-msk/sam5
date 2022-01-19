@@ -643,7 +643,7 @@ public class GestionnaireCorrection {
 			fileName = fileName.substring(0, dotPos);
 		}
 
-		String CorrectionFileName = folder + "\\" + fileName + RepertoiresAdresses.correctionsXML;
+		String CorrectionFileName = folder + File.separator + fileName + RepertoiresAdresses.correctionsXML;
 
 		try {
 			// Parse the corrections xml

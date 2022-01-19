@@ -261,7 +261,7 @@ public class ParseurParcoursTomHSBC extends AParseurParcoursTom4{
 		this.loadedFlags = ParseurFlags.getInstance().chargerFlags();
 
 		// ************ PARSE XML file ********/
-		GestionnairePool.getInstance().chargerFichierXml(RepertoiresAdresses.xml + "/" + ((Entete)baseEntete).getNomFichierXML(),fileName);
+		GestionnairePool.getInstance().chargerFichierXml(RepertoiresAdresses.xml + File.separator + ((Entete)baseEntete).getNomFichierXML(),fileName);
 
 		// ******** LOAD association TABLE of events and variables ******
 
