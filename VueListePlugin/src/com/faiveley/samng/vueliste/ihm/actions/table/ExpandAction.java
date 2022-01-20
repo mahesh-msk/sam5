@@ -11,6 +11,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailViewer;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailViewer;
 
 @SuppressWarnings("deprecation")
+@Deprecated
 public class ExpandAction extends Action {
 	FixedColumnTableViewerDetail fct;
 	

@@ -1,4 +1,4 @@
-package com.faiveley.samng.vueliste.ihm.vues.vueliste;
+package com.faiveley.samng.vueliste.ihm.vues.vueliste.e4;
 
 /*******************************************************************************
  * Copyright (c) 2006 BestSolution Systemhaus GmbH
@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
-import org.eclipse.swt.custom.TableTree;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.FormAttachment;
 import org.eclipse.swt.layout.FormData;
@@ -33,6 +32,7 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
+import org.eclipse.swt.widgets.Tree;
 
 import com.faiveley.kvbdecoder.decoder.KVBDecoderResult;
 import com.faiveley.samng.principal.ihm.ICommandIds;
@@ -45,15 +45,15 @@ import com.faiveley.samng.principal.sm.data.enregistrement.atess.AtessMessage;
 import com.faiveley.samng.principal.sm.data.variableComposant.AVariableComposant;
 import com.faiveley.samng.principal.sm.parseurs.parseursATESS.ParseurParcoursAtess;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.actions.table.CollapseAction;
-import com.faiveley.samng.vueliste.ihm.actions.table.ExpandAction;
+import com.faiveley.samng.vueliste.ihm.actions.table.e4.CollapseAction;
+import com.faiveley.samng.vueliste.ihm.actions.table.e4.ExpandAction;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.ConfigListVueDetailleeAction;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeInformationPointDetailViewer;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailViewer;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.e4.ConfigListVueDetailleeAction;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.e4.TreeInformationPointDetailViewer;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.e4.TreeKVBDetailViewer;
 
 @SuppressWarnings("deprecation")
-@Deprecated
 public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 	private static final String ONGLET_BRUT_NON_KVB_LABEL = Messages.getString("FixedColumnTableViewerDetailTab.0");
 	private static final String ONGLET_BRUT_KVB_LABEL = Messages.getString("FixedColumnTableViewerDetailTab.1");
@@ -61,11 +61,11 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 	
 	private int style;
 	
-	private TableTreeDetailViewer tableTreeDetailViewer;
+	private TreeDetailViewer tableTreeDetailViewer;
 	
 	private Composite kvbContainer;
-	private TableTreeKVBDetailViewer tableTreeKVBDetailViewer;
-	private TableTreeInformationPointDetailViewer tableTreeInformationPointDetailViewer;	
+	private TreeKVBDetailViewer treeKVBDetailViewer;
+	private TreeInformationPointDetailViewer treeInformationPointDetailViewer;	
 	
 	private TabFolder tabFolder;
 	private TabItem ongletKVB;
@@ -101,13 +101,13 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 		
 		this.tabFolder = new TabFolder(sashForm, SWT.NONE);	
 				
-		this.tableTreeDetailViewer = new TableTreeDetailViewer(tabFolder, this.style | SWT.VIRTUAL, gestionnaireColonne);
+		this.tableTreeDetailViewer = new TreeDetailViewer(tabFolder, this.style | SWT.VIRTUAL, gestionnaireColonne);
 		this.tableTreeDetailViewer.setUseHashlookup(true);
 		this.tableTreeDetailViewer.setAutoExpandLevel(1);
 		
-		TableTree treeTable = this.tableTreeDetailViewer.getTableTree();
-		treeTable.getTable().getHorizontalBar().setEnabled(true);
-		treeTable.getTable().getHorizontalBar().setVisible(true);
+		Tree treeTable = this.tableTreeDetailViewer.getTree();
+		treeTable.getHorizontalBar().setEnabled(true);
+		treeTable.getHorizontalBar().setVisible(true);
 
 		this.tableTreeDetailViewer.createContents(vueListe);
 		this.tableTreeDetailViewer.modifierConfigurationColonnes();
@@ -166,9 +166,9 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 			codeVars.add(ar);
 		}
 		
-		Message m = ((Message) this.tableTreeDetailViewer.getTableTree().getData());
+		Message m = ((Message) this.tableTreeDetailViewer.getTree().getData());
 		int code = m.getEvenement().getM_ADescripteurComposant().getM_AIdentificateurComposant().getCode();
-		int posVScroll = this.tableTreeDetailViewer.getTableTree().getTable().getVerticalBar() == null ? 0: this.tableTreeDetailViewer.getTableTree().getTable().getVerticalBar().getSelection();
+		int posVScroll = this.tableTreeDetailViewer.getTree().getVerticalBar() == null ? 0: this.tableTreeDetailViewer.getTree().getVerticalBar().getSelection();
 		
 		InstancePresentationVueDetaillee.getInstance().enregistrerPresentation(code, posVScroll, codeVars);
 	}
@@ -178,8 +178,8 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 		Evenement fixedTableEvenement = ((Message) ((Row) this.fixedTable.getSelection()[0].getData()).getData()).getEvenement();
 		refreshOnglets(fixedTableEvenement);
 		
-		Message treeTableMessage = (Message) this.tableTreeDetailViewer.getTableTree().getData();
-		if (this.tableTreeDetailViewer.getTableTree().getData() != null && fixedTableEvenement != null && treeTableMessage.getEvenement() != null) {
+		Message treeTableMessage = (Message) this.tableTreeDetailViewer.getTree().getData();
+		if (this.tableTreeDetailViewer.getTree().getData() != null && fixedTableEvenement != null && treeTableMessage.getEvenement() != null) {
 			int fixedTableMessageCode = fixedTableEvenement.getM_ADescripteurComposant().getM_AIdentificateurComposant().getCode();
 			int treeTableMessageCode = treeTableMessage.getEvenement().getM_ADescripteurComposant().getM_AIdentificateurComposant().getCode();
 			
@@ -197,14 +197,14 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 			if (ParseurParcoursAtess.getInstance().isKVBLoaded() && isKVBEnabled()) {
 				AtessMessage atessMessage = (AtessMessage) msg;
 				
-				this.tableTreeKVBDetailViewer.setInputMessage(atessMessage);
-				this.tableTreeKVBDetailViewer.refreshTableData(msg);
+				this.treeKVBDetailViewer.setInputMessage(atessMessage);
+				this.treeKVBDetailViewer.refreshTableData(msg);
 
 				KVBDecoderResult decodedEvent = ((AtessMessage) msg).getDecodedEvent();
 				
 				if (decodedEvent != null) {
-					this.tableTreeInformationPointDetailViewer.setEvent(decodedEvent.getEvent());
-					this.tableTreeInformationPointDetailViewer.setInformationPoint(0);	
+					this.treeInformationPointDetailViewer.setEvent(decodedEvent.getEvent());
+					this.treeInformationPointDetailViewer.setInformationPoint(0);	
 				}
 			}
 		}
@@ -220,30 +220,30 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 			this.ongletKVB.setText(ONGLET_DECODE_KVB_LABEL);
 			this.ongletKVB.setControl(this.kvbContainer);
 						
-			this.tableTreeKVBDetailViewer = new TableTreeKVBDetailViewer(this, this.kvbContainer, SWT.NONE, gestionnaireColonne);
-			this.tableTreeKVBDetailViewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-			this.tableTreeKVBDetailViewer.setUseHashlookup(true);
-			this.tableTreeKVBDetailViewer.setMenu(buildMenuListener(true));
+			this.treeKVBDetailViewer = new TreeKVBDetailViewer(this, this.kvbContainer, SWT.NONE, gestionnaireColonne);
+			this.treeKVBDetailViewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+			this.treeKVBDetailViewer.setUseHashlookup(true);
+			this.treeKVBDetailViewer.setMenu(buildMenuListener(true));
 			
-			TableTree treeTableKVB = this.tableTreeKVBDetailViewer.getTableTree();
-			treeTableKVB.getTable().getHorizontalBar().setEnabled(true);
-			treeTableKVB.getTable().getHorizontalBar().setVisible(true);
+			Tree treeTableKVB = this.treeKVBDetailViewer.getTree();
+			treeTableKVB.getHorizontalBar().setEnabled(true);
+			treeTableKVB.getHorizontalBar().setVisible(true);
 			
-			this.tableTreeKVBDetailViewer.createContents(vueListe);
-			this.tableTreeKVBDetailViewer.modifierConfigurationColonnes();
+			this.treeKVBDetailViewer.createContents(vueListe);
+			this.treeKVBDetailViewer.modifierConfigurationColonnes();
 		
 			this.ongletBrut.setText(ONGLET_BRUT_KVB_LABEL);	
 			
-			this.tableTreeInformationPointDetailViewer = new TableTreeInformationPointDetailViewer(this.kvbContainer, SWT.NONE, this, fixedTableEvenement);
+			this.treeInformationPointDetailViewer = new TreeInformationPointDetailViewer(this.kvbContainer, SWT.NONE, this, fixedTableEvenement);
 			this.layoutData = new GridData(SWT.FILL, SWT.NONE, true, false);
 			
 			this.tabFolder.setSelection(1);
 		} else if (fixedTableEvenement != null && !fixedTableEvenement.isKVBEvent() && isKVBEnabled()) {
-			this.tableTreeKVBDetailViewer.getTableTree().dispose();
-			this.tableTreeKVBDetailViewer = null;
+			this.treeKVBDetailViewer.getTree().dispose();
+			this.treeKVBDetailViewer = null;
 			
-			this.tableTreeInformationPointDetailViewer.getTableTree().dispose();
-			this.tableTreeInformationPointDetailViewer = null;
+			this.treeInformationPointDetailViewer.getTree().dispose();
+			this.treeInformationPointDetailViewer = null;
 			
 			this.kvbContainer.dispose();
 			this.kvbContainer = null;
@@ -254,17 +254,17 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 			this.tabFolder.setSelection(0);
 		}
 			
-		if (this.tableTreeInformationPointDetailViewer != null) {
-			if (!this.tableTreeInformationPointDetailViewer.isExpanded()) {
+		if (this.treeInformationPointDetailViewer != null) {
+			if (!this.treeInformationPointDetailViewer.isExpanded()) {
 				this.layoutData.heightHint = 0;
 			} else {
-				this.layoutData.heightHint = 6 * this.tableTreeInformationPointDetailViewer.getTableTree().getItemHeight() 
-						+ this.tableTreeInformationPointDetailViewer.getTableTree().getTable().getHeaderHeight() 
-						+ 6 * this.tableTreeInformationPointDetailViewer.getTableTree().getTable().getGridLineWidth();
+				this.layoutData.heightHint = 6 * this.treeInformationPointDetailViewer.getTree().getItemHeight() 
+						+ this.treeInformationPointDetailViewer.getTree().getHeaderHeight() 
+						+ 6 * this.treeInformationPointDetailViewer.getTree().getGridLineWidth();
 			}
 			
-			this.tableTreeInformationPointDetailViewer.getControl().setLayoutData(this.layoutData);
-			this.tableTreeInformationPointDetailViewer.getControl().getParent().layout();
+			this.treeInformationPointDetailViewer.getTree().setLayoutData(this.layoutData);
+			this.treeInformationPointDetailViewer.getTree().getParent().layout();
 		}
 	}
 	
@@ -289,19 +289,18 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 		};
 	}
 	
-	public TableTreeDetailViewer getTableTreeDetailViewer() {
+	public TreeDetailViewer getTreeDetailViewer() {
 		return tableTreeDetailViewer;
 	}
 	
-	public TableTreeKVBDetailViewer getTableTreeKVBDetailViewer() {
-		return tableTreeKVBDetailViewer;
+	public TreeKVBDetailViewer getTreeKVBDetailViewer() {
+		return treeKVBDetailViewer;
 	}
 	
-	public TableTreeInformationPointDetailViewer getTableTreeInformationPointDetailViewer() {
-		return tableTreeInformationPointDetailViewer;
+	public TreeInformationPointDetailViewer getTableTreeInformationPointDetailViewer() {
+		return treeInformationPointDetailViewer;
 	}
 
-	@Deprecated
 	protected enum TypeMenuOptions {
 		COLLAPSE, EXPAND, GESTIONNAIRE_COLONNES
 	}

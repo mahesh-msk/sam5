@@ -1,13 +1,13 @@
-package com.faiveley.samng.vueliste.ihm.vues.vueliste;
+package com.faiveley.samng.vueliste.ihm.vues.vueliste.e4;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.jface.viewers.AbstractTreeViewer;
 import org.eclipse.jface.viewers.StructuredSelection;
-import org.eclipse.jface.viewers.TableTreeViewer;
+import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.TableTree;
 import org.eclipse.swt.events.ControlAdapter;
 import org.eclipse.swt.events.ControlEvent;
 import org.eclipse.swt.events.MouseEvent;
@@ -16,8 +16,8 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.TableColumn;
+import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.TreeColumn;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.vues.InstancePresentationVueDetaillee;
@@ -37,19 +37,17 @@ import com.faiveley.samng.principal.sm.data.variableComposant.JRU.ChaineDynamiqu
 import com.faiveley.samng.principal.sm.data.variableComposant.JRU.StructureDynamique;
 import com.faiveley.samng.principal.sm.data.variableComposant.JRU.TableauDynamique;
 import com.faiveley.samng.principal.sm.data.variableComposant.JRU.VariableDynamique;
-import com.faiveley.samng.principal.sm.formats.FormatSAM;
-import com.faiveley.samng.principal.sm.parseurs.BridageFormats;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetail.TypeMenuOptions;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailContentProvider;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailLabelProvider;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail.TypeMenuOptions;
 
-@SuppressWarnings("deprecation")
-@Deprecated
-public class TableTreeDetailViewer extends TableTreeViewer {	
+public class TreeDetailViewer extends TreeViewer {	
 	protected String[] columnNames = new String[] {GestionnaireVueDetaillee.VARIABLE_NAME_COL_NAME.getLabel(), GestionnaireVueDetaillee.CRUDE_VALUE_COL_NAME.getLabel(), GestionnaireVueDetaillee.DECODED_VALUE_COL_NAME.getLabel()};
 	private GestionnaireVueDetaillee gestionnaireColonne;
 	
-	public TableTreeDetailViewer(Composite parent, int style, GestionnaireVueDetaillee gestionnaireColonne) {
+	public TreeDetailViewer(Composite parent, int style, GestionnaireVueDetaillee gestionnaireColonne) {
 		super(parent, style);
 		this.gestionnaireColonne = gestionnaireColonne;
 	}
@@ -69,21 +67,39 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 		return;
 	}
 	
-	protected void handleMouseDownEvent(Table table, MouseEvent event) {
+	protected void handleMouseDownEvent(Tree tree, MouseEvent event) {
 		return;
 	}
 	
 	public void setUpTable(final GestionnaireVueDetaillee gestionnaireColonne, final VueListe vueListe) {
-		final Table table = getTableTree().getTable();
+		//final Table table = getTableTree().getTable();
 		
 		for (String cn : columnNames) {
-			TableColumn column = new TableColumn(table, SWT.LEFT);
-			column.setText(cn);
 			
-			column.addControlListener(new ControlAdapter() {
+			
+			// Add columns in the tree
+			// Create the first column for the key
+			TreeViewerColumn col = new TreeViewerColumn(this, SWT.LEFT);
+			//col.getColumn().setWidth(400);
+			col.getColumn().setText(cn);
+			
+			// E34 Merttre le label provider sur la colonne _ ? 
+			/*
+			ContextDataProvider keyLabelProvider = ContextInjectionFactory.make(ContextDataProvider.class, ctx);
+			keyLabelProvider.setDisplayKey(true);
+			col.setLabelProvider(keyLabelProvider);
+			col.getColumn().setToolTipText("Key in context");
+			col.getColumn().addSelectionListener(
+					getHeaderSelectionAdapter(contextDataViewer, col.getColumn(), 0, keyLabelProvider));
+
+			*/
+			
+			
+			
+			col.getColumn().addControlListener(new ControlAdapter() {
 				public void controlResized(ControlEvent event) {
-					if (event.widget instanceof TableColumn) {
-						TableColumn col = (TableColumn) event.widget;
+					if (event.widget instanceof TreeColumn) {
+						TreeColumn col = (TreeColumn) event.widget;
 						int width = col.getWidth();
 						String colName = (String) col.getText();
 						ConfigurationColonne colCfg = gestionnaireColonne.getConfigurationColonneByNom(colName);
@@ -94,16 +110,20 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 						}
 					}
 				}
-			});
+			}); 
 		}
 		
 		setHiddenColumn();
 		
 		// Turn on the header and the lines
-		table.setHeaderVisible(true);
-		table.setLinesVisible(true);
+		
+		getTree().setHeaderVisible(true);
+		getTree().setLinesVisible(true);
 
-		table.addMouseListener(new MouseListener() {
+		
+		//E34 Voir mouse listener sur table Tree Detail Viewer
+	 
+		getTree().addMouseListener(new MouseListener() {
 			public void mouseDoubleClick(MouseEvent e) {
 				if (e.button == 1) {
 					Object element = getSelectionFromWidget().get(0);
@@ -112,7 +132,8 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 						AVariableComposant var = (AVariableComposant) getSelectionFromWidget().get(0);
 						
 						if (var instanceof VariableAnalogique || var instanceof VariableDiscrete) {
-							Message msg = (Message) getTableTree().getData();
+							// E34 Verifier si c'est bien getTree().getData (avant : getTable().getData))
+							Message msg = (Message) getTree().getData();
 							((MessageSelection) vueListe.currentSelection).setMessageId(msg.getMessageId());
 							ActivatorData.getInstance().setSelectedMsg(msg);
 							vueListe.upSelection(true);
@@ -123,16 +144,17 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 
 			public void mouseDown(MouseEvent e) {
 				ActivatorVueListe.getDefault().setVueFocus(ActivatorVueListe.FOCUS_VUE_DETAILLEE);
-				handleMouseDownEvent(table, e);
+				handleMouseDownEvent(getTree(), e);
 			}
 
 			public void mouseUp(MouseEvent e) {
 				if (e.button == 3) {
-					getTableTree().getTable().getMenu().setEnabled(true);
-					getTableTree().getTable().getMenu().setVisible(true);
+					getTree().getMenu().setEnabled(true);
+					getTree().getMenu().setVisible(true);
 				}
 			}
 		});
+	
 	}
 					
 	private boolean expandVariable(DescripteurVariable descr) {
@@ -157,13 +179,15 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 			return false;
 		}
 
-		Message msg = (Message) getTableTree().getData();
+		// E34 Revoir ce comportement  (avant c'était :  Message msg = (Message) getTableTree().getData();)
+		
+		Message msg = (Message) getTree().getData();
 		List<VariableAnalogique> varsAna = msg.getVariablesAnalogique();
 		
 		for (VariableAnalogique var : varsAna) {
 			if (var.equals(varToExpand)) {
 				setSelection(new StructuredSelection(var));
-				getTableTree().getTable().showSelection();
+				getTree().showSelection();
 				return false;
 			}
 		}
@@ -173,7 +197,7 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 		for (VariableDiscrete var : varsDis) {
 			if (var.equals(varToExpand)) {
 				setSelection(new StructuredSelection(var));
-				getTableTree().getTable().showSelection();
+				getTree().showSelection();
 				return false;
 			}
 		}
@@ -197,7 +221,7 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 					}
 				}
 			}
-		}
+		} 
 
 		List<StructureDynamique> structs = msg.getStructuresDynamique();
 		List<TableauDynamique> tabs = msg.getTableauxDynamique();
@@ -279,7 +303,7 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 
 		expandToLevel(varet, puissance);
 		setSelection(new StructuredSelection(var));
-		getTableTree().getTable().showSelection();
+		getTree().showSelection();
 	}
 	
 	public void setInputMessage(Message message) {
@@ -287,6 +311,9 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 	}
 		
 	public void refreshTableData(DescripteurVariable descr, Message message) {
+		
+		// E34 Revoir le refreshTableData
+		/*
 		boolean structExpanded = false;
 		TableTree treeTable = getTableTree();
 		
@@ -310,6 +337,8 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 				expandToLevel(message, 2);
 			}
 		}
+		
+		*/ 
 	}
 	
 	public void chargerPresentationEv(Message msg) {
@@ -340,9 +369,10 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 				}
 			}
 			
-			if (getTableTree().getTable().getVerticalBar() != null) {
-				getTableTree().getTable().setTopIndex(vd.getPosVScroll());
-				getTableTree().getTable().getVerticalBar().setSelection(vd.getPosVScroll());
+			if (getTree().getVerticalBar() != null) {
+				// E34 Revoir l'appel à setTopIndex (mettre setTopItem(TreeItem)...
+				// getTree().setTopIndex(vd.getPosVScroll());
+				getTree().getVerticalBar().setSelection(vd.getPosVScroll());
 			}
 		} else {
 			InstancePresentationVueDetaillee.getInstance().setPresentation(null);
@@ -350,6 +380,9 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 	}
 	
 	public void modifierConfigurationColonnes() {
+		
+		// E34 Revoir modifierConfigurationColonnes
+		/*
 		TableColumn[] columns = getTableTree().getTable().getColumns();
 		ConfigurationColonne configColonne = null;
 		
@@ -370,10 +403,11 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 				column.pack();
 			}
 		}
+		*/
 	}
 	
 	public void setMenu(Listener menuSelListener) {
-		Menu popupMenu = new Menu(getTableTree());
+		Menu popupMenu = new Menu(getTree());
 
 		MenuItem item = new MenuItem(popupMenu, SWT.NONE);
 		item.setText(com.faiveley.samng.vueliste.ihm.actions.table.Messages.getString("ConfigListVueAction.2"));
@@ -390,7 +424,7 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 		item.setData(TypeMenuOptions.GESTIONNAIRE_COLONNES);
 		item.addListener(SWT.Selection, menuSelListener);
 		
-		getTableTree().getTable().setMenu(popupMenu);
+		getTree().setMenu(popupMenu);
 	}
 
 	public String[] getColumnNames() {

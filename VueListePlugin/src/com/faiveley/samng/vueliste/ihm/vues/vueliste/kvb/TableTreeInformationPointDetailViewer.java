@@ -16,6 +16,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
 import com.faiveley.samng.principal.sm.data.enregistrement.Evenement;
 
 @SuppressWarnings("deprecation")
+@Deprecated
 public class TableTreeInformationPointDetailViewer extends TableTreeViewer {
 	protected static final String LABEL_COLUMN_0 = Messages.getString("FixedColumnTableViewerPointInformationDetailColumn.0");
 	protected static final String LABEL_COLUMN_1 = Messages.getString("FixedColumnTableViewerPointInformationDetailColumn.1");

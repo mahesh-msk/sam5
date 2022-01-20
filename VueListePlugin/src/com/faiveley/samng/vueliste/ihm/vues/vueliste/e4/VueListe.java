@@ -1,4 +1,4 @@
-package com.faiveley.samng.vueliste.ihm.vues.vueliste;
+package com.faiveley.samng.vueliste.ihm.vues.vueliste.e4;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -96,21 +96,23 @@ import com.faiveley.samng.principal.sm.segments.ruptures.TableRuptures;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
 import com.faiveley.samng.vueliste.ihm.actions.exports.ExporterVueListeAction;
 import com.faiveley.samng.vueliste.ihm.actions.print.ImprimerVueListeAction;
-import com.faiveley.samng.vueliste.ihm.actions.table.CollapseAllAction;
-import com.faiveley.samng.vueliste.ihm.actions.table.ExpandAllAction;
+import com.faiveley.samng.vueliste.ihm.actions.table.e4.CollapseAllAction;
+import com.faiveley.samng.vueliste.ihm.actions.table.e4.ExpandAllAction;
 import com.faiveley.samng.vueliste.ihm.actions.vue.ApplyFiltreAction;
 import com.faiveley.samng.vueliste.ihm.actions.vue.RechercherVariableListeAction;
 import com.faiveley.samng.vueliste.ihm.actions.vue.ShowVueFiltresListeAction;
 import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.VueListeFiltre;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListeLabelProvider;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.ConfigListVueAction;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailViewer;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.e4.TreeKVBDetailViewer;
 
-@Deprecated
+
 public class VueListe extends AbstractSelectionProviderVue implements PropertyChangeListener, IDataChangedListener, ISelectionListener, IMarqueursListener, IRepereChangedListener, ISearchMarquerListener, ISearchVariableListener, ICapturable, IVueToolbar,ISearchEventListener {
 	/**
 	 * Vue ID
 	 */
-	public static final String ID = "SAMNG.Vue.Liste";
+	public static final String ID = "SAMNG.Vue.Liste.e4";
 
 	/**
 	 * D�claration des actions
@@ -185,8 +187,10 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 		this.currentSelection = new MessageSelection();
 
 		setGestionnaireVue(ActivatorVueListe.getDefault().getConfigurationMng());
-		setPartName(Messages.getString("VueListe.11"));
-		this.initialPartName=Messages.getString("VueListe.11");
+		
+		// E34 Remplacer le titre
+		setPartName("E4_" + Messages.getString("VueListe.11"));
+		this.initialPartName="E4_" +Messages.getString("VueListe.11");
 
 		menuSelListener = new Listener() {
 			public void handleEvent(Event e) {
@@ -1190,12 +1194,12 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 						}
 						
 						this.tblFix.dispose();
-						((FixedColumnTableViewerDetail) this.tblFix).getTableTreeDetailViewer().getTableTree().dispose();
+						((FixedColumnTableViewerDetail) this.tblFix).getTreeDetailViewer().getTree().dispose();
 						
-						TableTreeKVBDetailViewer ttvKVB = ((FixedColumnTableViewerDetail) this.tblFix).getTableTreeKVBDetailViewer();
+						TreeKVBDetailViewer ttvKVB = ((FixedColumnTableViewerDetail) this.tblFix).getTreeKVBDetailViewer();
 						
 						if (ttvKVB != null) {
-							ttvKVB.getTableTree().dispose();
+							ttvKVB.getTree().dispose();
 						}
 					}
 

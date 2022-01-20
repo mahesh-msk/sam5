@@ -1,16 +1,16 @@
-package com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action;
+package com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.e4;
 
 import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.actions.vue.VueAction;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetail;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail;
 
 /**
  * @author Cosmin Udroiu
  *
  */
-@Deprecated
 public class ConfigListVueDetailleeAction extends VueAction {
 	private FixedColumnTableViewerDetail tableauVueDetaillee = null;
 		

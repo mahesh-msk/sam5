@@ -1,16 +1,13 @@
-package com.faiveley.samng.vueliste.ihm.actions.table;
+package com.faiveley.samng.vueliste.ihm.actions.table.e4;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.jface.viewers.TableTreeViewer;
-import org.eclipse.swt.custom.TableTreeItem;
+import org.eclipse.jface.viewers.TreeViewer;
 
 import com.faiveley.samng.principal.ihm.ICommandIds;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetail;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableVueListe;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableVueListe;
 
-@SuppressWarnings("deprecation")
-@Deprecated
 public class CollapseAction extends Action {
 	FixedColumnTableViewerDetail fct;
 	
@@ -34,10 +31,10 @@ public class CollapseAction extends Action {
 	
 	@Override
 	public void run() {
-		if (this.fct.getTableTreeKVBDetailViewer() == null || this.fct.getSelectedTab() == 0) {
-			collapseTableTree(this.fct.getTableTreeDetailViewer());
+		if (this.fct.getTreeKVBDetailViewer() == null || this.fct.getSelectedTab() == 0) {
+			collapseTableTree(this.fct.getTreeDetailViewer());
 		} else {
-			collapseTableTree(this.fct.getTableTreeKVBDetailViewer());
+			collapseTableTree(this.fct.getTreeKVBDetailViewer());
 		}
 	}
 	
@@ -47,7 +44,11 @@ public class CollapseAction extends Action {
 		super.finalize();
 	}
 	
-	protected void collapseTableTree(TableTreeViewer ttv) {
+	protected void collapseTableTree(TreeViewer ttv) {
+		
+		// E34 Reimplementer collapseTableTree dans e4.CollapseAction
+		
+		/*
 		int nbSelected = ttv.getTableTree().getSelection().length;
 		
 		for (int i = 0; i < nbSelected; i++) {
@@ -59,5 +60,6 @@ public class CollapseAction extends Action {
 			
 			ttv.collapseToLevel(item.getData(), -1);
 		}
+		*/
 	}
 }

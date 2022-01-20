@@ -1,4 +1,4 @@
-package com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action;
+package com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.e4;
 
 import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.swt.SWT;
@@ -35,13 +35,12 @@ import org.eclipse.swt.widgets.Text;
 
 import com.faiveley.samng.principal.ihm.vues.configuration.ConfigurationColonne;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetail;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail;
 
 /**
  * @author Cosmin Udroiu
  */
-@Deprecated
 public class ColonnesConfigVueDetailleeDialog extends Dialog {
 	private static int WIDTH_COL_POS = 1;
 	

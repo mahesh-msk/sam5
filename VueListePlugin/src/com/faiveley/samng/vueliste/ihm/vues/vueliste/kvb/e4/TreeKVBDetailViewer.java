@@ -1,37 +1,30 @@
-package com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb;
+package com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.e4;
 
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.TableTree;
-import org.eclipse.swt.custom.TableTreeItem;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
+import org.eclipse.swt.widgets.Tree;
 import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.sm.data.enregistrement.Message;
 import com.faiveley.samng.principal.sm.data.enregistrement.atess.AtessMessage;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetail;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailViewer;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.TreeDetailViewer;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailContentProvider;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailLabelProvider;
 
-@SuppressWarnings("deprecation")
-/** 
- * 
- * @deprecated use TreeKVBDetailViewer instead
- *
- */
-public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
+public class TreeKVBDetailViewer extends TreeDetailViewer {
 	private static final Display display = PlatformUI.getWorkbench().getDisplay();
 	private static final Color colorRed = display.getSystemColor(SWT.COLOR_RED);
 		
 	private FixedColumnTableViewerDetail parent;
 	
-	public TableTreeKVBDetailViewer(FixedColumnTableViewerDetail parent, Composite compositeParent, int style, GestionnaireVueDetaillee gestionnaireColonne) {
+	public TreeKVBDetailViewer(FixedColumnTableViewerDetail parent, Composite compositeParent, int style, GestionnaireVueDetaillee gestionnaireColonne) {
 		super(compositeParent, style, gestionnaireColonne);
 		this.parent = parent;
 		columnNames = new String[] {GestionnaireVueDetaillee.KVB_TABLE_COL_NAME.getLabel(), GestionnaireVueDetaillee.KVB_DECODED_VALUE_COL_NAME.getLabel()};
@@ -46,15 +39,24 @@ public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 	
 	@Override
 	protected void setHiddenColumn() {
+		
+		// E34 Revoir le setHiddenColumn
+		/*
 		final Table table = getTableTree().getTable();
 		TableColumn column = new TableColumn(table, SWT.LEFT);
 		column.setText("");
 		column.setWidth(0);
 		column.setResizable(false);
+		
+		*/
 	}
 	
 	@Override
-	protected void handleMouseDownEvent(Table table, MouseEvent event) {
+	protected void handleMouseDownEvent(Tree tree, MouseEvent event) {
+		
+		// E34 Recoder la methode handleMouseDownEvent 
+		
+		/*
     	// Set information point
 		Point pt = new Point(event.x, event.y);
         TableItem item = table.getItem(pt);
@@ -69,6 +71,8 @@ public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
         
         // Re-color lines
         colorLines();
+        
+        */
 	}
 		
 	public void setInputMessage(AtessMessage message) {
@@ -77,6 +81,9 @@ public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 	}
 	
 	public void refreshTableData(Message message) {
+		
+		// E34 Revoir le refreshTableData
+		/*
 		TableTree treeTable = getTableTree();
 		refresh(true);	
 		modifierConfigurationColonnes();
@@ -101,9 +108,15 @@ public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 			
 		// Color lines
 		colorLines();
+		
+		*/
 	}
 	
 	public void colorLines() {
+		
+		//E34 Voir le colorLines sur TreeKvbDetailViewer
+		
+		/*
 		// Coloration des textes en rouge
 		TableTree tableTree = getTableTree();
 		Table table = tableTree.getTable();
@@ -134,5 +147,6 @@ public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 				tableTreeLevel1.setForeground(colorRed);
 			}
 		}
+		*/
 	}
 }

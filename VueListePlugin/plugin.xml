@@ -18,6 +18,14 @@
             icon="icons/vueListe/vue_liste_filtre.png"
             id="SAMNG.Vue.Filtre.VueListeFiltre"
             name="%data_list_filter_view_descr"/>
+      <view
+            allowMultiple="false"
+            category="SAMNG_Framework.DataViewsCategory"
+            class="com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.VueListe"
+            icon="icons/menu/appli_vue_liste.png"
+            id="SAMNG.Vue.Liste.e4"
+            name="Vue liste E4 TreeViewer">
+      </view>
    </extension>
    <extension
          point="org.eclipse.ui.perspectives">
