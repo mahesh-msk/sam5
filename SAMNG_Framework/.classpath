@@ -26,11 +26,8 @@
 	<classpathentry exported="true" kind="lib" path="lib/TableEV_Var_ATESSXMLParser.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/TableEV_Var_JRUXMLParser.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/XMLParserJRU.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.jface.text_3.2.1.r321_v20060810.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.text_3.2.0.v20060605-1400.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.ve.swt_1.2.1.v20060918_M.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/net.sf.paperclips_1.0.4.200908120926.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/swt-3.7.2-win32-win32-x86.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/eclipselink.jar"/>
 	<classpathentry kind="lib" path="lib/ConfigVuesXMLParser.jar"/>
 	<classpathentry kind="output" path="bin"/>
