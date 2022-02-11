@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.jface.viewers.AbstractTreeViewer;
+import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
+import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ControlAdapter;
 import org.eclipse.swt.events.ControlEvent;
@@ -81,10 +83,18 @@ public class TreeDetailViewer extends TreeViewer {
 			// Create the first column for the key
 			TreeViewerColumn col = new TreeViewerColumn(this, SWT.LEFT);
 			//col.getColumn().setWidth(400);
-			col.getColumn().setText(cn);
+			col.getColumn().setText("E4__" + cn);
+			col.setLabelProvider(new ColumnLabelProvider() {
+				@Override
+				public String getText(Object element) {
+					return "E4**" + super.getText(element);
+				}
+			});
+			col.getColumn().setToolTipText("E4***********");
 			
-			// E34 Merttre le label provider sur la colonne _ ? 
+			// E34 Mettre le label provider sur la colonne _ ? 
 			/*
+			 * Exemple venant du context spy
 			ContextDataProvider keyLabelProvider = ContextInjectionFactory.make(ContextDataProvider.class, ctx);
 			keyLabelProvider.setDisplayKey(true);
 			col.setLabelProvider(keyLabelProvider);

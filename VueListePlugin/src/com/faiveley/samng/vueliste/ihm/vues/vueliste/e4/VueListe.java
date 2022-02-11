@@ -104,7 +104,7 @@ import com.faiveley.samng.vueliste.ihm.actions.vue.ShowVueFiltresListeAction;
 import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.VueListeFiltre;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListeLabelProvider;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.ConfigListVueAction;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.e4.ConfigListVueAction;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.e4.TreeKVBDetailViewer;
 
 

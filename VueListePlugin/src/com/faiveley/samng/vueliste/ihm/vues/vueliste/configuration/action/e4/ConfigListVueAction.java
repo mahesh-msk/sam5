@@ -1,4 +1,4 @@
-package com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action;
+package com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.e4;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.ui.IViewReference;
@@ -12,7 +12,8 @@ import com.faiveley.samng.principal.ihm.vues.configuration.ColonnesConfigDialog;
 import com.faiveley.samng.principal.ihm.vues.configuration.ConfigurationColonne;
 import com.faiveley.samng.principal.ihm.vues.configuration.GestionnaireVueListeBase;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.Messages;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.VueListe;
 
 
 /**
@@ -20,7 +21,6 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
  * @author Cosmin Udroiu
  *
  */
-@Deprecated
 public class ConfigListVueAction extends VueAction {
 	public ConfigListVueAction() {
 		super(null, ICommandIds.CMD_OPEN_COFIG_LIST, Messages.getString("ConfigListVueAction.0"), null,  com.faiveley.samng.vueliste.ihm.ActivatorVueListe.getImageDescriptor("/icons/vueListe/vue_liste_gerer_colonnes.png"),true); //$NON-NLS-1$
