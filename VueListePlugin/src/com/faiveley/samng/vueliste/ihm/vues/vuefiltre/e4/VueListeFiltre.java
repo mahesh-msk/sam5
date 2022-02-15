@@ -1,4 +1,4 @@
-package com.faiveley.samng.vueliste.ihm.vues.vuefiltre;
+package com.faiveley.samng.vueliste.ihm.vues.vuefiltre.e4;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -26,17 +26,18 @@ import com.faiveley.samng.principal.ihm.vues.vuesfiltre.FiltresListeComposite;
 import com.faiveley.samng.principal.sm.filtres.AFiltreComposant;
 import com.faiveley.samng.principal.sm.filtres.TypeFiltre;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.actions.vue.ApplyFiltreAction;
+import com.faiveley.samng.vueliste.ihm.actions.vue.e4.ApplyFiltreAction;
+import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.Messages;
+import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.VueListeFiltreEditeur;
 
 /**
  * 
  * @author Cosmin Udroiu
  * 
  */
-@Deprecated
 public class VueListeFiltre extends ViewPart implements PropertyChangeListener,
 		ISaveablePart2 {
-	public static final String ID = "SAMNG.Vue.Filtre.VueListeFiltre"; //$NON-NLS-1$
+	public static final String ID = "SAMNG.Vue.Filtre.VueListeFiltre.e4"; //$NON-NLS-1$
 
 	private SashForm sashForm = null;
 

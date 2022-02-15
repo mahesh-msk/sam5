@@ -1,15 +1,15 @@
-package com.faiveley.samng.vueliste.ihm.actions.exports;
+package com.faiveley.samng.vueliste.ihm.actions.exports.e4;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.TableTreeItem;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.TableItem;
+import org.eclipse.swt.widgets.TreeItem;
 import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.IWorkbenchWindow;
 
@@ -20,12 +20,11 @@ import com.faiveley.samng.principal.sm.erreurs.AExceptionSamNG;
 import com.faiveley.samng.principal.sm.parseurs.ParseurExport;
 import com.faiveley.samng.principal.sm.repertoires.RepertoiresAdresses;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetail;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailViewer;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
+import com.faiveley.samng.vueliste.ihm.actions.exports.Messages;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.TreeDetailViewer;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.VueListe;
 
-@SuppressWarnings("deprecation")
-@Deprecated
 public class ExporterVueListeAction extends Action {
 	private final IWorkbenchWindow window;
 
@@ -111,12 +110,11 @@ public class ExporterVueListeAction extends Action {
 			return true;
 		} else {
 			FixedColumnTableViewerDetail fctv = getVueListe().getFctvd();
-			boolean isKVB = fctv.getTableTreeKVBDetailViewer() != null && fctv.getSelectedTab() == 1;
+			boolean isKVB = fctv.getTreeKVBDetailViewer() != null && fctv.getSelectedTab() == 1;
 			
-			TableTreeDetailViewer tableTreeDetailViewer = isKVB ? fctv.getTableTreeKVBDetailViewer() : fctv.getTableTreeDetailViewer();
+			TreeDetailViewer tableTreeDetailViewer = isKVB ? fctv.getTreeKVBDetailViewer() : fctv.getTreeDetailViewer();
 			
 			// La vue d�taill�e doit etre d�pli�e pour faire l'export	
-			
 			tableTreeDetailViewer.expandAll();
 
 			String chaineExportVueDetaillee = creerChaineExportVueDetaillee(tableTreeDetailViewer);
@@ -129,7 +127,7 @@ public class ExporterVueListeAction extends Action {
 		}
 	}
 
-	private String creerChaineExportVueDetaillee(TableTreeDetailViewer tableTreeDetailViewer) {	
+	private String creerChaineExportVueDetaillee(TreeDetailViewer tableTreeDetailViewer) {	
 		List<LigneFichierExport> lines = new ArrayList<LigneFichierExport>();	
 		int level = 0;
 		int maxLevel = level;
@@ -147,7 +145,7 @@ public class ExporterVueListeAction extends Action {
 		lines.add(line);
 		
 		// Items
-		for (TableTreeItem item : tableTreeDetailViewer.getTableTree().getItems()) {
+		for (TreeItem item : tableTreeDetailViewer.getTree().getItems()) {
 			maxLevel = Math.max(maxLevel, inspectItem(nbColumns, lines, level, item));
 		}
 		
@@ -174,7 +172,7 @@ public class ExporterVueListeAction extends Action {
 		return chaineExportBuilder.toString();
 	}
 	
-	private int inspectItem(int nbColumns, List<LigneFichierExport> lines, int level, TableTreeItem item) {
+	private int inspectItem(int nbColumns, List<LigneFichierExport> lines, int level, TreeItem item) {
 		LigneFichierExport line = new LigneFichierExport(level);
 		
 		for (int i = 0; i < nbColumns; i++) {
@@ -183,14 +181,14 @@ public class ExporterVueListeAction extends Action {
 		
 		lines.add(line);
 		
-		TableTreeItem[] childs = item.getItems();
+		TreeItem[] childs = item.getItems();
 		
 		int maxLevel = level;
 		
 		if (childs.length > 0) {
 			level += 1;
 			
-			for (TableTreeItem tti : childs) {
+			for (TreeItem tti : childs) {
 				maxLevel = Math.max(maxLevel, inspectItem(nbColumns, lines, level, tti));
 			}
 		}

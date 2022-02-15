@@ -6,8 +6,9 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.TreeColumn;
+import org.eclipse.swt.widgets.TreeItem;
 import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.sm.data.enregistrement.Message;
@@ -40,26 +41,21 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
 	@Override
 	protected void setHiddenColumn() {
 		
-		// E34 Revoir le setHiddenColumn
-		/*
-		final Table table = getTableTree().getTable();
-		TableColumn column = new TableColumn(table, SWT.LEFT);
+		final Tree table = getTree();
+		TreeColumn column = new TreeColumn(table, SWT.LEFT);
 		column.setText("");
 		column.setWidth(0);
 		column.setResizable(false);
 		
-		*/
 	}
 	
 	@Override
 	protected void handleMouseDownEvent(Tree tree, MouseEvent event) {
 		
-		// E34 Recoder la methode handleMouseDownEvent 
-		
-		/*
+		// E34 Test : controler  la methode handleMouseDownEvent 
     	// Set information point
 		Point pt = new Point(event.x, event.y);
-        TableItem item = table.getItem(pt);
+        TreeItem item = tree.getItem(pt);
         
         if (item != null) {
         	String hiddenColumnText = item.getText(2);
@@ -72,7 +68,7 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
         // Re-color lines
         colorLines();
         
-        */
+        
 	}
 		
 	public void setInputMessage(AtessMessage message) {
@@ -81,10 +77,8 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
 	}
 	
 	public void refreshTableData(Message message) {
-		
-		// E34 Revoir le refreshTableData
-		/*
-		TableTree treeTable = getTableTree();
+				
+		Tree treeTable = getTree();
 		refresh(true);	
 		modifierConfigurationColonnes();
 		treeTable.redraw();
@@ -100,7 +94,6 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
 				try {
 					expandToLevel(getChildren(internalGetWidgetToSelect(getRoot())).length - 1);
 				} catch (Exception e) {
-					// TODO Bloc catch g�n�r� automatiquement
 					//e.printStackTrace();
 				}
 			}
@@ -109,12 +102,13 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
 		// Color lines
 		colorLines();
 		
-		*/
+		
 	}
 	
 	public void colorLines() {
 		
 		//E34 Voir le colorLines sur TreeKvbDetailViewer
+		System.out.println("E34 Voir le colorLines sur TreeKvbDetailViewer");
 		
 		/*
 		// Coloration des textes en rouge

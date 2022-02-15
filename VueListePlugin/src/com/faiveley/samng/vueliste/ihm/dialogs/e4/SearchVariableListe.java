@@ -1,4 +1,4 @@
-package com.faiveley.samng.vueliste.ihm.dialogs;
+package com.faiveley.samng.vueliste.ihm.dialogs.e4;
 
 import java.util.LinkedHashMap;
 
@@ -16,9 +16,8 @@ import com.faiveley.samng.principal.sm.data.identificateurComposant.AIdentificat
 import com.faiveley.samng.principal.sm.data.tableAssociationComposant.ParcoursComposite;
 import com.faiveley.samng.principal.sm.fabriques.FabriqueParcours;
 import com.faiveley.samng.principal.sm.parseurs.parseursATESS.VitesseLimiteKVBService;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.VueListe;
 
-@Deprecated
 public class SearchVariableListe extends SearchVariable{
 
 	public SearchVariableListe(Shell parent) {

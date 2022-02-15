@@ -1,11 +1,10 @@
-package com.faiveley.samng.vueliste.ihm.actions.print;
+package com.faiveley.samng.vueliste.ihm.actions.print.e4;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.ui.IWorkbenchWindow;
 
 import com.faiveley.samng.principal.ihm.ICommandIds;
 
-@Deprecated
 public class ImprimerVueListeAction extends Action {
 
 	protected final IWorkbenchWindow window;

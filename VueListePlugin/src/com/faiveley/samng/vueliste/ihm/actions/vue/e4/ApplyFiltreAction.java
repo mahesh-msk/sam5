@@ -1,4 +1,4 @@
-package com.faiveley.samng.vueliste.ihm.actions.vue;
+package com.faiveley.samng.vueliste.ihm.actions.vue.e4;
 
 import java.util.List;
 
@@ -11,14 +11,13 @@ import com.faiveley.samng.principal.sm.filtres.AFiltreComposant;
 import com.faiveley.samng.principal.sm.filtres.OrdonnerFiltre;
 import com.faiveley.samng.principal.sm.filtres.gestionnaires.GestionnaireFiltresListe;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.VueListe;
 
 /**
  * 
  * @author Cosmin Udroiu
  *
  */
-@Deprecated
 public class ApplyFiltreAction extends Action {
 	public ApplyFiltreAction() {
 	}

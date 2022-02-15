@@ -1,4 +1,5 @@
-package com.faiveley.samng.vueliste.ihm.actions.vue;
+package com.faiveley.samng.vueliste.ihm.actions.vue.e4;
+
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.resource.ImageDescriptor;
@@ -6,9 +7,8 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.vues.search.ASearchDialog;
-import com.faiveley.samng.vueliste.ihm.dialogs.SearchVariableListe;
+import com.faiveley.samng.vueliste.ihm.dialogs.e4.SearchVariableListe;
 
-@Deprecated
 public class RechercherVariableListeAction extends Action{
 	
 	

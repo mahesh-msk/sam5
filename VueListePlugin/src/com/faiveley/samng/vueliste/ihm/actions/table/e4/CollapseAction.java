@@ -3,6 +3,7 @@ package com.faiveley.samng.vueliste.ihm.actions.table.e4;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.swt.widgets.TreeItem;
 
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail;
@@ -38,21 +39,13 @@ public class CollapseAction extends Action {
 		}
 	}
 	
-	@Override
-	public void finalize() throws Throwable {
-		this.fct = null;
-		super.finalize();
-	}
 	
 	protected void collapseTableTree(TreeViewer ttv) {
 		
-		// E34 Reimplementer collapseTableTree dans e4.CollapseAction
-		
-		/*
-		int nbSelected = ttv.getTableTree().getSelection().length;
+		int nbSelected = ttv.getTree().getSelection().length;
 		
 		for (int i = 0; i < nbSelected; i++) {
-			TableTreeItem item = ttv.getTableTree().getSelection()[i];
+			TreeItem item = ttv.getTree().getSelection()[i];
 			
 			if (item.getItems().length == 0) {
 				item = item.getParentItem();
@@ -60,6 +53,6 @@ public class CollapseAction extends Action {
 			
 			ttv.collapseToLevel(item.getData(), -1);
 		}
-		*/
+		
 	}
 }

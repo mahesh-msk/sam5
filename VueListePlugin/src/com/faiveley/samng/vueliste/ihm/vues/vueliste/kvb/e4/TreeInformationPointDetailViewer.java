@@ -71,9 +71,6 @@ public class TreeInformationPointDetailViewer extends TreeViewer {
 
 		// Add columns in the tree
 		// First empty column
-		// E34 Commentaire A virer si ca marche. 
-		//TableColumn c = new TableColumn(table, SWT.CENTER);
-		//c.setResizable(false);
 		TreeViewerColumn col = new TreeViewerColumn(this, SWT.CENTER);
 		col.getColumn().setResizable(false);
 
@@ -91,9 +88,6 @@ public class TreeInformationPointDetailViewer extends TreeViewer {
 			
 			TreeViewerColumn c = new TreeViewerColumn(this, SWT.CENTER);
 			initColumn(c.getColumn(), cn);
-			// E34 Commentaire A virer si ca marche. 
-			//TableColumn column = new TableColumn(table, SWT.CENTER);
-			//initColumn(column, cn);
 		}
 
 		// Turn on the header and the lines

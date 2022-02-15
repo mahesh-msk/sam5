@@ -43,11 +43,6 @@ public class ExpandAction extends Action {
 		}
 	}
 
-	@Override
-	public void finalize() throws Throwable {
-		this.fct = null;
-		super.finalize();
-	}
 
 	protected void expandTableTree(TreeViewer ttv) {
 

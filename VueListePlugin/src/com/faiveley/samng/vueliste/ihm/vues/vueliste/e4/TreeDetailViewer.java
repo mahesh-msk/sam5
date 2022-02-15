@@ -8,7 +8,6 @@ import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
-import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ControlAdapter;
 import org.eclipse.swt.events.ControlEvent;
@@ -39,6 +38,8 @@ import com.faiveley.samng.principal.sm.data.variableComposant.JRU.ChaineDynamiqu
 import com.faiveley.samng.principal.sm.data.variableComposant.JRU.StructureDynamique;
 import com.faiveley.samng.principal.sm.data.variableComposant.JRU.TableauDynamique;
 import com.faiveley.samng.principal.sm.data.variableComposant.JRU.VariableDynamique;
+import com.faiveley.samng.principal.sm.formats.FormatSAM;
+import com.faiveley.samng.principal.sm.parseurs.BridageFormats;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailContentProvider;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailLabelProvider;
@@ -321,11 +322,9 @@ public class TreeDetailViewer extends TreeViewer {
 	}
 		
 	public void refreshTableData(DescripteurVariable descr, Message message) {
-		
-		// E34 Revoir le refreshTableData
-		/*
+			
 		boolean structExpanded = false;
-		TableTree treeTable = getTableTree();
+		Tree treeTable = getTree();
 		
 		refresh(true);
 					
@@ -348,7 +347,7 @@ public class TreeDetailViewer extends TreeViewer {
 			}
 		}
 		
-		*/ 
+		
 	}
 	
 	public void chargerPresentationEv(Message msg) {
@@ -380,8 +379,7 @@ public class TreeDetailViewer extends TreeViewer {
 			}
 			
 			if (getTree().getVerticalBar() != null) {
-				// E34 Revoir l'appel à setTopIndex (mettre setTopItem(TreeItem)...
-				// getTree().setTopIndex(vd.getPosVScroll());
+				getTree().setTopItem(getTree().getItem(vd.getPosVScroll()));
 				getTree().getVerticalBar().setSelection(vd.getPosVScroll());
 			}
 		} else {
@@ -391,12 +389,10 @@ public class TreeDetailViewer extends TreeViewer {
 	
 	public void modifierConfigurationColonnes() {
 		
-		// E34 Revoir modifierConfigurationColonnes
-		/*
-		TableColumn[] columns = getTableTree().getTable().getColumns();
+		TreeColumn[] columns = getTree().getColumns();
 		ConfigurationColonne configColonne = null;
 		
-		for (TableColumn column : columns) {
+		for (TreeColumn column : columns) {
 			configColonne = gestionnaireColonne.getConfigurationColonneByNom(column.getText());
 			
 			if (configColonne != null) {
@@ -413,7 +409,7 @@ public class TreeDetailViewer extends TreeViewer {
 				column.pack();
 			}
 		}
-		*/
+		
 	}
 	
 	public void setMenu(Listener menuSelListener) {

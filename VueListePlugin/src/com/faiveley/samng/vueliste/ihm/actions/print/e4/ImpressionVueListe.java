@@ -1,4 +1,4 @@
-package com.faiveley.samng.vueliste.ihm.actions.print;
+package com.faiveley.samng.vueliste.ihm.actions.print.e4;
 
 import java.util.List;
 
@@ -10,9 +10,8 @@ import com.faiveley.samng.principal.ihm.actions.print.ImpressionVueTableau;
 import com.faiveley.samng.principal.ihm.vues.AVueTableContentProvider;
 import com.faiveley.samng.principal.ihm.vues.VueListeContentProvider;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.VueListe;
 
-@Deprecated
 public class ImpressionVueListe extends ImpressionVueTableau {
 
 	@Override

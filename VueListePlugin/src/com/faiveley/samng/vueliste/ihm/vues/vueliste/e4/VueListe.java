@@ -94,14 +94,14 @@ import com.faiveley.samng.principal.sm.marqueurs.Marqueur;
 import com.faiveley.samng.principal.sm.segments.TableSegments;
 import com.faiveley.samng.principal.sm.segments.ruptures.TableRuptures;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.actions.exports.ExporterVueListeAction;
-import com.faiveley.samng.vueliste.ihm.actions.print.ImprimerVueListeAction;
+import com.faiveley.samng.vueliste.ihm.actions.exports.e4.ExporterVueListeAction;
+import com.faiveley.samng.vueliste.ihm.actions.print.e4.ImprimerVueListeAction;
 import com.faiveley.samng.vueliste.ihm.actions.table.e4.CollapseAllAction;
 import com.faiveley.samng.vueliste.ihm.actions.table.e4.ExpandAllAction;
-import com.faiveley.samng.vueliste.ihm.actions.vue.ApplyFiltreAction;
-import com.faiveley.samng.vueliste.ihm.actions.vue.RechercherVariableListeAction;
 import com.faiveley.samng.vueliste.ihm.actions.vue.ShowVueFiltresListeAction;
-import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.VueListeFiltre;
+import com.faiveley.samng.vueliste.ihm.actions.vue.e4.ApplyFiltreAction;
+import com.faiveley.samng.vueliste.ihm.actions.vue.e4.RechercherVariableListeAction;
+import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.e4.VueListeFiltre;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListeLabelProvider;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.e4.ConfigListVueAction;
@@ -1166,12 +1166,6 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 		
 		this.data = null;
 		
-		try {
-			this.collapseAction.finalize();
-			this.expandAction.finalize();
-		} catch (Throwable e) {
-			e.printStackTrace();
-		}
 		
 		disposeTable();
 		super.dispose();
@@ -1182,7 +1176,6 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	/**
 	 * Dispose the table
 	 */
-	@SuppressWarnings("deprecation")
 	public synchronized void disposeTable() {
 		if (this.tblFix != null) {
 			synchronized (this.tblFix) {
