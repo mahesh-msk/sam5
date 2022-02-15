@@ -75,36 +75,32 @@ public class TreeDetailViewer extends TreeViewer {
 	}
 	
 	public void setUpTable(final GestionnaireVueDetaillee gestionnaireColonne, final VueListe vueListe) {
-		//final Table table = getTableTree().getTable();
 		
 		for (String cn : columnNames) {
-			
 			
 			// Add columns in the tree
 			// Create the first column for the key
 			TreeViewerColumn col = new TreeViewerColumn(this, SWT.LEFT);
 			//col.getColumn().setWidth(400);
-			col.getColumn().setText("E4__" + cn);
+			col.getColumn().setText(cn);
 			col.setLabelProvider(new ColumnLabelProvider() {
 				@Override
 				public String getText(Object element) {
+					if (element instanceof AVariableComposant)
+					{
+						if (col.getColumn().getText().equals(columnNames[0]))
+						{
+							return ((AVariableComposant) element).getDescriptor().toString();
+						}
+						else if (col.getColumn().getText().equals(columnNames[1]))
+						{
+							return ((AVariableComposant) element).getValeurBruteChaineVariableDiscrete();
+						}
+					}
 					return "E4**" + super.getText(element);
+
 				}
 			});
-			col.getColumn().setToolTipText("E4***********");
-			
-			// E34 Mettre le label provider sur la colonne _ ? 
-			/*
-			 * Exemple venant du context spy
-			ContextDataProvider keyLabelProvider = ContextInjectionFactory.make(ContextDataProvider.class, ctx);
-			keyLabelProvider.setDisplayKey(true);
-			col.setLabelProvider(keyLabelProvider);
-			col.getColumn().setToolTipText("Key in context");
-			col.getColumn().addSelectionListener(
-					getHeaderSelectionAdapter(contextDataViewer, col.getColumn(), 0, keyLabelProvider));
-
-			*/
-			
 			
 			
 			col.getColumn().addControlListener(new ControlAdapter() {
