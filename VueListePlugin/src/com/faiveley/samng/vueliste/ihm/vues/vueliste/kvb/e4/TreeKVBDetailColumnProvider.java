@@ -1,4 +1,4 @@
-package com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb;
+package com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.e4;
 
 import java.util.Map;
 
@@ -7,17 +7,16 @@ import com.faiveley.kvbdecoder.model.kvb.marker.Marker;
 import com.faiveley.kvbdecoder.model.kvb.train.TrainCategoryEnum;
 import com.faiveley.kvbdecoder.services.loader.KVBLoaderService;
 import com.faiveley.samng.principal.ihm.Activator;
-
 import com.faiveley.samng.principal.sm.data.enregistrement.atess.AtessMessage.AtessMessageErrorString;
 import com.faiveley.samng.principal.sm.data.variableComposant.AVariableComposant;
 import com.faiveley.samng.principal.sm.data.variableComposant.Langage;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailLabelProvider;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.TreeDetailColumnProvider;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailContentProvider.AtessMessageTrainInfoShell;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailContentProvider.KVBDecoderResultShell;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailContentProvider.MarkerX14Distance;
 
-@Deprecated
-public class TableTreeKVBDetailLabelProvider extends TableTreeDetailLabelProvider {	
+public class TreeKVBDetailColumnProvider extends TreeDetailColumnProvider {	
+
 	private static final String LABEL_IHM_KVB_DATA = "IHM.DonneesTrainKVB";
 	private static final String LABEL_IHM_KVB_CATEGORY = "IHM.CategorieKVB";
 	private static final String LABEL_IHM_INFORMATIONS = "IHM.Informations";
@@ -28,6 +27,10 @@ public class TableTreeKVBDetailLabelProvider extends TableTreeDetailLabelProvide
 	private static final Langage language = Activator.getDefault().getCurrentLanguage();
 	private static final KVBLoaderService loaderService = KVBLoaderService.getServiceInstance();
 	
+	public TreeKVBDetailColumnProvider(int index) {
+		super(index);
+	}
+
 	@SuppressWarnings("unchecked")
 	public String getColumnText(Object element, int columnIndex) {		
 		String columnText = "";

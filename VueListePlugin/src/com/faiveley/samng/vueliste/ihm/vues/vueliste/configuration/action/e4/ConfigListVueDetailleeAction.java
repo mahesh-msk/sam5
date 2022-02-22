@@ -4,7 +4,7 @@ import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.actions.vue.VueAction;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
+import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.Messages;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail;
 
 /**

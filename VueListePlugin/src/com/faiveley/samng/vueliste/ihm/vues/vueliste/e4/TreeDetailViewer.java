@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.eclipse.jface.viewers.AbstractTreeViewer;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
@@ -42,7 +43,6 @@ import com.faiveley.samng.principal.sm.formats.FormatSAM;
 import com.faiveley.samng.principal.sm.parseurs.BridageFormats;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailContentProvider;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailLabelProvider;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail.TypeMenuOptions;
 
@@ -62,7 +62,7 @@ public class TreeDetailViewer extends TreeViewer {
 	
 	protected void setComponents() {
 		setContentProvider(new TableTreeDetailContentProvider());
-		setLabelProvider(new TableTreeDetailLabelProvider());
+		setLabelProvider(new LabelProvider()); // TableTreeDetailLabelProvider());
 		setInput(null);
 	}
 	
@@ -74,8 +74,15 @@ public class TreeDetailViewer extends TreeViewer {
 		return;
 	}
 	
+	/** return the column provider to use for the tree columns. THis method can be overridden */
+	protected ColumnLabelProvider getColumnLabelProvider(int index)
+	{
+		return new TreeDetailColumnProvider(index);
+	}
+	
 	public void setUpTable(final GestionnaireVueDetaillee gestionnaireColonne, final VueListe vueListe) {
 		
+		int index = 0;
 		for (String cn : columnNames) {
 			
 			// Add columns in the tree
@@ -83,24 +90,7 @@ public class TreeDetailViewer extends TreeViewer {
 			TreeViewerColumn col = new TreeViewerColumn(this, SWT.LEFT);
 			//col.getColumn().setWidth(400);
 			col.getColumn().setText(cn);
-			col.setLabelProvider(new ColumnLabelProvider() {
-				@Override
-				public String getText(Object element) {
-					if (element instanceof AVariableComposant)
-					{
-						if (col.getColumn().getText().equals(columnNames[0]))
-						{
-							return ((AVariableComposant) element).getDescriptor().toString();
-						}
-						else if (col.getColumn().getText().equals(columnNames[1]))
-						{
-							return ((AVariableComposant) element).getValeurBruteChaineVariableDiscrete();
-						}
-					}
-					return "E4**" + super.getText(element);
-
-				}
-			});
+			col.setLabelProvider(getColumnLabelProvider(index)); 
 			
 			
 			col.getColumn().addControlListener(new ControlAdapter() {
@@ -118,6 +108,7 @@ public class TreeDetailViewer extends TreeViewer {
 					}
 				}
 			}); 
+			index++;
 		}
 		
 		setHiddenColumn();
@@ -163,6 +154,7 @@ public class TreeDetailViewer extends TreeViewer {
 		});
 	
 	}
+	
 					
 	private boolean expandVariable(DescripteurVariable descr) {
 		boolean structureExpanded = false;

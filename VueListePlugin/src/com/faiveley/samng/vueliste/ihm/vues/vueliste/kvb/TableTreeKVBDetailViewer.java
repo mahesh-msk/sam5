@@ -25,6 +25,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireV
  * @deprecated use TreeKVBDetailViewer instead
  *
  */
+@Deprecated
 public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 	private static final Display display = PlatformUI.getWorkbench().getDisplay();
 	private static final Color colorRed = display.getSystemColor(SWT.COLOR_RED);

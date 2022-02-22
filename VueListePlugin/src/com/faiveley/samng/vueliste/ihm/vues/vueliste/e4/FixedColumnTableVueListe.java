@@ -216,10 +216,7 @@ public abstract class FixedColumnTableVueListe extends Composite {
 
 	public void refresh() {
 		this.fixedTable.setRedraw(false);
-		
-		// E34 : ligne a virer. Juste un test pour portage
-		fixedTableViewer.getTable().setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_DARK_YELLOW));
-		
+				
 		if (this.fixedTableViewer != null) {
 			this.fixedTableViewer.refresh();
 		}

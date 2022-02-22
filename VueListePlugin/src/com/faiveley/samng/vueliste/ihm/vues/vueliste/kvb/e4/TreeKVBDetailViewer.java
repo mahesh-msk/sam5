@@ -1,5 +1,7 @@
 package com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.e4;
 
+import org.eclipse.jface.viewers.ColumnLabelProvider;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.graphics.Color;
@@ -17,7 +19,6 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireV
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.TreeDetailViewer;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailContentProvider;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailLabelProvider;
 
 public class TreeKVBDetailViewer extends TreeDetailViewer {
 	private static final Display display = PlatformUI.getWorkbench().getDisplay();
@@ -31,10 +32,17 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
 		columnNames = new String[] {GestionnaireVueDetaillee.KVB_TABLE_COL_NAME.getLabel(), GestionnaireVueDetaillee.KVB_DECODED_VALUE_COL_NAME.getLabel()};
 	}
 	
+	
+	/** return the column provider to use for the tree columns. THis method can be overridden */
+	protected ColumnLabelProvider getColumnLabelProvider(int index)
+	{
+		return new TreeKVBDetailColumnProvider(index);
+	}
+
 	@Override
 	protected void setComponents() {
 		setContentProvider(new TableTreeKVBDetailContentProvider());
-		setLabelProvider(new TableTreeKVBDetailLabelProvider());
+		setLabelProvider(new LabelProvider());  // Label provider on tree can be the default, as only columns are displayed
 		setInput(null);
 	}
 	

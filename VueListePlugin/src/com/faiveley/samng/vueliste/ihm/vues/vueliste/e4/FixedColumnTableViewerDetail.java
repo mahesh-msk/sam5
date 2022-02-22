@@ -227,10 +227,6 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 			this.treeKVBDetailViewer.setMenu(buildMenuListener(true));
 			
 			
-			// E34 : ligne a virer. Juste un test pour portage
-			treeKVBDetailViewer.getTree().setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_DARK_GREEN));
-
-			
 			Tree treeTableKVB = this.treeKVBDetailViewer.getTree();
 			treeTableKVB.getHorizontalBar().setEnabled(true);
 			treeTableKVB.getHorizontalBar().setVisible(true);
@@ -243,9 +239,6 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 			this.treeInformationPointDetailViewer = new TreeInformationPointDetailViewer(this.kvbContainer, SWT.NONE, this, fixedTableEvenement);
 			this.layoutData = new GridData(SWT.FILL, SWT.NONE, true, false);
 			
-			// E34 : ligne a virer. Juste un test pour portage
-			treeInformationPointDetailViewer.getTree().setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_DARK_RED));
-
 			
 			this.tabFolder.setSelection(1);
 		} else if (fixedTableEvenement != null && !fixedTableEvenement.isKVBEvent() && isKVBEnabled()) {

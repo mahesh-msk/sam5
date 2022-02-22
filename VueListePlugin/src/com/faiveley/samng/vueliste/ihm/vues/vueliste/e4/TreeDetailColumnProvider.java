@@ -1,9 +1,7 @@
-package com.faiveley.samng.vueliste.ihm.vues.vueliste;
+package com.faiveley.samng.vueliste.ihm.vues.vueliste.e4;
 
+import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.ILabelProviderListener;
-import org.eclipse.jface.viewers.ITableLabelProvider;
-
-import org.eclipse.swt.graphics.Image;
 
 import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.sm.data.descripteur.DescripteurVariableAnalogique;
@@ -17,13 +15,22 @@ import com.faiveley.samng.principal.sm.data.variableComposant.JRU.ChaineDynamiqu
 import com.faiveley.samng.principal.sm.data.variableComposant.JRU.StructureDynamique;
 import com.faiveley.samng.principal.sm.data.variableComposant.JRU.TableauDynamique;
 
+/** The column label provider (inspired by the legacy TableTreeDetailLabelProvider)
+ * */
+public class TreeDetailColumnProvider extends ColumnLabelProvider{
+	private int columnIndex;
 
-@Deprecated  // Migrated to TreeDetailColumnProvider
-public class TableTreeDetailLabelProvider implements ITableLabelProvider {
-	public Image getColumnImage(Object arg0, int arg1) {
-		return null;
+	public TreeDetailColumnProvider(int index)
+	{
+		columnIndex = index;
 	}
-
+	
+	@Override
+	public String getText(Object element) {
+		return getColumnText(element, columnIndex);
+	}
+	
+	
 	/**
 	 * Gets the text for the specified column
 	 * 
@@ -58,7 +65,8 @@ public class TableTreeDetailLabelProvider implements ITableLabelProvider {
 		
 		return text;
 	}
-
+	
+	
 	public String getVariableName(Langage langage, AVariableComposant var) {
 		String nomUtilisateur = "";
 		
@@ -154,19 +162,6 @@ public class TableTreeDetailLabelProvider implements ITableLabelProvider {
 		return decodedValue;
 	}
 	
-	/**
-	 * Adds a listener
-	 * 
-	 * @param arg0 the listener
-	 */
-	public void addListener(ILabelProviderListener arg0) {
-	}
-
-	/**
-	 * Dispose any created resources
-	 */
-	public void dispose() {
-	}
 
 	/**
 	 * Returns whether the specified property, if changed, would affect the
@@ -180,11 +175,5 @@ public class TableTreeDetailLabelProvider implements ITableLabelProvider {
 		return false;
 	}
 
-	/**
-	 * Removes the specified listener
-	 * 
-	 * @param arg0 the listener
-	 */
-	public void removeListener(ILabelProviderListener arg0) {
-	}
+	
 }

@@ -1,43 +1,37 @@
-package com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb;
+package com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.e4;
 
-import org.eclipse.jface.viewers.ILabelProviderListener;
-import org.eclipse.jface.viewers.ITableLabelProvider;
-import org.eclipse.swt.graphics.Image;
+import org.eclipse.jface.viewers.ColumnLabelProvider;
 
 import com.faiveley.kvbdecoder.model.kvb.marker.Marker;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeInformationPointDetailContentProvider.XsmXcsInteger;
 
-@Deprecated
-public class TableTreeInformationPointDetailLabelProvider implements ITableLabelProvider {
+public class TreeInformationPointDetailColumnProvider extends ColumnLabelProvider{
+	private int columnIndex;
+
+	
 	protected static final String LABEL_INFORMATION_POINT_XSM = Messages.getString("FixedColumnTableViewerDetailLabelInformationPointXsm");
 	protected static final String LABEL_INFORMATION_POINT_XCS = Messages.getString("FixedColumnTableViewerDetailLabelInformationPointXcs");
 	protected static final String LABEL_INFORMATION_POINT_XSMXCS = Messages.getString("FixedColumnTableViewerDetailLabelInformationPointXsmXcs");
 
 
-	@Override
-	public void addListener(ILabelProviderListener listener) {
+	public TreeInformationPointDetailColumnProvider(int index)
+	{
+		columnIndex = index;
 	}
-
+	
 	@Override
-	public void dispose() {		
+	public String getText(Object element) {
+		return getColumnText(element, columnIndex);
 	}
+	
 
 	@Override
 	public boolean isLabelProperty(Object element, String property) {
 		return false;
 	}
 
-	@Override
-	public void removeListener(ILabelProviderListener listener) {		
-	}
 
-	@Override
-	public Image getColumnImage(Object element, int columnIndex) {
-		return null;
-	}
-
-	@Override
 	public String getColumnText(Object element, int columnIndex) {		
 		String columnText = "";
 		

@@ -2,6 +2,7 @@ package com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.e4;
 
 import java.util.List;
 
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.swt.SWT;
@@ -15,7 +16,6 @@ import com.faiveley.samng.principal.sm.data.enregistrement.Evenement;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.e4.FixedColumnTableViewerDetail;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeInformationPointDetailContentProvider;
-import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeInformationPointDetailLabelProvider;
 
 public class TreeInformationPointDetailViewer extends TreeViewer {
 	protected static final String LABEL_COLUMN_0 = Messages
@@ -67,10 +67,11 @@ public class TreeInformationPointDetailViewer extends TreeViewer {
 		this.evenement = evenement;
 
 		setContentProvider(new TableTreeInformationPointDetailContentProvider());
-		setLabelProvider(new TableTreeInformationPointDetailLabelProvider());
+		setLabelProvider(new LabelProvider());  // Default provider on tree (only column provider will be used)
 
 		// Add columns in the tree
 		// First empty column
+		int index = 0;
 		TreeViewerColumn col = new TreeViewerColumn(this, SWT.CENTER);
 		col.getColumn().setResizable(false);
 
@@ -82,12 +83,17 @@ public class TreeInformationPointDetailViewer extends TreeViewer {
 				getFctvd().refreshOnglets(getEvenement());
 			}
 		});
+		col.setLabelProvider(new TreeInformationPointDetailColumnProvider(index));
+		index++;
 
 		// Pack the columns
 		for (String cn : columnNames) {
 			
 			TreeViewerColumn c = new TreeViewerColumn(this, SWT.CENTER);
 			initColumn(c.getColumn(), cn);
+			c.setLabelProvider(new TreeInformationPointDetailColumnProvider(index)); 
+			index++;
+
 		}
 
 		// Turn on the header and the lines
