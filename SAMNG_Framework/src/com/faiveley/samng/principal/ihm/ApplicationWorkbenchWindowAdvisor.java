@@ -115,7 +115,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor im
 		IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 		IPerspectiveDescriptor[] perspectives = page.getOpenPerspectives();
 		
-		// La perspective Accueil doit contenir au minimum la vue Liste dans tous les cas de figure et notamment au premier lancement de lapplication suite à une installation Issue#878
+		// La perspective Accueil doit contenir au minimum la vue Liste dans tous les cas de figure et notamment au premier lancement de lapplication suite ï¿½ une installation Issue#878
 		for (IPerspectiveDescriptor perspective : perspectives) {
 			if (perspective.getId().equals("SAMNG.perspectiveAccueil")) {
 				IViewReference[] views = page.getViewReferences();
@@ -133,7 +133,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor im
 				
 				if (printListView) {					
 					try {
-						page.showView("SAMNG.Vue.Liste");
+						page.showView("SAMNG.Vue.Liste.e4");
 					} catch (PartInitException e) {
 						e.printStackTrace();
 					}
@@ -145,7 +145,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor im
 	@Override
 	public void postWindowOpen() {
 		if (GestionLineCommandParameters.getNomfichier() != null && (!GestionLineCommandParameters.getNomfichier().equals(""))) {
-			//il y a un fichier à ouvrir
+			//il y a un fichier ï¿½ ouvrir
 			FichierOuvrirAction foa = new FichierOuvrirAction(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(), GestionLineCommandParameters.getNomfichier(), 0, -1, false, "");
 			foa.run();
 		}
@@ -214,7 +214,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor im
 				
 				FileWriter writ = new FileWriter(file);
 
-				// Tentative de calcul du max de mémoire disponible dans la jvm
+				// Tentative de calcul du max de mï¿½moire disponible dans la jvm
 				long xmxValide = 64;
 				
 				try {
@@ -313,7 +313,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor im
 	}
 
 	/**
-	 * Méthode permetttant de calculer la valeur du paramètre JVM Xmx en partant d'une valeur
+	 * Mï¿½thode permetttant de calculer la valeur du paramï¿½tre JVM Xmx en partant d'une valeur
 	 */
 	public static int calculerValeurXmxMaximum(int valeurDepart) throws IOException{
 		int exitVal = -1;

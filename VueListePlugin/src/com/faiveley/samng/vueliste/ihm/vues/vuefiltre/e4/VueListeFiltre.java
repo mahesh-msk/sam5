@@ -167,7 +167,7 @@ public class VueListeFiltre extends ViewPart implements PropertyChangeListener,
 		
 		try {
 			//Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().hideView(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().findView("SAMNG.Vue.Filtre.VueListeFiltre"));
-			Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().showView("SAMNG.Vue.Liste");
+			Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().showView("SAMNG.Vue.Liste.e4");
 		} catch (PartInitException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

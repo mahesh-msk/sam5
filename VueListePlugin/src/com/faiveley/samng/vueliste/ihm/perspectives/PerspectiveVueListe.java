@@ -30,7 +30,7 @@ public class PerspectiveVueListe implements IPerspectiveFactory {
 		
 		if(!ActivatorData.getInstance().getVueData().isEmpty()){
 		List<String> listeVues = new ArrayList<String>();
-		listeVues.add("SAMNG.Vue.Liste");
+		listeVues.add("SAMNG.Vue.Liste.e4");
 		//listeVues.add("SAMNG.Vue.Filtre.VueListeFiltre");
 		IFolderLayout folder ;
 		for(int i=0; i<listeVues.size();i++){

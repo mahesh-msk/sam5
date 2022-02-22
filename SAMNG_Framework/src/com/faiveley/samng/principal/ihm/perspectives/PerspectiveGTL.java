@@ -57,8 +57,6 @@ public class PerspectiveGTL implements IPerspectiveFactory {
 
 		layout.addStandaloneView("SAMNG.Vue.Tabulaire", true, IPageLayout.TOP,
 				tailleTabulaire, editorArea);
-		layout.addStandaloneView("SAMNG.Vue.Liste", true, IPageLayout.RIGHT,
-				tailleListe, "SAMNG.Vue.Tabulaire");
 		layout.addStandaloneView("SAMNG.Vue.Liste.e4", true, IPageLayout.RIGHT,
 				tailleListe, "SAMNG.Vue.Tabulaire");
 		layout.addStandaloneView("SAMNG.Vue.Graphique", true, IPageLayout.BOTTOM,
@@ -68,8 +66,8 @@ public class PerspectiveGTL implements IPerspectiveFactory {
 		layout.getViewLayout("SAMNG.Vue.Graphique").setMoveable(false);
 		layout.getViewLayout("SAMNG.Vue.Tabulaire").setCloseable(false);
 		layout.getViewLayout("SAMNG.Vue.Tabulaire").setMoveable(false);
-		layout.getViewLayout("SAMNG.Vue.Liste").setCloseable(false);
-		layout.getViewLayout("SAMNG.Vue.Liste").setMoveable(false);
+		layout.getViewLayout("SAMNG.Vue.Liste.e4").setCloseable(false);
+		layout.getViewLayout("SAMNG.Vue.Liste.e4").setMoveable(false);
 		
 	/*	layout.addFastView("SAMNG.Vue.Filtre.TabularVueFiltre");
 		layout.addFastView("SAMNG.Vue.Filtre.VueListeFiltre");
