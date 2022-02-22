@@ -367,6 +367,13 @@ public class TreeDetailViewer extends TreeViewer {
 			}
 			
 			if (getTree().getVerticalBar() != null) {
+				// E34 Exception sur getItem : Index out of bounds avec ce code 
+				
+				// Avant il y avait : 
+				//-				// E34 Revoir l'appel à setTopIndex (mettre setTopItem(TreeItem)...
+				//-				// getTree().setTopIndex(vd.getPosVScroll());
+				//+				getTree().setTopItem(getTree().getItem(vd.getPosVScroll()));
+
 				getTree().setTopItem(getTree().getItem(vd.getPosVScroll()));
 				getTree().getVerticalBar().setSelection(vd.getPosVScroll());
 			}
