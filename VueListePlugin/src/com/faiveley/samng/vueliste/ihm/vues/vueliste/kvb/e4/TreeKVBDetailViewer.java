@@ -114,29 +114,24 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
 	}
 	
 	public void colorLines() {
-		
-		//E34 Voir le colorLines sur TreeKvbDetailViewer
-		System.out.println("E34 Voir le colorLines sur TreeKvbDetailViewer");
-		
-		/*
+
 		// Coloration des textes en rouge
-		TableTree tableTree = getTableTree();
-		Table table = tableTree.getTable();
+		Tree tree = getTree();
 		
 		// On d�termine les lignes � colorer gr�ce au tableau sous forme TableTree (possibilit� d'inspecter les niveaux hi�rarchiquement)		
 		int rowIndex = 0;
 		int firstLevelIndex = 0;
 
-		for (TableTreeItem tableTreeLevel1 : tableTree.getItems()) { // Niveau 1
+		for (TreeItem tableTreeLevel1 : tree.getItems()) { // Niveau 1
 			rowIndex++;
 			firstLevelIndex++;
 			
-			for (TableTreeItem tableTreeLevel2 : tableTreeLevel1.getItems()) { // Niveau 2								
+			for (TreeItem tableTreeLevel2 : tableTreeLevel1.getItems()) { // Niveau 2								
 				if (tableTreeLevel2.getExpanded()) { // A un niveau inf�rieur: c'est uniquement les cas des Points d'Information
 										
-					if (!tableTreeLevel2.getText(1).isEmpty() && table.getItemCount() > rowIndex) { // A un texte d'alerte ; n'est pas repli� (si repli�: inutile et source d'erreur car 'table' ne consid�re que les lignes visibles, donc d�pli�es)
+					if (!tableTreeLevel2.getText(1).isEmpty() && tree.getItemCount() > rowIndex) { // A un texte d'alerte ; n'est pas repli� (si repli�: inutile et source d'erreur car 'table' ne consid�re que les lignes visibles, donc d�pli�es)
 						// On colore la ligne, uniquement sur la deuxi�me colonne, gr�ce  � la table sous forme Table (possibilit� de diff�rencier les colonnes)
-						table.getItem(rowIndex).setForeground(1, colorRed);
+						tree.getItem(rowIndex).setForeground(1, colorRed);
 					}
 					
 					rowIndex += tableTreeLevel2.getItemCount();
@@ -149,6 +144,6 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
 				tableTreeLevel1.setForeground(colorRed);
 			}
 		}
-		*/
+		
 	}
 }
