@@ -46,7 +46,6 @@ public class ExpandAction extends Action {
 
 	protected void expandTableTree(TreeViewer ttv) {
 
-		// E34 Verifier le portage de expand table tree
 		if (!ttv.getStructuredSelection().isEmpty()) {
 			Iterator<?> it = ttv.getStructuredSelection().iterator();
 			do {
@@ -54,16 +53,6 @@ public class ExpandAction extends Action {
 			} while (it.hasNext());
 		}
 
-		/*
-		 * int nbSelected = ttv.getTree().getSelection().length;
-		 * 
-		 * 
-		 * for (int i = 0; i < nbSelected; i++) {
-		 * ttv.expandToLevel(ttv.getTableTree().getSelection()[i].getData(),
-		 * AbstractTreeViewer.ALL_LEVELS); }
-		 * 
-		 * 
-		 */
 
 		// Re-color lines
 		if (ttv instanceof TreeKVBDetailViewer) {
