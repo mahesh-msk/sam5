@@ -98,9 +98,9 @@ import com.faiveley.samng.vueliste.ihm.actions.exports.e4.ExporterVueListeAction
 import com.faiveley.samng.vueliste.ihm.actions.print.e4.ImprimerVueListeAction;
 import com.faiveley.samng.vueliste.ihm.actions.table.e4.CollapseAllAction;
 import com.faiveley.samng.vueliste.ihm.actions.table.e4.ExpandAllAction;
-import com.faiveley.samng.vueliste.ihm.actions.vue.ShowVueFiltresListeAction;
 import com.faiveley.samng.vueliste.ihm.actions.vue.e4.ApplyFiltreAction;
 import com.faiveley.samng.vueliste.ihm.actions.vue.e4.RechercherVariableListeAction;
+import com.faiveley.samng.vueliste.ihm.actions.vue.e4.ShowVueFiltresListeAction;
 import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.e4.VueListeFiltre;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListeLabelProvider;

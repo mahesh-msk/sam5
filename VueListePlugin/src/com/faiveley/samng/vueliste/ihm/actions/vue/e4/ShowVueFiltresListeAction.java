@@ -1,11 +1,11 @@
-package com.faiveley.samng.vueliste.ihm.actions.vue;
+package com.faiveley.samng.vueliste.ihm.actions.vue.e4;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
 
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
-import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.VueListeFiltre;
+import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.e4.VueListeFiltre;
 
 
 /**
@@ -14,7 +14,6 @@ import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.VueListeFiltre;
  * @author Cosmin Udroiu
  *
  */
-@Deprecated
 public class ShowVueFiltresListeAction extends Action {
 
 	public ShowVueFiltresListeAction() {
