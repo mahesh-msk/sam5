@@ -60,7 +60,6 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
 	@Override
 	protected void handleMouseDownEvent(Tree tree, MouseEvent event) {
 		
-		// E34 Test : controler  la methode handleMouseDownEvent 
     	// Set information point
 		Point pt = new Point(event.x, event.y);
         TreeItem item = tree.getItem(pt);
