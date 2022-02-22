@@ -118,9 +118,7 @@ public class TreeDetailViewer extends TreeViewer {
 		getTree().setHeaderVisible(true);
 		getTree().setLinesVisible(true);
 
-		
-		//E34 Voir mouse listener sur table Tree Detail Viewer
-	 
+			 
 		getTree().addMouseListener(new MouseListener() {
 			public void mouseDoubleClick(MouseEvent e) {
 				if (e.button == 1) {
@@ -130,7 +128,6 @@ public class TreeDetailViewer extends TreeViewer {
 						AVariableComposant var = (AVariableComposant) getSelectionFromWidget().get(0);
 						
 						if (var instanceof VariableAnalogique || var instanceof VariableDiscrete) {
-							// E34 Verifier si c'est bien getTree().getData (avant : getTable().getData))
 							Message msg = (Message) getTree().getData();
 							((MessageSelection) vueListe.currentSelection).setMessageId(msg.getMessageId());
 							ActivatorData.getInstance().setSelectedMsg(msg);
