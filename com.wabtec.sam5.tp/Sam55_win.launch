@@ -2,7 +2,7 @@
 <launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
     <booleanAttribute key="append.args" value="true"/>
     <booleanAttribute key="askclear" value="false"/>
-    <booleanAttribute key="automaticAdd" value="true"/>
+    <booleanAttribute key="automaticAdd" value="false"/>
     <booleanAttribute key="automaticValidate" value="true"/>
     <stringAttribute key="bootstrap" value=""/>
     <stringAttribute key="checked" value="[NONE]"/>
@@ -11,9 +11,7 @@
     <booleanAttribute key="clearwslog" value="false"/>
     <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/Sam55_win"/>
     <booleanAttribute key="default" value="false"/>
-    <setAttribute key="deselected_workspace_bundles">
-        <setEntry value="VueMultimediaPlugin.win32.x86"/>
-    </setAttribute>
+    <setAttribute key="deselected_workspace_bundles"/>
     <booleanAttribute key="includeOptional" value="false"/>
     <stringAttribute key="location" value="C:\Users\interindep\opcoach\wabtec\AppDataTest\SAM_data\workspace"/>
     <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
@@ -30,10 +28,12 @@
     <stringAttribute key="product" value="SAMNG.product"/>
     <setAttribute key="selected_target_bundles">
         <setEntry value="com.ibm.icu@default:default"/>
+        <setEntry value="com.sun.jna*5.8.0.v20210503-0343@default:default"/>
+        <setEntry value="com.sun.jna.platform*5.8.0.v20210406-1004@default:default"/>
+        <setEntry value="com.sun.xml.bind@default:default"/>
         <setEntry value="javax.activation@default:default"/>
         <setEntry value="javax.annotation@default:default"/>
         <setEntry value="javax.inject@default:default"/>
-        <setEntry value="javax.servlet@default:default"/>
         <setEntry value="javax.xml.bind@default:default"/>
         <setEntry value="javax.xml.stream@default:default"/>
         <setEntry value="javax.xml@default:default"/>
@@ -44,7 +44,9 @@
         <setEntry value="org.apache.commons.io@default:default"/>
         <setEntry value="org.apache.commons.jxpath@default:default"/>
         <setEntry value="org.apache.commons.logging@default:default"/>
+        <setEntry value="org.apache.felix.gogo.command@default:default"/>
         <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
+        <setEntry value="org.apache.felix.gogo.shell@default:default"/>
         <setEntry value="org.apache.felix.scr@1:true"/>
         <setEntry value="org.apache.xmlgraphics@default:default"/>
         <setEntry value="org.eclipse.compare.core.nl_de@default:false"/>
@@ -144,6 +146,14 @@
         <setEntry value="org.eclipse.core.resources.nl_pt@default:false"/>
         <setEntry value="org.eclipse.core.resources.nl_tr@default:false"/>
         <setEntry value="org.eclipse.core.resources.nl_zh@default:false"/>
+        <setEntry value="org.eclipse.core.resources.win32.x86_64.nl_de@default:false"/>
+        <setEntry value="org.eclipse.core.resources.win32.x86_64.nl_es@default:false"/>
+        <setEntry value="org.eclipse.core.resources.win32.x86_64.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.core.resources.win32.x86_64.nl_it@default:false"/>
+        <setEntry value="org.eclipse.core.resources.win32.x86_64.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.core.resources.win32.x86_64.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.core.resources.win32.x86_64.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.core.resources.win32.x86_64.nl_zh@default:false"/>
         <setEntry value="org.eclipse.core.resources@default:default"/>
         <setEntry value="org.eclipse.core.runtime.nl_de@default:false"/>
         <setEntry value="org.eclipse.core.runtime.nl_es@default:false"/>
@@ -320,6 +330,7 @@
         <setEntry value="org.eclipse.e4.ui.services.nl_tr@default:false"/>
         <setEntry value="org.eclipse.e4.ui.services.nl_zh@default:false"/>
         <setEntry value="org.eclipse.e4.ui.services@default:default"/>
+        <setEntry value="org.eclipse.e4.ui.swt.win32@default:false"/>
         <setEntry value="org.eclipse.e4.ui.widgets.nl_de@default:false"/>
         <setEntry value="org.eclipse.e4.ui.widgets.nl_es@default:false"/>
         <setEntry value="org.eclipse.e4.ui.widgets.nl_fr@default:false"/>
@@ -381,12 +392,60 @@
         <setEntry value="org.eclipse.emf.ecore.xmi@default:default"/>
         <setEntry value="org.eclipse.emf.ecore@default:default"/>
         <setEntry value="org.eclipse.emf.edit@default:default"/>
+        <setEntry value="org.eclipse.equinox.app.nl_de@default:false"/>
+        <setEntry value="org.eclipse.equinox.app.nl_es@default:false"/>
+        <setEntry value="org.eclipse.equinox.app.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.equinox.app.nl_it@default:false"/>
+        <setEntry value="org.eclipse.equinox.app.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.equinox.app.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.equinox.app.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.equinox.app.nl_zh@default:false"/>
         <setEntry value="org.eclipse.equinox.app@default:default"/>
+        <setEntry value="org.eclipse.equinox.bidi.nl_de@default:false"/>
+        <setEntry value="org.eclipse.equinox.bidi.nl_es@default:false"/>
+        <setEntry value="org.eclipse.equinox.bidi.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.equinox.bidi.nl_it@default:false"/>
+        <setEntry value="org.eclipse.equinox.bidi.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.equinox.bidi.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.equinox.bidi.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.equinox.bidi.nl_zh@default:false"/>
         <setEntry value="org.eclipse.equinox.bidi@default:default"/>
+        <setEntry value="org.eclipse.equinox.common.nl_de@default:false"/>
+        <setEntry value="org.eclipse.equinox.common.nl_es@default:false"/>
+        <setEntry value="org.eclipse.equinox.common.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.equinox.common.nl_it@default:false"/>
+        <setEntry value="org.eclipse.equinox.common.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.equinox.common.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.equinox.common.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.equinox.common.nl_zh@default:false"/>
         <setEntry value="org.eclipse.equinox.common@2:true"/>
+        <setEntry value="org.eclipse.equinox.event.nl_de@default:false"/>
+        <setEntry value="org.eclipse.equinox.event.nl_es@default:false"/>
+        <setEntry value="org.eclipse.equinox.event.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.equinox.event.nl_it@default:false"/>
+        <setEntry value="org.eclipse.equinox.event.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.equinox.event.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.equinox.event.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.equinox.event.nl_zh@default:false"/>
         <setEntry value="org.eclipse.equinox.event@default:default"/>
+        <setEntry value="org.eclipse.equinox.preferences.nl_de@default:false"/>
+        <setEntry value="org.eclipse.equinox.preferences.nl_es@default:false"/>
+        <setEntry value="org.eclipse.equinox.preferences.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.equinox.preferences.nl_it@default:false"/>
+        <setEntry value="org.eclipse.equinox.preferences.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.equinox.preferences.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.equinox.preferences.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.equinox.preferences.nl_zh@default:false"/>
         <setEntry value="org.eclipse.equinox.preferences@default:default"/>
         <setEntry value="org.eclipse.equinox.region@default:false"/>
+        <setEntry value="org.eclipse.equinox.registry.nl_de@default:false"/>
+        <setEntry value="org.eclipse.equinox.registry.nl_es@default:false"/>
+        <setEntry value="org.eclipse.equinox.registry.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.equinox.registry.nl_it@default:false"/>
+        <setEntry value="org.eclipse.equinox.registry.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.equinox.registry.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.equinox.registry.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.equinox.registry.nl_zh@default:false"/>
         <setEntry value="org.eclipse.equinox.registry@default:default"/>
         <setEntry value="org.eclipse.equinox.transforms.hook@default:false"/>
         <setEntry value="org.eclipse.equinox.weaving.hook@default:false"/>
@@ -425,6 +484,15 @@
         <setEntry value="org.eclipse.jface.nl_pt@default:false"/>
         <setEntry value="org.eclipse.jface.nl_tr@default:false"/>
         <setEntry value="org.eclipse.jface.nl_zh@default:false"/>
+        <setEntry value="org.eclipse.jface.notifications.nl_de@default:false"/>
+        <setEntry value="org.eclipse.jface.notifications.nl_es@default:false"/>
+        <setEntry value="org.eclipse.jface.notifications.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.jface.notifications.nl_it@default:false"/>
+        <setEntry value="org.eclipse.jface.notifications.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.jface.notifications.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.jface.notifications.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.jface.notifications.nl_zh@default:false"/>
+        <setEntry value="org.eclipse.jface.notifications@default:default"/>
         <setEntry value="org.eclipse.jface.text.nl_de@default:false"/>
         <setEntry value="org.eclipse.jface.text.nl_es@default:false"/>
         <setEntry value="org.eclipse.jface.text.nl_fr@default:false"/>
@@ -491,6 +559,15 @@
         <setEntry value="org.eclipse.text.nl_tr@default:false"/>
         <setEntry value="org.eclipse.text.nl_zh@default:false"/>
         <setEntry value="org.eclipse.text@default:default"/>
+        <setEntry value="org.eclipse.ui.forms.nl_de@default:false"/>
+        <setEntry value="org.eclipse.ui.forms.nl_es@default:false"/>
+        <setEntry value="org.eclipse.ui.forms.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.ui.forms.nl_it@default:false"/>
+        <setEntry value="org.eclipse.ui.forms.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.ui.forms.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.ui.forms.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.ui.forms.nl_zh@default:false"/>
+        <setEntry value="org.eclipse.ui.forms@default:default"/>
         <setEntry value="org.eclipse.ui.nl_de@default:false"/>
         <setEntry value="org.eclipse.ui.nl_es@default:false"/>
         <setEntry value="org.eclipse.ui.nl_fr@default:false"/>
@@ -517,6 +594,15 @@
         <setEntry value="org.eclipse.ui.workbench.nl_zh@default:false"/>
         <setEntry value="org.eclipse.ui.workbench@default:default"/>
         <setEntry value="org.eclipse.ui@default:default"/>
+        <setEntry value="org.eclipse.urischeme.nl_de@default:false"/>
+        <setEntry value="org.eclipse.urischeme.nl_es@default:false"/>
+        <setEntry value="org.eclipse.urischeme.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.urischeme.nl_it@default:false"/>
+        <setEntry value="org.eclipse.urischeme.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.urischeme.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.urischeme.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.urischeme.nl_zh@default:false"/>
+        <setEntry value="org.eclipse.urischeme@default:default"/>
         <setEntry value="org.w3c.css.sac@default:default"/>
         <setEntry value="org.w3c.dom.events@default:default"/>
         <setEntry value="org.w3c.dom.smil@default:default"/>

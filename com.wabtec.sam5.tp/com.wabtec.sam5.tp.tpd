@@ -36,8 +36,10 @@ location "https://archive.eclipse.org/technology/babel/update-site/R0.19.1/2021-
 // See ; https://download.eclipse.org/tools/orbit/downloads/
 location "https://download.eclipse.org/tools/orbit/downloads/drops/R20210825222808/repository" {
 	javax.annotation
-	javax.xml.bind
+	javax.xml.bind [2.2.0,3.0.0)
 	javax.xml.stream
+	// jakarta.xml.bind
+	com.sun.xml.bind [2.2.0,2.3.0)
 }
 
 
