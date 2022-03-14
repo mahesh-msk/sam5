@@ -8,8 +8,8 @@ Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  KVBDecoderPlugin;bundle-version="5.5.6",
- javax.xml.bind,
- org.eclipse.jface.text
+ org.eclipse.jface.text,
+ com.wabtec.sam5.jaxb;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: lib/FiltresXMLParser.jar,
  lib/FiltresTabulaireXMLParser.jar,
@@ -37,7 +37,6 @@ Bundle-ClassPath: lib/FiltresXMLParser.jar,
  lib/XMLParserJRU.jar,
  lib/org.eclipse.ve.swt_1.2.1.v20060918_M.jar,
  lib/net.sf.paperclips_1.0.4.200908120926.jar,
- lib/eclipselink.jar,
  lib/vorbis-java-tools-0.8-jar-with-dependencies.jar
 Export-Package: com.faiveley.samng.principal.data,
  com.faiveley.samng.principal.ihm,

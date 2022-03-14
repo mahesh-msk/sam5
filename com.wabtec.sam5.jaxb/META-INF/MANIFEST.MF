@@ -6,10 +6,10 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: WABTEC
 Automatic-Module-Name: com.wabtec.sam5.jaxb
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Bundle-ClassPath: lib/jaxb-api-2.4.0-b180830.0359.jar,
+Bundle-ClassPath: .,
+ lib/jaxb-api-2.4.0-b180830.0359.jar,
  lib/jaxb-osgi-2.4.0-b180830.0438.jar,
- lib/javax.activation-api-1.2.0.jar,
- .
+ lib/javax.activation-api-1.2.0.jar
 Export-Package: com.sun.xml.bind.v2,
  javax.xml.bind,
  javax.xml.bind.annotation,

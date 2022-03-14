@@ -28,7 +28,6 @@
 	<classpathentry exported="true" kind="lib" path="lib/XMLParserJRU.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.eclipse.ve.swt_1.2.1.v20060918_M.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/net.sf.paperclips_1.0.4.200908120926.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/eclipselink.jar"/>
 	<classpathentry kind="lib" path="lib/ConfigVuesXMLParser.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -30,11 +30,9 @@
         <setEntry value="com.ibm.icu@default:default"/>
         <setEntry value="com.sun.jna*5.8.0.v20210503-0343@default:default"/>
         <setEntry value="com.sun.jna.platform*5.8.0.v20210406-1004@default:default"/>
-        <setEntry value="com.sun.xml.bind@default:default"/>
         <setEntry value="javax.activation@default:default"/>
         <setEntry value="javax.annotation@default:default"/>
         <setEntry value="javax.inject@default:default"/>
-        <setEntry value="javax.xml.bind@default:default"/>
         <setEntry value="javax.xml.stream@default:default"/>
         <setEntry value="javax.xml@default:default"/>
         <setEntry value="org.apache.batik.constants@default:default"/>
@@ -164,6 +162,24 @@
         <setEntry value="org.eclipse.core.runtime.nl_tr@default:false"/>
         <setEntry value="org.eclipse.core.runtime.nl_zh@default:false"/>
         <setEntry value="org.eclipse.core.runtime@default:true"/>
+        <setEntry value="org.eclipse.core.variables.nl_de@default:false"/>
+        <setEntry value="org.eclipse.core.variables.nl_es@default:false"/>
+        <setEntry value="org.eclipse.core.variables.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.core.variables.nl_it@default:false"/>
+        <setEntry value="org.eclipse.core.variables.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.core.variables.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.core.variables.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.core.variables.nl_zh@default:false"/>
+        <setEntry value="org.eclipse.core.variables@default:default"/>
+        <setEntry value="org.eclipse.debug.core.nl_de@default:false"/>
+        <setEntry value="org.eclipse.debug.core.nl_es@default:false"/>
+        <setEntry value="org.eclipse.debug.core.nl_fr@default:false"/>
+        <setEntry value="org.eclipse.debug.core.nl_it@default:false"/>
+        <setEntry value="org.eclipse.debug.core.nl_nl@default:false"/>
+        <setEntry value="org.eclipse.debug.core.nl_pt@default:false"/>
+        <setEntry value="org.eclipse.debug.core.nl_tr@default:false"/>
+        <setEntry value="org.eclipse.debug.core.nl_zh@default:false"/>
+        <setEntry value="org.eclipse.debug.core@default:default"/>
         <setEntry value="org.eclipse.e4.core.commands.nl_de@default:false"/>
         <setEntry value="org.eclipse.e4.core.commands.nl_es@default:false"/>
         <setEntry value="org.eclipse.e4.core.commands.nl_fr@default:false"/>
@@ -618,6 +634,7 @@
         <setEntry value="VueMultimediaPlugin.win32.x86_64@default:false"/>
         <setEntry value="VueMultimediaPlugin@default:default"/>
         <setEntry value="VueTabulairePlugin@default:default"/>
+        <setEntry value="com.wabtec.sam5.jaxb@default:true"/>
     </setAttribute>
     <booleanAttribute key="show_selected_only" value="false"/>
     <stringAttribute key="templateConfig" value="C:\Users\interindep\git\samWabtec\SAMNG_Framework\SAM5.ini"/>

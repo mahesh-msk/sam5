@@ -8,7 +8,7 @@ Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  SAMNG,
- javax.xml.bind
+ com.wabtec.sam5.jaxb;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
  lib/FiltresGraphiqueXMLParser.jar,
