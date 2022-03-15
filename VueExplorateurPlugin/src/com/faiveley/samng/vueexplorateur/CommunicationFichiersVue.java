@@ -132,7 +132,7 @@ public class CommunicationFichiersVue {
 	private void traitementRegroupementsMensuels(File xml, TreeFile treeFile) {
 		String packageName = "com.faiveley.samng.principal.sm.missions.jaxb";
 		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(packageName);
+			JAXBContext jaxbContext = JAXBContext.newInstance(packageName, getClass().getClassLoader());
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			TypeDocument element = (TypeDocument) jaxbUnmarshaller.unmarshal(xml);
 

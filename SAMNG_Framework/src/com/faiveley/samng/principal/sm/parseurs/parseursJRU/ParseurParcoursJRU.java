@@ -125,16 +125,16 @@ public class ParseurParcoursJRU extends AParseurParcours {
 								// contenu
 	// dans le header) dans un message JRU
 
-	// booléen permettant d'activer/désactiver le caractère bloquant de certain
+	// boolï¿½en permettant d'activer/dï¿½sactiver le caractï¿½re bloquant de certain
 	// test
-	// test sur la différence longueur message enregistrée (L_MESSAGE_JRU) /
-	// longueur message calculée
+	// test sur la diffï¿½rence longueur message enregistrï¿½e (L_MESSAGE_JRU) /
+	// longueur message calculï¿½e
 	private boolean bad_l_message_jru_length_msg = false;
-	// test sur la différence longueur message enregistrée (L_MESSAGE) /
-	// longueur message calculée
+	// test sur la diffï¿½rence longueur message enregistrï¿½e (L_MESSAGE) /
+	// longueur message calculï¿½e
 	private boolean bad_l_message_length_msg = false;
 
-	// liste utilisée pour stocker temporairement les tableaux d'octets de tous
+	// liste utilisï¿½e pour stocker temporairement les tableaux d'octets de tous
 	// les messages
 	private List<Byte[]> listeTableauOctetBrutMsg = new ArrayList<Byte[]>(0);
 
@@ -260,18 +260,18 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			pretraiterFichierBRU(this.message);
 		}
 
-		// TODO: vérifier si cela fonctionne
+		// TODO: vï¿½rifier si cela fonctionne
 		// if(!verifierCRCConfiguration()){
 		// String errStr =
 		// Messages.getString("errors.blocking.badConfigurationCrc");
 		// throw new BadHeaderCrcException(errStr);
 		// }
 
-		// Si on est appelé par l'action explorer fichier, pas celle d'ouvrir
+		// Si on est appelï¿½ par l'action explorer fichier, pas celle d'ouvrir
 		// fichier...
 		if (explorer) {
 			try {
-				// Il faut faire une analyse minimum du fichier juste pour créer
+				// Il faut faire une analyse minimum du fichier juste pour crï¿½er
 				// les missions
 				// Algo : DR28 ed A - SAM 5.5.0 Ouvertures partielles.doc
 				chargerDataExplore(fileName);
@@ -360,7 +360,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 					}
 					crcMessageCourantVerifie = false;
 					if (indicemessage > -1) {
-						// ajout du tableau d'octets à la hashmap id message -
+						// ajout du tableau d'octets ï¿½ la hashmap id message -
 						// tableau octet brut
 						Byte[] tableauOctetMsg = new Byte[listeOctetMessage
 								.size()];
@@ -421,7 +421,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				}
 			} else {
 				if (indiceOctetDansMessage < longueurM) {
-					// octet à récupérer
+					// octet ï¿½ rï¿½cupï¿½rer
 					fichierTraite1[indiceOctetTraite] = file[i];
 					indiceOctetTraite++;
 					indiceOctetDansMessage++;
@@ -430,15 +430,15 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						// verif CRC
 						int crc = 0;
 						boolean crcEnregValide = false;
-						// test si CRC à cheval sur 2 blocs
+						// test si CRC ï¿½ cheval sur 2 blocs
 						if (longueurM % (tailleBlocData - 2) == tailleBlocData - 2 - 1) {
-							// CRC à cheval sur 2 bloc
-							// on récupère la valeur du crc
+							// CRC ï¿½ cheval sur 2 bloc
+							// on rï¿½cupï¿½re la valeur du crc
 							crcEnreg[0] = file[i];
 							crcEnreg[1] = file[i + 3];
 							crc = new BigInteger(crcEnreg).intValue();
 						} else {
-							// on récupère la valeur du crc
+							// on rï¿½cupï¿½re la valeur du crc
 							crcEnreg = Arrays.copyOfRange(file, i, i + 2);
 							crc = new BigInteger(crcEnreg).intValue();
 						}
@@ -469,7 +469,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			listeOctetMessage.add(file[i]);
 		}
 
-		// ajout du tableau d'octets à la liste des tableaux d'octets
+		// ajout du tableau d'octets ï¿½ la liste des tableaux d'octets
 		Byte[] tableauOctetMsg = new Byte[listeOctetMessage.size()];
 		for (int cpt = 0; cpt < listeOctetMessage.size(); cpt++) {
 			tableauOctetMsg[cpt] = listeOctetMessage.get(cpt);
@@ -564,7 +564,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			ParseurJRUTableAssociationEvVars.getInstance().parseRessource(
 					nomTableAssocciationEvtVars, false, 0, -1);
 		} catch (Exception e) {
-			System.out.println("ParseurJRUTableAssociationEvVars a échoué"); //$NON-NLS-1$
+			System.out.println("ParseurJRUTableAssociationEvVars a ï¿½chouï¿½"); //$NON-NLS-1$
 		}
 		ADescripteurComposant descripteursEvt = ParseurJRUTableAssociationEvVars
 				.getInstance().getTableEvVars();
@@ -574,7 +574,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		// create the table
 		factory.creerTableEvtVar(descripteursEvt);
 
-		// affichage ordonné des variables
+		// affichage ordonnï¿½ des variables
 		DescripteurComposite descrComposite = (DescripteurComposite) descripteursEvt;
 		HashMap<Integer, DescripteurComposite> hashMapCodeDescComp = new HashMap<Integer, DescripteurComposite>();
 		for (int o = 0; o < descrComposite.getLength(); o++) {
@@ -642,7 +642,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		// ((DescripteurComposite)descrTable.getEnfant(y)));
 		// }
 
-		// on défini la position de lecture de l'octet à l'octet de début du
+		// on dï¿½fini la position de lecture de l'octet ï¿½ l'octet de dï¿½but du
 		// premier enregistrement
 
 		int octetCourant = 0;
@@ -656,7 +656,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			tailleTableauMessage = fin;
 		}
 
-		// lorsque l'on atteint la fin du fichier, peu importe ce qui a été lu
+		// lorsque l'on atteint la fin du fichier, peu importe ce qui a ï¿½tï¿½ lu
 		// on doit s'arreter
 		if (octetCourant >= tailleTableauMessage) {
 			SamngLogger
@@ -674,7 +674,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		indiceBlocCourant = 1;
 		int compteurOctetsBrut = 0;
 
-		// Détermine si le fichier est un BRU ou JRU
+		// Dï¿½termine si le fichier est un BRU ou JRU
 		boolean BRUFile = BridageFormats.getInstance()
 				.getFormatFichierOuvert(this.currentFileName).getFjru() == FormatJRU.bru;
 
@@ -708,7 +708,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 					// chargement du message
 					msg = chargerMessage(octetCourant, false);
 
-					// on valorise l'id de message à partir de la taille de son
+					// on valorise l'id de message ï¿½ partir de la taille de son
 					// tableau d'octet brut
 					// on valorise l'attribut data du message avec le tableau
 					// d'octet brut
@@ -748,8 +748,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 							// si le CRC est incorrect
 							if (mauvaisCRC) {
-								// récupération des chaines à afficher: crc
-								// calculé et crc enregistré
+								// rï¿½cupï¿½ration des chaines ï¿½ afficher: crc
+								// calculï¿½ et crc enregistrï¿½
 								String calculCRC = retourCRC
 										.getCRCString(retourCRC.getCalculCRC());
 								String messageCRC = retourCRC
@@ -767,7 +767,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 												+ " "
 												+ (goodMsgs.size() + 1)
 												+ "; "
-												+ "CRC enregistré:"
+												+ "CRC enregistrï¿½:"
 												+ " 0x" + messageCRC);
 							}
 						}
@@ -775,11 +775,11 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						compteurOctetsBrut += nbOctetMsg;
 					}
 
-					// // calcul de la différence de longueur du message réel
-					// par rapport à la variable L_MESSAGE_JRU
-					// la longueur enregistree est supérieure à la longueur
+					// // calcul de la diffï¿½rence de longueur du message rï¿½el
+					// par rapport ï¿½ la variable L_MESSAGE_JRU
+					// la longueur enregistree est supï¿½rieure ï¿½ la longueur
 					// calculee car
-					// elle est à l'octet pres
+					// elle est ï¿½ l'octet pres
 					int longueurCalculeeLMessageJru = GestionnaireLongueurMessage
 							.getInstance().getLongueurCalculeeMessageCourant();
 					int longueurEnregistreeLMessageJru = GestionnaireLongueurMessage
@@ -789,8 +789,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 					int diffLongueurLMessageJru = longueurEnregistreeLMessageJru
 							- longueurCalculeeLMessageJru;
 
-					// calcul de la différence de longueur du message interne
-					// (exemple: MESSAGE_FROM_RBC) par rapport à la variable
+					// calcul de la diffï¿½rence de longueur du message interne
+					// (exemple: MESSAGE_FROM_RBC) par rapport ï¿½ la variable
 					// L_MESSAGE
 					int diffLongueurLMessage = 0;
 					int longueurCalculeeLMessage = longueurCalculeeLMessageJru;
@@ -821,8 +821,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 							goodMsgs.add(msg);
 						}
 					}
-					// cas où la longueur du message interne (MESSAGE_FROM_RBC)
-					// calculée est différente de la variable L_MESSAGE(en bits)
+					// cas oï¿½ la longueur du message interne (MESSAGE_FROM_RBC)
+					// calculï¿½e est diffï¿½rente de la variable L_MESSAGE(en bits)
 					else if (diffLongueurLMessage > 7
 							|| diffLongueurLMessage < 0) {
 						if (bad_l_message_length_msg) {
@@ -843,8 +843,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						}
 						// else
 						goodMsgs.add(msg);
-					}// cas où la longueur totale du message calculée est
-						// différente de la variable L_MESSAGE_JRU (en octets)
+					}// cas oï¿½ la longueur totale du message calculï¿½e est
+						// diffï¿½rente de la variable L_MESSAGE_JRU (en octets)
 					else if ((diffLongueurLMessageJru - diffLongueurLMessage) > 7
 							|| diffLongueurLMessageJru < 0) {
 						if (bad_l_message_jru_length_msg) {
@@ -884,7 +884,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						cpt++;
 					} else {
 						octetCourant += msg.getLongueur();
-						// incrémentation du compteur
+						// incrï¿½mentation du compteur
 						cpt += msg.getLongueur();
 					}
 				}
@@ -898,11 +898,11 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			try {
 				Evenement ev = goodMsgs.get(j).getEvenement();
 
-				// gestion de la synchronisation temps distance des événements
-				// su l'événement n'est pas a synchroniser
+				// gestion de la synchronisation temps distance des ï¿½vï¿½nements
+				// su l'ï¿½vï¿½nement n'est pas a synchroniser
 				if (!ev.isASychroniser() && !ev.isReferenceSynchro()) {
-					// on synchronise les événements si une synchronisation
-					// était en cours
+					// on synchronise les ï¿½vï¿½nements si une synchronisation
+					// ï¿½tait en cours
 					if (GestionnaireSynchronisationGroupes.getInstance()
 							.isSynchroEnCours()) {
 						GestionnaireSynchronisationGroupes.getInstance()
@@ -942,14 +942,14 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		return msgs;
 	}
 
-	// Méthode permettant d'acquérir du fichier
+	// Mï¿½thode permettant d'acquï¿½rir du fichier
 	// AppData\Roaming\Faiveley Transport\SAM
 	// X.X.X.bXX\ressources\bridage\missions.properties
-	// le paramètre max_messages_mission_jru. Ce paramètre permet de donner une
+	// le paramï¿½tre max_messages_mission_jru. Ce paramï¿½tre permet de donner une
 	// limite, en nombre de
-	// message, à la taille max d'une mission.
-	// Cette méthode était dans le module ParseurParcoursJRU. Elle a été
-	// développée par IMinfo.
+	// message, ï¿½ la taille max d'une mission.
+	// Cette mï¿½thode ï¿½tait dans le module ParseurParcoursJRU. Elle a ï¿½tï¿½
+	// dï¿½veloppï¿½e par IMinfo.
 	public static int getMaxMessagesJRU() {
 		String max_messages_mission_jru = "50000"; //$NON-NLS-1$
 		int max_messages_mission_jru_ = 50000;
@@ -972,13 +972,13 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		return max_messages_mission_jru_;
 	}
 
-	// Méthode qui calcul les offsets (en octets) des variable Date, Time et
+	// Mï¿½thode qui calcul les offsets (en octets) des variable Date, Time et
 	// Mode, dans le Header.
-	// Ce sont les seules variables nécessaires à l'algo d'exploration.
-	// Grâce à ces offsets, l'algo accède directement au ressources dont il a
+	// Ce sont les seules variables nï¿½cessaires ï¿½ l'algo d'exploration.
+	// Grï¿½ce ï¿½ ces offsets, l'algo accï¿½de directement au ressources dont il a
 	// besoin.
 	private void computeOffsetExploreVariables(DescripteurComposite descrComp) {
-		// Nombre de variables dont le message est constitué
+		// Nombre de variables dont le message est constituï¿½
 		int size = descrComp.getLength();
 
 		pos = 8; // Offset de 8 : taille du NID_MESSAGE
@@ -1003,39 +1003,39 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				posMode = pos;
 			}
 
-			// Passage à la variable suivante...
+			// Passage ï¿½ la variable suivante...
 			pos += var.getDescriptor().getTailleBits();
 		}
 	}
 
-	// Méthode qui explore les fichiers JRU (et BRU)
-	// Elle permet de diviser le fichier exploré en mission.
-	// Elle crée le fichier XML qui contien t la division en mission du fichier
-	// exploré.
+	// Mï¿½thode qui explore les fichiers JRU (et BRU)
+	// Elle permet de diviser le fichier explorï¿½ en mission.
+	// Elle crï¿½e le fichier XML qui contien t la division en mission du fichier
+	// explorï¿½.
 	// Algo : DR28 ed A - SAM 5.5.0 Ouvertures partielles.doc
 	private void chargerDataExplore(String nomFichierParcours)
 			throws ParseurBinaireException, DatatypeConfigurationException {
-		Message startMsgMission = null; // Contient le msg de début de mission
+		Message startMsgMission = null; // Contient le msg de dï¿½but de mission
 		boolean fermerMission = false; // Flag indiquant que la mission peut
-										// être fermée
+										// ï¿½tre fermï¿½e
 		int compteurMess = 0; // Nombre courant de messages contenus dans la
 								// mission courante
 		// Nombre max de message qu'une mission peut contenir
 		int max_messages_mission_jru_ = getMaxMessagesJRU();
-		TypeMission missionCurrent = null; // Contient la mission à ajouter
+		TypeMission missionCurrent = null; // Contient la mission ï¿½ ajouter
 		int numMission = 0; // Nombre courant de missions contenues dans le
-							// fichier exploré
+							// fichier explorï¿½
 		TypeListeMission listeMissions = new TypeListeMission(); // Liste
 																	// missions
-																	// écrit
+																	// ï¿½crit
 																	// dans le
 																	// XML
 		String dateRegTpsPrev = "dateRegTpsPrev"; // Contient la date du
 													// regroupement courant
-		TypeRegroupementTemps trt = null; // Regroupement de temps écrit dans le
+		TypeRegroupementTemps trt = null; // Regroupement de temps ï¿½crit dans le
 											// XML
 		int numRegTps = 0; // Nombre courant de regroupement de temps
-		// Liste des regroupements de temps écrit dans le XML
+		// Liste des regroupements de temps ï¿½crit dans le XML
 		TypeListeRegroupementTemps listeRegroupementTemps = new TypeListeRegroupementTemps();
 		// Fichier XML qui contient les informations d'exploration
 		TypeDocument doc = new TypeDocument();
@@ -1044,38 +1044,38 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		doc.setListeMission(listeMissions);
 		doc.setListeRegoupementTemps(listeRegroupementTemps);
 
-		// Récupération du descripteur du fichier JRU à explorer
+		// Rï¿½cupï¿½ration du descripteur du fichier JRU ï¿½ explorer
 		descrTable = (DescripteurComposite) ParseurJRUTableAssociationEvVars
 				.getInstance().getTableEvVars();
 
-		// Calcul des offsets pour accéder directement aux variables nécessaire
-		// à l'algo
-		// d'exploration : utilise un général message
+		// Calcul des offsets pour accï¿½der directement aux variables nï¿½cessaire
+		// ï¿½ l'algo
+		// d'exploration : utilise un gï¿½nï¿½ral message
 		computeOffsetExploreVariables((DescripteurComposite) descrTable
 				.getEnfant(0));
 
-		// on défini la position de lecture de l'octet à l'octet de début du
+		// on dï¿½fini la position de lecture de l'octet ï¿½ l'octet de dï¿½but du
 		// premier enregistrement
 		int octetCourant = 0;
-		// Récupère la taille, en octet, du fichier à explorer
+		// Rï¿½cupï¿½re la taille, en octet, du fichier ï¿½ explorer
 		int tailleTableauMessage = this.message.length;
 
-		int cpt = 1; // Nombre d'octets traités dans le bloc en cours
-		int cptMsg = 1; // Nombre de messages dépilés du fichier
+		int cpt = 1; // Nombre d'octets traitï¿½s dans le bloc en cours
+		int cptMsg = 1; // Nombre de messages dï¿½pilï¿½s du fichier
 		indiceBlocCourant = 1;
 		int compteurOctetsBrut = 0;
 
-		// Contient la Date du message courant sous forme d'epoch time à
+		// Contient la Date du message courant sous forme d'epoch time ï¿½
 		// 0h0min0s
 		// Evite les converstion de type
 		long currentDateL = 0;
 		// Contient la date du premier message de la mission
 		long startMsgMissionL = 0;
-		// Détermine si le fichier est un BRU ou JRU
+		// Dï¿½termine si le fichier est un BRU ou JRU
 		boolean BRUFile = BridageFormats.getInstance()
 				.getFormatFichierOuvert(this.currentFileName).getFjru() == FormatJRU.bru;
 
-		// Tant qu'il y a des octets à traiter dans le fichier à explorer...
+		// Tant qu'il y a des octets ï¿½ traiter dans le fichier ï¿½ explorer...
 		// while (octetCourant + 2 <= tailleTableauMessage - 1 &&
 		// !Thread.interrupted())
 		while (octetCourant + 2 <= tailleTableauMessage - 1
@@ -1097,14 +1097,14 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				// if the blocks structure is ok load the message
 				Message msg = new Message();
 
-				// S'il reste des octets à traiter dans le fichier...
+				// S'il reste des octets ï¿½ traiter dans le fichier...
 				if (octetCourant < tailleTableauMessage) {
 					// chargement du message
-					// Parse le message pour ne récupérer que les ressources
-					// utiles à l'exploration
+					// Parse le message pour ne rï¿½cupï¿½rer que les ressources
+					// utiles ï¿½ l'exploration
 					msg = chargerMessageExplore(octetCourant);
 
-					// on valorise l'id de message à partir de la taille de son
+					// on valorise l'id de message ï¿½ partir de la taille de son
 					// tableau d'octet brut
 					// on valorise l'attribut data du message avec le tableau
 					// d'octet brut
@@ -1124,7 +1124,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 						// Pour optimiser le temps de traitement, l'objet
 						// GregorianCalendar n'est
-						// plus utilisé et du coup les calculs se font en epoch
+						// plus utilisï¿½ et du coup les calculs se font en epoch
 						// time au jour : avec
 						// comme heure : 0h0min0s
 
@@ -1140,7 +1140,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						if (startMsgMission == null) {
 							startMsgMission = msg; // Enregistrement du premier
 													// msg de la mission
-							// Enregistrement de la date de début de mission
+							// Enregistrement de la date de dï¿½but de mission
 							startMsgMissionL = currentDateL;
 
 							// La mission comporte un message
@@ -1148,19 +1148,19 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						} else {
 							compteurMess++; // 1 message en plus dans la mission
 
-							// Si la date a changée et qu'elle n'est pas en
+							// Si la date a changï¿½e et qu'elle n'est pas en
 							// 2072...
 							// 3218745600L : GMT : 31/12/2071 0h0min0s et non
 							// 01/01/2072, car pour
 							// des raisons de time zone, il se peut que le
 							// 01/01/2072 se traduise
-							// par 31/12/2071 à 23H00, avec la suppression des
+							// par 31/12/2071 ï¿½ 23H00, avec la suppression des
 							// heures, minutes,
 							// secondes => 31/12/2071
 							if ((currentDateL != startMsgMissionL)
 									&& (currentDateL < 3218745600L)) {
-								// Si la date de la mission était en 2072 ==
-								// début de fichier en 2072...
+								// Si la date de la mission ï¿½tait en 2072 ==
+								// dï¿½but de fichier en 2072...
 								if (startMsgMissionL >= 3218745600L) {
 									// La date de la mission devient celle du
 									// message courant
@@ -1168,7 +1168,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 									startMsgMission.setAbsoluteTime(msg
 											.getAbsoluteTime());
 								}
-								// Si M_Mode vaut 6 (Libellé « Stand By » dans
+								// Si M_Mode vaut 6 (Libellï¿½ ï¿½ Stand By ï¿½ dans
 								// la table de labels)
 								else if (msg.getVariable(60720).toString()
 										.equals("Stand By")) {
@@ -1179,11 +1179,11 @@ public class ParseurParcoursJRU extends AParseurParcours {
 							}
 						}
 
-						// Si la mission doit être fermée : changement de jour +
+						// Si la mission doit ï¿½tre fermï¿½e : changement de jour +
 						// M_mode = 6 ou si le
 						// nombre max de message dans une mission est atteint,
 						// ou, le dernier
-						// message du fichier vient d'être traité
+						// message du fichier vient d'ï¿½tre traitï¿½
 						if (fermerMission
 								|| (compteurMess >= max_messages_mission_jru_)
 								|| ((octetCourant + msg.getLongueur() + 2) > (tailleTableauMessage - 1))) {
@@ -1229,7 +1229,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 							// Conversion du temps de secondes en millisecondes
 							gc.setTimeInMillis(startMsgMissionL * 1000);
 
-							// Récupération du mois et de l'année de la mission
+							// Rï¿½cupï¿½ration du mois et de l'annï¿½e de la mission
 							// pour savoir dans
 							// quel regroupement de temps il faudra la mettre :
 							// AAAA-MM
@@ -1237,13 +1237,13 @@ public class ParseurParcoursJRU extends AParseurParcours {
 									.newInstance().newXMLGregorianCalendar(gc)
 									.toString().substring(0, 7);
 
-							// Si la mission qui vient d'être ajoutée ne rentre
+							// Si la mission qui vient d'ï¿½tre ajoutï¿½e ne rentre
 							// pas dans le
 							// regroupement de temps courant...
 							if (!dateRegrTpsCurrent.equals(dateRegTpsPrev)) {
 								dateRegTpsPrev = new String(dateRegrTpsCurrent);
 
-								// Création d'un nouveau regroupement de temps
+								// Crï¿½ation d'un nouveau regroupement de temps
 								trt = new TypeRegroupementTemps();
 								listeRegroupementTemps.getRegroupementTemps()
 										.add(trt);
@@ -1292,7 +1292,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 			JAXBContext jaxbContext;
 			try {
-				jaxbContext = JAXBContext.newInstance(packageName);
+				jaxbContext = JAXBContext.newInstance(packageName, getClass().getClassLoader());
 				Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 				jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,
 						Boolean.valueOf(true));
@@ -1356,7 +1356,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		ev.setChangementHeure(false);
 
 		TableLangueNomUtilisateur tblLangues = new TableLangueNomUtilisateur();
-		tblLangues.setNomUtilisateur(Langage.FR, "Code de l'événement: " + id); //$NON-NLS-1$
+		tblLangues.setNomUtilisateur(Langage.FR, "Code de l'ï¿½vï¿½nement: " + id); //$NON-NLS-1$
 		tblLangues.setNomUtilisateur(Langage.EN, "Event code: " + id); //$NON-NLS-1$
 
 		ev.setNomUtilisateur(tblLangues);
@@ -1419,16 +1419,16 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			byte[] message = new byte[nbOctets];
 			longueurVariable = var.getDescriptor().getTailleBits();
 
-			// récupération du message
+			// rï¿½cupï¿½ration du message
 			message = Arrays.copyOfRange(this.message, start, start + nbOctets);
 			BigInteger bigInt = new BigInteger(message);
 
-			// suppression des bits inutiles à droite
+			// suppression des bits inutiles ï¿½ droite
 			BigInteger bigInt2 = bigInt.shiftRight(((nbOctets * 8))
 					- longueurVariable - pos);
 			byte[] tabbyte = bigInt2.toByteArray();
 
-			// suppresion des bits inutiles à gauches
+			// suppresion des bits inutiles ï¿½ gauches
 			for (int i = tabbyte.length - 1; i >= 0; i--) {
 				if ((tabbyte.length - i) * 8 <= longueurVariable) {
 					tabbyte[i] &= 0xff;
@@ -1451,7 +1451,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			value = Arrays.copyOfRange(tabbyte, tabbyte.length - tailleValue,
 					tabbyte.length);
 
-			// décalage à gauche pour les variables complexes
+			// dï¿½calage ï¿½ gauche pour les variables complexes
 			if (var instanceof VariableComplexe) {
 				value2 = new byte[value.length];
 
@@ -1479,31 +1479,31 @@ public class ParseurParcoursJRU extends AParseurParcours {
 	}
 
 	/**
-	 * Méthode de remplissage d'une structure dynamique
+	 * Mï¿½thode de remplissage d'une structure dynamique
 	 * 
 	 * @param structureDynamique
-	 *            la structure dynamique à renseigner
+	 *            la structure dynamique ï¿½ renseigner
 	 * @param definitionStructureDynamique
 	 *            la definition de la structure dynamique
 	 * @param start
-	 *            la position le départ du message
+	 *            la position le dï¿½part du message
 	 * @param pos
 	 *            la position courante dans le message
 	 * @param msg
 	 *            le message
-	 * @return la structure dynamique renseignée
+	 * @return la structure dynamique renseignï¿½e
 	 */
 	private StructureDynamique gererStructureDynamique(
 			StructureDynamique definitionStructureDynamique, int start,
 			Message msg) {
-		// création d'une nouvelle instance de structure dynamique
+		// crï¿½ation d'une nouvelle instance de structure dynamique
 		StructureDynamique structureDynamique = new StructureDynamique();
 
-		// définition du descripteur de la nouvelle structure dynamique
+		// dï¿½finition du descripteur de la nouvelle structure dynamique
 		structureDynamique.setDescripteur(definitionStructureDynamique
 				.getDescriptor());
 
-		// récupération de la définition de la variable d'entete
+		// rï¿½cupï¿½ration de la dï¿½finition de la variable d'entete
 		AVariableComposant defVarEntete = GestionnairePool.getInstance()
 				.getVariable(
 						definitionStructureDynamique.getVariableEntete()
@@ -1547,7 +1547,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 							varEntete.getDescriptor().getTailleBits());
 		}
 
-		// affectation de la variable d'entete à la nouvelle structure dynamique
+		// affectation de la variable d'entete ï¿½ la nouvelle structure dynamique
 		structureDynamique.setVariableEntete(varEntete);
 
 		String valeurVarEntete = varEntete
@@ -1577,7 +1577,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				tableSousVar.setM_AVariableComposant(listeSousVariable2);
 				structureDynamique.ajouterTableSousVariable(tableSousVar);
 			}
-			// Cas où le NID_XUSER n'est pas connu (Packet 44)
+			// Cas oï¿½ le NID_XUSER n'est pas connu (Packet 44)
 			// Message d'erreur + affichage de la valeur du NID_XUSER + saut de
 			// position de L_PACKET
 		} else if (varEntete.getDescriptor().getM_AIdentificateurComposant()
@@ -1609,12 +1609,12 @@ public class ParseurParcoursJRU extends AParseurParcours {
 									.getString("errors.nonblocking.blockStart1")
 							+ " " + indiceBlocCourant);
 		}
-		// Cas où le NID_MESSAGE n'est pas connu
+		// Cas oï¿½ le NID_MESSAGE n'est pas connu
 		// Message d'erreur + affichage de la valeur du NID_MESSAGE + pas besoin
 		// de saut,
-		// Il ne peut pas y avoir d'autre information à décoder après un
+		// Il ne peut pas y avoir d'autre information ï¿½ dï¿½coder aprï¿½s un
 		// NID_MESSAGE
-		// = pas de NID_MESSAGE après un NID_MESSAGE
+		// = pas de NID_MESSAGE aprï¿½s un NID_MESSAGE
 		else if (varEntete.getDescriptor().getM_AIdentificateurComposant()
 				.getNom().equals("NID_MESSAGE")) {
 			SamngLogger
@@ -1634,31 +1634,31 @@ public class ParseurParcoursJRU extends AParseurParcours {
 	}
 
 	/**
-	 * Méthode de remplissage d'un tableau dynamique
+	 * Mï¿½thode de remplissage d'un tableau dynamique
 	 * 
 	 * @param tableauDynamique
-	 *            le tableau dynamique à renseigner
+	 *            le tableau dynamique ï¿½ renseigner
 	 * @param definitionTableauDynamique
 	 *            la definition du tableau dynamique
 	 * @param start
-	 *            la position le départ du message
+	 *            la position le dï¿½part du message
 	 * @param pos
 	 *            la position courante dans le message en nombre de bits
 	 * @param msg
 	 *            le message
-	 * @return le tableau dynamique renseigné
+	 * @return le tableau dynamique renseignï¿½
 	 */
 	private TableauDynamique gererTableauDynamique(
 			TableauDynamique definitionTableauDynamique, int start, Message msg) {
 
-		// création d'une nouvelle instance de tableau dynamique
+		// crï¿½ation d'une nouvelle instance de tableau dynamique
 		TableauDynamique tableauDynamique = new TableauDynamique();
 
-		// définition du descripteur du tableau dynamique
+		// dï¿½finition du descripteur du tableau dynamique
 		tableauDynamique.setDescripteur(definitionTableauDynamique
 				.getDescriptor());
 
-		// récupération de la définition de la variable d'entete
+		// rï¿½cupï¿½ration de la dï¿½finition de la variable d'entete
 		AVariableComposant defVarEntete = GestionnairePool.getInstance()
 				.getVariable(
 						definitionTableauDynamique.getVariableEntete()
@@ -1697,7 +1697,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		// affectation de la variable d'entete au nouveau tableau dynamique
 		tableauDynamique.setVariableEntete(varEntete);
 
-		// récupération de la valeur de la variable d'entete
+		// rï¿½cupï¿½ration de la valeur de la variable d'entete
 		String valeurVarEntete = varEntete
 				.getValeurBruteChaineVariableDiscrete();
 
@@ -1740,32 +1740,32 @@ public class ParseurParcoursJRU extends AParseurParcours {
 	}
 
 	/**
-	 * Méthode de remplissage d'une chaine dynamique
+	 * Mï¿½thode de remplissage d'une chaine dynamique
 	 * 
 	 * @param chaineDynamique
-	 *            la chaine dynamique à renseigner
+	 *            la chaine dynamique ï¿½ renseigner
 	 * @param definitionChaineDynamique
-	 *            la definition de la chaine dynamique à renseigner
+	 *            la definition de la chaine dynamique ï¿½ renseigner
 	 * @param start
-	 *            la position le départ du message
+	 *            la position le dï¿½part du message
 	 * @param pos
 	 *            la position courante dans le message en nombre de bits
 	 * @param msg
 	 *            le message
-	 * @return la chaine dynamique renseignée
+	 * @return la chaine dynamique renseignï¿½e
 	 */
 	private ChaineDynamique gererChaineDynamique(
 			ChaineDynamique definitionChaineDynamique, int start, Message msg) {
 
-		// création d'une nouvelle instance de chaine
+		// crï¿½ation d'une nouvelle instance de chaine
 		// dynamique
 		ChaineDynamique chaineDynamique = new ChaineDynamique();
 
-		// définition du descripteur de la nouvelle chaine dynamique
+		// dï¿½finition du descripteur de la nouvelle chaine dynamique
 		chaineDynamique.setDescripteur(definitionChaineDynamique
 				.getDescriptor());
 
-		// récupération de la définition de la variable d'entete
+		// rï¿½cupï¿½ration de la dï¿½finition de la variable d'entete
 		// donnant le nombre d'occurrence de la variable XText
 		AVariableComposant defVarEntete = GestionnairePool.getInstance()
 				.getVariable(
@@ -1803,7 +1803,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		// affectation de la variable d'entete au nouveau tableau dynamique
 		chaineDynamique.setVariableEntete(varEnteteLText);
 
-		// récupération de la valeur de la variable d'entete
+		// rï¿½cupï¿½ration de la valeur de la variable d'entete
 		String valeurVarEntete = varEnteteLText
 				.getValeurBruteChaineVariableDiscrete();
 
@@ -1826,7 +1826,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		AVariableComposant sousVariableXText = null;
 
 		int tailleVarXText = defVarXText.getDescriptor().getTailleBits();
-		// création d'une nouvelle table sous-variable qui stocke les occurences
+		// crï¿½ation d'une nouvelle table sous-variable qui stocke les occurences
 		// de la variable XText
 		TableSousVariable tableSousVarChaineDynamique = new TableSousVariable();
 
@@ -1878,7 +1878,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		AVariableComposant varComp = null;
 		int codeSousVar;
 		DescripteurVariable descVar = null;
-		// création d'une liste de sous variables temporaire pour modification
+		// crï¿½ation d'une liste de sous variables temporaire pour modification
 		// car on ne peut modifier directement listeSousVariable
 		List<AVariableComposant> listeSousVariable2 = new ArrayList<AVariableComposant>();
 		long valeur_L_Packet = 0;
@@ -1936,7 +1936,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 							}
 						}
 
-						// ajout de la sous variable à la liste des sous
+						// ajout de la sous variable ï¿½ la liste des sous
 						// variables
 						listeSousVariable2.add(variableRenseignee);
 
@@ -1997,7 +1997,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 					} else if (typeVariable == TypeVariable.STRUCTURE_DYNAMIQUE) {
 
-						// récupération de la définition de la structure
+						// rï¿½cupï¿½ration de la dï¿½finition de la structure
 						// dynamique
 						StructureDynamique defStructureDyn = null;
 
@@ -2009,13 +2009,13 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						StructureDynamique structureDynamique2 = gererStructureDynamique(
 								defStructureDyn, start, msg);
 
-						// ajout de la sous variable à la liste des sous
+						// ajout de la sous variable ï¿½ la liste des sous
 						// variables
 						listeSousVariable2.add(structureDynamique2);
 
 					} else if (typeVariable == TypeVariable.TABLEAU_DYNAMIQUE) {
 
-						// récupération de la définition du tableau
+						// rï¿½cupï¿½ration de la dï¿½finition du tableau
 						// dynamique
 						TableauDynamique defTableauDyn = null;
 
@@ -2027,7 +2027,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						TableauDynamique tableauDynamique2 = gererTableauDynamique(
 								defTableauDyn, start, msg);
 
-						// ajout de la sous variable à la liste des sous
+						// ajout de la sous variable ï¿½ la liste des sous
 						// variables
 						listeSousVariable2.add(tableauDynamique2);
 
@@ -2044,7 +2044,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						ChaineDynamique chaineDynamique = gererChaineDynamique(
 								defChaineDyn, start, msg);
 
-						// ajout de la sous variable à la liste des sous
+						// ajout de la sous variable ï¿½ la liste des sous
 						// variables
 						listeSousVariable2.add(chaineDynamique);
 
@@ -2058,20 +2058,20 @@ public class ParseurParcoursJRU extends AParseurParcours {
 							.getVariableDynamique(
 									descVar.getM_AIdentificateurComposant()
 											.getCode());
-					// récupération de la définition de la tableau dynamique
+					// rï¿½cupï¿½ration de la dï¿½finition de la tableau dynamique
 					StructureDynamique defStructureDyn = (StructureDynamique) varComp;
 
-					// récupération de la liste des paquets
+					// rï¿½cupï¿½ration de la liste des paquets
 					List<Paquets> listePaquets = gererListePaquets(
 							defStructureDyn, start, msg);
 
-					// ajout des paquets à la table des sous variables
-					// et ajout de la varaible mère(varaible d'entete) à chaque
+					// ajout des paquets ï¿½ la table des sous variables
+					// et ajout de la varaible mï¿½re(varaible d'entete) ï¿½ chaque
 					// paquet
 					AVariableComposant variableEntete = null;
 					if (listePaquets != null && listePaquets.size() > 0) {
 						for (Paquets paquets : listePaquets) {
-							// ajout de la sous variable à la liste des sous
+							// ajout de la sous variable ï¿½ la liste des sous
 							// variables
 							variableEntete = paquets.getVariableEntete();
 							paquets.setParent(variableEntete);
@@ -2085,18 +2085,18 @@ public class ParseurParcoursJRU extends AParseurParcours {
 	}
 
 	/**
-	 * Méthode de remplissage d'une liste de paquets
+	 * Mï¿½thode de remplissage d'une liste de paquets
 	 * 
 	 * @param definitionStructureDynamique
-	 *            la definition de la structure dynamique servant à analyser le
+	 *            la definition de la structure dynamique servant ï¿½ analyser le
 	 *            ou les paquets
 	 * @param start
-	 *            la position le départ du message
+	 *            la position le dï¿½part du message
 	 * @param pos
 	 *            la position courante dans le message en nombre de bits
 	 * @param msg
 	 *            le message
-	 * @return la liste des paquets analysés
+	 * @return la liste des paquets analysï¿½s
 	 */
 	private List<Paquets> gererListePaquets(
 			StructureDynamique definitionStructureDynamique, int start,
@@ -2104,14 +2104,14 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 		List<Paquets> listePaquets = new ArrayList<Paquets>();
 
-		// récupération de la définition de la variable d'entete
+		// rï¿½cupï¿½ration de la dï¿½finition de la variable d'entete
 		AVariableComposant defVarEntete = GestionnairePool.getInstance()
 				.getVariable(
 						definitionStructureDynamique.getVariableEntete()
 								.getDescriptor()
 								.getM_AIdentificateurComposant().getCode());
 
-		// variables utilisées pour le paquet courant
+		// variables utilisï¿½es pour le paquet courant
 		Paquets paquetCourant = null;
 
 		AVariableComposant varEntetePaquetCourant;
@@ -2120,8 +2120,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		TableSousVariable tableSousVarDefinition = null;
 		String valeurVarEntetePaquetCourant = ""; //$NON-NLS-1$
 
-		// récupération de la valeur d'arret de lecture des paquets
-		// la valeur d'arret de lecture correspond à la valeur de la dernière
+		// rï¿½cupï¿½ration de la valeur d'arret de lecture des paquets
+		// la valeur d'arret de lecture correspond ï¿½ la valeur de la derniï¿½re
 		// table de sous variables
 		// String valeurArretLecturePaquets = ((TableSousVariable)
 		// definitionStructureDynamique
@@ -2134,7 +2134,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		String valEntetePrecedente = "";
 
 		//		System.out.println("MESSAGE: " + msg.getEvenement().getM_ADescripteurComposant().getM_AIdentificateurComposant().getNom()); //$NON-NLS-1$
-		//		System.out.println("longueur message enregistrée: " + GestionnaireLongueurMessage.getInstance().getLongueurEnregistreeMessageCourant()); //$NON-NLS-1$
+		//		System.out.println("longueur message enregistrï¿½e: " + GestionnaireLongueurMessage.getInstance().getLongueurEnregistreeMessageCourant()); //$NON-NLS-1$
 		while (!finMessage) {
 			paquetCourant = new Paquets();
 			lecturePaquetEnCours = true;
@@ -2142,12 +2142,12 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			// copie de la variable d'entete
 			varEntetePaquetCourant = defVarEntete.copy();
 
-			// si la position après lecture de la variable d'entete du paquet ne
-			// dépasse pas L_MESSAGE_JRU
+			// si la position aprï¿½s lecture de la variable d'entete du paquet ne
+			// dï¿½passe pas L_MESSAGE_JRU
 			// on lit ce paquet
 			// Dans un message interne (NID_MESSAGE) s'il ne reste pas assez de
-			// bits pour un entête
-			// de packet (8 bits) dans la longueur indiqué par le paquet
+			// bits pour un entï¿½te
+			// de packet (8 bits) dans la longueur indiquï¿½ par le paquet
 			// (L_MESSAGE), c'est que c'est du padding !
 			GestionnaireLongueurMessage gestLongueurMessage = GestionnaireLongueurMessage
 					.getInstance();
@@ -2169,15 +2169,15 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				// valorisation de la variable d'entete
 				remplirValue(varEntetePaquetCourant, start, msg);
 
-				// récupération de la valeur de la variable d'entete
+				// rï¿½cupï¿½ration de la valeur de la variable d'entete
 				valeurVarEntetePaquetCourant = varEntetePaquetCourant
 						.getValeurBruteChaineVariableDiscrete();
 
 				String valEntetePourMessage = valeurVarEntetePaquetCourant;
 
-				// après lecture du précédent paquet, la position réelle peut
-				// différée de celle donnée par la variable L_PACKET du paquet
-				// précédent
+				// aprï¿½s lecture du prï¿½cï¿½dent paquet, la position rï¿½elle peut
+				// diffï¿½rï¿½e de celle donnï¿½e par la variable L_PACKET du paquet
+				// prï¿½cï¿½dent
 				if (gestLongueurPaquet.getLongueurEnregistreePacketCourant() != 0) {
 					if (gestLongueurPaquet.getLongueurCalculeePacketCourant() != gestLongueurPaquet
 							.getLongueurEnregistreePacketCourant()) {
@@ -2208,12 +2208,12 @@ public class ParseurParcoursJRU extends AParseurParcours {
 										+ " " + indiceBlocCourant);
 					}
 				} else {
-					// récupération de la valeur de la variable d'entete
+					// rï¿½cupï¿½ration de la valeur de la variable d'entete
 					valEntetePourMessage = varEntetePaquetCourant
 							.getValeurBruteChaineVariableDiscrete();
 				}
 				valEntetePrecedente = valEntetePourMessage;
-				// réinitialisation des longueurs calculée et enregistrée du
+				// rï¿½initialisation des longueurs calculï¿½e et enregistrï¿½e du
 				// paquet
 				gestLongueurPaquet.setLongueurEnregistreePacketCourant(0);
 				gestLongueurPaquet.setLongueurCalculeePacketCourant(0);
@@ -2245,7 +2245,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				paquetCourant.setDescripteur(definitionStructureDynamique
 						.getDescriptor());
 
-				// // récupération de la valeur de la variable d'entete
+				// // rï¿½cupï¿½ration de la valeur de la variable d'entete
 				// valeurVarEntetePaquetCourant =
 				// varEntetePaquetCourant.getValeurBruteChaineVariableDiscrete();
 
@@ -2255,7 +2255,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 					depassementCapaciteMessage = true;
 				}
 
-				// récupération de la table de sous-variable correspondante
+				// rï¿½cupï¿½ration de la table de sous-variable correspondante
 				tableSousVarDefinition = definitionStructureDynamique
 						.getTableSousVariableReferenceByValeur(valeurVarEntetePaquetCourant);
 
@@ -2264,12 +2264,12 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				// valeur
 				// d'arret: tableSousVarDefinition.getM_AVariableComposant()
 				// doit
-				// etre différent de null
+				// etre diffï¿½rent de null
 				// - pour savoir si la valeur de la variable d'entete correspond
-				// à
+				// ï¿½
 				// une
 				// table sous variable tableSousVarDefinition doit etre
-				// différent de
+				// diffï¿½rent de
 				// null
 
 				if (!depassementCapaciteMessage
@@ -2279,12 +2279,12 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				) {
 					tableSousVarPaquetCourant = tableSousVarDefinition.copy();
 
-					// récupération de la liste des variable
+					// rï¿½cupï¿½ration de la liste des variable
 					listeSousVariablePaquetCourant = tableSousVarPaquetCourant
 							.getM_AVariableComposant();
 
 					// if (listeSousVariablePaquetCourant != null) {
-					// création d'une liste de sous variables temporaire
+					// crï¿½ation d'une liste de sous variables temporaire
 					// pour modification
 					// car on ne peut modifier directement
 					// listeSousVariablePaquetCourant
@@ -2322,12 +2322,12 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				}
 			} else {
 				//				System.out.print("   fin de lecture des paquets---"); //$NON-NLS-1$
-				//				System.out.print("   longueur totale calculée message courant: " + GestionnaireLongueurMessage.getInstance().getLongueurCalculeeMessageCourant()+"---"); //$NON-NLS-1$
+				//				System.out.print("   longueur totale calculï¿½e message courant: " + GestionnaireLongueurMessage.getInstance().getLongueurCalculeeMessageCourant()+"---"); //$NON-NLS-1$
 				finMessage = true;
 			}
 
 			// Quand un paquet contient le code 255, il s'agit de la fin
-			// du message. Les bits suivants doivent être ignorés. CF DR22G
+			// du message. Les bits suivants doivent ï¿½tre ignorï¿½s. CF DR22G
 			if (valEntetePrecedente.equals("255")) {
 				finMessage = true;
 			}
@@ -2335,8 +2335,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		}
 		lecturePaquetEnCours = false;
 		positionPaquetSuivantUsing_L_Packet = 0;
-		// si la variable d'entete du dernier paquet n'est pas égale à la valeur
-		// d'arret levée d'une erreur
+		// si la variable d'entete du dernier paquet n'est pas ï¿½gale ï¿½ la valeur
+		// d'arret levï¿½e d'une erreur
 		// if (!valeurVarEntetePaquetCourant.equals(valeurArretLecturePaquets))
 		// SamngLogger.getLogger().error(
 		//		Messages.getString("ParseurParcoursJRU.40") + definitionStructureDynamique.getDescriptor().getM_AIdentificateurComposant().getNom() + Messages.getString("ParseurParcoursJRU.41") + valeurArretLecturePaquets + Messages.getString("ParseurParcoursJRU.42") + valeurVarEntetePaquetCourant); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
@@ -2376,18 +2376,18 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				TypeVariable typeVar = var.getDescriptor().getTypeVariable();
 				if (typeVar == TypeVariable.STRUCTURE_DYNAMIQUE) {
 
-					// récupération de la définition de la structure dynamique
+					// rï¿½cupï¿½ration de la dï¿½finition de la structure dynamique
 					StructureDynamique defStructureDyn = (StructureDynamique) var;
 
 					StructureDynamique structureDynamique2 = gererStructureDynamique(
 							defStructureDyn, start, msg);
 
-					// affectation de la structure remplie à la sous-variable
+					// affectation de la structure remplie ï¿½ la sous-variable
 					var = structureDynamique2;
 
 				} else if (typeVar == TypeVariable.TABLEAU_DYNAMIQUE) {
 
-					// récupération de la définition du tableau
+					// rï¿½cupï¿½ration de la dï¿½finition du tableau
 					// dynamique
 					TableauDynamique defTableauDyn = null;
 
@@ -2396,7 +2396,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 					TableauDynamique tableauDynamique = gererTableauDynamique(
 							defTableauDyn, start, msg);
-					// affectation de la structure remplie à la sous-variable
+					// affectation de la structure remplie ï¿½ la sous-variable
 					var = tableauDynamique;
 				} else if (typeVar == TypeVariable.CHAINE_DYNAMIQUE) {
 
@@ -2406,7 +2406,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 					ChaineDynamique chaineDynamique = gererChaineDynamique(
 							defChaineDyn, start, msg);
 
-					// affectation de la structure remplie à la sous-variable
+					// affectation de la structure remplie ï¿½ la sous-variable
 					var = chaineDynamique;
 				}
 
@@ -2462,8 +2462,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 	}
 
 	private void evIsRuptureAcquisition(Message msg) {
-		// on remet tous les compteurs de temps et les variable globale utilisée
-		// à 0
+		// on remet tous les compteurs de temps et les variable globale utilisï¿½e
+		// ï¿½ 0
 		resetCumulsTemps();
 		setLastCptTempsTimeChange(0);
 		nomFichierBinaire = ""; //$NON-NLS-1$
@@ -2473,7 +2473,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		setCumulDistanceMax(0);
 
 		setPremiereDateRencontree(true);
-		// on défini le temps absolu à l'aide :
+		// on dï¿½fini le temps absolu ï¿½ l'aide :
 		// du nombre de jour depuis la date pivot + nombre de millisecondes
 
 		if (isDateTimeChanged()) {
@@ -2587,8 +2587,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				* (long) (ConstantesParcoursJRU.resolutionTemps * 1000)
 				* ConstantesParcoursJRU.maxCptTps);
 		setTimeCount(0);
-		// la valeur du cumul de temps est égale à :
-		// cumul temps + valeur courante du compteur temps - dernière valeur du
+		// la valeur du cumul de temps est ï¿½gale ï¿½ :
+		// cumul temps + valeur courante du compteur temps - derniï¿½re valeur du
 		// compteur temps
 
 		if (getDerniereValeurCptTemps() != 0) {
@@ -2601,7 +2601,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		// ///////////////////////////////////////////////////////
 		setPremiereDateRencontree(true);
 
-		// on remet à zéro la dernière valeur du compteur temps
+		// on remet ï¿½ zï¿½ro la derniï¿½re valeur du compteur temps
 		setDerniereValeurCptTemps(0);
 
 		if (distanceChanged) {
@@ -2625,8 +2625,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		setCumulDistance(newRaz);
 
 		if (isTimeCountChanged()) {
-			// la valeur du cumul detemps est égale à :
-			// cumul temps + valeur courante du compteur temps - dernière valeur
+			// la valeur du cumul detemps est ï¿½gale ï¿½ :
+			// cumul temps + valeur courante du compteur temps - derniï¿½re valeur
 			// du compteur temps
 			incrementerCumulTemps(getTimeCount() - getDerniereValeurCptTemps());
 			this.tc.addTime(getDerniereValeurHeure() + getCumulTemps()
@@ -2637,10 +2637,10 @@ public class ParseurParcoursJRU extends AParseurParcours {
 	}
 
 	private void evIsChangementHeure() {
-		// cas des événements de changement d'heure
+		// cas des ï¿½vï¿½nements de changement d'heure
 		// on ne doit ici pas prendre en compte le cumul du compteur temps
 		// mais on ajoute la valeur de la variable LatchTemps(tempsAvantChgt)
-		// pour les événements suivants
+		// pour les ï¿½vï¿½nements suivants
 
 		this.tc.addDate(date);
 
@@ -2648,7 +2648,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		setTimeCountBeforeChange((long) getDerniereValeurCptTemps());
 		setTimeBeforeChange((long) getDerniereValeurHeure());
 
-		// on remet les cumul de temps à 0
+		// on remet les cumul de temps ï¿½ 0
 		resetCumulsTemps();
 		// on stocke les valeurs des date, heure et compteur temps
 		setDerniereValeurCptTemps(getTimeCount());
@@ -2715,7 +2715,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		} else if (ev.isRazCompteurTemps()) {
 			evIsRazCompteurTemps();
 		}
-		// cas des événements marqués de razCompteurDistance dans le fichier xml
+		// cas des ï¿½vï¿½nements marquï¿½s de razCompteurDistance dans le fichier xml
 		else if (ev.isRazCompteurDistance()) {
 			evIsRazCompteurDistance();
 		} else if (ev.isChangementHeure()) {
@@ -2723,15 +2723,15 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		}
 		// tous les autres cas
 		else {
-			// si la variable dateHeure est valorisée
+			// si la variable dateHeure est valorisï¿½e
 			if (isDateTimeChanged()) {
 				newDateHeure();
 			} else {
 				noNewDateHeure();
 			}
-			// si la distance est valorisée on incrémente le compteur distance
-			// la valeur du cumul detemps est égale à :
-			// cumul distance + valeur courante du compteur distance - dernière
+			// si la distance est valorisï¿½e on incrï¿½mente le compteur distance
+			// la valeur du cumul detemps est ï¿½gale ï¿½ :
+			// cumul distance + valeur courante du compteur distance - derniï¿½re
 			// valeur du compteur distance
 			if (distanceChanged) {
 				incrementerCumulDistance(getNewDistance()
@@ -2806,7 +2806,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		DescripteurEvenement descEvt = (DescripteurEvenement) ev
 				.getM_ADescripteurComposant();
 
-		// cas où l'évévement est dans la table evt/var et dans le fichier xml
+		// cas oï¿½ l'ï¿½vï¿½vement est dans la table evt/var et dans le fichier xml
 		if (descEvt.getNom() == null) {
 			gererNomEvtNonTrouve(id, ev, msg);
 		} else {
@@ -2846,7 +2846,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		msg.setOffsetFin(start + msg.getLongueur());
 
 		// Date
-		// Positionnement au début du champs DATE
+		// Positionnement au dï¿½but du champs DATE
 		pos = posDate;
 
 		// Lecture de la variable DATE
@@ -2858,7 +2858,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		msg.ajouterVariable(var);
 
 		try {
-			// Mise à jour de la DATE courante
+			// Mise ï¿½ jour de la DATE courante
 			double d = ConversionTempsJRU.getDateFromVariableDATE(var);
 			setDate(d);
 		} catch (Exception e) {
@@ -2866,7 +2866,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		}
 
 		// Time
-		// Positionnement au début du champs TIME
+		// Positionnement au dï¿½but du champs TIME
 		pos = posTime;
 
 		// Lecture de la variable TIME
@@ -2876,11 +2876,11 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		remplirValue(var, start, msg);
 		msg.ajouterVariable(var);
 
-		// Mise à jour du temps courant
+		// Mise ï¿½ jour du temps courant
 		setTimeCount(ConversionTempsJRU.getTimeFromVariableTIME(var));
 
 		// Mode
-		// Positionnement au début du champs MODE
+		// Positionnement au dï¿½but du champs MODE
 		pos = posMode;
 
 		// Lecture de la variable MODE
@@ -2890,7 +2890,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		remplirValue(var, start, msg);
 		msg.ajouterVariable(var);
 
-		// si la variable dateHeure est valorisée (setDate())
+		// si la variable dateHeure est valorisï¿½e (setDate())
 		if (isDateTimeChanged()) {
 			newDateHeure();
 		} else {
@@ -2978,7 +2978,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			throw new ParseurXMLException(
 					Messages.getString("ChargeurParcours.9") //$NON-NLS-1$
 							+ nomTableAssocciationEvtVars, true);
-			// System.out.println("ParseurJRUTableAssociationEvVars a échoué");
+			// System.out.println("ParseurJRUTableAssociationEvVars a ï¿½chouï¿½");
 		}
 
 		String nomFichierXML = ParseurJRUTableAssociationEvVars.getInstance()
@@ -2987,8 +2987,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 	}
 
 	/**
-	 * Méthode permettant de récupérer la version JRU (229,230 etc...) dans
-	 * l'entete du fichier binaire utilisée uniquement pour les .bru
+	 * Mï¿½thode permettant de rï¿½cupï¿½rer la version JRU (229,230 etc...) dans
+	 * l'entete du fichier binaire utilisï¿½e uniquement pour les .bru
 	 * 
 	 * @param nomFichier
 	 * @return la version
@@ -3163,7 +3163,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 		if (crtMsg != null) {
 
-			// si l'événement est un événement de rupture d'acquisition ou bien
+			// si l'ï¿½vï¿½nement est un ï¿½vï¿½nement de rupture d'acquisition ou bien
 			// le premier message du parcours
 			if (prevMsg == null
 					|| crtMsg.getEvenement().isRuptureAcquisition()
@@ -3172,12 +3172,12 @@ public class ParseurParcoursJRU extends AParseurParcours {
 							.getM_AIdentificateurComposant().getCode() != crtMsg
 							.getEvenement().getM_ADescripteurComposant()
 							.getM_AIdentificateurComposant().getCode()) {
-				// si on est sur les messages de 2 à n
+				// si on est sur les messages de 2 ï¿½ n
 				if (prevMsg != null) {
 
-					// si un segment a déjà été créé on teste si l'événement
-					// précédent n'est pas le début du segment
-					// si c'est le cas on enregistre le segment et on en créé un
+					// si un segment a dï¿½jï¿½ ï¿½tï¿½ crï¿½ï¿½ on teste si l'ï¿½vï¿½nement
+					// prï¿½cï¿½dent n'est pas le dï¿½but du segment
+					// si c'est le cas on enregistre le segment et on en crï¿½ï¿½ un
 					// autre
 					if (this.lastSegTemp != null) {
 						TableRuptures.getInstance().ajouterRuptureTemps(
@@ -3196,7 +3196,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 					}
 
 				}
-				// on est sur le message 1: on créé un segment
+				// on est sur le message 1: on crï¿½ï¿½ un segment
 				else {
 
 					SegmentTemps segment = new SegmentTemps();
@@ -3209,12 +3209,12 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 			else if (prevMsg != null) {
 
-				// on vérifie si il y a un changement d'heure
+				// on vï¿½rifie si il y a un changement d'heure
 				boolean isTimeEvtChgt = crtMsg.getEvenement()
 						.isChangementHeure();
 
 				if (isTimeEvtChgt) {
-					// si il y a un segment précédent
+					// si il y a un segment prï¿½cï¿½dent
 					if (this.lastSegTemp != null) {
 						enregistrerSegmentTemps(prevMsg);
 					}
@@ -3337,10 +3337,10 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				// cas d'une variable de type reserved
 				else if (typeVar == Type.reserved) {
 
-					// on ne récupère aucune valeur pour ce type de variable
+					// on ne rï¿½cupï¿½re aucune valeur pour ce type de variable
 
-					// on teste si le nombre de bits actuels à lire est
-					// inférieur ou supérieur à la taille de la variable
+					// on teste si le nombre de bits actuels ï¿½ lire est
+					// infï¿½rieur ou supï¿½rieur ï¿½ la taille de la variable
 					// reserved
 					int diffBits = remainedBits + v.getDescriptor().getTailleBits();
 					// s'il est necessaire d'avancer d'un ou plusieurs octets(si
@@ -3349,7 +3349,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 					if (nbOctets > 0) {
 						// on calcul le nombre de bits restants
 						remainedBits = Math.abs(diffBits) % 8;
-						// on avance d'autant d'octets que nécessaire
+						// on avance d'autant d'octets que nï¿½cessaire
 						posVar = posVar + nbOctets;
 					} else {
 
@@ -3364,7 +3364,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 					// than 0 we should increment the posVar position as this
 					// was not made before
 
-					// cas o`u la variable commence au début d'un octet
+					// cas o`u la variable commence au dï¿½but d'un octet
 					if (remainedBits == 0) {
 
 						byte valTemp[] = Arrays.copyOfRange(value, posVar,
@@ -3379,7 +3379,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 						v.setValeur(valTemp);
 
 					}
-					// cas où la varaible commence à un nb bit donné dans
+					// cas oï¿½ la varaible commence ï¿½ un nb bit donnï¿½ dans
 					// l'octet
 					else {
 
@@ -3387,12 +3387,12 @@ public class ParseurParcoursJRU extends AParseurParcours {
 								posVar + v.getDescriptor().getTailleOctets()
 										+ 1);
 						int mask = (int) Math.pow(2, 8 - remainedBits) - 1;
-						// on met à 0 tous les bits inutiles sur le premier
+						// on met ï¿½ 0 tous les bits inutiles sur le premier
 						// octet
 						valTemp[0] = (byte) (valTemp[0] & mask);
 						// on place le tableau de byte dans un BigInteger
 						BigInteger bigInt = new BigInteger(valTemp);
-						// on fait un décalage d'autant de bits que necessaire
+						// on fait un dï¿½calage d'autant de bits que necessaire
 						bigInt = bigInt.shiftRight(8 - remainedBits);
 
 						byte valVar[] = bigInt.toByteArray();
@@ -3440,7 +3440,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 	protected long setXbitsValue2(AVariableComposant v, byte[] value,
 			int posVar, int startBitIdx) {
 
-		// récupération de la longueur de la variable
+		// rï¿½cupï¿½ration de la longueur de la variable
 		int tailleVar = v.getDescriptor().getTailleBits();
 		Poids poidsPremierBitVar = v.getDescriptor().getPoidsPremierBit();
 		Poids poidsPremierOctetVar = v.getDescriptor().getPoidsPremierOctet();
@@ -3449,21 +3449,21 @@ public class ParseurParcoursJRU extends AParseurParcours {
 		int mask;
 		int extractedBytesCnt = 0;
 		int positionsToShift = 0;
-		// anciennes spécifications
+		// anciennes spï¿½cifications
 		// // chaque fois que l'on recommence un nouvel octet,
-		// // on considère que la varaible précédente(dans l'octet n'est ni en
+		// // on considï¿½re que la varaible prï¿½cï¿½dente(dans l'octet n'est ni en
 		// // poids-1er bit = MSB ni LSB)
 		// if (startBitIdx == 0) {
 		// firstPartLSB = false;
 		// firstPartMSB = false;
 		// }
-		// cas où la variable est entièrement stockée dans l'octet courant
-		// longueur de la variable inférieure au nombre de bits restant dans
+		// cas oï¿½ la variable est entiï¿½rement stockï¿½e dans l'octet courant
+		// longueur de la variable infï¿½rieure au nombre de bits restant dans
 		// l'octet
 		int remainedBits;
 		if (tailleVar <= 8 - startBitIdx) {
 
-			// récupération du nombre de bits restant dans l'octet
+			// rï¿½cupï¿½ration du nombre de bits restant dans l'octet
 			remainedBits = 8 - startBitIdx;
 
 			// ajout olivier
@@ -3475,76 +3475,76 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				// cas d'un BCD4
 				{
 
-					// nouvelles spécifications: on décale d'autant de bits que
+					// nouvelles spï¿½cifications: on dï¿½cale d'autant de bits que
 					// la
-					// le bit de début de lecture(étant donné que l'on inverse
+					// le bit de dï¿½but de lecture(ï¿½tant donnï¿½ que l'on inverse
 
 					b = (byte) (bitsReverse[posVar] >>> startBitIdx);
 
 				}
 
 				/*
-				 * anciennes spécifications // si la varaible précédente dans le
+				 * anciennes spï¿½cifications // si la varaible prï¿½cï¿½dente dans le
 				 * meme octet n'est pas en // MSB // if (firstPartLSB) { // //
-				 * si on est pas au début de l'octet // if (startBitIdx > 0) {
-				 * // // on récupère les bits de droite // // l'octet et on
-				 * décale // b = (byte) (bitsReverse[posVar] >>> remainedBits
-				 * -length ); // } // } // } // la première varable dans l'octet
+				 * si on est pas au dï¿½but de l'octet // if (startBitIdx > 0) {
+				 * // // on rï¿½cupï¿½re les bits de droite // // l'octet et on
+				 * dï¿½cale // b = (byte) (bitsReverse[posVar] >>> remainedBits
+				 * -length ); // } // } // } // la premiï¿½re varable dans l'octet
 				 * est en poids-1er-bit=LSB // firstPartLSB = true;
 				 */
 			}
 			// if (poidsPremierBitVar == Poids.MSB)
 			else {
 
-				// nouvelles spécifications
+				// nouvelles spï¿½cifications
 				b = (byte) (value[posVar] >>> remainedBits - tailleVar);
 
 				/*
-				 * anciennes spécifications // if (firstPartMSB) { // if
+				 * anciennes spï¿½cifications // if (firstPartMSB) { // if
 				 * (startBitIdx > 0) { // b = (byte) (value[posVar] >>>
-				 * remainedBits - length); // } // } // } // la première
+				 * remainedBits - length); // } // } // } // la premiï¿½re
 				 * variable dans l'octet est en poids-1er-bit=MSB //
 				 * firstPartMSB = true;
 				 */
 
 			}
 
-			// on calcule le masque pour récupérer seulement les bits qui nous
+			// on calcule le masque pour rï¿½cupï¿½rer seulement les bits qui nous
 			// interressent
 			mask = (int) Math.pow(2, tailleVar) - 1;
-			// on applique le masque pour récupérer seulement les bits qui nous
+			// on applique le masque pour rï¿½cupï¿½rer seulement les bits qui nous
 			// interressent
 			cacheMemory[0] = (byte) (b & mask);
 
-			// un seul octet a été extrait
+			// un seul octet a ï¿½tï¿½ extrait
 			extractedBytesCnt = 1;
 
-			// on met à jour l'index du bit à prendre dans l'octet
+			// on met ï¿½ jour l'index du bit ï¿½ prendre dans l'octet
 			startBitIdx = startBitIdx + tailleVar;
 
 		}
 
-		// cas où la variable a une longueur supérieure
+		// cas oï¿½ la variable a une longueur supï¿½rieure
 		// au nombre de bits restant dans l'octet
 		else {
 
 			int octetCourant = posVar;
 
-			// récupération de ce qui reste dans le premier octet de la variable
+			// rï¿½cupï¿½ration de ce qui reste dans le premier octet de la variable
 			remainedBits = 8 - startBitIdx;
 
 			// cas d'une variable en MSB
 			if (poidsPremierBitVar == Poids.MSB) {
 
-				// nouvelles spécifications
+				// nouvelles spï¿½cifications
 				b = (byte) (value[posVar]);
 
-				// anciennes spécifications
+				// anciennes spï¿½cifications
 				// if (startBitIdx > 0) {
-				// // on prend les bits tout à gauche
+				// // on prend les bits tout ï¿½ gauche
 				// // calcul du masque
 				// mask = (int) (255 - (Math.pow(2, startBitIdx) - 1));
-				// // décalage
+				// // dï¿½calage
 				// b = (byte) ((value[octetCourant] & mask) >>> startBitIdx);
 				// cacheMemory[extractedBytesCnt] = b;
 				// } else {
@@ -3560,11 +3560,11 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			// if (v.getDescriptor().getPoidsPremierBit() == Poids.LSB) {
 			else {
 
-				// nouvelles spécifications
-				// on récupère l'octet entier
+				// nouvelles spï¿½cifications
+				// on rï¿½cupï¿½re l'octet entier
 				b = (byte) (value[posVar]);
 
-				// anciennes spécifications
+				// anciennes spï¿½cifications
 				// b = bitsReverse[octetCourant];
 				// if (startBitIdx > 0) {
 				// b = (byte) (b >>> startBitIdx);
@@ -3576,7 +3576,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			// on met l'octet dans le tableau d'octets temporaire
 			cacheMemory[extractedBytesCnt] = (byte) ((b & mask));
 
-			// on incrémente pour obtenir le prochain octet
+			// on incrï¿½mente pour obtenir le prochain octet
 			extractedBytesCnt++;
 			// on met a jour le nombre de bits restant pour la variable
 			tailleVar -= remainedBits;
@@ -3586,7 +3586,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 				// l'octet courant change d'indice
 				octetCourant = posVar + extractedBytesCnt;
-				// si le nombre de bits restants de la variable est inférieure à
+				// si le nombre de bits restants de la variable est infï¿½rieure ï¿½
 				// 8
 				if (tailleVar - 8 <= 0) {
 
@@ -3597,7 +3597,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 					varTerminee = true;
 
 				} else {
-					// on récupère l'octet entier
+					// on rï¿½cupï¿½re l'octet entier
 
 					tailleVar -= 8;
 
@@ -3611,8 +3611,8 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			}
 		}
 
-		// on créé un BigInteger qui permet de contenir toute la variable et de
-		// faire des décalages à gauche ou à droite
+		// on crï¿½ï¿½ un BigInteger qui permet de contenir toute la variable et de
+		// faire des dï¿½calages ï¿½ gauche ou ï¿½ droite
 		// cacheMemory : tableau d'octets de taille fixe
 		byte[] valuesByteArray = Arrays.copyOfRange(cacheMemory, 0,
 				extractedBytesCnt);
@@ -3621,16 +3621,16 @@ public class ParseurParcoursJRU extends AParseurParcours {
 			if (valuesByteArray.length == 2) {
 				Type t = typeVariable;
 				BigInteger bigInt = null;
-				// cas de tout les entiers signés
-				// il sont enregistrés en complément à 2 dans le fichier de
+				// cas de tout les entiers signï¿½s
+				// il sont enregistrï¿½s en complï¿½ment ï¿½ 2 dans le fichier de
 				// parcours
 				if (t == Type.intXbits || t == Type.int16 || t == Type.int24
 						|| t == Type.int32 || t == Type.int64 || t == Type.int8) {
-					// on créé un BigInteger signé
+					// on crï¿½ï¿½ un BigInteger signï¿½
 					bigInt = new BigInteger(valuesByteArray);
 
 				}
-				// on créé un BigInteger non signé
+				// on crï¿½ï¿½ un BigInteger non signï¿½
 				// if (t == Type.uintXbits || t == Type.uint8 || t ==
 				// Type.uint16
 				// || t == Type.uint24 || t == Type.uint32
@@ -3641,7 +3641,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 				}
 				bigInt = bigInt.shiftRight(positionsToShift);
-				// cas où la variabe est autre qu'un intxbits
+				// cas oï¿½ la variabe est autre qu'un intxbits
 
 				byte tabVar[] = bigInt.toByteArray();
 				byte tabVar2[] = new byte[1];
@@ -3681,16 +3681,16 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				byte[] valueArr = null;
 
 				BigInteger bigInt = null;
-				// cas de tout les entiers signés
-				// il sont enregistrés en complément à 2 dans le fichier de
+				// cas de tout les entiers signï¿½s
+				// il sont enregistrï¿½s en complï¿½ment ï¿½ 2 dans le fichier de
 				// parcours
 				if (t == Type.intXbits || t == Type.int16 || t == Type.int24
 						|| t == Type.int32 || t == Type.int64 || t == Type.int8) {
-					// on créé un BigInteger signé
+					// on crï¿½ï¿½ un BigInteger signï¿½
 					bigInt = new BigInteger(valuesByteArray);
 
 				}
-				// on créé un BigInteger non signé
+				// on crï¿½ï¿½ un BigInteger non signï¿½
 				// if (t == Type.uintXbits || t == Type.uint8 || t ==
 				// Type.uint16
 				// || t == Type.uint24 || t == Type.uint32
@@ -3729,7 +3729,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				v.setValeur(valuesByteArray);
 			}
 		}
-		// cas des intxbits: on doit reproduire le complément à 2 sur l'octet de
+		// cas des intxbits: on doit reproduire le complï¿½ment ï¿½ 2 sur l'octet de
 		// poids fort
 		if (typeVariable == Type.intXbits) {
 			byte[] valeurVariable = (byte[]) v.getValeur();// tagValCor
@@ -3767,7 +3767,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 
 		}
 
-		// on met à jour l'indice de début de lecture pour la variable suivante
+		// on met ï¿½ jour l'indice de dï¿½but de lecture pour la variable suivante
 		if (startBitIdx >= 8)
 			startBitIdx = 0;
 
