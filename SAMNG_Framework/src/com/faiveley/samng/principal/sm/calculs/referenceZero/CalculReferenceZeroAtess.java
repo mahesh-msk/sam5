@@ -263,7 +263,7 @@ public class CalculReferenceZeroAtess extends ACalculReferenceZero {
 
 				if (msgTemp != null) {
 					if (msgTemp.getEvenement().isRuptureAcquisition()) {
-						setEndId(TableSegments.getInstance().classerSegmentsTemps().get(new Integer(seg.getNumeroSegment()-1)).getEndMsgId());
+						setEndId(TableSegments.getInstance().classerSegmentsTemps().get(Integer.valueOf(seg.getNumeroSegment()-1)).getEndMsgId());
 						break;
 					}
 				}
@@ -364,7 +364,7 @@ public class CalculReferenceZeroAtess extends ACalculReferenceZero {
 				} catch (Exception e) {
 					setDeltaTempsTempo(getTampondeltaTempsTempo());
 				}
-				deltaTempsMsgs.put(new Integer(msg.getMessageId()),new Long(getDeltaTempsTempo()));
+				deltaTempsMsgs.put(Integer.valueOf(msg.getMessageId()),Long.valueOf(getDeltaTempsTempo()));
 				setTampondeltaTempsTempo(getDeltaTempsTempo());
 				
 				if (msg.getVariable(getCodeD())!=null) {
@@ -503,7 +503,7 @@ public class CalculReferenceZeroAtess extends ACalculReferenceZero {
 				setCompteurTempsLastMsg(getTamponCptTempsLastMsg());
 			//pour les fichiers hsbc, la variable temps n'est pas valorisée mais  la variable tempsAvantChangement est valorisée et on doit l'utiliser en guise de compteur temps
 			if (msg.getVariable(getCodeTAC()) != null && msg.getEvenement().getM_ADescripteurComposant().getM_AIdentificateurComposant().getCode()==15) {
-				setCompteurTemps(new Long(msg.getVariable(getCodeTAC()).toString())* getCoefTemps());
+				setCompteurTemps(Long.valueOf(msg.getVariable(getCodeTAC()).toString())* getCoefTemps());
 				fillTamponCptTemps();
 			} else {
 				//pour les fichiers uk, il n'y a pas de tempsAvantChangement, mais la variable temps est elle valorisé
@@ -746,7 +746,7 @@ public class CalculReferenceZeroAtess extends ACalculReferenceZero {
 					
 				} else {
 					if (!msg.getEvenement().isChangementHeure()) {
-						setTmpRelatif(((Long) deltaTempsMsgs.get(new Integer(msg.getMessageId())))- getDeltaTempsRef0());
+						setTmpRelatif(((Long) deltaTempsMsgs.get(Integer.valueOf(msg.getMessageId())))- getDeltaTempsRef0());
 						tempsCumule = this.tmpRelatif;
 					} else {
 						long tempsAvtChgt = getTempsAvantChangement(msg);
@@ -754,7 +754,7 @@ public class CalculReferenceZeroAtess extends ACalculReferenceZero {
 						ConversionTemps tc = new ConversionTempsAtess("01/01/1970 00:00:00.000");
 						tc.addDate(dateAvtChgt);
 						tc.addTime(tempsAvtChgt+getCompteurTempsAvantChangement(msg));
-						setTmpRelatif(((Long) deltaTempsMsgs.get(new Integer(msg.getMessageId())))- getDeltaTempsRef0());
+						setTmpRelatif(((Long) deltaTempsMsgs.get(Integer.valueOf(msg.getMessageId())))- getDeltaTempsRef0());
 						tempsCumule = this.tmpRelatif;
 					}
 				}
@@ -941,7 +941,7 @@ public class CalculReferenceZeroAtess extends ACalculReferenceZero {
 	}
 	
 	public void fillTmpRelatif(Message msg) {
-		setTmpRelatif(((Long) deltaTempsMsgs.get(new Integer(msg.getMessageId())))- getDeltaTempsRef0());
+		setTmpRelatif(((Long) deltaTempsMsgs.get(Integer.valueOf(msg.getMessageId())))- getDeltaTempsRef0());
 	}
 
 	public long getTemps(Message msg){

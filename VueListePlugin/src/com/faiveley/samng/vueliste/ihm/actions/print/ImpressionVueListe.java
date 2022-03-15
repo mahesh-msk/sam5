@@ -12,6 +12,7 @@ import com.faiveley.samng.principal.ihm.vues.VueListeContentProvider;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
 
+@Deprecated
 public class ImpressionVueListe extends ImpressionVueTableau {
 
 	@Override

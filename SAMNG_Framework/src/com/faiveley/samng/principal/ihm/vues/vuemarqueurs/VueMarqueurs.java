@@ -1055,7 +1055,7 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 			String nomUser = column.getText();
 			String nomUnique = VueMarqueurs.this.mapNomUniqueNomUtilisateur.get(nomUser);
 			if (GestionnaireVueMarqueurs.getInstance().getMapColonneLargeur()!=null) {
-				GestionnaireVueMarqueurs.getInstance().getMapColonneLargeur().put(nomUnique, new Integer(largeur));
+				GestionnaireVueMarqueurs.getInstance().getMapColonneLargeur().put(nomUnique, Integer.valueOf(largeur));
 			}
 		}
 	}

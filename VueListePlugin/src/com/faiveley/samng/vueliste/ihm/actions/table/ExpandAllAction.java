@@ -7,6 +7,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableVueListe;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailViewer;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailViewer;
 
+@Deprecated
 public class ExpandAllAction extends ExpandAction {
 	FixedColumnTableViewerDetail fct;
 	

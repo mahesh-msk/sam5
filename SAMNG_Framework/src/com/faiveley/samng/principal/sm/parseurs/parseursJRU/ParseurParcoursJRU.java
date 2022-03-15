@@ -1295,7 +1295,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 				jaxbContext = JAXBContext.newInstance(packageName);
 				Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 				jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,
-						new Boolean(true));
+						Boolean.valueOf(true));
 				jaxbMarshaller.marshal(doc, new File(nomFichierParcours
 						+ ".xml")); //$NON-NLS-1$
 			} catch (JAXBException e) {
@@ -1437,7 +1437,7 @@ public class ParseurParcoursJRU extends AParseurParcours {
 					int longueurArajouter = longueurVariable % 8;
 					for (int j = 0; j < longueurArajouter; j++) {
 						mask = mask
-								+ new Integer(Math.round(Math.pow(2, j)) + ""); //$NON-NLS-1$
+								+ Integer.valueOf(Math.round(Math.pow(2, j)) + ""); //$NON-NLS-1$
 
 					}
 					tabbyte[i] &= mask;

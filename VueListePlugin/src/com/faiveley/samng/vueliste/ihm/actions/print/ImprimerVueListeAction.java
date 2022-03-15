@@ -5,6 +5,7 @@ import org.eclipse.ui.IWorkbenchWindow;
 
 import com.faiveley.samng.principal.ihm.ICommandIds;
 
+@Deprecated
 public class ImprimerVueListeAction extends Action {
 
 	protected final IWorkbenchWindow window;
@@ -25,7 +26,7 @@ public class ImprimerVueListeAction extends Action {
 	}
 
 	/**
-	 * Méthode d'ouverture de la fenetre de dialogue de capture de la vue sur
+	 * Mï¿½thode d'ouverture de la fenetre de dialogue de capture de la vue sur
 	 * laquelle on a le focus
 	 */
 	public final void run() {

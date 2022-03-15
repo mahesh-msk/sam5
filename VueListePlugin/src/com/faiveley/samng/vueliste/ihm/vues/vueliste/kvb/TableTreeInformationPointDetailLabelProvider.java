@@ -8,6 +8,7 @@ import com.faiveley.kvbdecoder.model.kvb.marker.Marker;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.Messages;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeInformationPointDetailContentProvider.XsmXcsInteger;
 
+@Deprecated
 public class TableTreeInformationPointDetailLabelProvider implements ITableLabelProvider {
 	protected static final String LABEL_INFORMATION_POINT_XSM = Messages.getString("FixedColumnTableViewerDetailLabelInformationPointXsm");
 	protected static final String LABEL_INFORMATION_POINT_XCS = Messages.getString("FixedColumnTableViewerDetailLabelInformationPointXcs");

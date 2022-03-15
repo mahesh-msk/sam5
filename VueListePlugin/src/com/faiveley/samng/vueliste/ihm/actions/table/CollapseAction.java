@@ -10,6 +10,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetai
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableVueListe;
 
 @SuppressWarnings("deprecation")
+@Deprecated
 public class CollapseAction extends Action {
 	FixedColumnTableViewerDetail fct;
 	

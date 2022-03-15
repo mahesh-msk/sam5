@@ -17,6 +17,8 @@ import com.faiveley.samng.principal.sm.data.variableComposant.JRU.ChaineDynamiqu
 import com.faiveley.samng.principal.sm.data.variableComposant.JRU.StructureDynamique;
 import com.faiveley.samng.principal.sm.data.variableComposant.JRU.TableauDynamique;
 
+
+@Deprecated  // Migrated to TreeDetailColumnProvider
 public class TableTreeDetailLabelProvider implements ITableLabelProvider {
 	public Image getColumnImage(Object arg0, int arg1) {
 		return null;
@@ -45,7 +47,7 @@ public class TableTreeDetailLabelProvider implements ITableLabelProvider {
 				case 1:
 					text = getVariableRawValue(var);
 					break;
-				// Valeur decodée de la variable
+				// Valeur decodï¿½e de la variable
 				case 2:
 					text = getDecodedValue(var);
 					break;

@@ -220,14 +220,14 @@ public abstract class AVueTableContentProvider extends ATableContentProvider {
 					if(distanceRelativeString!=null){
 
 						signe = distanceRelativeString.substring(0, 1);
-						//valeur = new Float(distanceRelativeString.substring(1, distanceRelativeString.length()));
+						//valeur = Float.valueOf(distanceRelativeString.substring(1, distanceRelativeString.length()));
 
 						SegmentDistance segment = TableSegments.getInstance().getContainingDistanceSegment(msg.getMessageId());
 						double valModif = segment.getDiameterCorrige();
 						double factor = valModif / segment.getInitialDiameter();
 						double distCorr=0 ;
 						try{
-							distCorr = Math.abs(new Float(distanceRelativeString) * factor);
+							distCorr = Math.abs(Float.valueOf(distanceRelativeString) * factor);
 							DecimalFormat fmt = new DecimalFormat("0.000");
 							String distanceRelativeStringCorrigee = signe  +(fmt.format((double) distCorr)).replace(",",
 							".");

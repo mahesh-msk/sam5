@@ -346,14 +346,14 @@ public class InfoComposite extends Composite implements IGrapheCursorListener, I
 				float valeur =0;
 				if(distanceRelativeString!=null){
 					signe = distanceRelativeString.substring(0, 1);
-					//valeur = new Float(distanceRelativeString.substring(1, distanceRelativeString.length()));
-					valeur = new Float(distanceRelativeString);
+					//valeur = Float.valueOf(distanceRelativeString.substring(1, distanceRelativeString.length()));
+					valeur = Float.valueOf(distanceRelativeString);
 
 					SegmentDistance segment = TableSegments.getInstance().getContainingDistanceSegment(msg.getMessageId());
 					double valModif = segment.getDiameterCorrige();
 					double factor = valModif / segment.getInitialDiameter();
 
-					double distCorr = Math.abs(new Float(distanceRelativeString) * factor);
+					double distCorr = Math.abs(Float.valueOf(distanceRelativeString) * factor);
 					DecimalFormat fmt = new DecimalFormat("0.000");
 					String distanceRelativeStringCorrigee = signe  +(fmt.format((double) distCorr)).replace(",",
 							".");

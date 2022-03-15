@@ -59,6 +59,8 @@ public class PerspectiveGTL implements IPerspectiveFactory {
 				tailleTabulaire, editorArea);
 		layout.addStandaloneView("SAMNG.Vue.Liste", true, IPageLayout.RIGHT,
 				tailleListe, "SAMNG.Vue.Tabulaire");
+		layout.addStandaloneView("SAMNG.Vue.Liste.e4", true, IPageLayout.RIGHT,
+				tailleListe, "SAMNG.Vue.Tabulaire");
 		layout.addStandaloneView("SAMNG.Vue.Graphique", true, IPageLayout.BOTTOM,
 				tailleGraphique, editorArea);
 		

@@ -176,7 +176,7 @@ public class CalculReferenceZeroTom4 extends ACalculReferenceZero {
 							if (msgTemp.getEvenement().isRuptureAcquisition()) {
 //								endId = (seg.getStartMsgId() - ConstantesParcoursBinaire.tailleBlocData);
 								
-								endId = TableSegments.getInstance().classerSegmentsTemps().get(new Integer(seg.getNumeroSegment()-1)).getEndMsgId();	
+								endId = TableSegments.getInstance().classerSegmentsTemps().get(Integer.valueOf(seg.getNumeroSegment()-1)).getEndMsgId();	
 								break;
 							}
 						}
@@ -602,7 +602,7 @@ public class CalculReferenceZeroTom4 extends ACalculReferenceZero {
 							//pour les fichiers hsbc, la variable temps n'est pas valorisée mais  la variable tempsAvantChangement est valorisée et on doit l'utiliser en guise de compteur temps
 							if (msg.getVariable(TypeRepere.tempsAvantChangement
 									.getCode()) != null) {
-								compteurTemps = new Long(msg.getVariable(
+								compteurTemps = Long.valueOf(msg.getVariable(
 										TypeRepere.tempsAvantChangement.getCode()).toString())
 										* (long)ConstantesParcoursTom4.pasCptTps
 										* (long) (ConstantesParcoursTom4.resolutionTemps * 1000);
@@ -642,8 +642,8 @@ public class CalculReferenceZeroTom4 extends ACalculReferenceZero {
 					}
 					
 					
-					deltaTempsMsgs.put(new Integer(msg.getMessageId()),
-							new Long(deltaTempsTempo));
+					deltaTempsMsgs.put(Integer.valueOf(msg.getMessageId()),
+							Long.valueOf(deltaTempsTempo));
 					tampondeltaTempsTempo = deltaTempsTempo;
 				}
 
@@ -658,7 +658,7 @@ public class CalculReferenceZeroTom4 extends ACalculReferenceZero {
 
 				// try {
 				// Long tmpR = ((Long) deltaTempsMsgs
-				// .get(new Integer(msg.getMessageId())))
+				// .get(Integer.valueOf(msg.getMessageId())))
 				// - deltaTempsRef0;
 				// if (tmpR==null) {
 				// continue;
@@ -738,12 +738,12 @@ public class CalculReferenceZeroTom4 extends ACalculReferenceZero {
 						if (!msg.getEvenement().isChangementHeure()) {
 							if (lastMsg == null) {
 								tmpRelatif = ((Long) deltaTempsMsgs
-										.get(new Integer(msg.getMessageId())))
+										.get(Integer.valueOf(msg.getMessageId())))
 										- deltaTempsRef0;
 
 							} else {
 								tmpRelatif = ((Long) deltaTempsMsgs
-										.get(new Integer(msg.getMessageId())))
+										.get(Integer.valueOf(msg.getMessageId())))
 										- deltaTempsRef0;
 							}
 
@@ -765,12 +765,12 @@ public class CalculReferenceZeroTom4 extends ACalculReferenceZero {
 							if (lastMsg == null) {
 
 								tmpRelatif = ((Long) deltaTempsMsgs
-										.get(new Integer(msg.getMessageId())))
+										.get(Integer.valueOf(msg.getMessageId())))
 										- deltaTempsRef0;
 							} else {
 
 								tmpRelatif = ((Long) deltaTempsMsgs
-										.get(new Integer(msg.getMessageId())))
+										.get(Integer.valueOf(msg.getMessageId())))
 										- deltaTempsRef0;
 							}
 
@@ -794,7 +794,7 @@ public class CalculReferenceZeroTom4 extends ACalculReferenceZero {
 					// String distStr;
 					// if(distanceRelativeString!=null){
 					// signe = distanceRelativeString.substring(0, 1);
-					// valeur = new Float(distanceRelativeString.substring(1,
+					// valeur = Float.valueOf(distanceRelativeString.substring(1,
 					// distanceRelativeString.length()));
 					// SegmentDistance segment =
 					// TableSegments.getInstance().getContainingDistanceSegment(msg.getMessageId());

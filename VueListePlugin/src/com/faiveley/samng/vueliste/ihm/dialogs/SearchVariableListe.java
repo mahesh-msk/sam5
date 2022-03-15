@@ -14,11 +14,11 @@ import com.faiveley.samng.principal.sm.data.enregistrement.GestionnairePool;
 import com.faiveley.samng.principal.sm.data.enregistrement.Message;
 import com.faiveley.samng.principal.sm.data.identificateurComposant.AIdentificateurComposant;
 import com.faiveley.samng.principal.sm.data.tableAssociationComposant.ParcoursComposite;
-import com.faiveley.samng.principal.sm.data.variableComposant.AVariableComposant;
 import com.faiveley.samng.principal.sm.fabriques.FabriqueParcours;
 import com.faiveley.samng.principal.sm.parseurs.parseursATESS.VitesseLimiteKVBService;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
 
+@Deprecated
 public class SearchVariableListe extends SearchVariable{
 
 	public SearchVariableListe(Shell parent) {
@@ -80,7 +80,7 @@ public class SearchVariableListe extends SearchVariable{
 			}
 			addVariablesVolatilesVueListe(GestionnairePool.getInstance().getVariablesDynamiquesMap());
 			
-			// Suppression de la variable Vitesse_limite_KVB : elle est virtuelle : attachée à aucun événement
+			// Suppression de la variable Vitesse_limite_KVB : elle est virtuelle : attachï¿½e ï¿½ aucun ï¿½vï¿½nement
 			this.values.remove(VitesseLimiteKVBService.getInstance().getTableLangueNomUtilisateur().getNomUtilisateur(Activator.getDefault().getCurrentLanguage()));
 		}
 	}

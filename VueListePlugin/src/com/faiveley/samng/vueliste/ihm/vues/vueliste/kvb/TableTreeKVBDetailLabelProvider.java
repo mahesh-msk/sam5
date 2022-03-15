@@ -16,6 +16,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailConte
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailContentProvider.KVBDecoderResultShell;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailContentProvider.MarkerX14Distance;
 
+@Deprecated
 public class TableTreeKVBDetailLabelProvider extends TableTreeDetailLabelProvider {	
 	private static final String LABEL_IHM_KVB_DATA = "IHM.DonneesTrainKVB";
 	private static final String LABEL_IHM_KVB_CATEGORY = "IHM.CategorieKVB";

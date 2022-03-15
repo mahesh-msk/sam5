@@ -984,7 +984,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 							//pour les fichiers hsbc, la variable temps n'est pas valorisée mais  la variable tempsAvantChangement est valorisée et on doit l'utiliser en guise de compteur temps
 							if (msg2.getVariable(TypeRepere.tempsAvantChangement
 									.getCode()) != null) {
-								compteurTemps = new Long(msg2.getVariable(
+								compteurTemps = Long.valueOf(msg2.getVariable(
 										TypeRepere.tempsAvantChangement.getCode()).toString())
 								* (long)ConstantesParcoursTom4.pasCptTps
 								* (long) (ConstantesParcoursTom4.resolutionTemps * 1000);
@@ -1018,8 +1018,8 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 					}
 
 
-					deltaTempsMsgs.put(new Integer(msg2.getMessageId()),
-							new Long(deltaTempsTempo));
+					deltaTempsMsgs.put(Integer.valueOf(msg2.getMessageId()),
+							Long.valueOf(deltaTempsTempo));
 					tampondeltaTempsTempo = deltaTempsTempo;
 				}
 
@@ -1062,12 +1062,12 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 						if (!msg1.getEvenement().isChangementHeure()) {
 							if (lastMsg == null) {
 								tmpRelatif = ((Long) deltaTempsMsgs
-										.get(new Integer(msg1.getMessageId())))
+										.get(Integer.valueOf(msg1.getMessageId())))
 										- deltaTempsRef0;
 
 							} else {
 								tmpRelatif = ((Long) deltaTempsMsgs
-										.get(new Integer(msg1.getMessageId())))
+										.get(Integer.valueOf(msg1.getMessageId())))
 										- deltaTempsRef0;
 							}
 
@@ -1089,12 +1089,12 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 							if (lastMsg == null) {
 
 								tmpRelatif = ((Long) deltaTempsMsgs
-										.get(new Integer(msg1.getMessageId())))
+										.get(Integer.valueOf(msg1.getMessageId())))
 										- deltaTempsRef0;
 							} else {
 
 								tmpRelatif = ((Long) deltaTempsMsgs
-										.get(new Integer(msg1.getMessageId())))
+										.get(Integer.valueOf(msg1.getMessageId())))
 										- deltaTempsRef0;
 							}
 
@@ -1312,7 +1312,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 						}
 
 					}
-					deltaTempsMsgs.put(new Integer(msg.getMessageId()), new Long(
+					deltaTempsMsgs.put(Integer.valueOf(msg.getMessageId()), Long.valueOf(
 							deltaTempsTempo));
 				}
 
@@ -1364,13 +1364,13 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 							if (lastMsg == null) {
 
 								tmpRelatif = ((Long) deltaTempsMsgs
-										.get(new Integer(idMsg)))
+										.get(Integer.valueOf(idMsg)))
 										- deltaTempsRef0;
 
 							} else {
 
 								tmpRelatif = ((Long) deltaTempsMsgs
-										.get(new Integer(idMsg)))
+										.get(Integer.valueOf(idMsg)))
 										- deltaTempsRef0;
 
 							}
@@ -1392,10 +1392,10 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 
 							if (lastMsg == null) {
 								deltaTemps = 0;
-								tmpRelatif = ((Long) deltaTempsMsgs.get(new Integer(idMsg)))
+								tmpRelatif = ((Long) deltaTempsMsgs.get(Integer.valueOf(idMsg)))
 										- deltaTempsRef0;
 							} else {
-								tmpRelatif = ((Long) deltaTempsMsgs.get(new Integer(idMsg)))
+								tmpRelatif = ((Long) deltaTempsMsgs.get(Integer.valueOf(idMsg)))
 										- deltaTempsRef0;
 							}
 						}

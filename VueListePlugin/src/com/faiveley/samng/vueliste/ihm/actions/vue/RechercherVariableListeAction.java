@@ -8,6 +8,7 @@ import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.vues.search.ASearchDialog;
 import com.faiveley.samng.vueliste.ihm.dialogs.SearchVariableListe;
 
+@Deprecated
 public class RechercherVariableListeAction extends Action{
 	
 	

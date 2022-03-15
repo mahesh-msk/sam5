@@ -3071,7 +3071,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 					int longueurArajouter = longueurVariable % 8;
 					for (int j = 0; j < longueurArajouter; j++) {
 						mask = mask
-								+ new Integer(Math.round(Math.pow(2, j)) + ""); //$NON-NLS-1$
+								+ Integer.valueOf(Math.round(Math.pow(2, j)) + ""); //$NON-NLS-1$
 
 					}
 					tabbyte[i] &= mask;

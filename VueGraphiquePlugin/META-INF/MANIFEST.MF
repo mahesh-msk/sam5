@@ -14,7 +14,7 @@ Bundle-ClassPath: .,
  lib/FiltresGraphiqueXMLParser.jar,
  lib/xbean.jar,
  lib/ConfigVueGraphiqueXMLParser.jar
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Vendor: Faiveley Transport
 Automatic-Module-Name: VueGraphiquePlugin
 

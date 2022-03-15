@@ -18,6 +18,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
  * @author Cosmin Udroiu
  *
  */
+@Deprecated
 public class ApplyFiltreAction extends Action {
 	public ApplyFiltreAction() {
 	}

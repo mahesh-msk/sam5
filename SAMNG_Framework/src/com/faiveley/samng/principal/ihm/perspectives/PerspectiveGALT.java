@@ -34,6 +34,7 @@ public class PerspectiveGALT implements IPerspectiveFactory {
 			layout.addStandaloneView("SAMNG.Vue.Graphique",true,IPageLayout.TOP,tailleGraphique, editorArea);
 			layout.addStandaloneView("SAMNG.Vue.Markers.VueMarqueurs",true,IPageLayout.RIGHT,tailleVueAnnotations, "SAMNG.Vue.Graphique");
 			layout.addStandaloneView("SAMNG.Vue.Liste",true,IPageLayout.BOTTOM,tailleTabulaire, "SAMNG.Vue.Graphique");
+			layout.addStandaloneView("SAMNG.Vue.Liste.e4",true,IPageLayout.BOTTOM,tailleTabulaire, "SAMNG.Vue.Graphique");
 			layout.addStandaloneView("SAMNG.Vue.Tabulaire",true,IPageLayout.BOTTOM,tailleListe,"SAMNG.Vue.Markers.VueMarqueurs");
 
 			layout.getViewLayout("SAMNG.Vue.Graphique").setCloseable(false);

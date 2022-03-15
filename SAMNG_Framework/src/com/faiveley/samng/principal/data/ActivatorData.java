@@ -230,8 +230,8 @@ public class ActivatorData implements Cloneable {
 	public void setCorrectionTempsApplied(boolean correctionTempsApplied) {
 		this.correctionTempsApplied = correctionTempsApplied;
 
-		ActivatorData.getInstance().getPoolDonneesVues().put("correctVueTabAffichee", new Boolean(true));
-		ActivatorData.getInstance().getPoolDonneesVues().put("correctVueListeAffichee", new Boolean(true));
+		ActivatorData.getInstance().getPoolDonneesVues().put("correctVueTabAffichee", Boolean.valueOf(true));
+		ActivatorData.getInstance().getPoolDonneesVues().put("correctVueListeAffichee", Boolean.valueOf(true));
 	}
 	
 	/**

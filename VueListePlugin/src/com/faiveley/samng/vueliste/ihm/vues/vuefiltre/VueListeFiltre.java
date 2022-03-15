@@ -33,6 +33,7 @@ import com.faiveley.samng.vueliste.ihm.actions.vue.ApplyFiltreAction;
  * @author Cosmin Udroiu
  * 
  */
+@Deprecated
 public class VueListeFiltre extends ViewPart implements PropertyChangeListener,
 		ISaveablePart2 {
 	public static final String ID = "SAMNG.Vue.Filtre.VueListeFiltre"; //$NON-NLS-1$

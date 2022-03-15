@@ -105,6 +105,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.VueListeFiltre;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.ConfigListVueAction;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailViewer;
 
+@Deprecated
 public class VueListe extends AbstractSelectionProviderVue implements PropertyChangeListener, IDataChangedListener, ISelectionListener, IMarqueursListener, IRepereChangedListener, ISearchMarquerListener, ISearchVariableListener, ICapturable, IVueToolbar,ISearchEventListener {
 	/**
 	 * Vue ID
@@ -112,7 +113,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	public static final String ID = "SAMNG.Vue.Liste";
 
 	/**
-	 * Déclaration des actions
+	 * Dï¿½claration des actions
 	 */
 	private boolean oneTimeOffset = true; // Le positionnement offset ne se fait qu'une fois
 	private RechercherEvenementAction rechercherEvenementAction;
@@ -157,7 +158,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	private TableColumn dummyCol;
 
 	/**
-	 * Déclaration des actions
+	 * Dï¿½claration des actions
 	 */
 	private Action synchroVuesAction;
 
@@ -212,9 +213,9 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	}
 
 
-	/** Déclaration d'action */
+	/** Dï¿½claration d'action */
 	public void makeActions(){
-		// Récupération de la fenetre active
+		// Rï¿½cupï¿½ration de la fenetre active
 		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
 
 		// Ajout des actions
@@ -312,7 +313,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 		updateViewInfoLabel();
 		makeActions();
 
-		// Ajout des actions à la toolbar
+		// Ajout des actions ï¿½ la toolbar
 		ajoutActionToolBar(synchroVuesAction);
 		ajoutActionToolBar(poserReferenceAction);
 		ajoutSeparateurToolBar();
@@ -346,27 +347,27 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 			
 			@Override
 			public void partVisible(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partOpened(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partInputChanged(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partHidden(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partDeactivated(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
@@ -379,12 +380,12 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 			
 			@Override
 			public void partBroughtToTop(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partActivated(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 		});		
 	}
@@ -472,7 +473,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 			int crtSelMsgId = ((Message) row.getData()).getMessageId();
 
 			// Get the messages
-			// Récupération uniquement des bons messages
+			// Rï¿½cupï¿½ration uniquement des bons messages
 			Collection<Message> collMsg = ActivatorData.getInstance().getVueData().getDataTable().getEnregistrement().getMessages();
 			List<Message> messages = new ArrayList<Message>();
 			messages.addAll(collMsg);
@@ -636,8 +637,8 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 				continue;
 			}
 			
-			// si variable composée
-			if (descrVar.getTypeVariable() == TypeVariable.VAR_COMPOSEE || descrVar.getTypeVariable() == TypeVariable.VAR_COMPLEXE) { // Si variable composée
+			// si variable composï¿½e
+			if (descrVar.getTypeVariable() == TypeVariable.VAR_COMPOSEE || descrVar.getTypeVariable() == TypeVariable.VAR_COMPLEXE) { // Si variable composï¿½e
 				List <AVariableComposant> listVars=new ArrayList<AVariableComposant>();
 				listVars.addAll(msg.getVariablesComplexe());
 				listVars.addAll(msg.getVariablesComposee());
@@ -655,7 +656,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 				if (trouveVarComposee) {
 					break;
 				}
-			} else { // Si variable pas composée
+			} else { // Si variable pas composï¿½e
 				// si c'est une date
 				if (descrVar.getM_AIdentificateurComposant().getCode() == TypeRepere.date.getCode()) { // Si c'est une date
 					dateRecherchee = true;
@@ -680,7 +681,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 						selMsg = msg;
 						break;
 					}
-				} else { // Si c'est une variable simple, analogique ou discrète
+				} else { // Si c'est une variable simple, analogique ou discrï¿½te
 					AVariableComposant var = msg.getVariable(descrVar);
 					
 					if (var != null) {
@@ -745,7 +746,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans le menu
+	 * Mï¿½thode d'ajout d'une action dans le menu
 	 * 
 	 * @param action
 	 */
@@ -754,7 +755,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans la toolbar
+	 * Mï¿½thode d'ajout d'une action dans la toolbar
 	 * 
 	 * @param action
 	 */
@@ -864,7 +865,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 		this.tblFix.addKeyListener(new KeyListener() {
 			private boolean turbo=false;
 			public void keyPressed(KeyEvent e) {
-				// Synchro si pression sur bouton Entrée
+				// Synchro si pression sur bouton Entrï¿½e
 				if (e.keyCode == SWT.CR) {
 					ActivatorData.getInstance().setSelectedMsg(getMessageFromCurrentSelection());
 					upSelection(true);
@@ -1614,7 +1615,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	
 					int rowIdx = getRowIndexForMessageId(selId,null);
 	
-					// Après l'ouverture d'un fichier par ligne de commande, l'offset du nouveau fichier ouvert est doit être repositionné sur la première ligne de la vue. Pour cela on  utilise la valeur 0.
+					// Aprï¿½s l'ouverture d'un fichier par ligne de commande, l'offset du nouveau fichier ouvert est doit ï¿½tre repositionnï¿½ sur la premiï¿½re ligne de la vue. Pour cela on  utilise la valeur 0.
 					if (selId == 0) {
 						rowIdx = 0 ;
 					}
@@ -2196,8 +2197,8 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	}
 
 	/**
-	 * Méthode pour récupérer le filtre courant appliqué
-	 * @return filtre appliqué ou null
+	 * Mï¿½thode pour rï¿½cupï¿½rer le filtre courant appliquï¿½
+	 * @return filtre appliquï¿½ ou null
 	 */
 	public AFiltreComposant getAppliedFilter(){
 		AbstractProviderFiltre provider = ActivatorVueListe.getDefault().getFiltresProvider();

@@ -280,7 +280,7 @@ public class GestionnaireVueTabulaire extends GestionnaireVueListeBase implement
 		}
 		List<VariableVirtuelle> listvbv = ActivatorData.getInstance().getProviderVBVs().getGestionnaireVbvs().getListeVBV();
 
-		//ActivatorData.getInstance().getPoolDonneesVues().put("isVBVListChanged",new Boolean(true));
+		//ActivatorData.getInstance().getPoolDonneesVues().put("isVBVListChanged",Boolean.valueOf(true));
 		ConfigurationColonne existingColCfg = null;
 		//SUPPR_ITERATOR
 //		for (Iterator iter = listvbv.iterator(); iter.hasNext();) {

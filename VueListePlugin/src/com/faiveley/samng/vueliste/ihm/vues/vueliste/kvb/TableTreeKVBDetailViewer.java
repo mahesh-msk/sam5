@@ -20,6 +20,12 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailViewer;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
 
 @SuppressWarnings("deprecation")
+/** 
+ * 
+ * @deprecated use TreeKVBDetailViewer instead
+ *
+ */
+@Deprecated
 public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 	private static final Display display = PlatformUI.getWorkbench().getDisplay();
 	private static final Color colorRed = display.getSystemColor(SWT.COLOR_RED);
@@ -78,9 +84,9 @@ public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 		treeTable.redraw();
 		chargerPresentationEv(message);
 		
-		// Si une exception a été remontée
-		// Ne pas déplié les points d'information car ils risqueraient de déclancher
-		// une exception suivant ou l'erreur de décodage à eu lieu
+		// Si une exception a ï¿½tï¿½ remontï¿½e
+		// Ne pas dï¿½pliï¿½ les points d'information car ils risqueraient de dï¿½clancher
+		// une exception suivant ou l'erreur de dï¿½codage ï¿½ eu lieu
 		if (message instanceof AtessMessage) {
 			if (((AtessMessage) message).getDecodingErrors().size() == 0) {
 				expandAll();				
@@ -88,7 +94,7 @@ public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 				try {
 					expandToLevel(getChildren(internalGetWidgetToSelect(getRoot())).length - 1);
 				} catch (Exception e) {
-					// TODO Bloc catch généré automatiquement
+					// TODO Bloc catch gï¿½nï¿½rï¿½ automatiquement
 					//e.printStackTrace();
 				}
 			}
@@ -103,7 +109,7 @@ public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 		TableTree tableTree = getTableTree();
 		Table table = tableTree.getTable();
 		
-		// On détermine les lignes à colorer grâce au tableau sous forme TableTree (possibilité d'inspecter les niveaux hiérarchiquement)		
+		// On dï¿½termine les lignes ï¿½ colorer grï¿½ce au tableau sous forme TableTree (possibilitï¿½ d'inspecter les niveaux hiï¿½rarchiquement)		
 		int rowIndex = 0;
 		int firstLevelIndex = 0;
 
@@ -112,10 +118,10 @@ public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 			firstLevelIndex++;
 			
 			for (TableTreeItem tableTreeLevel2 : tableTreeLevel1.getItems()) { // Niveau 2								
-				if (tableTreeLevel2.getExpanded()) { // A un niveau inférieur: c'est uniquement les cas des Points d'Information
+				if (tableTreeLevel2.getExpanded()) { // A un niveau infï¿½rieur: c'est uniquement les cas des Points d'Information
 										
-					if (!tableTreeLevel2.getText(1).isEmpty() && table.getItemCount() > rowIndex) { // A un texte d'alerte ; n'est pas replié (si replié: inutile et source d'erreur car 'table' ne considère que les lignes visibles, donc dépliées)
-						// On colore la ligne, uniquement sur la deuxième colonne, grâce  à la table sous forme Table (possibilité de différencier les colonnes)
+					if (!tableTreeLevel2.getText(1).isEmpty() && table.getItemCount() > rowIndex) { // A un texte d'alerte ; n'est pas repliï¿½ (si repliï¿½: inutile et source d'erreur car 'table' ne considï¿½re que les lignes visibles, donc dï¿½pliï¿½es)
+						// On colore la ligne, uniquement sur la deuxiï¿½me colonne, grï¿½ce  ï¿½ la table sous forme Table (possibilitï¿½ de diffï¿½rencier les colonnes)
 						table.getItem(rowIndex).setForeground(1, colorRed);
 					}
 					
@@ -125,7 +131,7 @@ public class TableTreeKVBDetailViewer extends TableTreeDetailViewer {
 				rowIndex++;
 			}
 			
-			if (firstLevelIndex >= 3) { // Niveau 1, troisième élément ou plus: ce sont les erreurs
+			if (firstLevelIndex >= 3) { // Niveau 1, troisiï¿½me ï¿½lï¿½ment ou plus: ce sont les erreurs
 				tableTreeLevel1.setForeground(colorRed);
 			}
 		}

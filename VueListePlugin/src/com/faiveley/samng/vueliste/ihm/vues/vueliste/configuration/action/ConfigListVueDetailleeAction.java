@@ -10,6 +10,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetai
  * @author Cosmin Udroiu
  *
  */
+@Deprecated
 public class ConfigListVueDetailleeAction extends VueAction {
 	private FixedColumnTableViewerDetail tableauVueDetaillee = null;
 		

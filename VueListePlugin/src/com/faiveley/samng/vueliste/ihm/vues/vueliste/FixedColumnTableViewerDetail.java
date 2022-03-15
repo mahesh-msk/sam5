@@ -53,6 +53,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeInformationPoi
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.TableTreeKVBDetailViewer;
 
 @SuppressWarnings("deprecation")
+@Deprecated
 public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 	private static final String ONGLET_BRUT_NON_KVB_LABEL = Messages.getString("FixedColumnTableViewerDetailTab.0");
 	private static final String ONGLET_BRUT_KVB_LABEL = Messages.getString("FixedColumnTableViewerDetailTab.1");
@@ -300,6 +301,7 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 		return tableTreeInformationPointDetailViewer;
 	}
 
+	@Deprecated
 	protected enum TypeMenuOptions {
 		COLLAPSE, EXPAND, GESTIONNAIRE_COLONNES
 	}

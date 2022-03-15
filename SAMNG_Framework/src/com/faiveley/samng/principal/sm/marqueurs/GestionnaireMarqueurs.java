@@ -173,7 +173,7 @@ public class GestionnaireMarqueurs {
 		this.listeMarqueurs = this.parser.chargerMarqueurs();
 		
 		for (AMarqueur marqueur : this.listeMarqueurs) {
-			this.mapMarqueurs.put(new Integer(marqueur.getIdMessage()), marqueur);
+			this.mapMarqueurs.put(Integer.valueOf(marqueur.getIdMessage()), marqueur);
 			this.initialListeMarqueurs.add(marqueur);
 		}
 		

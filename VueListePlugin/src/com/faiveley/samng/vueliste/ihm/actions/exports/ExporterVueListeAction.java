@@ -25,6 +25,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.TableTreeDetailViewer;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
 
 @SuppressWarnings("deprecation")
+@Deprecated
 public class ExporterVueListeAction extends Action {
 	private final IWorkbenchWindow window;
 
@@ -41,7 +42,7 @@ public class ExporterVueListeAction extends Action {
 	}
 
 	/**
-	 * Méthode d'export de la selection de la vue liste: fait appel à la classe
+	 * Mï¿½thode d'export de la selection de la vue liste: fait appel ï¿½ la classe
 	 * ParseurExport du Framework
 	 * 
 	 * @param cheminFichier
@@ -53,11 +54,11 @@ public class ExporterVueListeAction extends Action {
 		ActivatorVueListe activatorVueListe = ActivatorVueListe.getDefault();
 		
 		if (activatorVueListe.getVueFocus() == ActivatorVueListe.FOCUS_VUE_LISTE) {
-			// Récupération de la selection
+			// Rï¿½cupï¿½ration de la selection
 			TableItem[] items = getVueListe().getTable().getSelection();
 			int nbLignes = items.length;
 			
-			// Création du tableau de Row: données parcourues par le parseur
+			// Crï¿½ation du tableau de Row: donnï¿½es parcourues par le parseur
 			if (nbLignes > 0) {
 				MessageBox msgBox = new MessageBox(Display.getCurrent().getActiveShell(), SWT.YES | SWT.NO);
 				msgBox.setText(Messages.getString("ExporterVueListeAction.1"));
@@ -114,10 +115,9 @@ public class ExporterVueListeAction extends Action {
 			
 			TableTreeDetailViewer tableTreeDetailViewer = isKVB ? fctv.getTableTreeKVBDetailViewer() : fctv.getTableTreeDetailViewer();
 			
-			// La vue détaillée doit etre dépliée pour faire l'export	
+			// La vue dï¿½taillï¿½e doit etre dï¿½pliï¿½e pour faire l'export	
 			
-			// E34 : Revoir le expandALL
-			// tableTreeDetailViewer.expandAll();
+			tableTreeDetailViewer.expandAll();
 
 			String chaineExportVueDetaillee = creerChaineExportVueDetaillee(tableTreeDetailViewer);
 			
@@ -199,7 +199,7 @@ public class ExporterVueListeAction extends Action {
 	}
 
 	/**
-	 * Créé des tabulations
+	 * Crï¿½ï¿½ des tabulations
 	 * 
 	 * @param nbTabulations
 	 * @return
@@ -216,7 +216,7 @@ public class ExporterVueListeAction extends Action {
 	}
 
 	/**
-	 * Méthode de récupération de l'instance de la VueListe
+	 * Mï¿½thode de rï¿½cupï¿½ration de l'instance de la VueListe
 	 * 
 	 * @return instance de VueListe
 	 */
@@ -237,20 +237,20 @@ public class ExporterVueListeAction extends Action {
 	}
 
 	/**
-	 * Méthode d'ouverture de la fenetre de dialogue d'export de selection
+	 * Mï¿½thode d'ouverture de la fenetre de dialogue d'export de selection
 	 */
 	public final void run() {
 		// Creates a file dialog to open the binary files
 		FileDialog dialog = new FileDialog(this.window.getShell(), SWT.SAVE);
 
-		// Définition des extensions visibles
+		// Dï¿½finition des extensions visibles
 		dialog.setFilterExtensions(new String[] { "*.tsv", "*.csv" });
 		dialog.setFilterNames(new String[] { "*.tsv", "*.csv" });
 		
 		//DR28_CL36 
 		dialog.setFilterPath(RepertoiresAdresses.RepertoireTravail);
 		
-		// Récupération du nom du fichier et du chemin
+		// Rï¿½cupï¿½ration du nom du fichier et du chemin
 		String cheminFichier = dialog.open();
 		String nomFichier = dialog.getFileName();
 

@@ -14,6 +14,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vuefiltre.VueListeFiltre;
  * @author Cosmin Udroiu
  *
  */
+@Deprecated
 public class ShowVueFiltresListeAction extends Action {
 
 	public ShowVueFiltresListeAction() {

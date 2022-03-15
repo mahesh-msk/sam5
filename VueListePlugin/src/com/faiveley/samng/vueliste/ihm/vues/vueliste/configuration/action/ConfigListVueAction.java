@@ -20,6 +20,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.VueListe;
  * @author Cosmin Udroiu
  *
  */
+@Deprecated
 public class ConfigListVueAction extends VueAction {
 	public ConfigListVueAction() {
 		super(null, ICommandIds.CMD_OPEN_COFIG_LIST, Messages.getString("ConfigListVueAction.0"), null,  com.faiveley.samng.vueliste.ihm.ActivatorVueListe.getImageDescriptor("/icons/vueListe/vue_liste_gerer_colonnes.png"),true); //$NON-NLS-1$
@@ -48,11 +49,11 @@ public class ConfigListVueAction extends VueAction {
 				}
 				//just a data change is enough
 				//vueListe.getTop().layout();
-				ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueList", new Boolean(true));
+				ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueList", Boolean.valueOf(true));
 				vueListe.reloadTable();
 			}
 			else{
-				ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueList", new Boolean(false));
+				ActivatorData.getInstance().getPoolDonneesVues().put("changeColVueList", Boolean.valueOf(false));
 				}
 		}
 	}

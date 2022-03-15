@@ -77,7 +77,7 @@ public class ParseurJRUTableAssociationEvVars implements IParseurInterface {
 					continue;
 				finData = new byte[totalData.length - i];
 				System.arraycopy(totalData, i, finData, 0, finData.length);
-				intDebFin = new Integer(i);
+				intDebFin = Integer.valueOf(i);
 				break;
 			}
 
@@ -90,7 +90,7 @@ public class ParseurJRUTableAssociationEvVars implements IParseurInterface {
 					continue;
 				debData = new byte[i + tailleaux];
 				System.arraycopy(totalData, 0, debData, 0, debData.length);
-				intFinDeb = new Integer(i + tailleaux);
+				intFinDeb = Integer.valueOf(i + tailleaux);
 				break;
 			}
 

@@ -6,7 +6,7 @@ Bundle-Version: 5.5.11.111
 Bundle-Activator: com.faiveley.kvbdecoder.kvbdecoderplugin.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: com.faiveley.kvbdecoder.decoder,
  com.faiveley.kvbdecoder.exception,
  com.faiveley.kvbdecoder.exception.decoder,

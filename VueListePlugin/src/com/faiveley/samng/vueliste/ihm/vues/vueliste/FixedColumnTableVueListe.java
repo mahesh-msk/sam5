@@ -36,6 +36,7 @@ import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.sm.data.descripteur.DescripteurVariable;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
 
+@Deprecated
 public abstract class FixedColumnTableVueListe extends Composite {
 	public FixedColumnTableVueListe(Composite parent, int style) {
 		super(parent, SWT.NONE);

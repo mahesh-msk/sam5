@@ -41,6 +41,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireV
 /**
  * @author Cosmin Udroiu
  */
+@Deprecated
 public class ColonnesConfigVueDetailleeDialog extends Dialog {
 	private static int WIDTH_COL_POS = 1;
 	

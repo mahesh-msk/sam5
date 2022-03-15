@@ -63,7 +63,7 @@ public class ParseurConfigurationVueAnnotation implements IParseurInterface{
 		try{
 			List<Col> listeColonnesXml = this.vueAnnotation.getVueAnnotation().getConfigurationColonnesAnnotations().getColList();
 			for (Col colonne : listeColonnesXml) {
-				hashColonneLargeur.put(colonne.getNom().getStringValue(), new Integer(colonne.getLargeur().getStringValue()));
+				hashColonneLargeur.put(colonne.getNom().getStringValue(), Integer.valueOf(colonne.getLargeur().getStringValue()));
 			}
 		} 
 		catch(Exception ex){

@@ -281,10 +281,10 @@ public abstract class AVariableComposant {
 
 		if (getValeurObjet() != null) {		
 			if (value.contains(".")||value.contains(",")) {
-				Double var=new Double(getValeurObjet().toString());
+				Double var=Double.valueOf(getValeurObjet().toString());
 				return var.compareTo(Double.valueOf(value));
 			}else if(this.getDescriptor().getM_AIdentificateurComposant().getNom().equals(TypeRepere.vitesseCorrigee.getName())){
-				Double var=new Double(getValeurObjet().toString());
+				Double var=Double.valueOf(getValeurObjet().toString());
 				return var.compareTo(Double.valueOf(value));
 			}
 
@@ -548,7 +548,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;	
 
@@ -573,7 +573,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;	
 
@@ -598,7 +598,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;	
 
@@ -623,7 +623,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;		
 					}
@@ -759,7 +759,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;	
 
@@ -784,7 +784,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;	
 
@@ -809,7 +809,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;	
 
@@ -834,7 +834,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;	
 
@@ -861,7 +861,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = valTemp;	
 
@@ -888,7 +888,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;	
 					}
@@ -912,7 +912,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;	
 
@@ -936,7 +936,7 @@ public abstract class AVariableComposant {
 					//teste si le résultat directeur est un entier
 					if(valTemp == Math.floor(valTemp))
 					{
-						varObject = new Double(valTemp).longValue();
+						varObject = Double.valueOf(valTemp).longValue();
 					} else{
 						varObject = (float)valTemp;	
 

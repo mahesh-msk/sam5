@@ -318,7 +318,7 @@ public class CalculReferenceZeroTomNg extends ACalculReferenceZero {
 							deltaTempsTempo = deltaTempsTempo + tempsAvtChgt - tempsLastMsg;
 						}
 					}
-					deltaTempsMsgs.put(new Integer(msg.getMessageId()), new Long(deltaTempsTempo));
+					deltaTempsMsgs.put(Integer.valueOf(msg.getMessageId()), Long.valueOf(deltaTempsTempo));
 				}
 			}
 
@@ -381,7 +381,7 @@ public class CalculReferenceZeroTomNg extends ACalculReferenceZero {
 					str = ConversionTemps.getRelativeTimeAsString(0,jour, heure,minutes,seconde,ms);
 				} else {
 					if (!msg.getEvenement().isChangementHeure()) {
-						tmpRelatif = ((Long) deltaTempsMsgs.get(new Integer(idMsg))) - deltaTempsRef0;
+						tmpRelatif = ((Long) deltaTempsMsgs.get(Integer.valueOf(idMsg))) - deltaTempsRef0;
 					} else {
 						long tempsAvtChgt = (Long) (msg.getVariable(codeTpsAvtChgt).getCastedValeur());
 						long dateAvtChgt = (Long) (msg.getVariable(codeDateAvtChgt).getCastedValeur());
@@ -390,7 +390,7 @@ public class CalculReferenceZeroTomNg extends ACalculReferenceZero {
 						tc.addDate(dateAvtChgt);
 						tc.addTime(tempsAvtChgt);
 
-						tmpRelatif = ((Long) deltaTempsMsgs.get(new Integer(idMsg))) - deltaTempsRef0;
+						tmpRelatif = ((Long) deltaTempsMsgs.get(Integer.valueOf(idMsg))) - deltaTempsRef0;
 					}
 				}
 

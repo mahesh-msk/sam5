@@ -44,6 +44,7 @@ import com.faiveley.samng.vueliste.ihm.vues.vueliste.FixedColumnTableViewerDetai
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
 
 @SuppressWarnings("deprecation")
+@Deprecated
 public class TableTreeDetailViewer extends TableTreeViewer {	
 	protected String[] columnNames = new String[] {GestionnaireVueDetaillee.VARIABLE_NAME_COL_NAME.getLabel(), GestionnaireVueDetaillee.CRUDE_VALUE_COL_NAME.getLabel(), GestionnaireVueDetaillee.DECODED_VALUE_COL_NAME.getLabel()};
 	private GestionnaireVueDetaillee gestionnaireColonne;
@@ -216,14 +217,14 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 	}
 
 	/**
-	 * Retourne true si on a expandé une variable
+	 * Retourne true si on a expandï¿½ une variable
 	 * 
-	 * @param arg0 descripteur à expander
-	 * @param arg1 structure où on doit retrouver le descripteur
+	 * @param arg0 descripteur ï¿½ expander
+	 * @param arg1 structure oï¿½ on doit retrouver le descripteur
 	 * @return boolean
 	 */
 	private boolean expandStructDynamique(DescripteurVariable descr, VariableDynamique struct, int niveau, AVariableComposant varToExpand) {
-		if (struct.equals(varToExpand)) { // Si c'est la structure elle-même (cas chaine dynamique)
+		if (struct.equals(varToExpand)) { // Si c'est la structure elle-mï¿½me (cas chaine dynamique)
 			expandVariableParent(struct, 0, false, true);
 			return true;
 		} else if (struct.getVariableEntete().equals(varToExpand)) { // Si c'est la variable entete
@@ -234,7 +235,7 @@ public class TableTreeDetailViewer extends TableTreeViewer {
 				if (var.equals(varToExpand)) { // Si la variable correspond
 					expandVariableParent(var, niveau, false, false);
 					return true;					
-				} else if (var instanceof StructureDynamique || var instanceof Paquets || var instanceof TableauDynamique) { // Si c'est une structure dynamique, algo récursif
+				} else if (var instanceof StructureDynamique || var instanceof Paquets || var instanceof TableauDynamique) { // Si c'est une structure dynamique, algo rï¿½cursif
 					boolean ret = expandStructDynamique(descr, ((VariableDynamique) var), niveau + 1, varToExpand);
 					
 					if (ret) {
