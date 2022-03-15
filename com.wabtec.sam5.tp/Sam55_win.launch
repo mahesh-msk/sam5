@@ -30,11 +30,8 @@
         <setEntry value="com.ibm.icu@default:default"/>
         <setEntry value="com.sun.jna*5.8.0.v20210503-0343@default:default"/>
         <setEntry value="com.sun.jna.platform*5.8.0.v20210406-1004@default:default"/>
-        <setEntry value="javax.activation@default:default"/>
         <setEntry value="javax.annotation@default:default"/>
         <setEntry value="javax.inject@default:default"/>
-        <setEntry value="javax.xml.stream@default:default"/>
-        <setEntry value="javax.xml@default:default"/>
         <setEntry value="org.apache.batik.constants@default:default"/>
         <setEntry value="org.apache.batik.css@default:default"/>
         <setEntry value="org.apache.batik.i18n@default:default"/>
@@ -46,6 +43,7 @@
         <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
         <setEntry value="org.apache.felix.gogo.shell@default:default"/>
         <setEntry value="org.apache.felix.scr@1:true"/>
+        <setEntry value="org.apache.log4j@default:default"/>
         <setEntry value="org.apache.xmlgraphics@default:default"/>
         <setEntry value="org.eclipse.compare.core.nl_de@default:false"/>
         <setEntry value="org.eclipse.compare.core.nl_es@default:false"/>
@@ -619,6 +617,8 @@
         <setEntry value="org.eclipse.urischeme.nl_tr@default:false"/>
         <setEntry value="org.eclipse.urischeme.nl_zh@default:false"/>
         <setEntry value="org.eclipse.urischeme@default:default"/>
+        <setEntry value="org.hamcrest.core@default:default"/>
+        <setEntry value="org.junit@default:default"/>
         <setEntry value="org.w3c.css.sac@default:default"/>
         <setEntry value="org.w3c.dom.events@default:default"/>
         <setEntry value="org.w3c.dom.smil@default:default"/>
