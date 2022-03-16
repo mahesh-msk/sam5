@@ -26,12 +26,11 @@ public class PerspectiveLM implements IPerspectiveFactory {
 			final float tailleListe = 0.5f;
 			final float tailleMultimedia = 0.5f;
 
-			layout.addStandaloneView("SAMNG.Vue.Liste", true, IPageLayout.TOP, tailleListe, editorArea);
 			layout.addStandaloneView("SAMNG.Vue.Liste.e4", true, IPageLayout.TOP, tailleListe, editorArea);
 			layout.addStandaloneView("SAMNG.Vue.Multimedia", true, IPageLayout.BOTTOM, tailleMultimedia, editorArea);
 
-			layout.getViewLayout("SAMNG.Vue.Liste").setCloseable(false);
-			layout.getViewLayout("SAMNG.Vue.Liste").setMoveable(false);
+			layout.getViewLayout("SAMNG.Vue.Liste.e4").setCloseable(false);
+			layout.getViewLayout("SAMNG.Vue.Liste.e4").setMoveable(false);
 			layout.getViewLayout("SAMNG.Vue.Multimedia").setCloseable(false);
 			layout.getViewLayout("SAMNG.Vue.Multimedia").setMoveable(false);
 

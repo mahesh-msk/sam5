@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry exported="true" kind="lib" path="lib/javax.activation-api-1.2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxb-osgi-2.4.0-b180830.0438.jar" sourcepath="C:/Users/interindep/Downloads/jaxb-osgi-2.4.0-b180830.0438-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxb-api-2.4.0-b180830.0359.jar" sourcepath="C:/Users/interindep/Downloads/jaxb-api-2.4.0-b180830.0359-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

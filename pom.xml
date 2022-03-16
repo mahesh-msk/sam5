@@ -126,6 +126,7 @@
 		<module>VueListePlugin</module>
 		<module>VueMultimediaPlugin</module>
 		<module>VueTabulairePlugin</module>
+		<module>com.wabtec.sam5.jaxb</module>
 		<module>com.wabtec.sam5.feature</module>
 		<module>com.wabtec.sam5.repository</module>
 		<!--   <module>VueMultimediaPlugin.win32.x86</module> -->

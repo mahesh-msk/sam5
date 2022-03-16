@@ -154,7 +154,7 @@ public class ParseurTableAssociationEvVars implements IParseurInterface {
 		config = null;
 		
 		try {
-			JAXBContext jc = JAXBContext.newInstance("com.faiveley.samng.principal.sm.parseconfigatess");
+			JAXBContext jc = JAXBContext.newInstance("com.faiveley.samng.principal.sm.parseconfigatess", getClass().getClassLoader());
 			Unmarshaller unmarshaller = jc.createUnmarshaller();		
 			config = (ConfigurationAtess) unmarshaller.unmarshal(new File(RepertoiresAdresses.xml + "/" + ConfigurationATESSxml));
 		} catch (JAXBException e) {
@@ -171,7 +171,7 @@ public class ParseurTableAssociationEvVars implements IParseurInterface {
 		lireFichierXMLFicParamEngin();
 		
 		if (ficXML == null) {
-			System.out.println("La lecture du fichier FICPARAM_TYP_ENGIN.xml a échoué");
+			System.out.println("La lecture du fichier FICPARAM_TYP_ENGIN.xml a ï¿½chouï¿½");
 			return null;
 		}
 		
@@ -189,17 +189,17 @@ public class ParseurTableAssociationEvVars implements IParseurInterface {
 				return ret;
 			}
 		} else {
-			System.out.println("La valeur de selection_type_engin devrait être 0 ou 1");
+			System.out.println("La valeur de selection_type_engin devrait ï¿½tre 0 ou 1");
 			return null;
 		}
 	}
 
 	public DonneesFichierXMLEngin lireFichierXMLFicParamEngin(){
 		try {
-			// Création d'une fabrique de documents
+			// Crï¿½ation d'une fabrique de documents
 			DocumentBuilderFactory fabrique = DocumentBuilderFactory.newInstance();
 
-			// Création d'un constructeur de documents
+			// Crï¿½ation d'un constructeur de documents
 			DocumentBuilder constructeur = fabrique.newDocumentBuilder();
 
 			// Lecture du contenu d'un fichier XML avec DOM
@@ -244,13 +244,13 @@ public class ParseurTableAssociationEvVars implements IParseurInterface {
 			}
 		} catch(ParserConfigurationException pce) {
 			System.out.println("Erreur de configuration du parseur DOM");
-			System.out.println("lors de l'appel à fabrique.newDocumentBuilder();");
+			System.out.println("lors de l'appel ï¿½ fabrique.newDocumentBuilder();");
 		} catch(SAXException se) {
 			System.out.println("Erreur lors du parsing du document");
-			System.out.println("lors de l'appel à construteur.parse(xml)");
+			System.out.println("lors de l'appel ï¿½ construteur.parse(xml)");
 		} catch(IOException ioe) {
-			System.out.println("Erreur d'entrée/sortie");
-			System.out.println("lors de l'appel à construteur.parse(xml)");
+			System.out.println("Erreur d'entrï¿½e/sortie");
+			System.out.println("lors de l'appel ï¿½ construteur.parse(xml)");
 		}
 		
 		return ficXML;
@@ -318,7 +318,7 @@ public class ParseurTableAssociationEvVars implements IParseurInterface {
 			fw = new FileWriter(chemin);					
 			fw.close();
 		} catch (Exception e) {
-			System.out.println("erreur lors de la création du fichier d'accompagnement");
+			System.out.println("erreur lors de la crï¿½ation du fichier d'accompagnement");
 		}
 	}
 

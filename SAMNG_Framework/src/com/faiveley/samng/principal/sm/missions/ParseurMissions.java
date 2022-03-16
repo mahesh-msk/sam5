@@ -98,7 +98,7 @@ public class ParseurMissions {
 
 				numSegment = 0;
 			}
-			// Même mission car date identique
+			// Mï¿½me mission car date identique
 			else{
 
 			}
@@ -124,13 +124,13 @@ public class ParseurMissions {
 
 		JAXBContext jaxbContext;
 		try {
-			jaxbContext = JAXBContext.newInstance(packageName);
+			jaxbContext = JAXBContext.newInstance(packageName, ParseurMissions.class.getClassLoader());
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.valueOf(true));
 			File xmlFile = new File(nomFichierParcours+".xml");
 			jaxbMarshaller.marshal(doc, xmlFile); //$NON-NLS-1$
 		} catch (JAXBException e) {
-			// TODO Bloc catch généré automatiquement
+			// TODO Bloc catch gï¿½nï¿½rï¿½ automatiquement
 			e.printStackTrace();
 		}
 		return isValide;
@@ -140,13 +140,13 @@ public class ParseurMissions {
 
 		HashMap<Integer, SegmentTemps> listeSegments = null;
 		try {
-			System.out.println("Création du fichier XML"); //$NON-NLS-1$
+			System.out.println("Crï¿½ation du fichier XML"); //$NON-NLS-1$
 
 			listeSegments = TableSegments.getInstance().getSegmentsTemps();
 //			System.out.println("Nombre de segments : " +listeSegments.size()); //$NON-NLS-1$
 //			System.out.println("Nom du fichier : " +f.getName()); //$NON-NLS-1$
 		} catch (Exception e1) {
-			System.out.println("Problème lors de la création du fichier xml des missions"); //$NON-NLS-1$
+			System.out.println("Problï¿½me lors de la crï¿½ation du fichier xml des missions"); //$NON-NLS-1$
 			e1.printStackTrace();
 		}
 		
@@ -167,7 +167,7 @@ public class ParseurMissions {
 		//}
 
 
-		// Pour les fichiers JRU, le fichier de mission est créé dans chargerDataExplore()
+		// Pour les fichiers JRU, le fichier de mission est crï¿½ï¿½ dans chargerDataExplore()
 		try {
 		if (!(TypeParseur.getInstance().getParser()instanceof ParseurParcoursJRU)) {
 				System.out.println("Fichier NON JRU"); //$NON-NLS-1$

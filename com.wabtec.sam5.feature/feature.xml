@@ -20,7 +20,13 @@
    <requires>
       <import plugin="org.eclipse.ui"/>
       <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="KVBDecoderPlugin" version="5.5.6" match="greaterOrEqual"/>
+      <import plugin="com.wabtec.sam5.jaxb" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="KVBDecoderPlugin" version="5.5.11" match="greaterOrEqual"/>
+      <import plugin="org.apache.log4j"/>
+      <import plugin="org.junit"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.osgi"/>
+      <import plugin="VueMultimediaPlugin" version="5.5.6.96" match="greaterOrEqual"/>
    </requires>
 
    <plugin
@@ -73,27 +79,6 @@
          unpack="false"/>
 
    <plugin
-         id="javax.xml.bind"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="javax.xml"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="javax.xml.stream"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="VueListePlugin"
          download-size="0"
          install-size="0"
@@ -106,5 +91,12 @@
          install-size="0"
          version="0.0.0"
          fragment="true"/>
+
+   <plugin
+         id="com.wabtec.sam5.jaxb"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

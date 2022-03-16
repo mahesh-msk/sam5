@@ -223,7 +223,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
             
             if (actionId.equals("SAMNG.Vue.Binaire")) {
                 index = 0;
-            } else if (actionId.equals("SAMNG.Vue.Liste")) {
+            } else if (actionId.equals("SAMNG.Vue.Liste.e4")) {
                 index = 1;
             } else if (actionId.equals("SAMNG.Vue.Tabulaire")) {
                 index = 2;
@@ -404,7 +404,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 		ouvrirVueTabulaireAction.setImageDescriptor(com.faiveley.samng.principal.ihm.Activator.getImageDescriptor("/icons/menu/appli_vue_tabulaire.png"));
 		register(this.ouvrirVueTabulaireAction);
 		
-		ouvrirVueListeAction = new VueAction(window, ICommandIds.CMD_OPEN, Messages.getString("ApplicationActionBarAdvisor.52"), "SAMNG.Vue.Liste", null,false);
+		ouvrirVueListeAction = new VueAction(window, ICommandIds.CMD_OPEN, Messages.getString("ApplicationActionBarAdvisor.52"), "SAMNG.Vue.Liste.e4", null,false);
 		ouvrirVueListeAction.setImageDescriptor(null);
 		ouvrirVueListeAction.setEnabled(false);
 		ouvrirVueListeAction.setImageDescriptor(com.faiveley.samng.principal.ihm.Activator.getImageDescriptor("/icons/menu/appli_vue_liste.png"));
@@ -514,8 +514,8 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 	}
 	
 	/**
-	 * Créer l'action dans le menu File
-	 * @param action à ajouter
+	 * Crï¿½er l'action dans le menu File
+	 * @param action ï¿½ ajouter
 	 */
 	public void creerExportsActions() {
 		for (Action actionCourante : this.actionExports) {
@@ -541,7 +541,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 	}
 	
 	/**
-	 * Méthode temporaire d'ajout du menu exporter Vue Liste
+	 * Mï¿½thode temporaire d'ajout du menu exporter Vue Liste
 	 * @param action
 	 */
 	public void createAction(Action action, VueType type) {

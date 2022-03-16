@@ -1,29 +1,27 @@
-target "2018-09" with source requirements
+target "2021-09" with source requirements
 
 // Tentative sur photon...
-location "http://download.eclipse.org/releases/2018-09" {
-	
-	// Use photon because of bug 475833 : https://bugs.eclipse.org/bugs/show_bug.cgi?id=475833
-	// Removing TableTreeItem : https://help.eclipse.org/2021-06/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fporting%2Fremovals.html
+location "http://download.eclipse.org/releases/2021-09" {
 	
 	
 	org.eclipse.rcp.feature.group
 	org.eclipse.ui.workbench
 	
 	org.eclipse.emf.databinding.feature.group
-	org.eclipse.ui.cheatsheets
+	// org.eclipse.ui.cheatsheets
 	org.eclipse.help.ui
 	org.eclipse.compare
 	//org.eclipse.emf.common.feature.group
 	//org.eclipse.emf.ecore.feature.group
 	org.eclipse.jdt.junit.runtime
-	org.eclipse.equinox.executable.feature.group
+	//org.eclipse.equinox.executable.feature.group
 	org.eclipse.equinox.ds
-		
+
+
 }
 
 //location "https://archive.eclipse.org/technology/babel/update-site/R0.17.0/photon/" {
-location "https://archive.eclipse.org/technology/babel/update-site/R0.16.0/photon/" {
+location "https://archive.eclipse.org/technology/babel/update-site/R0.19.1/2021-09/" {
 	
 	org.eclipse.babel.nls_eclipse_de.feature.group
 	org.eclipse.babel.nls_eclipse_es.feature.group
@@ -37,10 +35,17 @@ location "https://archive.eclipse.org/technology/babel/update-site/R0.16.0/photo
 }
 // Add support for java 11 (removed javax.annotation)...$
 // See ; https://download.eclipse.org/tools/orbit/downloads/
-location "http://download.eclipse.org/tools/orbit/downloads/drops/R20180905201904/repository" {
+
+//location "https://download.eclipse.org/tools/orbit/downloads/drops/R20211122181901/repository" {
+location "https://download.eclipse.org/tools/orbit/downloads/drops/R20210825222808/repository" {
 	javax.annotation
-	javax.xml.bind
-	javax.xml.stream
+	//javax.xml.bind [2.2.0,2.3.0)
+	// javax.xml.stream
+	// jakarta.xml.bind 
+	//com.sun.xml.bind [2.2.0,2.3.0) 
+	org.apache.log4j
+	
+	
 }
 
 
@@ -59,7 +64,7 @@ location "http://download.eclipse.org/e4/snapshots/org.eclipse.e4.tools/latest/"
 
 // Add delta pack
 //location "http://download.eclipse.org/eclipse/updates/4.8" {   // for photon
-location "http://download.eclipse.org/eclipse/updates/4.9" {
+location "http://download.eclipse.org/eclipse/updates/4.21" {
 	org.eclipse.equinox.sdk.feature.group
 }
 

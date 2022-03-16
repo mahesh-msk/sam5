@@ -8,10 +8,8 @@ Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  SAMNG,
- javax.xml.bind
+ com.wabtec.sam5.jaxb
 Bundle-ActivationPolicy: lazy
-Bundle-ClassPath: lib/eclipselink.jar,
- .
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Vendor: Faiveley Transport
 Automatic-Module-Name: VueExplorateurPlugin

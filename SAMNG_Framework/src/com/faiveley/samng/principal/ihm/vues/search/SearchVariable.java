@@ -4,7 +4,6 @@ import java.util.EnumSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import noNamespace.ListeDocument.Liste;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -287,7 +286,7 @@ public class SearchVariable extends ASearchVariableDialog {
 				}
 				
 				// Pour les variables de type NID_XX, il est possible de saisir "" comme valeur 
-				// recherchée. Cela correspond à chercher la valeur 0xFFFFFF.
+				// recherchï¿½e. Cela correspond ï¿½ chercher la valeur 0xFFFFFF.
 				if (!varTypNID_XX) {
 				
 					if (op!=null){
@@ -313,12 +312,12 @@ public class SearchVariable extends ASearchVariableDialog {
 								String valeur = null;
 								String label = null;
 								
-								// Pour repérer une variable de type NID_XX, il faut regarder si la variable est de 
+								// Pour repï¿½rer une variable de type NID_XX, il faut regarder si la variable est de 
 								// type discrete, et qu'elle possede une table de label contenant le label "$retirer$".
-								// La valeur associée a ce label doit être retirée de la valeur lors de son affichage.
-								// A contrario, cette valeur doit être ajoutée pour les traitements.
+								// La valeur associï¿½e a ce label doit ï¿½tre retirï¿½e de la valeur lors de son affichage.
+								// A contrario, cette valeur doit ï¿½tre ajoutï¿½e pour les traitements.
 								if (!value.equals(ASearchVariableDialog.TOUSLESCHANGEMENTS)) {
-									// Si la table de label est une table de suppression de caractère...
+									// Si la table de label est une table de suppression de caractï¿½re...
 									// Variable de type NID_XXX. Codage BCD (/4).
 									if (listeLabelvaleur.get(0).getLabel().equals("$retirer$")) {
 										int bcdSize = (var.getDescriptor().getTailleBits() / 4) ;
@@ -330,16 +329,16 @@ public class SearchVariable extends ASearchVariableDialog {
 											value = value.substring(0, value.indexOf("...")) ;
 										}*/
 										
-										// Ajout des caractères retirés à l'affichage (ex : 'f')
+										// Ajout des caractï¿½res retirï¿½s ï¿½ l'affichage (ex : 'f')
 										for (i = value.length() ; i < bcdSize ; i++) {
 											value = value + Integer.toString(Integer.parseInt((String) listeLabelvaleur.get(0).getValeurs()), 16) ;										
 										}
 										
-										// Conversion de la chaîne en valeur
+										// Conversion de la chaï¿½ne en valeur
 										value = Long.toString(Long.parseLong(value, 16)) ;
 										
 										/*if (value2 != null) {
-											// Ajout des caractères retirés à l'affichage (ex : 'f')
+											// Ajout des caractï¿½res retirï¿½s ï¿½ l'affichage (ex : 'f')
 											for (i = value2.length() ; i < bcdSize ; i++) {
 												value2 = value2 + Integer.toString(Integer.parseInt((String) listeLabelvaleur.get(0).getValeurs()), 16) ;										
 											}
@@ -382,7 +381,7 @@ public class SearchVariable extends ASearchVariableDialog {
 								String label = null;
 								while (!trouve && i < size) {
 									label = listeLabelvaleur.get(i).getLabel();
-									// si on ajoute les valeurs après le label
+									// si on ajoute les valeurs aprï¿½s le label
 									// String valeurs = (String)listeLabelvaleur.get(i).getValeurs();
 									// if(label.equals(value.substring(0,indexParentheseOuvrante)) && valeurs.equals(value.substring(indexParentheseOuvrante+1, indexOfParentheseFermante))){
 
@@ -426,13 +425,13 @@ public class SearchVariable extends ASearchVariableDialog {
 			
 			
 			//test sens recherche
-			//si le sens change, on ne garde pas la variable sauvegardée
+			//si le sens change, on ne garde pas la variable sauvegardï¿½e
 			if ((this.isNext && AbstractSelectionProviderVue.sensRecherche==1)
 			||(!this.isNext && AbstractSelectionProviderVue.sensRecherche==-1)){
 				AbstractSelectionProviderVue.varSelectionnee.reset();
 			}
 			
-			//ajouter test de validité si l'utilisateur fait une recherche sur la date
+			//ajouter test de validitï¿½ si l'utilisateur fait une recherche sur la date
 			//la date saisie doit etre au format jj/mm/aaaa
 
 			for (IViewReference v : vr) {

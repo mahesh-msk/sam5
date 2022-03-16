@@ -2,7 +2,7 @@ package com.faiveley.samng.principal.sm.data.descripteur;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+import org.eclipse.equinox.log.Logger;
 import com.faiveley.samng.principal.logging.SamngLogger;
 import com.faiveley.samng.principal.sm.data.identificateurComposant.IdentificateurEvenement;
 import com.faiveley.samng.principal.sm.data.identificateurComposant.IdentificateurVariable;
