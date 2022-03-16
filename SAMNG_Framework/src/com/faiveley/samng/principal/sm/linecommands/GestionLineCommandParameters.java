@@ -41,6 +41,7 @@ public class GestionLineCommandParameters {
 	private static String export_list = "-xlist"; //$NON-NLS-1$
 	private static String filtre = "-filt"; //$NON-NLS-1$
 	private static String rapport = "-rp"; //$NON-NLS-1$
+	private static String clearPersistedState = "-clearPersistedState"; //$NON-NLS-1$
 
 	private static String filename_long = "--filename"; //$NON-NLS-1$
 	private static String offsetMessage_long = "--offset"; //$NON-NLS-1$
@@ -184,6 +185,9 @@ public class GestionLineCommandParameters {
 				} else if (args[i].equals(annot_lecture_seule) || args[i].equals(annot_lecture_seule_long)) {
 					auMoinsUnArgument = true;
 					setAnnot_Lect_seule(true);
+				} else if (args[i].equals(clearPersistedState)) {
+					auMoinsUnArgument = true;
+					// Issue 1101 : Rien de special à faire, géré à la création du workbench
 				} else if (args[i].equals(perspective) || args[i].equals(perspective_long)) {
 					auMoinsUnArgument = true;
 					// si l'argument nom de perspective n'est pas pr�sent
