@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -134,10 +135,15 @@ public class CommunicationFichiersVue {
 		String packageName = "com.faiveley.samng.principal.sm.missions.jaxb";
 		try {
 			JAXBContext jaxbContext = JAXBContext.newInstance(packageName, ParseurMissions.class.getClassLoader());
+			
+			// OPCoach : fix class cast exception (unmarshalled object was directly converted into TypeElement while it is a JAXBElement)
+			TypeDocument element = null;
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-			TypeDocument element = (TypeDocument) jaxbUnmarshaller.unmarshal(xml);
+			Object unmarshalled = jaxbUnmarshaller.unmarshal(xml);
+			if (unmarshalled instanceof JAXBElement<?>)
+				element  = (TypeDocument) ((JAXBElement<?>)unmarshalled).getValue();
 
-			if (element.getListeRegoupementTemps() != null){
+			if (element != null && element.getListeRegoupementTemps() != null){
 				// Liste des regroupements mensuels
 				List<TypeRegroupementTemps> listeRT= element.getListeRegoupementTemps().getRegroupementTemps();
 				for (TypeRegroupementTemps type : listeRT) {
