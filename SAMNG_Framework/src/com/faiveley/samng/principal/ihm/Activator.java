@@ -1,5 +1,6 @@
 package com.faiveley.samng.principal.ihm;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -165,8 +166,8 @@ public class Activator extends AbstractUIPlugin {
 			System.exit(1);
 		}
 		
-		if (!res.endsWith("\\")) {
-			res += "\\";
+		if (!res.endsWith(File.separator)) {
+			res += File.separator;
 		}
 		return res;
 	}

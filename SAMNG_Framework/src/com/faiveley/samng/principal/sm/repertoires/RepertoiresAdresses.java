@@ -65,44 +65,44 @@ public class RepertoiresAdresses {
 		creerPath(PathINSTALL_SAM_PARAM);
 		INSTALL_SAM_PARAM=PathINSTALL_SAM_PARAM;
 		doc=INSTALL_SAM_PARAM+"doc";
-		profil=INSTALL_SAM_PARAM+"profil/";
+		profil=INSTALL_SAM_PARAM+"profil" + File.separator;
 		profil_vide=profil+nomprofil_vide;
 		ressources=INSTALL_SAM_PARAM+"ressources";
 		logs=INSTALL_SAM_PARAM+"logs";
-		logs_parser_log_TXT=logs+"/parser_log.txt";
+		logs_parser_log_TXT=logs+ File.separator + "parser_log.txt";
 		temp=INSTALL_SAM_PARAM+"temp";
-		temp_captTemp_JPG=temp+"/captTemp.jpg";
-		temp_directory=temp+"/work_directory.properties";
+		temp_captTemp_JPG=temp+ File.separator+"captTemp.jpg";
+		temp_directory=temp+ File.separator + "work_directory.properties";
 		
-		FLAGS_FILE_DIR = ressources+"\\flags\\";
+		FLAGS_FILE_DIR = ressources+File.separator+"flags"+File.separator;
 
-		xml=ressources+"/xml";
+		xml=ressources+ File.separator + "xml";
 
-		ConfigurationJRU_XML=xml+"/ConfigurationJRU";
+		ConfigurationJRU_XML=xml+ File.separator + "ConfigurationJRU";
 
-		langues=ressources+"/langues";
+		langues=ressources+ File.separator + "langues";
 
-		languages_PROPERTIES=langues+"/languages.properties";
-		languagesNaming_PROPERTIES=langues+"/languagesNaming.properties";
-		defaultLanguage_PROPERTIES=langues+"/defaultLanguage.properties";
+		languages_PROPERTIES=langues+ File.separator + "languages.properties";
+		languagesNaming_PROPERTIES=langues+ File.separator + "languagesNaming.properties";
+		defaultLanguage_PROPERTIES=langues+ File.separator + "defaultLanguage.properties";
 
-		bridage=ressources+"/bridage";
-		IdConfig_PROPERTIES=bridage+"/IdConfig.properties";
-		missions_PROPERTIES=bridage+"/missions.properties";
-		FICPARAM_TYP_ENGIN_XML=bridage+"/FICPARAM_TYP_ENGIN.xml";
-		filtresdefautsproperties=bridage+"/filtreDefautTabulaire.properties";
-		filtresproperties=bridage+"/filtres.properties";
+		bridage=ressources+ File.separator + "bridage";
+		IdConfig_PROPERTIES=bridage+ File.separator + "IdConfig.properties";
+		missions_PROPERTIES=bridage+ File.separator + "missions.properties";
+		FICPARAM_TYP_ENGIN_XML=bridage+ File.separator + "FICPARAM_TYP_ENGIN.xml";
+		filtresdefautsproperties=bridage+ File.separator + "filtreDefautTabulaire.properties";
+		filtresproperties=bridage+ File.separator + "filtres.properties";
 
-		JRU=ressources+"/JRU";
-		JRU_liste_erreurs_bloquantes_JRU=JRU+"/liste_erreurs_bloquantes_JRU.properties";
-		JRU_liste_tailleEntete_JRU=JRU+"/liste_tailleEntete_JRU.properties";
-		JRU_liste_versions_JRU=JRU+"/liste_versions_JRU.properties";
+		JRU=ressources+ File.separator + "JRU";
+		JRU_liste_erreurs_bloquantes_JRU=JRU+ File.separator + "liste_erreurs_bloquantes_JRU.properties";
+		JRU_liste_tailleEntete_JRU=JRU+ File.separator + "liste_tailleEntete_JRU.properties";
+		JRU_liste_versions_JRU=JRU+ File.separator + "liste_versions_JRU.properties";
 		
-		views=ressources+"/views";
-		viewsSynchronizationProperties=views+"/viewsSynchronization.properties";
+		views=ressources+ File.separator + "views";
+		viewsSynchronizationProperties=views+ File.separator + "viewsSynchronization.properties";
 		
-		atess=ressources+"/atess";
-		atessDistanceProperties=atess+"/atessDistance.properties";
+		atess=ressources+ File.separator + "atess";
+		atessDistanceProperties=atess+ File.separator + "atessDistance.properties";
 	}
 	
 	public static final String config="config";
@@ -119,17 +119,17 @@ public class RepertoiresAdresses {
 	}
 		
 	public static String getConfigurationVues(){
-		return getProfil_actuel()+"/configuration-vues/";
+		return getProfil_actuel()+ File.separator + "configuration-vues"+ File.separator;
 	}
 	
 	public static String getConfigurationVueMultimedia() {
-		File multimediaFolder = new File(getProfil() + "MULTIMEDIA/");
+		File multimediaFolder = new File(getProfil() + "MULTIMEDIA"+ File.separator);
 		
 		if (!multimediaFolder.exists()) {
 			multimediaFolder.mkdir();
 		}
 		
-		return getProfil() + "MULTIMEDIA/configuration_vue_multimedia.xml";
+		return getProfil() + "MULTIMEDIA" + File.separator + "configuration_vue_multimedia.xml";
 	}
 	
 	public static String getConfigurationVuesAnnotations_XML(){
@@ -137,36 +137,36 @@ public class RepertoiresAdresses {
 	}
 	
 	public static String getFiltres(){
-		return getProfil_actuel()+"/filtres";
+		return getProfil_actuel()+ File.separator + "filtres";
 	}
 
 	public static String getFiltres_GraphiquesXML(){
-		return getFiltres()+"/filtres_graphique"+"/filtres_graphique.xml";
+		return getFiltres()+ File.separator + "filtres_graphique"+ File.separator + "filtres_graphique.xml";
 	}
 	
 	public static String getFiltres_ListesXML(){
-		return getFiltres()+"/filtres_listes"+"/filtres_liste.xml";
+		return getFiltres()+ File.separator + "filtres_listes"+ File.separator + "filtres_liste.xml";
 	}
 	
 	public static String getFiltres_TabulairesXML(){
-		return getFiltres()+"/filtres_tabulaire"+"/filtres_tabulaire.xml";
+		return getFiltres()+ File.separator + "filtres_tabulaire"+ File.separator + "filtres_tabulaire.xml";
 	}
 	
 	public static String getVBVs_XML(){
-		return getProfil_actuel()+"/VBV/"+"vbvs.xml";
+		return getProfil_actuel()+ File.separator + "VBV"+ File.separator + "vbvs.xml";
 	}
 
-	public static final String corrections=config+"/corrections";
+	public static final String corrections=config+ File.separator + "corrections";
 	public static final String correctionsXML="_corrections.xml"; //OK
 
-	public static final String graphic_colors=config+"/graphic_colors";
-	public static final String graphic_colorsXML=graphic_colors+"/graphic_colors.xml"; //OK
+	public static final String graphic_colors=config+ File.separator + "graphic_colors";
+	public static final String graphic_colorsXML=graphic_colors+ File.separator + "graphic_colors.xml"; //OK
 	
-	public static final String marqueurs=config+"/marqueurs";
+	public static final String marqueurs=config+ File.separator + "marqueurs";
 	public static final String marqueursXML="_marqueurs.xml"; //OK
 	
-	public static final String user=config+"/user";
-	public static final String user_PROPERTIES=user+"/user.properties"; //OK
+	public static final String user=config+ File.separator + "user";
+	public static final String user_PROPERTIES=user+ File.separator + "user.properties"; //OK
 	
 	public static String getProfil() {
 		return profil;

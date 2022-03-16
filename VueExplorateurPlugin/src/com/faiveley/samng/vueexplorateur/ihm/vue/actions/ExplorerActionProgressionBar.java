@@ -172,7 +172,7 @@ public class ExplorerActionProgressionBar extends Job implements PropertyChangeL
 	public void explorer(ISelection selection, IProgressMonitor monitor) throws AExceptionSamNG {
 		TreeSelection treeSelection=((TreeSelection) selection);		
 		Object ob=treeSelection.getFirstElement();
-		getNbFiles(ob);//compter le nombre de fichiers à explorer
+		getNbFiles(ob);//compter le nombre de fichiers ï¿½ explorer
 		monitor.beginTask(Messages.getString("ExplorerActionProgressionBar_1"), 100); //$NON-NLS-1$
 		System.out.println("nbFilesToExplore = "+ActivatorData.getInstance().getVpExportExplorer().getNbFiles()); //$NON-NLS-1$
 		explorerDossierRecursif(ob,monitor);		
@@ -188,7 +188,7 @@ public class ExplorerActionProgressionBar extends Job implements PropertyChangeL
 				int size=to.length;
 				for (int i = 0; i < size; i++) {
 					if (to[i] instanceof TreeFolder || to[i] instanceof TreeRepository) {
-						//si c'est un dossier on relance un algorithme récursif
+						//si c'est un dossier on relance un algorithme rï¿½cursif
 						explorerDossierRecursif(to[i],monitor);
 					}else if(to[i] instanceof TreeFile){
 						explorerFile(((TreeFile) to[i]).getAbsoluteName(),monitor);
@@ -234,7 +234,7 @@ public class ExplorerActionProgressionBar extends Job implements PropertyChangeL
 	public void explorerFile(String nomFichier, IProgressMonitor monitor) throws AExceptionSamNG{
 		if (!monitor.isCanceled()) {
 
-			ParseurParcoursBinaire ppb=TypeParseur.getInstance().getParser();//on stocke le type de parseur pour le récupérer après
+			ParseurParcoursBinaire ppb=TypeParseur.getInstance().getParser();//on stocke le type de parseur pour le rï¿½cupï¿½rer aprï¿½s
 			//			ParseurXML_NG_UK_ATESS_Explorer parseurXML1=(ParseurXML_NG_UK_ATESS_Explorer) ParseurXML_NG_UK_ATESS_Explorer.getInstance();
 			//			ParseurXML_NG_UK_ATESS_Explorer.getInstance(nomFichier);
 
@@ -277,7 +277,7 @@ public class ExplorerActionProgressionBar extends Job implements PropertyChangeL
 			
 			BridageFormats.getInstance().setFormatFichierOuvert(BridageFormats.getInstance().getFormatFichierOuvert(nomFichier));
 			File f=new File(nomFichier);
-			//on récupère d'abord le nom du fichier xml du fichier de parcours
+			//on rï¿½cupï¿½re d'abord le nom du fichier xml du fichier de parcours
 			String nomFichierXml = recupererNomFichierXML(format,f);
 			if(nomFichierXml == null ){
 			    // To avoid the message that the exploration is done and now the user can open part of file 
@@ -299,10 +299,10 @@ public class ExplorerActionProgressionBar extends Job implements PropertyChangeL
 					TypeParseur.getInstance().setParser(parser);
 					parser.parseRessource(f.getAbsolutePath(),true,0,-1);
 				}else if (format==FormatSAM.TOM4) {
-					//on récupère le modèle d'enregistreur pour utiliser le bon parseur
+					//on rï¿½cupï¿½re le modï¿½le d'enregistreur pour utiliser le bon parseur
 					ParseurXML1 parseurXml = ParseurXML_NG_UK_ATESS_Explorer.getInstance();
 
-					String nomxml=RepertoiresAdresses.xml.replace("/", "\\") + "\\" + nomFichierXml; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+					String nomxml=RepertoiresAdresses.xml + File.separator + nomFichierXml; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 					parseurXml.parseRessource(nomxml,true,0,-1);
 					String modele = parseurXml.chargerType();
 					if(modele.equals("TOM_UK")){				 //$NON-NLS-1$
@@ -363,7 +363,7 @@ public class ExplorerActionProgressionBar extends Job implements PropertyChangeL
 		}
 
 		ActivatorData.getInstance().getVpExportExplorer().incrementIndiceFile();
-		//incrémenter ProgressBar
+		//incrï¿½menter ProgressBar
 		ActivatorData.getInstance().getVpExportExplorer().setValeurProgressBar(
 				100*ActivatorData.getInstance().getVpExportExplorer().getIndiceFile()/
 				ActivatorData.getInstance().getVpExportExplorer().getNbFiles());

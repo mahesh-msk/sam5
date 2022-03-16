@@ -222,7 +222,7 @@ public class BridageFormats {
 
 	public static FormatSAM gestionFichierVER(String fileName) {
 		BridageFormats.fileName = fileName;
-		int cesure = fileName.lastIndexOf("\\");
+		int cesure = fileName.lastIndexOf(File.separator);
 		String chemin = null;
 		
 		try {
@@ -258,7 +258,7 @@ public class BridageFormats {
 		if (isGestionConflitExtension()) {
 			Display.getDefault().syncExec(new Runnable() {
 				public void run() {
-					int cesure = BridageFormats.fileName.lastIndexOf("\\");
+					int cesure = BridageFormats.fileName.lastIndexOf(File.separator);
 					String file = BridageFormats.fileName.substring(0,BridageFormats.fileName.length() - 3);
 
 					MessageDialog mdi = new MessageDialog (
@@ -319,7 +319,7 @@ public class BridageFormats {
 		} else if (extension.toUpperCase().equals(".JRU")) {
 			BridageFormats.retourMeth1.setFjru(FormatJRU.jru);
 
-			int cesure = fileName3.lastIndexOf("\\");
+			int cesure = fileName3.lastIndexOf(File.separator);
 			String chemin = fileName3.substring(0, cesure);
 			File repertoire = new File(chemin);
 			fileName2 = fileName3.substring(0, fileName3.length() - 3);

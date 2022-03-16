@@ -93,7 +93,7 @@ public class GestionLineCommandParameters {
 	}
 
 	public static void echo(String... s) {
-		File f = new File(RepertoiresAdresses.temp + "\\infos.bat");
+		File f = new File(RepertoiresAdresses.temp + File.separator + "infos.bat");
 		File dir = new File(RepertoiresAdresses.temp);
 		try {
 			if (!f.exists()) {
@@ -163,10 +163,10 @@ public class GestionLineCommandParameters {
 						nomfichier = args[i + 1];
 						File file = new File(nomfichier);
 						if (!file.isAbsolute()) {
-							nomfichier = dossierLancementCommande + "\\"
+							nomfichier = dossierLancementCommande + File.separator
 									+ nomfichier;
 							System.out.println("chemin "
-									+ dossierLancementCommande + "\\"
+									+ dossierLancementCommande + File.separator
 									+ nomfichier);
 							file = new File(nomfichier);
 							if (!file.exists()) {

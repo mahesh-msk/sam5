@@ -15,7 +15,7 @@ public class GestionFichiers {
 			for (File f1file : f1files) {
 				if (!f1file.getName().equals(".svn")) {
 					f2.mkdir();
-					File f2file=new File(f2.getPath()+"/"+f1file.getName());
+					File f2file=new File(f2.getPath()+File.separator+f1file.getName());
 					copierRepertoire(f1file, f2file);
 				}
 			}

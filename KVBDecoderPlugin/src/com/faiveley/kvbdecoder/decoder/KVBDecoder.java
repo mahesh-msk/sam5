@@ -22,8 +22,8 @@ import com.faiveley.kvbdecoder.services.xml.XMLService;
 import com.faiveley.kvbdecoder.services.xml.sam.CRC16Xml.CrcValue;
 
 /**
- * Décodeur KVB.
- * Service qui réunit les méthodes appelables de l'extérieur.
+ * Dï¿½codeur KVB.
+ * Service qui rï¿½unit les mï¿½thodes appelables de l'extï¿½rieur.
  * 
  * @author jthoumelin
  *
@@ -49,11 +49,11 @@ public class KVBDecoder {
 	/*************************************************************************************************/	
 	
 	/**
-	 * Méthode appelée par SAM, et indirectement par ADS : décode l'événement
+	 * Mï¿½thode appelï¿½e par SAM, et indirectement par ADS : dï¿½code l'ï¿½vï¿½nement
 	 * 
-	 * @param encodedEvent : l'événement codé en binaire
+	 * @param encodedEvent : l'ï¿½vï¿½nement codï¿½ en binaire
 	 * @param trainData : les informations sur le train, au format JSON
-	 * @return KVBResult : l'événement décodé + une éventuelle erreur bloquante
+	 * @return KVBResult : l'ï¿½vï¿½nement dï¿½codï¿½ + une ï¿½ventuelle erreur bloquante
 	 */
 	public KVBDecoderResult decodeEvent(byte[] encodedEvent, TrainData trainData) {
 		KVBDecoderResult result = new KVBDecoderResult();
@@ -85,11 +85,11 @@ public class KVBDecoder {
 	}
 	
 	/**
-	 * Méthode appelée par ADS
+	 * Mï¿½thode appelï¿½e par ADS
 	 * 
-	 * @param encodedEvent : l'événement codé en binaire
+	 * @param encodedEvent : l'ï¿½vï¿½nement codï¿½ en binaire
 	 * @param jsonTrainInfo : les informations sur le train, au format JSON
-	 * @return l'événement décodé + la liste des erreurs (bloquantes et non bloquantes), au format JSON
+	 * @return l'ï¿½vï¿½nement dï¿½codï¿½ + la liste des erreurs (bloquantes et non bloquantes), au format JSON
 	 */
 	public String decodeEventToJSON(byte[] encodedEvent, String jsonTrainInfo) {
 		JSONObject resultJSON = new JSONObject();
@@ -97,7 +97,7 @@ public class KVBDecoder {
 		JSONObject exceptionsArray = new JSONObject();
 		JSONArray eventArray = new JSONArray();
 
-		// Les données de train
+		// Les donnï¿½es de train
 		TrainData trainData = null;
 		
 		try {
@@ -108,7 +108,7 @@ public class KVBDecoder {
 			exceptionsArray.put(e.getKey(), e.getMsg());
 		}
 		
-		// L'événement		
+		// L'ï¿½vï¿½nement		
 		if (trainData != null) {
 			KVBDecoderResult result = decodeEvent(encodedEvent, trainData);
 			Event event = result.getEvent();
@@ -138,11 +138,11 @@ public class KVBDecoder {
 	}
 	
 	/**
-	 * Définit l'emplacement des fichiers XML et charge toutes les données
+	 * Dï¿½finit l'emplacement des fichiers XML et charge toutes les donnï¿½es
 	 * 
 	 * @param jsonXmlPath : l'emplacement des fichiers XML, au format JSON
-	 * @param checkAtessFilesCrc : booléen qui indique si la vérification du CRC doit être faite pour les fichiers autres que TablesKVB.xml (ex: depuis SAM, non ; depuis autre: oui)
-	 * @return la valeur de la vérification du CRC de chaque fichier (0 si OK, le CRC indiqué dans le fichier XML sinon)
+	 * @param checkAtessFilesCrc : boolï¿½en qui indique si la vï¿½rification du CRC doit ï¿½tre faite pour les fichiers autres que TablesKVB.xml (ex: depuis SAM, non ; depuis autre: oui)
+	 * @return la valeur de la vï¿½rification du CRC de chaque fichier (0 si OK, le CRC indiquï¿½ dans le fichier XML sinon)
 	 * @throws XMLException 
 	 * @throws TrainCategoryEnumException 
 	 */	
@@ -150,11 +150,12 @@ public class KVBDecoder {
 		return XMLService.getServiceInstance().loadAllXMLData(jsonXmlPath, checkAtessFilesCrc);
 	}
 	
+	
 	/**
-	 * Définit l'emplacement des fichiers XML et charge toutes les données
+	 * Dï¿½finit l'emplacement des fichiers XML et charge toutes les donnï¿½es
 	 * 
 	 * @param xmlPath : l'emplacement des fichiers XML, au format JSON
-	 * @return succès ou non du chargement + une éventuelle erreur bloquante, au format JSON
+	 * @return succï¿½s ou non du chargement + une ï¿½ventuelle erreur bloquante, au format JSON
 	 */
 	public String loadXmlToJSON(String jsonXmlPath) {
 		JSONObject resultJSON = new JSONObject();

@@ -107,7 +107,7 @@ public class ImporterProfilAction extends Action {
 	}
 	
 	public void importerProfil(String nomdossierProfil,File f1){
-		File newProfil=new File(RepertoiresAdresses.profil+"//"+nomdossierProfil);
+		File newProfil=new File(RepertoiresAdresses.profil+ File.separator +nomdossierProfil);
 		GestionFichiers.copierRepertoire(f1, newProfil);
 		
 		MessageDialog.openInformation(window.getShell(), "", Messages.getString("ImporterProfil.4")+" "+nomdossierProfil+".xml");

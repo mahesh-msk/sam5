@@ -12,8 +12,6 @@ import com.faiveley.samng.principal.sm.data.enregistrement.Message;
 
 public class MultimediaFile {
 	private static final String OPUS_FORMAT_EXTENSION = "opus";
-	public static final String FOLDER_SEPARATOR = "\\";
-	private static final String FILE_EXTENSION_SEPARATOR = "\\.";
 	public static final long MILLISECONDS_IN_ONE_SECOND = 1000;
 	public static final long SECONDS_IN_ONE_MINUTE = 60;
 	public static final long MINUTES_IN_ONE_HOUR = 60;
@@ -82,7 +80,7 @@ public class MultimediaFile {
 
 	public void calculateDuration() {
 		String fileName = file.getName();
-		String[] fileNameParts = fileName.split(FILE_EXTENSION_SEPARATOR);
+		String[] fileNameParts = fileName.split(File.separator + ".");
 		String format = fileNameParts[fileNameParts.length - 1].toLowerCase();
 				
 		if (format.startsWith(OPUS_FORMAT_EXTENSION)) {

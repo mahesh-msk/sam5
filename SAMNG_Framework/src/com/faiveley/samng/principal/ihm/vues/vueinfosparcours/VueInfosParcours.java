@@ -315,7 +315,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 			e.printStackTrace();
 		}
 		
-		File f = new File(RepertoiresAdresses.xml + "/" + XMLName.updateCurrentXmlName());
+		File f = new File(RepertoiresAdresses.xml + File.separator + XMLName.updateCurrentXmlName());
 		
 		String infosFichierXml = Messages.getString("VueInfosParcours.4") + " ";
 		
