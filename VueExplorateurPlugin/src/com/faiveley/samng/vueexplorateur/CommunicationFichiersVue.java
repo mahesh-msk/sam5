@@ -12,6 +12,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
 
+import com.faiveley.samng.principal.sm.missions.ParseurMissions;
 import com.faiveley.samng.principal.sm.missions.jaxb.TypeDocument;
 import com.faiveley.samng.principal.sm.missions.jaxb.TypeMission;
 import com.faiveley.samng.principal.sm.missions.jaxb.TypeRefMission;
@@ -132,7 +133,7 @@ public class CommunicationFichiersVue {
 	private void traitementRegroupementsMensuels(File xml, TreeFile treeFile) {
 		String packageName = "com.faiveley.samng.principal.sm.missions.jaxb";
 		try {
-			JAXBContext jaxbContext = JAXBContext.newInstance(packageName, getClass().getClassLoader());
+			JAXBContext jaxbContext = JAXBContext.newInstance(packageName, ParseurMissions.class.getClassLoader());
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			TypeDocument element = (TypeDocument) jaxbUnmarshaller.unmarshal(xml);
 
