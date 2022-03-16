@@ -31,8 +31,6 @@ public class GestionLineCommandParameters {
 
 	public static final String workspace = "-workspace";
 
-	private static Runtime runtime = Runtime.getRuntime();
-
 	private static String filename = "-f"; //$NON-NLS-1$
 	private static String offsetMessage = "-o"; //$NON-NLS-1$
 	private static String annot_lecture_seule = "-r"; //$NON-NLS-1$
@@ -72,11 +70,11 @@ public class GestionLineCommandParameters {
 	public static boolean auMoinsUnArgument = false;
 	public static boolean ligneCommande = false;
 
-	// L'offset de la ligne de commande doit être actif qu'à la première
+	// L'offset de la ligne de commande doit ï¿½tre actif qu'ï¿½ la premiï¿½re
 	// ouverture du fichier,
-	// ensuite, même si on ouvre le même fichier l'offset doit être inactif et
+	// ensuite, mï¿½me si on ouvre le mï¿½me fichier l'offset doit ï¿½tre inactif et
 	// donc toutes les vues
-	// doivent pointer sur leur première ligne.
+	// doivent pointer sur leur premiï¿½re ligne.
 	private static boolean oneTime = true;// le positionnement offset ne se fait
 											// qu'une fois
 
@@ -93,37 +91,16 @@ public class GestionLineCommandParameters {
 	}
 
 	public static void echo(String... s) {
-		File f = new File(RepertoiresAdresses.temp + File.separator + "infos.bat");
-		File dir = new File(RepertoiresAdresses.temp);
-		try {
-			if (!f.exists()) {
-				f.createNewFile();
-			}
 
-			PrintWriter pw = new PrintWriter(f);
-			pw.println("@ECHO off");
-			for (String str : s) {
-				str = str.replace("|", "^|");
-				str = str.replace("<", "^<");
-				str = str.replace(">", "^>");
-				pw.println("echo " + str);
-			}
-			pw.println("pause");
-			pw.close();
+		// Fix issue 1101 : just println, that will we written in consoleLog
+		for (String str : s) {
+			System.out.println(str);
 
-			String[] s2 = { "cmd", "/c", "start", "infos.bat" };
-			p = runtime.exec(s2, null, dir);
-			p.waitFor();
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
 		}
 	}
 
 	public static void reset() {
-		nomfichier = ""; //$NON-NLS-1$		
+		nomfichier = ""; //$NON-NLS-1$
 		indiceMsg = 0;
 		nomPerspect = ""; //$NON-NLS-1$
 		Annot_Lect_seule = false;// "D:\work\3-Faiveley\SAM NG\fichiers de
@@ -146,7 +123,7 @@ public class GestionLineCommandParameters {
 		if (nbArgs == 2 && args[0].equals(workspace)) {
 			return;
 		}
-		
+
 		for (int i = 0; i < nbArgs; i++) {
 			ligneCommande = true;
 			if (args[i].equals(product) || args[i].equals(workspace)) {
@@ -154,7 +131,7 @@ public class GestionLineCommandParameters {
 			} else {
 				if (args[i].equals(filename) || args[i].equals(filename_long)) {
 					auMoinsUnArgument = true;
-					// si l'argument nom de fichier n'est pas présent
+					// si l'argument nom de fichier n'est pas prï¿½sent
 					if (i >= args.length - 1) {
 						erreur = true;
 						msgErreur = Messages.GestionLineCommandParameters_14;
@@ -163,28 +140,22 @@ public class GestionLineCommandParameters {
 						nomfichier = args[i + 1];
 						File file = new File(nomfichier);
 						if (!file.isAbsolute()) {
-							nomfichier = dossierLancementCommande + File.separator
-									+ nomfichier;
-							System.out.println("chemin "
-									+ dossierLancementCommande + File.separator
-									+ nomfichier);
+							nomfichier = dossierLancementCommande + File.separator + nomfichier;
+							System.out.println("chemin " + dossierLancementCommande + File.separator + nomfichier);
 							file = new File(nomfichier);
 							if (!file.exists()) {
-								GestionLineCommandParameters
-										.echo(Messages.GestionLineCommandParameters_48);
+								GestionLineCommandParameters.echo(Messages.GestionLineCommandParameters_48);
 								System.exit(0);
 							}
 						} else if (!file.exists()) {
-							GestionLineCommandParameters
-									.echo(Messages.GestionLineCommandParameters_48);
+							GestionLineCommandParameters.echo(Messages.GestionLineCommandParameters_48);
 							System.exit(0);
 						}
 						i++;
 					}
-				} else if (args[i].equals(offsetMessage)
-						|| args[i].equals(offsetMessage_long)) {
+				} else if (args[i].equals(offsetMessage) || args[i].equals(offsetMessage_long)) {
 					auMoinsUnArgument = true;
-					// si l'argument numéro de message n'est pas présent
+					// si l'argument numï¿½ro de message n'est pas prï¿½sent
 					if (i >= args.length - 1) {
 						erreur = true;
 						msgErreur = Messages.GestionLineCommandParameters_15;
@@ -210,14 +181,12 @@ public class GestionLineCommandParameters {
 						}
 						i++;
 					}
-				} else if (args[i].equals(annot_lecture_seule)
-						|| args[i].equals(annot_lecture_seule_long)) {
+				} else if (args[i].equals(annot_lecture_seule) || args[i].equals(annot_lecture_seule_long)) {
 					auMoinsUnArgument = true;
 					setAnnot_Lect_seule(true);
-				} else if (args[i].equals(perspective)
-						|| args[i].equals(perspective_long)) {
+				} else if (args[i].equals(perspective) || args[i].equals(perspective_long)) {
 					auMoinsUnArgument = true;
-					// si l'argument nom de perspective n'est pas présent
+					// si l'argument nom de perspective n'est pas prï¿½sent
 					if (i >= args.length - 1) {
 						erreur = true;
 						msgErreur = Messages.GestionLineCommandParameters_17;
@@ -226,12 +195,9 @@ public class GestionLineCommandParameters {
 						nomPerspect = args[i + 1];
 						i++;
 					}
-				} else if (args[i].equals(export)
-						|| args[i].equals(export_long)) {
+				} else if (args[i].equals(export) || args[i].equals(export_long)) {
 					auMoinsUnArgument = true;
-					if (i >= args.length - 1
-							|| (!"csv".equals(args[i + 1]) && !"tsv"
-									.equals(args[i + 1]))) {
+					if (i >= args.length - 1 || (!"csv".equals(args[i + 1]) && !"tsv".equals(args[i + 1]))) {
 						erreur = true;
 						msgErreur = Messages.GestionLineCommandParameters_19;
 						break;
@@ -240,12 +206,9 @@ public class GestionLineCommandParameters {
 						i++;
 						isExport = true;
 					}
-				} else if (args[i].equals(export_list)
-						|| args[i].equals(export_list_long)) {
+				} else if (args[i].equals(export_list) || args[i].equals(export_list_long)) {
 					auMoinsUnArgument = true;
-					if (i >= args.length - 1
-							|| (!"csv".equals(args[i + 1]) && !"tsv"
-									.equals(args[i + 1]))) {
+					if (i >= args.length - 1 || (!"csv".equals(args[i + 1]) && !"tsv".equals(args[i + 1]))) {
 						erreur = true;
 						msgErreur = Messages.GestionLineCommandParameters_19;
 						break;
@@ -254,14 +217,12 @@ public class GestionLineCommandParameters {
 						i++;
 						isExportList = true;
 					}
-				} else if (args[i].equals(rapport)
-						|| args[i].equals(rapport_long)) {
+				} else if (args[i].equals(rapport) || args[i].equals(rapport_long)) {
 					auMoinsUnArgument = true;
 					isExportReport = true;
-				} else if (args[i].equals(filtre)
-						|| args[i].equals(filtre_long)) {
+				} else if (args[i].equals(filtre) || args[i].equals(filtre_long)) {
 					auMoinsUnArgument = true;
-					// si l'argument n'est pas présent
+					// si l'argument n'est pas prï¿½sent
 					if (i >= args.length - 1) {
 						erreur = true;
 						msgErreur = Messages.GestionLineCommandParameters_18;
@@ -273,8 +234,7 @@ public class GestionLineCommandParameters {
 				} else if (args[i].equals(infos) || args[i].equals(infos_long)) {
 					auMoinsUnArgument = true;
 					setHelp(true);
-					String s1 = "SAM VERSION : "
-							+ VersionUtils.getFormattedVersion();
+					String s1 = "SAM VERSION : " + VersionUtils.getFormattedVersion();
 					String s2 = Messages.GestionLineCommandParameters_30;
 					String s3 = Messages.GestionLineCommandParameters_31;
 					String s4 = Messages.GestionLineCommandParameters_32;
@@ -296,36 +256,27 @@ public class GestionLineCommandParameters {
 					System.out.println(s9);
 					System.out.println(s10);
 					System.out.println(s11);
-					GestionLineCommandParameters.echo(s1, s2, s3, s4, s5, s6,
-							s7, s8, s9, s10, s11);
+					GestionLineCommandParameters.echo(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11);
 				} else {
 					if (args[i].startsWith("-")) { //$NON-NLS-1$
-						param_incorrect = Messages.GestionLineCommandParameters_37
-								+ args[i]
-								+ " "
+						param_incorrect = Messages.GestionLineCommandParameters_37 + args[i] + " "
 								+ Messages.GestionLineCommandParameters_40;
 						// si l'argument qui suit un mauvais argument avec un
 						// tiret ne comporte pas de tiret
-						if ((args.length >= i + 2)
-								&& (!args[i + 1].startsWith("-"))) {
+						if ((args.length >= i + 2) && (!args[i + 1].startsWith("-"))) {
 							if (args.length > i + 2) {
-								// il reste des arguments à traiter
-								param_incorrect = Messages.GestionLineCommandParameters_37
-										+ args[i]
-										+ " "
-										+ args[i + 1]
-										+ " "
-										+ Messages.GestionLineCommandParameters_40;
+								// il reste des arguments ï¿½ traiter
+								param_incorrect = Messages.GestionLineCommandParameters_37 + args[i] + " " + args[i + 1]
+										+ " " + Messages.GestionLineCommandParameters_40;
 								i = i + 1;
 							} else {
-								// on est arrivé au bout des arguments
+								// on est arrivï¿½ au bout des arguments
 								break;
 							}
 						}
 					} else {
 						erreur = true;
-						msgErreur = Messages.GestionLineCommandParameters_39
-								+ args[i] + " "
+						msgErreur = Messages.GestionLineCommandParameters_39 + args[i] + " "
 								+ Messages.GestionLineCommandParameters_40;
 						break;
 					}
@@ -367,10 +318,8 @@ public class GestionLineCommandParameters {
 	private static boolean isValidFile(File subFile) {
 		if (subFile != null && !subFile.isDirectory()) {
 			String fileName = subFile.getName();
-			String extension = fileName.lastIndexOf('.') == -1 ? "" : fileName
-					.substring(fileName.lastIndexOf('.') + 1);
-			return !("".equals(extension) || "tsv".equals(extension) || "csv"
-					.equals(extension));
+			String extension = fileName.lastIndexOf('.') == -1 ? "" : fileName.substring(fileName.lastIndexOf('.') + 1);
+			return !("".equals(extension) || "tsv".equals(extension) || "csv".equals(extension));
 		} else {
 			return false;
 		}
@@ -380,12 +329,10 @@ public class GestionLineCommandParameters {
 		String msgErreur = "";
 
 		if (indiceMsg != -1) {
-			Message message = ActivatorData.getInstance().getVueData()
-					.getDataTable().getEnregistrement()
+			Message message = ActivatorData.getInstance().getVueData().getDataTable().getEnregistrement()
 					.getGoodMessage(indiceMsg);
 			if (message == null) {
-				msgErreur = Messages.GestionLineCommandParameters_42 + " "
-						+ Messages.GestionLineCommandParameters_49;
+				msgErreur = Messages.GestionLineCommandParameters_42 + " " + Messages.GestionLineCommandParameters_49;
 
 				System.out.println(msgErreur);
 				echo(msgErreur);
@@ -396,12 +343,10 @@ public class GestionLineCommandParameters {
 	}
 
 	public static void gestionFichierAbsent() {
-		// si pas de fichier mentionné et pas de demande d'infos mais un
-		// paramètre ok (o, p ou r) => erreur
-		if (nomfichier.equals("")
-				&& (!isHelp())
-				&& ((!nomPerspect.equals("")) || (Annot_Lect_seule)
-						|| (indiceMsg != -1) || isExport || isExportList || isExportReport)) {
+		// si pas de fichier mentionnï¿½ et pas de demande d'infos mais un
+		// paramï¿½tre ok (o, p ou r) => erreur
+		if (nomfichier.equals("") && (!isHelp()) && ((!nomPerspect.equals("")) || (Annot_Lect_seule)
+				|| (indiceMsg != -1) || isExport || isExportList || isExportReport)) {
 			System.out.println(Messages.GestionLineCommandParameters_44);
 			echo(Messages.GestionLineCommandParameters_44);
 			System.exit(0);
@@ -410,8 +355,7 @@ public class GestionLineCommandParameters {
 
 	public static void onlyHelp() {
 		// si que param help on ferme SAM
-		if ((nomPerspect.equals("")) && (!Annot_Lect_seule)
-				&& (indiceMsg == -1) && nomfichier.equals("") && help
+		if ((nomPerspect.equals("")) && (!Annot_Lect_seule) && (indiceMsg == -1) && nomfichier.equals("") && help
 				&& !isExport && !isExportList && !isExportReport) {
 			System.exit(0);
 		}
@@ -422,7 +366,7 @@ public class GestionLineCommandParameters {
 			if (isExport && isExportList) {
 				echo(Messages.GestionLineCommandParameters_54);
 			}
-			// Seulement si au moins un des export est sélectionné
+			// Seulement si au moins un des export est sï¿½lectionnï¿½
 			if (isExport) {
 				runExportVueTabulaire(file);
 
@@ -445,13 +389,11 @@ public class GestionLineCommandParameters {
 	 * @throws AExceptionSamNG
 	 * @throws ParseurXMLException
 	 */
-	public static void runExportReport(String file) throws AExceptionSamNG,
-			ParseurXMLException {
+	public static void runExportReport(String file) throws AExceptionSamNG, ParseurXMLException {
 		loadFile(file);
-		// Récupération du rapport d'erreur qui est le fichier de log
+		// Rï¿½cupï¿½ration du rapport d'erreur qui est le fichier de log
 		File report = new File(RepertoiresAdresses.logs_parser_log_TXT);
-		GestionFichiers.copyFile2(report,
-				new File(file.substring(0, file.lastIndexOf('.')) + ".txt"));
+		GestionFichiers.copyFile2(report, new File(file.substring(0, file.lastIndexOf('.')) + ".txt"));
 	}
 
 	/**
@@ -459,8 +401,7 @@ public class GestionLineCommandParameters {
 	 * @throws AExceptionSamNG
 	 * @throws ParseurXMLException
 	 */
-	public static void runExportVueTabulaire(String file)
-			throws AExceptionSamNG, ParseurXMLException {
+	public static void runExportVueTabulaire(String file) throws AExceptionSamNG, ParseurXMLException {
 		loadFile(file);
 
 		DummyActivator<TabulaireFiltresProvider> activator = new DummyActivator<TabulaireFiltresProvider>(
@@ -468,8 +409,7 @@ public class GestionLineCommandParameters {
 		DummyGestionnaireVueTabulaire gestionnaire = new DummyGestionnaireVueTabulaire();
 		gestionnaire.setActivator(activator);
 
-		VueTabulaireContentProvider contentProvider = new VueTabulaireContentProvider(
-				gestionnaire, activator);
+		VueTabulaireContentProvider contentProvider = new VueTabulaireContentProvider(gestionnaire, activator);
 		// set the filter name to the content provider and gestionnaire
 		if (!"".equals(filterName)) {
 			gestionnaire.setFiltreApplique(filterName);
@@ -492,8 +432,7 @@ public class GestionLineCommandParameters {
 	 * @throws AExceptionSamNG
 	 * @throws ParseurXMLException
 	 */
-	public static void runExportVueListe(String file) throws AExceptionSamNG,
-			ParseurXMLException {
+	public static void runExportVueListe(String file) throws AExceptionSamNG, ParseurXMLException {
 		loadFile(file);
 
 		DummyActivator<ListeFiltresProvider> activator = new DummyActivator<ListeFiltresProvider>(
@@ -501,8 +440,7 @@ public class GestionLineCommandParameters {
 		DummyGestionnaireVueListe gestionnaire = new DummyGestionnaireVueListe();
 		gestionnaire.setActivator(activator);
 
-		VueListeContentProvider contentProvider = new VueListeContentProvider(
-				gestionnaire, activator);
+		VueListeContentProvider contentProvider = new VueListeContentProvider(gestionnaire, activator);
 		// set the filter name to the content provider and gestionnaire
 		if (!"".equals(filterName)) {
 			gestionnaire.setFiltreApplique(filterName);
@@ -525,8 +463,7 @@ public class GestionLineCommandParameters {
 	 * @throws AExceptionSamNG
 	 * @throws ParseurXMLException
 	 */
-	public static void loadFile(String file) throws AExceptionSamNG,
-			ParseurXMLException {
+	public static void loadFile(String file) throws AExceptionSamNG, ParseurXMLException {
 		ParcoursComposite parcours = FabriqueParcours.getInstance().getParcours();
 		if (parcours != null && parcours.getData().getEnregistrement() != null) {
 			Enregistrement enr = parcours.getData().getEnregistrement();
@@ -545,8 +482,7 @@ public class GestionLineCommandParameters {
 	 * @param columnNames
 	 * @throws AExceptionSamNG
 	 */
-	public static void exportFile(String file, Object[] rows,
-			List<String> columnNames) throws AExceptionSamNG {
+	public static void exportFile(String file, Object[] rows, List<String> columnNames) throws AExceptionSamNG {
 		List<Row> selectionLignes = new ArrayList<Row>(rows.length);
 		for (int j = 0; j < rows.length; j++) {
 			Row r = (Row) rows[j];
@@ -554,10 +490,7 @@ public class GestionLineCommandParameters {
 			for (int i = 0; i < tabStrings.length; i++) {
 				if (tabStrings[i] != null) {
 					if (tabStrings[i].contains("\0")) {
-						r.setValue(
-								i,
-								tabStrings[i].substring(0,
-										tabStrings[i].indexOf("\0")));
+						r.setValue(i, tabStrings[i].substring(0, tabStrings[i].indexOf("\0")));
 					}
 				}
 			}
