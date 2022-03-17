@@ -1,6 +1,7 @@
 package com.faiveley.samng.principal.ihm.vues;
 
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.jface.viewers.ITableColorProvider;
 import org.eclipse.jface.viewers.ITableFontProvider;
 import org.eclipse.jface.viewers.ITableLabelProvider;
@@ -21,11 +22,12 @@ import org.eclipse.ui.PlatformUI;
 public class ATableLabelProvider extends LabelProvider 
 	implements ITableLabelProvider, ITableColorProvider, ITableFontProvider {
 
-	private ImageDescriptor descriptor;
+	private ImageRegistry imgRegistry;
 	
 	public ATableLabelProvider() {
-		descriptor = PlatformUI.getWorkbench()
-		.getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ADD);
+		imgRegistry = new ImageRegistry();
+		imgRegistry.put(ISharedImages.IMG_OBJ_ADD, PlatformUI.getWorkbench()
+		.getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_ADD));
 	}
 	
 	/* (non-Javadoc)
@@ -35,11 +37,11 @@ public class ATableLabelProvider extends LabelProvider
 		Row row = (Row) element;
 		Image result = null;
 		// La table est en deux parties : une partie fixe et une partie scrollable.
-		// Pour chacune de ces parties, il y a une colonne vide qui est ajoutée au début.
-		// Ce changement d'index permet de compenser les index de la partie scrollable pour se recaler sur les valeurs présentes dans l'objet Row
+		// Pour chacune de ces parties, il y a une colonne vide qui est ajoutï¿½e au dï¿½but.
+		// Ce changement d'index permet de compenser les index de la partie scrollable pour se recaler sur les valeurs prï¿½sentes dans l'objet Row
 		int realIndex = columnIndex - 2;
 		if (realIndex >= 0 && realIndex < row.getVolatiles().length && row.isVolatile(realIndex)) {
-			result = descriptor.createImage();	
+			result = imgRegistry.get(ISharedImages.IMG_OBJ_ADD);	
 		}
 		return result;
 	}

@@ -81,6 +81,16 @@ import com.faiveley.samng.vuemultimedia.ihm.ActivatorVueMultimedia;
 // 	- https://github.com/caprica/vlcj/blob/master/src/test/java/uk/co/caprica/vlcj/test/basic/PlayerControlsPanel.java
 
 public class VueMultimedia extends AbstractSelectionProviderVue implements IVueToolbar, IDataChangedListener, ISelectionListener, ICapturable {	
+	private static final String IMG_MEDIA_PLAYER_CONTROL_PAUSE = "/icons/media_player/control_pause.png";
+
+	private static final String IMG_MEDIA_PLAYER_CONTROL_PLAY = "/icons/media_player/control_play.png";
+
+	private static final String IMG_MEDIA_PLAYER_SOUND = "/icons/media_player/sound.png";
+
+	private static final String IMG_MEDIA_PLAYER_CONTROL_END = "/icons/media_player/control_end.png";
+
+	private static final String IMG_MEDIA_PLAYER_CONTROL_START = "/icons/media_player/control_start.png";
+
 	/** Static fields **/
 	public static final String ID = "SAMNG.Vue.Multimedia";
 	
@@ -660,15 +670,15 @@ public class VueMultimedia extends AbstractSelectionProviderVue implements IVueT
 		this.playPauseButton = new Button(this.navigateControlButtonsComposite, SWT.CENTER);
 		
 		this.previousButton = new Button(this.navigateControlButtonsComposite, SWT.CENTER);
-		this.previousButton.setImage(ActivatorVueMultimedia.getImageDescriptor("/icons/media_player/control_start.png").createImage());
+		this.previousButton.setImage(ActivatorVueMultimedia.getDefault().getImage(IMG_MEDIA_PLAYER_CONTROL_START));
 		this.previousButton.setToolTipText(PREVIOUS_BUTTON_LABEL);
 		
 		this.nextButton = new Button(this.navigateControlButtonsComposite, SWT.CENTER);
-		this.nextButton.setImage(ActivatorVueMultimedia.getImageDescriptor("/icons/media_player/control_end.png").createImage());
+		this.nextButton.setImage(ActivatorVueMultimedia.getDefault().getImage(IMG_MEDIA_PLAYER_CONTROL_END));
 		this.nextButton.setToolTipText(NEXT_BUTTON_LABEL);
 				
 		this.volumeImage = new Label(this.volumeControlButtonsComposite, SWT.CENTER);
-		this.volumeImage.setImage(ActivatorVueMultimedia.getImageDescriptor("/icons/media_player/sound.png").createImage());
+		this.volumeImage.setImage(ActivatorVueMultimedia.getDefault().getImage(IMG_MEDIA_PLAYER_SOUND));
 		
 		this.volumeScale = new Scale(this.volumeControlButtonsComposite, SWT.CENTER);
 		this.volumeScale.setToolTipText(VOLUME_SCALE_LABEL);
@@ -768,14 +778,14 @@ public class VueMultimedia extends AbstractSelectionProviderVue implements IVueT
 	
 	private void initPlayButton() {
 		if (this.playPauseButton != null) {
-			this.playPauseButton.setImage(ActivatorVueMultimedia.getImageDescriptor("/icons/media_player/control_play.png").createImage());
+			this.playPauseButton.setImage(ActivatorVueMultimedia.getDefault().getImage(IMG_MEDIA_PLAYER_CONTROL_PLAY));
 			this.playPauseButton.setToolTipText(PLAY_BUTTON_LABEL);
 		}
 	}
 	
 	private void initPauseButton() {
 		if (this.playPauseButton != null) {
-			this.playPauseButton.setImage(ActivatorVueMultimedia.getImageDescriptor("/icons/media_player/control_pause.png").createImage());
+			this.playPauseButton.setImage(ActivatorVueMultimedia.getDefault().getImage(IMG_MEDIA_PLAYER_CONTROL_PAUSE));
 			this.playPauseButton.setToolTipText(PAUSE_BUTTON_LABEL);
 		}
 	}

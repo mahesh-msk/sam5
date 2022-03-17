@@ -5,6 +5,8 @@ import java.net.URL;
 
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.resource.ImageRegistry;
+import org.eclipse.swt.graphics.Image;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 
@@ -72,11 +74,11 @@ public class ActivatorVueMultimedia extends AbstractActivatorVue {
             }
         }
         
-        // Note: On reconstruit ici le chemin vers le bon plugin (c'est à dire vers le fragment correspondant à l'architecture de la machine).
-        // Ce chemin dépend du type d'environnement (DEV ou PROD) mais aussi de l'architecture de l'application
-        // Les plugins et fragments ont été dénommés de manière à déterminer facilement ces chemins.
-        // Le plugin "VueMultimediaPlugin" et le fragment "VueMultimediaPlugin.win32.x86" ne doit en aucun cas être renommé (ou alors uniquement le bloc "VueMultimediaPlugin" pour le plugin et son fragment).
-        // Sans quoi les chemins déterminés seront faux, la localisation des .dll de VLC ne pourra se faire et la librairie VLCj ne pourra fonctionner.
+        // Note: On reconstruit ici le chemin vers le bon plugin (c'est ï¿½ dire vers le fragment correspondant ï¿½ l'architecture de la machine).
+        // Ce chemin dï¿½pend du type d'environnement (DEV ou PROD) mais aussi de l'architecture de l'application
+        // Les plugins et fragments ont ï¿½tï¿½ dï¿½nommï¿½s de maniï¿½re ï¿½ dï¿½terminer facilement ces chemins.
+        // Le plugin "VueMultimediaPlugin" et le fragment "VueMultimediaPlugin.win32.x86" ne doit en aucun cas ï¿½tre renommï¿½ (ou alors uniquement le bloc "VueMultimediaPlugin" pour le plugin et son fragment).
+        // Sans quoi les chemins dï¿½terminï¿½s seront faux, la localisation des .dll de VLC ne pourra se faire et la librairie VLCj ne pourra fonctionner.
                 
         if (launcherCommandValue.toLowerCase().contains("eclipse.exe")) { // If DEV environment
         	// since path returned by URL::getPath starts with a forward slash, that
@@ -128,13 +130,22 @@ public class ActivatorVueMultimedia extends AbstractActivatorVue {
 		return this.configurationManager;
 	}
 	
-	/**
-	 * Returns an image descriptor for the image file at the given plug-in relative path
+
+	/** Return image from key, where key is the local path to the image 
 	 * 
-	 * @param path, the path
-	 * @return the image descriptor
+	 * @param key  a local path like : icons/media_player/controle_end.png
+	 * @return the Image or null if not found.
 	 */
-	public static ImageDescriptor getImageDescriptor(final String path) {
-		return imageDescriptorFromPlugin(PLUGIN_ID, path);
+	public Image getImage(String key)
+	{
+		Image result = getImageRegistry().get(key);
+		if (result == null)
+		{
+			// load image in registry
+			getImageRegistry().put(key, imageDescriptorFromPlugin(PLUGIN_ID, key));
+			result =  getImageRegistry().get(key);
+		}
+		return result;
 	}
+	
 }

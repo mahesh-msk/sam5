@@ -475,13 +475,13 @@ public class GraphiqueFiltresEditorTable extends Composite {
 				tableauTmpGraphe[i] = null;
 			}
 		}
-		// on stocke les numéro des graphes dont le type est null
+		// on stocke les numï¿½ro des graphes dont le type est null
 		for (int o = 0; o < GraphicConstants.MAX_GRAPHICS_COUNT; o++) {
 			if (!listeNumeroGraphes.contains(o))
 				listeNumeroGraphesVides.add(o);
 		}
 		int numeroManquant = 0;
-		// on initialise la liste déroulante des graphes non vides
+		// on initialise la liste dï¿½roulante des graphes non vides
 		for (int k = 0; k < GraphicConstants.MAX_GRAPHICS_COUNT; k++) {
 			if (tableauTmpGraphe[k] != null) {
 				value = tableauTmpGraphe[k];
@@ -522,7 +522,7 @@ public class GraphiqueFiltresEditorTable extends Composite {
 				this.initialGraphicsList.add(value);
 			}
 		}
-		// on initialise la liste déroulante des graphes vides
+		// on initialise la liste dï¿½roulante des graphes vides
 		value = null;
 		for (int numero : listeNumeroGraphesVides) {
 			if (getGraphicItemInfo(numero) != null) {
@@ -1221,7 +1221,7 @@ public class GraphiqueFiltresEditorTable extends Composite {
 					// est dans le fichier de parcours
 					variableValide = Util.getInstance().isVariableInXml(text, true);
 
-					// 2ème vérification : la variable est elle dans le parcours
+					// 2ï¿½me vï¿½rification : la variable est elle dans le parcours
 					if (variableValide) {
 						variableValide = Util
 								.getInstance().isVariableDansParcours(text, true);
@@ -1315,8 +1315,8 @@ public class GraphiqueFiltresEditorTable extends Composite {
 			itemInfo.comboColor.setText("", GestionnaireCouleurs.createImage(
 					getDisplay(), rgbVal, height, width, lineHeight));
 			// itemInfo.comboColor.setText(
-			// "", com.faiveley.samng.principal.ihm.Activator
-			// .getImageDescriptor("/icons/toolBar/vues_commun_imprimer.png").createImage());
+			// "", com.faiveley.samng.principal.ihm.Activator.getDefault().
+			// .getImage("/icons/toolBar/vues_commun_imprimer.png"));
 		}
 	}
 
@@ -1793,7 +1793,7 @@ public class GraphiqueFiltresEditorTable extends Composite {
 			int selection = combo.getSelectionIndex();
 			int nbChoix = combo.getItemCount();
 			if (selection == 0) {
-				return 0; // non utilisé
+				return 0; // non utilisï¿½
 			} else {
 				if (nbChoix == 3) {
 					if (selection == 1) {
@@ -2426,7 +2426,7 @@ public class GraphiqueFiltresEditorTable extends Composite {
 	}
 
 	/**
-	 * Méthode permettatn de raffraichir le tableau de variables
+	 * Mï¿½thode permettatn de raffraichir le tableau de variables
 	 * 
 	 */
 	public void raffraichirListeVariables() {

@@ -76,7 +76,7 @@ public class SearchInFile extends ASearchVariableDialog2 implements ISearchInFil
 
 	public static final String cheminXML=RepertoiresAdresses.xml;
 
-	//fenetre d'affichage des résultats
+	//fenetre d'affichage des rï¿½sultats
 	private Shell shellInfo;
 	private Label labelShellInfo;
 	
@@ -660,7 +660,7 @@ public class SearchInFile extends ASearchVariableDialog2 implements ISearchInFil
 		comp.setBounds(0, 0, 200, 50);
 		comp.setVisible(true);
 		shellInfo.setImage(com.faiveley.samng.principal.ihm.Activator
-				.getImageDescriptor("/icons/toolBar/vues_commun_rechercher_signal.png").createImage());
+				.getDefault().getImage("/icons/toolBar/vues_commun_rechercher_signal.png"));
 		labelShellInfo=new Label(comp, SWT.NONE);
 		labelShellInfo.setBounds(20, 20, 300, 80);
 		labelShellInfo.setVisible(true);
@@ -764,10 +764,10 @@ public class SearchInFile extends ASearchVariableDialog2 implements ISearchInFil
 			//				val = null;
 			//			}
 			
-			// Pour repérer une variable de type NID_XX, il faut regarder si la variable est de 
+			// Pour repï¿½rer une variable de type NID_XX, il faut regarder si la variable est de 
 			// type discrete, et qu'elle possede une table de label contenant le label "$retirer$".
-			// La valeur associée a ce label doit être retirée de la valeur lors de son affichage.
-			// A contrario, cette valeur doit être ajoutée pour les traitements.
+			// La valeur associï¿½e a ce label doit ï¿½tre retirï¿½e de la valeur lors de son affichage.
+			// A contrario, cette valeur doit ï¿½tre ajoutï¿½e pour les traitements.
 			if(dataSearch.getDescriptorVariable()!=null){
 				if (dataSearch.getDescriptorVariable().getTypeVariable() == TypeVariable.VAR_DISCRETE) {
 					TableValeurLabel valeurLabel = ((DescripteurVariableDiscrete) dataSearch.getDescriptorVariable()).getLabels();
@@ -776,7 +776,7 @@ public class SearchInFile extends ASearchVariableDialog2 implements ISearchInFil
 						if (listeLabelvaleur != null) {									
 							int i = 0;
 							
-							// Si la table de label est une table de suppression de caractère...
+							// Si la table de label est une table de suppression de caractï¿½re...
 							// Variable de type NID_XXX. Codage BCD (/4).
 							if (listeLabelvaleur.get(0).getLabel().equals("$retirer$")) {
 								int bcdSize = (dataSearch.getDescriptorVariable().getTailleBits() / 4) ;
@@ -788,16 +788,16 @@ public class SearchInFile extends ASearchVariableDialog2 implements ISearchInFil
 									val = val.substring(0, val.indexOf("...")) ;
 								}
 									
-								// Ajout des caractères retirés à l'affichage (ex : 'f')
+								// Ajout des caractï¿½res retirï¿½s ï¿½ l'affichage (ex : 'f')
 								for (i = val.length() ; i < bcdSize ; i++) {
 									val = val + Integer.toString(Integer.parseInt((String) listeLabelvaleur.get(0).getValeurs()), 16) ;										
 								}
 									
-								// Conversion de la chaîne en valeur
+								// Conversion de la chaï¿½ne en valeur
 								val = Long.toString(Long.parseLong(val, 16)) ;
 									
 								if (val2 != null) {
-									// Ajout des caractères retirés à l'affichage (ex : 'f')
+									// Ajout des caractï¿½res retirï¿½s ï¿½ l'affichage (ex : 'f')
 									for (i = val2.length() ; i < bcdSize ; i++) {
 										val2 = val2 + Integer.toString(Integer.parseInt((String) listeLabelvaleur.get(0).getValeurs()), 16) ;										
 									}

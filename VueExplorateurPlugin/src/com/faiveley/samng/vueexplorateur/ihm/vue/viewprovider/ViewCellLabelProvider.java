@@ -5,9 +5,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.jface.viewers.CellLabelProvider;
 import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.graphics.Image;
+import org.osgi.framework.Bundle;
+import org.osgi.framework.FrameworkUtil;
 
 import com.faiveley.samng.ActivatorVueExplorateur;
 import com.faiveley.samng.principal.sm.missions.jaxb.TypeMission;
@@ -24,55 +27,37 @@ import com.faiveley.samng.vueexplorateur.ihm.vue.treeObjects.TreeSegment;
 public class ViewCellLabelProvider extends CellLabelProvider {
 
 	
+	private static final String IMG_SEGMENT = "/icons/segment.png";
+	private static final String IMG_MISSION = "/icons/mission.png";
+	private static final String IMG_MENSUEL = "/icons/mensuel.png";
+	private static final String IMG_COMPRESSED_FILE = "/icons/file_extension_gz.png";
+	private static final String IMG_MULTIMEDIA = "/icons/multimedia.png";
+	private static final String IMG_VIDE = "/icons/explored.png";
+	private static final String IMG_PLEIN = "/icons/unexplored.png";
+	private static final String IMG_OBJ_FOLDER = "/icons/IMG_OBJ_FOLDER.jpg";
+	private static final String IMG_OBJ_PROJECT = "/icons/IMG_OBJ_PROJECT.jpg";
+
 	public ViewCellLabelProvider() {
 		imagesInitialize();
 	}
 	
-	private Image repositoryImage;
-	private Image filePleinImage;
-	private Image fileVideImage;
-	private Image fileMultimediaImage;
-	private Image folderImage;
-	private Image mensuelImage;
-	private Image missionImage;
-	private Image segmentImage;
-	private Image compressedFileImage;
+	// Must use an image registry to manage images 
+	private ImageRegistry imgReg; 
 
 	public void imagesInitialize() {
-		repositoryImage = ImageDescriptor.createFromURL(
-				FileLocator.find(ActivatorVueExplorateur.getDefault().getBundle(),
-						new Path("/icons/IMG_OBJ_PROJECT.jpg"),null)).createImage();
-		folderImage = ImageDescriptor.createFromURL(
-				FileLocator.find(ActivatorVueExplorateur.getDefault().getBundle(),
-						new Path("/icons/IMG_OBJ_FOLDER.jpg"),null)).createImage(); 
-
-		filePleinImage = ImageDescriptor.createFromURL(
-				FileLocator.find(ActivatorVueExplorateur.getDefault().getBundle(),
-						new Path("/icons/unexplored.png"),null)).createImage();
-
-		fileVideImage = ImageDescriptor.createFromURL(
-				FileLocator.find(ActivatorVueExplorateur.getDefault().getBundle(),
-						new Path("/icons/explored.png"),null)).createImage();
+		imgReg = new ImageRegistry();
+		Bundle b = FrameworkUtil.getBundle(getClass());
 		
-		fileMultimediaImage = ImageDescriptor.createFromURL(
-				FileLocator.find(ActivatorVueExplorateur.getDefault().getBundle(),
-						new Path("/icons/multimedia.png"),null)).createImage();
+		imgReg.put(IMG_OBJ_PROJECT, ImageDescriptor.createFromURL(b.getEntry(IMG_OBJ_PROJECT)));
+		imgReg.put(IMG_OBJ_FOLDER, ImageDescriptor.createFromURL(b.getEntry(IMG_OBJ_FOLDER)));
+		imgReg.put(IMG_PLEIN, ImageDescriptor.createFromURL(b.getEntry(IMG_PLEIN)));
+		imgReg.put(IMG_VIDE, ImageDescriptor.createFromURL(b.getEntry(IMG_VIDE)));
+		imgReg.put(IMG_MULTIMEDIA, ImageDescriptor.createFromURL(b.getEntry(IMG_MULTIMEDIA)));
+		imgReg.put(IMG_COMPRESSED_FILE, ImageDescriptor.createFromURL(b.getEntry(IMG_COMPRESSED_FILE)));
+		imgReg.put(IMG_MENSUEL, ImageDescriptor.createFromURL(b.getEntry(IMG_MENSUEL)));
+		imgReg.put(IMG_MISSION, ImageDescriptor.createFromURL(b.getEntry(IMG_MISSION)));
+		imgReg.put(IMG_SEGMENT, ImageDescriptor.createFromURL(b.getEntry(IMG_SEGMENT)));
 		
-		compressedFileImage = ImageDescriptor.createFromURL(
-				FileLocator.find(ActivatorVueExplorateur.getDefault().getBundle(),
-						new Path("/icons/file_extension_gz.png"),null)).createImage();
-
-		mensuelImage = ImageDescriptor.createFromURL(
-				FileLocator.find(ActivatorVueExplorateur.getDefault().getBundle(),
-						new Path("/icons/mensuel.png"),null)).createImage();
-
-		missionImage = ImageDescriptor.createFromURL(
-				FileLocator.find(ActivatorVueExplorateur.getDefault().getBundle(),
-						new Path("/icons/mission.png"),null)).createImage();
-
-		segmentImage = ImageDescriptor.createFromURL(
-				FileLocator.find(ActivatorVueExplorateur.getDefault().getBundle(),
-						new Path("/icons/segment.png"),null)).createImage();	
 	}
 	
 	@Override
@@ -104,31 +89,31 @@ public class ViewCellLabelProvider extends CellLabelProvider {
 
 	public Image getImage(Object obj) {
 		if (obj instanceof TreeRepository)
-			return repositoryImage;
+			return imgReg.get(IMG_OBJ_PROJECT);
 		if (obj instanceof TreeFolder)
-			return folderImage;
+			return imgReg.get(IMG_OBJ_FOLDER);
 		if (obj instanceof TreeFile){
 			TreeFile treeFile = (TreeFile) obj;
 			if (treeFile.hasChildren()) {
-				return filePleinImage;
+				return imgReg.get(IMG_PLEIN);
 			} else {
 				boolean isMultimediaFile = BridageFormats.isMultimedia(treeFile.getAbsoluteName());
 				boolean isCompressedFile = BridageFormats.isCompressed(treeFile.getAbsoluteName());
 				if (isMultimediaFile) {
-					return fileMultimediaImage;
+					return imgReg.get(IMG_MULTIMEDIA);
 				} else if (isCompressedFile) {
-					return compressedFileImage;
+					return imgReg.get(IMG_COMPRESSED_FILE);
 				} else {
-					return fileVideImage;
+					return imgReg.get(IMG_VIDE);
 				}
 			}
 		}
 		if (obj instanceof TreeMensuel)
-			return mensuelImage;
+			return imgReg.get(IMG_MENSUEL);
 		if (obj instanceof TreeMission)
-			return missionImage;
+			return imgReg.get(IMG_MISSION);
 		if (obj instanceof TreeSegment)
-			return segmentImage;
+			return imgReg.get(IMG_SEGMENT);
 
 		return null;
 	}
