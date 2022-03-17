@@ -105,6 +105,7 @@ public class FichierOuvrirAction extends Action {
 		GC gc = new GC(Display.getDefault());
 		ActivatorData.getInstance().setTailleMoyenneCaractere( gc.getFontMetrics().getAverageCharWidth());
 		ActivatorData.getInstance().setEspaceMoyenCaractere(gc.getFontMetrics().getLeading());
+		gc.dispose();
 		
 		BridageFormats.setGestionConflitExtension(BridageFormats.isGestionConflitExtensionInitial());
 		FormatSAM.TOM4.setEnable(DistinctionExtension.isTOM4init());
@@ -187,9 +188,9 @@ public class FichierOuvrirAction extends Action {
 		traiterOuvertureFichier();
 	}
 	
-	// Méthode permettant d'acquérir du fichier 
+	// Mï¿½thode permettant d'acquï¿½rir du fichier 
 	// "AppData\Roaming\Faiveley Transport\SAM X.X.X.bXX\ressources\bridage\missions.properties"
-	// le paramètre max_open_file_size. Ce paramètre permet de donner une limite, en octet,
+	// le paramï¿½tre max_open_file_size. Ce paramï¿½tre permet de donner une limite, en octet,
 	// pour laquelle un message d'avertissement sur l'ouverture d'un fichier trop gros. 
 	public int getMaxOpenFileSize() {
 		String max_open_file_size = "2500000";
@@ -236,7 +237,7 @@ public class FichierOuvrirAction extends Action {
 		File f = new File(this.fileName);
 		long tailleFichier ;
 		
-		// Test de la mémoire
+		// Test de la mï¿½moire
 		if ((deb == 0) && (fin == -1)) {
 			tailleFichier = f.length();
 		} else {
@@ -259,7 +260,7 @@ public class FichierOuvrirAction extends Action {
 			limitMem = msgBox.open();
 		}
 					
-		// Si l'utilisateur décide de ne pas ouvrir le fichier suite à l'avertissement mémoire
+		// Si l'utilisateur dï¿½cide de ne pas ouvrir le fichier suite ï¿½ l'avertissement mï¿½moire
 		if (limitMem == SWT.NO) {
 			return;
 		}
@@ -302,7 +303,7 @@ public class FichierOuvrirAction extends Action {
 		String activePerspectiveID = null;
 		boolean nePasSauvegarderVueAccueil = false ;
 				
-		// Les paramètres de la ligne de commande doivent être pris en compte qu'une fois
+		// Les paramï¿½tres de la ligne de commande doivent ï¿½tre pris en compte qu'une fois
 		if (!GestionLineCommandParameters.isOneTime()) {
 			GestionLineCommandParameters.reset() ;
 		}
@@ -317,9 +318,9 @@ public class FichierOuvrirAction extends Action {
 			}
 										
 			// Le but est de fermer toutes les perspectives pour que toutes les vues
-			// soient aussi fermées, sauf la vue exploreur. Du coup, la perspective
+			// soient aussi fermï¿½es, sauf la vue exploreur. Du coup, la perspective
 			// Gestion Mission est ouverte (contient la vue explorateur) et toutes 
-			// les autres sont fermées.
+			// les autres sont fermï¿½es.
 			
 			IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage() ;
 			IPerspectiveDescriptor[] openPerspectives = page.getOpenPerspectives() ;
@@ -351,7 +352,7 @@ public class FichierOuvrirAction extends Action {
 			}
 				
 			// La perspective "Gestion des missions" peut contenir d'autres vues que la vue exploreur
-			// -> Il faut les fermer sinon elles ne pouront être mises à jour
+			// -> Il faut les fermer sinon elles ne pouront ï¿½tre mises ï¿½ jour
 			Activator.getDefault().hideAllViews();
 				
 			// Close all perspectives but Gestion Mission
