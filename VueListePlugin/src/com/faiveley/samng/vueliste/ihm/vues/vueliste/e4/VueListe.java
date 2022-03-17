@@ -188,9 +188,8 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 
 		setGestionnaireVue(ActivatorVueListe.getDefault().getConfigurationMng());
 		
-		// E34 Remplacer le titre
-		setPartName("E4_" + Messages.getString("VueListe.11"));
-		this.initialPartName="E4_" +Messages.getString("VueListe.11");
+		setPartName(Messages.getString("VueListe.11"));
+		this.initialPartName=Messages.getString("VueListe.11");
 
 		menuSelListener = new Listener() {
 			public void handleEvent(Event e) {
