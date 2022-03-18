@@ -351,7 +351,6 @@ public class Activator extends AbstractUIPlugin {
 	 * @param path, the path
 	 * @return the image descriptor
 	 */
-	@Deprecated
 	public static ImageDescriptor getImageDescriptor(final String path) {
 		return imageDescriptorFromPlugin(PLUGIN_ID, path);
 	}
