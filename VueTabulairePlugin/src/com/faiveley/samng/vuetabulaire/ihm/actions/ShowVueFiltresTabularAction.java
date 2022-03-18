@@ -1,11 +1,7 @@
 package com.faiveley.samng.vuetabulaire.ihm.actions;
 
-import org.eclipse.jface.action.Action;
-import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.PartInitException;
-
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.vuetabulaire.ihm.ActivatorVueTabulaire;
+import com.faiveley.samng.principal.ihm.actions.filtre.ShowFilterWindowAction;
 
 
 /**
@@ -14,18 +10,10 @@ import com.faiveley.samng.vuetabulaire.ihm.ActivatorVueTabulaire;
  * @author Cosmin Udroiu
  *
  */
-public class ShowVueFiltresTabularAction extends Action {
+public class ShowVueFiltresTabularAction extends ShowFilterWindowAction {
 
 	public ShowVueFiltresTabularAction() {
+		super(ActivatorData.TABULAR_VUE_FILTRE_ID);
 	}
 	
-	@Override
-	public void run() {
-		IWorkbenchWindow window = ActivatorVueTabulaire.getDefault().getWorkbench().getActiveWorkbenchWindow();
-		try {
-			window.getActivePage().showView(ActivatorData.TABULAR_VUE_FILTRE_ID);
-		} catch (PartInitException e) {
-			e.printStackTrace();
-		}
-	}
 }
