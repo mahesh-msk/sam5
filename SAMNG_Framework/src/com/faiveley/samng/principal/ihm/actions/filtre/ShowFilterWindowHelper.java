@@ -10,7 +10,9 @@ import org.eclipse.e4.ui.model.application.ui.basic.MTrimmedWindow;
 import org.eclipse.e4.ui.model.application.ui.basic.MWindow;
 import org.eclipse.e4.ui.workbench.modeling.EModelService;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
-import org.eclipse.jface.action.Action;
+import org.eclipse.swt.graphics.Rectangle;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Monitor;
 import org.eclipse.ui.PlatformUI;
 
 /**
@@ -84,10 +86,6 @@ public class ShowFilterWindowHelper {
 		ps.setElementId(VUE_FILTRE_LIST_PARK_STACK_ID);
 		window.getChildren().add(ps);
 	
-//		MTrimBar trimBar = tw.getTrimBars().stream().filter(t -> t.getSide() == SideValue.TOP).findFirst().get();
-//		MToolBar toolbar = (MToolBar) trimBar.getChildren().get(0);
-
-		
 		// Can not use move here because it is only for MWindowElement
 		centerFilterWindow(appli, window);
 		appli.getChildren().get(0).getWindows().add(window);
@@ -107,13 +105,21 @@ public class ShowFilterWindowHelper {
 	private void centerFilterWindow(MApplication appli, MTrimmedWindow tw) {
 		MWindow mainWindow = appli.getChildren().get(0);
 		
+		Monitor m = Display.getCurrent().getPrimaryMonitor();
+		Rectangle carea = m.getClientArea();
+		
 		// Set the size of filter window to : 50 % for width, 70 % for height
-		// Set the position in center 
+		// Set the position in center at 0.15 of width et 0.2 of height.
 		int filterW = (int) (mainWindow.getWidth() * 0.5f);
 		int filterH = (int) (mainWindow.getHeight() * 0.7f);
 		
-		int filterX = (int) (mainWindow.getX() + (mainWindow.getWidth() * 0.15d));
-		int filterY = (int) (mainWindow.getY() + (mainWindow.getHeight() * 0.2d));
+		// Use a real X and Y coming from application or from monitor
+		// X and Y could be not set. 
+		int realX = mainWindow.isSetX() ? mainWindow.getX() : carea.x;
+		int realY = mainWindow.isSetY() ? mainWindow.getY() : carea.y;
+		
+		int filterX = (int) (realX + (mainWindow.getWidth() * 0.15d));
+		int filterY = (int) (realY + (mainWindow.getHeight() * 0.2d));
 		
 
 		tw.setX(filterX);
