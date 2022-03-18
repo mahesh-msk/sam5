@@ -104,7 +104,7 @@ public class SetReferenceAction extends Action {
 			}
 			ActivatorData.getInstance().setSelectedMsg(message);
 
-			//si l'axe de distance existe, on peut fixer une valeur pour le point de Référence
+			//si l'axe de distance existe, on peut fixer une valeur pour le point de Rï¿½fï¿½rence
 			if (!new ParseurAdapteur().inhiberBoiteDialoguePointReference()) {
 				boiteDeDialogue(msgId, activePart);
 			}else{
@@ -125,7 +125,7 @@ public class SetReferenceAction extends Action {
 		ActivatorData.getInstance().getPoolDonneesVues().put("ReferenceZero", "true");
 
 		//modification pour correction issue GERER_VUE_GRAPHIQUE_SCEN3T12
-		//la vue sur laquelle a été posée la référence zéro est rechargée en premier
+		//la vue sur laquelle a ï¿½tï¿½ posï¿½e la rï¿½fï¿½rence zï¿½ro est rechargï¿½e en premier
 		List<IRepereChangedListener>  listeRepereListeners = ActivatorData.getInstance().getListenersRepere();
 		int i = 0;
 		boolean partCouranteTrouve = false;
@@ -163,7 +163,7 @@ public class SetReferenceAction extends Action {
 
 		shell = new Shell (display);
 		shell.setBounds(posX,posY,sizeX,sizeY);
-		shell.setImage(com.faiveley.samng.principal.ihm.Activator.getImageDescriptor("/icons/toolBar/vues_commun_reference.png").createImage());
+		shell.setImage(com.faiveley.samng.principal.ihm.Activator.getDefault().getImage("/icons/toolBar/vues_commun_reference.png"));
 		shell.setText(Messages.getString("ReferenceAction.5"));
 		shell.addShellListener(new ShellListener() {
 			@Override

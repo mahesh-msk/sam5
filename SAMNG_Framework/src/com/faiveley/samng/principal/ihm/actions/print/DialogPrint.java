@@ -37,8 +37,8 @@ public class DialogPrint {
 		int posX=rect.width/2-sizeX/2;
 		int posY=rect.height/2-sizeY/2;
 		shell.setLocation(posX,posY);
-		shell.setImage(com.faiveley.samng.principal.ihm.Activator
-				.getImageDescriptor("/icons/toolBar/vues_commun_imprimer.png").createImage());
+		shell.setImage(com.faiveley.samng.principal.ihm.Activator.getDefault().
+				getImage("/icons/toolBar/vues_commun_imprimer.png"));
 		shell.setText(voulezvousimprimer);
 		
 		final Button tot = new Button (shell, SWT.RADIO);

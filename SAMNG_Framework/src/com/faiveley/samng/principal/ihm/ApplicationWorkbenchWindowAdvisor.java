@@ -20,6 +20,7 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Monitor;
 import org.eclipse.ui.IPerspectiveDescriptor;
 import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.IWorkbenchPage;
@@ -153,7 +154,8 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor im
 	
 	public final void preWindowOpen() {
 		IWorkbenchWindowConfigurer configurer = getWindowConfigurer();
-		Rectangle r = Display.getCurrent().getBounds();
+		Display display = Display.getDefault();
+		Rectangle r = display.getPrimaryMonitor().getClientArea();
 		final int largeur = r.width;
 		final int hauteur = r.height;
 		configurer.setInitialSize(new Point(largeur, hauteur));
@@ -162,7 +164,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor im
 		configurer.setTitle("SAM5");
 		configurer.setShowStatusLine(false);
 		configurer.setShowPerspectiveBar(true);
-		configurer.setShowFastViewBars(true);
+		// configurer.setShowFastViewBars(true);
 		configurer.setShowProgressIndicator(true);
 
 		FileReader fileR = null;

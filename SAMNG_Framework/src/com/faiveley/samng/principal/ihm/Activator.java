@@ -13,6 +13,7 @@ import java.util.Properties;
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IPerspectiveDescriptor;
@@ -149,9 +150,9 @@ public class Activator extends AbstractUIPlugin {
 	public static String getPathINSTALL_SAM_PARAM() {
 		String res = "";
 		
-		// Le répertoire de travail correspond au dossier parent du workspace
-		// SAM (donné par -data dans SAM5.ini ou dans les arguments de lancement
-		// dans éclipse)
+		// Le rï¿½pertoire de travail correspond au dossier parent du workspace
+		// SAM (donnï¿½ par -data dans SAM5.ini ou dans les arguments de lancement
+		// dans ï¿½clipse)
 		List<String> args = Arrays.asList(Platform.getCommandLineArgs());
 		
 		int workspaceIndex = args.indexOf(GestionLineCommandParameters.workspace);
@@ -354,6 +355,23 @@ public class Activator extends AbstractUIPlugin {
 		return imageDescriptorFromPlugin(PLUGIN_ID, path);
 	}
 
+	/** Return image from key, where key is the local path to the image 
+	 * 
+	 * @param key  a local path like : icons/media_player/controle_end.png
+	 * @return the Image or null if not found.
+	 */
+	public Image getImage(String key)
+	{
+		Image result = getImageRegistry().get(key);
+		if (result == null)
+		{
+			// load image in registry (it is initialized)
+			getImageRegistry().put(key, imageDescriptorFromPlugin(PLUGIN_ID, key));
+			result =  getImageRegistry().get(key);
+		}
+		return result;
+	}
+
 	/**
 	 * @return the perspectives
 	 */
@@ -362,7 +380,7 @@ public class Activator extends AbstractUIPlugin {
 	}
 
 	public void selectionLangue(){
-		// Récupération du pays et de la langue via la Locale
+		// Rï¿½cupï¿½ration du pays et de la langue via la Locale
 		String langue = Locale.getDefault().getLanguage();
 		String pays = Locale.getDefault().getCountry();
 		String suffixeMessages = "";
@@ -374,7 +392,7 @@ public class Activator extends AbstractUIPlugin {
 			suffixeMessages = new String(langue + "_" + pays).toUpperCase();
 		}
 
-		// Test de présence et d'activation de la locale choisie dans le fichier ./ressources/xml/languages.properties
+		// Test de prï¿½sence et d'activation de la locale choisie dans le fichier ./ressources/xml/languages.properties
 		Properties p = new Properties();
 		
 		InputStream stream;
@@ -393,12 +411,12 @@ public class Activator extends AbstractUIPlugin {
 		if (p.get(suffixeMessages) == null) {
 			langueActive = false;
 		}
-		else if (((String) p.get(suffixeMessages)).trim().equals("0")) { // Locale présente mais inactive 
+		else if (((String) p.get(suffixeMessages)).trim().equals("0")) { // Locale prï¿½sente mais inactive 
 			langueActive = false;
 		}
 		
 		Langage l = null;
-		// Si la langue ne peut etre chargée, 
+		// Si la langue ne peut etre chargï¿½e, 
 		if (!langueActive) {
 			l = Langage.valueOf("DEF");
 			this.getPreferenceStore().setValue(PreferenceConstants.LANG_CHOICE, "DEF");

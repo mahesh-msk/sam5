@@ -41,8 +41,8 @@ import com.faiveley.samng.principal.ihm.actions.captures.CapturerVueAction;
 import com.faiveley.samng.principal.ihm.actions.captures.ICapturable;
 import com.faiveley.samng.principal.ihm.actions.captures.ImprimerVueAction;
 import com.faiveley.samng.principal.ihm.actions.dialogs.RechercherMarqueurAction;
+import com.faiveley.samng.principal.ihm.actions.filtre.ShowFilterWindowAction;
 import com.faiveley.samng.principal.ihm.actions.vue.SetReferenceAction;
-import com.faiveley.samng.principal.ihm.actions.vue.VueAction;
 import com.faiveley.samng.principal.ihm.listeners.IDataChangedListener;
 import com.faiveley.samng.principal.ihm.listeners.IRepereChangedListener;
 import com.faiveley.samng.principal.ihm.listeners.ISearchMarquerListener;
@@ -152,7 +152,7 @@ IVbvChangeListener,ISearchVariableListener{
 	boolean oneTimeOffset=true;//le positionnement offset ne se fait qu'une fois
 
 	/**
-	 * Déclaration des actions
+	 * Dï¿½claration des actions
 	 */
 
 	public AjouterAnnotationAction ajouterAnnotationAction;
@@ -164,7 +164,7 @@ IVbvChangeListener,ISearchVariableListener{
 	public ZoomAction nextZoomAction;
 	public ZoomAction manualZoomAction;
 	public SetReferenceAction setRefAction;
-	public VueAction ouvrirVueFiltreAction;;
+	public ShowFilterWindowAction ouvrirVueFiltreAction;
 	public ArrayList<Action> listeActionsAuditrice;
 	public RechercherMarqueurAction marqueurSuivantAction;
 	public RechercherMarqueurAction marqueurPrecedentAction;
@@ -230,11 +230,11 @@ IVbvChangeListener,ISearchVariableListener{
 		getSite().getPage().addPartListener( new IPartListener2() {
 
 			public void partActivated(IWorkbenchPartReference partRef) {
-				// TODO Raccord de méthode auto-généré
+				// TODO Raccord de mï¿½thode auto-gï¿½nï¿½rï¿½
 			}
 
 			public void partBroughtToTop(IWorkbenchPartReference partRef) {
-				// TODO Raccord de méthode auto-généré
+				// TODO Raccord de mï¿½thode auto-gï¿½nï¿½rï¿½
 			}
 
 			public void partClosed(IWorkbenchPartReference partRef) {
@@ -248,24 +248,24 @@ IVbvChangeListener,ISearchVariableListener{
 			}
 
 			public void partDeactivated(IWorkbenchPartReference partRef) {
-				// TODO Raccord de méthode auto-généré
+				// TODO Raccord de mï¿½thode auto-gï¿½nï¿½rï¿½
 			}
 
 			public void partHidden(IWorkbenchPartReference partRef) {
-				// TODO Raccord de méthode auto-généré
+				// TODO Raccord de mï¿½thode auto-gï¿½nï¿½rï¿½
 			}
 
 			public void partInputChanged(IWorkbenchPartReference partRef) {
-				// TODO Raccord de méthode auto-généré
+				// TODO Raccord de mï¿½thode auto-gï¿½nï¿½rï¿½
 
 			}
 
 			public void partOpened(IWorkbenchPartReference partRef) {
-				// TODO Raccord de méthode auto-généré
+				// TODO Raccord de mï¿½thode auto-gï¿½nï¿½rï¿½
 			}
 
 			public void partVisible(IWorkbenchPartReference partRef) {
-				// TODO Raccord de méthode auto-généré
+				// TODO Raccord de mï¿½thode auto-gï¿½nï¿½rï¿½
 			}
 		});
 	}
@@ -319,7 +319,7 @@ IVbvChangeListener,ISearchVariableListener{
 				if(ActivatorData.getInstance().getVueData().isEmpty())
 					this.setPartName(Messages.getString("VueGraphique.53")); //$NON-NLS-1$
 
-				//ajout des actions à la toolbar
+				//ajout des actions ï¿½ la toolbar
 				ajoutActionToolBar(synchroVuesAction);
 				ajoutActionToolBar(setRefAction);
 				ajoutActionToolBar(ouvrirVueFiltreAction);
@@ -349,10 +349,10 @@ IVbvChangeListener,ISearchVariableListener{
 		}
 	}
 
-	/** Déclaration d'action */
+	/** Dï¿½claration d'action */
 	public void makeActions(){
 
-		//récupération de la fenetre active
+		//rï¿½cupï¿½ration de la fenetre active
 		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
 
 		listeActionsAuditrice = new ArrayList<Action>();
@@ -407,10 +407,9 @@ IVbvChangeListener,ISearchVariableListener{
 
 		this.imprimerVueAction = new ImprimerVueAction(window,Messages.getString("VueGraphique.16") ); //$NON-NLS-1$
 
-		this.ouvrirVueFiltreAction = new VueAction(window, ICommandIds.CMD_OPEN_MARQUERS, 
-				Messages.getString("VueGraphique.17"),  //$NON-NLS-1$
-				VueGraphiqueFiltre.ID, com.faiveley.samng.vuegraphique.ihm.ActivatorVueGraphique
-				.getImageDescriptor("/icons/vueGraphique/vue_graphique_filtre.png"),false); //$NON-NLS-1$
+		this.ouvrirVueFiltreAction = new ShowFilterWindowAction(Messages.getString("VueGraphique.17"),  //$NON-NLS-1$
+				VueGraphiqueFiltre.ID, ActivatorVueGraphique
+				.getImageDescriptor("/icons/vueGraphique/vue_graphique_filtre.png")); //$NON-NLS-1$
 
 		this.synchroVuesAction = new Action(){
 			public void run(){
@@ -461,7 +460,7 @@ IVbvChangeListener,ISearchVariableListener{
 
 
 	/**
-	 * Méthode d'ajout d'une action dans la toolbar
+	 * Mï¿½thode d'ajout d'une action dans la toolbar
 	 * @param action
 	 */
 	public void ajoutActionToolMenuBar(Action action) {
@@ -474,7 +473,7 @@ IVbvChangeListener,ISearchVariableListener{
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans le menu
+	 * Mï¿½thode d'ajout d'une action dans le menu
 	 * @param action
 	 */
 	public void ajoutActionToolBar(Action action) {
@@ -797,9 +796,9 @@ IVbvChangeListener,ISearchVariableListener{
 		itemAxeTempsCorrige.setEnabled(!axeTempsInhibe);
 		itemAxeTempsCorrige.setSelection(GestionnaireAxes.getInstance().getCurrentAxeType() == TypeAxe.AXE_TEMPS_CORRIGE);
 
-		//correction issue 561 : si l'axe temps corrigé était selectionné pour le précédent fichier 
-		//mais qu'il n'y a pas de correction de temps pour le présent fichier, alors l'axe selectionné doit etre l'axe temps
-		//et si l'axe temps n'est pas inhibé
+		//correction issue 561 : si l'axe temps corrigï¿½ ï¿½tait selectionnï¿½ pour le prï¿½cï¿½dent fichier 
+		//mais qu'il n'y a pas de correction de temps pour le prï¿½sent fichier, alors l'axe selectionnï¿½ doit etre l'axe temps
+		//et si l'axe temps n'est pas inhibï¿½
 		if(GestionnaireAxes.getInstance().getCurrentAxeType() == TypeAxe.AXE_TEMPS_CORRIGE && !axeTempsInhibe){
 			if(ActivatorData.getInstance().getPoolDonneesVues().get("axeTpsCorrige")==null || ActivatorData.getInstance().getPoolDonneesVues().get("axeTpsCorrige").equals(false) ){
 				itemAxeTemps.setSelection(true);
@@ -826,8 +825,8 @@ IVbvChangeListener,ISearchVariableListener{
 		itemAxeDistanceCorrigee.setEnabled(!axeDistanceInhibe);
 		itemAxeDistanceCorrigee.setSelection(GestionnaireAxes.getInstance().getCurrentAxeType() == TypeAxe.AXE_DISTANCE_CORRIGEE);
 
-		//correction issue 561 : si l'axe distance corrigée était selectionné pour le précédent fichier 
-		//mais qu'il n'y a pas de correction de distance pour le présent fichier, alors l'axe selectionné doit etre l'axe distance
+		//correction issue 561 : si l'axe distance corrigï¿½e ï¿½tait selectionnï¿½ pour le prï¿½cï¿½dent fichier 
+		//mais qu'il n'y a pas de correction de distance pour le prï¿½sent fichier, alors l'axe selectionnï¿½ doit etre l'axe distance
 		if(GestionnaireAxes.getInstance().getCurrentAxeType() == TypeAxe.AXE_DISTANCE_CORRIGEE && !axeDistanceInhibe){
 			if(ActivatorData.getInstance().getPoolDonneesVues().get("axeDistanceCorrige")==null || ActivatorData.getInstance().getPoolDonneesVues().get("axeDistanceCorrige").equals(false) ){
 				itemAxeDistance.setSelection(!new ParseurAdapteur().inhiberAxeDistanceVueGraphique());
@@ -1173,7 +1172,7 @@ IVbvChangeListener,ISearchVariableListener{
 			try {
 				oneTimeOffset=false;
 				int selId = GestionLineCommandParameters.getIndiceMsg();
-				//			récupération uniquement des bons messages
+				//			rï¿½cupï¿½ration uniquement des bons messages
 				ListMessages messages = ActivatorData.getInstance().getVueData().getDataTable().getEnregistrement().getMessages();
 
 				AParcoursComposant data = ActivatorData.getInstance().getVueData().getDataTable();
@@ -1189,7 +1188,7 @@ IVbvChangeListener,ISearchVariableListener{
 			if(!((MessageSelection)selection).getUserSendSelection())
 				return;
 			int selId = ((MessageSelection)selection).getMessageId();
-			//			récupération uniquement des bons messages
+			//			rï¿½cupï¿½ration uniquement des bons messages
 			ListMessages messages = null;
 			try {
 				messages = ActivatorData.getInstance().getVueData().getDataTable().getEnregistrement().getMessages();
@@ -1244,11 +1243,11 @@ IVbvChangeListener,ISearchVariableListener{
 		if(event instanceof ValuedCursorPositionEvent)
 			return;
 
-		//		récupération uniquement des bons messages
+		//		rï¿½cupï¿½ration uniquement des bons messages
 		ListMessages messages = ActivatorData.getInstance().getVueData().getDataTable().getEnregistrement().getMessages();
 
 
-		//récupération de tous les messages
+		//rï¿½cupï¿½ration de tous les messages
 		//		List<Message> messages = ActivatorData.getInstance().getVueData()
 		//		.getDataTable().getEnregistrement(0).getMessages();
 
@@ -1545,10 +1544,10 @@ IVbvChangeListener,ISearchVariableListener{
 					}
 				}
 			}
-			//			récupération uniquement des bons messages
+			//			rï¿½cupï¿½ration uniquement des bons messages
 			ListMessages messages = ActivatorData.getInstance().getVueData().getDataTable().getEnregistrement().getMessages();
 
-			//récupération de tous les messages
+			//rï¿½cupï¿½ration de tous les messages
 			//			List<Message> messages = ActivatorData.getInstance().getVueData()
 			//			.getDataTable().getEnregistrement(0).getMessages();
 			if (selMarquer != null) {
@@ -1629,10 +1628,10 @@ IVbvChangeListener,ISearchVariableListener{
 					}
 				}
 			}
-			//			récupération uniquement des bons messages
+			//			rï¿½cupï¿½ration uniquement des bons messages
 			ListMessages messages = ActivatorData.getInstance().getVueData().getDataTable().getEnregistrement().getMessages();
 
-			//récupération de tous les messages
+			//rï¿½cupï¿½ration de tous les messages
 			//			List<Message> messages = ActivatorData.getInstance().getVueData()
 			//			.getDataTable().getEnregistrement(0).getMessages();
 			if (selMarquer != null) {
@@ -1676,8 +1675,8 @@ IVbvChangeListener,ISearchVariableListener{
 	}
 
 	/**
-	 * Fonction qui vérifie si tous les segments sont valides 
-	 * et alerte l'utilisateur si ça n'est pas le cas.
+	 * Fonction qui vï¿½rifie si tous les segments sont valides 
+	 * et alerte l'utilisateur si ï¿½a n'est pas le cas.
 	 *
 	 */
 	private int verifierSegmentsDistance(){
@@ -1708,7 +1707,7 @@ IVbvChangeListener,ISearchVariableListener{
 	}
 
 	/**
-	 * Vérifie si il y a une variable à afficher dans la vue graphique
+	 * Vï¿½rifie si il y a une variable ï¿½ afficher dans la vue graphique
 	 * 
 	 * @return false si aucune variable, true sinon
 	 */
@@ -1759,7 +1758,7 @@ IVbvChangeListener,ISearchVariableListener{
 				continue;
 			}
 
-			//si variable composée
+			//si variable composï¿½e
 			if (descrVar.getTypeVariable() == TypeVariable.VAR_COMPOSEE) {
 				List<AVariableComposant> listVarComp = GestionnaireVariablesComposee.checkForVariablesComposee(msg);
 				if (listVarComp != null) {

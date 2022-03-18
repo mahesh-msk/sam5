@@ -52,8 +52,8 @@ import com.faiveley.samng.principal.ihm.actions.captures.CapturerVueAction;
 import com.faiveley.samng.principal.ihm.actions.captures.ICapturable;
 import com.faiveley.samng.principal.ihm.actions.dialogs.RechercherEvenementAction;
 import com.faiveley.samng.principal.ihm.actions.dialogs.RechercherMarqueurAction;
+import com.faiveley.samng.principal.ihm.actions.filtre.ShowFilterWindowAction;
 import com.faiveley.samng.principal.ihm.actions.vue.SetReferenceAction;
-import com.faiveley.samng.principal.ihm.actions.vue.VueAction;
 import com.faiveley.samng.principal.ihm.calcul.PositionMilieuViewer;
 import com.faiveley.samng.principal.ihm.listeners.IDataChangedListener;
 import com.faiveley.samng.principal.ihm.listeners.IRepereChangedListener;
@@ -119,7 +119,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	 */
 	private boolean oneTimeOffset = true; // Le positionnement offset ne se fait qu'une fois
 	private RechercherEvenementAction rechercherEvenementAction;
-	private VueAction ouvrirVueFiltreAction;
+	private ShowFilterWindowAction ouvrirVueFiltreAction;
 	private ConfigListVueAction ouvrirVueGestionColonneAction;
 	private RechercherVariableListeAction rechercherVariableAction;
 	private ExpandAllAction expandAction;
@@ -188,9 +188,8 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 
 		setGestionnaireVue(ActivatorVueListe.getDefault().getConfigurationMng());
 		
-		// E34 Remplacer le titre
-		setPartName("E4_" + Messages.getString("VueListe.11"));
-		this.initialPartName="E4_" +Messages.getString("VueListe.11");
+		setPartName(Messages.getString("VueListe.11"));
+		this.initialPartName=Messages.getString("VueListe.11");
 
 		menuSelListener = new Listener() {
 			public void handleEvent(Event e) {
@@ -253,7 +252,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 
 		setPartName(Messages.getString("VueListe.11"));
 
-		ouvrirVueFiltreAction = new VueAction(window, ICommandIds.CMD_OPEN_MARQUERS, Messages.getString("VueListe.3"), VueListeFiltre.ID, com.faiveley.samng.vueliste.ihm.ActivatorVueListe.getImageDescriptor("/icons/vueListe/vue_liste_filtre.png"), false);
+		ouvrirVueFiltreAction = new ShowFilterWindowAction(Messages.getString("VueListe.3"), VueListeFiltre.ID, ActivatorVueListe.getImageDescriptor("/icons/vueListe/vue_liste_filtre.png"));
 		ouvrirVueGestionColonneAction = new ConfigListVueAction();
 
 		rechercherVariableAction = new RechercherVariableListeAction(ICommandIds.CMD_OPEN_SEARCH_VAR, Messages.getString("VueListe.12"), com.faiveley.samng.principal.ihm.Activator.getImageDescriptor("/icons/toolBar/vues_commun_rechercher_signal.png"));

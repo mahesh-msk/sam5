@@ -33,6 +33,7 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.TabFolder;
 import org.eclipse.swt.widgets.TabItem;
+import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Tree;
 
 import com.faiveley.kvbdecoder.decoder.KVBDecoderResult;
@@ -176,7 +177,11 @@ public class FixedColumnTableViewerDetail extends FixedColumnTableVueListe {
 	
 	@Override
 	public void refreshTable(DescripteurVariable descr) {
-		Evenement fixedTableEvenement = ((Message) ((Row) this.fixedTable.getSelection()[0].getData()).getData()).getEvenement();
+		TableItem sel = this.fixedTable.getSelection()[0];
+		Row rowData = (sel == null ? null : (Row) sel.getData());
+		if (rowData == null)
+			return;
+		Evenement fixedTableEvenement = ((Message) rowData.getData()).getEvenement();
 		refreshOnglets(fixedTableEvenement);
 		
 		Message treeTableMessage = (Message) this.tableTreeDetailViewer.getTree().getData();

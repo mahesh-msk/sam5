@@ -1,10 +1,6 @@
 package com.faiveley.samng.vuegraphique.ihm.vues.vuegraphique.actions;
 
-import org.eclipse.jface.action.Action;
-import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.PartInitException;
-
-import com.faiveley.samng.vuegraphique.ihm.ActivatorVueGraphique;
+import com.faiveley.samng.principal.ihm.actions.filtre.ShowFilterWindowAction;
 import com.faiveley.samng.vuegraphique.ihm.vues.vuefiltre.VueGraphiqueFiltre;
 
 
@@ -14,18 +10,10 @@ import com.faiveley.samng.vuegraphique.ihm.vues.vuefiltre.VueGraphiqueFiltre;
  * @author Cosmin Udroiu
  *
  */
-public class ShowVueFiltresGraphiqueAction extends Action {
+public class ShowVueFiltresGraphiqueAction extends ShowFilterWindowAction {
 
 	public ShowVueFiltresGraphiqueAction() {
+		super(VueGraphiqueFiltre.ID);
 	}
 	
-	@Override
-	public void run() {
-		IWorkbenchWindow window = ActivatorVueGraphique.getDefault().getWorkbench().getActiveWorkbenchWindow();
-		try {
-			window.getActivePage().showView(VueGraphiqueFiltre.ID);
-		} catch (PartInitException e) {
-			e.printStackTrace();
-		}
-	}
 }

@@ -17,10 +17,12 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.ui.IPartListener2;
 import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
+import com.faiveley.samng.principal.ihm.actions.filtre.ShowFilterWindowAction;
 import com.faiveley.samng.principal.ihm.actions.vue.SetReferenceAction;
 import com.faiveley.samng.principal.ihm.actions.vue.VueAction;
 import com.faiveley.samng.principal.ihm.listeners.ISearchVariableVirtuele;
@@ -53,9 +55,9 @@ implements ISearchVariableVirtuele {
 	public static final String ID = "SAMNG.Vue.Tabulaire"; //$NON-NLS-1$
 
 	/**
-	 * Déclaration des actions
+	 * Dï¿½claration des actions
 	 */
-	private VueAction ouvrirVueFiltreAction;
+	private ShowFilterWindowAction ouvrirVueFiltreAction;
 	private ConfigTabulaireVueAction ouvrirVueGestionColonneAction;
 	protected RechercherVariableTabulaireAction rechercherVariableAction;
 
@@ -93,10 +95,10 @@ implements ISearchVariableVirtuele {
 					new ApplyFiltreAction().runWithEvent(null);
 					break;
 				case USE_SHORT_NAMES:
-					// On toggle le booléen
+					// On toggle le boolï¿½en
 					usesShortNames = !usesShortNames;
 					ActivatorVueTabulaire.getDefault().setUsesShortNames(usesShortNames);
-					// On applique les changements aux fenêtres de dialogue
+					// On applique les changements aux fenï¿½tres de dialogue
 					ouvrirVueGestionColonneAction.usesShortNames(usesShortNames);
 					rechercherVariableAction.usesShortNames(usesShortNames);
 					// On applique la modif sur la configuration
@@ -113,18 +115,17 @@ implements ISearchVariableVirtuele {
 		};
 	}
 
-	/** Déclaration d'action */
+	/** Dï¿½claration d'action */
 	public void makeActions(){
 		super.makeActions();
-		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+		IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 		setPartName(Messages.getString("VueTabulaire.3"));
 		//synchroVuesAction;
 		poserReferenceAction = new SetReferenceAction(com.faiveley.samng.principal.ihm.vues.Messages.getString("AVueTable.3"),
 				com.faiveley.samng.principal.ihm.Activator.getImageDescriptor("/icons/toolBar/vues_commun_reference.png"));
 
-		ouvrirVueFiltreAction = new VueAction(window, ICommandIds.CMD_OPEN_MARQUERS, 
-				Messages.getString("VueTabulaire.1"),  //$NON-NLS-1$
-				ActivatorData.TABULAR_VUE_FILTRE_ID, com.faiveley.samng.vuetabulaire.ihm.ActivatorVueTabulaire.getImageDescriptor("/icons/vueTabulaire/vue_tabulaire_filtre.png"),false);
+		ouvrirVueFiltreAction = new ShowFilterWindowAction(Messages.getString("VueTabulaire.1"),  //$NON-NLS-1$
+				ActivatorData.TABULAR_VUE_FILTRE_ID, ActivatorVueTabulaire.getImageDescriptor("/icons/vueTabulaire/vue_tabulaire_filtre.png"));
 		ouvrirVueGestionColonneAction = new ConfigTabulaireVueAction();
 		
 		rechercherVariableAction = new RechercherVariableTabulaireAction(
@@ -150,7 +151,7 @@ implements ISearchVariableVirtuele {
 		}
 		
 		makeActions();
-		//ajout des actions à la toolbar
+		//ajout des actions ï¿½ la toolbar
 		ajoutActionToolBar(synchroVuesAction);
 		ajoutActionToolBar(poserReferenceAction);
 		ajoutSeparateurToolBar();
@@ -174,27 +175,27 @@ implements ISearchVariableVirtuele {
 			
 			@Override
 			public void partVisible(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partOpened(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partInputChanged(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partHidden(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partDeactivated(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
@@ -207,12 +208,12 @@ implements ISearchVariableVirtuele {
 			
 			@Override
 			public void partBroughtToTop(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partActivated(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 		});	
 	}
@@ -295,7 +296,7 @@ implements ISearchVariableVirtuele {
 		create(contentProvider, labelProvider, 
 				new FixedColumnTableViewer(this.top, SWT.MULTI|SWT.FULL_SELECTION), this.usesShortNames);
 
-		//mise à jour de la selection
+		//mise ï¿½ jour de la selection
 		if(ActivatorData.getInstance().getSelectionVueTabulaire()!=-1){
 			this.tblFix.setSelection(ActivatorData.getInstance().getSelectionVueTabulaire(),null);
 

@@ -24,6 +24,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Text;
 
+import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.sm.filtres.AFiltreComposant;
 import com.faiveley.samng.principal.sm.filtres.TypeFiltre;
 
@@ -96,7 +97,7 @@ public abstract class AbstractEditeurFiltre extends Composite
 		}
 	}
 	/**
-	Méthode permettant de définir un message dans la zone d'aide de l'éditeur
+	Mï¿½thode permettant de dï¿½finir un message dans la zone d'aide de l'ï¿½diteur
 	@param msg: message de la zone d'aide
 	*/
 	public void setHelpMsgbasic(String msg){
@@ -417,8 +418,7 @@ public abstract class AbstractEditeurFiltre extends Composite
 			moveFirstButtonLData.bottom =  new FormAttachment(1000, 1000, -2);
 			moveFirstButton.setLayoutData(moveFirstButtonLData);
 			moveFirstButton.setToolTipText(Messages.getString("AbstractEditeurFiltre.6")); //$NON-NLS-1$
-			moveFirstButton.setImage(new Image(getDisplay(), 
-					getClass().getResourceAsStream("/icons/btnMoveTop.gif"))); //$NON-NLS-1$
+			moveFirstButton.setImage(Activator.getDefault().getImage("/icons/btnMoveTop.gif")); //$NON-NLS-1$
 			moveFirstButton.setEnabled(false);
 			moveFirstButton.addSelectionListener(new SelectionAdapter() {
 				@Override
@@ -439,8 +439,7 @@ public abstract class AbstractEditeurFiltre extends Composite
 			moveUpButtonLData.left =  new FormAttachment(this.moveFirstButton, 4);
 			moveUpButtonLData.bottom =  new FormAttachment(1000, 1000, -2);
 			moveUpButton.setLayoutData(moveUpButtonLData);
-			moveUpButton.setImage(new Image(getDisplay(), 
-					getClass().getResourceAsStream("/icons/btnMoveUp.gif"))); //$NON-NLS-1$
+			moveUpButton.setImage(Activator.getDefault().getImage("/icons/btnMoveUp.gif")); //$NON-NLS-1$
 			moveUpButton.setToolTipText(Messages.getString("AbstractEditeurFiltre.7")); //$NON-NLS-1$
 			moveUpButton.setEnabled(false);
 			moveUpButton.addSelectionListener(new SelectionAdapter() {
@@ -461,8 +460,7 @@ public abstract class AbstractEditeurFiltre extends Composite
 			moveDownButtonLData.left =  new FormAttachment(this.moveUpButton, 4);
 			moveDownButtonLData.bottom =  new FormAttachment(1000, 1000, -2);
 			moveDownButton.setLayoutData(moveDownButtonLData);
-			moveDownButton.setImage(new Image(getDisplay(), 
-					getClass().getResourceAsStream("/icons/btnMoveDown.gif"))); //$NON-NLS-1$
+			moveDownButton.setImage(Activator.getDefault().getImage("/icons/btnMoveDown.gif")); //$NON-NLS-1$
 			moveDownButton.setToolTipText(Messages.getString("AbstractEditeurFiltre.8")); //$NON-NLS-1$
 			moveDownButton.setEnabled(false);
 			moveDownButton.addSelectionListener(new SelectionAdapter() {
@@ -483,8 +481,7 @@ public abstract class AbstractEditeurFiltre extends Composite
 			moveLastButtonLData.left =  new FormAttachment(this.moveDownButton, 4);
 			moveLastButtonLData.bottom =  new FormAttachment(1000, 1000, -2);
 			moveLastButton.setLayoutData(moveLastButtonLData);
-			moveLastButton.setImage(new Image(getDisplay(), 
-					getClass().getResourceAsStream("/icons/btnMoveBottom.gif"))); //$NON-NLS-1$
+			moveLastButton.setImage(Activator.getDefault().getImage("/icons/btnMoveBottom.gif")); //$NON-NLS-1$
 			moveLastButton.setToolTipText(Messages.getString("AbstractEditeurFiltre.9")); //$NON-NLS-1$
 			moveLastButton.setEnabled(false);
 			moveLastButton.addSelectionListener(new SelectionAdapter() {
