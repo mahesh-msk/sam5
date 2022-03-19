@@ -3,7 +3,7 @@ package com.faiveley.samng.principal.ihm.actions.filtre;
 import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
-	private static final String BUNDLE_NAME = Messages.class.getPackageName() + ".messages"; //$NON-NLS-1$
+	private static final String BUNDLE_NAME = Messages.class.getPackage().getName() + ".messages"; //$NON-NLS-1$
 	public static String ShowFilterWindowAction_0;
 	static {
 		// initialize resource bundle
