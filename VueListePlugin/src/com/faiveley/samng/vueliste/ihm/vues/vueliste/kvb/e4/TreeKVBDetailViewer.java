@@ -120,25 +120,20 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
 		Tree tree = getTree();
 		
 		// On d�termine les lignes � colorer gr�ce au tableau sous forme TableTree (possibilit� d'inspecter les niveaux hi�rarchiquement)		
-		int rowIndex = 0;
 		int firstLevelIndex = 0;
 
 		for (TreeItem tableTreeLevel1 : tree.getItems()) { // Niveau 1
-			rowIndex++;
 			firstLevelIndex++;
 			
 			for (TreeItem tableTreeLevel2 : tableTreeLevel1.getItems()) { // Niveau 2								
-				if (tableTreeLevel2.getExpanded()) { // A un niveau inf�rieur: c'est uniquement les cas des Points d'Information
-										
-					if (!tableTreeLevel2.getText(1).isEmpty() && tree.getItemCount() > rowIndex) { // A un texte d'alerte ; n'est pas repli� (si repli�: inutile et source d'erreur car 'table' ne consid�re que les lignes visibles, donc d�pli�es)
-						// On colore la ligne, uniquement sur la deuxi�me colonne, gr�ce  � la table sous forme Table (possibilit� de diff�rencier les colonnes)
-						tree.getItem(rowIndex).setForeground(1, colorRed);
-					}
-					
-					rowIndex += tableTreeLevel2.getItemCount();
+				if (tableTreeLevel2.getExpanded()) { 
+					// A un niveau inferieur: c'est uniquement les cas des Points d'Information
+					// On colorie en rouge si le texte de la colonne 1 n'est pas vide... 
+					String text = tableTreeLevel2.getText(1);
+					if (!text.isEmpty()) { 
+						tableTreeLevel2.setForeground(1, colorRed);
+					}	
 				}
-				
-				rowIndex++;
 			}
 			
 			if (firstLevelIndex >= 3) { // Niveau 1, troisi�me �l�ment ou plus: ce sont les erreurs
