@@ -2,6 +2,7 @@ package com.faiveley.samng.vueliste.ihm.vues.vueliste.kvb.e4;
 
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.TreeViewerColumn;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.graphics.Color;
@@ -9,10 +10,10 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Tree;
-import org.eclipse.swt.widgets.TreeColumn;
 import org.eclipse.swt.widgets.TreeItem;
 import org.eclipse.ui.PlatformUI;
 
+import com.faiveley.kvbdecoder.model.kvb.ip.InformationPoint;
 import com.faiveley.samng.principal.sm.data.enregistrement.Message;
 import com.faiveley.samng.principal.sm.data.enregistrement.atess.AtessMessage;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
@@ -49,11 +50,11 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
 	@Override
 	protected void setHiddenColumn() {
 		
-		final Tree table = getTree();
-		TreeColumn column = new TreeColumn(table, SWT.LEFT);
-		column.setText("");
-		column.setWidth(0);
-		column.setResizable(false);
+		TreeViewerColumn column = new TreeViewerColumn(this, SWT.LEFT);
+		column.getColumn().setText("");
+		column.getColumn().setWidth(0);
+		column.setLabelProvider(new ColumnLabelProvider());
+		column.getColumn().setResizable(false);
 		
 	}
 	
@@ -65,10 +66,11 @@ public class TreeKVBDetailViewer extends TreeDetailViewer {
         TreeItem item = tree.getItem(pt);
         
         if (item != null) {
-        	String hiddenColumnText = item.getText(2);
-        	
-        	if (!hiddenColumnText.isEmpty()) {
-        		parent.getTableTreeInformationPointDetailViewer().setInformationPoint(Integer.parseInt(hiddenColumnText));     		
+        	Object data = item.getData();
+        	if (data instanceof InformationPoint)
+        	{
+        		InformationPoint ip = (InformationPoint) data;
+        		parent.getTableTreeInformationPointDetailViewer().setInformationPoint(ip.getIndex());     		
         	}
         }
         

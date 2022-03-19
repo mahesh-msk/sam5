@@ -106,7 +106,7 @@ public class TreeInformationPointDetailViewer extends TreeViewer {
 	}
 
 	private void initColumn(TreeColumn column, String text) {
-		column.setText(text);
+		column.setText(" " + text + " ");
 		column.pack();
 		column.setResizable(false);
 	}
@@ -125,6 +125,7 @@ public class TreeInformationPointDetailViewer extends TreeViewer {
 			refresh(true);
 		}
 
+		getTree().pack();
 		getTree().redraw();
 	}
 }
