@@ -14,7 +14,8 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jface.text,
  org.eclipse.e4.core.contexts,
  org.eclipse.e4.ui.model.workbench,
- org.eclipse.e4.ui.workbench
+ org.eclipse.e4.ui.workbench,
+ javax.inject
 Bundle-ActivationPolicy: lazy
 Export-Package: com.faiveley.samng.principal.data;
   uses:="com.faiveley.samng.principal.ihm.listeners,
@@ -305,7 +306,8 @@ Export-Package: com.faiveley.samng.principal.data;
  com.faiveley.samng.principal.sm.segments.ruptures,
  com.faiveley.samng.principal.sm.util;uses:="com.faiveley.samng.principal.sm.data.enregistrement"
 Import-Package: com.faiveley.samng.principal.ihm.progbar,
- com.faiveley.samng.principal.sm.fabriques
+ com.faiveley.samng.principal.sm.fabriques,
+ javax.annotation
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: Faiveley Transport
 Automatic-Module-Name: SAMNG
