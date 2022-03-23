@@ -7,7 +7,9 @@ Bundle-Activator: com.faiveley.samng.vuetabulaire.ihm.ActivatorVueTabulaire
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- SAMNG
+ SAMNG,
+ org.eclipse.e4.ui.workbench,
+ org.eclipse.e4.ui.model.workbench
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: lib/ConfigVuesXMLParser.jar,
  lib/FiltresTabulaireXMLParser.jar,

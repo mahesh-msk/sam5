@@ -14,7 +14,10 @@ Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  SAMNG,
- KVBDecoderPlugin
+ KVBDecoderPlugin,
+ org.eclipse.e4.ui.workbench,
+ org.eclipse.e4.ui.services,
+ org.eclipse.e4.ui.model.workbench
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: VueListePlugin

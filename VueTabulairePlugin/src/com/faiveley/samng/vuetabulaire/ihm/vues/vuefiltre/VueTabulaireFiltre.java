@@ -4,6 +4,8 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.e4.ui.model.application.ui.basic.MPart;
+import org.eclipse.e4.ui.workbench.modeling.EPartService;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.graphics.Rectangle;
@@ -12,14 +14,10 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.ISaveablePart2;
-import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.IWorkbenchPartReference;
-import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.actions.filtre.ActionOpenCloseVue;
 import com.faiveley.samng.principal.ihm.vues.vuesfiltre.AbstractProviderFiltre;
 import com.faiveley.samng.principal.sm.filtres.AFiltreComposant;
@@ -148,18 +146,10 @@ public class VueTabulaireFiltre extends ViewPart implements PropertyChangeListen
 		
 		new ApplyFiltreAction().run();
 		
-		IWorkbenchPage page =
-			PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-			IWorkbenchPartReference myView = page.findViewReference("SAMNG.Vue.Filtre.TabularVueFiltre");
-			page.setPartState(myView, IWorkbenchPage.STATE_MINIMIZED);
-		
-			try {
-			//	Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().hideView(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().findView("SAMNG.Vue.Filtre.TabularVueFiltre"));
-				Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().showView("SAMNG.Vue.Tabulaire");
-			} catch (PartInitException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}	
+		// Must now close the filter window... Use E4 API 
+		EPartService ps  = (EPartService) PlatformUI.getWorkbench().getService(EPartService.class);
+		ps.hidePart(ps.getActivePart());
+
 	}
 
 	@Override
