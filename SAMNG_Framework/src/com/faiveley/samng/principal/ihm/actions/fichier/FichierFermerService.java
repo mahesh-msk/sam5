@@ -135,7 +135,6 @@ public class FichierFermerService {
 			if (!perspective.getId().equals("SAMNG.perspectiveMission") && !perspective.getId().equals("VueMultimediaPlugin.perspectiveVueMultimedia")) {
 				if (perspective.getId().equals("SAMNG.perspectiveAccueil") && sauvegarderVueAccueil) {
 					page.setPerspective(perspective);
-					page.savePerspective();
 				}
 				
 				page.closePerspective(perspective, false, false) ;					

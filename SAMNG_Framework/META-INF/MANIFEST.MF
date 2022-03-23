@@ -14,8 +14,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jface.text,
  org.eclipse.e4.core.contexts,
  org.eclipse.e4.ui.model.workbench,
- org.eclipse.e4.ui.workbench,
- javax.inject
+ org.eclipse.e4.ui.workbench
 Bundle-ActivationPolicy: lazy
 Export-Package: com.faiveley.samng.principal.data;
   uses:="com.faiveley.samng.principal.ihm.listeners,
