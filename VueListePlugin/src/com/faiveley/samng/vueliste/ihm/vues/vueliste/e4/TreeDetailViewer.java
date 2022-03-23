@@ -129,7 +129,7 @@ public class TreeDetailViewer extends TreeViewer {
 						
 						if (var instanceof VariableAnalogique || var instanceof VariableDiscrete) {
 							Message msg = (Message) getTree().getData();
-							((MessageSelection) vueListe.currentSelection).setMessageId(msg.getMessageId());
+							((MessageSelection) vueListe.getSelection()).setMessageId(msg.getMessageId());
 							ActivatorData.getInstance().setSelectedMsg(msg);
 							vueListe.upSelection(true);
 						}

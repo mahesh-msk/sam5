@@ -43,7 +43,7 @@ import com.faiveley.samng.principal.sm.data.variableComposant.JRU.VariableDynami
  */
 public class AbstractSelectionProviderVue extends ViewPart implements ISelectionProvider {
 	protected List<ISelectionChangedListener> selectionListeners;
-	public ISelection currentSelection; 
+	protected ISelection currentSelection; 
 	/**
 	 * permet d'utilisr l'op�rateur change
 	 * false : on cherche la premi�re valeur
