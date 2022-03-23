@@ -51,8 +51,9 @@ public class ShowFilterWindowHelper {
 
 		MPart p = ps.findPart(filterViewID);
 		if (p == null) {
-			// Create the part in the spyWindow...
+			// Create the part in the spyWindow... (not closable)
 			p = ps.createPart(filterViewID);
+			p.setCloseable(false);
 			partStack.getChildren().add(p);
 			partStack.setSelectedElement(p);
 		}
