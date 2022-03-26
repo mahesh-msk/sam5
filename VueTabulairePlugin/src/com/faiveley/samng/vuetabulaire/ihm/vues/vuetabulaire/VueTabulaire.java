@@ -20,11 +20,9 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.actions.filtre.ShowFilterWindowAction;
 import com.faiveley.samng.principal.ihm.actions.vue.SetReferenceAction;
-import com.faiveley.samng.principal.ihm.actions.vue.VueAction;
 import com.faiveley.samng.principal.ihm.listeners.ISearchVariableVirtuele;
 import com.faiveley.samng.principal.ihm.vues.AVueTable;
 import com.faiveley.samng.principal.ihm.vues.FixedColumnTableViewer;
@@ -274,7 +272,7 @@ implements ISearchVariableVirtuele {
 				String badfilter = activator.getConfigurationMng().getFiltreApplique();
 				activator.getConfigurationMng().setFiltreApplique(null);
 				activator.getFiltresProvider().setAppliedFilterName(null);
-				MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().
+				MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().
 						getActiveWorkbenchWindow().getShell(), SWT.ICON_WARNING | SWT.YES);
 				msgBox = new MessageBox(Display.getCurrent().getActiveShell(), SWT.OK);
 				msgBox.setText(Messages.getString("VueTabulaire.filtrenonvalideTitre"));  //$NON-NLS-1$

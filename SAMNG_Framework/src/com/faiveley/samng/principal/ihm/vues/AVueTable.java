@@ -1450,6 +1450,8 @@ public abstract class AVueTable extends AbstractSelectionProviderVue implements 
 		int idFixTable = this.tblFix.getSelectionIndex();
 		int idScrollTable = this.tblFix.scrollingTable.getSelectionIndex();
 		int selectionIndices[] = null;
+		
+		currentSelection = new MessageSelection();
 
 		if (fixtable) {
 			id = idFixTable;

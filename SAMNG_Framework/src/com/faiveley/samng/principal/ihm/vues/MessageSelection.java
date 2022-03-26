@@ -10,7 +10,7 @@ public class MessageSelection implements ISelection {
 	private int[] messageIds = null;
 	private boolean userSentSelection = false;
 	private boolean shouldNotTriggerAudio = false;
-	
+		
 	public MessageSelection() {}
 	
 	public MessageSelection(int msgId) {
@@ -28,6 +28,14 @@ public class MessageSelection implements ISelection {
 	
 	public void setMessagesIds(int[] msgsIds) {
 		this.messageIds = msgsIds;
+	}
+	
+	@Override
+	public String toString() {
+		if (isEmpty())
+		    return "Message Selection : Empty ";
+		else
+			return "Message Selection. Id = " + getMessageId() + " userSent=" + userSentSelection;
 	}
 	
 	public int[] getMessagesIds() {

@@ -1795,6 +1795,9 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	 */
 	protected void updateSelectionMessage(boolean refreshTable) {
 		// When a double click
+		
+		currentSelection = new MessageSelection();
+		
 		int selIdx = this.tblFix.getSelectionIndex();
 		
 		Object[] elements = ((IStructuredContentProvider) this.tblFix.getContentProvider()).getElements(null);

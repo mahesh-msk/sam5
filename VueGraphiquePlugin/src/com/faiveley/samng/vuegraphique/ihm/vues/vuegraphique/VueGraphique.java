@@ -482,8 +482,10 @@ IVbvChangeListener,ISearchVariableListener{
 	}
 
 	protected void updateSelectionMessage() {
+		// Remarque OPCoach : cette methode n'est plus appellée... -> A supprimer ?
 		Message msg = getMessageFromCurrentSelection();
 		if (msg != null){
+			currentSelection = new MessageSelection();
 			((MessageSelection) this.currentSelection).setMessageId(msg.getMessageId());
 			ActivatorData.getInstance().setSelectedMsg(msg);
 		}
@@ -1250,7 +1252,7 @@ IVbvChangeListener,ISearchVariableListener{
 		//r�cup�ration de tous les messages
 		//		List<Message> messages = ActivatorData.getInstance().getVueData()
 		//		.getDataTable().getEnregistrement(0).getMessages();
-
+		currentSelection = new MessageSelection();
 		((MessageSelection)this.currentSelection).setMessageId(event.getCurrentMessage().getMessageId());
 		if(event.isDoubleClick()) {
 			upSelection();

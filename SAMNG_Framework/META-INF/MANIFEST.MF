@@ -306,7 +306,7 @@ Export-Package: com.faiveley.samng.principal.data;
  com.faiveley.samng.principal.sm.util;uses:="com.faiveley.samng.principal.sm.data.enregistrement"
 Import-Package: com.faiveley.samng.principal.ihm.progbar,
  com.faiveley.samng.principal.sm.fabriques,
- javax.annotation
+ javax.annotation;version="1.3.5"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: Faiveley Transport
 Automatic-Module-Name: SAMNG
