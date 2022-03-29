@@ -1358,7 +1358,7 @@ public abstract class AVueTable extends AbstractSelectionProviderVue implements 
 	 */
 	public void marquersListeChangement(int[] msgIds, int[] oldMsgIds) {
 		if (this.tblFix != null) {
-			this.tblFix.refresh();
+			Display.getCurrent().asyncExec(() -> this.tblFix.refresh());
 		}
 	}
 

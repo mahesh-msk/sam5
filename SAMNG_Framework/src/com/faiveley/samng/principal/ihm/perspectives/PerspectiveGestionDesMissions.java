@@ -5,7 +5,7 @@ import org.eclipse.ui.IPerspectiveFactory;
 
 public class PerspectiveGestionDesMissions implements IPerspectiveFactory {
 
-	private static String iD = "SAMNG.perspectiveMission";
+	public static String ID = "SAMNG.perspectiveMission";
 	public static final String VueExplorateur_ID = "SAMNG.Vue.VueExplorateur";
 
 	/**
@@ -36,6 +36,6 @@ public class PerspectiveGestionDesMissions implements IPerspectiveFactory {
 	 * @return iD
 	 */
 	public static String getID() {
-		return iD;
+		return ID;
 	}
 }

@@ -23,6 +23,8 @@ import org.eclipse.ui.WorkbenchException;
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
+import com.faiveley.samng.principal.ihm.perspectives.PerspectiveAccueil;
+import com.faiveley.samng.principal.ihm.perspectives.PerspectiveGestionDesMissions;
 import com.faiveley.samng.principal.ihm.progbar.BarreProgressionChargementFichier;
 import com.faiveley.samng.principal.sm.data.compression.DecompressedFile;
 import com.faiveley.samng.principal.sm.data.tableAssociationComposant.InfosFichierSamNg;
@@ -335,7 +337,7 @@ public class FichierOuvrirAction extends Action {
 								
 			// Launch Gestion Mission perspective to save explorer view
 			try {
-				PlatformUI.getWorkbench().showPerspective("SAMNG.perspectiveMission", PlatformUI.getWorkbench().getActiveWorkbenchWindow()) ;
+				PlatformUI.getWorkbench().showPerspective(PerspectiveGestionDesMissions.ID, PlatformUI.getWorkbench().getActiveWorkbenchWindow()) ;
 			} catch (WorkbenchException e) {
 				e.printStackTrace();
 			}
@@ -357,13 +359,21 @@ public class FichierOuvrirAction extends Action {
 				
 			// Close all perspectives but Gestion Mission
 			for (IPerspectiveDescriptor perspective : perspectives) {								 
-				if (!perspective.getId().equals("SAMNG.perspectiveMission")) {
-					if (perspective.getId().equals("SAMNG.perspectiveAccueil") && !nePasSauvegarderVueAccueil) {
+				String perspId = perspective.getId();
+				if (!perspId.equals(PerspectiveGestionDesMissions.ID)) {
+					if (perspId.equals(PerspectiveAccueil.ID) && !nePasSauvegarderVueAccueil) {
 						page.setPerspective(perspective) ;										
-						page.savePerspective() ;
+						// page.savePerspective() ;
 					}
 					
-					page.closePerspective(perspective, false, false);
+					if (perspId.equals(PerspectiveAccueil.ID))
+					{
+						FichierFermerService.getInstance().hidePerspectiveButKeepItsModel(PerspectiveAccueil.ID, PerspectiveGestionDesMissions.ID);
+					}
+					else
+					{
+						page.closePerspective(perspective, false, false);
+					}
 				}
 				else{
 					gmPerspective = perspective;

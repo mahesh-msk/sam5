@@ -4,7 +4,7 @@ import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 
 public class PerspectiveAccueil implements IPerspectiveFactory {
-	private static String ID = "SAMNG.perspectiveAccueil";
+	public static String ID = "SAMNG.perspectiveAccueil";
 
 	public PerspectiveAccueil() {
 	}

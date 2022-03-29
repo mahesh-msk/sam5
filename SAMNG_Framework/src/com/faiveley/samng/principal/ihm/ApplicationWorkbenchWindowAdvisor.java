@@ -117,7 +117,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor im
 		
 		// La perspective Accueil doit contenir au minimum la vue Liste dans tous les cas de figure et notamment au premier lancement de lapplication suite � une installation Issue#878
 		for (IPerspectiveDescriptor perspective : perspectives) {
-			if (perspective.getId().equals("SAMNG.perspectiveAccueil")) {
+			if (perspective.getId().equals(PerspectiveAccueil.ID)) {
 				IViewReference[] views = page.getViewReferences();
 				boolean printListView = true;
 				
