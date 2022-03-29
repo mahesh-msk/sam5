@@ -1264,6 +1264,9 @@ public abstract class AVueTable extends AbstractSelectionProviderVue implements 
 	 */
 	public void selectionChanged(IWorkbenchPart part, ISelection selection) {
 
+		if (tblFix == null)
+			return; 
+		
 		// positionnement offset
 		if (GestionLineCommandParameters.getIndiceMsg() != -1 && oneTimeOffset) {
 			try {
