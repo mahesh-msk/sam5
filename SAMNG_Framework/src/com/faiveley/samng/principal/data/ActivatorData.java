@@ -10,8 +10,8 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ApplicationActionBarAdvisor;
 import com.faiveley.samng.principal.ihm.actions.vue.VueAction;
 import com.faiveley.samng.principal.ihm.listeners.IDataChangedListener;
@@ -35,7 +35,7 @@ import com.faiveley.samng.principal.sm.missions.explorersingletons.activationexp
 import com.faiveley.samng.principal.sm.missions.explorersingletons.activator.ActivatorDataExplorer;
 
 public class ActivatorData implements Cloneable {
-	/* Constante définie ici et non pas dans le plugin VueTabulairePlugin, car doit être accessible depuis la méthode notifyDuplicateFiltreListeners */
+	/* Constante dï¿½finie ici et non pas dans le plugin VueTabulairePlugin, car doit ï¿½tre accessible depuis la mï¿½thode notifyDuplicateFiltreListeners */
 	public static final String TABULAR_VUE_FILTRE_ID = "SAMNG.Vue.Filtre.TabularVueFiltre";
 	
 	private static ActivatorData instance = new ActivatorData();
@@ -345,7 +345,7 @@ public class ActivatorData implements Cloneable {
 	 * Notify the listeners
 	 */
 	public synchronized void notifyDataListeners() {
-		Display display = Activator.getDefault().getWorkbench().getDisplay();
+		Display display = PlatformUI.getWorkbench().getDisplay();
 
 		if (display != null) {
 			if (display.getThread() == Thread.currentThread()) {
@@ -486,25 +486,25 @@ public class ActivatorData implements Cloneable {
 	}
 
 	/**
-	 * Méthode qui averti les fenetre receptrice d'une duplication de filtre
+	 * Mï¿½thode qui averti les fenetre receptrice d'une duplication de filtre
 	 * 
 	 * @param filtre
 	 */
 	public synchronized void notifyDuplicateFiltreListeners(List<AFiltreComposant> listeFiltres) {
 		/* Attention: correctif non robuste.
-		 * Le cas où aucun listener n'a été enregistré (liste vide) correspond à une duplication d'un filtre (graphique vers tabulaire). */
+		 * Le cas oï¿½ aucun listener n'a ï¿½tï¿½ enregistrï¿½ (liste vide) correspond ï¿½ une duplication d'un filtre (graphique vers tabulaire). */
 		if (this.listenersDuplication.size() == 0) {
-			/* La vue filtre tabulaire n'a jamais été ouverte pour le fichier courant.
-			 * Son ouverture est nécessaire afin d'instancier l'objet vue qui faut office de listener. */
+			/* La vue filtre tabulaire n'a jamais ï¿½tï¿½ ouverte pour le fichier courant.
+			 * Son ouverture est nï¿½cessaire afin d'instancier l'objet vue qui faut office de listener. */
 			
-			IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+			IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 			try {
 				window.getActivePage().showView(TABULAR_VUE_FILTRE_ID, null, IWorkbenchPage.VIEW_CREATE);
 			} catch (PartInitException e) {
 				e.printStackTrace();
 			}
 			
-			/* À présent, un listener a été enregistré et la duplication est possible */
+			/* ï¿½ prï¿½sent, un listener a ï¿½tï¿½ enregistrï¿½ et la duplication est possible */
 		}
 		
 		for (IDuplicationFiltreListener listener : this.listenersDuplication) {

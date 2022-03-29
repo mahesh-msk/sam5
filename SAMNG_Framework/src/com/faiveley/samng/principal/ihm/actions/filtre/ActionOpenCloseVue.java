@@ -10,7 +10,6 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.actions.vue.VueAction;
 
@@ -49,7 +48,7 @@ public class ActionOpenCloseVue extends VueAction {
 	
 	/** */
 	public final void run() {
-        IWorkbenchWindow window = Activator.getDefault().getWorkbench()
+        IWorkbenchWindow window = PlatformUI.getWorkbench()
 									.getActiveWorkbenchWindow();
 		try {
 			IViewReference[] ivr = window.getActivePage()

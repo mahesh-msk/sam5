@@ -14,6 +14,7 @@ import java.util.Set;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.actions.profil.GestionnaireProfil;
@@ -180,7 +181,7 @@ public class GestionnairePool {
 			if(descr.getTypeVariable()==TypeVariable.STRUCTURE_DYNAMIQUE || descr.getTypeVariable()==TypeVariable.TABLEAU_DYNAMIQUE||descr.getTypeVariable()==TypeVariable.CHAINE_DYNAMIQUE){
 				variablesDynamiquesMap.put(identif.getCode(),var);
 			}
-			//ajout des valeurs correspondantes à la valeur "0" cf point 4 du Lot A septembre 2010
+			//ajout des valeurs correspondantes ï¿½ la valeur "0" cf point 4 du Lot A septembre 2010
 			if(descr.getTypeVariable()==TypeVariable.VAR_DISCRETE){
 				TableValeurLabel valeurLabel = ((DescripteurVariableDiscrete)var.getDescriptor()).getLabels();
 
@@ -285,7 +286,7 @@ public class GestionnairePool {
 					if(name.equals(subVar.getDescriptor().getM_AIdentificateurComposant().getNom())
 							||name.equals(subVar.getDescriptor().getNomUtilisateur().getNomUtilisateur(Activator.getDefault().getCurrentLanguage()))) {
 						retVar = subVar;
-						// FIXME On set le parent ici mais normalement il devrait être déjà présent
+						// FIXME On set le parent ici mais normalement il devrait ï¿½tre dï¿½jï¿½ prï¿½sent
 						retVar.setParent(variableComposite);
 						break;
 					}
@@ -482,8 +483,8 @@ public class GestionnairePool {
 	}
 
 	/**
-	 * Méthode permettatn de tester si le repere vitesse est présent dans le parcours
-	 * @return un booléen
+	 * Mï¿½thode permettatn de tester si le repere vitesse est prï¿½sent dans le parcours
+	 * @return un boolï¿½en
 	 */
 	public boolean isRepereVitesseRenseignee(){
 		boolean vitFind=false;
@@ -491,7 +492,7 @@ public class GestionnairePool {
 		if(vitInst!=null){
 
 
-			Iterator<?> i=getMessagesVariables().iterator(); // on crée un Iterator pour parcourir notre HashSet
+			Iterator<?> i=getMessagesVariables().iterator(); // on crï¿½e un Iterator pour parcourir notre HashSet
 			while(i.hasNext() && !vitFind) // tant qu'on a un suivant
 			{
 				AVariableComposant var=(AVariableComposant)i.next(); // on affiche le suivant
@@ -509,7 +510,7 @@ public class GestionnairePool {
 	public void displayMsgBoxVitesseNonPresente(){
 		if (!flagDisplayMsg) {
 			flagDisplayMsg=true;
-			MessageBox messageBox = new MessageBox(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(), SWT.ICON_INFORMATION);
+			MessageBox messageBox = new MessageBox(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), SWT.ICON_INFORMATION);
 			messageBox.setMessage(com.faiveley.samng.principal.sm.data.enregistrement.Messages.getString("GestionnairePool.0")+" "+ Messages.getString("GestionnairePool.1"));
 			messageBox.open();
 		}
@@ -537,7 +538,7 @@ public class GestionnairePool {
 				
 				Set<AVariableComposant> setVariableRenseignees = getVariablesRenseignees();
 				
-				//récupération des codes des variables renseignées
+				//rï¿½cupï¿½ration des codes des variables renseignï¿½es
 				List<Integer> listeCodeVarRenseigne = new ArrayList<Integer>();
 				for (AVariableComposant aVariableComposant : setVariableRenseignees) {
 					Integer code;
@@ -554,13 +555,13 @@ public class GestionnairePool {
 					}
 				}
 				
-				//récupération des code de toutes les variables du xml
+				//rï¿½cupï¿½ration des code de toutes les variables du xml
 				List<Integer> listeCodeVarTotal = new ArrayList<Integer>();
 				for (AVariableComposant aVariableComposant : collectionAllVariables) {
 					listeCodeVarTotal.add(aVariableComposant.getDescriptor().getM_AIdentificateurComposant().getCode());
 				}
 				
-				//suppression des codes var des variables renseignées pour obenir les code de variables non renseignees
+				//suppression des codes var des variables renseignï¿½es pour obenir les code de variables non renseignees
 				listeCodeVarTotal.removeAll(listeCodeVarRenseigne);
 				
 				variablesNonRenseignees = new HashSet<AVariableComposant>();
@@ -596,7 +597,7 @@ public class GestionnairePool {
 				if (sousVarCode != null) {
 					listeCodeVarRenseigne.add(sousVarCode);
 				}
-				// recursivité
+				// recursivitï¿½
 				if (sousVar instanceof VariableComposite) {
 					addSousVariableToListeCodeVarRenseigne(collectionAllVariables,
 							listeCodeVarRenseigne, sousVar);

@@ -44,6 +44,7 @@ import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -219,7 +220,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	/** D�claration d'action */
 	public void makeActions(){
 		// R�cup�ration de la fenetre active
-		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+		IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 
 		// Ajout des actions
 		synchroVuesAction = new Action() {
@@ -422,7 +423,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 			String badfilter = activatorVueListe.getConfigurationMng().getFiltreApplique();
 			activatorVueListe.getConfigurationMng().setFiltreApplique(null);
 			activatorVueListe.getFiltresProvider().setAppliedFilterName(null);
-			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(), SWT.ICON_WARNING | SWT.YES);
+			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), SWT.ICON_WARNING | SWT.YES);
 			msgBox = new MessageBox(Display.getCurrent().getActiveShell(), SWT.OK);
 			msgBox.setText(Messages.getString("VueListe.filtrenonvalideTitre"));
 			msgBox.setMessage(badfilter + " : " + Messages.getString("VueListe.filtrenonvalideMessage2"));
@@ -731,7 +732,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 			msgErr[0] = com.faiveley.samng.principal.ihm.vues.Messages.getString("AVueTable.25");
 		}
 		
-		if (Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart() == VueListe.this.getSite().getPart()) {
+		if (PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart() == VueListe.this.getSite().getPart()) {
 			MessageBox msgBox = new MessageBox(VueListe.this.getSite().getShell(), SWT.ICON_WARNING | SWT.OK);
 			msgBox.setText("");
 			msgBox.setMessage(msgErr[0]);

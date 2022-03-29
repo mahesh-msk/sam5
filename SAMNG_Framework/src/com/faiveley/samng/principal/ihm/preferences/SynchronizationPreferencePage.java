@@ -7,15 +7,16 @@ import java.io.LineNumberReader;
 import java.net.URL;
 
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
+import org.eclipse.jface.preference.RadioGroupFieldEditor;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
-import org.eclipse.jface.preference.RadioGroupFieldEditor;
+
 import com.faiveley.samng.principal.ihm.Activator;
-import org.eclipse.jface.preference.BooleanFieldEditor;
 
 public class SynchronizationPreferencePage extends FieldEditorPreferencePage implements
 		IWorkbenchPreferencePage {
@@ -77,7 +78,7 @@ public class SynchronizationPreferencePage extends FieldEditorPreferencePage imp
 	@Override
 	public boolean performOk() {
 		/**
-		 * params par défaut dans SAM 5.ini:
+		 * params par dï¿½faut dans SAM 5.ini:
 		-vmargs
 		-Xms64m
 		-Xmx64m

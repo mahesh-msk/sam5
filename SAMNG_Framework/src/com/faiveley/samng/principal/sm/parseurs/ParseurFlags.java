@@ -6,8 +6,6 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 
-import noNamespace.ListeFlagsDocument;
-
 import com.faiveley.samng.principal.logging.SamngLogger;
 import com.faiveley.samng.principal.sm.data.flag.Flag;
 import com.faiveley.samng.principal.sm.data.flag.GestionnaireFlags;
@@ -15,10 +13,12 @@ import com.faiveley.samng.principal.sm.missions.explorersingletons.activationexp
 import com.faiveley.samng.principal.sm.missions.explorersingletons.parseurs.ParseurFlagsExplorer;
 import com.faiveley.samng.principal.sm.repertoires.RepertoiresAdresses;
 
+import noNamespace.ListeFlagsDocument;
+
 /**
  * @author Graton Olivier
  * @version 1.0
- * @created 06-déc.-2007 10:07:33
+ * @created 06-dï¿½c.-2007 10:07:33
  */
 public class ParseurFlags implements IParseurInterface {
 

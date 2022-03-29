@@ -11,15 +11,6 @@ import java.util.regex.Pattern;
 
 import javax.xml.parsers.ParserConfigurationException;
 
-import net.sf.paperclips.GridPrint;
-import net.sf.paperclips.ImagePrint;
-import net.sf.paperclips.PageDecoration;
-import net.sf.paperclips.PageNumber;
-import net.sf.paperclips.PagePrint;
-import net.sf.paperclips.Print;
-import net.sf.paperclips.ScalePrint;
-import net.sf.paperclips.TextPrint;
-
 import org.eclipse.jface.action.Action;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
@@ -42,6 +33,15 @@ import com.faiveley.samng.principal.sm.data.tableAssociationComposant.InfosFichi
 import com.faiveley.samng.principal.sm.fabriques.FabriqueParcours;
 import com.faiveley.samng.principal.sm.repertoires.RepertoiresAdresses;
 
+import net.sf.paperclips.GridPrint;
+import net.sf.paperclips.ImagePrint;
+import net.sf.paperclips.PageDecoration;
+import net.sf.paperclips.PageNumber;
+import net.sf.paperclips.PagePrint;
+import net.sf.paperclips.Print;
+import net.sf.paperclips.ScalePrint;
+import net.sf.paperclips.TextPrint;
+
 /**
  * Classe responsable de la capture d'une vue
  * 
@@ -62,12 +62,12 @@ public class ImprimerVueAction extends Action {
 	}
 
 	/**
-	 * Méthode d'ouverture de la fenetre de dialogue de capture de la vue sur
+	 * Mï¿½thode d'ouverture de la fenetre de dialogue de capture de la vue sur
 	 * laquelle on a le focus
 	 */
 	public final void run() {
 		try {
-			// récupération du widget de contenu de la vue
+			// rï¿½cupï¿½ration du widget de contenu de la vue
 			Composite contenu = getActiveViewContent();
 			if (contenu == null)
 				return;
@@ -158,7 +158,7 @@ public class ImprimerVueAction extends Action {
 	}
 
 	private Composite getActiveViewContent() {
-		// récupération de la vue sur laquelle on a le focus
+		// rï¿½cupï¿½ration de la vue sur laquelle on a le focus
 		try {
 			IWorkbenchPart part = this.window.getActivePage().getActivePart();
 			if (part == null)
@@ -250,7 +250,7 @@ public class ImprimerVueAction extends Action {
 	}
 
 	/**
-	 * Méthode de création de la chaine affichée dans l'entete d'une impression
+	 * Mï¿½thode de crï¿½ation de la chaine affichï¿½e dans l'entete d'une impression
 	 * 
 	 * @return
 	 * @throws ParserConfigurationException
@@ -266,10 +266,10 @@ public class ImprimerVueAction extends Action {
 
 		String nomFichierXmlAssocie = " " + infos.getNomFichierXml();
 
-		// la chaine du nom du fichier xml contient des caractères de bourrage :
-		// unicode 0x0 qui ne permettent pas de concaténer
+		// la chaine du nom du fichier xml contient des caractï¿½res de bourrage :
+		// unicode 0x0 qui ne permettent pas de concatï¿½ner
 		// cette chaine avec autre chose
-		// solution : suppression des caractères 0x0
+		// solution : suppression des caractï¿½res 0x0
 		Pattern pattern = null;
 		Matcher matcher = null;
 		pattern = Pattern.compile("[\\000]*");
@@ -291,7 +291,7 @@ public class ImprimerVueAction extends Action {
 	}
 
 	/**
-	 * Méthode de création de la chaine affichée dans le pied de page d'une
+	 * Mï¿½thode de crï¿½ation de la chaine affichï¿½e dans le pied de page d'une
 	 * impression
 	 * 
 	 * @return

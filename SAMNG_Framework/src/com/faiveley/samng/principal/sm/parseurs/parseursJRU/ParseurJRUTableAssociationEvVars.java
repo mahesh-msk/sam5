@@ -8,13 +8,6 @@ import java.util.Arrays;
 
 import org.apache.xmlbeans.XmlException;
 
-import xmlbeans.jru.tableEvtVar.ConfigurationJruDocument;
-import xmlbeans.jru.tableEvtVar.ConfigurationJruDocument.ConfigurationJru;
-import xmlbeans.jru.tableEvtVar.EvenementVariablesDocument.EvenementVariables;
-import xmlbeans.jru.tableEvtVar.ListeVariablesJruDocument.ListeVariablesJru;
-import xmlbeans.jru.tableEvtVar.TableEvenementsVariablesDocument.TableEvenementsVariables;
-import xmlbeans.jru.tableEvtVar.VariableJruDocument.VariableJru;
-
 import com.faiveley.samng.principal.sm.data.descripteur.ADescripteurComposant;
 import com.faiveley.samng.principal.sm.data.descripteur.DescripteurComposite;
 import com.faiveley.samng.principal.sm.data.descripteur.DescripteurEvenement;
@@ -27,6 +20,13 @@ import com.faiveley.samng.principal.sm.missions.explorersingletons.activationexp
 import com.faiveley.samng.principal.sm.missions.explorersingletons.parseurs.ParseurJRUTableAssociationEvVarsExplorer;
 import com.faiveley.samng.principal.sm.parseurs.IParseurInterface;
 import com.faiveley.samng.principal.sm.parseurs.parseurXML.ParseurUtils;
+
+import xmlbeans.jru.tableEvtVar.ConfigurationJruDocument;
+import xmlbeans.jru.tableEvtVar.ConfigurationJruDocument.ConfigurationJru;
+import xmlbeans.jru.tableEvtVar.EvenementVariablesDocument.EvenementVariables;
+import xmlbeans.jru.tableEvtVar.ListeVariablesJruDocument.ListeVariablesJru;
+import xmlbeans.jru.tableEvtVar.TableEvenementsVariablesDocument.TableEvenementsVariables;
+import xmlbeans.jru.tableEvtVar.VariableJruDocument.VariableJru;
 
 public class ParseurJRUTableAssociationEvVars implements IParseurInterface {
 

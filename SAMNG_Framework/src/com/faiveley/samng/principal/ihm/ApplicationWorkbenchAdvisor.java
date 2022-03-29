@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.application.IWorkbenchConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchAdvisor;
@@ -41,12 +42,12 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 	}
 
 	public void initialize(IWorkbenchConfigurer configurer) {
-		// Utiliser la valeur 'true' pour que l'état du workbench soit sauvegardé.
+		// Utiliser la valeur 'true' pour que l'ï¿½tat du workbench soit sauvegardï¿½.
 		configurer.setSaveAndRestore(false);
-		// Attention, si sauvegarde de l'état, la méthode createInitialLayout de la
-		// perspective sera appelée uniquement au premier lancement de l'application.
-		// Il est alors préférable de prévoir une entrée dans un menu permettant
-		// à l'utilisateur de réinitialiser la vue avec le code suivant :
+		// Attention, si sauvegarde de l'ï¿½tat, la mï¿½thode createInitialLayout de la
+		// perspective sera appelï¿½e uniquement au premier lancement de l'application.
+		// Il est alors prï¿½fï¿½rable de prï¿½voir une entrï¿½e dans un menu permettant
+		// ï¿½ l'utilisateur de rï¿½initialiser la vue avec le code suivant :
 		//      PlatformUI.getWorkbench().getActiveWorkbenchWindow().
 		//                                    getActivePage().resetPerspective();
 	}
@@ -75,7 +76,7 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
 			FichierFermerAction ffa = null ;
 			ffa = new FichierFermerAction(
-					Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(), 
+					PlatformUI.getWorkbench().getActiveWorkbenchWindow(), 
 					"");
 			ffa.run();
 		}

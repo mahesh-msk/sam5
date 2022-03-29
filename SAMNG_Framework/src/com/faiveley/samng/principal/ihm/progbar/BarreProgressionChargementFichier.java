@@ -227,7 +227,7 @@ public class BarreProgressionChargementFichier extends Job implements PropertyCh
 							
 							for (String perspectiveID : openPerspectivesID) {								
 								PlatformUI.getWorkbench().showPerspective(perspectiveID, 
-								Activator.getDefault().getWorkbench().getActiveWorkbenchWindow()) ;							
+								PlatformUI.getWorkbench().getActiveWorkbenchWindow()) ;							
 							}
 						
 							// Set perspective active : cmd line or switch between Gestion Mission and Accueil
@@ -241,7 +241,7 @@ public class BarreProgressionChargementFichier extends Job implements PropertyCh
 							// If the active perspective wasn't Gestion Mission, active the one before
 							if (!activePerspectiveID.equals("SAMNG.perspectiveMission")) {
 								PlatformUI.getWorkbench().showPerspective(activePerspectiveID, 
-								Activator.getDefault().getWorkbench().getActiveWorkbenchWindow());	
+								PlatformUI.getWorkbench().getActiveWorkbenchWindow());	
 							}
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -286,7 +286,7 @@ public class BarreProgressionChargementFichier extends Job implements PropertyCh
 			if (nbErrors > 0) {
 				Display.getDefault().syncExec(new Runnable(){
 					public void run() {
-						MessageDialog.openWarning(Activator.getDefault().getWorkbench().getDisplay().getActiveShell(), com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreursTitre"), com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreursMessage"));
+						MessageDialog.openWarning(PlatformUI.getWorkbench().getDisplay().getActiveShell(), com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreursTitre"), com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreursMessage"));
 					}
 				});
 			}
@@ -301,7 +301,7 @@ public class BarreProgressionChargementFichier extends Job implements PropertyCh
 		if ((!GestionnairePool.getInstance().isRepereVitesseRenseignee())&&(!BridageFormats.getInstance().getFormatFichierOuvert(foa.fileName).equals(FormatSAM.JRU))) {
 			Display.getDefault().syncExec(new Runnable(){
 				public void run() {
-					MessageDialog.openWarning(Activator.getDefault().getWorkbench().getDisplay().getActiveShell(),com.faiveley.samng.principal.sm.data.enregistrement.Messages.getString("GestionnairePool.2"), com.faiveley.samng.principal.sm.data.enregistrement.Messages.getString("GestionnairePool.0") + " " + Messages.getString("GestionnairePool.1"));
+					MessageDialog.openWarning(PlatformUI.getWorkbench().getDisplay().getActiveShell(),com.faiveley.samng.principal.sm.data.enregistrement.Messages.getString("GestionnairePool.2"), com.faiveley.samng.principal.sm.data.enregistrement.Messages.getString("GestionnairePool.0") + " " + Messages.getString("GestionnairePool.1"));
 				}
 			});
 		}
@@ -315,8 +315,8 @@ public class BarreProgressionChargementFichier extends Job implements PropertyCh
 				ActivatorData.getInstance().getBarAdvisor().setActionsEnabled(false);
 				ChargeurParcours.loadBinaryFile(BarreProgressionChargementFichier.this.foa.fileName, BarreProgressionChargementFichier.this.foa.deb, BarreProgressionChargementFichier.this.foa.fin, BarreProgressionChargementFichier.this.foa.lancerExplorer);
 			} catch (ParseurXMLException ex){
-				// Erreurs relatives à l'ouverture du fichier xml associé
-				// L'exception levé est générique mais le texte précis de l'erreur est dans la vue des défauts
+				// Erreurs relatives ï¿½ l'ouverture du fichier xml associï¿½
+				// L'exception levï¿½ est gï¿½nï¿½rique mais le texte prï¿½cis de l'erreur est dans la vue des dï¿½fauts
 				
 				return 2;
 			} catch (OutOfMemoryError e) {

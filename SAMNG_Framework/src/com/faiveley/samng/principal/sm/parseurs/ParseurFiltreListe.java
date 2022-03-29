@@ -4,14 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import noNamespace.FiltreVuelisteDocument.FiltreVueliste;
-import noNamespace.LigneEvenementDocument.LigneEvenement;
-import noNamespace.LigneVariableDocument.LigneVariable;
-import noNamespace.ListeFiltresVuelisteDocument;
-import noNamespace.ListeFiltresVuelisteDocument.ListeFiltresVueliste;
-import noNamespace.ListeLignesEvenementDocument.ListeLignesEvenement;
-import noNamespace.ListeLignesVariableDocument.ListeLignesVariable;
-
 import org.apache.xmlbeans.XmlAnySimpleType;
 import org.apache.xmlbeans.XmlAnySimpleType.Factory;
 import org.apache.xmlbeans.XmlException;
@@ -22,6 +14,14 @@ import com.faiveley.samng.principal.sm.filtres.FiltreComposite;
 import com.faiveley.samng.principal.sm.filtres.LigneEvenementFiltre;
 import com.faiveley.samng.principal.sm.filtres.TypeFiltre;
 import com.faiveley.samng.principal.sm.filtres.variables.LigneVariableFiltreComposite;
+
+import noNamespace.FiltreVuelisteDocument.FiltreVueliste;
+import noNamespace.LigneEvenementDocument.LigneEvenement;
+import noNamespace.LigneVariableDocument.LigneVariable;
+import noNamespace.ListeFiltresVuelisteDocument;
+import noNamespace.ListeFiltresVuelisteDocument.ListeFiltresVueliste;
+import noNamespace.ListeLignesEvenementDocument.ListeLignesEvenement;
+import noNamespace.ListeLignesVariableDocument.ListeLignesVariable;
 
 /**
  * @author Graton Olivier

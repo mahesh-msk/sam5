@@ -9,20 +9,6 @@ import java.util.regex.Pattern;
 import javax.swing.JTable;
 import javax.xml.parsers.ParserConfigurationException;
 
-import net.sf.paperclips.GridPrint;
-import net.sf.paperclips.ImagePrint;
-import net.sf.paperclips.Margins;
-import net.sf.paperclips.PageDecoration;
-import net.sf.paperclips.PageNumber;
-import net.sf.paperclips.PageNumberFormat;
-import net.sf.paperclips.PageNumberPrint;
-import net.sf.paperclips.PagePrint;
-import net.sf.paperclips.PaperClips;
-import net.sf.paperclips.Print;
-import net.sf.paperclips.PrintJob;
-import net.sf.paperclips.ScalePrint;
-import net.sf.paperclips.TextPrint;
-
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
@@ -38,8 +24,22 @@ import com.faiveley.samng.principal.sm.VersionUtils;
 import com.faiveley.samng.principal.sm.data.tableAssociationComposant.InfosFichierSamNg;
 import com.faiveley.samng.principal.sm.fabriques.FabriqueParcours;
 
+import net.sf.paperclips.GridPrint;
+import net.sf.paperclips.ImagePrint;
+import net.sf.paperclips.Margins;
+import net.sf.paperclips.PageDecoration;
+import net.sf.paperclips.PageNumber;
+import net.sf.paperclips.PageNumberFormat;
+import net.sf.paperclips.PageNumberPrint;
+import net.sf.paperclips.PagePrint;
+import net.sf.paperclips.PaperClips;
+import net.sf.paperclips.Print;
+import net.sf.paperclips.PrintJob;
+import net.sf.paperclips.ScalePrint;
+import net.sf.paperclips.TextPrint;
+
 /**
- * Classe de gestion des impression de Sam Peut etre utilisée pour imprimer les
+ * Classe de gestion des impression de Sam Peut etre utilisï¿½e pour imprimer les
  * vues, l'ecran etc...
  * 
  * @author Olivier
@@ -60,7 +60,7 @@ public class GestionnaireImpression {
 	}
 
 	/**
-	 * Méthode d'affichage de l'impression
+	 * Mï¿½thode d'affichage de l'impression
 	 * 
 	 * @param window
 	 */
@@ -95,7 +95,7 @@ public class GestionnaireImpression {
 	}
 
 	/**
-	 * Méthode de création de la structure à imprimer : entete, corps, pied de
+	 * Mï¿½thode de crï¿½ation de la structure ï¿½ imprimer : entete, corps, pied de
 	 * page
 	 * 
 	 * @return
@@ -115,7 +115,7 @@ public class GestionnaireImpression {
 	}
 
 	/**
-	 * Méthode de création de la structure d'entete
+	 * Mï¿½thode de crï¿½ation de la structure d'entete
 	 * 
 	 * @return
 	 */
@@ -135,7 +135,7 @@ public class GestionnaireImpression {
 	}
 
 	/**
-	 * Méthode de création de la structure du pied de page
+	 * Mï¿½thode de crï¿½ation de la structure du pied de page
 	 * 
 	 * @return
 	 */
@@ -193,7 +193,7 @@ public class GestionnaireImpression {
 	}
 
 	/**
-	 * Méthode de création de la chaine affichée dans l'entete d'une impression
+	 * Mï¿½thode de crï¿½ation de la chaine affichï¿½e dans l'entete d'une impression
 	 * 
 	 * @return
 	 * @throws ParserConfigurationException
@@ -214,10 +214,10 @@ public class GestionnaireImpression {
 			String nomFichierXmlAssocie = " " + infos.getNomFichierXml();
 			String crcFichierXmlAssocie = "  "	+ Messages.getString("ImpressionVueTableau.5") + " : " + infos.getCRCFichierXML();
 			
-			// la chaine du nom du fichier xml contient des caractères de bourrage :
-			// unicode 0x0 qui ne permettent pas de concaténer
+			// la chaine du nom du fichier xml contient des caractï¿½res de bourrage :
+			// unicode 0x0 qui ne permettent pas de concatï¿½ner
 			// cette chaine avec autre chose
-			// solution : suppression des caractères 0x0
+			// solution : suppression des caractï¿½res 0x0
 			Pattern pattern = null;
 			Matcher matcher = null;
 			pattern = Pattern.compile("[\\000]*");
@@ -236,7 +236,7 @@ public class GestionnaireImpression {
 	}
 
 	/**
-	 * Méthode de création de la chaine affichée dans le pied de page d'une
+	 * Mï¿½thode de crï¿½ation de la chaine affichï¿½e dans le pied de page d'une
 	 * impression
 	 * 
 	 * @return

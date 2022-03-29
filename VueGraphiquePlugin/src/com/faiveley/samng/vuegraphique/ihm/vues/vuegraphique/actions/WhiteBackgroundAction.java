@@ -3,8 +3,8 @@ package com.faiveley.samng.vuegraphique.ihm.vues.vuegraphique.actions;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.vues.MessageSelection;
 import com.faiveley.samng.vuegraphique.ihm.ActivatorVueGraphique;
 import com.faiveley.samng.vuegraphique.ihm.vues.vuegraphique.VueGraphique;
@@ -32,7 +32,7 @@ public class WhiteBackgroundAction extends VueGraphicAction {
 		}
 		vueGraphique.refresh();
 		
-		final IWorkbenchPart activePart = Activator.getDefault().getWorkbench()
+		final IWorkbenchPart activePart = PlatformUI.getWorkbench()
 		.getActiveWorkbenchWindow().getActivePage().getActivePart();
 		
 		if (activePart instanceof ISelectionProvider) {

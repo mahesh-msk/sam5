@@ -6,12 +6,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.List;
 
-import noNamespace.ColonneDocument.Colonne;
-import noNamespace.ConfigurationColonnesDocument.ConfigurationColonnes;
-import noNamespace.FiltreAppliqueDocument.FiltreApplique;
-import noNamespace.VueDocument;
-import noNamespace.VueDocument.Vue;
-
 import org.apache.xmlbeans.XmlAnySimpleType;
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
@@ -19,10 +13,16 @@ import org.apache.xmlbeans.XmlOptions;
 import com.faiveley.samng.principal.ihm.vues.configuration.ConfigurationColonne;
 import com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.GestionnaireVueDetaillee;
 
+import noNamespace.ColonneDocument.Colonne;
+import noNamespace.ConfigurationColonnesDocument.ConfigurationColonnes;
+import noNamespace.FiltreAppliqueDocument.FiltreApplique;
+import noNamespace.VueDocument;
+import noNamespace.VueDocument.Vue;
+
 /**
  * @author Graton Olivier
  * @version 1.0
- * @created 17-déc.-2007 11:53:07
+ * @created 17-dï¿½c.-2007 11:53:07
  */
 public class ParseurConfigurationVueDetaillee{
 	private VueDocument vueDocument;

@@ -3,8 +3,8 @@ package com.faiveley.samng.vueliste.ihm.actions.vue.e4;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.vues.search.ASearchDialog;
 import com.faiveley.samng.vueliste.ihm.dialogs.e4.SearchVariableListe;
@@ -39,7 +39,7 @@ public class RechercherVariableListeAction extends Action{
 	 * Runs the action set for Search By Variable 
 	 * */
 	public void run() {
-		ASearchDialog dlg = new SearchVariableListe(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell());
+		ASearchDialog dlg = new SearchVariableListe(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell());
 		dlg.open();
 	}
 }

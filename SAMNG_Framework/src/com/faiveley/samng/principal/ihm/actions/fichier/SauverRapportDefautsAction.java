@@ -13,8 +13,8 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.actions.captures.ICapturable;
 
@@ -34,22 +34,22 @@ public class SauverRapportDefautsAction extends Action{
 	}
 
 	/**
-	 * Méthode d'ouverture de la fenetre de dialogue de capture de la vue
+	 * Mï¿½thode d'ouverture de la fenetre de dialogue de capture de la vue
 	 * sur laquelle on a le focus
 	 */
 	public final void run() {
-		//récupération du widget  de contenu de la vue
+		//rï¿½cupï¿½ration du widget  de contenu de la vue
 		Composite contenu = getActiveViewContent();
 		Control c[] = contenu.getChildren();
 //		 creates a file dialog to open the binary files
 		FileDialog dialog = new FileDialog(this.window.getShell(), SWT.SAVE);
 
-		// définition des extensions visibles
+		// dï¿½finition des extensions visibles
 		dialog.setFilterExtensions(new String[] { "*.txt" });  //$NON-NLS-1$
 
 		dialog.setFilterNames(new String[] { "*.txt" });  //$NON-NLS-1$
 
-		// récupération du nom du fichier et du chemin
+		// rï¿½cupï¿½ration du nom du fichier et du chemin
 		String cheminFichier = dialog.open();
 
 		String nomFichier = dialog.getFileName();
@@ -65,7 +65,7 @@ public class SauverRapportDefautsAction extends Action{
 			FileWriter fileWriter = new  FileWriter(cheminFichier);
 			fileWriter.write(((Text)c[0]).getText());
 			fileWriter.close();
-			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(), 
+			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), 
 					SWT.ICON_INFORMATION | SWT.OK);
 			msgBox.setText(Messages.getString("SauverRapportDefautsAction.1")); //$NON-NLS-1$
 			msgBox.setMessage(Messages.getString("SauverRapportDefautsAction.0")); //$NON-NLS-1$
@@ -81,7 +81,7 @@ public class SauverRapportDefautsAction extends Action{
 	}
 	
 	private Composite getActiveViewContent() {
-		//récupération de la vue sur laquelle on a le focus
+		//rï¿½cupï¿½ration de la vue sur laquelle on a le focus
 		try {
 			IWorkbenchPart part = this.window.getActivePage().getActivePart();
 			if(part == null) 

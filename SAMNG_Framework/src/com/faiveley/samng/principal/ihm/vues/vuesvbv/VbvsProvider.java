@@ -15,6 +15,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -142,7 +143,7 @@ IRepereChangedListener {
 	}
 
 	/**
-	 * Création d'une nouvelle VBV
+	 * Crï¿½ation d'une nouvelle VBV
 	 * 
 	 */
 	public void createNewVbv() {
@@ -172,7 +173,7 @@ IRepereChangedListener {
 	}
 
 	/**
-	 * Mise à jour de la liste des variables virtuelles dans la vue
+	 * Mise ï¿½ jour de la liste des variables virtuelles dans la vue
 	 * 
 	 * @param le
 	 *            listenner
@@ -198,8 +199,8 @@ IRepereChangedListener {
 	}
 
 	/**
-	 * Méthode de récupération de la liste des variables pouvant être
-	 * selectionnées dans la vue des VBVS
+	 * Mï¿½thode de rï¿½cupï¿½ration de la liste des variables pouvant ï¿½tre
+	 * selectionnï¿½es dans la vue des VBVS
 	 * 
 	 * @return
 	 */
@@ -239,7 +240,7 @@ IRepereChangedListener {
 			List<VariableVirtuelle> vbvs = this.getGestionnaireVbvs().getListeVBV();
 			variables.addAll(vbvs);
 
-			//vérification de la validité des VBV
+			//vï¿½rification de la validitï¿½ des VBV
 			ActivatorData.getInstance().getProviderVBVs().verifierValiditeVBVs(null);
 
 			variables.addAll(variablesToAdd);
@@ -251,7 +252,7 @@ IRepereChangedListener {
 	}
 
 	/**
-	 * Mise à jour de la liste des variables utilisables pour créer des VBV
+	 * Mise ï¿½ jour de la liste des variables utilisables pour crï¿½er des VBV
 	 * 
 	 * @param le
 	 *            listener
@@ -430,7 +431,7 @@ IRepereChangedListener {
 				
 				VariableVirtuelle removedVbv = vbvsMng.supprimerVBV(vbvName);
 				if (removedVbv != null) {
-					VueWaitBar.getInstance().setRect(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell().getBounds());
+					VueWaitBar.getInstance().setRect(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell().getBounds());
 					VueWaitBar.getInstance().start();
 					try{
 						firePropertyChange("VBV_DELETED", removedVbv, null); //$NON-NLS-1$
@@ -462,7 +463,7 @@ IRepereChangedListener {
 
 			VariableVirtuelle removedVbv = vbvsMng.supprimerVBV(vbvName);
 			if (removedVbv != null) {
-				VueWaitBar.getInstance().setRect(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell().getBounds());
+				VueWaitBar.getInstance().setRect(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell().getBounds());
 				VueWaitBar.getInstance().start();
 				try{
 					firePropertyChange("VBV_DELETED", removedVbv, null); //$NON-NLS-1$
@@ -503,7 +504,7 @@ IRepereChangedListener {
 			if (!isValidVbvName(vbv, newVbvName,firstOperand,secondOperand))
 				return;
 
-			// vérification de la validité des opérandes
+			// vï¿½rification de la validitï¿½ des opï¿½randes
 			// controle des cycles
 			VariableVirtuelle v1;
 			if (firstOperand instanceof VariableVirtuelle) {
@@ -1372,14 +1373,14 @@ IRepereChangedListener {
 //		}
 		firePropertyChange("VARIABLES_LIST_UPDATE", null, variables); //$NON-NLS-1$
 
-		IViewReference refView[] = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
+		IViewReference refView[] = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
 		for (int i = 0; i < refView.length; i++) {
 			if (refView[i].getId().equals("SAMNG.Vue.VBV.VueVirtualBooleanVariables")) { //$NON-NLS-1$
-				Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().hideView(refView[i]);
+				PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().hideView(refView[i]);
 				try {
-					Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(refView[i].getId());
+					PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(refView[i].getId());
 				} catch (PartInitException e1) {
-					// TODO Bloc catch auto-généré
+					// TODO Bloc catch auto-gï¿½nï¿½rï¿½
 					e1.printStackTrace();
 				}
 			}
@@ -1393,12 +1394,12 @@ IRepereChangedListener {
 
 		firePropertyChange("VARIABLES_LIST_UPDATE", null, variables); //$NON-NLS-1$
 
-		IViewReference refView[] = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
+		IViewReference refView[] = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
 		for (int i = 0; i < refView.length; i++) {
 			if (refView[i].getId().equals("SAMNG.Vue.VBV.VueVirtualBooleanVariables")) { //$NON-NLS-1$
-				Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().hideView(refView[i]);
+				PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().hideView(refView[i]);
 				try {
-					Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(refView[i].getId());
+					PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(refView[i].getId());
 				} catch (PartInitException e1) {
 
 					e1.printStackTrace();
@@ -1408,7 +1409,7 @@ IRepereChangedListener {
 	}
 
 	/**
-	 * Vérifie la validité d'une variable virtuelle
+	 * Vï¿½rifie la validitï¿½ d'une variable virtuelle
 	 * @param var
 	 * @return null si valide 
 	 */
@@ -1478,8 +1479,8 @@ IRepereChangedListener {
 
 
 	/**
-	 * Affiche un message récapitulant les VBV en erreur: 
-	 * opérandes non valorisés dans le parcours
+	 * Affiche un message rï¿½capitulant les VBV en erreur: 
+	 * opï¿½randes non valorisï¿½s dans le parcours
 	 * @return null si pas d'erreur, une chaine sinon
 	 * 
 	 */

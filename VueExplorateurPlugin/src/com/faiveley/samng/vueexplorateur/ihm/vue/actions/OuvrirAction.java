@@ -11,8 +11,8 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.actions.fichier.FichierOuvrirAction;
 import com.faiveley.samng.principal.sm.missions.jaxb.TypeMission;
 import com.faiveley.samng.principal.sm.missions.jaxb.TypeRefMission;
@@ -48,7 +48,7 @@ public class OuvrirAction {
 			absolutename = file.getAbsoluteName();
 			
 			// Lorsque l'utilisateur demande une ouverture, si le fichier XML n'existe pas,
-			// il faut explorer le fichier pour le créer
+			// il faut explorer le fichier pour le crï¿½er
 			// Did the file has been already explored: If it's the case it should have a 
 			// xml file with the name 					
 			//File xml = new File(absolutename+".xml");
@@ -89,7 +89,7 @@ public class OuvrirAction {
 		}
 
 		foa=new FichierOuvrirAction(
-				Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(),
+				PlatformUI.getWorkbench().getActiveWorkbenchWindow(),
 				absolutename, deb, fin, lancerExplorer, initDateS);
 		foa.run();		
 	}
@@ -157,7 +157,7 @@ public class OuvrirAction {
 		}		
 
 		foa=new FichierOuvrirAction(
-				Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(), 
+				PlatformUI.getWorkbench().getActiveWorkbenchWindow(), 
 				absolutename, deb, fin,lancerExplorer, initDateS);
 		foa.run();		
 	}
@@ -192,16 +192,16 @@ public class OuvrirAction {
 					// Es ce le 1er TreeMensuel du TreeFile ?
 					&& (((TreeMensuel)list.get(i)).getRegroupementTemps().getNumero().intValue() == 0)) { 
 						selectionOK = true ;
-				} else if ((list.get(i) instanceof TreeMission) // ici le TreeMission appartient forcément au meme TreeFile					
+				} else if ((list.get(i) instanceof TreeMission) // ici le TreeMission appartient forcï¿½ment au meme TreeFile					
 							// La TreeMission appartient au 1er TreeMensuel ?
 							&& (((TreeMensuel)((TreeMission)list.get(i)).getParent()).getRegroupementTemps().getNumero().intValue() == 0)
 							// La TreeMission est elle la lere du TreeMensuel ? 
 							&& (((TreeMensuel)((TreeMission)list.get(i)).getParent()).getRegroupementTemps().getListeMission().getMission().get(0).getReference().equals(((TreeMission)list.get(i)).getMission()))) {
 					selectionOK = true ;					
-				} else if ((list.get(i) instanceof TreeSegment) // ici le TreeSegment appartient forcément au meme TreeFile					
+				} else if ((list.get(i) instanceof TreeSegment) // ici le TreeSegment appartient forcï¿½ment au meme TreeFile					
 						// Le TreeSegment appartient au 1er TreeMensuel ?
 						&& (((TreeMensuel)((TreeSegment)list.get(i)).getParent().getParent()).getRegroupementTemps().getNumero().intValue() == 0)
-						// Le TreeSegment appartient à la 1ere TreeMission du 1er TreeMensuel ?
+						// Le TreeSegment appartient ï¿½ la 1ere TreeMission du 1er TreeMensuel ?
 						&& (((TreeMensuel)((TreeSegment)list.get(i)).getParent().getParent()).getRegroupementTemps().getListeMission().getMission().get(0).getReference().equals(((TreeMission)((TreeSegment)list.get(i)).getParent()).getMission()))
 						// Le TreeSegment est le 1er de la 1ere TreeMission du 1er TreeMensuel ?
 						&& (((TreeMission)((TreeSegment)list.get(i)).getParent()).getMission().getListeSegment().getSegment().get(0).equals(((TreeSegment)list.get(i)).getSegment()))) {
@@ -226,17 +226,17 @@ public class OuvrirAction {
 			int indice1 = seg1.getSegment().getNumero().intValue();
 			int indice2 = ((TreeSegment)obj2).getSegment().getNumero().intValue();
 			
-			// Si les segments sont dans la même mission...
+			// Si les segments sont dans la mï¿½me mission...
 			if (tm1.equals(tm2)) {
 				// et qu'ils se  suivent...
 				if (indice2 == indice1 + 1) {
 					return true;
 				}
-			}else{ //si les segments ne sont pas dans la même mission
+			}else{ //si les segments ne sont pas dans la mï¿½me mission
 											
 				List<TypeSegment> listsegs2=tm2.getMission().getListeSegment().getSegment();
 
-				//si les 2 missions sont consécutives
+				//si les 2 missions sont consï¿½cutives
 				if (checkMissionsConsecutives(tm1,tm2)
 					//si le segment 1 est le dernier de la mission
 					&& (listsegs1.get(listsegs1.size()-1).equals(seg1.getSegment()))
@@ -246,7 +246,7 @@ public class OuvrirAction {
 				}
 			}
 		} else if(obj2 instanceof TreeMission) {
-			//si les 2 missions sont consécutives
+			//si les 2 missions sont consï¿½cutives
 			if (checkMissionsConsecutives(tm1,obj2)
 				//si le segment 1 est le dernier de la mission
 				&& (listsegs1.get(listsegs1.size()-1).equals(seg1.getSegment()))) {
@@ -256,7 +256,7 @@ public class OuvrirAction {
 			TreeMensuel tme1=(TreeMensuel) tm1.getParent();
 			List<TypeRefMission> listmiss1=tme1.getRegroupementTemps().getListeMission().getMission();
 			
-			//si les 2 regroupements sont consécutifs
+			//si les 2 regroupements sont consï¿½cutifs
 			if (checkRegroupementsMensuelsConsecutifs(tme1,obj2)
 				//si la mission 1 est la derniere du regroupement
 				&& (listmiss1.get(listmiss1.size()-1).getReference().equals(tm1.getMission()))
@@ -279,17 +279,17 @@ public class OuvrirAction {
 			int indice1=tm1.getMission().getNumero().intValue();
 			int indice2=((TreeMission)obj2).getMission().getNumero().intValue();
 			
-			if (tme1.equals(tme2)) {//si les missions sont dans le même regroupement mensuel 			
+			if (tme1.equals(tme2)) {//si les missions sont dans le mï¿½me regroupement mensuel 			
 				if (indice2==indice1+1) {
 					return true;
 				}
 			}else{ 												
-				//si les missions ne sont pas dans le même regroupement mensuel
+				//si les missions ne sont pas dans le mï¿½me regroupement mensuel
 
 				List<TypeRefMission> listmiss1=tme1.getRegroupementTemps().getListeMission().getMission();
 				List<TypeRefMission> listmiss2=tme2.getRegroupementTemps().getListeMission().getMission();
 
-				//si les 2 regroupements sont consécutifs
+				//si les 2 regroupements sont consï¿½cutifs
 				if (checkRegroupementsMensuelsConsecutifs(tme1,tme2)
 					//si la mission 1 est la derniere du regroupement
 					&& (listmiss1.get(listmiss1.size()-1).getReference().equals(tm1.getMission()))
@@ -301,7 +301,7 @@ public class OuvrirAction {
 		} else if(obj2 instanceof TreeSegment) {
 			List<TypeSegment> listsegs=tm1.getMission().getListeSegment().getSegment();
 			
-			//si le segment est le premier de la même mission
+			//si le segment est le premier de la mï¿½me mission
 			if (obj2.getParent().equals(tm1)
 				//si le segment est le premier de la mission 
 				&& (listsegs.get(0).equals(((TreeSegment)obj2).getSegment()))) {
@@ -310,7 +310,7 @@ public class OuvrirAction {
 		} else if(obj2 instanceof TreeMensuel) {
 			List<TypeRefMission> listmiss1=tme1.getRegroupementTemps().getListeMission().getMission();
 			
-			//si les 2 regroupements sont consécutifs
+			//si les 2 regroupements sont consï¿½cutifs
 			if (checkRegroupementsMensuelsConsecutifs(tme1,obj2)
 				//si la mission 1 est la derniere du regroupement
 				&& (listmiss1.get(listmiss1.size()-1).getReference().equals(tm1.getMission()))) {
@@ -327,7 +327,7 @@ public class OuvrirAction {
 			int indice1=tm1.getRegroupementTemps().getNumero().intValue();
 			int indice2=((TreeMensuel)obj2).getRegroupementTemps().getNumero().intValue();
 
-			//si les regroupements sont consécutifs
+			//si les regroupements sont consï¿½cutifs
 			if (indice2==indice1+1) {
 				return true;
 			}
@@ -356,7 +356,7 @@ public class OuvrirAction {
 			/*if (selection.toList().get(i).getClass().equals(TreeFile.class)) {
 				filesSelected.add((TreeFile)selection.toList().get(i)) ;
 				treefileSelected++ ;
-				// Si plus d'1 fichier de parcours est sélectionné...
+				// Si plus d'1 fichier de parcours est sï¿½lectionnï¿½...
 				if (treefileSelected > 1) {
 					MessageDialog.openError(Display.getDefault().getActiveShell(), 
 							Messages.OuvrirAction_2, Messages.OuvrirAction_7);

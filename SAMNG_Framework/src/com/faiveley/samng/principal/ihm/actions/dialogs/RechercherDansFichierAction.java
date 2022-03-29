@@ -6,6 +6,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -48,7 +49,7 @@ public class RechercherDansFichierAction extends Action{
 //		Activator.getDefault().release();
 		boolean search=false;
 		if (this.window == null)
-			this.window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+			this.window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 
 		if(ActivatorData.getInstance().getVueData().getDataTable()!=null){
 			MessageBox msgBox;
@@ -62,7 +63,7 @@ public class RechercherDansFichierAction extends Action{
 					
 					FichierFermerAction ffa = null ;
 					ffa = new FichierFermerAction(
-							Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(), 
+							PlatformUI.getWorkbench().getActiveWorkbenchWindow(), 
 							"");
 					ffa.run();
 				}

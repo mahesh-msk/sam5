@@ -34,13 +34,13 @@ public class SauverRemarquesUtilisateurAction extends Action {
 		ActivatorData.getInstance().getGestionnaireMarqueurs().enregistrerRemarques(""); //$NON-NLS-1$
 		
 //		if(success) {
-//			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(), 
+//			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), 
 //					SWT.ICON_INFORMATION | SWT.OK);
 //			msgBox.setText(""); //$NON-NLS-1$
 //			msgBox.setMessage(Messages.getString("SaveUserRemarksAction.1")); //$NON-NLS-1$
 //			msgBox.open();
 //		} else {
-//			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(), 
+//			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), 
 //					SWT.ICON_ERROR | SWT.OK);
 //			msgBox.setText(""); //$NON-NLS-1$
 //			msgBox.setMessage(Messages.getString("SaveUserRemarksAction.2")); //$NON-NLS-1$

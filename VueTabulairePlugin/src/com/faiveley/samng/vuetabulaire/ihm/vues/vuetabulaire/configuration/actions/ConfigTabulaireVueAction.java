@@ -3,9 +3,9 @@ package com.faiveley.samng.vuetabulaire.ihm.vues.vuetabulaire.configuration.acti
 import org.eclipse.swt.SWT;
 import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.actions.vue.VueAction;
 import com.faiveley.samng.principal.ihm.vues.configuration.ColonnesConfigDialog;
@@ -31,7 +31,7 @@ public class ConfigTabulaireVueAction extends VueAction {
 	@Override
 	public void run() {
 		GestionnaireVueListeBase cfgMng = ActivatorVueTabulaire.getDefault().getConfigurationMng();
-		ColonnesConfigDialog colCfgDlg = new ColonnesConfigDialog(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell());
+		ColonnesConfigDialog colCfgDlg = new ColonnesConfigDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell());
 		colCfgDlg.setGestionnaireConfiguration(cfgMng);
 		String title = Messages.getString("ConfigTabulaireVueAction.2"); //$NON-NLS-1$
 		String appliedFilter = ActivatorVueTabulaire.getDefault().getFiltresProvider().getAppliedFilter();

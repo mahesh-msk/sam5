@@ -65,7 +65,7 @@ public class FichierFermerService {
 		GestionnaireCorrection.getInstance().saveCorrections(false);
 		
 		if (ActivatorData.getInstance().getGestionnaireMarqueurs().isModifications()) {
-			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(), SWT.ICON_QUESTION | SWT.YES | SWT.NO);
+			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), SWT.ICON_QUESTION | SWT.YES | SWT.NO);
 			msgBox.setText(Messages.getString("GestionnaireVueListeBase.11")); //$NON-NLS-1$
 			msgBox.setMessage(Messages.getString("GestionnaireVueListeBase.12")); //$NON-NLS-1$ //$NON-NLS-2$
 			int ret = msgBox.open();
@@ -79,7 +79,7 @@ public class FichierFermerService {
 		try {
 			ActivatorData.getInstance().getProviderVBVs().getGestionnaireVbvs().enregistrerVBV();
 		} catch (ParseurXMLException e1) {
-			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(), SWT.YES);
+			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), SWT.YES);
 			msgBox.setText(com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreurParseurVBV.1"));
 			msgBox.setMessage(com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreurParseurVBV.2"));
 			msgBox.open();
@@ -99,7 +99,7 @@ public class FichierFermerService {
 								
 			// Launch Gestion Mission perspective to save explorer view
 			try {
-				PlatformUI.getWorkbench().showPerspective("SAMNG.perspectiveMission", Activator.getDefault().getWorkbench().getActiveWorkbenchWindow()) ;
+				PlatformUI.getWorkbench().showPerspective("SAMNG.perspectiveMission", PlatformUI.getWorkbench().getActiveWorkbenchWindow()) ;
 			} catch (WorkbenchException e) {
 				e.printStackTrace();
 			}											
@@ -109,9 +109,9 @@ public class FichierFermerService {
 			e.printStackTrace();
 		}		
 		
-		if (Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage() == null) {
+		if (PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage() == null) {
 			try {
-				Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().openPage(PerspectiveAccueil.getID(), null);
+				PlatformUI.getWorkbench().getActiveWorkbenchWindow().openPage(PerspectiveAccueil.getID(), null);
 			} catch (WorkbenchException e) {
 				e.printStackTrace();
 			}

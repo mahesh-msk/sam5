@@ -3,8 +3,8 @@ package com.faiveley.samng.vueexplorateur.ihm.vue.actions;
 import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.sm.util.StringUtils;
 import com.faiveley.samng.vueexplorateur.ihm.vue.VueExplorateurFichiersDeParcours;
 import com.faiveley.samng.vueexplorateur.util.DialogUtils;
@@ -13,7 +13,7 @@ import com.faiveley.samng.vueexplorateur.util.WorkspaceService;
 public class AjouterEspaceTravailAction {
 
 	public static void ajouterEspace() {
-		DirectoryDialog dd=new DirectoryDialog(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell());
+		DirectoryDialog dd=new DirectoryDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell());
 		
 		dd.setMessage(Messages.getString("AjouterEspcceTravailAction_0"));
 		dd.setText(Messages.getString("AjouterEspcceTravailAction_1"));
@@ -45,7 +45,7 @@ public class AjouterEspaceTravailAction {
 				});
 			}
 			else {
-				// afficher message erreur : le dossier existe déjà dans la liste des dossiers du workspace
+				// afficher message erreur : le dossier existe dï¿½jï¿½ dans la liste des dossiers du workspace
 				MessageBox msgBox = DialogUtils.getErrorMessageBox(Display.getCurrent().getActiveShell(),
 						Messages.getString("ErreurAjouterEspaceTravailAction"),
 						Messages.getString("ErreurAjouterEspaceTravailMessage"));

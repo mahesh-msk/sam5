@@ -4,12 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import noNamespace.FiltreVuetabulaireDocument.FiltreVuetabulaire;
-import noNamespace.LigneVariableDocument.LigneVariable;
-import noNamespace.ListeFiltresVuetabulaireDocument;
-import noNamespace.ListeFiltresVuetabulaireDocument.ListeFiltresVuetabulaire;
-import noNamespace.ListeLignesVariableDocument.ListeLignesVariable;
-
 import org.apache.xmlbeans.XmlAnySimpleType;
 import org.apache.xmlbeans.XmlAnySimpleType.Factory;
 import org.apache.xmlbeans.XmlException;
@@ -21,6 +15,12 @@ import com.faiveley.samng.principal.sm.filtres.TypeFiltre;
 import com.faiveley.samng.principal.sm.filtres.variables.LigneVariableFiltreComposite;
 import com.faiveley.samng.principal.sm.filtres.variables.OperateurLigneVariable;
 import com.faiveley.samng.principal.sm.filtres.variables.ValeurLigneVariable;
+
+import noNamespace.FiltreVuetabulaireDocument.FiltreVuetabulaire;
+import noNamespace.LigneVariableDocument.LigneVariable;
+import noNamespace.ListeFiltresVuetabulaireDocument;
+import noNamespace.ListeFiltresVuetabulaireDocument.ListeFiltresVuetabulaire;
+import noNamespace.ListeLignesVariableDocument.ListeLignesVariable;
 
 /**
  * 

@@ -38,6 +38,7 @@ import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -109,7 +110,7 @@ ICapturable{
 	// ToolBar
 	private IActionBars bars;
 
-	// déclaration des actions
+	// dï¿½claration des actions
 	private ImprimerVueAction imprimerVueAction;
 	private CapturerVueAction capturerVueAction;
 	private Action synchroVuesAction;
@@ -196,8 +197,8 @@ ICapturable{
 
 	/** Ajout des actions */
 	private void makeActions() {
-		// récupération de la fenetre active
-		IWorkbenchWindow window = Activator.getDefault().getWorkbench()
+		// rï¿½cupï¿½ration de la fenetre active
+		IWorkbenchWindow window = PlatformUI.getWorkbench()
 				.getActiveWorkbenchWindow();
 		setPartName(Messages.getString("VueBinaire.0"));
 		listeActionsAuditrice = new ArrayList<Action>(0);
@@ -230,7 +231,7 @@ ICapturable{
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans le menu
+	 * Mï¿½thode d'ajout d'une action dans le menu
 	 * 
 	 * @param action
 	 */
@@ -239,7 +240,7 @@ ICapturable{
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans la toolbar
+	 * Mï¿½thode d'ajout d'une action dans la toolbar
 	 * 
 	 * @param action
 	 */
@@ -260,7 +261,7 @@ ICapturable{
 		disposeTable();
 		// Activator.getDefault().getProgressBar().start();
 		// VueWaitBar.getInstance().setRect(
-		// Activator.getDefault().getWorkbench()
+		// PlatformUI.getWorkbench()
 		// .getActiveWorkbenchWindow().getShell().getBounds());
 		// VueWaitBar.getInstance().start();
 		// this.table = new Table(this.top, SWT.VIRTUAL | SWT.SINGLE |
@@ -418,7 +419,7 @@ ICapturable{
 
 			@Override
 			public void keyPressed(KeyEvent e) {
-				// synchro si pression sur bouton Entrée
+				// synchro si pression sur bouton Entrï¿½e
 				if (e.keyCode == SWT.CR) {
 					updateSelectionMessage();
 					
@@ -503,7 +504,7 @@ ICapturable{
 
 		// if(this.rows.length>0){
 		// VueWaitBar.getInstance().setRect(
-		// Activator.getDefault().getWorkbench()
+		// PlatformUI.getWorkbench()
 		// .getActiveWorkbenchWindow().getShell().getBounds());
 		// VueWaitBar.getInstance().start();
 		// }
@@ -817,8 +818,8 @@ ICapturable{
 
 				int rowIdx = getRowIndexForMessageId(selId);
 				
-				// Après l'ouverture d'un fichier par ligne de commande, l'offset du nouveau fichier 
-				// ouvert doit être repositionné sur la première ligne de la vue. Pour cela on 
+				// Aprï¿½s l'ouverture d'un fichier par ligne de commande, l'offset du nouveau fichier 
+				// ouvert doit ï¿½tre repositionnï¿½ sur la premiï¿½re ligne de la vue. Pour cela on 
 				// utilise la valeur 0.
 				if (selId == 0) {
 					rowIdx = 0 ;
@@ -933,7 +934,7 @@ ICapturable{
 			this.bytesCols = null;
 			this.bars = null;
 			this.imprimerVueAction = null;
-			this.capturerVueAction = null;// déclaration des actions
+			this.capturerVueAction = null;// dï¿½claration des actions
 			this.synchroVuesAction = null;
 			this.listeActionsAuditrice = null;
 			viewer = null;

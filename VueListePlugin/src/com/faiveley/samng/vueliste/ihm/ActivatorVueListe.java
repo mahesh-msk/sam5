@@ -105,7 +105,7 @@ public class ActivatorVueListe extends AbstractActivatorVue {
 //
 //		
 //		//action responsable de l'export de la vue liste
-//		exporterVueListeAction = new ExporterVueListeAction(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(),
+//		exporterVueListeAction = new ExporterVueListeAction(PlatformUI.getWorkbench().getActiveWorkbenchWindow(),
 //				Messages.getString("ActivatorVueListe.3")); //$NON-NLS-1$
 //		ActivatorData.getInstance().getBarAdvisor().createAction(exporterVueListeAction, VueType.FILE);
 //		

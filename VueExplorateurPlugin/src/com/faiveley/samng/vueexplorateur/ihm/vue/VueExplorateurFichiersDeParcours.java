@@ -406,7 +406,7 @@ public class VueExplorateurFichiersDeParcours extends ViewPart implements IDataC
 					
 					FichierFermerAction ffa = null ;
 					ffa = new FichierFermerAction(
-							Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(), 
+							PlatformUI.getWorkbench().getActiveWorkbenchWindow(), 
 							"");
 					ffa.run();	
 				}	
@@ -436,7 +436,7 @@ public class VueExplorateurFichiersDeParcours extends ViewPart implements IDataC
 			}
 			
 //			PlatformUI.getWorkbench().showPerspective(PerspectiveGestionDesMissions.VueExplorateur_ID, 
-//					Activator.getDefault().getWorkbench().getActiveWorkbenchWindow());
+//					PlatformUI.getWorkbench().getActiveWorkbenchWindow());
 			
 			ExplorerActionProgressionBar eap=new ExplorerActionProgressionBar(viewer.getSelection());
 			eap.schedule();			

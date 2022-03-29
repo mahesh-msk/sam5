@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.vues.search.ASearchDialog;
 import com.faiveley.samng.principal.sm.filtres.AFiltreComposant;
@@ -61,7 +61,7 @@ public class RechercherVariableTabulaireAction extends Action{
 					list.add(filtreDef.getEnfant(i).getEnfant(j).getNom());
 				}
 			}
-		}else{//sinon on utilise le filter appliqué		
+		}else{//sinon on utilise le filter appliquï¿½		
 			AFiltreComposant gest=filtersMng.listeFiltres;
 			for (int i = 0; i < gest.getEnfantCount(); i++) {
 				AFiltreComposant filtre=gest.getEnfant(i);
@@ -73,7 +73,7 @@ public class RechercherVariableTabulaireAction extends Action{
 			}
 		}
 
-		ASearchDialog dlg = new SearchVariableTabulaire(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(), 
+		ASearchDialog dlg = new SearchVariableTabulaire(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), 
 				this.usesShortNames);
 		dlg.setVariablesDuFiltre(list);
 		dlg.open();

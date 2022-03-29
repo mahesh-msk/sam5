@@ -29,6 +29,7 @@ import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IViewReference;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -97,7 +98,7 @@ public class SearchEvent extends ASearchVariableDialog {
 		this.comboVar.addSelectionListener(new ComboSelection());
 
 		// permet de remettre la selection sur <Recherche> si la varaible avait
-		// été trouvée par recherche
+		// ï¿½tï¿½ trouvï¿½e par recherche
 		this.comboVar.addListener(SWT.MouseDown, new Listener() {
 
 			public void handleEvent(Event arg0) {
@@ -148,7 +149,7 @@ public class SearchEvent extends ASearchVariableDialog {
 			}
 		});
 		
-		// recup de la dernière recherche
+		// recup de la derniï¿½re recherche
 		try {
 			if (ActivatorData.getInstance().getPoolDonneesVues().get(
 					this.getAppelant() + this.getTypeRecherche()) != null)
@@ -228,7 +229,7 @@ public class SearchEvent extends ASearchVariableDialog {
 		btnPrecedent.addSelectionListener(new SelectionAdapter() {
         	public void widgetSelected(SelectionEvent e) {
         		String eventName = selectedValue;
-        		IViewReference[] vr = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
+        		IViewReference[] vr = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
 				for (IViewReference v : vr) {
 					IViewPart view = v.getView(false);
 					if (view instanceof ISearchEventListener) {
@@ -253,7 +254,7 @@ public class SearchEvent extends ASearchVariableDialog {
         	public void widgetSelected(SelectionEvent e) {
         		//comboEvents.getItem(comboEvents.getSelectionIndex()).
         		String eventName = selectedValue;
-        		IViewReference[] vr = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
+        		IViewReference[] vr = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
 				for (IViewReference v : vr) {
 					IViewPart view = v.getView(false);
 					if (view instanceof ISearchEventListener) {
@@ -409,7 +410,7 @@ public class SearchEvent extends ASearchVariableDialog {
 //			// get the opened views that implements ISearchVariableListener
 //			// and notify them
 //			// if (value != null) {
-//			IViewReference[] vr = Activator.getDefault().getWorkbench()
+//			IViewReference[] vr = PlatformUI.getWorkbench()
 //					.getActiveWorkbenchWindow().getActivePage()
 //					.getViewReferences();
 //			

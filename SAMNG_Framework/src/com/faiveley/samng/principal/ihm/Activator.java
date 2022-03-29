@@ -19,6 +19,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IPerspectiveDescriptor;
 import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -433,7 +434,7 @@ public class Activator extends AbstractUIPlugin {
 	}
 	
 	public void hideAllViewsExceptViews(String ... ids){
-		IWorkbenchPage iwp=Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage();
+		IWorkbenchPage iwp=PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 		IViewReference[] views = iwp.getViewReferences();
 
 		for (IViewReference view : views) {

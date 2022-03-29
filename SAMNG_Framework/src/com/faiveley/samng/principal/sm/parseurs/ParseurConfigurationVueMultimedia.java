@@ -8,17 +8,17 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import noNamespace.ColonneDocument.Colonne;
-import noNamespace.ConfigurationColonnesDocument.ConfigurationColonnes;
-import noNamespace.VueDocument;
-import noNamespace.VueDocument.Vue;
-
 import org.apache.xmlbeans.XmlAnySimpleType;
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
 
 import com.faiveley.samng.principal.ihm.vues.configuration.ConfigurationColonne;
 import com.faiveley.samng.principal.ihm.vues.configuration.GestionnaireVueMultimediaBase;
+
+import noNamespace.ColonneDocument.Colonne;
+import noNamespace.ConfigurationColonnesDocument.ConfigurationColonnes;
+import noNamespace.VueDocument;
+import noNamespace.VueDocument.Vue;
 
 public class ParseurConfigurationVueMultimedia {
 	public static final String FILE_LIST_COLUMN_FLAG = "FILE_LIST";

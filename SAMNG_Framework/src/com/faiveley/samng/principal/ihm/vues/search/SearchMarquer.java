@@ -11,8 +11,8 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IViewReference;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.listeners.ISearchMarquerListener;
 
 /**
@@ -88,7 +88,7 @@ public class SearchMarquer extends ASearchDialog {
         	public void widgetSelected(SelectionEvent e) {
         		ISearchMarquerListener listener = null;
         		
-        		IViewReference[] vr = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
+        		IViewReference[] vr = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
 				for (IViewReference v : vr) {
 					IViewPart view = v.getView(false);
 					if (view instanceof ISearchMarquerListener) {
@@ -119,7 +119,7 @@ public class SearchMarquer extends ASearchDialog {
         		ISearchMarquerListener listener = null;
         		
         		//looks for listeners in the current views
-        		IViewReference[] vr = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
+        		IViewReference[] vr = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
 				for (IViewReference v : vr) {
 					IViewPart view = v.getView(false);
 					if (view instanceof ISearchMarquerListener) {

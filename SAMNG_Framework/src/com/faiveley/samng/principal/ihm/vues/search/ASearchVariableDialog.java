@@ -37,6 +37,7 @@ import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -253,7 +254,7 @@ public abstract class ASearchVariableDialog extends ASearchDialog {
 		
 		//récupération du message
 		DescripteurVariable descr = this.values.get(varName);
-		final IWorkbenchPart activePart = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart();
+		final IWorkbenchPart activePart = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart();
 
 		if (activePart instanceof ISelectionProvider) {
 			ISelectionProvider selProvider = (ISelectionProvider) activePart;
@@ -1028,7 +1029,7 @@ public abstract class ASearchVariableDialog extends ASearchDialog {
 			if (selEventData.equals(ADV_SEARCH)) {
 				lastSearchVarCombo = true;
 
-				RechercheDialog dlg = new RechercheDialog(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell());
+				RechercheDialog dlg = new RechercheDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell());
 				dlg.setSelectableValues(ASearchVariableDialog.this.values.keySet().toArray(new String[ASearchVariableDialog.this.values.size()]));
 				dlg.setAppelant(this.getClass().getName());
 				dlg.setTypeRecherche("Variable"); //$NON-NLS-1$

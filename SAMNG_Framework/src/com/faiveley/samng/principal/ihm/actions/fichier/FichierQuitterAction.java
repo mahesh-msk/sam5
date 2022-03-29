@@ -4,8 +4,8 @@ package com.faiveley.samng.principal.ihm.actions.fichier;
 
 import org.eclipse.jface.action.Action;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 
 
@@ -30,7 +30,7 @@ public class FichierQuitterAction extends Action {
 	@Override
 	public void run() {
 		try{
-			Activator.getDefault().getWorkbench().close();
+			PlatformUI.getWorkbench().close();
 		}
 		catch(Exception ex){
 

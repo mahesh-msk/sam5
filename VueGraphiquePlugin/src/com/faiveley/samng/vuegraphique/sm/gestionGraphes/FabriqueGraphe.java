@@ -8,9 +8,9 @@ import java.util.Map;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.vues.VariableExplorationUtils;
 import com.faiveley.samng.principal.ihm.vues.vuesfiltre.AbstractProviderFiltre;
 import com.faiveley.samng.principal.ihm.vues.vuesfiltre.GestionnaireCouleurs;
@@ -78,12 +78,12 @@ public class FabriqueGraphe {
 			List<Float> curValues;
 			DescripteurVariable descrVar;
 
-//			récupération uniquement des bons messages
+//			rï¿½cupï¿½ration uniquement des bons messages
 			ListMessages messages = ActivatorData.getInstance().getVueData()
 			.getDataTable().getEnregistrement().getMessages();
 
 			int nbEvent = messages.size();
-			//méthode initialiser graphe
+			//mï¿½thode initialiser graphe
 			List<Courbe> listeCourbes = graphe.getListeCourbe();
 
 //			long ttStart = System.currentTimeMillis();
@@ -188,12 +188,12 @@ public class FabriqueGraphe {
 			Float curValue;
 			DescripteurVariable descrVar;
 
-//			récupération uniquement des bons messages
+//			rï¿½cupï¿½ration uniquement des bons messages
 			ListMessages messages = ActivatorData.getInstance().getVueData()
 			.getDataTable().getEnregistrement().getMessages();
 
 			int nbEvent = messages.size();
-			//méthode initialiser graphe
+			//mï¿½thode initialiser graphe
 			List<Courbe> listeCourbes = graphe.getListeCourbe();
 
 //			long ttStart = System.currentTimeMillis();
@@ -287,16 +287,16 @@ public class FabriqueGraphe {
 		Float curValue;
 		DescripteurVariable descrVar;
 
-//		récupération uniquement des bons messages
+//		rï¿½cupï¿½ration uniquement des bons messages
 		ListMessages messages = ActivatorData.getInstance().getVueData()
 		.getDataTable().getEnregistrement().getMessages();
 
 
-		//récupération de tous les messages
+		//rï¿½cupï¿½ration de tous les messages
 //		List<Message> msgs = ActivatorData.getInstance().getVueData()
 //		.getDataTable().getEnregistrement(0).getMessages();
 		int nbEvent = messages.size();
-		//méthode initialiser graphe
+		//mï¿½thode initialiser graphe
 		List<Courbe> listeCourbes = graphe.getListeCourbe();
 
 		long ttStart = System.currentTimeMillis();
@@ -367,8 +367,8 @@ public class FabriqueGraphe {
 				max = 0;
 			
 			
-			// Si la courbe est celle de la vitesse limite KVB ou la vitese limite issue des données train KVB, et que la vitesse (SNCF) est aussi affichée,
-			// son axe des ordonnées doit être identique à celui de la vitesse (SNCF) pour pouvoir avoir une analyse direct des dépassements
+			// Si la courbe est celle de la vitesse limite KVB ou la vitese limite issue des donnï¿½es train KVB, et que la vitesse (SNCF) est aussi affichï¿½e,
+			// son axe des ordonnï¿½es doit ï¿½tre identique ï¿½ celui de la vitesse (SNCF) pour pouvoir avoir une analyse direct des dï¿½passements
 			if (courbeCourante.getVariable() == VitesseLimiteKVBService.getInstance().getVariable() && VitesseLimiteKVBService.isTableKVBXMLexist()) {
 				cKVB = courbeCourante;					
 			} else if (courbeCourante.getVariable().getDescriptor() == GestionnairePool.getInstance().getReperes().getRepere(TypeRepere.vitesse).getDescriptor()) {
@@ -384,8 +384,8 @@ public class FabriqueGraphe {
 
 		}
 		
-		// Si la courbe est celle de la vitesse limite KVB ou la vitese limite issue des données train KVB, et que la vitesse (SNCF) est aussi affichée,
-		// son axe des ordonnées doit être identique à celui de la vitesse (SNCF) pour pouvoir avoir une analyse direct des dépassements
+		// Si la courbe est celle de la vitesse limite KVB ou la vitese limite issue des donnï¿½es train KVB, et que la vitesse (SNCF) est aussi affichï¿½e,
+		// son axe des ordonnï¿½es doit ï¿½tre identique ï¿½ celui de la vitesse (SNCF) pour pouvoir avoir une analyse direct des dï¿½passements
 		if (cVitesse != null) {
 			
 			Double maxDomainValeur = cVitesse.getMaxDomainValeur(), 
@@ -425,7 +425,7 @@ public class FabriqueGraphe {
 	}
 
 	public static Graphe initialiserGraphe(int width, int height, Graphe graphe) {
-		//méthode initialiser graphe
+		//mï¿½thode initialiser graphe
 		List<Courbe> listeCourbes = graphe.getListeCourbe();
 		double resoVerticale;
 		for (Courbe courbeCourante : listeCourbes) {
@@ -563,7 +563,7 @@ public class FabriqueGraphe {
 			String badfilter = ActivatorVueGraphique.getDefault().getConfigurationMng().getFiltreApplique();
 			ActivatorVueGraphique.getDefault().getConfigurationMng().setFiltreApplique(null);
 			ActivatorVueGraphique.getDefault().getFiltresProvider().setAppliedFilterName(null);
-			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().
+			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().
 					getActiveWorkbenchWindow().getShell(), SWT.ICON_WARNING | SWT.YES);
 			msgBox = new MessageBox(Display.getCurrent().getActiveShell(), SWT.OK);
 			msgBox.setText(Messages.getString("FabriqueGraphe.filtrenonvalideTitre"));  //$NON-NLS-1$
@@ -615,7 +615,7 @@ public class FabriqueGraphe {
 			String badfilter = ActivatorVueGraphique.getDefault().getConfigurationMng().getFiltreApplique();
 			ActivatorVueGraphique.getDefault().getConfigurationMng().setFiltreApplique(null);
 			ActivatorVueGraphique.getDefault().getFiltresProvider().setAppliedFilterName(null);
-			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().
+			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().
 					getActiveWorkbenchWindow().getShell(), SWT.ICON_WARNING | SWT.YES);
 			msgBox = new MessageBox(Display.getCurrent().getActiveShell(), SWT.OK);
 			msgBox.setText(Messages.getString("FabriqueGraphe.filtrenonvalideTitre"));  //$NON-NLS-1$

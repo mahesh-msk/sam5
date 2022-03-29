@@ -5,15 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-
-import noNamespace.ColonneDocument.Colonne;
-import noNamespace.ConfigurationColonnesDocument.ConfigurationColonnes;
-import noNamespace.FiltreAppliqueDocument.FiltreApplique;
-import noNamespace.VueDocument;
-import noNamespace.VueDocument.Vue;
 
 import org.apache.xmlbeans.XmlAnySimpleType;
 import org.apache.xmlbeans.XmlException;
@@ -23,10 +16,16 @@ import com.faiveley.samng.principal.ihm.vues.configuration.AGestionnaireConfigur
 import com.faiveley.samng.principal.ihm.vues.configuration.ConfigurationColonne;
 import com.faiveley.samng.principal.ihm.vues.configuration.GestionnaireVueListeBase;
 
+import noNamespace.ColonneDocument.Colonne;
+import noNamespace.ConfigurationColonnesDocument.ConfigurationColonnes;
+import noNamespace.FiltreAppliqueDocument.FiltreApplique;
+import noNamespace.VueDocument;
+import noNamespace.VueDocument.Vue;
+
 /**
  * @author Graton Olivier
  * @version 1.0
- * @created 17-déc.-2007 11:53:07
+ * @created 17-dï¿½c.-2007 11:53:07
  */
 public class ParseurConfigurationVueListe implements IParseurConfigurationVue {
 	private VueDocument vueDocument;

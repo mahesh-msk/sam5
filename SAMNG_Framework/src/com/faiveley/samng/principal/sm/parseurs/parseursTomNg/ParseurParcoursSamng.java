@@ -24,20 +24,15 @@ import java.io.File;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
-
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.logging.SamngLogger;
 import com.faiveley.samng.principal.sm.calculs.conversionTemps.ConversionTempsTomNg;
 import com.faiveley.samng.principal.sm.controles.CRC16CCITT;
@@ -45,7 +40,6 @@ import com.faiveley.samng.principal.sm.controles.CRC32;
 import com.faiveley.samng.principal.sm.controles.IStrategieControle;
 import com.faiveley.samng.principal.sm.controles.ReturnCRC;
 import com.faiveley.samng.principal.sm.controles.util.CRC16CCITTHash;
-import com.faiveley.samng.principal.sm.data.compression.DecompressedFile;
 import com.faiveley.samng.principal.sm.data.descripteur.ADescripteurComposant;
 import com.faiveley.samng.principal.sm.data.descripteur.DescripteurCodeBloc;
 import com.faiveley.samng.principal.sm.data.descripteur.DescripteurComposite;
@@ -63,14 +57,12 @@ import com.faiveley.samng.principal.sm.data.descripteur.donneeBlocComposant.Donn
 import com.faiveley.samng.principal.sm.data.enregistrement.ErrorType;
 import com.faiveley.samng.principal.sm.data.enregistrement.Evenement;
 import com.faiveley.samng.principal.sm.data.enregistrement.GestionnairePool;
-import com.faiveley.samng.principal.sm.data.enregistrement.ListMessages;
 import com.faiveley.samng.principal.sm.data.enregistrement.Message;
 import com.faiveley.samng.principal.sm.data.flag.Flag;
 import com.faiveley.samng.principal.sm.data.flag.GestionnaireFlags;
 import com.faiveley.samng.principal.sm.data.identificateurComposant.AIdentificateurComposant;
 import com.faiveley.samng.principal.sm.data.identificateurComposant.IdentificateurEvenement;
 import com.faiveley.samng.principal.sm.data.identificateurComposant.IdentificateurVariable;
-import com.faiveley.samng.principal.sm.data.multimedia.MultimediaFile;
 import com.faiveley.samng.principal.sm.data.tableAssociationComposant.AParcoursComposant;
 import com.faiveley.samng.principal.sm.data.tableAssociationComposant.Entete;
 import com.faiveley.samng.principal.sm.data.tableAssociationComposant.InfosFichierSamNg;
@@ -248,7 +240,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		// set the file name that is written on x bytes starting to byte 4
 		nomFichierXML = new String(Arrays.copyOfRange(this.message, 4,
 				tailleNomFichierXML + 4)).trim();
-		// test de présente du fichier xml dans le répertoire ressources/xml
+		// test de prï¿½sente du fichier xml dans le rï¿½pertoire ressources/xml
 		File f = new File(RepertoiresAdresses.xml + File.separator + nomFichierXML.trim());
 		if (!f.exists())
 			throw new ParseurXMLException(
@@ -264,13 +256,13 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 	 * 
 	 * Load the codes
 	 * 
-	 * CL_5 : L’octet 5+x+3 = > le code Debut de la table Data ; CL_6 : L’octet
-	 * 5+x+4 = > le code Fin de la table Data CL_7 : L’octet 5+x+5 = > le code
-	 * Continue Fin Bloc de la table Data. CL_8 : L’octet 5+x+6 = > le code
-	 * Continue Debut Bloc de la table Data. CL_D_2 : L’octet 5+x+7 = > le code
-	 * Début Bloc Defaut de la table Data. CL_D_3 : L’octet 5+x+8 = > le code
-	 * Fin Bloc Defaut de la table Data. CL_D_4 : L’octet 5+x+9 = > le code
-	 * Continue Fin Bloc Defaut de la table Data. CL_D_5 : L’octet 5+x+10 = > le
+	 * CL_5 : Lï¿½octet 5+x+3 = > le code Debut de la table Data ; CL_6 : Lï¿½octet
+	 * 5+x+4 = > le code Fin de la table Data CL_7 : Lï¿½octet 5+x+5 = > le code
+	 * Continue Fin Bloc de la table Data. CL_8 : Lï¿½octet 5+x+6 = > le code
+	 * Continue Debut Bloc de la table Data. CL_D_2 : Lï¿½octet 5+x+7 = > le code
+	 * Dï¿½but Bloc Defaut de la table Data. CL_D_3 : Lï¿½octet 5+x+8 = > le code
+	 * Fin Bloc Defaut de la table Data. CL_D_4 : Lï¿½octet 5+x+9 = > le code
+	 * Continue Fin Bloc Defaut de la table Data. CL_D_5 : Lï¿½octet 5+x+10 = > le
 	 * code Continue Debut Bloc Defaut de la table Data.
 	 * 
 	 * 
@@ -403,7 +395,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 	}
 
 	/**
-	 * charge le CRC enregistré de l'entete dans un objet ADonneeBlocComposant
+	 * charge le CRC enregistrï¿½ de l'entete dans un objet ADonneeBlocComposant
 	 */
 	private ADonneeBlocComposant chargerCRCEntete() {
 		ADonneeBlocComposant crc = new DonneeBloc();
@@ -420,7 +412,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 	}
 
 	/**
-	 * charge le CRC enregistré de la table d'assocation dans un objet
+	 * charge le CRC enregistrï¿½ de la table d'assocation dans un objet
 	 * ADonneeBlocComposant
 	 */
 	private ADonneeBlocComposant chargerCRCTableEvtVar() throws AExceptionSamNG {
@@ -609,7 +601,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 									// + " " + (((msg.getMessageId() -
 									// (tailleEntete + tailleTableEvenement)) /
 									// tailleBlocData) + 1) + "; " +
-									// "CRC enregistré:" + " " + msg.getCRC());
+									// "CRC enregistrï¿½:" + " " + msg.getCRC());
 									throw new BadCRCException(
 											Messages.getString("errors.nonblocking.badMsgCrc")
 													+ "; "
@@ -825,7 +817,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			
 			Display.getDefault().syncExec(new Runnable(){
 				public void run() {
-					MessageDialog.openError(Activator.getDefault().getWorkbench().getDisplay().getActiveShell(), com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreursTitre"), 
+					MessageDialog.openError(PlatformUI.getWorkbench().getDisplay().getActiveShell(), com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreursTitre"), 
 							Messages.getString("errors.blocking.invalidFileStructure1"));
 				}
 			});
@@ -915,7 +907,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		{
 			Display.getDefault().syncExec(new Runnable(){
 				public void run() {
-					MessageDialog.openError(Activator.getDefault().getWorkbench().getDisplay().getActiveShell(), com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreursTitre"), 
+					MessageDialog.openError(PlatformUI.getWorkbench().getDisplay().getActiveShell(), com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreursTitre"), 
 							Messages.getString("errors.blocking.invalidFileStructure1"));
 				}
 			});
@@ -1023,7 +1015,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		crcValues.add(this.message[start + 1]);
 		crcValues.add(this.message[start + 2]);
 
-		int pos = 1 + 2; // 1 -> Code de début de block ; 2 -> ID event (sur 2 octets)
+		int pos = 1 + 2; // 1 -> Code de dï¿½but de block ; 2 -> ID event (sur 2 octets)
 		int variablesLength = 0;
 		double newDateValue = 0;
 		double newTempValue = 0;
@@ -1092,29 +1084,29 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			jruData.value = value;
 			TypeVariable typeVar = var.getDescriptor().getTypeVariable();
 			if (typeVar == TypeVariable.STRUCTURE_DYNAMIQUE) {
-				// récupération de la définition de la structure dynamique
+				// rï¿½cupï¿½ration de la dï¿½finition de la structure dynamique
 				StructureDynamique defStructureDyn = (StructureDynamique) var;
 				StructureDynamique structureDynamique2 = gererStructureDynamique(
 						defStructureDyn, 0, msg, jruData);
 
-				// affectation de la structure remplie à la sous-variable
+				// affectation de la structure remplie ï¿½ la sous-variable
 				var = structureDynamique2;
 			} else if (typeVar == TypeVariable.TABLEAU_DYNAMIQUE) {
-				// récupération de la définition du tableau
+				// rï¿½cupï¿½ration de la dï¿½finition du tableau
 				// dynamique
 				TableauDynamique defTableauDyn = null;
 				if (var != null)
 					defTableauDyn = (TableauDynamique) var;
 				TableauDynamique tableauDynamique = gererTableauDynamique(
 						defTableauDyn, 0, msg, jruData);
-				// affectation de la structure remplie à la sous-variable
+				// affectation de la structure remplie ï¿½ la sous-variable
 				var = tableauDynamique;
 			} else if (typeVar == TypeVariable.CHAINE_DYNAMIQUE) {
 				ChaineDynamique defChaineDyn = (ChaineDynamique) var;
 				// remplissage de la chaine dynamique
 				ChaineDynamique chaineDynamique = gererChaineDynamique(
 						defChaineDyn, 0, msg, jruData);
-				// affectation de la structure remplie à la sous-variable
+				// affectation de la structure remplie ï¿½ la sous-variable
 				var = chaineDynamique;
 			} else {
 				// set the value for the variable. The variable can be a
@@ -1473,7 +1465,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			throws BadArgumentInFileException {
 		Evenement ev = GestionnairePool.getInstance().getEvent(id);
 
-		// cas où l'évévement est dans la table evt/var et dans le fichier xml
+		// cas oï¿½ l'ï¿½vï¿½vement est dans la table evt/var et dans le fichier xml
 		if (((DescripteurEvenement) ev.getM_ADescripteurComposant()).getNom() == null) {
 
 			DescripteurEvenement descrEvt = new DescripteurEvenement();
@@ -1493,7 +1485,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			ev.setChangementHeure(false);
 
 			TableLangueNomUtilisateur tblLangues = new TableLangueNomUtilisateur();
-			tblLangues.setNomUtilisateur(Langage.FR, "Code de l'événement: " //$NON-NLS-1$
+			tblLangues.setNomUtilisateur(Langage.FR, "Code de l'ï¿½vï¿½nement: " //$NON-NLS-1$
 					+ id);
 			tblLangues.setNomUtilisateur(Langage.EN, "Event code: " + id); //$NON-NLS-1$
 
@@ -1695,10 +1687,10 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				}
 				// cas d'une variable de type reserved
 				else if (typeVar == Type.reserved) {
-					// on ne récupère aucune valeur pour ce type de variable
+					// on ne rï¿½cupï¿½re aucune valeur pour ce type de variable
 
-					// on teste si le nombre de bits actuels à lire est
-					// inférieur ou supérieur à la taille de la variable
+					// on teste si le nombre de bits actuels ï¿½ lire est
+					// infï¿½rieur ou supï¿½rieur ï¿½ la taille de la variable
 					// reserved
 					int diffBits = remainedBits + v.getDescriptor().getTailleBits();
 					// s'il est necessaire d'avancer d'un ou plusieurs octets(si
@@ -1707,7 +1699,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 					if (nbOctets > 0) {
 						// on calcul le nombre de bits restants
 						remainedBits = Math.abs(diffBits) % 8;
-						// on avance d'autant d'octets que nécessaire
+						// on avance d'autant d'octets que nï¿½cessaire
 						posVar = posVar + nbOctets;
 					} else {
 						remainedBits = Math.abs(diffBits);
@@ -1718,7 +1710,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 					// than 0 we should increment the posVar position as this
 					// was not made before
 
-					// cas o`u la variable commence au début d'un octet
+					// cas o`u la variable commence au dï¿½but d'un octet
 					if (remainedBits == 0) {
 
 						byte valTemp[] = Arrays.copyOfRange(value, posVar,
@@ -1733,18 +1725,18 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 						v.setValeur(valTemp);
 
 					}
-					// cas où la varaible commence à un nb bit donné dans
+					// cas oï¿½ la varaible commence ï¿½ un nb bit donnï¿½ dans
 					// l'octet
 					else {
 						byte valTemp[] = Arrays.copyOfRange(value, posVar,
 								posVar + tailleOctets + 1);
 						int mask = (int) Math.pow(2, 8 - remainedBits) - 1;
-						// on met à 0 tous les bits inutiles sur le premier
+						// on met ï¿½ 0 tous les bits inutiles sur le premier
 						// octet
 						valTemp[0] = (byte) (valTemp[0] & mask);
 						// on place le tableau de byte dans un BigInteger
 						BigInteger bigInt = new BigInteger(valTemp);
-						// on fait un décalage d'autant de bits que necessaire
+						// on fait un dï¿½calage d'autant de bits que necessaire
 						bigInt = bigInt.shiftRight(8 - remainedBits);
 
 						byte valVar[] = bigInt.toByteArray();
@@ -1782,10 +1774,10 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 	}
 
 	/**
-	 * Récupère la valeur d'une sous-variable(dans une varaible complexe)
+	 * Rï¿½cupï¿½re la valeur d'une sous-variable(dans une varaible complexe)
 	 * 
 	 * @param v
-	 *            la varaible dont on doit définir la valeur
+	 *            la varaible dont on doit dï¿½finir la valeur
 	 * @param value
 	 *            le tableau d'octets contenant la valeur
 	 * @param posVar
@@ -1797,7 +1789,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 	 */
 	private long setXbitsValue2(AVariableComposant v, byte[] value, int posVar,
 			int startBitIdx) {
-		// récupération de la longueur de la variable
+		// rï¿½cupï¿½ration de la longueur de la variable
 		int length = v.getDescriptor().getTailleBits();
 		byte b = 0;
 		int mask;
@@ -1807,21 +1799,21 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		Poids poidsPremierOctetVar = v.getDescriptor().getPoidsPremierOctet();
 		Type typeVariable = v.getDescriptor().getType();
 
-		// anciennes spécifications
+		// anciennes spï¿½cifications
 		// // chaque fois que l'on recommence un nouvel octet,
-		// // on considère que la varaible précédente(dans l'octet n'est ni en
+		// // on considï¿½re que la varaible prï¿½cï¿½dente(dans l'octet n'est ni en
 		// // poids-1er bit = MSB ni LSB)
 		// if (startBitIdx == 0) {
 		// firstPartLSB = false;
 		// firstPartMSB = false;
 		// }
-		// cas où la variable est entièrement stockée dans l'octet courant
-		// longueur de la variable inférieure au nombre de bits restant dans
+		// cas oï¿½ la variable est entiï¿½rement stockï¿½e dans l'octet courant
+		// longueur de la variable infï¿½rieure au nombre de bits restant dans
 		// l'octet
 		int remainedBits;
 		if (length <= 8 - startBitIdx) {
 
-			// récupération du nombre de bits restant dans l'octet
+			// rï¿½cupï¿½ration du nombre de bits restant dans l'octet
 			remainedBits = 8 - startBitIdx;
 
 			// ajout olivier
@@ -1833,76 +1825,76 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				// cas d'un BCD4
 				{
 
-					// nouvelles spécifications: on décale d'autant de bits que
+					// nouvelles spï¿½cifications: on dï¿½cale d'autant de bits que
 					// la
-					// le bit de début de lecture(étant donné que l'on inverse
+					// le bit de dï¿½but de lecture(ï¿½tant donnï¿½ que l'on inverse
 
 					b = (byte) (bitsReverse[posVar] >>> startBitIdx);
 
 				}
 
 				/*
-				 * anciennes spécifications // si la varaible précédente dans le
+				 * anciennes spï¿½cifications // si la varaible prï¿½cï¿½dente dans le
 				 * meme octet n'est pas en // MSB // if (firstPartLSB) { // //
-				 * si on est pas au début de l'octet // if (startBitIdx > 0) {
-				 * // // on récupère les bits de droite // // l'octet et on
-				 * décale // b = (byte) (bitsReverse[posVar] >>> remainedBits
-				 * -length ); // } // } // } // la première varable dans l'octet
+				 * si on est pas au dï¿½but de l'octet // if (startBitIdx > 0) {
+				 * // // on rï¿½cupï¿½re les bits de droite // // l'octet et on
+				 * dï¿½cale // b = (byte) (bitsReverse[posVar] >>> remainedBits
+				 * -length ); // } // } // } // la premiï¿½re varable dans l'octet
 				 * est en poids-1er-bit=LSB // firstPartLSB = true;
 				 */
 			}
 
 			else {
 
-				// nouvelles spécifications
+				// nouvelles spï¿½cifications
 				b = (byte) (value[posVar] >>> remainedBits - length);
 
 				/*
-				 * anciennes spécifications // if (firstPartMSB) { // if
+				 * anciennes spï¿½cifications // if (firstPartMSB) { // if
 				 * (startBitIdx > 0) { // b = (byte) (value[posVar] >>>
-				 * remainedBits - length); // } // } // } // la première
+				 * remainedBits - length); // } // } // } // la premiï¿½re
 				 * variable dans l'octet est en poids-1er-bit=MSB //
 				 * firstPartMSB = true;
 				 */
 
 			}
 
-			// on calcule le masque pour récupérer seulement les bits qui nous
+			// on calcule le masque pour rï¿½cupï¿½rer seulement les bits qui nous
 			// interressent
 			mask = (int) Math.pow(2, length) - 1;
-			// on applique le masque pour récupérer seulement les bits qui nous
+			// on applique le masque pour rï¿½cupï¿½rer seulement les bits qui nous
 			// interressent
 			cacheMemory[0] = (byte) (b & mask);
 
-			// un seul octet a été extrait
+			// un seul octet a ï¿½tï¿½ extrait
 			extractedBytesCnt = 1;
 
-			// on met à jour l'index du bit à prendre dans l'octet
+			// on met ï¿½ jour l'index du bit ï¿½ prendre dans l'octet
 			startBitIdx = startBitIdx + length;
 
 		}
 
-		// cas où la variable a une longueur supérieure
+		// cas oï¿½ la variable a une longueur supï¿½rieure
 		// au nombre de bits restant dans l'octet
 		else {
 
 			int octetCourant = posVar;
 
-			// récupération de ce qui reste dans le premier octet de la variable
+			// rï¿½cupï¿½ration de ce qui reste dans le premier octet de la variable
 			remainedBits = 8 - startBitIdx;
 
 			// cas d'une variable en MSB
 			if (poidsPremierBitVar == Poids.MSB) {
 
-				// nouvelles spécifications
+				// nouvelles spï¿½cifications
 				b = (byte) (value[posVar]);
 
-				// anciennes spécifications
+				// anciennes spï¿½cifications
 				// if (startBitIdx > 0) {
-				// // on prend les bits tout à gauche
+				// // on prend les bits tout ï¿½ gauche
 				// // calcul du masque
 				// mask = (int) (255 - (Math.pow(2, startBitIdx) - 1));
-				// // décalage
+				// // dï¿½calage
 				// b = (byte) ((value[octetCourant] & mask) >>> startBitIdx);
 				// cacheMemory[extractedBytesCnt] = b;
 				// } else {
@@ -1917,11 +1909,11 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			// cas d'une variable en LSB
 			else {
 
-				// nouvelles spécifications
-				// on récupère l'octet entier
+				// nouvelles spï¿½cifications
+				// on rï¿½cupï¿½re l'octet entier
 				b = (byte) (value[posVar]);
 
-				// anciennes spécifications
+				// anciennes spï¿½cifications
 				// b = bitsReverse[octetCourant];
 				// if (startBitIdx > 0) {
 				// b = (byte) (b >>> startBitIdx);
@@ -1933,7 +1925,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			// on met l'octet dans le tableau d'octets temporaire
 			cacheMemory[extractedBytesCnt] = (byte) ((b & mask));
 
-			// on incrémente pour obtenir le prochain octet
+			// on incrï¿½mente pour obtenir le prochain octet
 			extractedBytesCnt++;
 			// on met a jour le nombre de bits restant pour la variable
 			length -= remainedBits;
@@ -1943,7 +1935,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 
 				// l'octet courant change d'indice
 				octetCourant = posVar + extractedBytesCnt;
-				// si le nombre de bits restants de la variable est inférieure à
+				// si le nombre de bits restants de la variable est infï¿½rieure ï¿½
 				// 8
 				if (length - 8 <= 0) {
 
@@ -1954,7 +1946,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 					varTerminee = true;
 
 				} else {
-					// on récupère l'octet entier
+					// on rï¿½cupï¿½re l'octet entier
 
 					length -= 8;
 
@@ -1968,8 +1960,8 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			}
 		}
 
-		// on créé un BigInteger qui permet de contenir toute la variable et de
-		// faire des décalages à gauche ou à droite
+		// on crï¿½ï¿½ un BigInteger qui permet de contenir toute la variable et de
+		// faire des dï¿½calages ï¿½ gauche ou ï¿½ droite
 		// cacheMemory : tableau d'octets de taille fixe
 		byte[] valuesByteArray = Arrays.copyOfRange(cacheMemory, 0,
 				extractedBytesCnt);
@@ -1979,7 +1971,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 
 				BigInteger bigInt = new BigInteger(valuesByteArray);
 				bigInt = bigInt.shiftRight(positionsToShift);
-				// cas où la variabe est autre qu'un intxbits
+				// cas oï¿½ la variabe est autre qu'un intxbits
 
 				byte tabVar[] = bigInt.toByteArray();
 				byte tabVar2[] = new byte[1];
@@ -2012,8 +2004,8 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				byte[] valueArr = null;
 
 				BigInteger bigInt = null;
-				// cas de tout les entiers signés
-				// il sont enregistrés en complément à 2 dans le fichier de
+				// cas de tout les entiers signï¿½s
+				// il sont enregistrï¿½s en complï¿½ment ï¿½ 2 dans le fichier de
 				// parcours
 				if (typeVariable == Type.int16 || typeVariable == Type.intXbits
 						|| typeVariable == Type.int24
@@ -2021,12 +2013,12 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 						|| typeVariable == Type.int64
 						|| typeVariable == Type.int8) {
 
-					// on créé un BigInteger signé
+					// on crï¿½ï¿½ un BigInteger signï¿½
 					bigInt = new BigInteger(valuesByteArray);
 					bigInt = bigInt.shiftRight(positionsToShift);
 
 				}
-				// on créé un BigInteger non signé
+				// on crï¿½ï¿½ un BigInteger non signï¿½
 				// /t == Type.uintXbits || t == Type.uint8 || t == Type.uint16
 				// || t == Type.uint24 || t == Type.uint32
 				// || t == Type.uint64 || t == Type.real32
@@ -2062,7 +2054,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				v.setValeur(valuesByteArray);
 			}
 		}
-		// cas des intxbits: on doit reproduire le complément à 2 sur l'octet de
+		// cas des intxbits: on doit reproduire le complï¿½ment ï¿½ 2 sur l'octet de
 		// poids fort
 		if (typeVariable == Type.intXbits) {
 			byte[] valeurVariable = (byte[]) v.getValeur();// tagValCor
@@ -2098,7 +2090,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 
 		}
 
-		// on met à jour l'indice de début de lecture pour la variable suivante
+		// on met ï¿½ jour l'indice de dï¿½but de lecture pour la variable suivante
 		if (startBitIdx >= 8)
 			startBitIdx = 0;
 
@@ -2142,8 +2134,8 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		int offsetBlock = 0;
 		int valTmp = 0;
 		int valTmp2 = 0;
-		// sur chaque bloc il y a systèmatiquement 2 octets attribué au code
-		// début et code fin
+		// sur chaque bloc il y a systï¿½matiquement 2 octets attribuï¿½ au code
+		// dï¿½but et code fin
 		int decalageCodeDebutCodeFin = 2;
 		// get the value
 		while (crt < tailleOctets) {
@@ -2178,7 +2170,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				pos += decalageCodeDebutCodeFin;
 				crt += valTmp;
 			} else {
-				// du 2ème à n block - 1
+				// du 2ï¿½me ï¿½ n block - 1
 				valTmp2 = tailleBlocData - decalageCodeDebutCodeFin;
 				tmp = Arrays.copyOfRange(this.message, start + pos + crt, start
 						+ pos + crt + tailleBlocData - 1);
@@ -2445,9 +2437,9 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 	}
 
 	/**
-	 * Méthode qui récupère le nom du fichier XML avant son chargement
+	 * Mï¿½thode qui rï¿½cupï¿½re le nom du fichier XML avant son chargement
 	 * 
-	 * @return null si problème dans l'entete, sinon: nom du fichier XML
+	 * @return null si problï¿½me dans l'entete, sinon: nom du fichier XML
 	 */
 	public String getNomFichierXml(String fileName) {
 
@@ -2714,7 +2706,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		// create the table
 		factory.creerTableEvtVar(descripteursEvt);
 
-		// affichage ordonné des variables
+		// affichage ordonnï¿½ des variables
 		DescripteurComposite descrComposite = (DescripteurComposite) descripteursEvt;
 		HashMap<Integer, DescripteurComposite> hashMapCodeDescComp = new HashMap<Integer, DescripteurComposite>();
 		for (int o = 0; o < descrComposite.getLength(); o++) {
@@ -2773,14 +2765,14 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 	private static StructureDynamique gererStructureDynamique(
 			StructureDynamique definitionStructureDynamique, int start,
 			Message msg, JRUData jruData) {
-		// création d'une nouvelle instance de structure dynamique
+		// crï¿½ation d'une nouvelle instance de structure dynamique
 		StructureDynamique structureDynamique = new StructureDynamique();
 
-		// définition du descripteur de la nouvelle structure dynamique
+		// dï¿½finition du descripteur de la nouvelle structure dynamique
 		structureDynamique.setDescripteur(definitionStructureDynamique
 				.getDescriptor());
 
-		// récupération de la définition de la variable d'entete
+		// rï¿½cupï¿½ration de la dï¿½finition de la variable d'entete
 		AVariableComposant defVarEntete = GestionnairePool.getInstance()
 				.getVariable(
 						definitionStructureDynamique.getVariableEntete()
@@ -2824,7 +2816,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 							varEntete.getDescriptor().getTailleBits());
 		}
 
-		// affectation de la variable d'entete à la nouvelle structure dynamique
+		// affectation de la variable d'entete ï¿½ la nouvelle structure dynamique
 		structureDynamique.setVariableEntete(varEntete);
 
 		String valeurVarEntete = varEntete
@@ -2854,7 +2846,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				tableSousVar.setM_AVariableComposant(listeSousVariable2);
 				structureDynamique.ajouterTableSousVariable(tableSousVar);
 			}
-			// Cas où le NID_XUSER n'est pas connu (Packet 44)
+			// Cas oï¿½ le NID_XUSER n'est pas connu (Packet 44)
 			// Message d'erreur + affichage de la valeur du NID_XUSER + saut de
 			// position de L_PACKET
 		} else if (varEntete.getDescriptor().getM_AIdentificateurComposant()
@@ -2887,12 +2879,12 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 									.getString("errors.nonblocking.blockStart1")
 							+ " " + (goodMsgs.size() + 1 - blockDefaultMessagesCount));
 		}
-		// Cas où le NID_MESSAGE n'est pas connu
+		// Cas oï¿½ le NID_MESSAGE n'est pas connu
 		// Message d'erreur + affichage de la valeur du NID_MESSAGE + pas besoin
 		// de saut,
-		// Il ne peut pas y avoir d'autre information à décoder après un
+		// Il ne peut pas y avoir d'autre information ï¿½ dï¿½coder aprï¿½s un
 		// NID_MESSAGE
-		// = pas de NID_MESSAGE après un NID_MESSAGE
+		// = pas de NID_MESSAGE aprï¿½s un NID_MESSAGE
 		else if (varEntete.getDescriptor().getM_AIdentificateurComposant()
 				.getNom().equals("NID_MESSAGE")) {
 			SamngLogger
@@ -2915,15 +2907,15 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			ChaineDynamique definitionChaineDynamique, int start, Message msg,
 			JRUData jruData) {
 
-		// création d'une nouvelle instance de chaine
+		// crï¿½ation d'une nouvelle instance de chaine
 		// dynamique
 		ChaineDynamique chaineDynamique = new ChaineDynamique();
 
-		// définition du descripteur de la nouvelle chaine dynamique
+		// dï¿½finition du descripteur de la nouvelle chaine dynamique
 		chaineDynamique.setDescripteur(definitionChaineDynamique
 				.getDescriptor());
 
-		// récupération de la définition de la variable d'entete
+		// rï¿½cupï¿½ration de la dï¿½finition de la variable d'entete
 		// donnant le nombre d'occurrence de la variable XText
 		AVariableComposant defVarEntete = GestionnairePool.getInstance()
 				.getVariable(
@@ -2961,7 +2953,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		// affectation de la variable d'entete au nouveau tableau dynamique
 		chaineDynamique.setVariableEntete(varEnteteLText);
 
-		// récupération de la valeur de la variable d'entete
+		// rï¿½cupï¿½ration de la valeur de la variable d'entete
 		String valeurVarEntete = varEnteteLText
 				.getValeurBruteChaineVariableDiscrete();
 
@@ -2984,7 +2976,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		AVariableComposant sousVariableXText = null;
 
 		int tailleVarXText = defVarXText.getDescriptor().getTailleBits();
-		// création d'une nouvelle table sous-variable qui stocke les occurences
+		// crï¿½ation d'une nouvelle table sous-variable qui stocke les occurences
 		// de la variable XText
 		TableSousVariable tableSousVarChaineDynamique = new TableSousVariable();
 
@@ -3038,21 +3030,21 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 					.getCastedValeur()).intValue();
 			longueurVariable = var.getDescriptor().getTailleBits();
 			
-			// récupération du message
+			// rï¿½cupï¿½ration du message
 			byte[] mess = Arrays.copyOfRange(jruData.value, start, start
 					+ nbOctets);
 			
-			// position du signum à 1 :
-			// sinon, si en MSB on a 0xFF suivi d'un octet avec bit 7 = 1, le 0xFF sera vu par défaut 
-			// comme bit de signe négatif et retiré lors du .toByteArray() car non utile pour
-			// qualifier la magnitude comme étant de signe négatif (bit 7 = 1 suffisant) !
+			// position du signum ï¿½ 1 :
+			// sinon, si en MSB on a 0xFF suivi d'un octet avec bit 7 = 1, le 0xFF sera vu par dï¿½faut 
+			// comme bit de signe nï¿½gatif et retirï¿½ lors du .toByteArray() car non utile pour
+			// qualifier la magnitude comme ï¿½tant de signe nï¿½gatif (bit 7 = 1 suffisant) !
 			BigInteger bigInt = new BigInteger(1, mess);
 			
-			// suppression des bits inutiles à droite
+			// suppression des bits inutiles ï¿½ droite
 			BigInteger bigInt2 = bigInt.shiftRight((nbOctets * 8) - longueurVariable - jruData.pos);
 
-			// Prise en compte du cas où le premier octet est à 0
-            // car dans ce cas là la conversion en int le supprimé
+			// Prise en compte du cas oï¿½ le premier octet est ï¿½ 0
+            // car dans ce cas lï¿½ la conversion en int le supprimï¿½
 			byte[] tabbyte = new byte[(((longueurVariable + jruData.pos) % 8) == 0 ? 0 : 1) + 
 			                          ((longueurVariable + jruData.pos) / 8)]; 
 			
@@ -3062,7 +3054,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			System.arraycopy(magnitudeByteArray, 0, tabbyte, 
 					tabbyte.length - magnitudeByteArray.length, magnitudeByteArray.length);			
 
-			// suppresion des bits inutiles à gauches
+			// suppresion des bits inutiles ï¿½ gauches
 			for (int i = tabbyte.length - 1; i >= 0; i--) {
 				if ((tabbyte.length - i) * 8 <= longueurVariable) {
 					tabbyte[i] &= 0xff;
@@ -3085,7 +3077,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			value = Arrays.copyOfRange(tabbyte, tabbyte.length - tailleValue,
 					tabbyte.length);
 			
-			/* décalage à gauche pour les variables complexes
+			/* dï¿½calage ï¿½ gauche pour les variables complexes
 			 * cf. traitement fonction 
 			 * com.faiveley.samng.principal.sm.parseurs.parseursJRU.setXbitsValue2 */
 			if (var instanceof VariableComplexe) {
@@ -3130,7 +3122,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		AVariableComposant varComp = null;
 		int codeSousVar;
 		DescripteurVariable descVar = null;
-		// création d'une liste de sous variables temporaire pour modification
+		// crï¿½ation d'une liste de sous variables temporaire pour modification
 		// car on ne peut modifier directement listeSousVariable
 		List<AVariableComposant> listeSousVariable2 = new ArrayList<AVariableComposant>();
 		long valeur_L_Packet = 0;
@@ -3188,7 +3180,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 							}
 						}
 
-						// ajout de la sous variable à la liste des sous
+						// ajout de la sous variable ï¿½ la liste des sous
 						// variables
 						listeSousVariable2.add(variableRenseignee);
 
@@ -3249,7 +3241,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 
 					} else if (typeVariable == TypeVariable.STRUCTURE_DYNAMIQUE) {
 
-						// récupération de la définition de la structure
+						// rï¿½cupï¿½ration de la dï¿½finition de la structure
 						// dynamique
 						StructureDynamique defStructureDyn = null;
 
@@ -3261,13 +3253,13 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 						StructureDynamique structureDynamique2 = gererStructureDynamique(
 								defStructureDyn, start, msg, jruData);
 
-						// ajout de la sous variable à la liste des sous
+						// ajout de la sous variable ï¿½ la liste des sous
 						// variables
 						listeSousVariable2.add(structureDynamique2);
 
 					} else if (typeVariable == TypeVariable.TABLEAU_DYNAMIQUE) {
 
-						// récupération de la définition du tableau
+						// rï¿½cupï¿½ration de la dï¿½finition du tableau
 						// dynamique
 						TableauDynamique defTableauDyn = null;
 
@@ -3279,7 +3271,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 						TableauDynamique tableauDynamique2 = gererTableauDynamique(
 								defTableauDyn, start, msg, jruData);
 
-						// ajout de la sous variable à la liste des sous
+						// ajout de la sous variable ï¿½ la liste des sous
 						// variables
 						listeSousVariable2.add(tableauDynamique2);
 
@@ -3296,7 +3288,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 						ChaineDynamique chaineDynamique = gererChaineDynamique(
 								defChaineDyn, start, msg, jruData);
 
-						// ajout de la sous variable à la liste des sous
+						// ajout de la sous variable ï¿½ la liste des sous
 						// variables
 						listeSousVariable2.add(chaineDynamique);
 
@@ -3310,20 +3302,20 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 							.getVariableDynamique(
 									descVar.getM_AIdentificateurComposant()
 											.getCode());
-					// récupération de la définition de la tableau dynamique
+					// rï¿½cupï¿½ration de la dï¿½finition de la tableau dynamique
 					StructureDynamique defStructureDyn = (StructureDynamique) varComp;
 
-					// récupération de la liste des paquets
+					// rï¿½cupï¿½ration de la liste des paquets
 					List<Paquets> listePaquets = gererListePaquets(
 							defStructureDyn, start, msg, jruData);
 
-					// ajout des paquets à la table des sous variables
-					// et ajout de la varaible mère(varaible d'entete) à chaque
+					// ajout des paquets ï¿½ la table des sous variables
+					// et ajout de la varaible mï¿½re(varaible d'entete) ï¿½ chaque
 					// paquet
 					AVariableComposant variableEntete = null;
 					if (listePaquets != null && listePaquets.size() > 0) {
 						for (Paquets paquets : listePaquets) {
-							// ajout de la sous variable à la liste des sous
+							// ajout de la sous variable ï¿½ la liste des sous
 							// variables
 							variableEntete = paquets.getVariableEntete();
 							paquets.setParent(variableEntete);
@@ -3340,14 +3332,14 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			TableauDynamique definitionTableauDynamique, int start,
 			Message msg, JRUData jruData) {
 
-		// création d'une nouvelle instance de tableau dynamique
+		// crï¿½ation d'une nouvelle instance de tableau dynamique
 		TableauDynamique tableauDynamique = new TableauDynamique();
 
-		// définition du descripteur du tableau dynamique
+		// dï¿½finition du descripteur du tableau dynamique
 		tableauDynamique.setDescripteur(definitionTableauDynamique
 				.getDescriptor());
 
-		// récupération de la définition de la variable d'entete
+		// rï¿½cupï¿½ration de la dï¿½finition de la variable d'entete
 		AVariableComposant defVarEntete = GestionnairePool.getInstance()
 				.getVariable(
 						definitionTableauDynamique.getVariableEntete()
@@ -3386,7 +3378,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		// affectation de la variable d'entete au nouveau tableau dynamique
 		tableauDynamique.setVariableEntete(varEntete);
 
-		// récupération de la valeur de la variable d'entete
+		// rï¿½cupï¿½ration de la valeur de la variable d'entete
 		String valeurVarEntete = varEntete
 				.getValeurBruteChaineVariableDiscrete();
 
@@ -3434,14 +3426,14 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 
 		List<Paquets> listePaquets = new ArrayList<Paquets>();
 
-		// récupération de la définition de la variable d'entete
+		// rï¿½cupï¿½ration de la dï¿½finition de la variable d'entete
 		AVariableComposant defVarEntete = GestionnairePool.getInstance()
 				.getVariable(
 						definitionStructureDynamique.getVariableEntete()
 								.getDescriptor()
 								.getM_AIdentificateurComposant().getCode());
 
-		// variables utilisées pour le paquet courant
+		// variables utilisï¿½es pour le paquet courant
 		Paquets paquetCourant = null;
 
 		AVariableComposant varEntetePaquetCourant;
@@ -3450,8 +3442,8 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		TableSousVariable tableSousVarDefinition = null;
 		String valeurVarEntetePaquetCourant = ""; //$NON-NLS-1$
 
-		// récupération de la valeur d'arret de lecture des paquets
-		// la valeur d'arret de lecture correspond à la valeur de la dernière
+		// rï¿½cupï¿½ration de la valeur d'arret de lecture des paquets
+		// la valeur d'arret de lecture correspond ï¿½ la valeur de la derniï¿½re
 		// table de sous variables
 		// String valeurArretLecturePaquets = ((TableSousVariable)
 		// definitionStructureDynamique
@@ -3464,7 +3456,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		String valEntetePrecedente = "";
 
 		//		System.out.println("MESSAGE: " + msg.getEvenement().getM_ADescripteurComposant().getM_AIdentificateurComposant().getNom()); //$NON-NLS-1$
-		//		System.out.println("longueur message enregistrée: " + GestionnaireLongueurMessage.getInstance().getLongueurEnregistreeMessageCourant()); //$NON-NLS-1$
+		//		System.out.println("longueur message enregistrï¿½e: " + GestionnaireLongueurMessage.getInstance().getLongueurEnregistreeMessageCourant()); //$NON-NLS-1$
 		while (!finMessage) {
 			paquetCourant = new Paquets();
 			jruData.lecturePaquetEnCours = true;
@@ -3472,12 +3464,12 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 			// copie de la variable d'entete
 			varEntetePaquetCourant = defVarEntete.copy();
 
-			// si la position après lecture de la variable d'entete du paquet ne
-			// dépasse pas L_MESSAGE_JRU
+			// si la position aprï¿½s lecture de la variable d'entete du paquet ne
+			// dï¿½passe pas L_MESSAGE_JRU
 			// on lit ce paquet
 			// Dans un message interne (NID_MESSAGE) s'il ne reste pas assez de
-			// bits pour un entête
-			// de packet (8 bits) dans la longueur indiqué par le paquet
+			// bits pour un entï¿½te
+			// de packet (8 bits) dans la longueur indiquï¿½ par le paquet
 			// (L_MESSAGE), c'est que c'est du padding !
 			GestionnaireLongueurMessage gestLongueurMessage = GestionnaireLongueurMessage
 					.getInstance();
@@ -3500,15 +3492,15 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				// valorisation de la variable d'entete
 				remplirValueJRU(varEntetePaquetCourant, start, msg, jruData);
 
-				// récupération de la valeur de la variable d'entete
+				// rï¿½cupï¿½ration de la valeur de la variable d'entete
 				valeurVarEntetePaquetCourant = varEntetePaquetCourant
 						.getValeurBruteChaineVariableDiscrete();
 
 				String valEntetePourMessage = valeurVarEntetePaquetCourant;
 
-				// après lecture du précédent paquet, la position réelle peut
-				// différée de celle donnée par la variable L_PACKET du paquet
-				// précédent
+				// aprï¿½s lecture du prï¿½cï¿½dent paquet, la position rï¿½elle peut
+				// diffï¿½rï¿½e de celle donnï¿½e par la variable L_PACKET du paquet
+				// prï¿½cï¿½dent
 				if (gestLongueurPaquet.getLongueurEnregistreePacketCourant() != 0) {
 					if (gestLongueurPaquet.getLongueurCalculeePacketCourant() != gestLongueurPaquet
 							.getLongueurEnregistreePacketCourant()) {
@@ -3539,12 +3531,12 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 										+ " " + (goodMsgs.size() + 1 - blockDefaultMessagesCount));										
 					}
 				} else {
-					// récupération de la valeur de la variable d'entete
+					// rï¿½cupï¿½ration de la valeur de la variable d'entete
 					valEntetePourMessage = varEntetePaquetCourant
 							.getValeurBruteChaineVariableDiscrete();
 				}
 				valEntetePrecedente = valEntetePourMessage;
-				// réinitialisation des longueurs calculée et enregistrée du
+				// rï¿½initialisation des longueurs calculï¿½e et enregistrï¿½e du
 				// paquet
 				gestLongueurPaquet.setLongueurEnregistreePacketCourant(0);
 				gestLongueurPaquet.setLongueurCalculeePacketCourant(0);
@@ -3577,7 +3569,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				paquetCourant.setDescripteur(definitionStructureDynamique
 						.getDescriptor());
 
-				// // récupération de la valeur de la variable d'entete
+				// // rï¿½cupï¿½ration de la valeur de la variable d'entete
 				// valeurVarEntetePaquetCourant =
 				// varEntetePaquetCourant.getValeurBruteChaineVariableDiscrete();
 
@@ -3587,7 +3579,7 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 					depassementCapaciteMessage = true;
 				}
 
-				// récupération de la table de sous-variable correspondante
+				// rï¿½cupï¿½ration de la table de sous-variable correspondante
 				tableSousVarDefinition = definitionStructureDynamique
 						.getTableSousVariableReferenceByValeur(valeurVarEntetePaquetCourant);
 
@@ -3596,12 +3588,12 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				// valeur
 				// d'arret: tableSousVarDefinition.getM_AVariableComposant()
 				// doit
-				// etre différent de null
+				// etre diffï¿½rent de null
 				// - pour savoir si la valeur de la variable d'entete correspond
-				// à
+				// ï¿½
 				// une
 				// table sous variable tableSousVarDefinition doit etre
-				// différent de
+				// diffï¿½rent de
 				// null
 
 				if (!depassementCapaciteMessage
@@ -3611,12 +3603,12 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				) {
 					tableSousVarPaquetCourant = tableSousVarDefinition.copy();
 
-					// récupération de la liste des variable
+					// rï¿½cupï¿½ration de la liste des variable
 					listeSousVariablePaquetCourant = tableSousVarPaquetCourant
 							.getM_AVariableComposant();
 
 					// if (listeSousVariablePaquetCourant != null) {
-					// création d'une liste de sous variables temporaire
+					// crï¿½ation d'une liste de sous variables temporaire
 					// pour modification
 					// car on ne peut modifier directement
 					// listeSousVariablePaquetCourant
@@ -3654,12 +3646,12 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 				}
 			} else {
 				//				System.out.print("   fin de lecture des paquets---"); //$NON-NLS-1$
-				//				System.out.print("   longueur totale calculée message courant: " + GestionnaireLongueurMessage.getInstance().getLongueurCalculeeMessageCourant()+"---"); //$NON-NLS-1$
+				//				System.out.print("   longueur totale calculï¿½e message courant: " + GestionnaireLongueurMessage.getInstance().getLongueurCalculeeMessageCourant()+"---"); //$NON-NLS-1$
 				finMessage = true;
 			}
 
 			// Quand un paquet contient le code 255, il s'agit de la fin
-			// du message. Les bits suivants doivent être ignorés. CF DR22G
+			// du message. Les bits suivants doivent ï¿½tre ignorï¿½s. CF DR22G
 			if (valEntetePrecedente.equals("255")) {
 				finMessage = true;
 			}
@@ -3667,8 +3659,8 @@ public class ParseurParcoursSamng extends ParseurParcoursBinaire {
 		}
 		jruData.lecturePaquetEnCours = false;
 		jruData.positionPaquetSuivantUsing_L_Packet = 0;
-		// si la variable d'entete du dernier paquet n'est pas égale à la valeur
-		// d'arret levée d'une erreur
+		// si la variable d'entete du dernier paquet n'est pas ï¿½gale ï¿½ la valeur
+		// d'arret levï¿½e d'une erreur
 		// if (!valeurVarEntetePaquetCourant.equals(valeurArretLecturePaquets))
 		// SamngLogger.getLogger().error(
 		//		Messages.getString("ParseurParcoursJRU.40") + definitionStructureDynamique.getDescriptor().getM_AIdentificateurComposant().getNom() + Messages.getString("ParseurParcoursJRU.41") + valeurArretLecturePaquets + Messages.getString("ParseurParcoursJRU.42") + valeurVarEntetePaquetCourant); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$

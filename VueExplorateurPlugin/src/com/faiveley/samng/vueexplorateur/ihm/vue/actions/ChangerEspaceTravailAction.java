@@ -3,8 +3,8 @@ package com.faiveley.samng.vueexplorateur.ihm.vue.actions;
 import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.sm.util.StringUtils;
 import com.faiveley.samng.vueexplorateur.ihm.vue.VueExplorateurFichiersDeParcours;
 import com.faiveley.samng.vueexplorateur.ihm.vue.treeObjects.TreeParent;
@@ -14,28 +14,28 @@ import com.faiveley.samng.vueexplorateur.util.WorkspaceService;
 public class ChangerEspaceTravailAction {
 
 	public static void changerEspace(TreeParent parent) {
-		DirectoryDialog dd=new DirectoryDialog(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell());
+		DirectoryDialog dd=new DirectoryDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell());
 		
 		dd.setMessage(Messages.getString("ChangerEspaceTravailAction_0"));
 		dd.setText(Messages.getString("ChangerEspaceTravailAction_1"));
 		
-		//on récupère l'espace de travail sur lequel on a cliqué
+		//on rï¿½cupï¿½re l'espace de travail sur lequel on a cliquï¿½
 		String currentWorkspaceDirectory = parent.getAbsoluteName();
 		
-		//si on récupère un chemin on l'utilise
+		//si on rï¿½cupï¿½re un chemin on l'utilise
 		if (currentWorkspaceDirectory!=null && (!currentWorkspaceDirectory.equals(""))) { //$NON-NLS-1$
 			dd.setFilterPath(currentWorkspaceDirectory);
 		}	
 		
-		// on récupère les dossiers de l'espace de travail depuis le fichier missions.properties
+		// on rï¿½cupï¿½re les dossiers de l'espace de travail depuis le fichier missions.properties
 		String[] workspaceDirectories = WorkspaceService.instance.getWorkspaceDirectories();	
 		
 		//on ouvre la boite de dialogue
 		String path=dd.open();
 		if (path!=null && path!="") { //$NON-NLS-1$
 			
-			// On doit vérifier si le nouvel emplacement ne correspond pas à l'emplacement d'un dossier du workspace
-			// déjà présent
+			// On doit vï¿½rifier si le nouvel emplacement ne correspond pas ï¿½ l'emplacement d'un dossier du workspace
+			// dï¿½jï¿½ prï¿½sent
 			boolean alreadyPresent = false;
 			for(int i = 0; i < workspaceDirectories.length; i++) {
 				if (path.equals(workspaceDirectories[i]) && !path.equals(currentWorkspaceDirectory)) {
@@ -44,7 +44,7 @@ public class ChangerEspaceTravailAction {
 				}
 			}
 			
-			// Erreur dossier déjà présent dans le workspace
+			// Erreur dossier dï¿½jï¿½ prï¿½sent dans le workspace
 			if (alreadyPresent) {
 				MessageBox msgBox = DialogUtils.getErrorMessageBox(Display.getCurrent().getActiveShell(), 
 						Messages.getString("ErreurChangerEspaceTravailAction"), 
@@ -53,7 +53,7 @@ public class ChangerEspaceTravailAction {
 				return;
 			}
 			
-			// Le workspace peut être modifié
+			// Le workspace peut ï¿½tre modifiï¿½
 			for(int i = 0; i < workspaceDirectories.length; i++) {
 				if (workspaceDirectories[i].equals(currentWorkspaceDirectory)) {
 					workspaceDirectories[i] = path;
@@ -62,7 +62,7 @@ public class ChangerEspaceTravailAction {
 			}
 			String newWorkspacesStr = StringUtils.join(workspaceDirectories, WorkspaceService.WORKSPACE_SEP);
 			
-			// On met à jour le fichier missions.properties avec la nouvelle valeur
+			// On met ï¿½ jour le fichier missions.properties avec la nouvelle valeur
 			WorkspaceService.instance.updateWorkspace(newWorkspacesStr);	
 			Display.getDefault().syncExec(new Runnable() {
 				public void run() {

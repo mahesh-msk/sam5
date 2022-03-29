@@ -11,6 +11,7 @@ import org.eclipse.swt.widgets.DirectoryDialog;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -62,7 +63,7 @@ public class MultipleExportsAction extends Action {
 	}
 
 	/**
-	 * Méthode d'export de la selection de la vue tabulaire: fait appel à la
+	 * Mï¿½thode d'export de la selection de la vue tabulaire: fait appel ï¿½ la
 	 * classe ParseurExport du framework
 	 * 
 	 * @param cheminFichier
@@ -127,12 +128,12 @@ public class MultipleExportsAction extends Action {
 	}
 
 	/**
-	 * Méthode d'ouverture de la fenetre de dialogue d'export de selection
+	 * Mï¿½thode d'ouverture de la fenetre de dialogue d'export de selection
 	 */
 	public final void run() {
 
 		if (this.window == null)
-			this.window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+			this.window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 
 //		String fileOpen="";
 //		try {
@@ -155,7 +156,7 @@ public class MultipleExportsAction extends Action {
 			
 				FichierFermerAction ffa = null ;
 				ffa = new FichierFermerAction(
-						Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(), 
+						PlatformUI.getWorkbench().getActiveWorkbenchWindow(), 
 						"");
 				ffa.run();
 			} else {
@@ -181,11 +182,11 @@ public class MultipleExportsAction extends Action {
 		if (cheminsFichier.size() != 0) {			
 			
 			// #880 :
-			// L'évolution consiste à implémenter le traitement suivant :
-			// 1) prendre le 1er fichier par ordre alphabétique du répertoire sélectionné
-			// 2) proposer à l'utilisateur les filtres liés à ce fichier (à son profil XML)
-			// 3a) Si l'utilisateur sélectionne un filtre, seuls les fichiers du même XML que le 1er fichier du répertoire, sont exportés (avec le filtre sélectionné).
-			// 3b) Si l'utilisateur ne sélectionne pas de filtre, tous les fichiers du répertoire, sont exportés
+			// L'ï¿½volution consiste ï¿½ implï¿½menter le traitement suivant :
+			// 1) prendre le 1er fichier par ordre alphabï¿½tique du rï¿½pertoire sï¿½lectionnï¿½
+			// 2) proposer ï¿½ l'utilisateur les filtres liï¿½s ï¿½ ce fichier (ï¿½ son profil XML)
+			// 3a) Si l'utilisateur sï¿½lectionne un filtre, seuls les fichiers du mï¿½me XML que le 1er fichier du rï¿½pertoire, sont exportï¿½s (avec le filtre sï¿½lectionnï¿½).
+			// 3b) Si l'utilisateur ne sï¿½lectionne pas de filtre, tous les fichiers du rï¿½pertoire, sont exportï¿½s
 
 			// Just to print to the user the filter of the first file
 			BridageFormats.getInstance().setFormatFichierOuvert(BridageFormats.getInstance().getFormatFichierOuvert(cheminsFichier.get(0)));		
@@ -193,13 +194,13 @@ public class MultipleExportsAction extends Action {
 			try {
 				ChargeurParcours.loadBinaryFile(cheminsFichier.get(0),0,1,false);
 			} catch (ParseurXMLException e) {
-				// TODO Bloc catch généré automatiquement
+				// TODO Bloc catch gï¿½nï¿½rï¿½ automatiquement
 				e.printStackTrace();
 			} catch (AExceptionSamNG e) {
-				// TODO Bloc catch généré automatiquement
+				// TODO Bloc catch gï¿½nï¿½rï¿½ automatiquement
 				e.printStackTrace();
 			} catch (Exception e) {
-				// TODO Bloc catch généré automatiquement
+				// TODO Bloc catch gï¿½nï¿½rï¿½ automatiquement
 				e.printStackTrace();
 			}
 			

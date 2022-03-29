@@ -56,6 +56,7 @@ import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -125,7 +126,7 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 
 	//	ToolBar
 	private IActionBars bars; 
-	//déclaration des actions
+	//dï¿½claration des actions
 	private SupprimerMarqueurAction supprimerMarqueurAction;
 	private MesureDeltaValeurMarqueurAction mesurerDeltaValeurMarqueurAction;
 	private ImprimerVueAction imprimerVueAction ;
@@ -180,7 +181,7 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 			ISelectionService selService = getSite().getWorkbenchWindow().getSelectionService();
 			selService.addPostSelectionListener(this);
 		}
-		//ajout des actions à la toolbar
+		//ajout des actions ï¿½ la toolbar
 		makeActions();
 		this.bars = getViewSite().getActionBars();
 		ajoutActionToolBar(supprimerMarqueurAction);
@@ -198,27 +199,27 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 			
 			@Override
 			public void partVisible(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partOpened(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partInputChanged(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partHidden(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partDeactivated(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
@@ -238,21 +239,21 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 			
 			@Override
 			public void partBroughtToTop(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 			
 			@Override
 			public void partActivated(IWorkbenchPartReference partRef) {
-				// TODO Stub de la méthode généré automatiquement
+				// TODO Stub de la mï¿½thode gï¿½nï¿½rï¿½ automatiquement
 			}
 		});
 		
 	}
 
-	/** Déclaration d'action */
+	/** Dï¿½claration d'action */
 	public void makeActions(){
-//		récupération de la fenetre active
-		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+//		rï¿½cupï¿½ration de la fenetre active
+		IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 
 		listeActionsAuditrice = new ArrayList<Action>(0);
 
@@ -283,7 +284,7 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans le menu
+	 * Mï¿½thode d'ajout d'une action dans le menu
 	 * @param action
 	 */
 	public void ajoutActionToolBar(Action action) {
@@ -291,7 +292,7 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans la toolbar
+	 * Mï¿½thode d'ajout d'une action dans la toolbar
 	 * @param action
 	 */
 	public void ajoutActionToolMenuBar(Action action) {
@@ -343,12 +344,12 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 				if (e.keyCode == SWT.DEL) {
 					supprimerMarqueurAction.run();
 				}
-				// TODO Raccord de méthode auto-généré
+				// TODO Raccord de mï¿½thode auto-gï¿½nï¿½rï¿½
 
 			}
 
 			public void keyReleased(KeyEvent e) {
-				// TODO Raccord de méthode auto-généré
+				// TODO Raccord de mï¿½thode auto-gï¿½nï¿½rï¿½
 
 			}
 
@@ -429,7 +430,7 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 				this.accumulatedDistanceColumn.setResizable(true);
 				this.mapNomUniqueNomUtilisateur.put(nomUtilisateur, "accumulated_distance");
 				
-				//CURRENT_POS++; // CPIGNON: Pourquoi ce ++ ici? Commenté car utilité non percue et explique un décalage qui ne devrait pas avoir lieu
+				//CURRENT_POS++; // CPIGNON: Pourquoi ce ++ ici? Commentï¿½ car utilitï¿½ non percue et explique un dï¿½calage qui ne devrait pas avoir lieu
 
 //				if(distanceCorrectionapplied){
 //					CURRENT_POS++;
@@ -1009,7 +1010,7 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 	}
 
 	public int promptToSaveOnClose() {
-		//  Apéndice de método generado automáticamente
+		//  Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return 0;
 	}
 
@@ -1020,18 +1021,18 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 	}
 
 	public boolean isDirty() {
-		//  Apéndice de método generado automáticamente
+		//  Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 
 	public boolean isSaveAsAllowed() {
-		//  Apéndice de método generado automáticamente
+		//  Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return true;
 	}
 
 	public boolean isSaveOnCloseNeeded() {
 		/***
-		 * Lors de la fermeture de la vue on enregistre la configuration de celle-ci en mémoire(pas dans le xml)
+		 * Lors de la fermeture de la vue on enregistre la configuration de celle-ci en mï¿½moire(pas dans le xml)
 		 */
 		if(!this.markersTable.isDisposed())
 			enregistrerConfigurationColonne();
@@ -1045,7 +1046,7 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 	}
 
 	/**
-	 * Méthode qui enregistre la configuration de celle-ci en mémoire(pas dans le xml)
+	 * Mï¿½thode qui enregistre la configuration de celle-ci en mï¿½moire(pas dans le xml)
 	 *
 	 */
 	private void enregistrerConfigurationColonne(){

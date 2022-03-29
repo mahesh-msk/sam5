@@ -5,13 +5,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import noNamespace.EnregistreurDefDocument;
-
 import org.apache.xmlbeans.XmlException;
 
 import com.faiveley.samng.principal.sm.parseurs.BridageFormats;
 import com.faiveley.samng.principal.sm.repertoires.RepertoiresAdresses;
 import com.faiveley.samng.principal.sm.util.StringUtils;
+
+import noNamespace.EnregistreurDefDocument;
 
 public class DistinctionExtension {
 
@@ -54,7 +54,7 @@ public class DistinctionExtension {
 			File[] list = repertoire.listFiles();
 			if (list != null){
 				for ( int i = 0; i < list.length; i++) {
-					// Appel récursif sur les sous-répertoires
+					// Appel rï¿½cursif sur les sous-rï¿½pertoires
 					form=getTypeFormat(list[i]);
 					if (form.equals("ATESS")) {
 						ATESS=true;

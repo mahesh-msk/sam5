@@ -12,7 +12,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 
@@ -57,7 +56,6 @@ import com.faiveley.samng.principal.sm.marqueurs.GestionnaireMarqueurs;
 import com.faiveley.samng.principal.sm.segments.ruptures.TableRuptures;
 import com.faiveley.samng.principal.sm.segments.ruptures.TypeRupture;
 import com.faiveley.samng.vuegraphique.ihm.ActivatorVueGraphique;
-import com.faiveley.samng.vuegraphique.ihm.vues.vuegraphique.VueGraphique;
 import com.faiveley.samng.vuegraphique.ihm.vues.vuegraphique.GUI.PointImagine;
 import com.faiveley.samng.vuegraphique.ihm.vues.vuegraphique.GUI.PositionReferenceZero;
 import com.faiveley.samng.vuegraphique.ihm.vues.vuegraphique.GUI.VirtualPoint;
@@ -160,7 +158,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 					if(prevHeight != height || prevWidth != width || image == null || GrapheGUI.this.vitCorDansFiltre||RedrawCourbesForAxeChange.getInstance().isRedraw()) {
 						try {
 							//							if (!VueWaitBar.getInstance().isWorking() && GrapheGUI.this.positionG==0) {
-							//							VueWaitBar.getInstance().setRect(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell().getBounds());
+							//							VueWaitBar.getInstance().setRect(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell().getBounds());
 							//							VueWaitBar.getInstance().start();
 							//							}
 							//							TAGQQQ 
@@ -300,7 +298,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 					//PointRef
 					int abscissePointRef=InfosBullesRefZero.getInstance().getAbscissePointRef();
 					if (e.x>abscissePointRef-5 && e.x<abscissePointRef+5) {
-						String libelle="Point de Référence="+SetReferenceAction.pointRef;	
+						String libelle="Point de Rï¿½fï¿½rence="+SetReferenceAction.pointRef;	
 						int larg=libelle.length()*6;
 						int longu=16;
 						setMutexTooltiptex(true);
@@ -688,7 +686,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 				lastLabel=newLabel;
 			}
 		} catch (NumberFormatException e) {
-			// TODO Bloc catch auto-généré
+			// TODO Bloc catch auto-gï¿½nï¿½rï¿½
 			e.printStackTrace();
 		}
 		return ok;
@@ -722,10 +720,10 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 	    // Double min : Valeur minimale de la courbe
 	    // Double max : Valeur maximale de la courbe
 	    // int hauteur : Hauteur en pixel de la zone de dessin de la courbe 
-	    // int abscisse : Position en pixel de l'axe de l'ordonné dans la zone de dessin de la courbe 
-	    // Double resolutionVerticale : Résolution verticale d la courbe
+	    // int abscisse : Position en pixel de l'axe de l'ordonnï¿½ dans la zone de dessin de la courbe 
+	    // Double resolutionVerticale : Rï¿½solution verticale d la courbe
 	    // GC gc : composant graphique pour le dessin de la courbe
-	    // Courbe c : Courbe à dessiner
+	    // Courbe c : Courbe ï¿½ dessiner
 
 		//set the font 
 		gc.setFont(GestionnaireVueGraphique.getArial09TextFont());
@@ -744,10 +742,10 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 	    double maxClostest= ((int) Math.ceil(max)/10)*10;
 	    double minClostest= ((int) Math.floor(min)/10)*10;
 	    
-	    // Détermination du nombre de step
+	    // Dï¿½termination du nombre de step
 	    int nbStep = (int) ((maxClostest-minClostest)/stepValue);
 	    
-	    // Cas des valeurs strictement inférieures à 10
+	    // Cas des valeurs strictement infï¿½rieures ï¿½ 10
 	    if(nbStep == 0){		
 		while((int) ((maxClostest-minClostest)/Math.pow(10, indicePow)) < 10){
 		    maxClostest= (Math.ceil(max)/Math.pow(10, indicePow))*Math.pow(10, indicePow);
@@ -755,7 +753,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
     		indicePow--;
     	    }
 	    }
-	    // Cas des valeurs strictement supérieures à 100
+	    // Cas des valeurs strictement supï¿½rieures ï¿½ 100
 	    else{		
 		while((int) ((maxClostest-minClostest)/Math.pow(10, indicePow)) > 100){
     		indicePow++;    		
@@ -771,7 +769,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
     	    }
     	    
     	    nbStep++;
-    	    // Détermination du nombre de pixels entre deux graduations
+    	    // Dï¿½termination du nombre de pixels entre deux graduations
     	    pixelStep = stepValue / resolutionVerticale;
 
     	    //Logique pour que les graduations restent lisibles    	    
@@ -793,7 +791,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 			String strValue;
 	    int xPosRef = (LONGUEUR_GRAD + ESPACE_GRAD_LABEL );
 			int yPos;
-	    // Position du label par rapport à son axe des ordonnées
+	    // Position du label par rapport ï¿½ son axe des ordonnï¿½es
 	    int coteLabel=(((c.getNum() + 1) %2)-1) * 7 + 1;
 
 	    // Format d'afficahge de la valeur
@@ -808,18 +806,18 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 	    double offsetStepPixel = Math.abs(pixelStep / stepValue *(min % stepValue));
 	    double offsetStepValue = ((int)(min/stepValue)) * stepValue;
 	    
-	    // Pour chaque graduation de l'échelle
+	    // Pour chaque graduation de l'ï¿½chelle
 	    for(int i=0; i <= nbStep ;i++ ){		
-		// Détermination de la valeur à afficher
+		// Dï¿½termination de la valeur ï¿½ afficher
 		strValue =  new DecimalFormat(labelFormat).format(stepValue*(double) i*coefCorrectGradua + offsetStepValue);
-		// Détermination de l'emplacement en Y de la valeur à afficher
+		// Dï¿½termination de l'emplacement en Y de la valeur ï¿½ afficher
 		yPos = (int) (hauteur - i*pixelStep - offsetStepPixel);			
 		// Cas particulier pour l'origine : sa valeur est le minimum et sa position est au 0 du graphique
 		if( i == 0 && offsetStepPixel < 0){
 		    continue;
 		}		
 		int xPos = abscisse + (coteLabel > 0 ?  xPosRef : - (xPosRef + gc.stringExtent(strValue).x +2*LONGUEUR_GRAD));	
-		// Cas où on dépasse la zone graphique
+		// Cas oï¿½ on dï¿½passe la zone graphique
 		if(yPos < MARGE_HAUT/2){
 					break;
 		}
@@ -1039,7 +1037,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 			gc.setLineWidth(1);
 			prevPixelInfo = null;
 
-			// Récupération de la liste des ruptures d'acquisition
+			// Rï¿½cupï¿½ration de la liste des ruptures d'acquisition
 			List<Integer> rupturesAcquisition = new ArrayList<Integer>();
 			for (String[] item : EmplacementsRuptures.getInstance().getListDistanceBreaksPixels()) {
         		if ("RUPTURE_ACQUISITION".equals(item[3])) {
@@ -1177,10 +1175,10 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
         	    return;
         	}
         	
-        	// récupération des changements de valeurs et des point valorisés
+        	// rï¿½cupï¿½ration des changements de valeurs et des point valorisï¿½s
         	LinkedList<VirtualPoint> vpEdge = edgeDetection(courbePixelsInfo, gc);
 
-        	// Ajout des ruptures de distance (provoque des pertes de tracé et non homogène avec la légende...)
+        	// Ajout des ruptures de distance (provoque des pertes de tracï¿½ et non homogï¿½ne avec la lï¿½gende...)
         	List<Integer> rupturesAcquisition = new ArrayList<Integer>();
         	for (String[] item : EmplacementsRuptures.getInstance().getListDistanceBreaksPixels()) {
         		if (RUPTURE_ACQUISITION.equals(item[3])) {
@@ -1220,22 +1218,22 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
         	    	leftP = vp;
         	    	continue;
         	    }     
-        	    // Point les points à tracer dans la zone d'affichage
+        	    // Point les points ï¿½ tracer dans la zone d'affichage
         	    if (leftP.getAbscissePixel() >= lowerThresholdAbs && leftP.getAbscissePixel() <= upperThresholdAbs 
         		    && vp.getAbscissePixel() >= lowerThresholdAbs && vp.getAbscissePixel() <= upperThresholdAbs) {
         	    	checkRupturesAcquisitionAndTrace(gc, rupturesAcquisition, (int) leftP.getAbscissePixel(), leftP.getOrdonnee().intValue(), (int) vp.getAbscissePixel(), vp.getOrdonnee().intValue());
         	    }
-        	    // Point le point à tracer dans la zone d'affichage et le point à gauche de la zone
+        	    // Point le point ï¿½ tracer dans la zone d'affichage et le point ï¿½ gauche de la zone
         	    else if(leftP.getAbscissePixel() < lowerThresholdAbs && vp.getAbscissePixel() >= lowerThresholdAbs && vp.getAbscissePixel() <= upperThresholdAbs){
         	    	double ordonne = computeOrdonneeFromAbscisse(leftP.getAbscissePixel(), leftP.getOrdonnee(), vp.getAbscissePixel(), vp.getOrdonnee(), lowerThresholdAbs);
         	    	checkRupturesAcquisitionAndTrace(gc, rupturesAcquisition, lowerThresholdAbs, (int) ordonne, (int) vp.getAbscissePixel(), vp.getOrdonnee().intValue());
         	    }
-        	    // Point le point à tracer dans la zone d'affichage et le point à droite de la zone
+        	    // Point le point ï¿½ tracer dans la zone d'affichage et le point ï¿½ droite de la zone
         	    else if(leftP.getAbscissePixel() >= lowerThresholdAbs && leftP.getAbscissePixel() <= upperThresholdAbs && vp.getAbscissePixel() > upperThresholdAbs){
         	    	double ordonne = computeOrdonneeFromAbscisse(leftP.getAbscissePixel(), leftP.getOrdonnee(), vp.getAbscissePixel(), vp.getOrdonnee(), upperThresholdAbs);
         			checkRupturesAcquisitionAndTrace(gc, rupturesAcquisition, (int) leftP.getAbscissePixel(), leftP.getOrdonnee().intValue(), upperThresholdAbs, (int) ordonne);
         	    }
-        	    // Point le point à tracer le point à gauche de la zone d'affichage et le point à droite de la zone (aucun point dans la zone)
+        	    // Point le point ï¿½ tracer le point ï¿½ gauche de la zone d'affichage et le point ï¿½ droite de la zone (aucun point dans la zone)
         	    else if(leftP.getAbscissePixel() < lowerThresholdAbs && vp.getAbscissePixel() > upperThresholdAbs){
     	    		double lowerOrdonne = computeOrdonneeFromAbscisse(leftP.getAbscissePixel(), leftP.getOrdonnee(), vp.getAbscissePixel(), vp.getOrdonnee(), lowerThresholdAbs);
     	    		double upperOrdonne = computeOrdonneeFromAbscisse(leftP.getAbscissePixel(), leftP.getOrdonnee(), vp.getAbscissePixel(), vp.getOrdonnee(), upperThresholdAbs);
@@ -1244,7 +1242,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
         	    leftP = vp;        	    
         	}
     	            	        
-    	        // Retirer les tracés sans valorisation
+    	        // Retirer les tracï¿½s sans valorisation
     	        for (Iterator<VirtualPoint> i = vpEdgeNullOnly.iterator(); i.hasNext();) {
         	    VirtualPoint vp = i.next();
         	    long abscisseKey = vp.getAbscissePixel();
@@ -1262,7 +1260,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
         	    }
     	        }
     	        
-    	        // Libération des objets Java alloués
+    	        // Libï¿½ration des objets Java allouï¿½s
     	        vpEdge = null;
     	        // vpEdgeRupture = null;
     	        vpEdgeNullOnly = null;
@@ -1424,7 +1422,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 
 										if(curPixelAbscisse> upperThresholdAbs){
 										    // Fonction affine pour relier les deux points 
-										    // et déterminer la position du point au bord 
+										    // et dï¿½terminer la position du point au bord 
 										    // de la zone d'affichage
 										    int correctedCurPixelAbscisse = upperThresholdAbs-1+LONGUEUR_GRAD/2;
 										    int correctedCurPixelOrdonee = (int) computeOrdonneeFromAbscisse(prevPixelAbscisse, prevPixelOrdonee, curPixelAbscisse, curPixelOrdonee, correctedCurPixelAbscisse);
@@ -1457,20 +1455,20 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 					
 			}
 									
-			// Traitement du cas du point à gauche hors cadre
+			// Traitement du cas du point ï¿½ gauche hors cadre
 			if(afterOutsideLeftPoint != null && courbePixelsInfo.getPreviousPix() != null && courbePixelsInfo.getPreviousPix().getOrdonnee() != null &&  afterOutsideLeftPoint.getOrdonnee() != null){
 				double newVirtualPixOrdo = computeOrdonneeFromAbscisse((int) courbePixelsInfo.getPreviousPix().getAbscissePixel(),courbePixelsInfo.getPreviousPix().getOrdonnee().intValue(),(int) afterOutsideLeftPoint.getAbscissePixel(), afterOutsideLeftPoint.getOrdonnee().intValue(), (int) PixelBuffer.ORIGINE_X);
 				newVirtualPixOrdo = fixThresholdOrdLimites(newVirtualPixOrdo , courbePixelsInfo.getPreviousPix().getOrdonnee(),afterOutsideLeftPoint.getOrdonnee(), lowerThresholdOrd, upperThresholdOrd);			
 				gc.drawLine((int) PixelBuffer.ORIGINE_X, (int) newVirtualPixOrdo, (int) afterOutsideLeftPoint.getAbscissePixel(), afterOutsideLeftPoint.getOrdonnee().intValue());
 			}
 			
-			// Traitement du cas du point à droite hors cadre
+			// Traitement du cas du point ï¿½ droite hors cadre
 			if(beforeOutsideRightPoint.getOrdonnee() != null && courbePixelsInfo.getNextPix() != null && courbePixelsInfo.getNextPix().getOrdonnee() != null){
 				double newVirtualPixOrdo = computeOrdonneeFromAbscisse((int) beforeOutsideRightPoint.getAbscissePixel(), beforeOutsideRightPoint.getOrdonnee().intValue(), (int) courbePixelsInfo.getNextPix().getAbscissePixel(),courbePixelsInfo.getNextPix().getOrdonnee().intValue(), upperThresholdAbs);
 				newVirtualPixOrdo = fixThresholdOrdLimites(newVirtualPixOrdo , courbePixelsInfo.getNextPix().getOrdonnee(),beforeOutsideRightPoint.getOrdonnee(), lowerThresholdOrd, upperThresholdOrd);			
 				gc.drawLine(upperThresholdAbs, (int) newVirtualPixOrdo,(int) beforeOutsideRightPoint.getAbscissePixel(), beforeOutsideRightPoint.getOrdonnee().intValue());
 			}
-			// Cas où un zoom sur uen zone sans point à afficher
+			// Cas oï¿½ un zoom sur uen zone sans point ï¿½ afficher
 			if(afterOutsideLeftPoint == null && beforeOutsideRightPoint.getOrdonnee() == null && courbePixelsInfo.getPreviousPix() != null && courbePixelsInfo.getNextPix() != null && courbePixelsInfo.getNextPix().getOrdonnee() != null && courbePixelsInfo.getPreviousPix().getOrdonnee() != null){
 			    
 			    double virtualPrevPixOrdo = courbePixelsInfo.getPreviousPix().getOrdonnee();
@@ -1501,7 +1499,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 			    
 			    ruptureStartPointImg.setAbscissePixel(Integer.valueOf(item[1]));
 			    
-			    // Si un point outside left jusqu'à rupture
+			    // Si un point outside left jusqu'ï¿½ rupture
 			    if(beforeOutsideRightPoint != null && beforeOutsideRightPoint.getOrdonnee() != null && courbePixelsInfo.getNextPix() != null && courbePixelsInfo.getNextPix().getOrdonnee() != null && ruptureStartPointImg.getAbscissePixel() > beforeOutsideRightPoint.getAbscissePixel()){
 				ruptureStartPointImg.setOrdonnee(beforeOutsideRightPoint.getOrdonnee());
 				ruptureEndPointImg.setAbscissePixel(Math.max(beforeOutsideRightPoint.getAbscissePixel(), PixelBuffer.ORIGINE_X));
@@ -1510,7 +1508,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 				ruptureEndPointImg.setAbscissePixel(Math.max(beforeOutsideRightPoint.getAbscissePixel(), PixelBuffer.ORIGINE_X));
 			    }
 			    
-			    // Si un point outside left jusqu'à rupture
+			    // Si un point outside left jusqu'ï¿½ rupture
 			    if(courbePixelsInfo != null && courbePixelsInfo.getPreviousPix() != null && courbePixelsInfo.getPreviousPix().getOrdonnee() != null && afterOutsideLeftPoint == null ){
 				ruptureStartPointImg.setOrdonnee(courbePixelsInfo.getPreviousPix().getOrdonnee());
 				ruptureEndPointImg.setAbscissePixel(Math.max(PixelBuffer.ORIGINE_X, courbePixelsInfo.getPreviousPix().getAbscissePixel()));
@@ -1528,19 +1526,19 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 			courbeCouleur.dispose();
 		}
 
-	// Fonction de calcul de l'ordonnée à partir de deux points pour un abscisse déterminé en Integer
+	// Fonction de calcul de l'ordonnï¿½e ï¿½ partir de deux points pour un abscisse dï¿½terminï¿½ en Integer
 	private double computeOrdonneeFromAbscisse(int x1Pos, int y1Pos, int x2Pos, int y2Pos, int xPos){	
 	    return computeOrdonneeFromAbscisse((double) x1Pos, (double) y1Pos, (double) x2Pos, (double) y2Pos, (double) xPos);
 	}
 
-	// Fonction de calcul de l'ordonnée à partir de deux points pour un abscisse déterminé en Double
+	// Fonction de calcul de l'ordonnï¿½e ï¿½ partir de deux points pour un abscisse dï¿½terminï¿½ en Double
 	private double computeOrdonneeFromAbscisse(double x1Pos, double y1Pos, double x2Pos, double y2Pos, double xPos){
 	    double a = (y2Pos- y1Pos)/(x2Pos - x1Pos);    
 	    double b = y1Pos - (x1Pos * a);
 	    return a*xPos+b;
 	}
 	
-	// Fonction de bornage de l'ordonné calculé pour éviter des glitches 
+	// Fonction de bornage de l'ordonnï¿½ calculï¿½ pour ï¿½viter des glitches 
 	private double fixThresholdOrdLimites(double yPosToValidate , double y1Pos, double y2Pos, double frameLowerThresoldPos, double frameUpperThresoldPos){
 
         	if (yPosToValidate < Math.min(y1Pos, y2Pos)) {
@@ -1732,12 +1730,12 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 		RuptureLegendeMessage.getInstance().setDisplayTimeRuptureMsg(false);
 		TableRuptures.getInstance().getListeRupturesTemps();
 		int lastpixel=0;	//l'abscisse de fin de la derniere rupture affichee en ce moment 
-		int hauteur=12;		//hauteur de l'étiquette
-		int longu=114;		//longueur de l'étiquette
+		int hauteur=12;		//hauteur de l'ï¿½tiquette
+		int longu=114;		//longueur de l'ï¿½tiquette
 		String libelle;
 		int nbpix=EmplacementsRuptures.getInstance().getListTimeBreaksPixels().size();	//nombre de ruptures de temps
-		spacesRupture=new int [nbpix][2]; //tableau contenant les positions des étiquettes
-		int incre=0;	//indice incremental du tableau contenant les positions des étiquettes
+		spacesRupture=new int [nbpix][2]; //tableau contenant les positions des ï¿½tiquettes
+		int incre=0;	//indice incremental du tableau contenant les positions des ï¿½tiquettes
 
 		if(ActivatorVueGraphique.getDefault().getConfigurationMng().isRuptures_temps()) {	//si les ruptures de temps doivent etre affichees
 			gc.setLineWidth(1);
@@ -1749,19 +1747,19 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 				String listTimeBreaksPixels[]=new String[3];
 				listTimeBreaksPixels=EmplacementsRuptures.getInstance().getListTimeBreaksPixels().get(i);
 				int pixel=Integer.valueOf(listTimeBreaksPixels[1]);
-				if (pixel+MARGE_LATERALE>lastpixel) {		//si l'étiquette associée à la rupture peut etre affichee
+				if (pixel+MARGE_LATERALE>lastpixel) {		//si l'ï¿½tiquette associï¿½e ï¿½ la rupture peut etre affichee
 
-					gc.drawLine(pixel + MARGE_LATERALE , 0, pixel + MARGE_LATERALE, height); //trace une ligne sur toute la verticalité de la vue des graphes
+					gc.drawLine(pixel + MARGE_LATERALE , 0, pixel + MARGE_LATERALE, height); //trace une ligne sur toute la verticalitï¿½ de la vue des graphes
 
 					if(dernierGrapheNonVide){	//si dernier graphe
-						libelle=String.valueOf(listTimeBreaksPixels[2]);//on recupere le libelle de l'étiquette
+						libelle=String.valueOf(listTimeBreaksPixels[2]);//on recupere le libelle de l'ï¿½tiquette
 						longu=CalculGraphe.getLongueurRectByString(libelle);
 
 						gc.setBackground(getDisplay().getSystemColor(SWT.COLOR_WHITE));
-						gc.drawString(libelle,pixel + MARGE_LATERALE+1, 0);//on affiche l'étiquette
+						gc.drawString(libelle,pixel + MARGE_LATERALE+1, 0);//on affiche l'ï¿½tiquette
 						gc.drawRectangle(pixel + MARGE_LATERALE, 0, longu, hauteur);
-						lastpixel=pixel+MARGE_LATERALE+longu;//on enregistre jusqu'ou va l'étiquette
-						spacesRupture[incre][0]=pixel+MARGE_LATERALE;//on stocke les positions de l'étiquette
+						lastpixel=pixel+MARGE_LATERALE+longu;//on enregistre jusqu'ou va l'ï¿½tiquette
+						spacesRupture[incre][0]=pixel+MARGE_LATERALE;//on stocke les positions de l'ï¿½tiquette
 						spacesRupture[incre][1]=pixel+MARGE_LATERALE+longu;
 						incre+=1;
 					}
@@ -1783,9 +1781,9 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 
 	private void drawDistanceBreaks(GC gc) {
 		int lastpixel=0;	//l'abscisse de fin de la derniere rupture affichee en ce moment
-		int hauteur=12;		//hauteur de l'étiquette
-		int longu=114;		//longueur de l'étiquette
-		String libelle="";		//libelle de l'étiquette
+		int hauteur=12;		//hauteur de l'ï¿½tiquette
+		int longu=114;		//longueur de l'ï¿½tiquette
+		String libelle="";		//libelle de l'ï¿½tiquette
 		int nbpix=EmplacementsRuptures.getInstance().getListDistanceBreaksPixels().size();	//nombre de ruptures de distance
 		boolean ruptureToDisplay=true;
 		int decalage2rupturesOnSamePixel=0;
@@ -1806,7 +1804,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 					ruptureToDisplay=true;
 					decalage2rupturesOnSamePixel=0;
 					for (int i = 0; i < spacesRupture.length; i++) {	//pour chaque rupture de temps
-						//si le pixel où doit etre affichée la rupture est compris entre le début et la fin d'une étiquette de rupture de temps
+						//si le pixel oï¿½ doit etre affichï¿½e la rupture est compris entre le dï¿½but et la fin d'une ï¿½tiquette de rupture de temps
 						if (spacesRupture[i][0]<pixel+MARGE_LATERALE && spacesRupture[i][1]>pixel+MARGE_LATERALE) {						
 							ruptureToDisplay=false; //on affiche pas cette rupture
 						}
@@ -1815,7 +1813,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 						}
 					}	
 				}
-				//si l'étiquette à afficher n'empiete pas sur l'étiquette précédente
+				//si l'ï¿½tiquette ï¿½ afficher n'empiete pas sur l'ï¿½tiquette prï¿½cï¿½dente
 				if (pixel+MARGE_LATERALE>lastpixel && ruptureToDisplay) {
 					//on trace une ligne verticale
 
@@ -1828,12 +1826,12 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 
 						gc.setBackground(getDisplay().getSystemColor(SWT.COLOR_WHITE));
 						gc.setForeground(getDisplay().getSystemColor(SWT.COLOR_BLACK));
-						gc.drawString(libelle,pixel + MARGE_LATERALE+1, 0+decalage2rupturesOnSamePixel);	//on affiche l'étiquette
+						gc.drawString(libelle,pixel + MARGE_LATERALE+1, 0+decalage2rupturesOnSamePixel);	//on affiche l'ï¿½tiquette
 						gc.drawRectangle(pixel + MARGE_LATERALE, 0+decalage2rupturesOnSamePixel, longu, hauteur);
 						lastpixel=pixel+MARGE_LATERALE+longu;
 					}
 
-				}else{	//on trace une ligne qui n'empiete pas sur l'étiquette précédente
+				}else{	//on trace une ligne qui n'empiete pas sur l'ï¿½tiquette prï¿½cï¿½dente
 					gc.setForeground(colorDistanceBreaks);
 					gc.drawLine(pixel + MARGE_LATERALE , hauteur, pixel + MARGE_LATERALE, height);
 				}   			
@@ -1972,7 +1970,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 			if(msg == null)
 				return;
 			//SUPPR_HASHMAP_VALEURMESSAGE
-			//			récupération uniquement des bons messages
+			//			rï¿½cupï¿½ration uniquement des bons messages
 
 			ListMessages messages = ActivatorData.getInstance().getVueData()
 					.getDataTable().getEnregistrement().getMessages();
@@ -2151,7 +2149,7 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 	 */
 	public void zoomChanged() {
 		ZoomComposite currentZoom = (ZoomComposite)GestionnaireZoom.getZoomCourant();
-		// Récupération du zoom courant à partir du gestionnaire de Zoom
+		// Rï¿½cupï¿½ration du zoom courant ï¿½ partir du gestionnaire de Zoom
 		if(currentZoom != null) {
 		    // Pour chaque composant de zoom
 		    for(AZoomComposant aZoom : currentZoom.getEnfants()){
@@ -2163,16 +2161,16 @@ public class GrapheGUI extends Canvas implements IGrapheCursorListener, IZoomCha
 				// Si c'est un zoom en Y non null
 				if(curZoom != null && TypeZoom.ZOOM_Y.equals(curZoom.getTypeZoom())){				    
 				    ZoomY curZoomY = (ZoomY) curZoom;
-				    // Pour chaque graphique : retrouver le zoom à appliquer sur la courbe depuis la fabrique de graphique
+				    // Pour chaque graphique : retrouver le zoom ï¿½ appliquer sur la courbe depuis la fabrique de graphique
 				    for(Graphe curGraphe : FabriqueGraphe.getGraphes()){
-					// Si le graphique et la courbe est présente dans le graphique
+					// Si le graphique et la courbe est prï¿½sente dans le graphique
 					if(zoom.getIndiceGraphe() == curGraphe.getNumero() && curGraphe.getNumero() == grapheCourante.getNumero() && curGraphe.getListeCourbe().contains(curZoomY.getCourbe())){
-					    	// Identification de la courbe associé au Zoom en Y
+					    	// Identification de la courbe associï¿½ au Zoom en Y
 						for(int i = 0; i < curGraphe.getListeCourbe().size(); i++){
 						    Courbe courbe = curGraphe.getListeCourbe().get(i);
-						    // Courbe trouvée 
+						    // Courbe trouvï¿½e 
 						    if(courbe.equals(curZoomY.getCourbe()) && i < grapheCourante.getListeCourbe().size()){	
-							// A partir de l'indice de la courbe trouvée, on modifie la courbe 
+							// A partir de l'indice de la courbe trouvï¿½e, on modifie la courbe 
 							// du graphe courant de cette instance de l'objet GrapheUI
 							courbe = grapheCourante.getListeCourbe().get(i);
 							// Applicaiton des valeurs limites du zoom

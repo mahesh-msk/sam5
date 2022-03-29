@@ -55,10 +55,7 @@ import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.IWorkbenchWindow;
-
-import uk.co.caprica.vlcj.component.EmbeddedMediaPlayerComponent;
-import uk.co.caprica.vlcj.discovery.NativeDiscovery;
-import uk.co.caprica.vlcj.player.MediaPlayer;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -75,6 +72,10 @@ import com.faiveley.samng.principal.sm.data.enregistrement.Message;
 import com.faiveley.samng.principal.sm.data.multimedia.MultimediaFile;
 import com.faiveley.samng.principal.sm.parseurs.ParseurConfigurationVueMultimedia;
 import com.faiveley.samng.vuemultimedia.ihm.ActivatorVueMultimedia;
+
+import uk.co.caprica.vlcj.component.EmbeddedMediaPlayerComponent;
+import uk.co.caprica.vlcj.discovery.NativeDiscovery;
+import uk.co.caprica.vlcj.player.MediaPlayer;
 
 // Useful sources:
 // 	- http://caprica.github.io/vlcj/javadoc/3.10.1/uk/co/caprica/vlcj/player/MediaPlayer.html
@@ -243,7 +244,7 @@ public class VueMultimedia extends AbstractSelectionProviderVue implements IVueT
 	}
 	
 	public void makeActions() {
-		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+		IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 		
 		synchroVuesAction = new Action() {
 			public void run() {

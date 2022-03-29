@@ -11,11 +11,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-import noNamespace.ListeSegmentsDistanceDocument.ListeSegmentsDistance;
-import noNamespace.ListeSegmentsDocument;
-import noNamespace.ListeSegmentsDocument.ListeSegments;
-import noNamespace.ListeSegmentsTempsDocument.ListeSegmentsTemps;
-
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
 
@@ -25,10 +20,15 @@ import com.faiveley.samng.principal.sm.missions.explorersingletons.parseurs.Pars
 import com.faiveley.samng.principal.sm.segments.SegmentDistance;
 import com.faiveley.samng.principal.sm.segments.SegmentTemps;
 
+import noNamespace.ListeSegmentsDistanceDocument.ListeSegmentsDistance;
+import noNamespace.ListeSegmentsDocument;
+import noNamespace.ListeSegmentsDocument.ListeSegments;
+import noNamespace.ListeSegmentsTempsDocument.ListeSegmentsTemps;
+
 /**
  * @author Graton Olivier
  * @version 1.0
- * @created 06-févr.-2008 18:36:32
+ * @created 06-fï¿½vr.-2008 18:36:32
  */
 public class ParseurCorrections implements IParseurInterface {
 	// Empty xml file content

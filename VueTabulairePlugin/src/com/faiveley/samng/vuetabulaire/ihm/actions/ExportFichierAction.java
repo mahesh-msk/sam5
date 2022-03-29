@@ -10,8 +10,8 @@ import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.vues.Row;
 import com.faiveley.samng.principal.ihm.vues.VueTabulaireContentProvider;
@@ -44,7 +44,7 @@ public class ExportFichierAction extends Action {
 	}
 
 	/**
-	 * Méthode d'export de la selection de la vue tabulaire: fait appel à la classe
+	 * Mï¿½thode d'export de la selection de la vue tabulaire: fait appel ï¿½ la classe
 	 * ParseurExport du framework
 	 * 
 	 * @param cheminFichier
@@ -59,18 +59,18 @@ public class ExportFichierAction extends Action {
 	}
 
 	/**
-	 * Méthode d'ouverture de la fenetre de dialogue d'export de selection
+	 * Mï¿½thode d'ouverture de la fenetre de dialogue d'export de selection
 	 */
 	public final void run() {
 
 		if(this.window==null)
-			this.window =Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+			this.window =PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 
 
 		// creates a file dialog to open the binary files
 		FileDialog dialog = new FileDialog(this.window.getShell(), SWT.SAVE);
 
-		// définition des extensions visibles
+		// dï¿½finition des extensions visibles
 		dialog.setFilterExtensions(new String[] { "*.tsv", "*.csv" }); //$NON-NLS-1$ //$NON-NLS-2$
 
 		dialog.setFilterNames(new String[] { "*.tsv", "*.csv" }); //$NON-NLS-1$ //$NON-NLS-2$
@@ -78,7 +78,7 @@ public class ExportFichierAction extends Action {
 		//DR28_CL36 
 		dialog.setFilterPath(RepertoiresAdresses.RepertoireTravail);
 		
-		// récupération du nom du fichier et du chemin
+		// rï¿½cupï¿½ration du nom du fichier et du chemin
 		String cheminFichier = dialog.open();
 
 		String nomFichier = dialog.getFileName();

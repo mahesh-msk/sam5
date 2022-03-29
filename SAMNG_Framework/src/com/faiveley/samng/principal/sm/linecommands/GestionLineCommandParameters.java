@@ -1,8 +1,6 @@
 package com.faiveley.samng.principal.sm.linecommands;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -168,7 +166,7 @@ public class GestionLineCommandParameters {
 							if (indiceMsg < 0) {
 								String msgErreurs = Messages.GestionLineCommandParameters_42;
 								GestionLineCommandParameters.echo(msgErreurs);
-								// MessageDialog.openError(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(),
+								// MessageDialog.openError(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(),
 								// com.faiveley.samng.principal.sm.linecommands.Messages.GestionLineCommandParameters_47,
 								// msgErreurs);
 								// System.out.println(msgErreurs);
@@ -308,7 +306,7 @@ public class GestionLineCommandParameters {
 		if (erreur) {
 			System.out.println(msgErreur);
 			GestionLineCommandParameters.echo(msgErreur);
-			// MessageDialog.openError(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(),
+			// MessageDialog.openError(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(),
 			// com.faiveley.samng.principal.sm.linecommands.Messages.GestionLineCommandParameters_47,
 			// msgErreur);
 			System.exit(0);

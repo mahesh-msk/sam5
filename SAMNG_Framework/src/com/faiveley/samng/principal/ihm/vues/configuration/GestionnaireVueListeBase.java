@@ -11,6 +11,7 @@ import org.apache.xmlbeans.XmlException;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -38,7 +39,7 @@ import com.faiveley.samng.principal.sm.segments.TableSegments;
 /**
  * @author olivier
  * @version 1.0
- * @created 06-déc.-2007 11:23:49
+ * @created 06-dï¿½c.-2007 11:23:49
  */
 public class GestionnaireVueListeBase extends AGestionnaireConfigurationVue 
 implements IRepereChangedListener, IVbvChangeListener {
@@ -99,7 +100,7 @@ implements IRepereChangedListener, IVbvChangeListener {
 
 	public GestionnaireVueListeBase() {
 
-		//permet de ne pas afficher certaines varaibles repères
+		//permet de ne pas afficher certaines varaibles repï¿½res
 		//this.notDisplayableVars.add(TypeRepere.date.getName());
 		//add this instance as a repere listener. When a vue is created then this will be removed from listeners
 		//bacause the vue has to receive the notification and inform the gestionnaire, otherwise (if both the vue 
@@ -788,7 +789,7 @@ implements IRepereChangedListener, IVbvChangeListener {
 				loadFromFile(vueSufix, viewName);
 				return;
 			} catch (IOException e) {
-				// TODO Bloc catch auto-généré
+				// TODO Bloc catch auto-gï¿½nï¿½rï¿½
 			}
 			GestionnaireVueListeBase cfgView = (GestionnaireVueListeBase)this.parserCfg.chargerConfigurationVue();			
 			cfgView.getAllColumnsNames();
@@ -808,7 +809,7 @@ implements IRepereChangedListener, IVbvChangeListener {
 	public void checkForSave(String viewName) {
 
 		if(this.parserCfg != null && isChanged) {
-//			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().
+//			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().
 //			getActiveWorkbenchWindow().getShell(), SWT.ICON_QUESTION | SWT.YES | SWT.NO);
 //			msgBox.setText(viewName + Messages.getString("GestionnaireVueListeBase.9")); //$NON-NLS-1$
 //			msgBox.setMessage(Messages.getString("GestionnaireVueListeBase.10") + viewName + "?"); //$NON-NLS-1$ //$NON-NLS-2$
@@ -817,10 +818,10 @@ implements IRepereChangedListener, IVbvChangeListener {
 			try {
 				this.parserCfg.enregistrerConfigurationVue(this);
 			} catch (XmlException e) {
-				// TODO Bloc catch auto-généré
+				// TODO Bloc catch auto-gï¿½nï¿½rï¿½
 				e.printStackTrace();
 			} catch (IOException e) {
-				// TODO Bloc catch auto-généré
+				// TODO Bloc catch auto-gï¿½nï¿½rï¿½
 				e.printStackTrace();
 			}
 			this.isChanged = false;
@@ -953,7 +954,7 @@ implements IRepereChangedListener, IVbvChangeListener {
 		try {
 			ActivatorData.getInstance().getProviderVBVs().getGestionnaireVbvs().enregistrerVBV();
 		} catch (ParseurXMLException e1) {
-			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().
+			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().
 					getActiveWorkbenchWindow().getShell(), SWT.YES );
 			msgBox.setText(com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreurParseurVBV.1"));
 			msgBox.setMessage(com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreurParseurVBV.2"));
@@ -970,7 +971,7 @@ implements IRepereChangedListener, IVbvChangeListener {
 		try {
 			ActivatorData.getInstance().getProviderVBVs().getGestionnaireVbvs().enregistrerVBV();
 		} catch (ParseurXMLException e1) {
-			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().
+			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().
 					getActiveWorkbenchWindow().getShell(), SWT.YES );
 			msgBox.setText(com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreurParseurVBV.1"));
 			msgBox.setMessage(com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreurParseurVBV.2"));

@@ -33,9 +33,9 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.IWorkbenchPartSite;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.actions.captures.CapturerVueAction;
 import com.faiveley.samng.principal.ihm.actions.captures.ICapturable;
@@ -295,7 +295,7 @@ IVbvChangeListener,ISearchVariableListener{
 				checkFilter();
 				//int nbSegValidDistance=verifierSegmentsDistance();
 
-				//				VueWaitBar.getInstance().setRect(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell().getBounds());
+				//				VueWaitBar.getInstance().setRect(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell().getBounds());
 				//				VueWaitBar.getInstance().start();
 
 				//				VueProgressBar.getInstance().start();
@@ -353,7 +353,7 @@ IVbvChangeListener,ISearchVariableListener{
 	public void makeActions(){
 
 		//r�cup�ration de la fenetre active
-		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+		IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 
 		listeActionsAuditrice = new ArrayList<Action>();
 
@@ -616,7 +616,7 @@ IVbvChangeListener,ISearchVariableListener{
 	}
 
 	public void changeSelec() {
-		final IWorkbenchPart activePart = Activator.getDefault().getWorkbench()
+		final IWorkbenchPart activePart = PlatformUI.getWorkbench()
 				.getActiveWorkbenchWindow().getActivePage().getActivePart();
 
 		if (activePart instanceof ISelectionProvider) {
@@ -664,8 +664,8 @@ IVbvChangeListener,ISearchVariableListener{
 			//we will have the default filter, so, notify the user
 			MessageBox msgBox = new MessageBox(Display.getCurrent().getActiveShell().getShell(), SWT.ICON_INFORMATION | SWT.OK);
 			//getViewSite().getShell()
-			//Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell()
-			//Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart().getSite().getShell()
+			//PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell()
+			//PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart().getSite().getShell()
 			msgBox.setText(Messages.getString("VueGraphique.53")); //$NON-NLS-1$
 			msgBox.setMessage(Messages.getString("VueGraphique.21") + //$NON-NLS-1$
 					Messages.getString("VueGraphique.22")); //$NON-NLS-1$
@@ -1837,7 +1837,7 @@ IVbvChangeListener,ISearchVariableListener{
 			if (msgErr[0] == null) {
 				msgErr[0] =Messages.getString("VueGraphique.66"); //$NON-NLS-1$
 			}
-			if (Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart()
+			if (PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart()
 					==VueGraphique.this.getSite().getPart()) {
 				MessageBox msgBox = new MessageBox(VueGraphique.this.getSite().getShell(), SWT.ICON_WARNING | SWT.OK );
 				msgBox.setText(""); //$NON-NLS-1$

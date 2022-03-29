@@ -5,9 +5,9 @@ import java.util.List;
 
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.vues.MessageSelection;
 import com.faiveley.samng.principal.ihm.vues.vuemarqueurs.VueMarqueurs;
 import com.faiveley.samng.principal.ihm.vues.vuemarqueurs.VueMarqueursDeltaValues;
@@ -63,7 +63,7 @@ public class MesureDeltaValeurMarqueurAction extends AbstractMarqueurAction {
 	}
 	
 	private void showMeasuredDeltaValues(List<AMarqueur> markers) {
-		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+		IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 		try {
 			VueMarqueursDeltaValues vue = (VueMarqueursDeltaValues)window.getActivePage().
 											showView(VueMarqueursDeltaValues.ID);

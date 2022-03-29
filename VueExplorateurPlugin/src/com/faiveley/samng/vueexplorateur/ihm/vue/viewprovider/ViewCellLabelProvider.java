@@ -2,8 +2,6 @@ package com.faiveley.samng.vueexplorateur.ihm.vue.viewprovider;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
-import org.eclipse.core.runtime.FileLocator;
-import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.jface.viewers.CellLabelProvider;
@@ -12,7 +10,6 @@ import org.eclipse.swt.graphics.Image;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.FrameworkUtil;
 
-import com.faiveley.samng.ActivatorVueExplorateur;
 import com.faiveley.samng.principal.sm.missions.jaxb.TypeMission;
 import com.faiveley.samng.principal.sm.parseurs.BridageFormats;
 import com.faiveley.samng.vueexplorateur.CommunicationFichiersVue;

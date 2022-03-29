@@ -4,11 +4,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import noNamespace.FiltreAppliqueDocument.FiltreApplique;
-import noNamespace.OptionsDocument.Options;
-import noNamespace.VueDocument;
-import noNamespace.VueDocument.Vue;
-
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
 
@@ -21,10 +16,15 @@ import com.faiveley.samng.vuegraphique.sm.gestionGraphes.TypeMode;
 import com.faiveley.samng.vuegraphique.sm.gestionGraphes.axes.GestionnaireAxes;
 import com.faiveley.samng.vuegraphique.sm.gestionGraphes.axes.TypeAxe;
 
+import noNamespace.FiltreAppliqueDocument.FiltreApplique;
+import noNamespace.OptionsDocument.Options;
+import noNamespace.VueDocument;
+import noNamespace.VueDocument.Vue;
+
 /**
  * @author Graton Olivier
  * @version 1.0
- * @created 04-févr.-2008 14:27:24
+ * @created 04-fï¿½vr.-2008 14:27:24
  */
 public class ParseurConfigurationVueGraphique implements IParseurConfigurationVue {
 

@@ -18,10 +18,10 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.actions.captures.CapturerVueAction;
 import com.faiveley.samng.principal.ihm.actions.captures.ICapturable;
 import com.faiveley.samng.principal.ihm.actions.captures.ImprimerVueAction;
@@ -39,7 +39,7 @@ public class VueDefauts extends ViewPart implements ICapturable {
 	private Color backgroundColor;
 
 	/**
-	 * Déclaration des actions
+	 * Dï¿½claration des actions
 	 */
 	private CapturerVueAction capturerVueAction ;
 	private ImprimerVueAction imprimerVueAction ;
@@ -77,8 +77,8 @@ public class VueDefauts extends ViewPart implements ICapturable {
 	 * Ajout des actions
 	*/
 	public void makeActions() {
-		// Récupération de la fenetre active
-		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+		// Rï¿½cupï¿½ration de la fenetre active
+		IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 		
 		// Ajout des actions
 		this.capturerVueAction = new CapturerVueAction(window,Messages.getString("VueDefauts.2") );
@@ -92,7 +92,7 @@ public class VueDefauts extends ViewPart implements ICapturable {
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans le menu
+	 * Mï¿½thode d'ajout d'une action dans le menu
 	 * @param action
 	 */
 	public void ajoutActionToolBar(Action action) {
@@ -100,7 +100,7 @@ public class VueDefauts extends ViewPart implements ICapturable {
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans la toolbar
+	 * Mï¿½thode d'ajout d'une action dans la toolbar
 	 * @param action
 	 */
 	public void ajoutActionToolMenuBar(Action action) {

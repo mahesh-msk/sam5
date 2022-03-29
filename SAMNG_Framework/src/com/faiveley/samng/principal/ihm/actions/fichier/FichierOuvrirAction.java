@@ -266,7 +266,7 @@ public class FichierOuvrirAction extends Action {
 		}
 		
 		if (ActivatorData.getInstance().getGestionnaireMarqueurs().isModifications()) {
-			MessageBox msgBox = new MessageBox(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(), SWT.ICON_QUESTION | SWT.YES | SWT.NO);
+			MessageBox msgBox = new MessageBox(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), SWT.ICON_QUESTION | SWT.YES | SWT.NO);
 			msgBox.setText(Messages.getString("GestionnaireVueListeBase.11"));
 			msgBox.setMessage(Messages.getString("GestionnaireVueListeBase.12"));
 			int ret = msgBox.open();
@@ -335,7 +335,7 @@ public class FichierOuvrirAction extends Action {
 								
 			// Launch Gestion Mission perspective to save explorer view
 			try {
-				PlatformUI.getWorkbench().showPerspective("SAMNG.perspectiveMission", Activator.getDefault().getWorkbench().getActiveWorkbenchWindow()) ;
+				PlatformUI.getWorkbench().showPerspective("SAMNG.perspectiveMission", PlatformUI.getWorkbench().getActiveWorkbenchWindow()) ;
 			} catch (WorkbenchException e) {
 				e.printStackTrace();
 			}

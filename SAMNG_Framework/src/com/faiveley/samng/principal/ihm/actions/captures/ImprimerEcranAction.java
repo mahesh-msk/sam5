@@ -4,15 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-import net.sf.paperclips.GridPrint;
-import net.sf.paperclips.ImagePrint;
-import net.sf.paperclips.PageDecoration;
-import net.sf.paperclips.PageNumber;
-import net.sf.paperclips.PagePrint;
-import net.sf.paperclips.Print;
-import net.sf.paperclips.ScalePrint;
-import net.sf.paperclips.TextPrint;
-
 import org.eclipse.jface.action.Action;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.FontData;
@@ -33,6 +24,15 @@ import com.faiveley.samng.principal.sm.data.tableAssociationComposant.InfosFichi
 import com.faiveley.samng.principal.sm.fabriques.FabriqueParcours;
 import com.faiveley.samng.principal.sm.repertoires.RepertoiresAdresses;
 
+import net.sf.paperclips.GridPrint;
+import net.sf.paperclips.ImagePrint;
+import net.sf.paperclips.PageDecoration;
+import net.sf.paperclips.PageNumber;
+import net.sf.paperclips.PagePrint;
+import net.sf.paperclips.Print;
+import net.sf.paperclips.ScalePrint;
+import net.sf.paperclips.TextPrint;
+
 public class ImprimerEcranAction extends Action {
 	protected final IWorkbenchWindow window;
 	protected boolean vueVide = false;
@@ -51,12 +51,12 @@ public class ImprimerEcranAction extends Action {
 	}
 
 	/**
-	 * Méthode d'ouverture de la fenetre de dialogue de capture de la vue sur
+	 * Mï¿½thode d'ouverture de la fenetre de dialogue de capture de la vue sur
 	 * laquelle on a le focus
 	 */
 	public final void run() {
 		try {
-			// récupération du widget de contenu de la vue
+			// rï¿½cupï¿½ration du widget de contenu de la vue
 			Composite contenu = getVueEcran();
 			if (contenu == null)
 				return;
@@ -95,7 +95,7 @@ public class ImprimerEcranAction extends Action {
 	}
 
 	private Composite getVueEcran() {
-		// récupération de la vue sur laquelle on a le focus
+		// rï¿½cupï¿½ration de la vue sur laquelle on a le focus
 		try {
 			return this.window.getWorkbench().getActiveWorkbenchWindow()
 					.getShell();

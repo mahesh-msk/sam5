@@ -7,14 +7,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
-import noNamespace.ColDocument.Col;
-import noNamespace.ConfigurationColonnesAnnotationsDocument.ConfigurationColonnesAnnotations;
-import noNamespace.VueAnnotationDocument;
-
 import org.apache.xmlbeans.XmlAnySimpleType;
 import org.apache.xmlbeans.XmlOptions;
 
 import com.faiveley.samng.principal.sm.erreurs.AExceptionSamNG;
+
+import noNamespace.ColDocument.Col;
+import noNamespace.ConfigurationColonnesAnnotationsDocument.ConfigurationColonnesAnnotations;
+import noNamespace.VueAnnotationDocument;
 /**
  * 
  * @author Olivier
@@ -55,7 +55,7 @@ public class ParseurConfigurationVueAnnotation implements IParseurInterface{
 	}
 
 	/**
-	 * Méthode de chargement des largeurs de colonnes 
+	 * Mï¿½thode de chargement des largeurs de colonnes 
 	 * @return une map d'association nomColonne/margeurColonne
 	 */
 	public HashMap<String, Integer> chargerLargeurColonnes(){
@@ -73,7 +73,7 @@ public class ParseurConfigurationVueAnnotation implements IParseurInterface{
 	}
 
 	/**
-	 * Méthode d'enregistrement des largeurs de colonnes 
+	 * Mï¿½thode d'enregistrement des largeurs de colonnes 
 	 * @author Olivier
 	 * @param 
 	 * @return 

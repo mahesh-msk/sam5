@@ -8,14 +8,14 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import noNamespace.ListeDocument;
-import noNamespace.ListeDocument.Liste;
-import noNamespace.MarqueurDocument.Marqueur;
-
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
 
 import com.faiveley.samng.principal.sm.marqueurs.AMarqueur;
+
+import noNamespace.ListeDocument;
+import noNamespace.ListeDocument.Liste;
+import noNamespace.MarqueurDocument.Marqueur;
 
 /**
  * @author Cosmin Udroiu
@@ -56,7 +56,7 @@ public class ParseurMarqueurs implements IParseurInterface {
 	}
 
 	/**
-	 * Méthode qui retourne l' annotation du parcours
+	 * Mï¿½thode qui retourne l' annotation du parcours
 	 * 
 	 * @return
 	 */

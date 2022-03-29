@@ -10,9 +10,9 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.vues.MessageSelection;
 import com.faiveley.samng.principal.ihm.vues.vuemarqueurs.VueMarqueurs;
 import com.faiveley.samng.principal.sm.marqueurs.AMarqueur;
@@ -36,7 +36,7 @@ public class AbstractMarqueurAction extends Action {
 //	}
 	
 	protected VueMarqueurs getVueMarqueurs() {
-		IWorkbenchPage page = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage();
+		IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 		if(page == null)
 			return null;
 		final IWorkbenchPart activePart = page.getActivePart();

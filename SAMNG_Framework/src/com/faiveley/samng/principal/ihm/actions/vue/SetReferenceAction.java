@@ -22,9 +22,9 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.listeners.IRepereChangedListener;
 import com.faiveley.samng.principal.ihm.vues.MessageSelection;
@@ -83,7 +83,7 @@ public class SetReferenceAction extends Action {
 		ActivatorData.getInstance().getPoolDonneesVues().put("tabVueTabulaire",new String(""));
 		ActivatorData.getInstance().getPoolDonneesVues().put("tabVueListe",new String(""));
 
-		final IWorkbenchPart activePart = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart();
+		final IWorkbenchPart activePart = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart();
 		if (activePart instanceof ISelectionProvider) {
 			ISelectionProvider selProvider = (ISelectionProvider) activePart;
 			ISelection sel = selProvider.getSelection();

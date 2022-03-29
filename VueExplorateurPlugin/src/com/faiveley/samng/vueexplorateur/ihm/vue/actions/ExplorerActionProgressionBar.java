@@ -15,6 +15,7 @@ import org.eclipse.jface.viewers.TreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -284,7 +285,7 @@ public class ExplorerActionProgressionBar extends Job implements PropertyChangeL
 				monitor.setCanceled(true);
 				Display.getDefault().syncExec(new Runnable(){
 					public void run() {
-						MessageDialog.openError(Activator.getDefault().getWorkbench().getDisplay().getActiveShell(), com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreursTitre"), 
+						MessageDialog.openError(PlatformUI.getWorkbench().getDisplay().getActiveShell(), com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("ErreursTitre"), 
 								com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("FichierOuvrirAction.23"));
 					}
 				});
@@ -340,11 +341,11 @@ public class ExplorerActionProgressionBar extends Job implements PropertyChangeL
 				monitor.setCanceled(true);
 				Display.getDefault().syncExec(new Runnable(){
 					public void run() {
-						MessageDialog.openError(Activator.getDefault().getWorkbench().getDisplay().getActiveShell(), 
+						MessageDialog.openError(PlatformUI.getWorkbench().getDisplay().getActiveShell(), 
 								com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("FichierOuvrirAction.15"), 
 								com.faiveley.samng.principal.ihm.actions.fichier.Messages.getString("FichierOuvrirAction.16") +
 								"\n" + e1.getMessage());
-						new VueDefautsAction(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(), "").run();
+						new VueDefautsAction(PlatformUI.getWorkbench().getActiveWorkbenchWindow(), "").run();
 					}
 				});
 				return;

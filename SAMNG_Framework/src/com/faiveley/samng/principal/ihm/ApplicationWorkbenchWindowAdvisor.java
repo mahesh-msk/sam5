@@ -20,7 +20,6 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Monitor;
 import org.eclipse.ui.IPerspectiveDescriptor;
 import org.eclipse.ui.IViewReference;
 import org.eclipse.ui.IWorkbenchPage;
@@ -108,7 +107,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor im
 		}
 			
 		try {
-			PlatformUI.getWorkbench().showPerspective(ID, Activator.getDefault().getWorkbench().getActiveWorkbenchWindow());
+			PlatformUI.getWorkbench().showPerspective(ID, PlatformUI.getWorkbench().getActiveWorkbenchWindow());
 		} catch (WorkbenchException e) {
 			e.printStackTrace();
 		}
@@ -147,7 +146,7 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor im
 	public void postWindowOpen() {
 		if (GestionLineCommandParameters.getNomfichier() != null && (!GestionLineCommandParameters.getNomfichier().equals(""))) {
 			//il y a un fichier � ouvrir
-			FichierOuvrirAction foa = new FichierOuvrirAction(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(), GestionLineCommandParameters.getNomfichier(), 0, -1, false, "");
+			FichierOuvrirAction foa = new FichierOuvrirAction(PlatformUI.getWorkbench().getActiveWorkbenchWindow(), GestionLineCommandParameters.getNomfichier(), 0, -1, false, "");
 			foa.run();
 		}
 	}

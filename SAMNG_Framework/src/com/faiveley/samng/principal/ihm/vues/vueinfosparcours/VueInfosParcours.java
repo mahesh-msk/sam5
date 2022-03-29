@@ -25,6 +25,7 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
 import com.faiveley.samng.principal.data.ActivatorData;
@@ -86,7 +87,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 	private Text annotationText;
 
 	/**
-	 * Déclaration des actions
+	 * Dï¿½claration des actions
 	 */
 	private CapturerVueAction capturerVueAction;
 
@@ -211,8 +212,8 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 	/** Ajout des actions */
 	public void makeActions() {
 		// super.makeActions();
-		// récupération de la fenetre active
-		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+		// rï¿½cupï¿½ration de la fenetre active
+		IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 		// ajout des actions
 		this.capturerVueAction = new CapturerVueAction(window, Messages.getString("VueInfosParcours.2")); //$NON-NLS-1$
 		this.capturerVueAction.setEnabled(capturerVueAction.isEnabled());
@@ -221,7 +222,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans le menu
+	 * Mï¿½thode d'ajout d'une action dans le menu
 	 * 
 	 * @param action
 	 */
@@ -230,7 +231,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 	}
 
 	/**
-	 * Méthode d'ajout d'une action dans la toolbar
+	 * Mï¿½thode d'ajout d'une action dans la toolbar
 	 * 
 	 * @param action
 	 */
@@ -294,7 +295,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 	}
 
 	/**
-	 * Définit le texte concernant les informations parcours
+	 * Dï¿½finit le texte concernant les informations parcours
 	 * 
 	 */
 	private void definirTexteInfosParcours() {
@@ -322,7 +323,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 		try {
 			infosFichierXml +=  f.getCanonicalPath();
 		} catch (IOException e1) {
-			// TODO Bloc catch généré automatiquement
+			// TODO Bloc catch gï¿½nï¿½rï¿½ automatiquement
 			e1.printStackTrace();
 			infosFichierXml += XMLName.updateCurrentXmlName();
 		} //$NON-NLS-1$ //$NON-NLS-2$
@@ -380,7 +381,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 
 
 
-		//nouveau calcul duree cumulee et distance cumulee utilisant le meme calcul que la référence
+		//nouveau calcul duree cumulee et distance cumulee utilisant le meme calcul que la rï¿½fï¿½rence
 		//		double distanceCumuleeTotale= 0;
 		//		long tempsCumuleTotal= 0;
 		//		if(GestionnairePool.getMapTempsCumuleEtDistanceCumule()==null){
@@ -619,7 +620,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 
 			long millisAvecChgt = 0;
 			Hashtable<Integer, Long> decalageHashMap = new Hashtable<Integer, Long>();
-			// parcours des messages pour récupérer les décalages relatifs aux
+			// parcours des messages pour rï¿½cupï¿½rer les dï¿½calages relatifs aux
 			// changements d'heures
 			long decalageTps = 0;
 			// this will return a copy of the variable temp and we change the
@@ -655,7 +656,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 						tc.addTime(temps1);
 						millisAvecChgt = tc.getCurrentDateAsMillis();
 
-						// calcul du décalage lors d'un changement d'heure
+						// calcul du dï¿½calage lors d'un changement d'heure
 
 						decalageTps = millisSansChgt - millisAvecChgt;
 
@@ -842,8 +843,8 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 											date = ConversionTemps
 													.getDateFromTypeRepereDate(msg2,
 															TypeRepere.date);
-											//										 nombre de milliseconde depuis le début de
-											// la journée de la variable date
+											//										 nombre de milliseconde depuis le dï¿½but de
+											// la journï¿½e de la variable date
 											temps = ConversionTemps
 													.getTempsFromTypeRepereDate(msg2,
 															TypeRepere.date);
@@ -866,7 +867,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 											date = tamponDate;
 										}
 
-										// récupération de la valeur du compteur de
+										// rï¿½cupï¿½ration de la valeur du compteur de
 										// temps
 										if (msg2.getVariable(TypeRepere.temps
 												.getCode()) != null) {
@@ -901,10 +902,10 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 								}
 
 
-								// si l'on change de date, on doit incrémenter
-								// le compteur/décrémenter le compteur
+								// si l'on change de date, on doit incrï¿½menter
+								// le compteur/dï¿½crï¿½menter le compteur
 								// d'autant de jour
-								// il faut que la date soit valorisée
+								// il faut que la date soit valorisï¿½e
 								if (date != -1 && dateLastMsg != -1
 										&& (date != dateLastMsg))
 									temps += (date - dateLastMsg)
@@ -938,7 +939,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 
 									// on calcul le delta temps
 									// deltaTempsCumul + temps message courant -
-									// temps message précédent
+									// temps message prï¿½cï¿½dent
 									deltaTempsTempo = deltaTempsTempo + temps
 											- tempsLastMsg + compteurTemps
 											- compteurTempsLastMsg;
@@ -946,7 +947,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 
 
 
-								// on met en mémoire les valeurs des variables
+								// on met en mï¿½moire les valeurs des variables
 								// temps
 								tamponDate = date;
 								tamponTemps = temps;
@@ -981,7 +982,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 
 
 
-							//pour les fichiers hsbc, la variable temps n'est pas valorisée mais  la variable tempsAvantChangement est valorisée et on doit l'utiliser en guise de compteur temps
+							//pour les fichiers hsbc, la variable temps n'est pas valorisï¿½e mais  la variable tempsAvantChangement est valorisï¿½e et on doit l'utiliser en guise de compteur temps
 							if (msg2.getVariable(TypeRepere.tempsAvantChangement
 									.getCode()) != null) {
 								compteurTemps = Long.valueOf(msg2.getVariable(
@@ -990,7 +991,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 								* (long) (ConstantesParcoursTom4.resolutionTemps * 1000);
 								tamponCptTemps = compteurTemps;
 							} else {
-								//pour les fichiers uk, il n'y a pas de tempsAvantChangement, mais la variable temps est elle valorisé
+								//pour les fichiers uk, il n'y a pas de tempsAvantChangement, mais la variable temps est elle valorisï¿½
 								if (msg2.getVariable(TypeRepere.temps
 										.getCode()) != null) {
 									compteurTemps = (Long) msg2.getVariable(
@@ -1139,7 +1140,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 
 			long millisAvecChgt = 0;
 			Hashtable<Integer, Long> decalageHashMap = new Hashtable<Integer, Long>();
-			// parcours des messages pour récupérer les décalages relatifs aux
+			// parcours des messages pour rï¿½cupï¿½rer les dï¿½calages relatifs aux
 			// changements d'heures
 			long decalageTps = 0;
 			// this will return a copy of the variable temp and we change the
@@ -1172,7 +1173,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 						tc.addTime(temps1);
 						millisAvecChgt = tc.getCurrentDateAsMillis();
 
-						// calcul du décalage lors d'un changement d'heure
+						// calcul du dï¿½calage lors d'un changement d'heure
 
 						decalageTps = millisSansChgt - millisAvecChgt;
 
@@ -1237,14 +1238,14 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 							deltaTempsTempo = 0;
 
 						} else {
-							// récupération des date et temps du message courant
+							// rï¿½cupï¿½ration des date et temps du message courant
 							long temps = (Long) (msg.getVariable(codeTemps).getCastedValeur());
 
 							if (msg.getVariable(codeDate) != null) {
 								date = (Long) (msg.getVariable(codeDate).getCastedValeur());
 							}
 
-							// récupération des date et temps du message précédent
+							// rï¿½cupï¿½ration des date et temps du message prï¿½cï¿½dent
 							long tempsLastMsg = (Long) (lastMsg
 									.getVariable(codeTemps)
 									.getCastedValeur());
@@ -1255,17 +1256,17 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 										.getCastedValeur());
 							}
 
-							// si l'on change de date, on doit incrémenter le
-							// compteur/décrémenter le compteur
+							// si l'on change de date, on doit incrï¿½menter le
+							// compteur/dï¿½crï¿½menter le compteur
 							// d'autant de jour
-							// il faut que la date soit valorisée
+							// il faut que la date soit valorisï¿½e
 							if (date != -1 && dateLastMsg != -1
 									&& (date == dateLastMsg + 1))
 								temps += (date - dateLastMsg) * (24 * 3600 * 1000);
 
 							// on calcul le delta temps
 							// deltaTempsCumul + temps message courant - temps
-							// message précédent
+							// message prï¿½cï¿½dent
 							deltaTempsTempo = deltaTempsTempo + temps
 									- tempsLastMsg;
 
@@ -1305,7 +1306,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 								* (24 * 3600 * 1000);
 
 							// deltaTempsCumul + temps message courant - temps
-							// message précédent
+							// message prï¿½cï¿½dent
 							deltaTempsTempo = deltaTempsTempo + tempsAvtChgt
 									- tempsLastMsg;
 
@@ -1437,7 +1438,7 @@ public class VueInfosParcours extends ViewPart implements ICapturable,IRepereCha
 	}
 
 	/**
-	 * Méthode de calcul du cumul des temps et distance
+	 * Mï¿½thode de calcul du cumul des temps et distance
 	 * @return
 	 * @throws Exception 
 	 */

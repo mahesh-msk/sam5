@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 import java.util.Map.Entry;
+import java.util.Properties;
 
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.swt.SWT;
@@ -375,7 +375,7 @@ public class VueTabulaireContentProvider extends AVueTableContentProvider {
 							try {
 								setRowSpeedCorrected(row, msg);
 							} catch (Exception e2) {
-								System.out.println("problème vitesse corrigée");
+								System.out.println("problï¿½me vitesse corrigï¿½e");
 							}
 
 							// set the relative time
@@ -1139,8 +1139,8 @@ public class VueTabulaireContentProvider extends AVueTableContentProvider {
 							currentRow.setCellInvalid(i, true);
 						} else {
 							if (prevRow != null) {
-								// la colonne flag est la seule où l'on ne doit pas
-								// propager de valeur et où il n'y a pas forcément
+								// la colonne flag est la seule oï¿½ l'on ne doit pas
+								// propager de valeur et oï¿½ il n'y a pas forcï¿½ment
 								// de valeur
 								if (i > posColFlag && (prevRow.getValue(i) != null)	&& !prevRow.getValue(i).equals(VAR_SANS_VALEUR)) {
 									// get the cell propagated value by variable
@@ -1236,8 +1236,8 @@ public class VueTabulaireContentProvider extends AVueTableContentProvider {
 						currentRow.setCellInvalid(i, true);
 					} else if(allowValuesPropagations(i)){
 						if (prevRow != null) {
-							// la colonne flag est la seule où l'on ne doit pas
-							// propager de valeur et où il n'y a pas forcément
+							// la colonne flag est la seule oï¿½ l'on ne doit pas
+							// propager de valeur et oï¿½ il n'y a pas forcï¿½ment
 							// de valeur
 							if (i > posColFlag && (prevRow.getValue(i) != null) && !prevRow.getValue(i).equals(VAR_SANS_VALEUR)) {		
 								// get the cell propagated value by variable

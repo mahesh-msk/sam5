@@ -6,9 +6,9 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IViewReference;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.listeners.ISearchMarquerListener;
 import com.faiveley.samng.principal.sm.marqueurs.GestionnaireMarqueurs;
@@ -52,7 +52,7 @@ public class RechercherMarqueurAction extends Action{
 		if (marquersGest != null) {
 			int[] ids = marquersGest.getMarqueursIds();
 			if (ids.length==0) {
-				MessageBox messageBox = new MessageBox(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage()
+				MessageBox messageBox = new MessageBox(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage()
 						.getActivePart().getSite().getShell(), SWT.ICON_INFORMATION);
 			    messageBox.setMessage(Messages.getString("Annotation.0"));
 			    messageBox.open();
@@ -62,11 +62,11 @@ public class RechercherMarqueurAction extends Action{
 		ISearchMarquerListener listener = null;
 
 		//looks for listeners in the current views
-		IViewReference[] vr = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
+		IViewReference[] vr = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
 		for (IViewReference v : vr) {
 			IViewPart view = v.getView(false);
 			if (view instanceof ISearchMarquerListener && view.getTitle()
-					.equals(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart().getTitle())) {
+					.equals(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart().getTitle())) {
 				listener = ((ISearchMarquerListener) view);
 			}
 		}

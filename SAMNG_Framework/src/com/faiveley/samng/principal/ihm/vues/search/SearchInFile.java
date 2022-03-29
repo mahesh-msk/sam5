@@ -38,6 +38,7 @@ import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IPerspectiveDescriptor;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -280,7 +281,7 @@ public class SearchInFile extends ASearchVariableDialog2 implements ISearchInFil
 					SearchInFile.this.shouldReleaseData = false;
 					parent.close();
 
-					IWorkbenchWindow window=Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+					IWorkbenchWindow window=PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 					String DefaultView = PerspectiveAccueil.getID();
 					IPerspectiveDescriptor p = window.getWorkbench().getPerspectiveRegistry().findPerspectiveWithId(DefaultView); 
 					window.getActivePage().setPerspective(p);
@@ -522,15 +523,15 @@ public class SearchInFile extends ASearchVariableDialog2 implements ISearchInFil
 					SearchInFile.this.shouldReleaseData = false;
 					parent.close();
 
-					//					IWorkbenchWindow window=Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+					//					IWorkbenchWindow window=PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 					//
-					//					String DefaultView = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getWorkbench()
+					//					String DefaultView = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getWorkbench()
 					//					.getPerspectiveRegistry().getDefaultPerspective();
 					//					IPerspectiveDescriptor p = window.getWorkbench().getPerspectiveRegistry().
 					//					findPerspectiveWithId(DefaultView); 
 					//window.getActivePage().setPerspective(p);
 									
-					IWorkbenchWindow window=Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+					IWorkbenchWindow window=PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 					String DefaultView = PerspectiveAccueil.getID();
 					IPerspectiveDescriptor p = window.getWorkbench().getPerspectiveRegistry().findPerspectiveWithId(DefaultView); 
 					window.getActivePage().setPerspective(p);
@@ -929,8 +930,8 @@ public class SearchInFile extends ASearchVariableDialog2 implements ISearchInFil
 
 			((InfosFichierSamNg) FabriqueParcours.getInstance().getParcours().getInfo()).setNomFichierParcoursBinaire(null);
 
-			if(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getPerspective().getId().equals(PerspectiveAccueil.getID()))
-				Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().savePerspective();
+			if(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getPerspective().getId().equals(PerspectiveAccueil.getID()))
+				PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().savePerspective();
 
 		}
 		catch(Exception ex){
@@ -938,7 +939,7 @@ public class SearchInFile extends ASearchVariableDialog2 implements ISearchInFil
 		}
 
 		Activator.getDefault().hideAllViews();
-		//Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().closeAllPerspectives(false, true);
+		//PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().closeAllPerspectives(false, true);
 
 		ActivatorData.getInstance().getBarAdvisor().setActionsEnabled(false);
 	}

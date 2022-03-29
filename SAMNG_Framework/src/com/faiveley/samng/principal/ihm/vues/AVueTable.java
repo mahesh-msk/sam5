@@ -40,6 +40,7 @@ import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -252,7 +253,7 @@ public abstract class AVueTable extends AbstractSelectionProviderVue implements 
 
 	public void makeActions() {
 		// r�cup�ration de la fenetre active
-		IWorkbenchWindow window = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow();
+		IWorkbenchWindow window = PlatformUI.getWorkbench().getActiveWorkbenchWindow();
 		listeActionsAuditrice = new ArrayList<Action>(0);
 
 		// ajout des actions
@@ -1815,7 +1816,7 @@ public abstract class AVueTable extends AbstractSelectionProviderVue implements 
 		if (msgErr[0] == null) {
 			msgErr[0] = com.faiveley.samng.principal.ihm.vues.Messages.getString("AVueTable.25"); //$NON-NLS-1$
 		}
-		if (Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart() == AVueTable.this.getSite().getPart()) {
+		if (PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart() == AVueTable.this.getSite().getPart()) {
 			MessageBox msgBox = new MessageBox(AVueTable.this.getSite().getShell(), SWT.ICON_WARNING | SWT.OK);
 			msgBox.setText(""); //$NON-NLS-1$
 			msgBox.setMessage(msgErr[0]);

@@ -1,7 +1,6 @@
 package com.faiveley.samng.vueliste.ihm.vues.vueliste.e4;
 
 import org.eclipse.jface.viewers.ColumnLabelProvider;
-import org.eclipse.jface.viewers.ILabelProviderListener;
 
 import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.sm.data.descripteur.DescripteurVariableAnalogique;

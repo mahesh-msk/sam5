@@ -1,6 +1,7 @@
 package com.faiveley.samng.vueliste.ihm.vues.vueliste.configuration.action.e4;
 
-import com.faiveley.samng.principal.ihm.Activator;
+import org.eclipse.ui.PlatformUI;
+
 import com.faiveley.samng.principal.ihm.ICommandIds;
 import com.faiveley.samng.principal.ihm.actions.vue.VueAction;
 import com.faiveley.samng.vueliste.ihm.ActivatorVueListe;
@@ -21,7 +22,7 @@ public class ConfigListVueDetailleeAction extends VueAction {
 	
 	@Override
 	public void run() {
-		ColonnesConfigVueDetailleeDialog colCfgDlg = new ColonnesConfigVueDetailleeDialog(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell(), this.tableauVueDetaillee);
+		ColonnesConfigVueDetailleeDialog colCfgDlg = new ColonnesConfigVueDetailleeDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(), this.tableauVueDetaillee);
 		
 		colCfgDlg.setGestionnaireConfiguration(ActivatorVueListe.getDefault().getConfigurationVueDetaillee());
 		

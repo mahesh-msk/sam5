@@ -14,34 +14,6 @@ import javax.xml.namespace.QName;
 import org.apache.log4j.Logger;
 import org.apache.xmlbeans.XmlException;
 
-import xmlbeans.jru.xmlAssocie.ChaineDynamiqueDocument.ChaineDynamique;
-import xmlbeans.jru.xmlAssocie.EnregistreurDefJruDocument;
-import xmlbeans.jru.xmlAssocie.EnregistreurDocument.Enregistreur;
-import xmlbeans.jru.xmlAssocie.EnregistreurDocument.Enregistreur.ResolutionTemps;
-import xmlbeans.jru.xmlAssocie.EvenementDocument.Evenement;
-import xmlbeans.jru.xmlAssocie.EvenementDocument.Evenement.RazCompteurDistance;
-import xmlbeans.jru.xmlAssocie.EvenementDocument.Evenement.RazCompteurTemps;
-import xmlbeans.jru.xmlAssocie.EvenementDocument.Evenement.SynchroTempsDistance;
-import xmlbeans.jru.xmlAssocie.InformationDocument.Information;
-import xmlbeans.jru.xmlAssocie.InfosParcoursDocument;
-import xmlbeans.jru.xmlAssocie.ListeSousvarDocument.ListeSousvar;
-import xmlbeans.jru.xmlAssocie.ListeTablelabelsDocument.ListeTablelabels;
-import xmlbeans.jru.xmlAssocie.NomUtilisateurDocument.NomUtilisateur;
-import xmlbeans.jru.xmlAssocie.ReperesDocument.Reperes;
-import xmlbeans.jru.xmlAssocie.SousVarDocument.SousVar;
-import xmlbeans.jru.xmlAssocie.SousVariableDocument.SousVariable;
-import xmlbeans.jru.xmlAssocie.StructureDynamiqueDocument.StructureDynamique;
-import xmlbeans.jru.xmlAssocie.TableLabelsDocument.TableLabels;
-import xmlbeans.jru.xmlAssocie.TableSousVariablesDocument.TableSousVariables;
-import xmlbeans.jru.xmlAssocie.TableauDynamiqueDocument.TableauDynamique;
-import xmlbeans.jru.xmlAssocie.VariableAnalogiqueDocument.VariableAnalogique;
-import xmlbeans.jru.xmlAssocie.VariableComplexeDocument.VariableComplexe;
-import xmlbeans.jru.xmlAssocie.VariableComposeeDocument.VariableComposee;
-import xmlbeans.jru.xmlAssocie.VariableDiscreteDocument.VariableDiscrete;
-import xmlbeans.jru.xmlAssocie.impl.EvenementDocumentImpl.EvenementImpl.ChangementHeureImpl;
-import xmlbeans.jru.xmlAssocie.impl.EvenementDocumentImpl.EvenementImpl.RuptureAcquisitionImpl;
-import xmlbeans.jru.xmlAssocie.impl.VariableDiscreteDocumentImpl.VariableDiscreteImpl.TypeImpl;
-
 import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.logging.SamngLogger;
 import com.faiveley.samng.principal.sm.controles.util.XMLName;
@@ -80,6 +52,34 @@ import com.faiveley.samng.principal.sm.erreurs.ParseurXMLException;
 import com.faiveley.samng.principal.sm.missions.explorersingletons.activationexplorer.ActivationExplorer;
 import com.faiveley.samng.principal.sm.missions.explorersingletons.parseurXML.ParseurXML_JRUExplorer;
 import com.faiveley.samng.principal.sm.parseurs.Messages;
+
+import xmlbeans.jru.xmlAssocie.ChaineDynamiqueDocument.ChaineDynamique;
+import xmlbeans.jru.xmlAssocie.EnregistreurDefJruDocument;
+import xmlbeans.jru.xmlAssocie.EnregistreurDocument.Enregistreur;
+import xmlbeans.jru.xmlAssocie.EnregistreurDocument.Enregistreur.ResolutionTemps;
+import xmlbeans.jru.xmlAssocie.EvenementDocument.Evenement;
+import xmlbeans.jru.xmlAssocie.EvenementDocument.Evenement.RazCompteurDistance;
+import xmlbeans.jru.xmlAssocie.EvenementDocument.Evenement.RazCompteurTemps;
+import xmlbeans.jru.xmlAssocie.EvenementDocument.Evenement.SynchroTempsDistance;
+import xmlbeans.jru.xmlAssocie.InformationDocument.Information;
+import xmlbeans.jru.xmlAssocie.InfosParcoursDocument;
+import xmlbeans.jru.xmlAssocie.ListeSousvarDocument.ListeSousvar;
+import xmlbeans.jru.xmlAssocie.ListeTablelabelsDocument.ListeTablelabels;
+import xmlbeans.jru.xmlAssocie.NomUtilisateurDocument.NomUtilisateur;
+import xmlbeans.jru.xmlAssocie.ReperesDocument.Reperes;
+import xmlbeans.jru.xmlAssocie.SousVarDocument.SousVar;
+import xmlbeans.jru.xmlAssocie.SousVariableDocument.SousVariable;
+import xmlbeans.jru.xmlAssocie.StructureDynamiqueDocument.StructureDynamique;
+import xmlbeans.jru.xmlAssocie.TableLabelsDocument.TableLabels;
+import xmlbeans.jru.xmlAssocie.TableSousVariablesDocument.TableSousVariables;
+import xmlbeans.jru.xmlAssocie.TableauDynamiqueDocument.TableauDynamique;
+import xmlbeans.jru.xmlAssocie.VariableAnalogiqueDocument.VariableAnalogique;
+import xmlbeans.jru.xmlAssocie.VariableComplexeDocument.VariableComplexe;
+import xmlbeans.jru.xmlAssocie.VariableComposeeDocument.VariableComposee;
+import xmlbeans.jru.xmlAssocie.VariableDiscreteDocument.VariableDiscrete;
+import xmlbeans.jru.xmlAssocie.impl.EvenementDocumentImpl.EvenementImpl.ChangementHeureImpl;
+import xmlbeans.jru.xmlAssocie.impl.EvenementDocumentImpl.EvenementImpl.RuptureAcquisitionImpl;
+import xmlbeans.jru.xmlAssocie.impl.VariableDiscreteDocumentImpl.VariableDiscreteImpl.TypeImpl;
 
 public class ParseurXMLJRU extends ParseurXML1 {
 	private static final Logger LOGGER = SamngLogger.getLogger();
@@ -919,7 +919,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode de renseignement du descripeur variable analogique utilisée pour
+	 * Mï¿½thode de renseignement du descripeur variable analogique utilisï¿½e pour
 	 * les sous varaibles d'un tableau ou structure dynamique qui n'ont pas de
 	 * code
 	 * 
@@ -1115,7 +1115,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode de renseignement du descripeur variable analogique utilisée pour
+	 * Mï¿½thode de renseignement du descripeur variable analogique utilisï¿½e pour
 	 * les sous varaibles d'un tableau ou structure dynamique qui n'ont pas de
 	 * code
 	 * 
@@ -1252,7 +1252,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 					.getString("errors.nonblocking.invalidXmlComplexTaille"));
 		}
 
-		// La taille d'une variable complexe est donnée en octet
+		// La taille d'une variable complexe est donnï¿½e en octet
 		descr.setTailleBits(taille * 8);
 
 		try {
@@ -1387,8 +1387,8 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode d'ajout d'une variable simple(pas de structure dynamique ni
-	 * tableau dynamique) à une table de sous variable
+	 * Mï¿½thode d'ajout d'une variable simple(pas de structure dynamique ni
+	 * tableau dynamique) ï¿½ une table de sous variable
 	 * 
 	 * @param structureDynamiqueXml
 	 * @param structureDynamique
@@ -1425,7 +1425,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode d'ajout de la variable d'entete à la structure dynamique
+	 * Mï¿½thode d'ajout de la variable d'entete ï¿½ la structure dynamique
 	 * 
 	 * @param structureDynamiqueXml
 	 * @param structureDynamique
@@ -1442,7 +1442,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode d'ajout de la variable d'entete au tableau dynamique
+	 * Mï¿½thode d'ajout de la variable d'entete au tableau dynamique
 	 * 
 	 * @param tableauDynamiqueXml
 	 * @param tableauDynamique
@@ -1459,7 +1459,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode d'ajout de la variable d'entete à la chaine dynamique
+	 * Mï¿½thode d'ajout de la variable d'entete ï¿½ la chaine dynamique
 	 * 
 	 * @param chaineDynamiqueXml
 	 * @param chaineDynamique
@@ -1477,7 +1477,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 
 	/**
 	 * 
-	 * Méthode de création d'une table sous-variable
+	 * Mï¿½thode de crï¿½ation d'une table sous-variable
 	 * 
 	 * @param tableSousVarXml
 	 * @return une instance de TableSousVariable remplie
@@ -1497,9 +1497,9 @@ public class ParseurXMLJRU extends ParseurXML1 {
 		for (SousVariable variable : listeSousVarXml) {
 			// System.out.println("sous-variable");
 			if (variable.isSetStructureDynamique()) {
-				// cas où la structure dynamique n'est pas référencée plus haut
+				// cas oï¿½ la structure dynamique n'est pas rï¿½fï¿½rencï¿½e plus haut
 				// dans le fichier xml:
-				// tableau dynamique définie entièrement dans l'élément
+				// tableau dynamique dï¿½finie entiï¿½rement dans l'ï¿½lï¿½ment
 				// sous-variable
 				// System.out.println("structure dynamique");
 				StructureDynamique structureDynamiqueXml = variable
@@ -1507,9 +1507,9 @@ public class ParseurXMLJRU extends ParseurXML1 {
 				com.faiveley.samng.principal.sm.data.variableComposant.JRU.StructureDynamique structureDynamique = creerStructureDynamique(structureDynamiqueXml);
 				tableSousVar.ajouter(structureDynamique);
 			} else if (variable.isSetTableauDynamique()) {
-				// cas où le tableau dynamique n'est pas référencée plus haut
+				// cas oï¿½ le tableau dynamique n'est pas rï¿½fï¿½rencï¿½e plus haut
 				// dans le fichier xml:
-				// tableau dynamique définie entièrement dans l'élément
+				// tableau dynamique dï¿½finie entiï¿½rement dans l'ï¿½lï¿½ment
 				// sous-variable
 				TableauDynamique tableauDynamiqueXml = variable
 						.getTableauDynamique();
@@ -1517,9 +1517,9 @@ public class ParseurXMLJRU extends ParseurXML1 {
 				tableSousVar.ajouter(tableauDynamique);
 				// System.out.println("tableau dynamique");
 			} else if (variable.isSetChaineDynamique()) {
-				// cas où la chaine dynamique n'est pas référencée plus haut
+				// cas oï¿½ la chaine dynamique n'est pas rï¿½fï¿½rencï¿½e plus haut
 				// dans le fichier xml:
-				// tableau dynamique définie entièrement dans l'élément
+				// tableau dynamique dï¿½finie entiï¿½rement dans l'ï¿½lï¿½ment
 				// sous-variable
 				ChaineDynamique chaineDynamiqueXml = variable
 						.getChaineDynamique();
@@ -1532,18 +1532,18 @@ public class ParseurXMLJRU extends ParseurXML1 {
 				// System.out.println("variable discrete");
 				String nomVariable = variable.getVariableDiscrete().getNom();
 				// System.out.println("nomVariable : " + nomVariable);
-				// cas où la varaible est référencée plus haut dans le fichier
+				// cas oï¿½ la varaible est rï¿½fï¿½rencï¿½e plus haut dans le fichier
 				// xml: attribut nom de type idref
 				if (this.varsNameId.get(nomVariable) != null) {
-					// System.out.println("variable referencée");
+					// System.out.println("variable referencï¿½e");
 					ajouterVariableSimpleTableSousVariable(tableSousVar,
 							nomVariable, false);
 				}
-				// cas où la variable n'est pas référencée plus haut dans le
+				// cas oï¿½ la variable n'est pas rï¿½fï¿½rencï¿½e plus haut dans le
 				// fichier xml:
-				// variable définie entièrement dans l'élément sous-variable
+				// variable dï¿½finie entiï¿½rement dans l'ï¿½lï¿½ment sous-variable
 				else {
-					// System.out.println("variable non référencée");
+					// System.out.println("variable non rï¿½fï¿½rencï¿½e");
 					DescripteurVariableDiscrete descr = new DescripteurVariableDiscrete();
 					com.faiveley.samng.principal.sm.data.variableComposant.VariableDiscrete varDiscrete = new com.faiveley.samng.principal.sm.data.variableComposant.VariableDiscrete();
 					renseignerDescripteurVariableDiscreteVide(
@@ -1554,18 +1554,18 @@ public class ParseurXMLJRU extends ParseurXML1 {
 				// System.out.println("variable analogique");
 				String nomVariable = variable.getVariableAnalogique().getNom();
 				// System.out.println("nomVariable : " + nomVariable);
-				// cas où la varaible est référencée plus haut dans le fichier
+				// cas oï¿½ la varaible est rï¿½fï¿½rencï¿½e plus haut dans le fichier
 				// xml: attribut nom de type idref
 				if (this.varsNameId.get(nomVariable) != null) {
-					// System.out.println("variable referencée");
+					// System.out.println("variable referencï¿½e");
 					ajouterVariableSimpleTableSousVariable(tableSousVar,
 							nomVariable, false);
 				}
-				// cas où la variable n'est pas référencée plus haut dans le
+				// cas oï¿½ la variable n'est pas rï¿½fï¿½rencï¿½e plus haut dans le
 				// fichier xml:
-				// variable définie entièrement dans l'élément sous-variable
+				// variable dï¿½finie entiï¿½rement dans l'ï¿½lï¿½ment sous-variable
 				else {
-					// System.out.println("variable non référencée");
+					// System.out.println("variable non rï¿½fï¿½rencï¿½e");
 					DescripteurVariableAnalogique descr = new DescripteurVariableAnalogique();
 					com.faiveley.samng.principal.sm.data.variableComposant.VariableAnalogique varAnalogique = new com.faiveley.samng.principal.sm.data.variableComposant.VariableAnalogique();
 					renseignerDescripteurVariableAnalogiqueVide(
@@ -1573,7 +1573,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 					tableSousVar.ajouter(varAnalogique);
 				}
 			} else if (variable.isSetVariableVolatile()) {
-				// dans tous les cas: la variable est référencée plus haut dans
+				// dans tous les cas: la variable est rï¿½fï¿½rencï¿½e plus haut dans
 				// le fichier xml: attribut nom de type idref
 				// System.out.println("variable volatile");
 				String nomVariable = variable.getVariableVolatile().getNom();
@@ -1581,7 +1581,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 				ajouterVariableSimpleTableSousVariable(tableSousVar,
 						nomVariable, true);
 			} else if (variable.isSetPaquets()) {
-				// dans tous les cas: la structure dynamique est référencée plus
+				// dans tous les cas: la structure dynamique est rï¿½fï¿½rencï¿½e plus
 				// haut dans le fichier xml: attribut nom de type idref
 				// System.out.println("paquet");
 				String nomVariable = variable.getPaquets().getNom();
@@ -2134,7 +2134,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode de création d'une structure dynamique à partir de sa définition
+	 * Mï¿½thode de crï¿½ation d'une structure dynamique ï¿½ partir de sa dï¿½finition
 	 * xml
 	 * 
 	 * @param structureDynamiqueXml
@@ -2147,9 +2147,9 @@ public class ParseurXMLJRU extends ParseurXML1 {
 
 		DescripteurStructureDynamique descr = new DescripteurStructureDynamique();
 		IdentificateurVariable identif = null;
-		// cas où la structure dynamique est définie directement sous l'élément
+		// cas oï¿½ la structure dynamique est dï¿½finie directement sous l'ï¿½lï¿½ment
 		// xml liste-varaibles
-		// dans ce cas il possède nom, code
+		// dans ce cas il possï¿½de nom, code
 		if (structureDynamiqueXml.getCode() != 0) {
 			descr = GestionnaireDescripteurs
 					.getDescripteurStructureDynamique(varCode);
@@ -2159,9 +2159,9 @@ public class ParseurXMLJRU extends ParseurXML1 {
 					&& !structureDynamiqueXml.getNom().equals(""))
 				identif.setNom(structureDynamiqueXml.getNom());
 		}
-		// cas où la structure dynamique est définie en tant que sous-variable
-		// dans un élément table-sous-variables
-		// dans ce cas elle ne possède pas de code mais peux possèder une nom
+		// cas oï¿½ la structure dynamique est dï¿½finie en tant que sous-variable
+		// dans un ï¿½lï¿½ment table-sous-variables
+		// dans ce cas elle ne possï¿½de pas de code mais peux possï¿½der une nom
 		else {
 			identif = new IdentificateurVariable();
 			if (structureDynamiqueXml.getNom() != null
@@ -2196,8 +2196,8 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode de création d'un tableau dynamique dynamique à partir de sa
-	 * définition xml
+	 * Mï¿½thode de crï¿½ation d'un tableau dynamique dynamique ï¿½ partir de sa
+	 * dï¿½finition xml
 	 * 
 	 * @param tableauDynamiqueXml
 	 * @return une instance de StructureDynamique
@@ -2207,9 +2207,9 @@ public class ParseurXMLJRU extends ParseurXML1 {
 		com.faiveley.samng.principal.sm.data.variableComposant.JRU.TableauDynamique tableauDyn = new com.faiveley.samng.principal.sm.data.variableComposant.JRU.TableauDynamique();
 		DescripteurTableauDynamique descr = new DescripteurTableauDynamique();
 
-		// cas où le tableau dynamique est défini directement sous l'élément xml
+		// cas oï¿½ le tableau dynamique est dï¿½fini directement sous l'ï¿½lï¿½ment xml
 		// liste-varaibles
-		// dans ce cas il possède nom, code et isString
+		// dans ce cas il possï¿½de nom, code et isString
 		if (tableauDynamiqueXml.getCode() != null
 				&& !tableauDynamiqueXml.getCode().equals("")) {
 			String varCode = tableauDynamiqueXml.getCode();
@@ -2217,9 +2217,9 @@ public class ParseurXMLJRU extends ParseurXML1 {
 			descr = GestionnaireDescripteurs
 					.getDescripteurTableauDynamique(Integer.parseInt(varCode));
 		}
-		// cas où le tableau dynamique est défini en tant que sous-variable dans
-		// un élément table-sous-variables
-		// dans ce cas il ne possède pas de code mais peux possèder une nom
+		// cas oï¿½ le tableau dynamique est dï¿½fini en tant que sous-variable dans
+		// un ï¿½lï¿½ment table-sous-variables
+		// dans ce cas il ne possï¿½de pas de code mais peux possï¿½der une nom
 		else {
 
 			IdentificateurVariable identif = new IdentificateurVariable();
@@ -2237,7 +2237,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 		// System.out.println("varaible entete: " +
 		// tableauDyn.getVariableEntete().getDescriptor().getM_AIdentificateurComposant().getNom());
 
-		// valorisation de l'attribut chaine qui spécifie si le tableau
+		// valorisation de l'attribut chaine qui spï¿½cifie si le tableau
 		// dynamique permet de lire une chaine de type X_TEXT
 		// if(tableauDynamiqueXml.isSetIsString())
 		// tableauDyn.setChaine(Boolean.parseBoolean(tableauDynamiqueXml.getIsString().toString()));
@@ -2258,8 +2258,8 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode de création d'une chaine dynamique dynamique à partir de sa
-	 * définition xml
+	 * Mï¿½thode de crï¿½ation d'une chaine dynamique dynamique ï¿½ partir de sa
+	 * dï¿½finition xml
 	 * 
 	 * @param chaineDynamiqueXml
 	 * @return une instance de ChaineDynamique
@@ -2268,18 +2268,18 @@ public class ParseurXMLJRU extends ParseurXML1 {
 			ChaineDynamique chaineDynamiqueXml) {
 		com.faiveley.samng.principal.sm.data.variableComposant.JRU.ChaineDynamique tableauDyn = new com.faiveley.samng.principal.sm.data.variableComposant.JRU.ChaineDynamique();
 		DescripteurChaineDynamique descr = new DescripteurChaineDynamique();
-		// cas où le tableau dynamique est défini directement sous l'élément xml
+		// cas oï¿½ le tableau dynamique est dï¿½fini directement sous l'ï¿½lï¿½ment xml
 		// liste-varaibles
-		// dans ce cas il possède nom, code et isString
+		// dans ce cas il possï¿½de nom, code et isString
 		if (chaineDynamiqueXml.getCode() != null
 				&& !chaineDynamiqueXml.getCode().equals("")) {
 			String varCode = chaineDynamiqueXml.getCode();
 			descr = GestionnaireDescripteurs
 					.getDescripteurChaineDynamique(Integer.parseInt(varCode));
 		}
-		// cas où le tableau dynamique est défini en tant que sous-variable dans
-		// un élément table-sous-variables
-		// dans ce cas il ne possède pas de code mais peux possèder une nom
+		// cas oï¿½ le tableau dynamique est dï¿½fini en tant que sous-variable dans
+		// un ï¿½lï¿½ment table-sous-variables
+		// dans ce cas il ne possï¿½de pas de code mais peux possï¿½der une nom
 		else {
 			IdentificateurVariable identif = new IdentificateurVariable();
 			if (chaineDynamiqueXml.getNom() != null
@@ -2296,7 +2296,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 		// System.out.println("varaible entete: " +
 		// tableauDyn.getVariableEntete().getDescriptor().getM_AIdentificateurComposant().getNom());
 
-		// valorisation de l'attribut chaine qui spécifie si le tableau
+		// valorisation de l'attribut chaine qui spï¿½cifie si le tableau
 		// dynamique permet de lire une chaine de type X_TEXT
 		// if(tableauDynamiqueXml.isSetIsString())
 		// tableauDyn.setChaine(Boolean.parseBoolean(tableauDynamiqueXml.getIsString().toString()));
@@ -2317,7 +2317,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode de cahrgement
+	 * Mï¿½thode de cahrgement
 	 * 
 	 * @return
 	 */
@@ -2340,7 +2340,7 @@ public class ParseurXMLJRU extends ParseurXML1 {
 	}
 
 	/**
-	 * Méthode de chargement du modèle(défini le type de parseur à utiliser)
+	 * Mï¿½thode de chargement du modï¿½le(dï¿½fini le type de parseur ï¿½ utiliser)
 	 * 
 	 * @return
 	 */

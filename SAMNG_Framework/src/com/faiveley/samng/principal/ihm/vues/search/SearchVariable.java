@@ -4,7 +4,6 @@ import java.util.EnumSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -18,6 +17,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.IViewPart;
 import org.eclipse.ui.IViewReference;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -145,7 +145,7 @@ public class SearchVariable extends ASearchVariableDialog {
 			this.values = new LinkedHashMap<String, DescripteurVariable>();
 		}
 
-		IViewReference[] vr = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
+		IViewReference[] vr = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
 		for (IViewReference v : vr) {
 			IViewPart view = v.getView(false);
 			// search for the interface "SearchVariable"
@@ -407,7 +407,7 @@ public class SearchVariable extends ASearchVariableDialog {
 			// get the opened views that implements ISearchVariableListener
 			// and notify them
 			// if (value != null) {
-			IViewReference[] vr = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
+			IViewReference[] vr = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getViewReferences();
 
 			if (op==Operation.NoOperation)
 				op=null;

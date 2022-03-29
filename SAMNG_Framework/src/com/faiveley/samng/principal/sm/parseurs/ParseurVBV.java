@@ -7,11 +7,6 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import noNamespace.ComposantVBVDocument.ComposantVBV;
-import noNamespace.ListeVBVDocument;
-import noNamespace.ListeVBVDocument.ListeVBV;
-import noNamespace.VBVDocument.VBV;
-
 import org.apache.xmlbeans.XmlAnySimpleType;
 import org.apache.xmlbeans.XmlException;
 import org.apache.xmlbeans.XmlOptions;
@@ -28,6 +23,11 @@ import com.faiveley.samng.principal.sm.data.variableComposant.VariableComposite;
 import com.faiveley.samng.principal.sm.data.variableComposant.variableVirtuelle.Operateur;
 import com.faiveley.samng.principal.sm.data.variableComposant.variableVirtuelle.VariableVirtuelle;
 import com.faiveley.samng.principal.sm.erreurs.ParseurXMLException;
+
+import noNamespace.ComposantVBVDocument.ComposantVBV;
+import noNamespace.ListeVBVDocument;
+import noNamespace.ListeVBVDocument.ListeVBV;
+import noNamespace.VBVDocument.VBV;
 
 /**
  * @author Olivier

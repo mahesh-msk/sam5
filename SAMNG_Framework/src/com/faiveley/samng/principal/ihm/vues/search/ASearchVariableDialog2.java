@@ -20,6 +20,7 @@ import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Scrollable;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
@@ -137,7 +138,7 @@ public abstract class ASearchVariableDialog2 extends ASearchDialog {
 		this.comboVar.addSelectionListener(new ComboSelection());
 
 		// permet de remettre la selection sur <Recherche> si la varaible avait
-		// été trouvée par recherche
+		// ï¿½tï¿½ trouvï¿½e par recherche
 		this.comboVar.addListener(SWT.MouseDown, new Listener() {
 			public void handleEvent(Event arg0) {
 				if (lastSearchVarCombo) {
@@ -187,7 +188,7 @@ public abstract class ASearchVariableDialog2 extends ASearchDialog {
 					addVariablesComposee(msg.getVariablesComposee());
 				}
 			}
-			// ajout des variables composées à la liste des variables
+			// ajout des variables composï¿½es ï¿½ la liste des variables
 			Map<String, AVariableComposant> composeeVars = GestionnairePool.getInstance()
 					.getComposeeVariables();
 			for (AVariableComposant compVar : composeeVars.values()) {
@@ -298,9 +299,9 @@ public abstract class ASearchVariableDialog2 extends ASearchDialog {
 					for (Operation o : EnumSet.range(Operation.NoOperation, Operation.LessOrEqual)) {
 						this.comboOperation.add(o.value());
 					}
-					//on positionne l'opérateur à  = 
+					//on positionne l'opï¿½rateur ï¿½  = 
 					this.comboOperation.select(1);
-					//on positionne la valeur à la date du PC
+					//on positionne la valeur ï¿½ la date du PC
 					//					Date dateActu=new Date(System.currentTimeMillis());
 					Calendar c=Calendar.getInstance();
 					c.setTimeInMillis(System.currentTimeMillis());
@@ -369,10 +370,10 @@ public abstract class ASearchVariableDialog2 extends ASearchDialog {
 					if(labels != null && labels.size() > 1) {
 						for (LabelValeur valeur : labels) {
 							isDoublon = false;
-							//ajout olivier: si l'on veut différencier plusieurs associations de valeurs associées au meme label(ex:UNDEFINED)
-							//on doit rajouter les valeurs après le label: UNDEFINED(1,0,0,1), UNDEFINED(0,0,0,1) etc...
+							//ajout olivier: si l'on veut diffï¿½rencier plusieurs associations de valeurs associï¿½es au meme label(ex:UNDEFINED)
+							//on doit rajouter les valeurs aprï¿½s le label: UNDEFINED(1,0,0,1), UNDEFINED(0,0,0,1) etc...
 							//combo.add(valeur.getLabel()+"(" +(String)valeur.getValeurs() +")");
-							//sinon on ne met que le label(ex:UNDEFINED) et la recherche s'arrete dès que le label est trouvé meme si plusieurs associations de valeurs lui sont associées
+							//sinon on ne met que le label(ex:UNDEFINED) et la recherche s'arrete dï¿½s que le label est trouvï¿½ meme si plusieurs associations de valeurs lui sont associï¿½es
 							for (int i = 0; i < combo.getItemCount(); i++) {
 								if (combo.getItem(i).equals(valeur.getLabel())) {
 									isDoublon = true;
@@ -443,7 +444,7 @@ public abstract class ASearchVariableDialog2 extends ASearchDialog {
 			if (selEventData.equals(ADV_SEARCH)) {
 				lastSearchVarCombo = true;
 
-				RechercheDialog dlg = new RechercheDialog(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getShell());
+				RechercheDialog dlg = new RechercheDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell());
 				//				dlg.setSelectableValues(ASearchVariableDialog2.this.values
 				//						.keySet().toArray(
 				//								new String[ASearchVariableDialog2.this.values

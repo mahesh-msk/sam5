@@ -1,18 +1,18 @@
 package com.faiveley.samng.vuetabulaire.ihm;
 
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.ui.PlatformUI;
 import org.osgi.framework.BundleContext;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.AbstractActivatorVue;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.progbar.ValeurProgBar;
 import com.faiveley.samng.principal.ihm.vues.configuration.GestionnaireVueListeBase;
 import com.faiveley.samng.principal.ihm.vues.vuesfiltre.TabulaireFiltresProvider;
+import com.faiveley.samng.principal.sm.filtres.GestionnaireFiltresTabulaire;
 import com.faiveley.samng.vuetabulaire.ihm.actions.ExportFichierAction;
 import com.faiveley.samng.vuetabulaire.ihm.actions.MultipleExportsAction;
 import com.faiveley.samng.vuetabulaire.ihm.vues.vuetabulaire.configuration.GestionnaireVueTabulaire;
-import com.faiveley.samng.principal.sm.filtres.GestionnaireFiltresTabulaire;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -95,17 +95,17 @@ public class ActivatorVueTabulaire extends AbstractActivatorVue {
 		}
 		
 		try {
-			Activator.getDefault().getWorkbench();
+			PlatformUI.getWorkbench();
 		} catch (Exception e) {
 			System.out.println("workbench not yet");
 			return;
 		}
 		
-		exporterFichierAction = new ExportFichierAction(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(),
+		exporterFichierAction = new ExportFichierAction(PlatformUI.getWorkbench().getActiveWorkbenchWindow(),
 				Messages.getString("ActivatorVueTabulaire.5")); //$NON-NLS-1$
 		exporterFichierAction.setEnabled(false);
 
-		multipleExportAction = new MultipleExportsAction(Activator.getDefault().getWorkbench().getActiveWorkbenchWindow(),
+		multipleExportAction = new MultipleExportsAction(PlatformUI.getWorkbench().getActiveWorkbenchWindow(),
 				Messages.getString("ActivatorVueTabulaire.6")); //$NON-NLS-1$
 		multipleExportAction.setEnabled(true);
 		ActivatorData.getInstance().getBarAdvisor().ajouterExportsActions(exporterFichierAction);

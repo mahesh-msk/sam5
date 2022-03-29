@@ -4,14 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import noNamespace.FiltreVuegraphiqueDocument.FiltreVuegraphique;
-import noNamespace.GraphiqueDocument.Graphique;
-import noNamespace.GraphiqueDocument.Graphique.Type;
-import noNamespace.LigneVariableDocument.LigneVariable;
-import noNamespace.ListeFiltresVuegraphiqueDocument;
-import noNamespace.ListeFiltresVuegraphiqueDocument.ListeFiltresVuegraphique;
-import noNamespace.ListeLignesVariableDocument.ListeLignesVariable;
-
 import org.apache.xmlbeans.XmlAnySimpleType;
 import org.apache.xmlbeans.XmlAnySimpleType.Factory;
 import org.apache.xmlbeans.XmlException;
@@ -28,6 +20,14 @@ import com.faiveley.samng.principal.sm.filtres.TypeGraphique;
 import com.faiveley.samng.principal.sm.filtres.variables.CouleurLigneVariable;
 import com.faiveley.samng.principal.sm.filtres.variables.LigneVariableFiltreComposite;
 import com.faiveley.samng.principal.sm.parseurs.IParseurFiltre;
+
+import noNamespace.FiltreVuegraphiqueDocument.FiltreVuegraphique;
+import noNamespace.GraphiqueDocument.Graphique;
+import noNamespace.GraphiqueDocument.Graphique.Type;
+import noNamespace.LigneVariableDocument.LigneVariable;
+import noNamespace.ListeFiltresVuegraphiqueDocument;
+import noNamespace.ListeFiltresVuegraphiqueDocument.ListeFiltresVuegraphique;
+import noNamespace.ListeLignesVariableDocument.ListeLignesVariable;
 
 
 /**

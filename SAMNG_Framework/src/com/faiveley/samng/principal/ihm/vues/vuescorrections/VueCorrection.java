@@ -25,10 +25,10 @@ import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.actions.captures.ICapturable;
 import com.faiveley.samng.principal.ihm.calcul.TailleBouton;
 import com.faiveley.samng.principal.ihm.listeners.IDataChangedListener;
@@ -105,7 +105,7 @@ public abstract class VueCorrection extends ViewPart implements
 				} else {
 					doNotApplyChanges();
 				}
-				Activator.getDefault().getWorkbench()
+				PlatformUI.getWorkbench()
 						.getActiveWorkbenchWindow().getActivePage()
 						.hideView(VueCorrection.this);
 				GestionnaireCorrection.getInstance().saveCorrections(true);
@@ -262,7 +262,7 @@ public abstract class VueCorrection extends ViewPart implements
 		// selection listener for buton Cancel
 		this.buttonCancel.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				Activator.getDefault().getWorkbench()
+				PlatformUI.getWorkbench()
 						.getActiveWorkbenchWindow().getActivePage()
 						.hideView(VueCorrection.this);
 			}

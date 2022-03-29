@@ -5,9 +5,9 @@ import org.eclipse.jface.viewers.ISelectionProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.PlatformUI;
 
 import com.faiveley.samng.principal.data.ActivatorData;
-import com.faiveley.samng.principal.ihm.Activator;
 import com.faiveley.samng.principal.ihm.vues.MessageSelection;
 import com.faiveley.samng.principal.ihm.vues.vuemarqueurs.MarqueurCommentaireDialog;
 import com.faiveley.samng.principal.sm.data.descripteur.TypeRepere;
@@ -39,7 +39,7 @@ public class AjouterAnnotationAction extends AbstractMarqueurAction {
 
 	@Override
 	public void run() {
-		final IWorkbenchPart activePart = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart();
+		final IWorkbenchPart activePart = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActivePart();
 		if(activePart instanceof ISelectionProvider) {
 			ISelectionProvider selProvider = (ISelectionProvider)activePart;
 			ISelection sel = selProvider.getSelection();
@@ -121,7 +121,7 @@ public class AjouterAnnotationAction extends AbstractMarqueurAction {
 
 //	@Override
 //	public boolean isEnabled() {
-//		IWorkbenchPage page = Activator.getDefault().getWorkbench().getActiveWorkbenchWindow().getActivePage();
+//		IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 //		if(page == null)
 //			return false;
 //		boolean enabled = false;
