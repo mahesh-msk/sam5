@@ -25,8 +25,12 @@
       <import plugin="org.apache.log4j"/>
       <import plugin="org.junit"/>
       <import plugin="org.eclipse.jface.text"/>
-      <import plugin="org.eclipse.osgi"/>
       <import plugin="VueMultimediaPlugin" version="5.5.6.96" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.ui.workbench"/>
+      <import plugin="org.eclipse.e4.ui.model.workbench"/>
+      <import plugin="org.eclipse.e4.core.contexts"/>
+      <import plugin="javax.annotation"/>
+      <import plugin="org.eclipse.e4.ui.services"/>
    </requires>
 
    <plugin
