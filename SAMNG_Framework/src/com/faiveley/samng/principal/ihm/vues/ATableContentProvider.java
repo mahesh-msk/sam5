@@ -20,7 +20,7 @@ public abstract class ATableContentProvider implements
 
 	@Override
 	public Object[] getElements(Object inputElement) {
-		return this.elements;
+		return elements == null ? new Object[0] : elements;
 	}
 
 	@Override

@@ -125,8 +125,8 @@ public class FichierFermerService {
 			}
 		}
 
-		ActivatorData.getInstance().notifyDataListeners();
 		Activator.getDefault().release();
+		ActivatorData.getInstance().notifyDataListeners();
 		ActivatorData.getInstance().getBarAdvisor().setActionsEnabled(false);
 
 		GestionnaireProfil.getInstance().resetProfil();
@@ -195,6 +195,7 @@ public class FichierFermerService {
 						appli.getSnippets().remove(toBeRemoved);
 						
 				    // Then can add it to save it ... 
+					modelService.hideLocalPlaceholders(appli.getChildren().get(0), p);
 					appli.getSnippets().add(p);
 										
 					// If we closed the active perspective, must display a new one.... 

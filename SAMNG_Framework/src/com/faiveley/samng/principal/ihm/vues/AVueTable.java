@@ -935,6 +935,13 @@ public abstract class AVueTable extends AbstractSelectionProviderVue implements 
 	 */
 	public void onDataChange() {
 		this.gestionaireVue.clear();
+		
+		// If file becomes empty, must dispose table in  the view
+		if (ActivatorData.getInstance().isFileEmpty())
+		{
+			disposeTable();
+			return;
+		}
 
 		// if there are distance or time corrections then the colums should be
 		// added to the table

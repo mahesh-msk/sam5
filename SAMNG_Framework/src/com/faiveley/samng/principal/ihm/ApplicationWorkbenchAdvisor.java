@@ -43,7 +43,7 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
 	public void initialize(IWorkbenchConfigurer configurer) {
 		// Utiliser la valeur 'true' pour que l'�tat du workbench soit sauvegard�.
-		configurer.setSaveAndRestore(false);
+		configurer.setSaveAndRestore(true);
 		// Attention, si sauvegarde de l'�tat, la m�thode createInitialLayout de la
 		// perspective sera appel�e uniquement au premier lancement de l'application.
 		// Il est alors pr�f�rable de pr�voir une entr�e dans un menu permettant
@@ -81,7 +81,8 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 			ffa.run();
 		}
 		catch(Exception ex){
-			System.exit(0);
+			ex.printStackTrace();
+			// System.exit(0);
 		}
 		
 		return super.preShutdown();

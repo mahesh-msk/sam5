@@ -315,7 +315,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 		this.bars = getViewSite().getActionBars();
 
 		updateViewInfoLabel();
-		makeActions();
+		// makeActions();
 
 		// Ajout des actions � la toolbar
 		ajoutActionToolBar(synchroVuesAction);
@@ -1295,7 +1295,13 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	 */
 	public void onDataChange() {
 		this.gestionaireVue.clear();
-
+		
+		// If file becomes empty, must dispose table in  the view
+		if (ActivatorData.getInstance().isFileEmpty())
+		{
+			disposeTable();			
+			return;
+		}
 		// If there are distance or time corrections then the colums should be added to the table
 		if (TableSegments.getInstance().isAppliedDistanceCorrections()) {
 			this.gestionaireVue.ajouterRepere(TypeRepere.distanceCorrigee);
@@ -1567,7 +1573,8 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	 * @return the found row index or -1 if no such message ID found in rows
 	 */
 	protected int getRowIndexForMessageId(int msgId, DescripteurVariable descripteurVariable) {
-		Object[] elements = ((IStructuredContentProvider) this.tblFix.getContentProvider()).getElements(null);
+		IStructuredContentProvider tblContentProvider = (IStructuredContentProvider) this.tblFix.getContentProvider();
+		Object[] elements = tblContentProvider == null ? new Object[0] : tblContentProvider.getElements(null);
 		int rowId;
 		Object rowData;
 		int rowIdx = 0;

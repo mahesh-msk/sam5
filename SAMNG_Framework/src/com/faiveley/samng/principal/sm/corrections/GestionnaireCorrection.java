@@ -25,6 +25,7 @@ import com.faiveley.samng.principal.sm.fabriques.FabriqueParcours;
 import com.faiveley.samng.principal.sm.missions.explorersingletons.activationexplorer.ActivationExplorer;
 import com.faiveley.samng.principal.sm.missions.explorersingletons.gestionnaires.GestionnaireCorrectionExplorer;
 import com.faiveley.samng.principal.sm.parseurs.ParseurCorrections;
+import com.faiveley.samng.principal.sm.parseurs.parseurXML.ParseurXML1;
 import com.faiveley.samng.principal.sm.repertoires.RepertoiresAdresses;
 import com.faiveley.samng.principal.sm.segments.SegmentDistance;
 import com.faiveley.samng.principal.sm.segments.SegmentTemps;
@@ -64,7 +65,7 @@ public class GestionnaireCorrection {
 	}
 
 	/**
-	 * Méthode de chargement des segments de temps
+	 * Mï¿½thode de chargement des segments de temps
 	 */
 	public void chargerCorrections() {
 		if (this.parsCor != null) {
@@ -411,7 +412,8 @@ public class GestionnaireCorrection {
 	 */
 	public void saveCorrections(boolean forcerCreationXML) {
 		if (this.parsCor == null) {
-			InfosFichierSamNg info = (InfosFichierSamNg) GestionnairePool.getInstance().getXMLParser().getInfosFichier();
+			ParseurXML1 xmlParser = GestionnairePool.getInstance().getXMLParser();
+			InfosFichierSamNg info = xmlParser == null ? null : (InfosFichierSamNg) xmlParser.getInfosFichier();
 
 			if (info != null) {
 				String filename = info.getNomFichierParcoursBinaire();
