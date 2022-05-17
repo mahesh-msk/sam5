@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="2021-09" sequenceNumber="1647427911">
+<target name="2021-09" sequenceNumber="1652794932">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.rcp.feature.group" version="4.21.0.v20210906-0842"/>
@@ -30,7 +30,7 @@
       <repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20210825222808/repository"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group" version="11.0.14.v20220314-1349"/>
+      <unit id="org.eclipse.justj.openjdk.hotspot.jre.full.feature.group" version="11.0.15.v20220515-1236"/>
       <repository id="jre11" location="https://download.eclipse.org/justj/jres/11/updates/release/latest/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
