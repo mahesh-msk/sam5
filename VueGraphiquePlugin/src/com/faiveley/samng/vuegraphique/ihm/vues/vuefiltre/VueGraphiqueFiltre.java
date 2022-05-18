@@ -17,6 +17,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
 import com.faiveley.samng.principal.data.ActivatorData;
+import com.faiveley.samng.principal.ihm.actions.filtre.ActionOpenCloseFilterView;
 import com.faiveley.samng.principal.ihm.actions.filtre.ActionOpenCloseVue;
 import com.faiveley.samng.principal.ihm.vues.vuesfiltre.AbstractProviderFiltre;
 import com.faiveley.samng.principal.ihm.vues.vuesfiltre.FiltresListeComposite;
@@ -42,6 +43,8 @@ public class VueGraphiqueFiltre extends ViewPart implements PropertyChangeListen
 	private Composite leftPanelComposite;
 	private VueGraphiqueFiltreEditeur rightPanelComposite;
 	private Composite mainComposite;
+
+	private ActionOpenCloseFilterView closeAction;
 
 	public VueGraphiqueFiltre() {
 	}
@@ -70,7 +73,7 @@ public class VueGraphiqueFiltre extends ViewPart implements PropertyChangeListen
 		this.sashForm.setBounds(new Rectangle(3, 4, 654, 294));
 		this.leftPanelComposite = new FiltresGraphiqueComposite(this.sashForm, SWT.NONE, TypeFiltre.graphique);
 
-		ActionOpenCloseVue closeAction = new ActionOpenCloseVue(Messages.getString("VueGraphiqueFiltre.4"), ID, ActionOpenCloseVue.ACTION_CLOSE); //$NON-NLS-1$
+		closeAction = new ActionOpenCloseFilterView(Messages.getString("VueGraphiqueFiltre.4"), ID, ActionOpenCloseVue.ACTION_CLOSE);
 		((FiltresListeComposite)this.leftPanelComposite).setCloseButtonAction(closeAction);
 		this.rightPanelComposite = new VueGraphiqueFiltreEditeur(this.sashForm, SWT.NONE, TypeFiltre.graphique);
 
@@ -147,9 +150,8 @@ public class VueGraphiqueFiltre extends ViewPart implements PropertyChangeListen
 		new ApplyFiltreAction().run();
 		GestionnaireZoom.ajouterZoom(AZ);
 		
-		// Must now close the filter window... Use E4 API 
-		EPartService ps  = (EPartService) PlatformUI.getWorkbench().getService(EPartService.class);
-		ps.hidePart(ps.getActivePart());
+		// Call close action and do not hide the part (close action will only set unvisible and not destroy the part)
+		closeAction.run();
 
 	}
 

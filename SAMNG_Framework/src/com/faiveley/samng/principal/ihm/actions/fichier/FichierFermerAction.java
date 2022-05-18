@@ -6,6 +6,7 @@ import org.eclipse.ui.IWorkbenchWindow;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.ICommandIds;
+import com.faiveley.samng.principal.ihm.actions.filtre.ShowFilterWindowHelper;
 
 /**
  * @author Cosmin Udroiu
@@ -28,6 +29,10 @@ public class FichierFermerAction extends Action {
 			FichierFermerService.getInstance().closeMultimediaFile();
 		} else {
 			FichierFermerService.getInstance().closeFile();
+			
+			// Remove also the window for filter as they are store in the model for a same file.
+			ShowFilterWindowHelper.removeAllFilterWindowsInApplication();
+
 		}
 	}
 	

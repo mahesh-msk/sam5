@@ -17,6 +17,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
 import com.faiveley.samng.principal.data.ActivatorData;
+import com.faiveley.samng.principal.ihm.actions.filtre.ActionOpenCloseFilterView;
 import com.faiveley.samng.principal.ihm.actions.filtre.ActionOpenCloseVue;
 import com.faiveley.samng.principal.ihm.vues.vuesfiltre.AbstractProviderFiltre;
 import com.faiveley.samng.principal.ihm.vues.vuesfiltre.FiltresListeComposite;
@@ -46,6 +47,8 @@ public class VueListeFiltre extends ViewPart implements PropertyChangeListener,
 
 	private Composite mainComposite;
 
+	private ActionOpenCloseFilterView closeAction;
+
 	public VueListeFiltre() {
 		
 	}
@@ -66,8 +69,8 @@ public class VueListeFiltre extends ViewPart implements PropertyChangeListener,
 		sashForm.setBounds(new Rectangle(3, 4, 654, 294));
 		leftPanelComposite = new FiltresListeComposite(sashForm, SWT.NONE,
 				TypeFiltre.liste);
-		ActionOpenCloseVue closeAction = new ActionOpenCloseVue(
-				Messages.getString("VueListeFiltre.3"), ID, ActionOpenCloseVue.ACTION_CLOSE); //$NON-NLS-1$
+		closeAction = new ActionOpenCloseFilterView(
+				Messages.getString("VueListeFiltre.3"), ID, ActionOpenCloseVue.ACTION_CLOSE);
 		((FiltresListeComposite) leftPanelComposite)
 				.setCloseButtonAction(closeAction);
 
@@ -157,9 +160,8 @@ public class VueListeFiltre extends ViewPart implements PropertyChangeListener,
 	protected void onFilterApplied(PropertyChangeEvent evt) {
 		new ApplyFiltreAction().run();
 		
-		// Must now close the filter window... Use E4 API 
-		EPartService ps  = (EPartService) PlatformUI.getWorkbench().getService(EPartService.class);
-		ps.hidePart(ps.getActivePart());
+		// Call close action and do not hide the part (close action will only set unvisible and not destroy the part)
+		closeAction.run();
 	}
 
 	@Override

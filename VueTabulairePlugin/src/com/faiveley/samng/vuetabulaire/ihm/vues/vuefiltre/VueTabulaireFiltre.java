@@ -17,6 +17,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
 
 import com.faiveley.samng.principal.data.ActivatorData;
+import com.faiveley.samng.principal.ihm.actions.filtre.ActionOpenCloseFilterView;
 import com.faiveley.samng.principal.ihm.actions.filtre.ActionOpenCloseVue;
 import com.faiveley.samng.principal.ihm.vues.vuesfiltre.AbstractProviderFiltre;
 import com.faiveley.samng.principal.sm.filtres.AFiltreComposant;
@@ -37,6 +38,8 @@ public class VueTabulaireFiltre extends ViewPart implements PropertyChangeListen
 	private Composite leftPanelComposite;
 	private VueTabulaireFiltreEditeur rightPanelComposite;
 	private Composite mainComposite;
+
+	private ActionOpenCloseFilterView closeAction;
 
 	public VueTabulaireFiltre() {
 		
@@ -71,7 +74,7 @@ public class VueTabulaireFiltre extends ViewPart implements PropertyChangeListen
 		this.sashForm.setBounds(new Rectangle(3, 4, 654, 294));
 		this.leftPanelComposite = new FiltreTabulaireComposite(this, SWT.NONE, TypeFiltre.tabulaire);
 		
-		ActionOpenCloseVue closeAction = new ActionOpenCloseVue(Messages.getString("VueTabulaireFiltre.0"), ActivatorData.TABULAR_VUE_FILTRE_ID, ActionOpenCloseVue.ACTION_CLOSE); //$NON-NLS-1$
+		closeAction = new ActionOpenCloseFilterView(Messages.getString("VueTabulaireFiltre.0"), ActivatorData.TABULAR_VUE_FILTRE_ID, ActionOpenCloseVue.ACTION_CLOSE);
 		((FiltreTabulaireComposite)this.leftPanelComposite).setCloseButtonAction(closeAction);
 		rightPanelComposite = new VueTabulaireFiltreEditeur(this.sashForm, SWT.NONE, TypeFiltre.tabulaire);
 
@@ -144,10 +147,10 @@ public class VueTabulaireFiltre extends ViewPart implements PropertyChangeListen
 		
 		
 		new ApplyFiltreAction().run();
-		
-		// Must now close the filter window... Use E4 API 
-		EPartService ps  = (EPartService) PlatformUI.getWorkbench().getService(EPartService.class);
-		ps.hidePart(ps.getActivePart());
+
+		// Call close action and do not hide the part (close action will only set unvisible and not destroy the part)
+		closeAction.run();
+
 
 	}
 
