@@ -14,8 +14,6 @@ import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.TableColumn;
-import org.eclipse.ui.IPartListener2;
-import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 
@@ -165,56 +163,8 @@ implements ISearchVariableVirtuele {
 		ajoutActionToolBar(exportSelectionAction);
 		updateViewInfoLabel();
 		
-		this.initPartListener();
 	}
 
-	private void initPartListener() {
-		getSite().getPage().addPartListener(new IPartListener2() {
-			
-			@Override
-			public void partVisible(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partOpened(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partInputChanged(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partHidden(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partDeactivated(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partClosed(IWorkbenchPartReference partRef) {
-				if (partRef.getId().equals(ID)) {
-					ActivatorVueTabulaire.getDefault().saveConfigurationVue();
-					getSite().getPage().removePartListener(this);
-				}
-			}
-			
-			@Override
-			public void partBroughtToTop(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partActivated(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-		});	
-	}
 
 	/**
 	 * Loads the table and scroll to the previous selection

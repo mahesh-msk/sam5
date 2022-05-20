@@ -38,11 +38,9 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.TableItem;
 import org.eclipse.ui.IActionBars;
-import org.eclipse.ui.IPartListener2;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.IWorkbenchPart;
-import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 
@@ -337,62 +335,12 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 		ajoutActionToolBar(expandAction);
 		ajoutActionToolBar(collapseAction);
 		updateViewInfoLabel();
-		
-		this.initPartListener();
-		
+				
 		if (GestionLineCommandParameters.getIndiceMsg() != -1 && oneTimeOffset) {
 			selectionChanged(null, null);
 		}
 	}
 
-
-	private void initPartListener() {
-		getSite().getPage().addPartListener(new IPartListener2() {
-			
-			@Override
-			public void partVisible(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partOpened(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partInputChanged(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partHidden(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partDeactivated(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partClosed(IWorkbenchPartReference partRef) {
-				if (partRef.getId().equals(ID)) {
-					ActivatorVueListe.getDefault().saveConfigurationVue();
-					getSite().getPage().removePartListener(this);
-				}
-			}
-			
-			@Override
-			public void partBroughtToTop(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-			
-			@Override
-			public void partActivated(IWorkbenchPartReference partRef) {
-				// TODO Stub de la m�thode g�n�r� automatiquement
-			}
-		});		
-	}
 
 
 	/**
@@ -1160,6 +1108,7 @@ public class VueListe extends AbstractSelectionProviderVue implements PropertyCh
 	 */
 	@Override
 	public void dispose() {
+		
 		if (ActivatorData.getInstance().isMultimediaFileAlone()) {			
 			return;
 		}

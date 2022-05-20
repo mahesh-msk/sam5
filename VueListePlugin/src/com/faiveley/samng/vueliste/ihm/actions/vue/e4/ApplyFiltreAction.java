@@ -52,7 +52,12 @@ public class ApplyFiltreAction extends Action {
 		if(vueListe == null) {	//we should have the view as we just pushed the button
 			return;	//nothing more to do
 		}
+		
 		vueListe.reloadTable();
+		
+		// Save the filter configuration (filter save was not called anymore in listener...).
+		ActivatorVueListe.getDefault().saveConfigurationVue();
+
 	}
 	
 	private VueListe getVueList() {

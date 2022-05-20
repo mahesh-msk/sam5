@@ -26,11 +26,9 @@ import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.ui.IActionBars;
-import org.eclipse.ui.IPartListener2;
 import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.IWorkbenchPart;
-import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.IWorkbenchPartSite;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
@@ -206,69 +204,12 @@ IVbvChangeListener,ISearchVariableListener{
 		this.usesShortNames = viewMng.usesShortNames();
 		ActivatorVueGraphique.getDefault().setUsesShortNames(usesShortNames);
 	}
-	private void close(){
-		if (leftPanelComposite!=null) {
-			leftPanelComposite.dispose();
-		}
-		if (rightPanelComposite!=null) {
-			rightPanelComposite.dispose();
-		}
-		if (sashForm!=null) {
-			sashForm.dispose();
-		}
-		if (mainComposite!=null) {
-			mainComposite.dispose();
-		}
-	}
+	
 
 	public void setPartNameExtern(String partName){
 		this.setPartName(partName);
 	}
 
-	public void initPartListener() {
-
-		getSite().getPage().addPartListener( new IPartListener2() {
-
-			public void partActivated(IWorkbenchPartReference partRef) {
-				// TODO Raccord de m�thode auto-g�n�r�
-			}
-
-			public void partBroughtToTop(IWorkbenchPartReference partRef) {
-				// TODO Raccord de m�thode auto-g�n�r�
-			}
-
-			public void partClosed(IWorkbenchPartReference partRef) {
-				TailleVue.getInstance().setX(-1);
-				TailleVue.getInstance().setY(-1);
-				if (partRef.getId().equals(ID)) {
-					ActivatorVueGraphique.getDefault().saveConfigurationVue();
-					getSite().getPage().removePartListener(this);
-					close();
-				}
-			}
-
-			public void partDeactivated(IWorkbenchPartReference partRef) {
-				// TODO Raccord de m�thode auto-g�n�r�
-			}
-
-			public void partHidden(IWorkbenchPartReference partRef) {
-				// TODO Raccord de m�thode auto-g�n�r�
-			}
-
-			public void partInputChanged(IWorkbenchPartReference partRef) {
-				// TODO Raccord de m�thode auto-g�n�r�
-
-			}
-
-			public void partOpened(IWorkbenchPartReference partRef) {
-				// TODO Raccord de m�thode auto-g�n�r�
-			}
-
-			public void partVisible(IWorkbenchPartReference partRef) {
-				// TODO Raccord de m�thode auto-g�n�r�
-			}
-		});
-	}
 
 	/**
 	 * @param parent
@@ -338,8 +279,6 @@ IVbvChangeListener,ISearchVariableListener{
 				ajoutActionToolBar(capturerVueAction);
 
 				AnnulerZoom.getInstance().setZoomAnnule(false);
-
-				this.initPartListener();
 				
 				if (GestionLineCommandParameters.getIndiceMsg()!=-1 && oneTimeOffset)
 					selectionChanged(null, null) ;

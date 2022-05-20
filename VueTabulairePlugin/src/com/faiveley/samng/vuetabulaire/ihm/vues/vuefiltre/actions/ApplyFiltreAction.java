@@ -68,10 +68,10 @@ public class ApplyFiltreAction extends Action {
 		ActivatorVueTabulaire.getDefault().getConfigurationMng().setChanged(true);
 		}
 		
-		//vérification de la validité des VBV
+		//vï¿½rification de la validitï¿½ des VBV
 		//2 cas possibles: 
-		//aucun filtre appliqué :toutes les VBV sont vérifiées(else) car elles sont toutes susceptibles d'etre affichées
-		//un filtre est appliqué: on ne vérifie que les VBV qui sont dans le filtre
+		//aucun filtre appliquï¿½ :toutes les VBV sont vï¿½rifiï¿½es(else) car elles sont toutes susceptibles d'etre affichï¿½es
+		//un filtre est appliquï¿½: on ne vï¿½rifie que les VBV qui sont dans le filtre
 		String s = null;
 		if(currentAppliedFilterName != null){
 			List<String> listeVBVs = new ArrayList<String>();
@@ -83,12 +83,12 @@ public class ApplyFiltreAction extends Action {
 			}
 		}
 		if(listeVBVs.size()>0){
-		//		vérification de la validité des VBV
+		//		vï¿½rification de la validitï¿½ des VBV
 		s = ActivatorData.getInstance().getProviderVBVs().verifierValiditeVBVs(listeVBVs);
 		if(s!=null){
 			MessageBox msgBox = new MessageBox(Display.getCurrent()
 					.getActiveShell(), SWT.OK);
-			msgBox.setText("vérifications VBV");  //$NON-NLS-1$
+			msgBox.setText("vï¿½rifications VBV");  //$NON-NLS-1$
 			msgBox.setMessage(s);  //$NON-NLS-1$
 			msgBox.open();
 			}
@@ -96,12 +96,12 @@ public class ApplyFiltreAction extends Action {
 		}
 		
 		else{
-			//		vérification de la validité des VBV
+			//		vï¿½rification de la validitï¿½ des VBV
 		s = ActivatorData.getInstance().getProviderVBVs().verifierValiditeVBVs(null);
 		if(s!=null){
 		MessageBox msgBox = new MessageBox(Display.getCurrent()
 				.getActiveShell(), SWT.OK);
-		msgBox.setText("vérifications VBV");  //$NON-NLS-1$
+		msgBox.setText("vï¿½rifications VBV");  //$NON-NLS-1$
 		msgBox.setMessage(s);  //$NON-NLS-1$
 		msgBox.open();}
 		}
@@ -113,6 +113,10 @@ public class ApplyFiltreAction extends Action {
 			return;	//nothing more to do
 		}
 		vueTabulaire.reloadTable();
+		
+		// Save the filter configuration (filter save was not called anymore in listener...).
+		ActivatorVueTabulaire.getDefault().saveConfigurationVue();
+
 	}
 	
 	private VueTabulaire getVueTabulaire() {

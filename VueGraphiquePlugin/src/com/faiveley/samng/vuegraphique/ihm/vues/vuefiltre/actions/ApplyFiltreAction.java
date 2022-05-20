@@ -51,6 +51,9 @@ public class ApplyFiltreAction extends Action {
 		}
 		vueGraphique.applyFilter();
 		
+		// Save the filter configuration (filter save was not called anymore in listener...).
+		ActivatorVueGraphique.getDefault().saveConfigurationVue();
+
 		//GestionnaireZoom.ajouterZoom(null);
 	}
 	

@@ -1,5 +1,6 @@
 package com.faiveley.samng.vuegraphique.ihm.vues.vuegraphique;
 
+// This class is never used... -> Should be removed...
 public class TailleVue {
 	int x=-1;
 	int y=-1;
