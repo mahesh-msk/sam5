@@ -567,6 +567,9 @@ ICapturable{
 	 * 
 	 */
 	protected void updateSelectionMessage() {
+		
+		currentSelection = new MessageSelection();
+
 		// when a double click
 		int selIdx = this.table.getSelectionIndex();
 		Object[] elements = this.rows;

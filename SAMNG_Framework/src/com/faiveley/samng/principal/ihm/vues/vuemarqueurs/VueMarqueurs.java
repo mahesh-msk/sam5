@@ -357,6 +357,7 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 		this.markersTable.addMouseListener(new MouseListener() {
 			public void mouseDoubleClick(MouseEvent e) {
 				if(e.button == 1) {	//left button double click
+					updateComment();  // will update current selection...
 					((MessageSelection)currentSelection).setUserSentSelection(true);
 					fireSelectionChanged(currentSelection);
 					((MessageSelection)currentSelection).setUserSentSelection(false);
@@ -509,7 +510,10 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 		String seconde = com.faiveley.samng.principal.sm.calculs.Messages.getString("uniteSeconde.0");
 		String milliseconde = com.faiveley.samng.principal.sm.calculs.Messages.getString("uniteMilliSeconde.0");
 		int[] selIndices = markersTable.getSelectionIndices();
+		currentSelection = new MessageSelection();
+
 		if(selIndices == null || selIndices.length == 0) {
+			
 			((MessageSelection)currentSelection).setMessagesIds(null);
 			sashForm.setMaximizedControl(mainComposite);
 
