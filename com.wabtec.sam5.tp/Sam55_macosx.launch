@@ -28,8 +28,8 @@
     <stringAttribute key="product" value="SAMNG.product"/>
     <setAttribute key="selected_target_bundles">
         <setEntry value="com.ibm.icu@default:default"/>
-        <setEntry value="com.sun.jna.platform@default:default"/>
-        <setEntry value="com.sun.jna@default:default"/>
+        <setEntry value="com.sun.jna*5.8.0.v20210503-0343@default:default"/>
+        <setEntry value="com.sun.jna.platform*5.8.0.v20210406-1004@default:default"/>
         <setEntry value="javax.annotation@default:default"/>
         <setEntry value="javax.inject@default:default"/>
         <setEntry value="org.apache.batik.constants@default:default"/>
@@ -108,14 +108,6 @@
         <setEntry value="org.eclipse.core.expressions.nl_tr@default:false"/>
         <setEntry value="org.eclipse.core.expressions.nl_zh@default:false"/>
         <setEntry value="org.eclipse.core.expressions@default:default"/>
-        <setEntry value="org.eclipse.core.filesystem.macosx.nl_de@default:false"/>
-        <setEntry value="org.eclipse.core.filesystem.macosx.nl_es@default:false"/>
-        <setEntry value="org.eclipse.core.filesystem.macosx.nl_fr@default:false"/>
-        <setEntry value="org.eclipse.core.filesystem.macosx.nl_it@default:false"/>
-        <setEntry value="org.eclipse.core.filesystem.macosx.nl_nl@default:false"/>
-        <setEntry value="org.eclipse.core.filesystem.macosx.nl_pt@default:false"/>
-        <setEntry value="org.eclipse.core.filesystem.macosx.nl_tr@default:false"/>
-        <setEntry value="org.eclipse.core.filesystem.macosx.nl_zh@default:false"/>
         <setEntry value="org.eclipse.core.filesystem.nl_de@default:false"/>
         <setEntry value="org.eclipse.core.filesystem.nl_es@default:false"/>
         <setEntry value="org.eclipse.core.filesystem.nl_fr@default:false"/>
@@ -344,15 +336,6 @@
         <setEntry value="org.eclipse.e4.ui.workbench.nl_pt@default:false"/>
         <setEntry value="org.eclipse.e4.ui.workbench.nl_tr@default:false"/>
         <setEntry value="org.eclipse.e4.ui.workbench.nl_zh@default:false"/>
-        <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.nl_de@default:false"/>
-        <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.nl_es@default:false"/>
-        <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.nl_fr@default:false"/>
-        <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.nl_it@default:false"/>
-        <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.nl_nl@default:false"/>
-        <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.nl_pt@default:false"/>
-        <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.nl_tr@default:false"/>
-        <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.nl_zh@default:false"/>
-        <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.cocoa@default:false"/>
         <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.nl_de@default:false"/>
         <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.nl_es@default:false"/>
         <setEntry value="org.eclipse.e4.ui.workbench.renderers.swt.nl_fr@default:false"/>
@@ -527,7 +510,6 @@
         <setEntry value="org.eclipse.osgi.util.nl_zh@default:false"/>
         <setEntry value="org.eclipse.osgi.util@default:default"/>
         <setEntry value="org.eclipse.osgi@-1:true"/>
-        <setEntry value="org.eclipse.swt.cocoa.macosx.x86_64@default:false"/>
         <setEntry value="org.eclipse.swt.nl_de@default:false"/>
         <setEntry value="org.eclipse.swt.nl_es@default:false"/>
         <setEntry value="org.eclipse.swt.nl_fr@default:false"/>
@@ -555,15 +537,6 @@
         <setEntry value="org.eclipse.text.nl_tr@default:false"/>
         <setEntry value="org.eclipse.text.nl_zh@default:false"/>
         <setEntry value="org.eclipse.text@default:default"/>
-        <setEntry value="org.eclipse.ui.cocoa.nl_de@default:false"/>
-        <setEntry value="org.eclipse.ui.cocoa.nl_es@default:false"/>
-        <setEntry value="org.eclipse.ui.cocoa.nl_fr@default:false"/>
-        <setEntry value="org.eclipse.ui.cocoa.nl_it@default:false"/>
-        <setEntry value="org.eclipse.ui.cocoa.nl_nl@default:false"/>
-        <setEntry value="org.eclipse.ui.cocoa.nl_pt@default:false"/>
-        <setEntry value="org.eclipse.ui.cocoa.nl_tr@default:false"/>
-        <setEntry value="org.eclipse.ui.cocoa.nl_zh@default:false"/>
-        <setEntry value="org.eclipse.ui.cocoa@default:false"/>
         <setEntry value="org.eclipse.ui.forms.nl_de@default:false"/>
         <setEntry value="org.eclipse.ui.forms.nl_es@default:false"/>
         <setEntry value="org.eclipse.ui.forms.nl_fr@default:false"/>
@@ -617,6 +590,9 @@
         <setEntry value="VueMultimediaPlugin@default:default"/>
         <setEntry value="VueTabulairePlugin@default:default"/>
         <setEntry value="com.wabtec.sam5.jaxb@default:default"/>
+        <setEntry value="testaeff2@default:default"/>
+        <setEntry value="testaeffacer@default:default"/>
+        <setEntry value="teste4withE3starter@default:default"/>
     </setAttribute>
     <booleanAttribute key="show_selected_only" value="false"/>
     <stringAttribute key="templateConfig" value="${target_home}/configuration/config.ini"/>
