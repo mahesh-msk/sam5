@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	
+ 
+  
+  <xs:element name="liste-filtres-vuetabulaire">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="filtre-vuetabulaire"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+ 
+  
+  <xs:element name="filtre-vuetabulaire">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="liste-lignes-variable"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.filtre-vuetabulaire"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:attributeGroup name="attlist.filtre-vuetabulaire">
+    <xs:attribute name="nom" use="required"/>
+  </xs:attributeGroup>
+  
+
+  
+  <xs:element name="liste-lignes-variable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ligne-variable"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.liste-lignes-variable"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:attributeGroup name="attlist.liste-lignes-variable">
+    <xs:attribute name="actif" default="true"/>
+  </xs:attributeGroup>
+  
+  <xs:element name="ligne-variable">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.ligne-variable"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:attributeGroup name="attlist.ligne-variable">
+    <xs:attribute name="nom" use="required"/>
+    <xs:attribute name="couleur"/>
+    <xs:attribute name="operateur"/>
+    <xs:attribute name="valeur"/>
+  </xs:attributeGroup>
+  
+
+</xs:schema>

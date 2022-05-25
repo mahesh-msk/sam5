@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<enregistreur-def xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FICPARAM_TYP_ENGIN.xsd">
+	<selection_type_engin valeur="1"/>
+	<selection_engins>
+		<typeEngin nom="elec" libelle="Loco. Electrique Eurotunnnel" nomFichierXML="ConfigurationNAV_ELECTRIQUE.xml"/>		
+		<typeEngin nom="diesel" libelle="Loco. Diesel Eurotunnnel" nomFichierXML="ConfigurationNAV_DIESEL.xml"/>
+		<typeEngin nom="cl92" libelle="Loco. Class 92" nomFichierXML="ConfigurationCLASS92.xml"/>		
+		<typeEngin nom="1023" libelle="Autre engin (au standard 4MCE6 1023)" nomFichierXML="ConfigurationATESS.XML"/>		
+	</selection_engins>
+</enregistreur-def>

@@ -1,0 +1,3381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by PHILIPPE CHRISTIAN (FAIVELEY TRANSPORT TOURS SAS) -->
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by FAIVELEY TRANSPORT (FAIVELEY TRANSPORT) -->
+<enregistreur-def xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ALL_TOM.xsd">
+	<infos_fichier titre="CLASS92" versionXML="A" numplan="ZA56xxxxx"/>
+	<infos-parcours>
+		<information nom="Agent"/>
+	</infos-parcours>
+	<enregistreur modele="ATESS" projet="EUROTUNNEL" type="CLASS92" resolution-temps="1">
+		<liste-evenements>
+			<evenement nom="Introductioncassette" code="2">
+				<nom-utilisateur lang="DEF" libelle="Introduction K7"/>
+			</evenement>
+			<evenement nom="EnteteFichier" code="3" ruptureAcquisition="true" changementHeure="false">
+				<nom-utilisateur lang="DEF" libelle="Entête fichier"/>
+			</evenement>
+			<evenement nom="CabOnEnginEurotunnel" code="4" ruptureAcquisition="true">
+				<nom-utilisateur lang="DEF" libelle="Cabine en service"/>
+			</evenement>
+			<evenement nom="CabOffEnginEurotunnel" code="5" ruptureAcquisition="true">
+				<nom-utilisateur lang="DEF" libelle="Cabine hors service"/>
+			</evenement>
+			<evenement nom="PremiereMiseMouvement" code="6">
+				<nom-utilisateur lang="DEF" libelle="1ère mise en mouvement"/>
+			</evenement>
+			<evenement nom="MiseEnMouvement" code="7">
+				<nom-utilisateur lang="DEF" libelle="Mise en mouvement"/>
+			</evenement>
+			<evenement nom="Arret" code="8" razCompteurDistance="false">
+				<nom-utilisateur lang="DEF" libelle="Arrêt"/>
+			</evenement>
+			<evenement nom="RAZCompteurHoraire" code="9" razCompteurTemps="true">
+				<nom-utilisateur lang="DEF" libelle="RazCptTemps"/>
+			</evenement>
+			<evenement nom="RAZCompteurDistance" code="10" razCompteurDistance="true">
+				<nom-utilisateur lang="DEF" libelle="RazCptDistance"/>
+			</evenement>
+			<evenement nom="SeuilVitesse" code="11">
+				<nom-utilisateur lang="DEF" libelle="Seuil vitesse"/>
+			</evenement>
+			<evenement nom="ArretEnregistrementLP" code="12">
+				<nom-utilisateur lang="DEF" libelle="Arrêt enregistrement LP"/>
+			</evenement>
+			<evenement nom="EnregistrementLP" code="13" ruptureAcquisition="false">
+				<nom-utilisateur lang="DEF" libelle="Enregistrement LP"/>
+			</evenement>
+			<evenement nom="IntroductionNumeroTrain" code="14">
+				<nom-utilisateur lang="DEF" libelle="Intro. n° train"/>
+			</evenement>
+			<evenement nom="HeureAvantModification" code="15">
+				<nom-utilisateur lang="DEF" libelle="Heure avant Modification"/>
+			</evenement>
+			<evenement nom="HeureApresModification" code="16" changementHeure="true">
+				<nom-utilisateur lang="DEF" libelle="Heure après Modification"/>
+				<nom-utilisateur lang="FR" libelle="Heure après Modification"/>
+			</evenement>
+			<evenement nom="MessageTBL1" code="32">
+				<nom-utilisateur lang="DEF" libelle="Message TBL1"/>
+			</evenement>
+			<evenement nom="TauxVitesse" code="33">
+				<nom-utilisateur lang="DEF" libelle="Taux vitesse TBL"/>
+			</evenement>
+			<evenement nom="CommandeFU" code="34">
+				<nom-utilisateur lang="DEF" libelle="Commande de FU TBL"/>
+			</evenement>
+			<evenement nom="FranchissementCarre" code="35">
+				<nom-utilisateur lang="DEF" libelle="Carré TBL"/>
+			</evenement>
+			<evenement nom="ChainePilote" code="36">
+				<nom-utilisateur lang="DEF" libelle="Chaîne pilote TBL"/>
+			</evenement>
+			<evenement nom="FranchissementBalise" code="37">
+				<nom-utilisateur lang="DEF" libelle="Franchissement Balise"/>
+			</evenement>
+			<evenement nom="IndicationsSonores" code="38">
+				<nom-utilisateur lang="DEF" libelle="Indications sonores/état"/>
+			</evenement>
+			<evenement nom="VitesseDistancebut" code="39">
+				<nom-utilisateur lang="DEF" libelle="Vbut / Dbut"/>
+			</evenement>
+			<evenement nom="TestJournalier" code="40">
+				<nom-utilisateur lang="DEF" libelle="Test journalier"/>
+			</evenement>
+			<evenement nom="TauxVitesseATB" code="42">
+				<nom-utilisateur lang="DEF" libelle="Taux vitesse (ATB Ph4)"/>
+			</evenement>
+			<evenement nom="VitesseConsigneATB" code="43">
+				<nom-utilisateur lang="DEF" libelle="Taux vitesse (ATB Ph4)"/>
+			</evenement>
+			<evenement nom="IndicationsA3D" code="44">
+				<nom-utilisateur lang="DEF" libelle="Indications aff.(ATB)"/>
+			</evenement>
+			<evenement nom="IndicationsATB" code="45">
+				<nom-utilisateur lang="DEF" libelle="Indications d'état.(ATB)"/>
+			</evenement>
+			<evenement nom="IntroductionAgentDepot" code="48">
+				<nom-utilisateur lang="DEF" libelle="Intro. agent/dépot"/>
+			</evenement>
+			<evenement nom="IntrodutionLibelleMission" code="49">
+				<nom-utilisateur lang="DEF" libelle="Intro. libellé mission"/>
+			</evenement>
+			<evenement nom="ConfigLocaleMotriceTGV" code="51">
+				<nom-utilisateur lang="DEF" libelle="Config. TGVR"/>
+			</evenement>
+			<evenement nom="ConfigLocaleMotriceTMST" code="52">
+				<nom-utilisateur lang="DEF" libelle="Config. TMST"/>
+			</evenement>
+			<evenement nom="ConfigLocaleMotricePBKA" code="53">
+				<nom-utilisateur lang="DEF" libelle="Config. PBKA"/>
+			</evenement>
+			<evenement nom="ConfigLocaleMotriceFRET" code="54">
+				<nom-utilisateur libelle="Config. FRET" lang="DEF"/>
+			</evenement>
+			<evenement nom="RameMenanteMot2" code="55">
+				<nom-utilisateur lang="DEF" libelle="Rame menante motrice 1"/>
+			</evenement>
+			<evenement nom="RameMeneMot1" code="56">
+				<nom-utilisateur lang="DEF" libelle="Rame menée motrice 1"/>
+			</evenement>
+			<evenement nom="RameMeneMot2" code="57">
+				<nom-utilisateur lang="DEF" libelle="Rame menée motrice 2"/>
+			</evenement>
+			<evenement nom="DefautsDivers" code="58">
+				<nom-utilisateur lang="DEF" libelle="Défauts divers"/>
+			</evenement>
+			<evenement nom="ConfigSelectTension" code="59">
+				<nom-utilisateur lang="DEF" libelle="Config. sel. tension"/>
+			</evenement>
+			<evenement nom="ConfigLiaisonRadio" code="60">
+				<nom-utilisateur lang="DEF" libelle="Config. liaison radio"/>
+			</evenement>
+			<evenement nom="ConfigSelectTension2" code="61">
+				<nom-utilisateur lang="DEF" libelle="Config. sel. tension 2"/>
+			</evenement>
+			<evenement nom="SeuilVitesseAffiche" code="62">
+				<nom-utilisateur lang="DEF" libelle="Seuil vitesse affiché"/>
+			</evenement>
+			<evenement nom="IndicationsVitessen_p" code="68">
+				<nom-utilisateur lang="DEF" libelle="Indication de vitesse"/>
+			</evenement>
+			<evenement nom="TauxVitesseSeul" code="69">
+				<nom-utilisateur lang="DEF" libelle="Taux de vitesse seul"/>
+			</evenement>
+			<evenement nom="ChainePilote" code="70">
+				<nom-utilisateur lang="DEF" libelle="Chaîne pilote"/>
+			</evenement>
+			<evenement nom="ChangementReseau" code="71">
+				<nom-utilisateur lang="DEF" libelle="Changement de réseau"/>
+			</evenement>
+			<evenement nom="FranchissementCarre" code="72">
+				<nom-utilisateur lang="DEF" libelle="Franchissement d'un carré"/>
+			</evenement>
+			<evenement nom="ModeIndefiniEcranRouge" code="73">
+				<nom-utilisateur lang="DEF" libelle="Ecran rouge en mode indéfini"/>
+			</evenement>
+			<evenement nom="ParamTrain" code="88">
+				<nom-utilisateur lang="DEF" libelle="Paramètres train"/>
+			</evenement>
+			<evenement nom="Signalisationbalise" code="89">
+				<nom-utilisateur lang="DEF" libelle="Signalisation balise Indusi"/>
+			</evenement>
+			<evenement nom="ActionConduite" code="90">
+				<nom-utilisateur lang="DEF" libelle="Action de conduite"/>
+			</evenement>
+			<evenement nom="AffichageCabine" code="91">
+				<nom-utilisateur lang="DEF" libelle="Affichage cabine"/>
+			</evenement>
+			<evenement nom="InformationsPZB90" code="92">
+				<nom-utilisateur lang="DEF" libelle="Info. PZB"/>
+			</evenement>
+			<evenement nom="NiveauAffiche" code="98">
+				<nom-utilisateur lang="DEF" libelle="Niveau affiché"/>
+			</evenement>
+			<evenement nom="ModeAffiche" code="99">
+				<nom-utilisateur lang="DEF" libelle="Mode affiché"/>
+			</evenement>
+			<evenement nom="AcqNiveauModeNiveau" code="100">
+				<nom-utilisateur lang="DEF" libelle="Acquittement niveau de mode/niveau"/>
+			</evenement>
+			<evenement nom="AcqEOA" code="101">
+				<nom-utilisateur lang="DEF" libelle="Acquittement EOA - incompatibilité - intégrité train"/>
+			</evenement>
+			<evenement nom="AffichageCabineETCS" code="102">
+				<nom-utilisateur lang="DEF" libelle="Affichage cabine ETCS"/>
+			</evenement>
+			<evenement nom="DonneesTrain" code="103">
+				<nom-utilisateur lang="DEF" libelle="Données train"/>
+			</evenement>
+			<evenement nom="DonneesTrainFreinService" code="104">
+				<nom-utilisateur lang="DEF" libelle="Données train frein de service"/>
+			</evenement>
+			<evenement nom="DonneesTrainFreinUrgence" code="105">
+				<nom-utilisateur lang="DEF" libelle="Données train frein d'urgence"/>
+			</evenement>
+			<evenement nom="FranchissementFinAutorETCS" code="106">
+				<nom-utilisateur lang="DEF" libelle="Franchissement de fin d'autorisation ETCS"/>
+			</evenement>
+			<evenement nom="PositionCommutateurExploitation" code="107">
+				<nom-utilisateur lang="DEF" libelle="Position du commutateur d'exploitation"/>
+			</evenement>
+			<evenement nom="ModeConduite" code="112">
+				<nom-utilisateur lang="DEF" libelle="Mode conduite"/>
+			</evenement>
+			<evenement nom="Alerte" code="113">
+				<nom-utilisateur lang="DEF" libelle="Alerte"/>
+			</evenement>
+			<evenement nom="FinAlerte" code="114">
+				<nom-utilisateur lang="DEF" libelle="Fin alerte"/>
+			</evenement>
+			<evenement nom="AlertePassagerAcq." code="115">
+				<nom-utilisateur lang="DEF" libelle="Alerte passager acq."/>
+			</evenement>
+			<evenement nom="VACMA" code="116">
+				<nom-utilisateur lang="DEF" libelle="VACMA"/>
+			</evenement>
+			<evenement nom="Balises123" code="117">
+				<nom-utilisateur lang="DEF" libelle="Balises 123"/>
+			</evenement>
+			<evenement nom="Balises45" code="118">
+				<nom-utilisateur lang="DEF" libelle="Balises 45"/>
+			</evenement>
+			<evenement nom="BalisesN1" code="119">
+				<nom-utilisateur lang="DEF" libelle="Balises N1"/>
+			</evenement>
+			<evenement nom="BalisesN2" code="120">
+				<nom-utilisateur lang="DEF" libelle="Balises N2"/>
+			</evenement>
+			<evenement nom="EL1ACT_Carte1" code="128">
+				<nom-utilisateur lang="DEF" libelle="EL01 - Contrôle de vitesse Z CO VIT Isolé"/>
+			</evenement>
+			<evenement nom="EL1INACT_Carte1" code="129">
+				<nom-utilisateur lang="DEF" libelle="EL01 - Fin contrôle de vitesse Z CO VIT Isolé"/>
+			</evenement>
+			<evenement nom="EL2ACT_Carte1" code="130">
+				<nom-utilisateur lang="DEF" libelle="EL02 - BP d'acquittement AWS, BRS actif"/>
+			</evenement>
+			<evenement nom="EL2INACT_Carte1" code="131">
+				<nom-utilisateur lang="DEF" libelle="EL02 - Fin BP d'acquittement AWS, BRS actif"/>
+			</evenement>
+			<evenement nom="EL3ACT_Carte1" code="132">
+				<nom-utilisateur lang="DEF" libelle="EL03 - Action sur BP FC KVB - Action Pass Marker TVM"/>
+			</evenement>
+			<evenement nom="EL3INACT_Carte1" code="133">
+				<nom-utilisateur lang="DEF" libelle="EL03 - Fin action sur BP FC KVB - Action Pass Marker TVM"/>
+			</evenement>
+			<evenement nom="EL4ACT_Carte1" code="134">
+				<nom-utilisateur lang="DEF" libelle="EL04 - Chaine TVM Armée"/>
+			</evenement>
+			<evenement nom="EL4INACT_Carte1" code="135">
+				<nom-utilisateur lang="DEF" libelle="EL04 - Fin chaine TVM Armée"/>
+			</evenement>
+			<evenement nom="EL5ACT_Carte1" code="136">
+				<nom-utilisateur lang="DEF" libelle="EL05 - Isolement de la TVM, AMS-TPWS, KVB, RPS"/>
+			</evenement>
+			<evenement nom="EL5INACT_Carte1" code="137">
+				<nom-utilisateur lang="DEF" libelle="EL05 - Fin isolement de la TVM, AMS-TPWS, KVB, RPS"/>
+			</evenement>
+			<evenement nom="EL6ACT_Carte1" code="138">
+				<nom-utilisateur lang="DEF" libelle="EL06 - Sélection du contrôle de vitesse MA100"/>
+			</evenement>
+			<evenement nom="EL6INACT_Carte1" code="139">
+				<nom-utilisateur lang="DEF" libelle="EL06 - Fin sélection du contrôle de vitesse MA100"/>
+			</evenement>
+			<evenement nom="EL7ACT_Carte1" code="140">
+				<nom-utilisateur lang="DEF" libelle="EL07 - Sélection du contrôle de vitesse ME120"/>
+			</evenement>
+			<evenement nom="EL7INACT_Carte1" code="141">
+				<nom-utilisateur lang="DEF" libelle="EL07 - Fin sélection du contrôle de vitesse ME120"/>
+			</evenement>
+			<evenement nom="EL8ACT_Carte1" code="142">
+				<nom-utilisateur lang="DEF" libelle="EL08 -Sélection du contrôle de vitesse ME140"/>
+			</evenement>
+			<evenement nom="EL8INACT_Carte1" code="143">
+				<nom-utilisateur lang="DEF" libelle="EL08 - Fin sélection du contrôle de vitesse ME140"/>
+			</evenement>
+			<evenement nom="EL9ACT_Carte1" code="144">
+				<nom-utilisateur lang="DEF" libelle="EL09 - Sélection du contrôle de vitesse V140"/>
+			</evenement>
+			<evenement nom="EL9INACT_Carte1" code="145">
+				<nom-utilisateur lang="DEF" libelle="EL09 - Fin Sélection du contrôle de vitesse V140"/>
+			</evenement>
+			<evenement nom="EL10ACT_Carte1" code="146">
+				<nom-utilisateur lang="DEF" libelle="EL10 - BP de validation de la sélection du contrôle de vitesse actif cab 1"/>
+			</evenement>
+			<evenement nom="EL10INACT_Carte1" code="147">
+				<nom-utilisateur lang="DEF" libelle="EL10 - Fin BP de validation de la sélection du contrôle de vitesse actif cab 1"/>
+			</evenement>
+			<evenement nom="EL11ACT_Carte1" code="148">
+				<nom-utilisateur lang="DEF" libelle="EL11 -  BP de validation de la sélection du contrôle de vitesse actif cab 2"/>
+			</evenement>
+			<evenement nom="EL11INACT_Carte1" code="149">
+				<nom-utilisateur lang="DEF" libelle="EL11 -  Fin BP de validation de la sélection du contrôle de vitesse actif cab 2"/>
+			</evenement>
+			<evenement nom="EL12ACT_Carte1" code="150">
+				<nom-utilisateur lang="DEF" libelle="EL12 - VCB, DJ ouvert/fermé"/>
+			</evenement>
+			<evenement nom="EL12INACT_Carte1" code="151">
+				<nom-utilisateur lang="DEF" libelle="EL12 - Fin VCB, DJ ouvert/fermé"/>
+			</evenement>
+			<evenement nom="EL13ACT_Carte1" code="152">
+				<nom-utilisateur lang="DEF" libelle="EL13 - FU conducteur"/>
+			</evenement>
+			<evenement nom="EL13INACT_Carte1" code="153">
+				<nom-utilisateur lang="DEF" libelle="EL13 - Fin FU conducteur"/>
+			</evenement>
+			<evenement nom="EL14ACT_Carte1" code="154">
+				<nom-utilisateur lang="DEF" libelle="EL14 - CG &lt; 4.5 bars"/>
+			</evenement>
+			<evenement nom="EL14INACT_Carte1" code="155">
+				<nom-utilisateur lang="DEF" libelle="EL14 - Fin CG &lt; 4.5 bars"/>
+			</evenement>
+			<evenement nom="EL15ACT_Carte1" code="156">
+				<nom-utilisateur lang="DEF" libelle="EL15 - FU VACMA / DSD"/>
+			</evenement>
+			<evenement nom="EL15INACT_Carte1" code="157">
+				<nom-utilisateur lang="DEF" libelle="EL15 - Fin FU VACMA / DSD"/>
+			</evenement>
+			<evenement nom="EL16ACT_Carte1" code="158">
+				<nom-utilisateur lang="DEF" libelle="EL16 - VACMA / DSD isolé"/>
+			</evenement>
+			<evenement nom="EL16INACT_Carte1" code="159">
+				<nom-utilisateur lang="DEF" libelle="EL16 - Fin VACMA / DSD isolé"/>
+			</evenement>
+			<evenement nom="EL17ACT_Carte1" code="160">
+				<nom-utilisateur lang="DEF" libelle="EL17 - Sens de marche"/>
+			</evenement>
+			<evenement nom="EL17INACT_Carte1" code="161">
+				<nom-utilisateur lang="DEF" libelle="EL17 - Fin Sens de marche"/>
+			</evenement>
+			<evenement nom="EL18ACT_Carte1" code="162">
+				<nom-utilisateur lang="DEF" libelle="EL18 - Contacteur de traction ou interlock de traction"/>
+			</evenement>
+			<evenement nom="EL18INACT_Carte1" code="163">
+				<nom-utilisateur lang="DEF" libelle="EL18 - Fin contacteur de traction ou interlock de traction"/>
+			</evenement>
+			<evenement nom="EL19ACT_Carte1" code="164">
+				<nom-utilisateur lang="DEF" libelle="EL19 - Action sur BP MV"/>
+			</evenement>
+			<evenement nom="EL19INACT_Carte1" code="165">
+				<nom-utilisateur lang="DEF" libelle="EL19 - Fin action sur BP MV"/>
+			</evenement>
+			<evenement nom="EL20ACT_Carte1" code="166">
+				<nom-utilisateur lang="DEF" libelle="EL20 - FU RPS / AWS"/>
+			</evenement>
+			<evenement nom="EL20INACT_Carte1" code="167">
+				<nom-utilisateur lang="DEF" libelle="EL20 - Fin FU RPS / AWS"/>
+			</evenement>
+			<evenement nom="EL21ACT_Carte1" code="168">
+				<nom-utilisateur lang="DEF" libelle="EL21 - FU TVM / KVB"/>
+			</evenement>
+			<evenement nom="EL21INACT_Carte1" code="169">
+				<nom-utilisateur lang="DEF" libelle="EL21 - Fin FU TVM / KVB"/>
+			</evenement>
+			<evenement nom="EL22ACT_Carte1" code="170">
+				<nom-utilisateur lang="DEF" libelle="EL22 - Action sur BP panto"/>
+			</evenement>
+			<evenement nom="EL22INACT_Carte1" code="171">
+				<nom-utilisateur lang="DEF" libelle="EL22 - Fin action sur BP panto"/>
+			</evenement>
+			<evenement nom="EL23ACT_Carte1" code="172">
+				<nom-utilisateur lang="DEF" libelle="EL23 - Surcharge"/>
+			</evenement>
+			<evenement nom="EL23INACT_Carte1" code="173">
+				<nom-utilisateur lang="DEF" libelle="EL23 - Fin surcharge"/>
+			</evenement>
+			<evenement nom="EL24ACT_Carte1" code="174">
+				<nom-utilisateur lang="DEF" libelle="EL24 - Répétition signal ouvert (RPS)"/>
+			</evenement>
+			<evenement nom="EL24INACT_Carte1" code="175">
+				<nom-utilisateur lang="DEF" libelle="EL24 - Fin répétition signal ouvert (RPS)"/>
+			</evenement>
+			<evenement nom="EL25ACT_Carte1" code="176">
+				<nom-utilisateur lang="DEF" libelle="EL25 - Répétition signal fermé (RPS)"/>
+			</evenement>
+			<evenement nom="EL25INACT_Carte1" code="177">
+				<nom-utilisateur lang="DEF" libelle="EL25 - Fin répétition signal fermé (RPS)"/>
+			</evenement>
+			<evenement nom="EL26ACT_Carte1" code="178">
+				<nom-utilisateur lang="DEF" libelle="EL26 - Action BP VAL (KVB)"/>
+			</evenement>
+			<evenement nom="EL26INACT_Carte1" code="179">
+				<nom-utilisateur lang="DEF" libelle="EL26 - Fin action BP VAL (KVB)"/>
+			</evenement>
+			<evenement nom="EL27ACT_Carte1" code="180">
+				<nom-utilisateur lang="DEF" libelle="EL27 - Franchissement carré (KVB, TVM)"/>
+			</evenement>
+			<evenement nom="EL27INACT_Carte1" code="181">
+				<nom-utilisateur lang="DEF" libelle="EL27 - Fin franchissement carré (KVB, TVM)"/>
+			</evenement>
+			<evenement nom="EL28ACT_Carte1" code="182">
+				<nom-utilisateur lang="DEF" libelle="EL28 - Avertissement sonore"/>
+			</evenement>
+			<evenement nom="EL28INACT_Carte1" code="183">
+				<nom-utilisateur lang="DEF" libelle="EL28 - fin avertissement sonore"/>
+			</evenement>
+			<evenement nom="EL29ACT_Carte1" code="184">
+				<nom-utilisateur lang="DEF" libelle="EL29 - Signal alerte lumineux"/>
+			</evenement>
+			<evenement nom="EL29INACT_Carte1" code="185">
+				<nom-utilisateur lang="DEF" libelle="EL29 - Fin signal alerte lumineux"/>
+			</evenement>
+			<evenement nom="EL30ACT_Carte1" code="186">
+				<nom-utilisateur lang="DEF" libelle="EL30 - Acquittement RPS"/>
+			</evenement>
+			<evenement nom="EL30INACT_Carte1" code="187">
+				<nom-utilisateur lang="DEF" libelle="EL30 - Fin acquittement RPS"/>
+			</evenement>
+			<evenement nom="EL31ACT_Carte1" code="188">
+				<nom-utilisateur lang="DEF" libelle="EL31 - Absence de tension"/>
+			</evenement>
+			<evenement nom="EL31INACT_Carte1" code="189">
+				<nom-utilisateur lang="DEF" libelle="EL31 - Fin absence de tension"/>
+			</evenement>
+			<evenement nom="EL32ACT_Carte1" code="190">
+				<nom-utilisateur lang="DEF" libelle="EL32 - Signal d'alerte radio"/>
+			</evenement>
+			<evenement nom="EL32INACT_Carte1" code="191">
+				<nom-utilisateur lang="DEF" libelle="EL32 - Fin signal d'alerte radio"/>
+			</evenement>
+			<evenement nom="3F00_Cfg1_ICE3" code="16128">
+				<nom-utilisateur lang="DEF" libelle="Cfg1 ICE3 - Velaro"/>
+			</evenement>
+			<evenement nom="3F01_Cfg2_ICE3" code="16129">
+				<nom-utilisateur lang="DEF" libelle="Cfg2 ICE3 - Velaro"/>
+			</evenement>
+			<evenement nom="3F02_Cfg_loc_BR185" code="16130">
+				<nom-utilisateur lang="DEF" libelle="Config. locale motrice BR185"/>
+			</evenement>
+			<evenement nom="3F03_Cfg_train_ETR500" code="16131">
+				<nom-utilisateur lang="DEF" libelle="Config. train ETR500"/>
+			</evenement>
+			<evenement nom="3F04_Cfg_loc_4000" code="16132">
+				<nom-utilisateur lang="DEF" libelle="Config. locale motrice 4000"/>
+			</evenement>
+			<evenement nom="3F05_Cfg_NAT" code="16133">
+				<nom-utilisateur lang="DEF" libelle="Config. NAT"/>
+			</evenement>
+			<evenement nom="3F06_Cfg_HLE18" code="16134">
+				<nom-utilisateur lang="DEF" libelle="Config. HLE18"/>
+			</evenement>
+			<evenement nom="7A4A Res_7A4A" code="31306">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A4B Res_7A4B" code="31307">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A72 Res_7A72" code="31346">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A73 Res_7A73" code="31347">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A74 Res_7A74" code="31348">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A75 Res_7A75" code="31349">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A76 Res_7A76" code="31350">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A77 Res_7A77" code="31351">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A78 Res_7A78" code="31352">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A79 Res_7A79" code="31353">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A7A Res_7A7A" code="31354">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A7B Res_7A7B" code="31355">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A88 Res_7A88" code="31368">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A89 Res_7A89" code="31369">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A8A Res_7A8A" code="31370">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A8B Res_7A8B" code="31371">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A8C Res_7A8C" code="31372">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A8D Res_7A8D" code="31373">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A8E Res_7A8E" code="31374">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7A8F Res_7A8F" code="31375">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7AAC Res_7AAC" code="31404">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7AAD Res_7AAD" code="31405">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7AAE Res_7AAE" code="31406">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7AAF Res_7AAF" code="31407">
+				<nom-utilisateur lang="DEF" libelle="Réserve (4 MCE6 1023)"/>
+			</evenement>
+			<evenement nom="7AC2 Res_7AC2" code="31426">
+				<nom-utilisateur lang="DEF" libelle="Réserve MEMOR"/>
+			</evenement>
+			<evenement nom="7AC3 Res_7AC3" code="31427">
+				<nom-utilisateur lang="DEF" libelle="Réserve MEMOR"/>
+			</evenement>
+		</liste-evenements>
+		<reperes date="Heure" temps="Temps" vitesse="Vitesse" dateAvantChangement="Heure" tempsAvantChangement="Temps" distance="Distance"/>
+		<liste-variables>
+			<variable-discrete nom="Heure" code="3" type="DateHeureBCD">
+				<nom-utilisateur lang="DEF" libelle="Heure"/>
+			</variable-discrete>
+			<variable-discrete nom="Index" code="5" type="uint8">
+				<nom-utilisateur lang="DEF" libelle="Index"/>
+			</variable-discrete>
+			<variable-discrete nom="Agent" code="7" type="String" taille="10">
+				<nom-utilisateur lang="DEF" libelle="Agent"/>
+			</variable-discrete>
+			<variable-discrete nom="Depot" code="8" type="String" taille="4">
+				<nom-utilisateur lang="DEF" libelle="Dépot"/>
+			</variable-discrete>
+			<variable-discrete nom="Mission" code="9" type="String" taille="12">
+				<nom-utilisateur lang="DEF" libelle="Mission"/>
+			</variable-discrete>
+			<variable-discrete nom="NumTrain" code="10" type="String" taille="8">
+				<nom-utilisateur lang="DEF" libelle="Numéro de train"/>
+			</variable-discrete>
+			<variable-discrete nom="CP" code="29" type="String" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Chaîne Pilote"/>
+			</variable-discrete>
+			<variable-discrete nom="TR" code="30" type="uint8">
+				<nom-utilisateur lang="DEF" libelle="Type de réseau"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="0" label="Réserve"/>
+					<table-labels valeur="1" label="Tunnel sous la manche"/>
+					<table-labels valeur="2" label="CTRL1"/>
+					<table-labels valeur="3" label="CTRL2"/>
+					<table-labels valeur="4" label="Réserve"/>
+					<table-labels valeur="5" label="Réserve"/>
+					<table-labels valeur="6" label="LN5, LN6"/>
+					<table-labels valeur="7" label="LN3, LN4 Sud, LGV belge, Interconnexion"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-discrete nom="Mess" code="31" type="String" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Message TBL"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="V" label="V: Signal Vert croco"/>
+					<table-labels valeur="v" label="v :Signal vert balise"/>
+					<table-labels valeur="J" label="J: Signal restrictif croco"/>
+					<table-labels valeur="j" label="j: Signal Balise double jaune"/>
+					<table-labels valeur="R" label="R : Signal Balise Jaune Vert Horizontal"/>
+					<table-labels valeur="r" label="Signal Balise Jaune Vert Vertical"/>
+					<table-labels valeur="S" label="Signal d'arrêt non permissif"/>
+					<table-labels valeur="P" label="Petit mouvement en mode TBL1"/>
+					<table-labels valeur="G" label="Grand mouvement en mode TBL1"/>
+					<table-labels valeur="C" label="Vigilance correcte"/>
+					<table-labels valeur="T" label="Vigilance Tardive"/>
+					<table-labels valeur="H" label="MHST (Mise hors service temporaire : BP FC)"/>
+					<table-labels valeur="h" label="MHSTR (Mise hors service temporaire pour refoulement)"/>
+					<table-labels valeur="F" label="Remise en Service"/>
+					<table-labels valeur="B" label='Rouge + Blanc (Grand signal en position "Manoeuvre", TBL2)'/>
+					<table-labels valeur="s" label="Signal d'arrêt permissif"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-discrete nom="NB" code="39" type="uint24">
+				<nom-utilisateur lang="DEF" libelle="Numéro Balise"/>
+			</variable-discrete>
+			<variable-discrete nom="TJ" code="40" type="String" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Test Journalier"/>
+			</variable-discrete>
+			<variable-discrete nom="FU" code="41" type="String" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Freinage Urgence"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="L" label="Dépassement de vitesse"/>
+					<table-labels valeur="F" label="Dépassement d'un signal fermé"/>
+					<table-labels valeur="R" label="Anti recul"/>
+					<table-labels valeur="A" label="Causes diverses"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-discrete nom="S" code="42" type="String" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Indication Sonore"/>
+			</variable-discrete>
+			<variable-discrete nom="TA4" code="43" type="String" taille="1">
+				<nom-utilisateur lang="DEF" libelle="TauxVitesseATBPh4"/>
+			</variable-discrete>
+			<variable-discrete nom="IE" code="44" type="String" taille="1">
+				<nom-utilisateur lang="DEF" libelle="IndicationEtatATB"/>
+			</variable-discrete>
+			<variable-discrete nom="A3D" code="46" type="String" taille="1">
+				<nom-utilisateur lang="DEF" libelle="IndicationAfficheur3Digits"/>
+			</variable-discrete>
+			<variable-discrete nom="Niv" code="64" type="uint8">
+				<nom-utilisateur lang="DEF" libelle="Niveau affiché"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="0" label="Aucun niveau affiché"/>
+					<table-labels valeur="1" label="Niveau 0"/>
+					<table-labels valeur="2" label="STM"/>
+					<table-labels valeur="4" label="Niveau 1"/>
+					<table-labels valeur="8" label="Niveau 2"/>
+					<table-labels valeur="16" label="Niveau 3"/>
+					<table-labels valeur="32" label="Réserve"/>
+					<table-labels valeur="64" label="Réserve"/>
+					<table-labels valeur="128" label="Réserve"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-discrete nom="STM" code="65" type="uint8">
+				<nom-utilisateur lang="DEF" libelle="Type STM"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="0" label="ASFA"/>
+					<table-labels valeur="1" label="ATB"/>
+					<table-labels valeur="2" label="ASFA AVE"/>
+					<table-labels valeur="3" label="LZB E ligne classique"/>
+					<table-labels valeur="4" label="/"/>
+					<table-labels valeur="5" label="TBL1"/>
+					<table-labels valeur="6" label="PZB (D/A)"/>
+					<table-labels valeur="7" label="TBL 2/3"/>
+					<table-labels valeur="8" label="KVB"/>
+					<table-labels valeur="9" label="LZB (D/A)"/>
+					<table-labels valeur="10" label="LZB E ligne gde vitesse"/>
+					<table-labels valeur="11" label="SCMT"/>
+					<table-labels valeur="12" label="MEMOR II+"/>
+					<table-labels valeur="13" label="/"/>
+					<table-labels valeur="14" label="TVM"/>
+					<table-labels valeur="15" label="BACC"/>
+					<table-labels valeur="16" label="RSDD"/>
+					<table-labels valeur="17" label="EVM"/>
+					<table-labels valeur="18" label="Crocodile"/>
+					<table-labels valeur="19" label="EBICAB 900 TBS"/>
+					<table-labels valeur="20" label="TPWS/AWS"/>
+					<table-labels valeur="21" label="/"/>
+					<table-labels valeur="22" label="ATC-2"/>
+					<table-labels valeur="23" label="EBICAB 900"/>
+					<table-labels valeur="24" label="EBICAB 900 (PL)"/>
+					<table-labels valeur="25" label="KNR ATS"/>
+					<table-labels valeur="26" label="SHP"/>
+					<table-labels valeur="27" label="/"/>
+					<table-labels valeur="28" label="/"/>
+					<table-labels valeur="29" label="/"/>
+					<table-labels valeur="30" label="ZUB 123 (DK)"/>
+					<table-labels valeur="31" label="ZUB 121 (CH)"/>
+					<table-labels valeur="32" label="RPS"/>
+					<table-labels valeur="33" label="LS"/>
+					<table-labels valeur="34" label="EBICAB 700 (P)"/>
+					<table-labels valeur="35" label="INDUSI I 60"/>
+					<table-labels valeur="36" label="TBL"/>
+					<table-labels valeur="37" label="/"/>
+					<table-labels valeur="38" label="ALSN"/>
+					<table-labels valeur="39" label="EBICAB"/>
+					<table-labels valeur="40" label="/"/>
+					<table-labels valeur="41" label="/"/>
+					<table-labels valeur="255" label="Réserve"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-discrete nom="Anm" code="68" type="uint8">
+				<nom-utilisateur lang="DEF" libelle="Acquittement niveau mode"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="0" label="Acquittement mode OS"/>
+					<table-labels valeur="1" label="Acquittement mode FS"/>
+					<table-labels valeur="2" label="Acquittement mode SH"/>
+					<table-labels valeur="3" label="Acquittement mode TR"/>
+					<table-labels valeur="4" label="Acquittement mode SR"/>
+					<table-labels valeur="5" label="Acquittement mode UN"/>
+					<table-labels valeur="6" label="Acquittement niveau 0"/>
+					<table-labels valeur="7" label="Acquittement niveau 1"/>
+					<table-labels valeur="8" label="Acquittement niveau 2"/>
+					<table-labels valeur="9" label="Acquittement niveau 3"/>
+					<table-labels valeur="10" label="Acquittement niveau STM"/>
+					<table-labels valeur="11" label="Réserve"/>
+					<table-labels valeur="13" label="Acquittement mode RV"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-discrete nom="Acd" code="69" type="uint8">
+				<nom-utilisateur lang="DEF" libelle="Appuis divers"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="14" label="Appui Override EOA"/>
+					<table-labels valeur="15" label="Appui Override incompatibilité infrastructure"/>
+					<table-labels valeur="50" label="Appui Override intégrité du train"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-discrete nom="Ca" code="79" type="uint8">
+				<nom-utilisateur lang="DEF" libelle="Coefficient d'ahérence"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="0" label="70%"/>
+					<table-labels valeur="1" label="100%"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-discrete nom="NgammaS" code="80" type="uint8">
+				<nom-utilisateur lang="DEF" libelle="Nombre de plage de gamma de service"/>
+			</variable-discrete>
+			<variable-discrete nom="NgammaU" code="96" type="uint8">
+				<nom-utilisateur lang="DEF" libelle="Nombre de plage de gamma urgence"/>
+			</variable-discrete>
+			<variable-discrete nom="DD" code="1000" type="uint8">
+				<nom-utilisateur lang="DEF" libelle="Défauts divers"/>
+			</variable-discrete>
+			<variable-discrete nom="EL1" code="8001" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL1 : Contrôle de vitesse Z CO VIT Isolé"/>
+			</variable-discrete>
+			<variable-discrete nom="EL2" code="8002" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL2 : BP d'acquittement AWS, BRS actif"/>
+			</variable-discrete>
+			<variable-discrete nom="EL3" code="8003" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL3 : Action sur BP FC KVB - Action Pass Marker TVM"/>
+			</variable-discrete>
+			<variable-discrete nom="EL4" code="8004" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL4 : Chaine TVM Armée"/>
+			</variable-discrete>
+			<variable-discrete nom="EL5" code="8005" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL5 : Isolement de la TVM, AMS-TPWS, KVB, RPS"/>
+			</variable-discrete>
+			<variable-discrete nom="EL6" code="8006" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL6 : Sélection du contrôle de vitesse MA100"/>
+			</variable-discrete>
+			<variable-discrete nom="EL7" code="8007" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL7 : Sélection du contrôle de vitesse ME120"/>
+			</variable-discrete>
+			<variable-discrete nom="EL8" code="8008" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL8 : Sélection du contrôle de vitesse ME140"/>
+			</variable-discrete>
+			<variable-discrete nom="EL9" code="8009" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL9 : Sélection du contrôle de vitesse V140"/>
+			</variable-discrete>
+			<variable-discrete nom="EL10" code="8010" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL10 : BP de validation de la sélection du contrôle de vitesse actif cab 1"/>
+			</variable-discrete>
+			<variable-discrete nom="EL11" code="8011" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL11 : BP de validation de la sélection du contrôle de vitesse actif cab 2"/>
+			</variable-discrete>
+			<variable-discrete nom="EL12" code="8012" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL12 : VCB, DJ ouvert/fermé"/>
+			</variable-discrete>
+			<variable-discrete nom="EL13" code="8013" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL13 : FU conducteur"/>
+			</variable-discrete>
+			<variable-discrete nom="EL14" code="8014" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL14 : CG &lt; 4.5 bars"/>
+			</variable-discrete>
+			<variable-discrete nom="EL15" code="8015" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL15 : FU VACMA / DSD"/>
+			</variable-discrete>
+			<variable-discrete nom="EL16" code="8016" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL16 : VACMA / DSD isolé"/>
+			</variable-discrete>
+			<variable-discrete nom="EL17" code="8017" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL17 : Sens de marche "/>
+			</variable-discrete>
+			<variable-discrete nom="EL18" code="8018" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL18 : Contacteur de traction ou interlock de traction"/>
+			</variable-discrete>
+			<variable-discrete nom="EL19" code="8019" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL19 : Action sur BP MV"/>
+			</variable-discrete>
+			<variable-discrete nom="EL20" code="8020" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL20 : FU RPS / AWS"/>
+			</variable-discrete>
+			<variable-discrete nom="EL21" code="8021" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL21 : FU TVM / KVB"/>
+			</variable-discrete>
+			<variable-discrete nom="EL22" code="8022" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL22 : Action sur BP panto"/>
+			</variable-discrete>
+			<variable-discrete nom="EL23" code="8023" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL23 : Surcharge"/>
+			</variable-discrete>
+			<variable-discrete nom="EL24" code="8024" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL24 : Répétition signal ouvert (RPS)"/>
+			</variable-discrete>
+			<variable-discrete nom="EL25" code="8025" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL25 : Répétition signal fermé (RPS)"/>
+			</variable-discrete>
+			<variable-discrete nom="EL26" code="8026" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL26 : Action BP VAL (KVB)"/>
+			</variable-discrete>
+			<variable-discrete nom="EL27" code="8027" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL27 : Franchissement carré (KVB, TVM)"/>
+			</variable-discrete>
+			<variable-discrete nom="EL28" code="8028" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL28 :Avertissement sonore"/>
+			</variable-discrete>
+			<variable-discrete nom="EL29" code="8029" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL29 : Signal alerte lumineux"/>
+			</variable-discrete>
+			<variable-discrete nom="EL30" code="8030" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL30 : Acquittement RPS"/>
+			</variable-discrete>
+			<variable-discrete nom="EL31" code="8031" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL31 : Absence de tension"/>
+			</variable-discrete>
+			<variable-discrete nom="EL32" code="8032" type="boolean1">
+				<nom-utilisateur lang="DEF" libelle="EL32 : Signal d'alerte radio"/>
+			</variable-discrete>
+			<variable-analogique nom="Distance" code="1" type="uint8" coef-directeur="0.01" offset="0" unite="km">
+				<nom-utilisateur lang="DEF" libelle="Distance"/>
+			</variable-analogique>
+			<variable-analogique nom="Vitesse" code="2" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse"/>
+			</variable-analogique>
+			<variable-analogique nom="Temps" code="4" type="uint16" coef-directeur="2" offset="0" unite="s">
+				<nom-utilisateur lang="DEF" libelle="Temps"/>
+			</variable-analogique>
+			<variable-analogique nom="Vaff" code="17" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse affichée"/>
+			</variable-analogique>
+			<variable-analogique nom="VCI" code="27" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse contrôlée initiale"/>
+			</variable-analogique>
+			<variable-analogique nom="VCF" code="28" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse contrôlée finale"/>
+			</variable-analogique>
+			<variable-analogique nom="Vmaa" code="33" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse Max Autorisée"/>
+			</variable-analogique>
+			<variable-analogique nom="Vbutt" code="34" type="uint8" coef-directeur="2" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse But Dérogatoire"/>
+			</variable-analogique>
+			<variable-analogique nom="Dbutt" code="37" type="uint16" coef-directeur="10" offset="0" unite="m">
+				<nom-utilisateur lang="DEF" libelle="Distance But Transmise"/>
+			</variable-analogique>
+			<variable-analogique nom="Dbuta" code="38" type="uint8" coef-directeur="50" offset="0" unite="m">
+				<nom-utilisateur lang="DEF" libelle="Distance But affichée"/>
+			</variable-analogique>
+			<variable-analogique nom="VS" code="45" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="VitesseConsigneATB"/>
+			</variable-analogique>
+			<variable-analogique nom="Va" code="70" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse autorisée"/>
+			</variable-analogique>
+			<variable-analogique nom="Vbua" code="72" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse but"/>
+			</variable-analogique>
+			<variable-analogique nom="Vla" code="73" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse libération"/>
+			</variable-analogique>
+			<variable-analogique nom="Vmt" code="74" type="uint8" coef-directeur="5.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse max. train"/>
+			</variable-analogique>
+			<variable-analogique nom="Lt" code="76" type="uint16" coef-directeur="1.0" offset="0" unite="m">
+				<nom-utilisateur lang="DEF" libelle="Longueur train"/>
+			</variable-analogique>
+			<variable-analogique nom="Tct" code="77" type="uint16" coef-directeur="0.01" offset="0" unite="s">
+				<nom-utilisateur lang="DEF" libelle="Temps de coupure traction"/>
+			</variable-analogique>
+			<variable-analogique nom="Ce" code="78" type="uint8" coef-directeur="0.5" offset="0" unite="t">
+				<nom-utilisateur lang="DEF" libelle="Charge à l'essieu"/>
+			</variable-analogique>
+			<variable-analogique nom="Trfs" code="95" type="uint16" coef-directeur="0.01" offset="0" unite="s">
+				<nom-utilisateur lang="DEF" libelle="Temps de retard au freinage de service"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaS1" code="81" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°1"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaS2" code="83" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°2"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaS3" code="85" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°3"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaS4" code="87" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°4"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaS5" code="89" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°5"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaS6" code="91" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°6"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaS7" code="93" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°7"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaS1" code="82" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°1"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaS2" code="84" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°2"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaS3" code="86" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°3"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaS4" code="88" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°4"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaS5" code="90" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°5"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaS6" code="92" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°6"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaS7" code="94" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°7"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaU1" code="97" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°1"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaU2" code="99" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°2"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaU3" code="101" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°3"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaU4" code="103" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°4"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaU5" code="105" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°5"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaU6" code="107" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°6"/>
+			</variable-analogique>
+			<variable-analogique nom="VgammaU7" code="109" type="uint16" coef-directeur="1.0" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Vitesse au gamma de service n°7"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaU1" code="98" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°1"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaU2" code="100" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°2"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaU3" code="102" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°3"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaU4" code="104" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°4"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaU5" code="106" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°5"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaU6" code="108" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°6"/>
+			</variable-analogique>
+			<variable-analogique nom="GammaU7" code="110" type="uint8" coef-directeur="0.01" offset="0" unite="m/s²">
+				<nom-utilisateur lang="DEF" libelle="Gamma de service n°7"/>
+			</variable-analogique>
+			<variable-analogique nom="Trfu" code="111" type="uint16" coef-directeur="0.01" offset="0" unite="s">
+				<nom-utilisateur lang="DEF" libelle="Temps de retard au freinage d'urgence"/>
+			</variable-analogique>
+			<variable-complexe nom="Engin" code="6" taille="3">
+				<nom-utilisateur lang="DEF" libelle="Engin"/>
+				<sous-variable>
+					<variable-discrete nom="Engin.CodeEngin" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="CodeEngin"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="Véhicule de service"/>
+							<table-labels valeur="1" label="BB"/>
+							<table-labels valeur="2" label="CC"/>
+							<table-labels valeur="3" label="TGV"/>
+							<table-labels valeur="4" label="Z"/>
+							<table-labels valeur="5" label="Bi-mode"/>
+							<table-labels valeur="6" label="BX"/>
+							<table-labels valeur="7" label="X"/>
+							<table-labels valeur="8" label="T"/>
+							<table-labels valeur="9" label="Y"/>
+							<table-labels valeur="10" label="U"/>
+							<table-labels valeur="11" label="XR"/>
+							<table-labels valeur="12" label="ZR"/>
+							<table-labels valeur="13" label="Engin étranger (ETR, ...)"/>
+							<table-labels valeur="14" label="Reservé"/>
+							<table-labels valeur="15" label="Sans N° d'engin SNCF"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Engin.Numero" type="uintXbits" taille="20">
+						<nom-utilisateur lang="DEF" libelle="Numéro"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CLM1" code="11" taille="3">
+				<nom-utilisateur lang="DEF" libelle="Config. locale Motrice 1"/>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Ouverture DJ monophasé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Descente panto monophasé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Coupure traction BM1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage électrique BM1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bits456" type="uintXbits" taille="3">
+						<nom-utilisateur lang="DEF" libelle="Dépression CG BM1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit8" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Ouverture DJ continu"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit9" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Descente panto continu"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit10" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Coupure traction BM2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit11" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage électrique BM2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bits121314" type="uintXbits" taille="3">
+						<nom-utilisateur lang="DEF" libelle="Dépression CG BM2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit15" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit16" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Avarie tripode"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit17" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Signalement incendie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit18" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Instabilité bogie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit19" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Signalement frein serré"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit20" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="VI"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit21" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit22" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM1.bit23" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CLM2" code="12" taille="3">
+				<nom-utilisateur lang="DEF" libelle="Config. locale Motrice 2"/>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet1bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet1bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet1bits45" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="Valeur Pression CG BM3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet1bits23" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="Valeur Pression CG BM2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet1bits01" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="Valeur Pression CG BM1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet2bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet2bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet2bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet2bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet2bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet2bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Réception alerte radio"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet2bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Réception alarme VACMA par la radio"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet2bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Acquittement signalisation alarme voyageur par conducteur"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet3bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet3bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet3bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Etat du disjoncteur local"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="1" label="fermé"/>
+							<table-labels valeur="0" label="ouvert"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet3bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commande fermeture du disjoncteur par le conducteur (S-DJ-01)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet3bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Etat de l'effort de traction au niveau de la motrice locale"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet3bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Absence de tension ligne au niveau de la motrice locale"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet3bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Etat de la commande du pantographe local"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM2.Octet3bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Etat de la marche arrière de l amotrice locale"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CLM3" code="13" taille="3">
+				<nom-utilisateur lang="DEF" libelle="Config. locale Motrice 3"/>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet1bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet1bits456" type="uintXbits" taille="3">
+						<nom-utilisateur lang="DEF" libelle="Dépression CG BM1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet1bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage électrique BM1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet1bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Coupure traction BM1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet1bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Descente panto monophasé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet1bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Ouverture DJ monophasé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet2bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet2bits654" type="uintXbits" taille="3">
+						<nom-utilisateur lang="DEF" libelle="Dépression CG BM2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet2bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage électrique BM2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet2bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Coupure traction BM2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet2bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Descente panto continu"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet2bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Ouverture DJ continu"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet3bit567" type="uintXbits" taille="3">
+						<nom-utilisateur lang="DEF" libelle="Position commutateur de bogies isolés"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="7" label="0"/>
+							<table-labels valeur="6" label="1"/>
+							<table-labels valeur="5" label="2"/>
+							<table-labels valeur="4" label="3"/>
+							<table-labels valeur="3" label="4"/>
+							<table-labels valeur="2" label="5"/>
+							<table-labels valeur="1" label="6"/>
+							<table-labels valeur="0" label="7"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet3bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="VI"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet3bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Signalement frein serré"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet3bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Instabilité bogie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet3bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Signalement incendie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM3.Octet3bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Avarie tripode"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CLM4" code="14" taille="3">
+				<nom-utilisateur lang="DEF" libelle="Config. locale Motrice 4"/>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet1bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet1bit456" type="uintXbits" taille="3">
+						<nom-utilisateur lang="DEF" libelle="Dépression CG BM1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet1bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage électrique BM1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet1bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Coupure traction BM1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet1bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Descente panto monophasé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet1bit0" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Ouverture DJ monophasé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet2bit7" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Absence tension ligne"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet2bit456" type="uintXbits" taille="3">
+						<nom-utilisateur lang="DEF" libelle="Dépression CG BM2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet2bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage électrique BM2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet2bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Coupure traction BM2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet2bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Descente panto continu"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet2bit0" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Ouverture DJ continu"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet3bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet3bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet3bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet3bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="VI"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet3bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Signalement frein serré"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet3bit2" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet3bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="signalement incendie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM4.Octet3bit0" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CT1_ICE3" code="15" taille="3">
+				<nom-utilisateur lang="DEF" libelle="Config. Train 1 ICE3"/>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3..bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Sélecteur de puissance en position normal"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Sélecteur en réducteur de puissance 1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Sélecteur en réducteur de puissance 2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit8" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un essieu bloqué"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit9" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="instabilité bogie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit10" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Système AFB actif"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit11" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Inhibition SAFI"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bits12" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit13" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle frein non desserré"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit14" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit15" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit16" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur SB-ventil en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit17" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur SBS en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit18" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur BGS en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit19" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur FNB en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit20" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur FUS en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit21" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur Not-aus-Schleife en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit22" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur LZB en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT1_ICE3.bit23" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur PZB en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CT2_ICE3" code="16" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Config. Train 2 ICE3"/>
+				<sous-variable>
+					<variable-discrete nom="CT2_ICE3..bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Absence tension ligne sur train"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT2_ICE3.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un pantographe levé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT2_ICE3.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un disjoncteur fermé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT2_ICE3.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage actif sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT2_ICE3.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Toutes portes fermées"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT2_ICE3.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Mise en action du FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT2_ICE3.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT2_ICE3.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CT_ETR500" code="18" taille="3">
+				<nom-utilisateur lang="DEF" libelle="Config. Train ETR500"/>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500..bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Sélecteur de puissance en position normal"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Sélecteur en réducteur de puissance 1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Sélecteur en réducteur de puissance 2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit8" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un essieu bloqué"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit9" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="instabilité bogie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit10" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Système AFB actif"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit11" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Inhibition SAFI"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bits12" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit13" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle frein non desserré"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit14" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit15" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit16" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur SB-ventil en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit17" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur SBS en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit18" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur BGS en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit19" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur FNB en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit20" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur FUS en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit21" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur Not-aus-Schleife en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit22" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur LZB en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CT_ETR500.bit23" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Commutateur PZB en position isolé"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CLM_BR185" code="19" taille="2">
+				<nom-utilisateur lang="DEF" libelle="Config. locale BR185"/>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185..bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Absence tension ligne sur train"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un pantographe levé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un disjoncteur fermé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage actif sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Toutes portes fermées"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Mise en action du FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit8" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un essieu bloqué"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit9" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="instabilité bogie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit10" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Système AFB actif"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit11" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Inhibition SAFI"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bits12" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit13" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle frein non desserré"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit14" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_BR185.bit15" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CLM_4000" code="20" taille="2">
+				<nom-utilisateur lang="DEF" libelle="Config. locale Loco 4000"/>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000..bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Absence tension ligne sur train"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un pantographe levé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un disjoncteur fermé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage actif sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Toutes portes fermées"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Mise en action du FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit8" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un essieu bloqué"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit9" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="instabilité bogie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit10" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Système AFB actif"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit11" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Inhibition SAFI"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bits12" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit13" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle frein non desserré"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit14" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_4000.bit15" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CLM_HLE18" code="21" taille="2">
+				<nom-utilisateur lang="DEF" libelle="Config. locale Loco HLE18"/>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18..bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Absence tension ligne sur train"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un pantographe levé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un disjoncteur fermé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage actif sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Toutes portes fermées"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Mise en action du FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit8" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un essieu bloqué"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit9" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="instabilité bogie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit10" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Système AFB actif"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit11" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Inhibition SAFI"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bits12" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit13" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle frein non desserré"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit14" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLM_HLE18.bit15" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="C_NAT" code="22" taille="2">
+				<nom-utilisateur lang="DEF" libelle="Config. NAT"/>
+				<sous-variable>
+					<variable-discrete nom="C_NAT..bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Absence tension ligne sur train"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un pantographe levé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un disjoncteur fermé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage actif sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Toutes portes fermées"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Mise en action du FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit8" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un essieu bloqué"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit9" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="instabilité bogie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit10" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Système AFB actif"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit11" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Inhibition SAFI"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bits12" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit13" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle frein non desserré"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit14" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="C_NAT.bit15" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CSELPT" code="23" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Config. Sélecteur de panto"/>
+				<sous-variable>
+					<variable-discrete nom="CSELPT.bit7" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="3000V DC FS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT.bit6" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="15000V AC CFF"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="15000V AC DB"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="1500V DC NS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="3000V DC SNCB"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="LGV AC"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="25000V AC SNCF"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="1500V DC SNCF"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CSELPT2" code="24" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Config. Sélecteur de panto 2"/>
+				<sous-variable>
+					<variable-discrete nom="CSELPT2.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit7réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT2.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit6réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT2.bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit5réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT2.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="3000V DC CFL"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT2.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="25000V AC CFL"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT2.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="25000V AC FS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT2.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="25000V AC NS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CSELPT2..bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="25000V AC SNCB"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CLR" code="25" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Config. liaison avec radio"/>
+				<sous-variable>
+					<variable-discrete nom="CLR.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit7réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLR.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit6réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLR.bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit5réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLR.bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit4réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLR.bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLR.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Alerte radio"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLR.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Alarme VACMA"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CLR.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Acquittement Signalisation AlarmeVoyageur"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="TV_TVM430" code="26" taille="3">
+				<nom-utilisateur lang="DEF" libelle="Taux de vitesse TVM430"/>
+				<sous-variable>
+					<variable-analogique nom="TV_TVM430.Vitesse" type="uint16">
+						<nom-utilisateur lang="DEF" libelle="Vitesse"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TV_TVM430.bit0" type="String" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Nature"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="V" label="Vitesse limite fixe"/>
+							<table-labels valeur="A" label="Vitesse d'annonce fixe"/>
+							<table-labels valeur="E" label="Vitesse d'exécution fixe"/>
+							<table-labels valeur="v" label="Vitesse limite clignotante"/>
+							<table-labels valeur="a" label="Vitesse d'annonce clignotante"/>
+							<table-labels valeur="a" label="Vitesse d'exécution clignotante"/>
+							<table-labels valeur="R" label="Ecran rouge fixe"/>
+							<table-labels valeur="D" label="Ecran rouge fixe dû à un défaut de réception continue"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="TV_TBL1" code="32" taille="3">
+				<nom-utilisateur lang="DEF" libelle="Taux de vitesse TBL"/>
+				<sous-variable>
+					<variable-analogique nom="TV_TBL1.Vitesse" type="uint16" unite="km/h">
+						<nom-utilisateur lang="DEF" libelle="Vitesse limite fixe"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TV_TBL1.nature" type="String" taille="1">
+						<nom-utilisateur lang="DEF" libelle="nature"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="V" label="Vitesse limite fixe"/>
+							<table-labels valeur="A" label="Vitesse d'annonce fixe"/>
+							<table-labels valeur="E" label="Vitesse d'exécution fixe"/>
+							<table-labels valeur="v" label="Vitesse limite clignotante"/>
+							<table-labels valeur="a" label="Vitesse d'annonce clignotante"/>
+							<table-labels valeur="e" label="Vitesse d'exécution clignotante"/>
+							<table-labels valeur="R" label="Ecran rouge fixe"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Vbut" code="35" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Vitesse But"/>
+				<sous-variable>
+					<variable-discrete nom="Vbut.Nature" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Nature"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="Affichage fixe"/>
+							<table-labels valeur="1" label="Affichage clignotant"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="Vbut.vitesse" type="uintXbits" taille="7" coef-directeur="5" unite="km/h">
+						<nom-utilisateur lang="DEF" libelle="Vitesse But"/>
+					</variable-analogique>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Vbuta" code="36" taille="1">
+				<nom-utilisateur lang="DEF" libelle="VitesseButAffichee"/>
+				<sous-variable>
+					<variable-discrete nom="Vbuta.Nature" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Nature"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="Affichage fixe"/>
+							<table-labels valeur="1" label="Affichage clignotant"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="Vbuta.Vitesse" type="uintXbits" unite="km/h" taille="7" coef-directeur="5">
+						<nom-utilisateur lang="DEF" libelle="Vitesse"/>
+					</variable-analogique>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Dt" code="50" taille="5">
+				<nom-utilisateur lang="DEF" libelle="Paramètres train"/>
+				<sous-variable>
+					<variable-discrete nom="Dt.NumMessage" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="numéro de message"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Dt.Categorie" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Catégorie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="Dt.longueur" type="uintXbits" taille="4" coef-directeur="100" unite="m">
+						<nom-utilisateur lang="DEF" libelle="Longueur"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="Dt.vitesseLimiteTrain" type="uint8" coef-directeur="10" unite="km/h">
+						<nom-utilisateur lang="DEF" libelle="Vitesse Limite Train"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="Dt.gammaR1" type="uint8" coef-directeur="0.1" unite="m/s²">
+						<nom-utilisateur lang="DEF" libelle="Gamma R1"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="Dt.gammaR2" type="uint8" coef-directeur="0.1" unite="m/s²">
+						<nom-utilisateur lang="DEF" libelle="Gamma R2"/>
+					</variable-analogique>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MC" code="47" taille="2">
+				<nom-utilisateur lang="DEF" libelle="Mode de conduite"/>
+				<sous-variable>
+					<variable-discrete nom="MC..bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Absence tension ligne sur train"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un pantographe levé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un disjoncteur fermé sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freinage actif sur rame"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Toutes portes fermées"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Mise en action du FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit8" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Au moins un essieu bloqué"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit9" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="instabilité bogie"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit10" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Système AFB actif"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit11" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Inhibition SAFI"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bits12" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle FIS"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit13" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="FU par boucle frein non desserré"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit14" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MC.bit15" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="TV_KVB" code="48" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Taux de Vitesse KVB"/>
+				<sous-variable>
+					<variable-discrete nom="TV_KVB.bit7" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Cadre Vert"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TV_KVB.bit6" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Cadre Jaune"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="TV_KVB.TV" type="uintXbits" taille="6" coef-directeur="5" unite="%">
+						<nom-utilisateur lang="DEF" libelle="Taux de Vitesse KVB affiché "/>
+					</variable-analogique>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="PTF" code="49" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Paramètre de traction freinage"/>
+				<sous-variable>
+					<variable-discrete nom="PTF.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="PTF.bit6" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="bit6"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="PTF.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="bit5"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="PTF.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="bit4"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="PTF.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="PTF.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="bit2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="PTF.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="bit1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="PTF..bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="bit0"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Bal3" code="51" taille="8">
+				<nom-utilisateur lang="DEF" libelle="Point d'information à 1, 2 ou 3 balises"/>
+				<sous-variable>
+					<variable-discrete nom="Bal3.NumMessage" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="numéro de message"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.X_Bal1" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="X 1ère balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.Y_Bal1" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Y 1ère balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.Z_Bal1" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Z 1ère balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.Indicateur_Bal1" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Indicateur 1ère balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.X_Bal2" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="X 2e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.Y_Bal2" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Y 2e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.Z_Bal2" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Z 2e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.Indicateur_Bal2" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Indicateur 2e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.X_Bal3" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="X 3e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.Y_Bal3" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Y 3e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.Z_Bal3" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Z 3e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal3.Indicateur_Bal3" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Indicateur 3e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="Bal3.vitesse" type="uint8" coef-directeur="1.5" unite="km/h">
+						<nom-utilisateur lang="DEF" libelle="Vitesse KVB"/>
+					</variable-analogique>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Bal5" code="52" taille="12">
+				<nom-utilisateur lang="DEF" libelle="Point d'information à 4 ou 5 balises"/>
+				<sous-variable>
+					<variable-discrete nom="Bal5.NumMessage" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="numéro de message"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.X_Bal1" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="X 1ère balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Y_Bal1" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Y 1ère balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Z_Bal1" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Z 1ère balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Indicateur_Bal1" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Indicateur 1ère balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.X_Bal2" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="X 2e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Y_Bal2" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Y 2e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Z_Bal2" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Z 2e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Indicateur_Bal2" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Indicateur 2e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.X_Bal3" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="X 3e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Y_Bal3" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Y 3e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Z_Bal3" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Z 3e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Indicateur_Bal3" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Indicateur 3e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.X_Bal4" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="X 4e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Y_Bal4" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Y 4e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Z_Bal4" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Z 4e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Indicateur_Bal4" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Indicateur 4e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.X_Bal5" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="X 5e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Y_Bal5" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Y 5e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Z_Bal5" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Z 5e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Bal5.Indicateur_Bal5" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Indicateur 5e balise"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="Bal5.vitesse" type="uint8" coef-directeur="1.5" unite="km/h">
+						<nom-utilisateur lang="DEF" libelle="Vitesse KVB"/>
+					</variable-analogique>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="BS1" code="53" taille="6">
+				<nom-utilisateur lang="DEF" libelle="Balise série 1"/>
+				<sous-variable>
+					<variable-discrete nom="BS1.NumMessage" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="numéro de message"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="BS1.vitesse" type="uint8" coef-directeur="1.5" unite="km/h">
+						<nom-utilisateur lang="DEF" libelle="Vitesse KVB"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="BS1.odometrie" type="uint24" coef-directeur="1.0" unite="m">
+						<nom-utilisateur lang="DEF" libelle="Odomérie KVB"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS1.Indicateur_BS1" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Type de balise"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="BS2" code="54" taille="24">
+				<nom-utilisateur lang="DEF" libelle="Balise série 2"/>
+				<sous-variable>
+					<variable-discrete nom="BS2.NumMessage" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="numéro de message"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet2" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet3" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet4" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet4"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet5" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet5"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet6" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet6"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet7" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet7"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet8" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet8"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet9" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet9"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet10" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet10"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet11" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet11"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet12" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet12"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet13" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet13"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet14" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet14"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet15" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet15"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet16" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet16"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet17" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet17"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet18" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet18"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet19" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet19"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet20" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet20"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet21" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet21"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet22" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet22"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet23" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet23"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="BS2.Octet24" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet24"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="PT" code="55" taille="3">
+				<nom-utilisateur lang="DEF" libelle="Paramètres Train LZB"/>
+				<sous-variable>
+					<variable-discrete nom="PT.Octet1" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="numéro de message"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="PT.Octet2" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="PT.Octet3" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="Octet3"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Sig" code="56" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Signalisation"/>
+				<sous-variable>
+					<variable-discrete nom="Sig.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit7"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Sig.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit6"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Sig.bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit5"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Sig.H" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Franchissement point d’arrêt LZB/PZB"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Sig.bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Sig.z" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Surveillance suite à passage sur balise Indusi z : 2000 Hz"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Sig.V" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Surveillance suite à passage sur balise Indusi V : 1000 Hz"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Sig.G" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Surveillance suite à passage sur balise Indusi G : 500 Hz"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Cond" code="57" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Action de conduite"/>
+				<sous-variable>
+					<variable-discrete nom="Cond.bit7" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Conduite générale > 3.5 b"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Cond.bit6" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Sélection du poste de conduite 2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Cond.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Sélection du poste de conduite 1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Cond.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Test de fonctionnement PZB/LZB"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Cond.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Changement d'agent de conduite"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Cond.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle='Appui sur BP "Tw"'/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Cond.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle='Appui sur le BP "Tf"'/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Cond.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle='Appui sur le BP "Tb"'/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="AfCab" code="58" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Affichage cabine"/>
+				<sous-variable>
+					<variable-discrete nom="AfCab.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="AfCab.bit6" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="U"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="AfCab.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="M"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="AfCab.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="O"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="AfCab.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Ü"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="AfCab.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Z"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="AfCab.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="D"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="AfCab.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="w"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="DiversPZB90" code="59" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Information PZB 90"/>
+				<sous-variable>
+					<variable-discrete nom="DiversPZB90.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="DiversPZB90.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="DiversPZB90.bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="ü"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="DiversPZB90.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="i"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="DiversPZB90.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Ö"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="DiversPZB90.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="E"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="DiversPZB90.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="g"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="DiversPZB90.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="v"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Type" code="60" taille="2">
+				<nom-utilisateur lang="DEF" libelle="Type de train"/>
+				<sous-variable>
+					<variable-discrete nom="Type.Byte1bit765" type="reserved" taille="3">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Type.Byte1bit43210" type="uintXbits" taille="5">
+						<nom-utilisateur lang="DEF" libelle="Information en provenance du TDIP 1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Type.Byte2bit765" type="reserved" taille="3">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Type.Byte2bit43210" type="uintXbits" taille="5">
+						<nom-utilisateur lang="DEF" libelle="Information en provenance du TDIP 2"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Rad" code="61" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Info Radio"/>
+				<sous-variable>
+					<variable-discrete nom="Rad.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Rad.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Rad.bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Rad.bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Rad.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Vacma (DSD)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Rad.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Alarme voyageur"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Rad.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Fin d'urgence"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Rad.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Urgence"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="CF" code="62" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Courbe de freinage"/>
+				<sous-variable>
+					<variable-discrete nom="CF.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CF.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CF.bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CF.bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Vigilance active"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CF.bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="120%"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CF.bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="125%"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CF.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="130%"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="CF.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="135%"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="RS9" code="63" taille="2">
+				<nom-utilisateur lang="DEF" libelle="Signalisation RS 9 codes"/>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte1bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte1bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte1bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="code 75 (50Hz)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte1bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="code 120 (50Hz)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte1bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="code 75 (178Hz)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte1bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="code 120 (178Hz)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte1bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="code 180 (50Hz)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte1bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="code 270 (50Hz)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte2bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte2bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte2bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte2bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte2bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte2bit2" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte2bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="FU"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="RS9.Byte2bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Supero Rosso"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MA" code="66" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Manuel/automatique"/>
+				<sous-variable>
+					<variable-discrete nom="MA.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit7"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MA.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit6"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MA.bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit5"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MA.bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MA.bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MA.bit2" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MA.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Action automatique"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MA.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Action manuelle"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Mfa" code="67" taille="2">
+				<nom-utilisateur lang="DEF" libelle="Mode de fonctionnement affiché"/>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet1bit7" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Mode TR (Trip)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet1bit6" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Mode SB (Stand By)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet1bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Mode SL (Sleeping)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet1bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Mode UN (Unfitted)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet1bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Mode SH (Shunting)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet1bit2" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Mode SR (Staff Responsible)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet1bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Mode OS (On Sight)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet1bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Mode FS (Full Supervision)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet2bit7" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Réserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet2bit6" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Mode RV (Reversing)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet2bit5" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Mode SN (STM National)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet2bit4" type="boolean1" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Mode SE (STM European)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet2bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Monde NL (Non Leading)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Octet2bit2" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Mode IS (Isolation)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Ocet2bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Mode SF (System Failure)"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Mfa.Ocet2bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Mode PT (Post Trip)"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Dbua" code="71" taille="3">
+				<nom-utilisateur libelle="Distance but" lang="DEF"/>
+				<sous-variable>
+					<variable-discrete type="uint8" nom="Dbua.echelle">
+						<nom-utilisateur libelle="Echelle" lang="DEF"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete type="uint16" nom="Dbua.distance">
+						<nom-utilisateur libelle="Distance" lang="DEF"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Ct" code="75" taille="2">
+				<nom-utilisateur libelle="Distance but" lang="DEF"/>
+				<sous-variable>
+					<variable-discrete nom="Ct.Byte1Bit7654" type="reserved" taille="4">
+						<nom-utilisateur libelle="Ct.reserve" lang="DEF"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ct.Byte1Bit3" type="boolean1">
+						<nom-utilisateur libelle="Sensible aux vents traversiers" lang="DEF"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ct.Byte1Bit2" type="boolean1">
+						<nom-utilisateur libelle="Pendulation inactive" lang="DEF"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ct.Byte1Bit1" type="boolean1">
+						<nom-utilisateur libelle="Pendulation active" lang="DEF"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ct.Byte1Bit0" type="boolean1">
+						<nom-utilisateur libelle="Basic" lang="DEF"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ct.Byte2Bit76543210" type="reserved" taille="8">
+						<nom-utilisateur libelle="Ct.reserve" lang="DEF"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="Ove" code="112" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Override EAO"/>
+				<sous-variable>
+					<variable-discrete nom="Ove.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit7"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ove.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit6"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ove.bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit5"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ove.bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ove.bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ove.bit2" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ove.bit1" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="Ove.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Franchissement EOA"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="ZEXPL" code="113" taille="1">
+				<nom-utilisateur lang="DEF" libelle="Commutateur d'exploitation"/>
+				<sous-variable>
+					<variable-discrete nom="ZEXPL.bit7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit7"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="ZEXPL.bit6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit6"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="ZEXPL.bit5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit5"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="ZEXPL.bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="ZEXPL.bit3" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="ZEXPL.bit2" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="bit3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="ZEXPL.bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Z EXPL sur TVM"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="ZEXPL.bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Z EXPL sur ERTMS + TVM"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+		</liste-variables>
+	</enregistreur>
+	<signature CRC="6004"/>
+</enregistreur-def>

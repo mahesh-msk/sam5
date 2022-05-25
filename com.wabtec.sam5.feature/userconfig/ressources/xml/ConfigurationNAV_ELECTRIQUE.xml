@@ -1,0 +1,2364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by PHILIPPE CHRISTIAN (FAIVELEY TRANSPORT TOURS SAS) -->
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by FAIVELEY TRANSPORT (FAIVELEY TRANSPORT) -->
+<configuration-atess xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ConfigurationATESS.xsd">
+	<fichier-description xml-associe="NAV_ELECTRIQUE.xml"/>
+	<liste-identifiants-etendus>
+		<identifiant code="3F"/>
+		<identifiant code="7A"/>
+	</liste-identifiants-etendus>
+	<liste-maximum-compteur>
+		<compteur-temps max="150"/>
+		<compteur-distance max="1280"/>
+	</liste-maximum-compteur>
+	<table-evenements-variables>
+		<evenement-variables code-evt="2" longueur="7">
+			<!--IntroK7 : H, t-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="3" longueur="11">
+			<!--EnteteFichier : H, t, E, i-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="6">
+					<!--E-->
+				</variable-atess>
+				<variable-atess code-var="5">
+					<!--i-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="4" longueur="7">
+			<!--Mise en service cabine: H, t-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="5" longueur="3">
+			<!--Mise hors service cabine: t-->
+			<liste-variables-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="6" longueur="7">
+			<!--Première mise en mouvement : H, t-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="7" longueur="3">
+			<!--Mise en mouvement : t-->
+			<liste-variables-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="8" longueur="4">
+			<!--Arrêt : d, t-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="9" longueur="5">
+			<!--RazCptHeure : H-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="10" longueur="3">
+			<!--RazCptDistance: V-->
+			<liste-variables-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="11" longueur="4">
+			<!--SeuilVitesse : d, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="12" longueur="13">
+			<!--Introduction N° agent : H, t, A-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="7">
+					<!--A-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="13" longueur="7">
+			<!--Enregistrement LP :H, t-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="14" longueur="13">
+			<!--Introduction N° train : H, t, N-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="10">
+					<!--N-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="15" longueur="7">
+			<!--Heure avant modif :H, t-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="16" longueur="7">
+			<!--Heure après modif :H, t-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="32" longueur="7">
+			<!--Message TBL1: d, t, V, Mess-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="31">
+					<!--Mess-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="33" longueur="12">
+			<!--Taux vitesse TBL: d, t, V, TV, Vbut, Dbutt-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="25">
+					<!--TV-->
+				</variable-atess>
+				<variable-atess code-var="35">
+					<!--Vbut-->
+				</variable-atess>
+				<variable-atess code-var="37">
+					<!--Dbutt-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="34" longueur="7">
+			<!--Commande de FU TBL: t, d, V, FU-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="41">
+					<!--FU-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="35" longueur="6">
+			<!--Carré TBL : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="36" longueur="7">
+			<!--Chaîne Pilote : d, t, V, CP, -->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="29">
+					<!--CP-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="37" longueur="12">
+			<!--Franchissement Balise : d, t, V, NB, Vbut, Dbutt-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="39">
+					<!--NB-->
+				</variable-atess>
+				<variable-atess code-var="35">
+					<!--Vbut-->
+				</variable-atess>
+				<variable-atess code-var="37">
+					<!--Dbutt-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="38" longueur="7">
+			<!--Indic. sonores/état : d, t, V, S-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="42">
+					<!--S-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="39" longueur="10">
+			<!--Vbut/Dbut : d, t, V, Vbuta, Vmaa, Dbuta-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="36">
+					<!--Vbuta-->
+				</variable-atess>
+				<variable-atess code-var="33">
+					<!--Vmaa-->
+				</variable-atess>
+				<variable-atess code-var="38">
+					<!--Dbuta-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="40" longueur="6">
+			<!--Test journalier : H, TJ-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="36">
+					<!--Vbuta-->
+				</variable-atess>
+				<variable-atess code-var="33">
+					<!--Vmaa-->
+				</variable-atess>
+				<variable-atess code-var="38">
+					<!--Dbuta-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="42" longueur="7">
+			<!--Taux vit.(ATB Ph4) : d, t, V, TA4-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="43">
+					<!--TA4-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="43" longueur="8">
+			<!--Vit. cons.(ATB NG) :d, t, V, VS-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="45">
+					<!--VS-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="44" longueur="7">
+			<!--Indic. aff.(ATB) : d, t, V, A3D-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="46">
+					<!--A3D-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="45" longueur="9">
+			<!--Indic. d'état(ATB) : d, t, V, E-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="6">
+					<!--E-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="48" longueur="21">
+			<!--Intro. agent/dépot : H, t, A, D-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="7">
+					<!--A-->
+				</variable-atess>
+				<variable-atess code-var="8">
+					<!--D-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="49" longueur="19">
+			<!--Intro. libéllé mission : H, t, M-->
+			<liste-variables-atess>
+				<variable-atess code-var="3">
+					<!--H-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="9">
+					<!--M-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="51" longueur="9">
+			<!--Cfg.TGVR : d, t, V, CLM1-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="11">
+					<!--CLM1-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="52" longueur="9">
+			<!--Cfg.TMST : d, t, V, CLM2-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="12">
+					<!--CLM2-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="53" longueur="9">
+			<!--Cfg.PBKA : d, t, V, CLM3-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="13">
+					<!--CLM3-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="54" longueur="9">
+			<!--Cfg.FRET : d, t, V, CLM4-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="14">
+					<!--CLM4-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="55" longueur="8">
+			<!--Rame menante motrice 2 : d, t, V, S-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="42">
+					<!--S-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="56" longueur="8">
+			<!--Rame menée motrice 1 : d, t, V, S-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="42">
+					<!--S-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="57" longueur="8">
+			<!--Rame menée motrice 2 : d, t, V, S-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="42">
+					<!--S-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="58" longueur="7">
+			<!--Défauts divers : d, t, V, DD-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="1000">
+					<!--DD-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="59" longueur="7">
+			<!--Config.sel.tension : d, t, V, CSELPT-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="23">
+					<!--CSELPT-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="60" longueur="7">
+			<!--Config.liaison radio : d, t, V, CLR-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="25">
+					<!--CLR-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="61" longueur="7">
+			<!--Config.sel.tension 2 : d, t, V, CSELPT2-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="24">
+					<!--CSELPT2-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="62" longueur="6">
+			<!--Seuil vitesse affichée : d, V, Vaff-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="17">
+					<!--Vaff-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="16128" longueur="10">
+			<!--Cfg1 ICE3 : d, t, V, CT1_ICE3-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="15">
+					<!--CT1_ICE3-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="16129" longueur="8">
+			<!--Cfg2 ICE3 : d, t, V, CT2_ICE3-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="16">
+					<!--CT2_ICE3-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="16130" longueur="9">
+			<!--Cfg. BR185 Allemagne : d, t, V, CLM_BR185-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="19">
+					<!--CLM_BR185-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="16131" longueur="10">
+			<!--Cfg. train ETR500 : d, t, V, CT_ETR500-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="18">
+					<!--CT_ETR500-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="16132" longueur="9">
+			<!--Cfg. BR185 Luxembourg : d, t, V, CLM_T4000-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="20">
+					<!--CLM_T4000-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="16133" longueur="9">
+			<!--Configuration NAT : d, t, V, CLM_T4000-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="22">
+					<!--C_NAT-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="16134" longueur="9">
+			<!--Configuration HLE18 : d, t, V, CLM_HLE18-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="21">
+					<!--CLM_HLE18-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="68" longueur="13">
+			<!--Ind. de vit. : d, t, V, TV, VCI, VCF-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="26">
+					<!--TV-->
+				</variable-atess>
+				<variable-atess code-var="27">
+					<!--VCI-->
+				</variable-atess>
+				<variable-atess code-var="28">
+					<!--VCF-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="69" longueur="9">
+			<!--Taux de vitesse seul : d, t, V, TV-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="26">
+					<!--TV-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="70" longueur="7">
+			<!--Chaine pilote : d, t, V, CP-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="29">
+					<!--CP-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="71" longueur="7">
+			<!--Changement de réseau : d, t, V, TR-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="30">
+					<!--TR-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="72" longueur="6">
+			<!--Franchissement carré : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="73" longueur="6">
+			<!--Mode indéfini : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="88" longueur="9">
+			<!--Param train : d, t, V, PT-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="55">
+					<!--PT-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="89" longueur="7">
+			<!--Sig Bal Indusi : 
+d, t, V, sig-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="56">
+					<!--Sig-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="90" longueur="7">
+			<!--Action de conduite : 
+d, t, V, Cond-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="57">
+					<!--Cond-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="91" longueur="7">
+			<!--Aff.cabine : 
+d, t, V, Afcab-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="58">
+					<!--Afcab-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="92" longueur="7">
+			<!--Info PZB : 
+d, t, V, Divers-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="59">
+					<!--Divers PZB_90-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="98" longueur="9">
+			<!--Niveau affiché : 
+d, t, V, Niv, STM, Ma-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="64">
+					<!--Niv-->
+				</variable-atess>
+				<variable-atess code-var="65">
+					<!--STM-->
+				</variable-atess>
+				<variable-atess code-var="66">
+					<!--Ma-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="99" longueur="9">
+			<!--Mode affiché : 
+d, t, V, Niv, STM-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="67">
+					<!--Mfa-->
+				</variable-atess>
+				<variable-atess code-var="66">
+					<!--Ma-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="100" longueur="7">
+			<!--Acquittement niveau de mode/niveau:
+d, t, V, Anm-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="68">
+					<!--Anm-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="101" longueur="7">
+			<!--Acquittement EOA - incompatibilité - intégrité train:
+d, t, V, Acd-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="69">
+					<!--Acd-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="102" longueur="15">
+			<!--Affichage cabine etcs:
+d, t, V, Va, Dbua, Vbua, Vla-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="70">
+					<!--Va-->
+				</variable-atess>
+				<variable-atess code-var="71">
+					<!--Dbua-->
+				</variable-atess>
+				<variable-atess code-var="72">
+					<!--Vbua-->
+				</variable-atess>
+				<variable-atess code-var="73">
+					<!--Vla-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="103" longueur="15">
+			<!--Données train:
+d, t, V, Vmt, Ct, Lt, Ce, Ca, , , , , ...-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="74">
+					<!--Vmt-->
+				</variable-atess>
+				<variable-atess code-var="75">
+					<!--Ct-->
+				</variable-atess>
+				<variable-atess code-var="76">
+					<!--Lt-->
+				</variable-atess>
+				<variable-atess code-var="78">
+					<!--Ce-->
+				</variable-atess>
+				<variable-atess code-var="79">
+					<!--Ca-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="104" longueur="30">
+			<!--Données train frein de service:
+d, t, V, Ngs, Vgs1, Gs1, Gs2, Vgs3, Gs3, Vgs4, Gs4, Vgs5, Gs5, Vgs6...-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="80">
+					<!--Ngammas-->
+				</variable-atess>
+				<variable-atess code-var="81">
+					<!--Vgammas1-->
+				</variable-atess>
+				<variable-atess code-var="82">
+					<!--gammas1-->
+				</variable-atess>
+				<variable-atess code-var="83">
+					<!--Vgammas2-->
+				</variable-atess>
+				<variable-atess code-var="84">
+					<!--gammas2-->
+				</variable-atess>
+				<variable-atess code-var="85">
+					<!--Vgammas3-->
+				</variable-atess>
+				<variable-atess code-var="86">
+					<!--gammas3-->
+				</variable-atess>
+				<variable-atess code-var="87">
+					<!--Vgammas4-->
+				</variable-atess>
+				<variable-atess code-var="88">
+					<!--gammas4-->
+				</variable-atess>
+				<variable-atess code-var="89">
+					<!--Vgammas5-->
+				</variable-atess>
+				<variable-atess code-var="90">
+					<!--gammas5-->
+				</variable-atess>
+				<variable-atess code-var="91">
+					<!--Vgammas6-->
+				</variable-atess>
+				<variable-atess code-var="92">
+					<!--gammas6-->
+				</variable-atess>
+				<variable-atess code-var="93">
+					<!--Vgammas7-->
+				</variable-atess>
+				<variable-atess code-var="94">
+					<!--gammas7-->
+				</variable-atess>
+				<variable-atess code-var="95">
+					<!--Trfs-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="105" longueur="30">
+			<!--Données train frein d'urgence:
+ d, t, V, Ngu, Vgu1, Gu1, Gu2, Vgu3, Gu3, Vgu4, Gu4, Vgu5, Gu5, Vgu6...-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="96">
+					<!--Ngammau-->
+				</variable-atess>
+				<variable-atess code-var="97">
+					<!--Vgammau1-->
+				</variable-atess>
+				<variable-atess code-var="98">
+					<!--gammau1-->
+				</variable-atess>
+				<variable-atess code-var="99">
+					<!--Vgammau2-->
+				</variable-atess>
+				<variable-atess code-var="100">
+					<!--gammau2-->
+				</variable-atess>
+				<variable-atess code-var="101">
+					<!--Vgammau3-->
+				</variable-atess>
+				<variable-atess code-var="102">
+					<!--gammau3-->
+				</variable-atess>
+				<variable-atess code-var="103">
+					<!--Vgammau4-->
+				</variable-atess>
+				<variable-atess code-var="104">
+					<!--gammau4-->
+				</variable-atess>
+				<variable-atess code-var="105">
+					<!--Vgammau5-->
+				</variable-atess>
+				<variable-atess code-var="106">
+					<!--gammau5-->
+				</variable-atess>
+				<variable-atess code-var="107">
+					<!--Vgammau6-->
+				</variable-atess>
+				<variable-atess code-var="108">
+					<!--gammau6-->
+				</variable-atess>
+				<variable-atess code-var="109">
+					<!--Vgammau7-->
+				</variable-atess>
+				<variable-atess code-var="110">
+					<!--gammau7-->
+				</variable-atess>
+				<variable-atess code-var="111">
+					<!--Trfu-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="106" longueur="7">
+			<!--Franchissement de fin d'autorisation ETCS: 
+d, t, V, Ove-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="112">
+					<!--Ove-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="107" longueur="7">
+			<!--Position du commutateur d'exploitation:
+d, t, V, ZEXPL-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="113">
+					<!--Ove-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="112" longueur="9">
+			<!--Mode conduite:
+d, t, V, ModCdte-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="47">
+					<!--MC-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="113" longueur="8">
+			<!--Param. aff., d, t, V, ParaAff, , , , , , , , , , ...-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="26">
+					<!--TV-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="114" longueur="8">
+			<!--Traction/freinage: 
+d, t, V, TracFrei-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="49">
+					<!--PTF-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="116" longueur="11">
+			<!--Don.train, d, t, V, DonTrain, , , , , , , , , , ...-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="50">
+					<!--Dt-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="117" longueur="14">
+			<!--Balises 123, d, t, V, Bal123, , , , , , , , , , ...-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="51">
+					<!--Bal3-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="118" longueur="18">
+			<!--Balises 45, d, t, V, Bal45, , , , , , , , , , ...-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="52">
+					<!--Bal5-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="119" longueur="12">
+			<!--Balise N1, d, t, V, BS1, , , , , , , , , , ...-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="53">
+					<!--BS1-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="120" longueur="30">
+			<!--BalN2, d, t, V, BS2, , , , , , , , , , ...-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+				<variable-atess code-var="54">
+					<!--BS2-->
+				</variable-atess>
+			</liste-variables-atess>
+		</evenement-variables>
+		<evenement-variables code-evt="128" longueur="6">
+			<!--EL1_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8001" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="129" longueur="6">
+			<!--EL1_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8001" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="130" longueur="6">
+			<!--EL2_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8002" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="131" longueur="6">
+			<!--EL2_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8002" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="132" longueur="6">
+			<!--EL3_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8003" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="133" longueur="6">
+			<!--EL3_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8003" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="134" longueur="6">
+			<!--EL4_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8004" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="135" longueur="6">
+			<!--EL4_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8004" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="136" longueur="6">
+			<!--EL5_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8005" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="137" longueur="6">
+			<!--EL5_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8005" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="138" longueur="6">
+			<!--EL6_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8006" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="139" longueur="6">
+			<!--EL6_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8006" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="140" longueur="6">
+			<!--EL7_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8007" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="141" longueur="6">
+			<!--EL7_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8007" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="142" longueur="6">
+			<!--EL8_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8008" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="143" longueur="6">
+			<!--EL8_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8008" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="144" longueur="6">
+			<!--EL9_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8009" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="145" longueur="6">
+			<!--EL9_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8009" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="146" longueur="6">
+			<!--EL10_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8010" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="147" longueur="6">
+			<!--EL10_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8010" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="148" longueur="6">
+			<!--EL11_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8011" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="149" longueur="6">
+			<!--EL11_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8011" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="150" longueur="6">
+			<!--EL12_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8012" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="151" longueur="6">
+			<!--EL12_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8012" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="152" longueur="6">
+			<!--EL13_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8013" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="153" longueur="6">
+			<!--EL13_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8013" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="154" longueur="6">
+			<!--EL14_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8014" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="155" longueur="6">
+			<!--EL14_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8014" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="156" longueur="6">
+			<!--EL15_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8015" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="157" longueur="6">
+			<!--EL15_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8015" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="158" longueur="6">
+			<!--EL16_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8016" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="159" longueur="6">
+			<!--EL16_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8016" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="160" longueur="6">
+			<!--EL17_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8017" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="161" longueur="6">
+			<!--EL17_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8017" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="162" longueur="6">
+			<!--EL18_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8018" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="163" longueur="6">
+			<!--EL18_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8018" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="164" longueur="6">
+			<!--EL19_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8019" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="165" longueur="6">
+			<!--EL19_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8019" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="166" longueur="6">
+			<!--EL20_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8020" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="167" longueur="6">
+			<!--EL20_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8020" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="168" longueur="6">
+			<!--EL21_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8021" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="169" longueur="6">
+			<!--EL21_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8021" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="170" longueur="6">
+			<!--EL22_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8022" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="171" longueur="6">
+			<!--EL22_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8022" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="172" longueur="6">
+			<!--EL23_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8023" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="173" longueur="6">
+			<!--EL23_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8023" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="174" longueur="6">
+			<!--EL24_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8024" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="175" longueur="6">
+			<!--EL24_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8024" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="176" longueur="6">
+			<!--EL25_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8025" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="177" longueur="6">
+			<!--EL25_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8025" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="178" longueur="6">
+			<!--EL26_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8026" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="179" longueur="6">
+			<!--EL26_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8026" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="180" longueur="6">
+			<!--EL27_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8027" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="181" longueur="6">
+			<!--EL27_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8027" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="182" longueur="6">
+			<!--EL28_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8028" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="183" longueur="6">
+			<!--EL28_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8028" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="184" longueur="6">
+			<!--EL29_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8029" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="185" longueur="6">
+			<!--EL29_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8029" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="186" longueur="6">
+			<!--EL30_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8030" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="187" longueur="6">
+			<!--EL30_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8030" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="188" longueur="6">
+			<!--EL31_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8031" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="189" longueur="6">
+			<!--EL31_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8031" valeur-entree-logique="false"/>
+		</evenement-variables>
+		<evenement-variables code-evt="190" longueur="6">
+			<!--EL32_ACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8032" valeur-entree-logique="true"/>
+		</evenement-variables>
+		<evenement-variables code-evt="191" longueur="6">
+			<!--EL32_INACT : d, t, V-->
+			<liste-variables-atess>
+				<variable-atess code-var="1">
+					<!--d-->
+				</variable-atess>
+				<variable-atess code-var="4">
+					<!--t-->
+				</variable-atess>
+				<variable-atess code-var="2">
+					<!--V-->
+				</variable-atess>
+			</liste-variables-atess>
+			<entree-logique code-entree-logique="8032" valeur-entree-logique="false"/>
+		</evenement-variables>
+	</table-evenements-variables>
+	<signature CRC="7014"/>
+</configuration-atess>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by PHILIPPE CHRISTIAN (FAIVELEY TRANSPORT TOURS SAS) -->
+<usrtom:userConfigRecorder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usrtom="urn:USERCONFIGRECORDER" xsi:schemaLocation="urn:USERCONFIGRECORDER ../../template/user.xsd" name="ZA573794A">
+	<version>
+		<X>1</X>
+		<Y>0</Y>
+		<Z>0</Z>
+		<B>0</B>
+		<Description>PRASA</Description>
+	</version>
+	<config>
+		<project>
+			<trainType>.*</trainType>
+			<trainID>.*</trainID>
+			<recorderPosition>.*</recorderPosition>
+		</project>
+		<journeyFile>
+			<missionSize>2048000</missionSize>
+			<fullLogRate>90</fullLogRate>
+			<DownloadWayRateComputing>WEB</DownloadWayRateComputing>
+		</journeyFile>
+		<tachymetry>
+			<wheelDiameter>
+				<min>800</min>
+				<max>900</max>
+				<default>840</default>
+			</wheelDiameter>
+			<SpeedSensor>
+				<channel>1</channel>
+				<pulse_per_round>80</pulse_per_round>
+				<scale>1.0</scale>
+			</SpeedSensor>
+			<entreesFrequences>
+				<enregistrementFreq1>OFF</enregistrementFreq1>
+				<pasFreq1>1</pasFreq1>
+				<enregistrementFreq2>OFF</enregistrementFreq2>
+				<pasFreq2>1</pasFreq2>
+			</entreesFrequences>
+		</tachymetry>
+		<speed name="speed" unit="km/h">
+			<source>FST</source>
+			<scale>1.0</scale>
+			<step1>1</step1>
+			<step2>2</step2>
+			<threshold>60</threshold>
+		</speed>
+		<distance name="distance" unit="m">
+			<source>FST</source>
+			<scale>1.0</scale>
+			<threshold>1000</threshold>
+		</distance>
+		<inputs>
+			<digital id="1" name="DI_01">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="2" name="DI_02">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="3" name="DI_03">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="4" name="DI_04">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="5" name="DI_05">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="6" name="DI_06">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="7" name="DI_07">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="8" name="DI_08">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="9" name="DI_09">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="10" name="DI_10">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="11" name="DI_11">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="12" name="DI_12">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="13" name="DI_13">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="14" name="DI_14">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="15" name="DI_15">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<digital id="16" name="DI_16">
+				<label_on>ON</label_on>
+				<label_off>OFF</label_off>
+				<recording>ON</recording>
+			</digital>
+			<analog id="1" unit="µA" name="Ana1">
+				<actif>ON</actif>
+				<seuilEnregistrement>100</seuilEnregistrement>
+				<couple_1can>0</couple_1can>
+				<couple_1utilisateur>0</couple_1utilisateur>
+				<couple_2can>25</couple_2can>
+				<couple_2utilisateur>25000</couple_2utilisateur>
+				<seuilFixe>false</seuilFixe>
+				<hysteresis>0.2</hysteresis>
+			</analog>
+			<analog id="2" unit="-" name="Ana_unused_1">
+				<actif>OFF</actif>
+				<seuilEnregistrement>0.1</seuilEnregistrement>
+				<couple_1can>0</couple_1can>
+				<couple_1utilisateur>0</couple_1utilisateur>
+				<couple_2can>0</couple_2can>
+				<couple_2utilisateur>0</couple_2utilisateur>
+				<seuilFixe>false</seuilFixe>
+				<hysteresis>0.2</hysteresis>
+			</analog>
+			<analog id="3" unit="mV" name="Ana2">
+				<actif>ON</actif>
+				<seuilEnregistrement>100</seuilEnregistrement>
+				<couple_1can>0</couple_1can>
+				<couple_1utilisateur>0</couple_1utilisateur>
+				<couple_2can>17</couple_2can>
+				<couple_2utilisateur>17000</couple_2utilisateur>
+				<seuilFixe>false</seuilFixe>
+				<hysteresis>0.2</hysteresis>
+			</analog>
+			<analog id="4" unit="-" name="Ana_unused_2">
+				<actif>OFF</actif>
+				<seuilEnregistrement>0.1</seuilEnregistrement>
+				<couple_1can>0</couple_1can>
+				<couple_1utilisateur>0</couple_1utilisateur>
+				<couple_2can>0</couple_2can>
+				<couple_2utilisateur>0</couple_2utilisateur>
+				<seuilFixe>false</seuilFixe>
+				<hysteresis>0.2</hysteresis>
+			</analog>
+			<analog id="5" unit="µA" name="Ana3">
+				<actif>ON</actif>
+				<seuilEnregistrement>100</seuilEnregistrement>
+				<couple_1can>0</couple_1can>
+				<couple_1utilisateur>0</couple_1utilisateur>
+				<couple_2can>25</couple_2can>
+				<couple_2utilisateur>25000</couple_2utilisateur>
+				<seuilFixe>false</seuilFixe>
+				<hysteresis>0.2</hysteresis>
+			</analog>
+			<analog id="6" unit="-" name="Ana_unused_3">
+				<actif>OFF</actif>
+				<seuilEnregistrement>0.1</seuilEnregistrement>
+				<couple_1can>0</couple_1can>
+				<couple_1utilisateur>0</couple_1utilisateur>
+				<couple_2can>0</couple_2can>
+				<couple_2utilisateur>0</couple_2utilisateur>
+				<seuilFixe>false</seuilFixe>
+				<hysteresis>0.2</hysteresis>
+			</analog>
+			<analog id="7" unit="mV" name="Ana4">
+				<actif>ON</actif>
+				<seuilEnregistrement>100</seuilEnregistrement>
+				<couple_1can>0</couple_1can>
+				<couple_1utilisateur>0</couple_1utilisateur>
+				<couple_2can>17</couple_2can>
+				<couple_2utilisateur>17000</couple_2utilisateur>
+				<seuilFixe>false</seuilFixe>
+				<hysteresis>0.2</hysteresis>
+			</analog>
+			<analog id="8" unit="-" name="Ana_unused_4">
+				<actif>OFF</actif>
+				<seuilEnregistrement>0.1</seuilEnregistrement>
+				<couple_1can>0</couple_1can>
+				<couple_1utilisateur>0</couple_1utilisateur>
+				<couple_2can>0</couple_2can>
+				<couple_2utilisateur>0</couple_2utilisateur>
+				<seuilFixe>false</seuilFixe>
+				<hysteresis>0.2</hysteresis>
+			</analog>
+		</inputs>
+		<outputs>
+			<digital>
+				<relaisDefaut>
+					<idRelais>2</idRelais>
+				</relaisDefaut>
+			</digital>
+			<pulse/>
+		</outputs>
+	</config>
+</usrtom:userConfigRecorder>

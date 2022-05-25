@@ -1,0 +1,47 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT liste-filtres (liste-filtres-vuetabulaire,
+                         liste-filtres-vueliste,
+                         liste-filtres-vuegraphique)>
+
+<!ELEMENT liste-filtres-vuetabulaire (filtre-vuetabulaire*)>
+
+<!ELEMENT liste-filtres-vueliste (filtre-vueliste*)>
+
+<!ELEMENT liste-filtres-vuegraphique (filtre-vuegraphique*)>
+
+<!ELEMENT filtre-vuetabulaire (liste-lignes-variable?)>
+<!ATTLIST filtre-vuetabulaire
+  nom CDATA #REQUIRED>
+
+<!ELEMENT filtre-vueliste (liste-lignes-evenement?,liste-lignes-variable?)>
+<!ATTLIST filtre-vueliste
+  nom CDATA #REQUIRED>
+
+<!ELEMENT filtre-vuegraphique (graphique+)>
+<!ATTLIST filtre-vuegraphique
+  nom CDATA #REQUIRED>
+
+<!ELEMENT liste-lignes-evenement (ligne-evenement+)>
+
+<!ELEMENT ligne-evenement EMPTY>
+<!ATTLIST ligne-evenement
+  nom CDATA #REQUIRED>
+
+<!ELEMENT liste-lignes-variable (ligne-variable+)>
+<!ATTLIST liste-lignes-variable
+  actif CDATA #REQUIRED>
+
+<!ELEMENT ligne-variable EMPTY>
+<!ATTLIST ligne-variable
+  nom CDATA #REQUIRED
+  couleur CDATA #IMPLIED
+  operateur CDATA #IMPLIED
+  valeur CDATA #IMPLIED>
+
+<!ELEMENT graphique (liste-lignes-variable?)>
+<!ATTLIST graphique
+  actif CDATA #REQUIRED
+  nom CDATA #REQUIRED
+  numero CDATA #REQUIRED>
+

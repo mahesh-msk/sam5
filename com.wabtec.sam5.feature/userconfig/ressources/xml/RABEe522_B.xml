@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by FAIVELEY TRANSPORT (FAIVELEY TRANSPORT) -->
+<!--Ce fichier XML décrit les paramètres des fichiers de parcours du TOM NG utilisés par le logiciel SAM 5 -->
+<enregistreur-def xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ALL_TOM.xsd">
+	<!--Nom_projet & version XML :
+  titre = indication de l'application (ex : Pour Atess Flirt Alsace)
+  numplan = référence Faiveley du fichier xml
+  versionXML = version majeure & mineure du fichier sous la forme Xyy : X = lettre, y = chiffre-->
+	<infos_fichier titre="Pour Atess Flirt Alsace" numplan="ZA561405" versionXML="B00"/>
+	<infos-parcours/>
+	<!--Description enregistreur :
+  modele = référence Faiveley du logiciel enregisteur
+  projet = nom du projet
+  type = type d'enregistreur (format des données enregistrées)
+  resolution-temps = unité de temps -->
+	<enregistreur modele="ZA549691" projet="FLIRT" type="TOM NG" resolution-temps="0.1">
+		<liste-evenements>
+			<evenement nom="Démarrage des enregistrements" code="1" ruptureAcquisition="true">
+				<nom-utilisateur lang="DEF" libelle="Beginn der Aufzeichnungen"/>
+				<nom-utilisateur lang="FR" libelle="Début des enregistrements"/>
+				<nom-utilisateur lang="EN" libelle="Recording start"/>
+				<nom-utilisateur lang="DE" libelle="Beginn der Aufzeichnungen"/>
+			</evenement>
+			<evenement nom="Seuil Temps" code="2">
+				<nom-utilisateur lang="DEF" libelle="Zeitschwelle"/>
+				<nom-utilisateur lang="FR" libelle="Seuil temps"/>
+				<nom-utilisateur lang="EN" libelle="Time threshold"/>
+				<nom-utilisateur lang="DE" libelle="Zeitschwelle"/>
+			</evenement>
+			<evenement nom="Seuil vitesse" code="3">
+				<nom-utilisateur lang="DEF" libelle="Geschwindigkeitsschwelle"/>
+				<nom-utilisateur lang="FR" libelle="Seuil vitesse"/>
+				<nom-utilisateur lang="EN" libelle="Speed threshold"/>
+				<nom-utilisateur lang="DE" libelle="Geschwindigkeitsschwelle"/>
+			</evenement>
+			<evenement nom="Seuil distance" code="4">
+				<nom-utilisateur lang="DEF" libelle="Entfernungsschwelle"/>
+				<nom-utilisateur lang="FR" libelle="Seuil distance"/>
+				<nom-utilisateur lang="EN" libelle="Distance threshold"/>
+				<nom-utilisateur lang="DE" libelle="Entfernungsschwelle"/>
+			</evenement>
+			<evenement nom="EvChgHeureTOM" code="5" changementHeure="true">
+				<nom-utilisateur lang="DEF" libelle="Änderung der Uhrzeit"/>
+				<nom-utilisateur lang="FR" libelle="Changement d'heure"/>
+				<nom-utilisateur lang="EN" libelle="Time change"/>
+				<nom-utilisateur lang="DE" libelle="Änderung der Uhrzeit"/>
+			</evenement>
+			<evenement nom="Changement de jour" code="6">
+				<nom-utilisateur lang="DEF" libelle="Änderung des Tages"/>
+				<nom-utilisateur lang="FR" libelle="Changement De Jour"/>
+				<nom-utilisateur lang="EN" libelle="Day change"/>
+				<nom-utilisateur lang="DE" libelle="Änderung des Tages"/>
+			</evenement>
+			<evenement nom="Nouvelle mission" code="7" ruptureAcquisition="true">
+				<nom-utilisateur lang="DEF" libelle="Neuer Einsatz"/>
+				<nom-utilisateur lang="FR" libelle="Nouvelle mission"/>
+				<nom-utilisateur lang="EN" libelle="New journey file"/>
+				<nom-utilisateur lang="DE" libelle="Neuer Einsatz"/>
+			</evenement>
+			<evenement nom="SeuilAnaCAN_1" code="8">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN #01"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN #01"/>
+				<nom-utilisateur lang="EN" libelle="Analog input #01 from CAN"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN #01"/>
+			</evenement>
+			<evenement nom="SeuilAnaCAN_2" code="9">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN #02"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN #02"/>
+				<nom-utilisateur lang="EN" libelle="Analog input #02 from CAN"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN #02"/>
+			</evenement>
+			<evenement nom="SeuilAnaCAN_3" code="10">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN #03"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN #03"/>
+				<nom-utilisateur lang="EN" libelle="Analog input #03 from CAN"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN #03"/>
+			</evenement>
+			<evenement nom="SeuilAnaCAN_4" code="11">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN #04"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN #04"/>
+				<nom-utilisateur lang="EN" libelle="Analog input #04 from CAN"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN #04"/>
+			</evenement>
+			<evenement nom="SeuilAnaCAN_5" code="12">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN #05"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN #05"/>
+				<nom-utilisateur lang="EN" libelle="Analog input #05 from CAN"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN #05"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_01" code="13">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#01"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#01"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#01change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#01"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_02" code="14">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#02"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#02"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#02 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#02"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_03" code="15">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#03"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#03"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#03 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#03"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_04" code="16">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#04"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#04"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#04 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#04"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_05" code="17">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#05"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#05"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#05 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#05"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_06" code="18">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#06"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#06"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#06 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#06"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_07" code="19">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#07"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#07"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#07 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#07"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_08" code="20">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#08"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#08"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#08 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#08"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_09" code="21">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#09"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#09"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#09 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#09"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_10" code="22">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#10"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#10"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#10 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#10"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_11" code="23">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#11"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#11"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#11 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#11"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_12" code="24">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#12"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#12"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#12 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#12"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_13" code="25">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#13"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#13"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#13 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#13"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_14" code="26">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#14"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#14"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#14 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#14"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_15" code="27">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#15"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#15"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#15 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#15"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_16" code="28">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#16"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#16"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#16 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#16"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_17" code="29">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#17"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#17"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#17 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#17"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_18" code="30">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#18"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#18"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#18 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#18"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_19" code="31">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#19"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#19"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#19 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#19"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_20" code="32">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#20"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#20"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#20 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#20"/>
+			</evenement>
+			<evenement nom="VariationEL_01" code="33">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #01"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #01"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #01 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #01"/>
+			</evenement>
+			<evenement nom="VariationEL_02" code="34">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #02"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #02"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #02 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #02"/>
+			</evenement>
+			<evenement nom="VariationEL_03" code="35">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #03"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #03"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #03 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #03"/>
+			</evenement>
+			<evenement nom="VariationEL_04" code="36">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #04"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #04"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #04 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #04"/>
+			</evenement>
+			<evenement nom="VariationEL_05" code="37">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #05"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #05"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #05 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #05"/>
+			</evenement>
+			<evenement nom="VariationEL_06" code="38">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #06"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #06"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #06 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #06"/>
+			</evenement>
+			<evenement nom="VariationEL_07" code="39">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #07"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #07"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #07 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #07"/>
+			</evenement>
+			<evenement nom="VariationEL_08" code="40">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #08"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #08"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #08 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #08"/>
+			</evenement>
+			<evenement nom="VariationEL_09" code="41">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #09"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #09"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #09 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #09"/>
+			</evenement>
+			<evenement nom="VariationEL_10" code="42">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #10"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #10"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #10 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #10"/>
+			</evenement>
+			<evenement nom="VariationEL_11" code="43">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #11"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #11"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #11 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #11"/>
+			</evenement>
+			<evenement nom="VariationEL_12" code="44">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #12"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #12"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #12 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #12"/>
+			</evenement>
+			<evenement nom="VariationEL_13" code="45">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #13"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #13"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #13 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #13"/>
+			</evenement>
+			<evenement nom="VariationEL_14" code="46">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #14"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #14"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #14 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #14"/>
+			</evenement>
+			<evenement nom="VariationEL_15" code="47">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #15"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #15"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #15 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #15"/>
+			</evenement>
+			<evenement nom="VariationEL_16" code="48">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #16"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #16"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #16 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #16"/>
+			</evenement>
+			<evenement nom="VariationEL_17" code="49">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #17"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #17"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #17 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #17"/>
+			</evenement>
+			<evenement nom="VariationEL_18" code="50">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #18"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #18"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #18 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #18"/>
+			</evenement>
+			<evenement nom="VariationEL_19" code="51">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #19"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #19"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #19 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #19"/>
+			</evenement>
+			<evenement nom="VariationEL_20" code="52">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #20"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #20"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #20 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #20"/>
+			</evenement>
+			<evenement nom="VariationEL_21" code="53">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #21"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #21"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #21 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #21"/>
+			</evenement>
+			<evenement nom="VariationEL_22" code="54">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #22"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #22"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #22 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #22"/>
+			</evenement>
+			<evenement nom="VariationEL_23" code="55">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #23"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #23"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #23 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #23"/>
+			</evenement>
+			<evenement nom="VariationEL_24" code="56">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #24"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #24"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #24 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #24"/>
+			</evenement>
+			<evenement nom="VariationEL_25" code="57">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #25"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #25"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #25 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #25"/>
+			</evenement>
+			<evenement nom="VariationEL_26" code="58">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #26"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #26"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #26 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #26"/>
+			</evenement>
+			<evenement nom="VariationEL_27" code="59">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #27"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #27"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #27 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #27"/>
+			</evenement>
+			<evenement nom="VariationEL_28" code="60">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #28"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #28"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #28 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #28"/>
+			</evenement>
+			<evenement nom="VariationEL_29" code="61">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #29"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #29"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #29 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #29"/>
+			</evenement>
+			<evenement nom="VariationEL_30" code="62">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #30"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #30"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #30 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #30"/>
+			</evenement>
+			<evenement nom="VariationEL_31" code="63">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #31"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #31"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #31 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #31"/>
+			</evenement>
+			<evenement nom="VariationEL_32" code="64">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #32"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #32"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #32 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #32"/>
+			</evenement>
+			<evenement nom="VariationEL_33" code="65">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #33"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #33"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #33 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #33"/>
+			</evenement>
+			<evenement nom="VariationEL_34" code="66">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #34"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #34"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #34 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #34"/>
+			</evenement>
+			<evenement nom="VariationEL_35" code="67">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #35"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #35"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #35 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #35"/>
+			</evenement>
+			<evenement nom="VariationEL_36" code="68">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #36"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #36"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #36 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #36"/>
+			</evenement>
+			<evenement nom="VariationEL_37" code="69">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #37"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #37"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #37 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #37"/>
+			</evenement>
+			<evenement nom="VariationEL_38" code="70">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #38"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #38"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #38 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #38"/>
+			</evenement>
+			<evenement nom="VariationEL_39" code="71">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #39"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #39"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #39 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #39"/>
+			</evenement>
+			<evenement nom="VariationEL_40" code="72">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #40"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #40"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #40 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #40"/>
+			</evenement>
+			<evenement nom="VariationEL_41" code="73">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #41"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #41"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #41 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #41"/>
+			</evenement>
+			<evenement nom="VariationEL_42" code="74">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #42"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #42"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #42 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #42"/>
+			</evenement>
+			<evenement nom="VariationEL_43" code="75">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #43"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #43"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #43 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #43"/>
+			</evenement>
+			<evenement nom="VariationEL_44" code="76">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #44"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #44"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #44 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #44"/>
+			</evenement>
+			<evenement nom="VariationEL_45" code="77">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #45"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #45"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #45 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #45"/>
+			</evenement>
+			<evenement nom="VariationEL_46" code="78">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #46"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #46"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #46 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #46"/>
+			</evenement>
+			<evenement nom="VariationEL_47" code="79">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #47"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #47"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #47 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #47"/>
+			</evenement>
+			<evenement nom="VariationEL_48" code="80">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #48"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #48"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #48 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #48"/>
+			</evenement>
+			<evenement nom="VariationEL_49" code="81">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #49"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #49"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #49 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #49"/>
+			</evenement>
+			<evenement nom="VariationEL_50" code="82">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #50"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #50"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #50 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #50"/>
+			</evenement>
+			<evenement nom="VariationEL_51" code="83">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #51"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #51"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #51 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #51"/>
+			</evenement>
+			<evenement nom="VariationEL_52" code="84">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #52"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #52"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #52 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #52"/>
+			</evenement>
+			<evenement nom="VariationEL_53" code="85">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #53"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #53"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #53 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #53"/>
+			</evenement>
+			<evenement nom="VariationEL_54" code="86">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #54"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #54"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #54 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #54"/>
+			</evenement>
+			<evenement nom="VariationEL_55" code="87">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #55"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #55"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #55 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #55"/>
+			</evenement>
+			<evenement nom="VariationEL_56" code="88">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #56"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #56"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #56 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #56"/>
+			</evenement>
+			<evenement nom="VariationEL_57" code="89">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #57"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #57"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #57 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #57"/>
+			</evenement>
+			<evenement nom="VariationEL_58" code="90">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #58"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #58"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #58 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #58"/>
+			</evenement>
+			<evenement nom="VariationEL_59" code="91">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #59"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #59"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #59 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #59"/>
+			</evenement>
+			<evenement nom="VariationEL_60" code="92">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #60"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #60"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #60 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #60"/>
+			</evenement>
+			<evenement nom="VariationEL_61" code="93">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #61"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #61"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #61 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #61"/>
+			</evenement>
+			<evenement nom="VariationEL_62" code="94">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #62"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #62"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #62 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #62"/>
+			</evenement>
+			<evenement nom="VariationEL_63" code="95">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #63"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #63"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #63 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #63"/>
+			</evenement>
+			<evenement nom="VariationEL_64" code="96">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #64"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #64"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #64 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #64"/>
+			</evenement>
+		</liste-evenements>
+		<reperes date="Date" temps="Temps" distance="Distance" vitesse="Vitesse_TOM" dateAvantChangement="Latch_Date" tempsAvantChangement="Latch_Temps"/>
+		<liste-variables>
+			<variable-discrete nom="EntreeLogique_CAN_01" code="675" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Logischer Eingang CAN 01"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN 01"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique CAN 01"/>
+				<nom-utilisateur lang="DE" libelle="Logischer Eingang CAN 01"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_02" code="676" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Fahrgastnotbremse"/>
+				<nom-utilisateur lang="EN" libelle="Passenger alarm signal"/>
+				<nom-utilisateur lang="FR" libelle="Signal d'alarme passagers"/>
+				<nom-utilisateur lang="DE" libelle="Fahrgastnotbremse"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_03" code="677" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="FR 1 besetzt"/>
+				<nom-utilisateur lang="EN" libelle="Cab 1 occupied"/>
+				<nom-utilisateur lang="FR" libelle="Cabine 1 occupé"/>
+				<nom-utilisateur lang="DE" libelle="FR 1 besetzt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_04" code="678" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="FR 2 besetzt"/>
+				<nom-utilisateur lang="EN" libelle="Cab 2 occupied"/>
+				<nom-utilisateur lang="FR" libelle="Cabine 2 occupé"/>
+				<nom-utilisateur lang="DE" libelle="FR 2 besetzt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_05" code="679" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Fahrzeug geführt"/>
+				<nom-utilisateur lang="EN" libelle="Vehicle towed"/>
+				<nom-utilisateur lang="FR" libelle="Véhicule mené"/>
+				<nom-utilisateur lang="DE" libelle="Fahrzeug geführt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_06" code="680" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Rücksetzten Tageskilometer"/>
+				<nom-utilisateur lang="EN" libelle="Journey reset (m)"/>
+				<nom-utilisateur lang="FR" libelle="Remis à zéro parcours (m)"/>
+				<nom-utilisateur lang="DE" libelle="Rücksetzten Tageskilometer"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_07" code="681" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Soll-Fahrrichtung 1"/>
+				<nom-utilisateur lang="EN" libelle="Order of move direction 1"/>
+				<nom-utilisateur lang="FR" libelle="Consigne sens de marche direction 1"/>
+				<nom-utilisateur lang="DE" libelle="Soll-Fahrrichtung 1"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_08" code="682" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Soll-Fahrrichtung 1"/>
+				<nom-utilisateur lang="EN" libelle="Order of move direction 2"/>
+				<nom-utilisateur lang="FR" libelle="Consigne sens de marche direction 2"/>
+				<nom-utilisateur lang="DE" libelle="Soll-Fahrrichtung 1"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_09" code="683" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Türfreigabe Links"/>
+				<nom-utilisateur lang="EN" libelle="Release left doors"/>
+				<nom-utilisateur lang="FR" libelle="Libération portes gauche"/>
+				<nom-utilisateur lang="DE" libelle="Türfreigabe Links"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_10" code="684" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Türfreigabe rechts"/>
+				<nom-utilisateur lang="EN" libelle="Release right doors"/>
+				<nom-utilisateur lang="FR" libelle="Libération portes droites"/>
+				<nom-utilisateur lang="DE" libelle="Türfreigabe rechts"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_11" code="685" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Türen verriegeln"/>
+				<nom-utilisateur lang="EN" libelle="Order of door locking"/>
+				<nom-utilisateur lang="FR" libelle="Ordre verrouillage des portes"/>
+				<nom-utilisateur lang="DE" libelle="Türen verriegeln"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_12" code="686" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Integra Prüfung"/>
+				<nom-utilisateur lang="EN" libelle="Integra test"/>
+				<nom-utilisateur lang="FR" libelle="Essai Integra"/>
+				<nom-utilisateur lang="DE" libelle="Integra Prüfung"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_13" code="687" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Schnellbremsung"/>
+				<nom-utilisateur lang="EN" libelle="Emergency brake"/>
+				<nom-utilisateur lang="FR" libelle="Freinage d'urgence"/>
+				<nom-utilisateur lang="DE" libelle="Schnellbremsung"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_14" code="688" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="FGNB überbrückt"/>
+				<nom-utilisateur lang="EN" libelle="Passenger alarm signal masked"/>
+				<nom-utilisateur lang="FR" libelle="Signal d'alarme passagers ponté"/>
+				<nom-utilisateur lang="DE" libelle="FGNB überbrückt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_15" code="689" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Fahrschalter Position Null"/>
+				<nom-utilisateur lang="EN" libelle="Lever Pull /Braking pos. zero"/>
+				<nom-utilisateur lang="FR" libelle="Manipulateur Traction /Freinage pos. zéro"/>
+				<nom-utilisateur lang="DE" libelle="Fahrschalter Position Null"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_16" code="690" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Prüfung NBA"/>
+				<nom-utilisateur lang="EN" libelle="NBA test"/>
+				<nom-utilisateur lang="FR" libelle="Essai NBA"/>
+				<nom-utilisateur lang="DE" libelle="Prüfung NBA"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_17" code="691" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Logischer Eingang CAN 17"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN 17"/>
+				<nom-utilisateur lang="FR" libelle="Actionnement pédale homme-mort PdC1"/>
+				<nom-utilisateur lang="DE" libelle="Logischer Eingang CAN 17"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_18" code="692" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Logischer Eingang CAN 18"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN 18"/>
+				<nom-utilisateur lang="FR" libelle="Actionnement pédale homme-mort PdC2"/>
+				<nom-utilisateur lang="DE" libelle="Logischer Eingang CAN 18"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_19" code="693" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Logischer Eingang CAN 19"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN 19"/>
+				<nom-utilisateur lang="FR" libelle="Présence active mécanicien"/>
+				<nom-utilisateur lang="DE" libelle="Logischer Eingang CAN 19"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_CAN_20" code="694" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Logischer Eingang CAN 20"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN 20"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique CAN 20"/>
+				<nom-utilisateur lang="DE" libelle="Logischer Eingang CAN 20"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_01" code="132" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="SO BRS oder SO KVB"/>
+				<nom-utilisateur lang="EN" libelle="SO BRS or SO KVB"/>
+				<nom-utilisateur lang="FR" libelle="SO BRS ou SO KVB"/>
+				<nom-utilisateur lang="DE" libelle="SO BRS oder SO KVB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_02" code="133" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="SF BRS"/>
+				<nom-utilisateur lang="EN" libelle="SF BRS"/>
+				<nom-utilisateur lang="FR" libelle="SF BRS"/>
+				<nom-utilisateur lang="DE" libelle="SF BRS"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_03" code="134" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Taste Quit"/>
+				<nom-utilisateur lang="EN" libelle="Ack. PB"/>
+				<nom-utilisateur lang="FR" libelle="BP Acqt"/>
+				<nom-utilisateur lang="DE" libelle="Taste Quit"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_04" code="135" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 04"/>
+				<nom-utilisateur lang="EN" libelle="Spare 04"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 04"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 04"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_05" code="136" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Taste FC"/>
+				<nom-utilisateur lang="EN" libelle="FC PB"/>
+				<nom-utilisateur lang="FR" libelle="BP FC"/>
+				<nom-utilisateur lang="DE" libelle="Taste FC"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_06" code="137" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Vierkant"/>
+				<nom-utilisateur lang="EN" libelle="Square"/>
+				<nom-utilisateur lang="FR" libelle="Carré"/>
+				<nom-utilisateur lang="DE" libelle="Vierkant"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_07" code="138" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 07"/>
+				<nom-utilisateur lang="EN" libelle="Spare 07"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 07"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 07"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_08" code="139" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="VACMA-Schnellbremse"/>
+				<nom-utilisateur lang="EN" libelle="VACMA EB"/>
+				<nom-utilisateur lang="FR" libelle="FU VACMA"/>
+				<nom-utilisateur lang="DE" libelle="VACMA-Schnellbremse"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_09" code="140" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="RS-Schnellbremse"/>
+				<nom-utilisateur lang="EN" libelle="RS EB"/>
+				<nom-utilisateur lang="FR" libelle="FU RS"/>
+				<nom-utilisateur lang="DE" libelle="RS-Schnellbremse"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_10" code="141" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="KVB-Schnellbremse"/>
+				<nom-utilisateur lang="EN" libelle="KVB EB"/>
+				<nom-utilisateur lang="FR" libelle="FU KVB"/>
+				<nom-utilisateur lang="DE" libelle="KVB-Schnellbremse"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_11" code="142" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 11"/>
+				<nom-utilisateur lang="EN" libelle="Spare 11"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 11"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 11"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_12" code="143" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="SAI"/>
+				<nom-utilisateur lang="EN" libelle="SAI"/>
+				<nom-utilisateur lang="FR" libelle="SAI"/>
+				<nom-utilisateur lang="DE" libelle="SAI"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_13" code="144" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="MP (CO)I auf Null"/>
+				<nom-utilisateur lang="EN" libelle="MP (CO)I to zero"/>
+				<nom-utilisateur lang="FR" libelle="MP (CO)I à zéro"/>
+				<nom-utilisateur lang="DE" libelle="MP (CO)I auf Null"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_14" code="145" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Stromabnehmer Senken"/>
+				<nom-utilisateur lang="EN" libelle="Lower Panto"/>
+				<nom-utilisateur lang="FR" libelle="Baisser Panto"/>
+				<nom-utilisateur lang="DE" libelle="Stromabnehmer Senken"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_15" code="146" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Taste1 NOT"/>
+				<nom-utilisateur lang="EN" libelle="URG PB1"/>
+				<nom-utilisateur lang="FR" libelle="BP1 URG"/>
+				<nom-utilisateur lang="DE" libelle="Taste1 NOT"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_16" code="147" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Akustisches Warnsystem"/>
+				<nom-utilisateur lang="EN" libelle="Horn"/>
+				<nom-utilisateur lang="FR" libelle="Avertisseur sonore"/>
+				<nom-utilisateur lang="DE" libelle="Akustisches Warnsystem"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_17" code="148" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Bremshebel"/>
+				<nom-utilisateur lang="EN" libelle="Brake lever"/>
+				<nom-utilisateur lang="FR" libelle="Manipulateur de Frein"/>
+				<nom-utilisateur lang="DE" libelle="Bremshebel"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_18" code="149" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Licht-Alarmsystem"/>
+				<nom-utilisateur lang="EN" libelle="Luminous Alarm system"/>
+				<nom-utilisateur lang="FR" libelle="Système Alerte Lumineux"/>
+				<nom-utilisateur lang="DE" libelle="Licht-Alarmsystem"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_19" code="150" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Rückwärtsfahrt"/>
+				<nom-utilisateur lang="EN" libelle="Backward move"/>
+				<nom-utilisateur lang="FR" libelle="Marche Arrière"/>
+				<nom-utilisateur lang="DE" libelle="Rückwärtsfahrt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_20" code="151" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Funkalarm"/>
+				<nom-utilisateur lang="EN" libelle="Radio Alarm"/>
+				<nom-utilisateur lang="FR" libelle="Alerte Radio"/>
+				<nom-utilisateur lang="DE" libelle="Funkalarm"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_21" code="152" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Stromabnehmer gesenkt"/>
+				<nom-utilisateur lang="EN" libelle="Panto lowered"/>
+				<nom-utilisateur lang="FR" libelle="Panto baissé"/>
+				<nom-utilisateur lang="DE" libelle="Stromabnehmer gesenkt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_22" code="153" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Fahrdrahtspg.fehlt"/>
+				<nom-utilisateur lang="EN" libelle="Absence of line voltage"/>
+				<nom-utilisateur lang="FR" libelle="Absence tension ligne"/>
+				<nom-utilisateur lang="DE" libelle="Fahrdrahtspg.fehlt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_23" code="154" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Antriebskraft Null"/>
+				<nom-utilisateur lang="EN" libelle="Null Pull"/>
+				<nom-utilisateur lang="FR" libelle="Effort de traction nul"/>
+				<nom-utilisateur lang="DE" libelle="Antriebskraft Null"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_24" code="155" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="HL-Druck unter 2,5 bar"/>
+				<nom-utilisateur lang="EN" libelle="CG pressure low. than 2.5 bars"/>
+				<nom-utilisateur lang="FR" libelle="Pression CG inf. 2.5 bars"/>
+				<nom-utilisateur lang="DE" libelle="HL-Druck unter 2,5 bar"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_25" code="156" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Öffnen des Trennschalters"/>
+				<nom-utilisateur lang="EN" libelle="CB opening"/>
+				<nom-utilisateur lang="FR" libelle="Ouverture DJ"/>
+				<nom-utilisateur lang="DE" libelle="Öffnen des Trennschalters"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_26" code="157" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Trennschalter offen"/>
+				<nom-utilisateur lang="EN" libelle="CB opened"/>
+				<nom-utilisateur lang="FR" libelle="Disjoncteur ouvert"/>
+				<nom-utilisateur lang="DE" libelle="Trennschalter offen"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_27" code="158" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 27"/>
+				<nom-utilisateur lang="EN" libelle="Spare 27"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 27"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 27"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_28" code="159" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 28"/>
+				<nom-utilisateur lang="EN" libelle="Spare 28"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 28"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 28"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_29" code="160" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 29"/>
+				<nom-utilisateur lang="EN" libelle="Spare 29"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 29"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 29"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_30" code="161" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 30"/>
+				<nom-utilisateur lang="EN" libelle="Spare 30"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 30"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 30"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_31" code="162" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 31"/>
+				<nom-utilisateur lang="EN" libelle="Spare 31"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 31"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 31"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_32" code="163" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 32"/>
+				<nom-utilisateur lang="EN" libelle="Spare 32"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 32"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 32"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_33" code="164" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Isolierung VACMA"/>
+				<nom-utilisateur lang="EN" libelle="VACMA Insulation"/>
+				<nom-utilisateur lang="FR" libelle="Isolement VACMA"/>
+				<nom-utilisateur lang="DE" libelle="Isolierung VACMA"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_34" code="165" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 34"/>
+				<nom-utilisateur lang="EN" libelle="Spare 34"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 34"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 34"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_35" code="166" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Vorwärtsfahrt"/>
+				<nom-utilisateur lang="EN" libelle="Forward Move"/>
+				<nom-utilisateur lang="FR" libelle="Marche Avant"/>
+				<nom-utilisateur lang="DE" libelle="Vorwärtsfahrt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_36" code="167" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 36"/>
+				<nom-utilisateur lang="EN" libelle="Spare 36"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 36"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 36"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_37" code="168" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 37"/>
+				<nom-utilisateur lang="EN" libelle="Spare 37"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 37"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 37"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_38" code="169" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 38"/>
+				<nom-utilisateur lang="EN" libelle="Spare 38"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 38"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 38"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_39" code="170" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Totmanns-Schnellbremsung"/>
+				<nom-utilisateur lang="EN" libelle="Dead Man EB"/>
+				<nom-utilisateur lang="FR" libelle="FU Homme Mort"/>
+				<nom-utilisateur lang="DE" libelle="Totmanns-Schnellbremsung"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_40" code="171" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Isolierung Totmannsschaltung"/>
+				<nom-utilisateur lang="EN" libelle="Dead Man Insulation"/>
+				<nom-utilisateur lang="FR" libelle="Isolement Homme Mort"/>
+				<nom-utilisateur lang="DE" libelle="Isolierung Totmannsschaltung"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_41" code="172" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Isolierung KVB"/>
+				<nom-utilisateur lang="EN" libelle="KVB Insulation"/>
+				<nom-utilisateur lang="FR" libelle="Isolement KVB"/>
+				<nom-utilisateur lang="DE" libelle="Isolierung KVB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_42" code="173" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Isolierung BRS"/>
+				<nom-utilisateur lang="EN" libelle="BRS Insulation"/>
+				<nom-utilisateur lang="FR" libelle="Isolement BRS"/>
+				<nom-utilisateur lang="DE" libelle="Isolierung BRS"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_43" code="174" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 43"/>
+				<nom-utilisateur lang="EN" libelle="Spare 43"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 43"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 43"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_44" code="175" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 44"/>
+				<nom-utilisateur lang="EN" libelle="Spare 44"/>
+				<nom-utilisateur lang="FR" libelle="Réserve 44"/>
+				<nom-utilisateur lang="DE" libelle="Reserve 44"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_45" code="176" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Schnellbremsung durch eine Schweizer Einrichtung ausgelöst"/>
+				<nom-utilisateur lang="EN" libelle="Emergency Brake triggered by a Swiss device"/>
+				<nom-utilisateur lang="FR" libelle="Freinage d'urgence déclenché par un équipement suisse"/>
+				<nom-utilisateur lang="DE" libelle="Schnellbremsung durch eine Schweizer Einrichtung ausgelöst"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_46" code="177" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Steuerung der magnetischen Bremsschuhe"/>
+				<nom-utilisateur lang="EN" libelle="Control of magnetic skate"/>
+				<nom-utilisateur lang="FR" libelle="Commande Patins magnétiques"/>
+				<nom-utilisateur lang="DE" libelle="Steuerung der magnetischen Bremsschuhe"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_47" code="178" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve Schweiz 47"/>
+				<nom-utilisateur lang="EN" libelle="Spare Swiss 47"/>
+				<nom-utilisateur lang="FR" libelle="Réserve Suisse 47"/>
+				<nom-utilisateur lang="DE" libelle="Reserve Schweiz 47"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_48" code="179" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve Schweiz 48"/>
+				<nom-utilisateur lang="EN" libelle="Spare Swiss 48"/>
+				<nom-utilisateur lang="FR" libelle="Réserve Suisse 48"/>
+				<nom-utilisateur lang="DE" libelle="Reserve Schweiz 48"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_49" code="180" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Isolierung ZUE"/>
+				<nom-utilisateur lang="EN" libelle="ZUB Insulation"/>
+				<nom-utilisateur lang="FR" libelle="Isolement ZUB"/>
+				<nom-utilisateur lang="DE" libelle="Isolierung ZUE"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_50" code="181" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Isolierung Integra"/>
+				<nom-utilisateur lang="EN" libelle="Integra Insulation"/>
+				<nom-utilisateur lang="FR" libelle="Isolement Integra"/>
+				<nom-utilisateur lang="DE" libelle="Isolierung Integra"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_51" code="182" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Taste M Integra oder Taste M Zub gedrückt"/>
+				<nom-utilisateur lang="EN" libelle="Press on M Intergra PB or M Zub PB"/>
+				<nom-utilisateur lang="FR" libelle="Appui sur BP M Integra ou BP M Zub"/>
+				<nom-utilisateur lang="DE" libelle="Taste M Integra oder Taste M Zub gedrückt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_52" code="183" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Integra Warnung"/>
+				<nom-utilisateur lang="EN" libelle="Integra Warnung"/>
+				<nom-utilisateur lang="FR" libelle="Integra Warnung"/>
+				<nom-utilisateur lang="DE" libelle="Integra Warnung"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_53" code="184" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Integra Halt"/>
+				<nom-utilisateur lang="EN" libelle="Integra Halt"/>
+				<nom-utilisateur lang="FR" libelle="Integra Halt"/>
+				<nom-utilisateur lang="DE" libelle="Integra Halt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_54" code="185" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Taste Quit ZUB oder Integra"/>
+				<nom-utilisateur lang="EN" libelle="ZUB or Integra Ack. PB"/>
+				<nom-utilisateur lang="FR" libelle="BP Acquit ZUB ou Integra"/>
+				<nom-utilisateur lang="DE" libelle="Taste Quit ZUB oder Integra"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_55" code="186" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Hebel an der elektrischen Bremsung"/>
+				<nom-utilisateur lang="EN" libelle="Lever on electric brake"/>
+				<nom-utilisateur lang="FR" libelle="Manipulateur sur freinage élect."/>
+				<nom-utilisateur lang="DE" libelle="Hebel an der elektrischen Bremsung"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_56" code="187" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve Schweiz 56"/>
+				<nom-utilisateur lang="EN" libelle="Spare Swiss 56"/>
+				<nom-utilisateur lang="FR" libelle="Réserve Suisse 56"/>
+				<nom-utilisateur lang="DE" libelle="Reserve Schweiz 56"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_57" code="188" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve Schweiz 57"/>
+				<nom-utilisateur lang="EN" libelle="Spare Swiss 57"/>
+				<nom-utilisateur lang="FR" libelle="Réserve Suisse 57"/>
+				<nom-utilisateur lang="DE" libelle="Reserve Schweiz 57"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_58" code="189" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve Schweiz 58"/>
+				<nom-utilisateur lang="EN" libelle="Spare Swiss 58"/>
+				<nom-utilisateur lang="FR" libelle="Réserve Suisse 58"/>
+				<nom-utilisateur lang="DE" libelle="Reserve Schweiz 58"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_59" code="190" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve Schweiz 59"/>
+				<nom-utilisateur lang="EN" libelle="Spare Swiss 59"/>
+				<nom-utilisateur lang="FR" libelle="Réserve Suisse 59"/>
+				<nom-utilisateur lang="DE" libelle="Reserve Schweiz 59"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_60" code="191" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Umschalter Frankreich/Schweiz auf Frankreich"/>
+				<nom-utilisateur lang="EN" libelle="Switch France/Switzerland on France"/>
+				<nom-utilisateur lang="FR" libelle="Commutateur France/Suisse sur France"/>
+				<nom-utilisateur lang="DE" libelle="Umschalter Frankreich/Schweiz auf Frankreich"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_61" code="192" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="„Taste TEST SIFA SUISSE“ gedrückt"/>
+				<nom-utilisateur lang="EN" libelle="SWISS SIFA TEST PB"/>
+				<nom-utilisateur lang="FR" libelle='Appui sur le "BP TEST SIFA SUISSE"'/>
+				<nom-utilisateur lang="DE" libelle="„Taste TEST SIFA SUISSE“ gedrückt"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_62" code="193" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Öffnungssteuerung linke Türen"/>
+				<nom-utilisateur lang="EN" libelle="Opening order of left doors"/>
+				<nom-utilisateur lang="FR" libelle="Commande d'ouverture portes à gauche"/>
+				<nom-utilisateur lang="DE" libelle="Öffnungssteuerung linke Türen"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_63" code="194" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Öffnungssteuerung rechte Türen"/>
+				<nom-utilisateur lang="EN" libelle="Opening order of right doors"/>
+				<nom-utilisateur lang="FR" libelle="Commande d'ouverture portes à droite"/>
+				<nom-utilisateur lang="DE" libelle="Öffnungssteuerung rechte Türen"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_64" code="195" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Türen auf „geschlossen“ kontrolliert"/>
+				<nom-utilisateur lang="EN" libelle="Doors checked closed"/>
+				<nom-utilisateur lang="FR" libelle="Porte contrôlées fermées"/>
+				<nom-utilisateur lang="DE" libelle="Türen auf „geschlossen“ kontrolliert"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_CURRENTSPEED" code="696" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="532_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_DISTANCETRIG" code="697" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="533_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_COUNTRYOPERAT" code="698" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="534_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_COUNTRYVOLTAGE" code="699" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="535_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_VARIANT" code="700" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="536_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_STATUS" code="701" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="537_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_DRIVERACTION" code="702" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="538_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_C_DRUCK_DG1" code="703" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="539_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_C_DRUCK_DG2" code="704" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="540_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_HL_DRUCK" code="706" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="543_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_CURRENTLIMIT" code="707" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="544_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_ANST_GSVENTILE" code="705" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="545_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="TrainID_old" code="7462" type="uint32" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Vehicule Number"/>
+				<nom-utilisateur lang="EN" libelle="Vehicule Number"/>
+				<nom-utilisateur lang="FR" libelle="Numéro du véhicule"/>
+				<nom-utilisateur lang="DE" libelle="Vehicule Number"/>
+			</variable-discrete>
+			<variable-discrete nom="Unsused695" code="695" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1059" code="1059" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1060" code="1060" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1061" code="1061" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1062" code="1062" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1063" code="1063" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1064" code="1064" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1065" code="1065" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1066" code="1066" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1067" code="1067" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1068" code="1068" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1069" code="1069" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1070" code="1070" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1071" code="1071" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused1072" code="1072" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="541_unused"/>
+			</variable-discrete>
+			<variable-analogique nom="Temps" code="444" type="uint24" coef-directeur="10" offset="0" unite="ms">
+				<nom-utilisateur lang="DEF" libelle="Uhrzeit"/>
+				<nom-utilisateur lang="EN" libelle="Time"/>
+				<nom-utilisateur lang="FR" libelle="Heure"/>
+				<nom-utilisateur lang="DE" libelle="Uhrzeit"/>
+			</variable-analogique>
+			<variable-analogique nom="Date" code="2" type="uint16" coef-directeur="1" offset="0" unite="jour">
+				<nom-utilisateur lang="DEF" libelle="Datum"/>
+				<nom-utilisateur lang="EN" libelle="Date"/>
+				<nom-utilisateur lang="FR" libelle="Date"/>
+				<nom-utilisateur lang="DE" libelle="Datum"/>
+			</variable-analogique>
+			<variable-analogique nom="Latch_Temps" code="445" type="uint24" coef-directeur="10" offset="0" unite="ms">
+				<nom-utilisateur lang="DEF" libelle="Latch Uhrzeit"/>
+				<nom-utilisateur lang="EN" libelle="Latch Time"/>
+				<nom-utilisateur lang="FR" libelle="Latch Time"/>
+				<nom-utilisateur lang="DE" libelle="Latch Uhrzeit"/>
+			</variable-analogique>
+			<variable-analogique nom="Latch_Date" code="446" type="uint16" coef-directeur="1" offset="0" unite="jour">
+				<nom-utilisateur lang="DEF" libelle="Latch Datum"/>
+				<nom-utilisateur lang="EN" libelle="Latch Date"/>
+				<nom-utilisateur lang="FR" libelle="Latch Date"/>
+				<nom-utilisateur lang="DE" libelle="Latch Datum"/>
+			</variable-analogique>
+			<variable-analogique nom="Vitesse_TOM" code="440" type="uint16" coef-directeur="0.1" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Geschwindigkeit"/>
+				<nom-utilisateur lang="EN" libelle="Speed"/>
+				<nom-utilisateur lang="FR" libelle="Vitesse"/>
+				<nom-utilisateur lang="DE" libelle="Geschwindigkeit"/>
+			</variable-analogique>
+			<variable-analogique nom="Distance" code="9" type="uint24" coef-directeur="0.001" offset="0" unite="km">
+				<nom-utilisateur lang="DEF" libelle="Entfernung"/>
+				<nom-utilisateur lang="EN" libelle="Distance"/>
+				<nom-utilisateur lang="FR" libelle="Distance"/>
+				<nom-utilisateur lang="DE" libelle="Entfernung"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana1" code="670" type="uint16" coef-directeur="1" offset="0" unite="mBar">
+				<nom-utilisateur lang="DEF" libelle="Druck Hauptleitung"/>
+				<nom-utilisateur lang="FR" libelle="Pression CG"/>
+				<nom-utilisateur lang="EN" libelle="CG Pressure"/>
+				<nom-utilisateur lang="DE" libelle="Druck Hauptleitung"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana2" code="671" type="int16" coef-directeur="0.1" offset="0" unite="%">
+				<nom-utilisateur lang="DEF" libelle="Fahr/Brems sollwert"/>
+				<nom-utilisateur lang="FR" libelle="Consigne manip. Traction-Freinage"/>
+				<nom-utilisateur lang="EN" libelle="Order lever Pull-Braking"/>
+				<nom-utilisateur lang="DE" libelle="Fahr/Brems sollwert"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana3" code="672" type="uint16" coef-directeur="0.1" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="FLG v-Ist "/>
+				<nom-utilisateur lang="FR" libelle="Vitesse actuelle contrôle commande"/>
+				<nom-utilisateur lang="EN" libelle="Current speed control order"/>
+				<nom-utilisateur lang="DE" libelle="FLG v-Ist "/>
+			</variable-analogique>
+			<variable-analogique nom="Ana4" code="673" type="uint32" coef-directeur="1" offset="0" unite="dam">
+				<nom-utilisateur lang="DEF" libelle="km-Stand"/>
+				<nom-utilisateur lang="FR" libelle="Kilométrage "/>
+				<nom-utilisateur lang="EN" libelle="Mileage"/>
+				<nom-utilisateur lang="DE" libelle="km-Stand"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana5" code="674" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-complexe nom="TrainID" code="462" taille="4">
+				<nom-utilisateur lang="DEF" libelle="TrainID"/>
+				<sous-variable>
+					<variable-discrete nom="TrainID.reserved" taille="8" type="reserved">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TrainID.Type" taille="4" type="uintXbits">
+						<nom-utilisateur lang="DEF" libelle="Type"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TrainID.Numero" taille="20" type="uintXbits">
+						<nom-utilisateur lang="DEF" libelle="Numéro"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+		</liste-variables>
+	</enregistreur>
+	<signature CRC="3c6d"/>
+</enregistreur-def>

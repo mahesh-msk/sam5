@@ -11,7 +11,7 @@
    </configIni>
 
    <launcherArgs>
-      <programArgsWin>-consoleLog -workspace &quot;C:\\Users\\interindep\\opcoach\\wabtec\\AppDataTest\\SAM_data&quot; -data &quot;C:\\Users\\interindep\\opcoach\\wabtec\\AppDataTest\\SAM_data\\workspace&quot;
+      <programArgsWin>-workspace ../userconfig -data ../userconfig/workspace
       </programArgsWin>
       <vmArgsWin>-XX:MaxRAMPercentage=75
 -Duser.language=fr
@@ -41,11 +41,9 @@
       </win>
    </launcher>
 
-
    <vm>
       <windows include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11</windows>
    </vm>
-
 
    <plugins>
    </plugins>
@@ -57,6 +55,14 @@
       <feature id="org.eclipse.emf.common"/>
       <feature id="org.eclipse.rcp"/>
       <feature id="org.eclipse.justj.openjdk.hotspot.jre.full"/>
+      <feature id="org.eclipse.babel.nls_eclipse_de" installMode="root"/>
+      <feature id="org.eclipse.babel.nls_eclipse_es" installMode="root"/>
+      <feature id="org.eclipse.babel.nls_eclipse_fr" installMode="root"/>
+      <feature id="org.eclipse.babel.nls_eclipse_it" installMode="root"/>
+      <feature id="org.eclipse.babel.nls_eclipse_nl" installMode="root"/>
+      <feature id="org.eclipse.babel.nls_eclipse_pt" installMode="root"/>
+      <feature id="org.eclipse.babel.nls_eclipse_tr" installMode="root"/>
+      <feature id="org.eclipse.babel.nls_eclipse_zh" installMode="root"/>
    </features>
 
    <configurations>
