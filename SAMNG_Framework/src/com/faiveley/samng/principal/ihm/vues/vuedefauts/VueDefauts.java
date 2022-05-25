@@ -26,12 +26,13 @@ import com.faiveley.samng.principal.ihm.actions.captures.CapturerVueAction;
 import com.faiveley.samng.principal.ihm.actions.captures.ICapturable;
 import com.faiveley.samng.principal.ihm.actions.captures.ImprimerVueAction;
 import com.faiveley.samng.principal.ihm.actions.fichier.SauverRapportDefautsAction;
+import com.faiveley.samng.principal.ihm.listeners.IDataChangedListener;
 import com.faiveley.samng.principal.sm.repertoires.RepertoiresAdresses;
 
 /**
  * @author Cosmin Udroiu
  */
-public class VueDefauts extends ViewPart implements ICapturable {
+public class VueDefauts extends ViewPart implements ICapturable, IDataChangedListener {
 	public static final String ID = "SAMNG_Framework.Logger.Viewer";
 
 	private Composite mainComposite;
@@ -71,6 +72,10 @@ public class VueDefauts extends ViewPart implements ICapturable {
 		ajoutActionToolBar(imprimerVueAction);
 		ajoutActionToolBar(capturerVueAction);
 		ajoutActionToolBar(sauverVueAction);
+		
+		// Must register as data listener to be refreshed... 
+		ActivatorData.getInstance().addDataListener(this);
+
 	}
 
 	/**
@@ -154,5 +159,10 @@ public class VueDefauts extends ViewPart implements ICapturable {
 
 	public Composite getContenu() {
 		return this.mainComposite;
+	}
+
+	@Override
+	public void onDataChange() {
+		reloadFromLogFile();
 	}
 }
