@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- gestion de la configuration d'une vue -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="vue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="filtre-applique"/>
+        <xs:element minOccurs="0" ref="configuration-colonnes"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="configuration-colonnes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="colonne"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="colonne">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.colonne"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.colonne">
+    <xs:attribute name="nom" use="required"/>
+    <xs:attribute name="largeur" use="required"/>
+    <xs:attribute name="affiche" use="required"/>
+  </xs:attributeGroup>
+  <xs:element name="filtre-applique">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.filtre-applique"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.filtre-applique">
+    <xs:attribute name="nom" use="required"/>
+  </xs:attributeGroup>
+</xs:schema>

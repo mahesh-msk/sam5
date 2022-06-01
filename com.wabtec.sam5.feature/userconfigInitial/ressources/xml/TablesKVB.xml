@@ -1,0 +1,2374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables-kvb>
+	<body>
+		<tableLabels>
+			<!-- IHM -->
+			<text code="IHM.DonneesTrainKVB">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.ihm.donneesTrainKVB</label>
+				<label lang="FR">Panneau de données KVB</label>
+			</text>
+			<text code="IHM.CategorieKVB">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.ihm.categorieKVB</label>
+				<label lang="FR">Catégorie KVB</label>
+			</text>
+			<text code="IHM.Informations">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.ihm.informations</label>
+				<label lang="FR">Informations de balises</label>
+			</text>
+			<text code="IHM.PointInformation">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.ihm.pointInformation</label>
+				<label lang="FR">Point d'information n°%s</label>
+			</text>
+			<text code="IHM.TypePointInformation">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.ihm.typePointInformation</label>
+				<label lang="FR">Type</label>
+			</text>
+			<text code="IHM.ErreurDecodage">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.ihm.erreurDecodage</label>
+				<label lang="FR">Erreur de décodage</label>
+			</text>
+			<!-- Variable analogique Vitesse limite KVB -->
+			<text code="Vitesse_limite_KVB">				<!-- do not modify "code" -->
+				<label lang="DEF">(V) Vitesse limite KVB</label>
+				<label lang="FR">(V) Vitesse limite KVB</label>
+			</text>
+			<!-- Textes en rouge -->
+			<text code="Alerte.CategorieTrainInvalide">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.alerte.invalidePourCategorieTrain</label>
+				<label lang="FR">Invalide pour cette catégorie de train.</label>
+			</text>
+			<text code="Alerte.PointInformationContreSens">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.alerte.invalideSensDeMarche</label>
+				<label lang="FR">Point d'information pour contre-sens.</label>
+			</text>
+			<!-- Types des points d'informations -->
+			<text code="^1,9$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.1-9</label>
+				<label lang="FR">GSFC sans glissement</label>
+			</text>
+			<text code="^1,9,14$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.1-9-14</label>
+				<label lang="FR">GSFC sans glissement avec déclivité</label>
+			</text>
+			<text code="^3,-1$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.3-M</label>
+				<label lang="FR">Tableau Indicateur Vitesse éxécution</label>
+			</text>
+			<text code="^3,8(,(8|13))*$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.3-8-(8|13)*</label>
+				<label lang="FR">Tableau Indicateur Vitesse éxécution multi-taux</label>
+			</text>
+			<text code="^4,9$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.4-9</label>
+				<label lang="FR">GSFC avec glissement</label>
+			</text>
+			<text code="^4,9,14$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.4-9-14</label>
+				<label lang="FR">GSFC avec glissement et déclivité</label>
+			</text>
+			<text code="^5,-1$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.5-M</label>
+				<label lang="FR">Frontière de zone</label>
+			</text>
+			<text code="^5,5$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.5-5</label>
+				<label lang="FR">Frontière de zone bidirectionnel</label>
+			</text>
+			<text code="^(5,7)|(7,5)$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.(5-7)|(7-5)</label>
+				<label lang="FR">Frontière de zone et Tableau Indicateur Vitesse éxécution bidirectionnel</label>
+			</text>
+			<text code="^6,9$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.6-9</label>
+				<label lang="FR">Tableau Indicateur Vitesse Distance</label>
+			</text>
+			<text code="^6,9,14$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.6-9-14</label>
+				<label lang="FR">Tableau Indicateur Vitesse Distance avec déclivité</label>
+			</text>
+			<text code="^6,8(,(8|13))*,9$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.6-8-(8|13)*-9</label>
+				<label lang="FR">Tableau Indicateur Vitesse Distance multi-taux sans déclivité</label>
+			</text>
+			<text code="^6,8(,(8|9|13))*,14$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.6-8-(8|9|13)*-14</label>
+				<label lang="FR">Tableau Indicateur Vitesse Distance multi-taux avec déclivité</label>
+			</text>
+			<text code="^7,7$">				<!-- "code" is a regex -->
+				<label lang="DEF">KVB.pointInformation.type.7-7</label>
+				<label lang="FR">Tableau Indicateur Vitesse éxécution bidirectionnel</label>
+			</text>
+			<!-- Types des marqueurs -->
+			<text code="X1X4">
+				<label lang="DEF">KVB.table.X1X4.titre</label>
+				<label lang="FR">Balise signal GSFC</label>
+			</text>
+			<text code="X3">
+				<label lang="DEF">KVB.table.X3.titre</label>
+				<label lang="FR">Codage des TIVE</label>
+			</text>
+			<text code="X5">
+				<label lang="DEF">KVB.table.X5.titre</label>
+				<label lang="FR">Codage des frontières de zone</label>
+			</text>
+			<text code="X6">
+				<label lang="DEF">KVB.table.X6.titre</label>
+				<label lang="FR">Codage des TIVD</label>
+			</text>
+			<text code="X7">
+				<label lang="DEF">KVB.table.X7.titre</label>
+				<label lang="FR">Codage des TIVE bidirectionnels</label>
+			</text>
+			<text code="X8X13BaliseSigneVariable">
+				<label lang="DEF">KVB.table.X8X13.titre</label>
+				<label lang="FR">Codage des balises muli-taux</label>
+			</text>
+			<text code="X9">
+				<label lang="DEF">KVB.table.X9.titre</label>
+				<label lang="FR">Codage de la balise distance</label>
+			</text>
+			<text code="X14TIVD">
+				<label lang="DEF">KVB.table.X14.distance.titre</label>
+				<label lang="FR">Codage de la balise de déclivité - distance</label>
+			</text>
+			<text code="X14Declivite">
+				<label lang="DEF">KVB.table.X14.declivite.titre</label>
+				<label lang="FR">Codage de la balise de déclivité - déclivité</label>
+			</text>
+			<!-- Valeurs -->
+			<!-- All -->
+			<text code="all.AE">
+				<label lang="DEF">KVB.table.all.valeur.AE</label>
+				<label lang="FR">Annulation Éxécution</label>
+			</text>
+			<text code="all.nul">
+				<label lang="DEF">KVB.table.all.valeur.nul</label>
+				<label lang="FR">-</label>
+			</text>
+			<text code="all.nonUtilise">
+				<label lang="DEF">KVB.table.all.valeur.nonUtilise</label>
+				<label lang="FR">Non utilisé</label>
+			</text>
+			<!-- X1X4 -->
+			<text code="X1X4.CBAL">
+				<label lang="DEF">KVB.table.X1X4.valeur.C,BAL</label>
+				<label lang="FR">Carré, Block Automatique Lumineux</label>
+			</text>
+			<text code="X1X4.CSBM">
+				<label lang="DEF">KVB.table.X1X4.valeur.CS,BM</label>
+				<label lang="FR">Carré Sémaphore, Block Manuel</label>
+			</text>
+			<text code="X1X4.SBAL">
+				<label lang="DEF">KVB.table.X1X4.valeur.S,BAL</label>
+				<label lang="FR">Sémaphore, Block Automatique Lumineux</label>
+			</text>
+			<text code="X1X4.AouACli">
+				<label lang="DEF">KVB.table.X1X4.valeur.AouACli</label>
+				<label lang="FR">Avertissement ou Avertissement Clignotant (canton court)</label>
+			</text>
+			<text code="X1X4.VLlte160">
+				<label lang="DEF">KVB.table.X1X4.valeur.VLlte160</label>
+				<label lang="FR">Voie Libre &lt;= 160</label>
+			</text>
+			<text code="X1X4.VLgt160">
+				<label lang="DEF">KVB.table.X1X4.valeur.VLgt160</label>
+				<label lang="FR">Voie Libre &gt; 160</label>
+			</text>
+			<text code="X1X4.RAFCLb">
+				<label lang="DEF">X1X4.RAFCLb</label>
+				<label lang="FR">Rafraîchissement de cantons, Canton Long (condition pour circulation &gt; 160 km/h)</label>
+			</text>
+			<text code="X1X4.VLCli">
+				<label lang="DEF">KVB.table.X1X4.valeur.VL,Cli</label>
+				<label lang="FR">Voie Libre, Clignotant</label>
+			</text>
+			<text code="X1X4.RAFCL">
+				<label lang="DEF">KVB.table.X1X4.valeur.RAF,CL</label>
+				<label lang="FR">Rafraîchissement de cantons, Canton Long</label>
+			</text>
+			<text code="X1X4.REOCS">
+				<label lang="DEF">KVB.table.X1X4.valeur.REO,CS</label>
+				<label lang="FR">Réouverture, Carré Sémaphore</label>
+			</text>
+			<text code="X1X4.PROX">
+				<label lang="DEF">KVB.table.X1X4.valeur.PROX</label>
+				<label lang="FR">Information de Proximité</label>
+			</text>
+			<text code="X1X4.RAFCC">
+				<label lang="DEF">KVB.table.X1X4.valeur.RAF,CC</label>
+				<label lang="FR">Rafraîchissement de cantons, Canton Court</label>
+			</text>
+			<text code="X1X4.REOVL">
+				<label lang="DEF">KVB.table.X1X4.valeur.REO,VL</label>
+				<label lang="FR">Réouverture, Voie Libre</label>
+			</text>
+			<!-- X1X4 - VE/VB -->
+			<text code="X1X4.VEVB.VE">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.table.X1X4.VE</label>
+				<label lang="FR">Vitesse Éxécution</label>
+			</text>
+			<text code="X1X4.VEVB.VB">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.table.X1X4.VB</label>
+				<label lang="FR">Vitesse Brut</label>
+			</text>
+			<text code="X1X4.VEVB.VMb">
+				<label lang="DEF">KVB.table.X1X4.VEVB.valeur.VMb</label>
+				<label lang="FR">Vitesse Maximale (condition pour circulation &gt; 160 km/h)</label>
+			</text>
+			<text code="X1X4.VEVB.VM">
+				<label lang="DEF">KVB.table.X1X4.VEVB.valeur.VM</label>
+				<label lang="FR">Vitesse Maximale</label>
+			</text>
+			<!-- VE -->
+			<text code="X1X4.VE.ArretTypeA">
+				<label lang="DEF">KVB.table.X1X4.valeur.VE.ArretTypeA</label>
+				<label lang="FR">Arrêt Type A</label>
+			</text>
+			<text code="X1X4.VE.ArretTypeB">
+				<label lang="DEF">KVB.table.X1X4.valeur.VE.ArretTypeB</label>
+				<label lang="FR">Arrêt Type B</label>
+			</text>
+			<text code="X1X4.VE.ArretTypeC">
+				<label lang="DEF">KVB.table.X1X4.valeur.VE.ArretTypeC</label>
+				<label lang="FR">Arrêt Type C</label>
+			</text>
+			<text code="X1X4.VE.30LPV">
+				<label lang="DEF">KVB.table.X1X4.valeur.VE.30LPV</label>
+				<label lang="FR">30, Limite Permanent de Vitesse</label>
+			</text>
+			<text code="X1X4.VE.40LPV">
+				<label lang="DEF">KVB.table.X1X4.valeur.VE.40LPV</label>
+				<label lang="FR">40, Limite Permanent de Vitesse</label>
+			</text>
+			<text code="X1X4.VE.60LPV">
+				<label lang="DEF">KVB.table.X1X4.valeur.VE.60LPV</label>
+				<label lang="FR">60, Limite Permanent de Vitesse</label>
+			</text>
+			<!-- VB -->
+			<text code="X1X4.VB.0CLTV">
+				<label lang="DEF">KVB.table.X1X4.valeur.VB.0,CLTV</label>
+				<label lang="FR">0, Condition sur Limite Temporaire de Vitesse</label>
+			</text>
+			<text code="X1X4.VB.VMCLTV">
+				<label lang="DEF">KVB.table.X1X4.valeur.VB.VM,CLTV</label>
+				<label lang="FR">Vitesse Maximale, Condition sur Limite Temporaire de Vitesse</label>
+			</text>
+			<!-- X3X6X7 -->
+			<text code="X3X6X7.LPV">
+				<label lang="DEF">KVB.table.X3X6X7.valeur.LPV</label>
+				<label lang="FR">Limite Permanente de Vitesse</label>
+			</text>
+			<text code="X3X6X7.LTV">
+				<label lang="DEF">KVB.table.X3X6X7.valeur.LTV</label>
+				<label lang="FR">Limite Temporaire de Vitesse</label>
+			</text>
+			<text code="X3X6X7.P">
+				<label lang="DEF">KVB.table.X3X6X7.valeur.P</label>
+				<label lang="FR">Éxécution tableau Préannonce</label>
+			</text>
+			<!-- X3X6 -->
+			<text code="X3X6.G">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.table.X3X6.valeur.G</label>
+				<label lang="FR">1 balise de vitesse (G)</label>
+			</text>
+			<text code="X3X6.G,S1">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.table.X3X6.valeur.G,S1</label>
+				<label lang="FR">2 balises de vitesse (G,S1)</label>
+			</text>
+			<text code="X3X6.G,S3">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.table.X3X6.valeur.G,S3</label>
+				<label lang="FR">2 balises de vitesse (G,S3)</label>
+			</text>
+			<text code="X3X6.G,S1,S2,S3">				<!-- do not modify "code" -->
+				<label lang="DEF">KVB.table.X3X6.valeur.G,S1,S2,S3</label>
+				<label lang="FR">4 balises de vitesse (G,S1,S2,S3)</label>
+			</text>
+			<!-- X5 -->
+			<text code="X5.bidirectionnel">
+				<label lang="DEF">KVB.table.X5.valeur.bidirectionnel</label>
+				<label lang="FR">bidirectionnel</label>
+			</text>
+			<text code="X5.unidirectionnel">
+				<label lang="DEF">KVB.table.X5.valeur.unidirectionnel</label>
+				<label lang="FR">unidirectionnel</label>
+			</text>
+			<text code="X5.FLTV">
+				<label lang="DEF">KVB.table.X5.valeur.FLTV</label>
+				<label lang="FR">Fin de Limite Temporaire de Vitesse</label>
+			</text>
+			<text code="X5.FNE">
+				<label lang="DEF">KVB.table.X5.valeur.FNE</label>
+				<label lang="FR">Frontière avec zone Non Equipée</label>
+			</text>
+			<text code="X5.DTCC">
+				<label lang="DEF">KVB.table.X5.valeur.DTCC</label>
+				<label lang="FR">Début de zone de Transmission Continue en Construction</label>
+			</text>
+			<text code="X5.DZHV">
+				<label lang="DEF">KVB.table.X5.valeur.DZHV</label>
+				<label lang="FR">Début de Zone Hors Visualisation</label>
+			</text>
+			<text code="X5.DZSA">
+				<label lang="DEF">KVB.table.X5.valeur.DZSA</label>
+				<label lang="FR">Début de Zone Sans Alerte</label>
+			</text>
+			<text code="X5.DZC">
+				<label lang="DEF">KVB.table.X5.valeur.DZC</label>
+				<label lang="FR">Début de Zone en Construction</label>
+			</text>
+			<text code="X5.DGV">
+				<label lang="DEF">KVB.table.X5.valeur.DGV</label>
+				<label lang="FR">Début de zone à Grande Vitesse</label>
+			</text>
+			<text code="X5.DVL">
+				<label lang="DEF">KVB.table.X5.valeur.DVL</label>
+				<label lang="FR">Début de zone à Vitesse Limitée</label>
+			</text>
+			<text code="X5.FTCC">
+				<label lang="DEF">KVB.table.X5.valeur.FTCC</label>
+				<label lang="FR">Fin de zone de Transmission Continue en Construction</label>
+			</text>
+			<text code="X5.FZHV">
+				<label lang="DEF">KVB.table.X5.valeur.FZHV</label>
+				<label lang="FR">Fin de Zone Hors Visualisation</label>
+			</text>
+			<text code="X5.FZSA">
+				<label lang="DEF">KVB.table.X5.valeur.FZSA</label>
+				<label lang="FR">Fin de Zone Sans Alerte</label>
+			</text>
+			<text code="X5.FZC">
+				<label lang="DEF">KVB.table.X5.valeur.FZC</label>
+				<label lang="FR">Fin de Zone en Construction</label>
+			</text>
+			<text code="X5.FGV">
+				<label lang="DEF">KVB.table.X5.valeur.FGV</label>
+				<label lang="FR">Fin de zone à Grande Vitesse</label>
+			</text>
+			<text code="X5.FVL">
+				<label lang="DEF">KVB.table.X5.valeur.FVL</label>
+				<label lang="FR">Fin de zone à Vitesse Limitée</label>
+			</text>
+			<!-- X6 -->
+			<text code="X6.AA">
+				<label lang="DEF">KVB.table.X6.valeur.AA</label>
+				<label lang="FR">Annulation d'Annonce</label>
+			</text>
+			<!-- X14 -->
+			<text code="X14.inclinaison.haut">
+				<label lang="DEF">KVB.table.X14.inclinaison.haut</label>
+				<label lang="FR">pente</label>
+			</text>
+			<text code="X14.inclinaison.bas">
+				<label lang="DEF">KVB.table.X14.inclinaison.bas</label>
+				<label lang="FR">rampe</label>
+			</text>
+		</tableLabels>
+		<tableDecodage code="Train">
+			<categorie valeur="1" vitesseLimite="140">
+				<lte>7</lte>
+				<gt>1</gt>
+			</categorie>
+			<categorie valeur="2" vitesseLimite="140">
+				<lte>3</lte>
+				<gt>2</gt>
+			</categorie>
+			<categorie valeur="3" vitesseLimite="90">
+				<lte>5</lte>
+				<gt>4</gt>
+			</categorie>
+			<categorie valeur="4" vitesseLimite="140">
+				<lte>0</lte>
+				<gt></gt>
+			</categorie>
+			<categorie valeur="5" vitesseLimite="140">
+				<lte>0</lte>
+				<gt>6</gt>
+			</categorie>
+			<categorie valeur="6" vitesseLimite="140">
+				<lte>7</lte>
+				<gt></gt>
+			</categorie>
+			<categorie valeur="7" vitesseLimite="">
+				<lte></lte>
+				<gt></gt>
+			</categorie>
+			<categorie valeur="8" vitesseLimite="">
+				<lte></lte>
+				<gt></gt>
+			</categorie>
+			<categorie valeur="9" vitesseLimite="">
+				<lte></lte>
+				<gt></gt>
+			</categorie>
+		</tableDecodage>
+		<tableDecodage code="PointInformationNumerique">
+			<xsm_xcs xsm="1" xcs="65">
+				<X>1</X>
+				<X>9</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="2" xcs="66">
+				<X>1</X>
+				<X>9</X>
+				<X>14</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="22" xcs="86">
+				<X>3</X>
+				<X>M</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="23" xcs="87">
+				<X>3</X>
+				<X>M</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="24" xcs="88">
+				<X>3</X>
+				<X>8</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="25" xcs="89">
+				<X>3</X>
+				<X>8</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="26" xcs="90">
+				<X>3</X>
+				<X>8</X>
+				<X>8</X>
+				<X>8</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+				<quartet>Y4</quartet>
+				<quartet>Z4</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="27" xcs="91">
+				<X>3</X>
+				<X>8</X>
+				<X>13</X>
+				<X>8</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+				<quartet>Y4</quartet>
+				<quartet>Z4</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="3" xcs="67">
+				<X>4</X>
+				<X>9</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="4" xcs="68">
+				<X>4</X>
+				<X>9</X>
+				<X>14</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="28" xcs="92">
+				<X>5</X>
+				<X>M</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="128" xcs="128">
+				<X>5</X>
+				<X>5</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="129" xcs="129">
+				<X>5</X>
+				<X>7</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="130" xcs="130">
+				<X>5</X>
+				<X>7</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="9" xcs="73">
+				<X>6</X>
+				<X>9</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="20" xcs="84">
+				<X>6</X>
+				<X>9</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="10" xcs="74">
+				<X>6</X>
+				<X>9</X>
+				<X>14</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="21" xcs="85">
+				<X>6</X>
+				<X>9</X>
+				<X>14</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="11" xcs="75">
+				<X>6</X>
+				<X>8</X>
+				<X>9</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="13" xcs="77">
+				<X>6</X>
+				<X>8</X>
+				<X>9</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="16" xcs="80">
+				<X>6</X>
+				<X>8</X>
+				<X>8</X>
+				<X>8</X>
+				<X>9</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+				<quartet>Y4</quartet>
+				<quartet>Z4</quartet>
+				<quartet>Y5</quartet>
+				<quartet>Z5</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="18" xcs="82">
+				<X>6</X>
+				<X>8</X>
+				<X>13</X>
+				<X>8</X>
+				<X>9</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+				<quartet>Y4</quartet>
+				<quartet>Z4</quartet>
+				<quartet>Y5</quartet>
+				<quartet>Z5</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="12" xcs="76">
+				<X>6</X>
+				<X>8</X>
+				<X>9</X>
+				<X>14</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Y4</quartet>
+				<quartet>Z4</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="14" xcs="78">
+				<X>6</X>
+				<X>8</X>
+				<X>9</X>
+				<X>14</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Y4</quartet>
+				<quartet>Z4</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="17" xcs="81">
+				<X>6</X>
+				<X>8</X>
+				<X>8</X>
+				<X>8</X>
+				<X>9</X>
+				<X>14</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+				<quartet>Y4</quartet>
+				<quartet>Z4</quartet>
+				<quartet>Y5</quartet>
+				<quartet>Y6</quartet>
+				<quartet>Z6</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="19" xcs="83">
+				<X>6</X>
+				<X>8</X>
+				<X>13</X>
+				<X>8</X>
+				<X>9</X>
+				<X>14</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+				<quartet>Y3</quartet>
+				<quartet>Z3</quartet>
+				<quartet>Y4</quartet>
+				<quartet>Z4</quartet>
+				<quartet>Y5</quartet>
+				<quartet>Y6</quartet>
+				<quartet>Z6</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="131" xcs="131">
+				<X>7</X>
+				<X>5</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="132" xcs="132">
+				<X>7</X>
+				<X>7</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="133" xcs="133">
+				<X>7</X>
+				<X>7</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="134" xcs="134">
+				<X>7</X>
+				<X>5</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="135" xcs="135">
+				<X>7</X>
+				<X>7</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+			<xsm_xcs xsm="136" xcs="136">
+				<X>7</X>
+				<X>7</X>
+				<quartet>Y1</quartet>
+				<quartet>Z1</quartet>
+				<quartet>Y2</quartet>
+				<quartet>Z2</quartet>
+			</xsm_xcs>
+		</tableDecodage>
+		<tableDecodage code="X1X4">
+			<Y valeur="0">
+				<Z valeur="0">all.nonUtilise</Z>
+			</Y>
+			<Y valeur="1">
+				<Z valeur="1">X1X4.CBAL</Z>
+				<Z valeur="2">X1X4.CBAL</Z>
+			</Y>
+			<Y valeur="2">
+				<Z valeur="11">X1X4.CSBM</Z>
+				<Z valeur="13">X1X4.CSBM</Z>
+			</Y>
+			<Y valeur="3">
+				<Z valeur="1">X1X4.SBAL</Z>
+				<Z valeur="2">X1X4.SBAL</Z>
+			</Y>
+			<Y valeur="4">
+				<Z valeur="1">X1X4.AouACli</Z>
+				<Z valeur="2">X1X4.AouACli</Z>
+				<Z valeur="4">X1X4.VLlte160</Z>
+				<Z valeur="5">X1X4.VLlte160</Z>
+				<Z valeur="6">X1X4.VLlte160</Z>
+				<Z valeur="11">X1X4.VLlte160</Z>
+				<Z valeur="13">X1X4.VLlte160</Z>
+			</Y>
+			<Y valeur="5">
+				<Z valeur="1">X1X4.AouACli</Z>
+				<Z valeur="2">X1X4.AouACli</Z>
+				<Z valeur="4">X1X4.VLlte160</Z>
+				<Z valeur="5">X1X4.VLlte160</Z>
+				<Z valeur="6">X1X4.VLlte160</Z>
+				<Z valeur="11">X1X4.VLlte160</Z>
+				<Z valeur="13">X1X4.VLlte160</Z>
+			</Y>
+			<Y valeur="6">
+				<Z valeur="1">X1X4.AouACli</Z>
+				<Z valeur="2">X1X4.AouACli</Z>
+				<Z valeur="4">X1X4.VLlte160</Z>
+				<Z valeur="5">X1X4.VLlte160</Z>
+				<Z valeur="6">X1X4.VLlte160</Z>
+				<Z valeur="11">X1X4.VLlte160</Z>
+				<Z valeur="13">X1X4.VLlte160</Z>
+			</Y>
+			<Y valeur="7">
+				<Z valeur="1">X1X4.AouACli</Z>
+				<Z valeur="2">X1X4.AouACli</Z>
+				<Z valeur="4">X1X4.VLlte160</Z>
+				<Z valeur="5">X1X4.VLlte160</Z>
+				<Z valeur="6">X1X4.VLlte160</Z>
+				<Z valeur="11">X1X4.VLlte160</Z>
+				<Z valeur="13">X1X4.VLlte160</Z>
+			</Y>
+			<Y valeur="8">
+				<Z valeur="1">X1X4.AouACli</Z>
+				<Z valeur="2">X1X4.AouACli</Z>
+				<Z valeur="4">X1X4.VLlte160</Z>
+				<Z valeur="5">X1X4.VLlte160</Z>
+				<Z valeur="6">X1X4.VLlte160</Z>
+				<Z valeur="11">X1X4.VLlte160</Z>
+				<Z valeur="13">X1X4.VLlte160</Z>
+			</Y>
+			<Y valeur="9">
+				<Z valeur="1">X1X4.AouACli</Z>
+				<Z valeur="2">X1X4.AouACli</Z>
+				<Z valeur="4">X1X4.VLlte160</Z>
+				<Z valeur="5">X1X4.VLlte160</Z>
+				<Z valeur="6">X1X4.VLlte160</Z>
+				<Z valeur="11">X1X4.VLlte160</Z>
+				<Z valeur="13">X1X4.VLlte160</Z>
+			</Y>
+			<Y valeur="12">
+				<Z valeur="12">X1X4.VLgt160</Z>
+				<Z valeur="14">X1X4.RAFCLb</Z>
+			</Y>
+			<Y valeur="13">
+				<Z valeur="1">X1X4.AouACli</Z>
+				<Z valeur="2">X1X4.AouACli</Z>
+				<Z valeur="4">X1X4.VLlte160</Z>
+				<Z valeur="5">X1X4.VLlte160</Z>
+				<Z valeur="6">X1X4.VLlte160</Z>
+				<Z valeur="10">X1X4.VLCli</Z>
+				<Z valeur="11">X1X4.VLlte160</Z>
+				<Z valeur="13">X1X4.VLlte160</Z>
+				<Z valeur="14">X1X4.RAFCL</Z>
+			</Y>
+			<Y valeur="14">
+				<Z valeur="1">X1X4.REOCS</Z>
+				<Z valeur="2">X1X4.REOCS</Z>
+				<Z valeur="4">X1X4.REOVL</Z>
+				<Z valeur="5">X1X4.REOVL</Z>
+				<Z valeur="6">X1X4.REOVL</Z>
+				<Z valeur="11">X1X4.REOVL</Z>
+				<Z valeur="13">X1X4.REOVL</Z>
+				<Z valeur="14">
+					<X valeur="1">X1X4.PROX</X>
+					<X valeur="4">X1X4.RAFCC</X>
+				</Z>
+			</Y>
+		</tableDecodage>
+		<tableDecodage code="X1X4VE">
+			<Y valeur="0">all.nul</Y>
+			<Y valeur="1">X1X4.VE.ArretTypeA</Y>
+			<Y valeur="2">X1X4.VE.ArretTypeB</Y>
+			<Y valeur="3">X1X4.VE.ArretTypeC</Y>
+			<Y valeur="4">30</Y>
+			<Y valeur="5">40</Y>
+			<Y valeur="6">60</Y>
+			<Y valeur="7">X1X4.VE.30LPV</Y>
+			<Y valeur="8">X1X4.VE.40LPV</Y>
+			<Y valeur="9">X1X4.VE.60LPV</Y>
+			<Y valeur="12">X1X4.VEVB.VMb</Y>
+			<Y valeur="13">X1X4.VEVB.VM</Y>
+			<Y valeur="14">all.AE</Y>
+		</tableDecodage>
+		<tableDecodage code="X1X4VB">
+			<Z valeur="0">all.nul</Z>
+			<Z valeur="1">0</Z>
+			<Z valeur="2">X1X4.VB.0CLTV</Z>
+			<Z valeur="4">30</Z>
+			<Z valeur="5">40</Z>
+			<Z valeur="6">60</Z>
+			<Z valeur="10">160</Z>
+			<Z valeur="11">X1X4.VB.VMCLTV</Z>
+			<Z valeur="12">X1X4.VEVB.VMb</Z>
+			<Z valeur="13">X1X4.VEVB.VM</Z>
+			<Z valeur="14">all.AE</Z>
+		</tableDecodage>
+		<tableDecodage code="X3" unite="km/h">
+			<Y valeur="0">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="1">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="2">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">all.nul</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="3">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1</groupement>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="4">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1</groupement>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="5">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1</groupement>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">all.nul</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="6">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S3</groupement>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="7">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S3</groupement>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="8">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S3</groupement>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">all.nul</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="9">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1,S2,S3</groupement>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="10">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1,S2,S3</groupement>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="11">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1,S2,S3</groupement>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">all.nul</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="12">
+				<limitation>X3X6X7.LTV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="13">
+				<limitation>X3X6X7.LTV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="14">
+				<limitation>X3X6X7.LTV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">all.nul</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+		</tableDecodage>
+		<tableDecodage code="X5">
+			<Y valeur="0">
+				<direction>X5.bidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="1">
+				<direction>X5.bidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="2">
+				<direction>X5.bidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="3">
+				<direction>X5.bidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="4">
+				<direction>X5.bidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">X5.FLTV</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">X5.FNE</Z>
+				<Z valeur="8">X5.DTCC</Z>
+				<Z valeur="9">X5.DZHV</Z>
+				<Z valeur="10">X5.DZSA</Z>
+				<Z valeur="11">X5.DZC</Z>
+				<Z valeur="12">X5.DGV</Z>
+				<Z valeur="13">X5.DVL</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="5">
+				<direction>X5.bidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">X5.FTCC</Z>
+				<Z valeur="9">X5.FZHV</Z>
+				<Z valeur="10">X5.FZSA</Z>
+				<Z valeur="11">X5.FZC</Z>
+				<Z valeur="12">X5.FGV</Z>
+				<Z valeur="13">X5.FVL</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="6">
+				<direction>X5.bidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="7">
+				<direction>X5.bidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="8">
+				<direction>X5.unidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="9">
+				<direction>X5.unidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="10">
+				<direction>X5.unidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="11">
+				<direction>X5.unidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="12">
+				<direction>X5.unidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">X5.FLTV</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">X5.all.AE</Z>
+				<Z valeur="7">X5.FNE</Z>
+				<Z valeur="8">X5.DTCC</Z>
+				<Z valeur="9">X5.DZHV</Z>
+				<Z valeur="10">X5.DZSA</Z>
+				<Z valeur="11">X5.DZC</Z>
+				<Z valeur="12">X5.DGV</Z>
+				<Z valeur="13">X5.DVL</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="13">
+				<direction>X5.unidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">X5.FTCC</Z>
+				<Z valeur="9">X5.FZHV</Z>
+				<Z valeur="10">X5.FZSA</Z>
+				<Z valeur="11">X5.FZC</Z>
+				<Z valeur="12">X5.FGV</Z>
+				<Z valeur="13">X5.FVL</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="14">
+				<direction>X5.unidirectionnel</direction>
+				<Z valeur="1">all.AE</Z>
+				<Z valeur="2">all.AE</Z>
+				<Z valeur="3">all.AE</Z>
+				<Z valeur="4">all.AE</Z>
+				<Z valeur="5">all.AE</Z>
+				<Z valeur="6">all.AE</Z>
+				<Z valeur="7">all.AE</Z>
+				<Z valeur="8">all.AE</Z>
+				<Z valeur="9">all.AE</Z>
+				<Z valeur="10">all.AE</Z>
+				<Z valeur="11">all.AE</Z>
+				<Z valeur="12">all.AE</Z>
+				<Z valeur="13">all.AE</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+		</tableDecodage>
+		<tableDecodage code="X6" unite="km/h">
+			<Y valeur="0">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="1">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="2">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">X6.AA</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="3">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1</groupement>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="4">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1</groupement>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="5">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1</groupement>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">X6.AA</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="6">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S3</groupement>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="7">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S3</groupement>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="8">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S3</groupement>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">X6.AA</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="9">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1,S2,S3</groupement>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="10">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1,S2,S3</groupement>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="11">
+				<limitation>X3X6X7.LPV</limitation>
+				<groupement>X3X6.G,S1,S2,S3</groupement>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">X6.AA</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="12">
+				<limitation>X3X6X7.LTV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="13">
+				<limitation>X3X6X7.LTV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="14">
+				<limitation>X3X6X7.LTV</limitation>
+				<groupement>X3X6.G</groupement>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">X6.AA</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+		</tableDecodage>
+		<tableDecodage code="X7" unite="km/h">
+			<Y valeur="0">
+				<limitation>X3X6X7.LPV</limitation>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="1">
+				<limitation>X3X6X7.LPV</limitation>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="2">
+				<limitation>X3X6X7.LPV</limitation>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">all.nul</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="12">
+				<limitation>X3X6X7.LTV</limitation>
+				<Z valeur="1">5</Z>
+				<Z valeur="2">10</Z>
+				<Z valeur="3">15</Z>
+				<Z valeur="4">20</Z>
+				<Z valeur="5">25</Z>
+				<Z valeur="6">30</Z>
+				<Z valeur="7">35</Z>
+				<Z valeur="8">40</Z>
+				<Z valeur="9">45</Z>
+				<Z valeur="10">50</Z>
+				<Z valeur="11">55</Z>
+				<Z valeur="12">60</Z>
+				<Z valeur="13">65</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="13">
+				<limitation>X3X6X7.LTV</limitation>
+				<Z valeur="1">70</Z>
+				<Z valeur="2">80</Z>
+				<Z valeur="3">85</Z>
+				<Z valeur="4">90</Z>
+				<Z valeur="5">95</Z>
+				<Z valeur="6">100</Z>
+				<Z valeur="7">105</Z>
+				<Z valeur="8">110</Z>
+				<Z valeur="9">115</Z>
+				<Z valeur="10">120</Z>
+				<Z valeur="11">125</Z>
+				<Z valeur="12">130</Z>
+				<Z valeur="13">135</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+			<Y valeur="14">
+				<limitation>X3X6X7.LTV</limitation>
+				<Z valeur="1">140</Z>
+				<Z valeur="2">150</Z>
+				<Z valeur="3">160</Z>
+				<Z valeur="4">170</Z>
+				<Z valeur="5">180</Z>
+				<Z valeur="6">190</Z>
+				<Z valeur="7">200</Z>
+				<Z valeur="8">210</Z>
+				<Z valeur="9">220</Z>
+				<Z valeur="10">230</Z>
+				<Z valeur="11">0</Z>
+				<Z valeur="12">X3X6X7.P</Z>
+				<Z valeur="13">all.nul</Z>
+				<Z valeur="14">all.AE</Z>
+			</Y>
+		</tableDecodage>
+		<tableDecodage code="X8X13BaliseSigneVariable">
+			<categorie valeur="0">
+				<S>1</S>
+				<Y valeur="0">Y</Y>
+				<Y valeur="!0">Y</Y>
+				<X valeur="8">+</X>
+			</categorie>
+			<categorie valeur="1">
+				<S>1</S>
+				<Y valeur="0">Z</Y>
+				<Y valeur="!0">Z</Y>
+				<X valeur="8">+</X>
+			</categorie>
+			<categorie valeur="6">
+				<S>1</S>
+				<Y valeur="0">Z</Y>
+				<Y valeur="!0">Y</Y>
+				<X valeur="8">+</X>
+			</categorie>
+			<categorie valeur="2">
+				<S>2</S>
+				<Y valeur="0">Y</Y>
+				<Y valeur="!0">Y</Y>
+				<X valeur="8">-</X>
+				<X valeur="13">+</X>
+			</categorie>
+			<categorie valeur="3">
+				<S>2</S>
+				<Y valeur="0">Z</Y>
+				<Y valeur="!0">Z</Y>
+				<X valeur="8">-</X>
+				<X valeur="13">-</X>
+			</categorie>
+			<categorie valeur="4">
+				<S>3</S>
+				<Y valeur="0">Y</Y>
+				<Y valeur="!0">Y</Y>
+				<X valeur="8">-</X>
+			</categorie>
+			<categorie valeur="5">
+				<S>3</S>
+				<Y valeur="0">Z</Y>
+				<Y valeur="!0">Z</Y>
+				<X valeur="8">-</X>
+			</categorie>
+		</tableDecodage>
+		<tableDecodage code="X8X13Ecart">
+			<Y_Z valeur="0">0</Y_Z>
+			<Y_Z valeur="1">5</Y_Z>
+			<Y_Z valeur="2">10</Y_Z>
+			<Y_Z valeur="3">15</Y_Z>
+			<Y_Z valeur="4">20</Y_Z>
+			<Y_Z valeur="5">25</Y_Z>
+			<Y_Z valeur="6">30</Y_Z>
+			<Y_Z valeur="7">40</Y_Z>
+			<Y_Z valeur="8">50</Y_Z>
+			<Y_Z valeur="9">60</Y_Z>
+			<Y_Z valeur="10">70</Y_Z>
+			<Y_Z valeur="11">80</Y_Z>
+			<Y_Z valeur="12">90</Y_Z>
+			<Y_Z valeur="13">100</Y_Z>
+			<Y_Z valeur="14">all.AE</Y_Z>
+		</tableDecodage>
+		<tableDecodage code="X9" unite="m">
+			<Y valeur="0">
+				<Z valeur="1">12.5</Z>
+				<Z valeur="2">25</Z>
+				<Z valeur="3">37.5</Z>
+				<Z valeur="4">50</Z>
+				<Z valeur="5">62.5</Z>
+				<Z valeur="6">75</Z>
+				<Z valeur="7">87.5</Z>
+				<Z valeur="8">100</Z>
+				<Z valeur="9">112.5</Z>
+				<Z valeur="10">125</Z>
+				<Z valeur="11">137.5</Z>
+				<Z valeur="12">150</Z>
+				<Z valeur="13">162.5</Z>
+				<Z valeur="14">175</Z>
+			</Y>
+			<Y valeur="1">
+				<Z valeur="0">175</Z>
+				<Z valeur="1">187.5</Z>
+				<Z valeur="2">200</Z>
+				<Z valeur="3">212.5</Z>
+				<Z valeur="4">225</Z>
+				<Z valeur="5">237.5</Z>
+				<Z valeur="6">250</Z>
+				<Z valeur="7">262.5</Z>
+				<Z valeur="8">275</Z>
+				<Z valeur="9">287.5</Z>
+				<Z valeur="10">300</Z>
+				<Z valeur="11">312.5</Z>
+				<Z valeur="12">325</Z>
+				<Z valeur="13">337.5</Z>
+				<Z valeur="14">350</Z>
+			</Y>
+			<Y valeur="2">
+				<Z valeur="0">350</Z>
+				<Z valeur="1">375</Z>
+				<Z valeur="2">400</Z>
+				<Z valeur="3">425</Z>
+				<Z valeur="4">450</Z>
+				<Z valeur="5">475</Z>
+				<Z valeur="6">500</Z>
+				<Z valeur="7">525</Z>
+				<Z valeur="8">550</Z>
+				<Z valeur="9">575</Z>
+				<Z valeur="10">600</Z>
+				<Z valeur="11">625</Z>
+				<Z valeur="12">650</Z>
+				<Z valeur="13">675</Z>
+				<Z valeur="14">700</Z>
+			</Y>
+			<Y valeur="3">
+				<Z valeur="0">700</Z>
+				<Z valeur="1">725</Z>
+				<Z valeur="2">750</Z>
+				<Z valeur="3">775</Z>
+				<Z valeur="4">800</Z>
+				<Z valeur="5">825</Z>
+				<Z valeur="6">850</Z>
+				<Z valeur="7">875</Z>
+				<Z valeur="8">900</Z>
+				<Z valeur="9">925</Z>
+				<Z valeur="10">950</Z>
+				<Z valeur="11">975</Z>
+				<Z valeur="12">1000</Z>
+				<Z valeur="13">1025</Z>
+				<Z valeur="14">1050</Z>
+			</Y>
+			<Y valeur="4">
+				<Z valeur="0">1050</Z>
+				<Z valeur="1">1075</Z>
+				<Z valeur="2">1110</Z>
+				<Z valeur="3">1125</Z>
+				<Z valeur="4">1150</Z>
+				<Z valeur="5">1175</Z>
+				<Z valeur="6">1200</Z>
+				<Z valeur="7">1225</Z>
+				<Z valeur="8">1250</Z>
+				<Z valeur="9">1275</Z>
+				<Z valeur="10">1300</Z>
+				<Z valeur="11">1325</Z>
+				<Z valeur="12">1350</Z>
+				<Z valeur="13">1375</Z>
+				<Z valeur="14">1400</Z>
+			</Y>
+			<Y valeur="5">
+				<Z valeur="0">1400</Z>
+				<Z valeur="1">1425</Z>
+				<Z valeur="2">1450</Z>
+				<Z valeur="3">1475</Z>
+				<Z valeur="4">1500</Z>
+				<Z valeur="5">1525</Z>
+				<Z valeur="6">1550</Z>
+				<Z valeur="7">1575</Z>
+				<Z valeur="8">1600</Z>
+				<Z valeur="9">1625</Z>
+				<Z valeur="10">1650</Z>
+				<Z valeur="11">1675</Z>
+				<Z valeur="12">1700</Z>
+				<Z valeur="13">1725</Z>
+				<Z valeur="14">1750</Z>
+			</Y>
+			<Y valeur="6">
+				<Z valeur="0">1750</Z>
+				<Z valeur="1">1775</Z>
+				<Z valeur="2">1800</Z>
+				<Z valeur="3">1825</Z>
+				<Z valeur="4">1850</Z>
+				<Z valeur="5">1875</Z>
+				<Z valeur="6">1900</Z>
+				<Z valeur="7">1925</Z>
+				<Z valeur="8">1950</Z>
+				<Z valeur="9">1975</Z>
+				<Z valeur="10">2000</Z>
+				<Z valeur="11">2025</Z>
+				<Z valeur="12">2050</Z>
+				<Z valeur="13">2075</Z>
+				<Z valeur="14">2100</Z>
+			</Y>
+			<Y valeur="7">
+				<Z valeur="0">2100</Z>
+				<Z valeur="1">2125</Z>
+				<Z valeur="2">2150</Z>
+				<Z valeur="3">2175</Z>
+				<Z valeur="4">2200</Z>
+				<Z valeur="5">2225</Z>
+				<Z valeur="6">2250</Z>
+				<Z valeur="7">2275</Z>
+				<Z valeur="8">2300</Z>
+				<Z valeur="9">2325</Z>
+				<Z valeur="10">2350</Z>
+				<Z valeur="11">2375</Z>
+				<Z valeur="12">2400</Z>
+				<Z valeur="13">2425</Z>
+				<Z valeur="14">2450</Z>
+			</Y>
+			<Y valeur="8">
+				<Z valeur="0">2450</Z>
+				<Z valeur="1">2475</Z>
+				<Z valeur="2">2500</Z>
+				<Z valeur="3">2525</Z>
+				<Z valeur="4">2550</Z>
+				<Z valeur="5">2575</Z>
+				<Z valeur="6">2600</Z>
+				<Z valeur="7">2625</Z>
+				<Z valeur="8">2650</Z>
+				<Z valeur="9">2675</Z>
+				<Z valeur="10">2700</Z>
+				<Z valeur="11">2725</Z>
+				<Z valeur="12">2750</Z>
+				<Z valeur="13">2775</Z>
+				<Z valeur="14">2800</Z>
+			</Y>
+			<Y valeur="9">
+				<Z valeur="0">2800</Z>
+				<Z valeur="1">2850</Z>
+				<Z valeur="2">2900</Z>
+				<Z valeur="3">2950</Z>
+				<Z valeur="4">3000</Z>
+				<Z valeur="5">3050</Z>
+				<Z valeur="6">3100</Z>
+				<Z valeur="7">3150</Z>
+				<Z valeur="8">3200</Z>
+				<Z valeur="9">3250</Z>
+				<Z valeur="10">3300</Z>
+				<Z valeur="11">3350</Z>
+				<Z valeur="12">3400</Z>
+				<Z valeur="13">3500</Z>
+				<Z valeur="14">3550</Z>
+			</Y>
+			<Y valeur="10">
+				<Z valeur="0">3500</Z>
+				<Z valeur="1">3550</Z>
+				<Z valeur="2">3600</Z>
+				<Z valeur="3">3650</Z>
+				<Z valeur="4">3700</Z>
+				<Z valeur="5">3750</Z>
+				<Z valeur="6">3800</Z>
+				<Z valeur="7">3850</Z>
+				<Z valeur="8">3900</Z>
+				<Z valeur="9">3950</Z>
+				<Z valeur="10">4000</Z>
+				<Z valeur="11">4050</Z>
+				<Z valeur="12">4100</Z>
+				<Z valeur="13">4150</Z>
+				<Z valeur="14">4200</Z>
+			</Y>
+			<Y valeur="11">
+				<Z valeur="0">4200</Z>
+				<Z valeur="1">4300</Z>
+				<Z valeur="2">4400</Z>
+				<Z valeur="3">4500</Z>
+				<Z valeur="4">4600</Z>
+				<Z valeur="5">4700</Z>
+				<Z valeur="6">4800</Z>
+				<Z valeur="7">4900</Z>
+				<Z valeur="8">5000</Z>
+				<Z valeur="9">5100</Z>
+				<Z valeur="10">5200</Z>
+				<Z valeur="11">5300</Z>
+				<Z valeur="12">5400</Z>
+				<Z valeur="13">5500</Z>
+				<Z valeur="14">5600</Z>
+			</Y>
+			<Y valeur="12">
+				<Z valeur="0">5600</Z>
+				<Z valeur="1">5800</Z>
+				<Z valeur="2">6000</Z>
+				<Z valeur="3">6200</Z>
+				<Z valeur="4">6400</Z>
+				<Z valeur="5">6600</Z>
+				<Z valeur="6">6800</Z>
+				<Z valeur="7">7000</Z>
+				<Z valeur="8">7200</Z>
+				<Z valeur="9">7400</Z>
+				<Z valeur="10">7600</Z>
+				<Z valeur="11">7800</Z>
+				<Z valeur="12">8000</Z>
+				<Z valeur="13">8200</Z>
+				<Z valeur="14">8400</Z>
+			</Y>
+			<Y valeur="13">
+				<Z valeur="0">8400</Z>
+				<Z valeur="1">8600</Z>
+				<Z valeur="2">8800</Z>
+				<Z valeur="3">9000</Z>
+				<Z valeur="4">9200</Z>
+				<Z valeur="5">9400</Z>
+				<Z valeur="6">9600</Z>
+				<Z valeur="7">9800</Z>
+				<Z valeur="8">10000</Z>
+				<Z valeur="9">10200</Z>
+				<Z valeur="10">10400</Z>
+				<Z valeur="11">10600</Z>
+				<Z valeur="12">10800</Z>
+				<Z valeur="13">11000</Z>
+				<Z valeur="14">11200</Z>
+			</Y>
+			<Y valeur="14">
+				<Z valeur="0">0</Z>
+				<Z valeur="1">11400</Z>
+				<Z valeur="2">11600</Z>
+				<Z valeur="3">11800</Z>
+				<Z valeur="4">12000</Z>
+				<Z valeur="5">12200</Z>
+				<Z valeur="6">12400</Z>
+				<Z valeur="7">12600</Z>
+				<Z valeur="8">12800</Z>
+				<Z valeur="9">13000</Z>
+				<Z valeur="10">13200</Z>
+				<Z valeur="11">13400</Z>
+				<Z valeur="12">13600</Z>
+				<Z valeur="13">13800</Z>
+				<Z valeur="14">0</Z>
+			</Y>
+		</tableDecodage>
+		<tableDecodage code="X14General">
+			<Ydist valeur="1">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">12.5</Ydecl>
+				<Ydecl valeur="2">25</Ydecl>
+				<Ydecl valeur="3">37.5</Ydecl>
+				<Ydecl valeur="4">50</Ydecl>
+				<Ydecl valeur="5">62.5</Ydecl>
+				<Ydecl valeur="6">75</Ydecl>
+				<Ydecl valeur="7">87.5</Ydecl>
+				<Ydecl valeur="8">100</Ydecl>
+				<Ydecl valeur="9">112.5</Ydecl>
+				<Ydecl valeur="10">125</Ydecl>
+				<Ydecl valeur="11">137.5</Ydecl>
+				<Ydecl valeur="12">150</Ydecl>
+				<Ydecl valeur="13">162.5</Ydecl>
+				<Ydecl valeur="14">175</Ydecl>
+			</Ydist>
+			<Ydist valeur="2">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">25</Ydecl>
+				<Ydecl valeur="2">50</Ydecl>
+				<Ydecl valeur="3">75</Ydecl>
+				<Ydecl valeur="4">100</Ydecl>
+				<Ydecl valeur="5">125</Ydecl>
+				<Ydecl valeur="6">150</Ydecl>
+				<Ydecl valeur="7">175</Ydecl>
+				<Ydecl valeur="8">200</Ydecl>
+				<Ydecl valeur="9">225</Ydecl>
+				<Ydecl valeur="10">250</Ydecl>
+				<Ydecl valeur="11">275</Ydecl>
+				<Ydecl valeur="12">300</Ydecl>
+				<Ydecl valeur="13">325</Ydecl>
+				<Ydecl valeur="14">350</Ydecl>
+			</Ydist>
+			<Ydist valeur="3">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">25</Ydecl>
+				<Ydecl valeur="2">50</Ydecl>
+				<Ydecl valeur="3">75</Ydecl>
+				<Ydecl valeur="4">100</Ydecl>
+				<Ydecl valeur="5">125</Ydecl>
+				<Ydecl valeur="6">150</Ydecl>
+				<Ydecl valeur="7">175</Ydecl>
+				<Ydecl valeur="8">200</Ydecl>
+				<Ydecl valeur="9">225</Ydecl>
+				<Ydecl valeur="10">250</Ydecl>
+				<Ydecl valeur="11">275</Ydecl>
+				<Ydecl valeur="12">300</Ydecl>
+				<Ydecl valeur="13">325</Ydecl>
+				<Ydecl valeur="14">350</Ydecl>
+			</Ydist>
+			<Ydist valeur="4">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">25</Ydecl>
+				<Ydecl valeur="2">50</Ydecl>
+				<Ydecl valeur="3">75</Ydecl>
+				<Ydecl valeur="4">100</Ydecl>
+				<Ydecl valeur="5">125</Ydecl>
+				<Ydecl valeur="6">150</Ydecl>
+				<Ydecl valeur="7">175</Ydecl>
+				<Ydecl valeur="8">200</Ydecl>
+				<Ydecl valeur="9">225</Ydecl>
+				<Ydecl valeur="10">250</Ydecl>
+				<Ydecl valeur="11">275</Ydecl>
+				<Ydecl valeur="12">300</Ydecl>
+				<Ydecl valeur="13">325</Ydecl>
+				<Ydecl valeur="14">350</Ydecl>
+			</Ydist>
+			<Ydist valeur="5">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">25</Ydecl>
+				<Ydecl valeur="2">50</Ydecl>
+				<Ydecl valeur="3">75</Ydecl>
+				<Ydecl valeur="4">100</Ydecl>
+				<Ydecl valeur="5">125</Ydecl>
+				<Ydecl valeur="6">150</Ydecl>
+				<Ydecl valeur="7">175</Ydecl>
+				<Ydecl valeur="8">200</Ydecl>
+				<Ydecl valeur="9">225</Ydecl>
+				<Ydecl valeur="10">250</Ydecl>
+				<Ydecl valeur="11">275</Ydecl>
+				<Ydecl valeur="12">300</Ydecl>
+				<Ydecl valeur="13">325</Ydecl>
+				<Ydecl valeur="14">350</Ydecl>
+			</Ydist>
+			<Ydist valeur="6">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">25</Ydecl>
+				<Ydecl valeur="2">50</Ydecl>
+				<Ydecl valeur="3">75</Ydecl>
+				<Ydecl valeur="4">100</Ydecl>
+				<Ydecl valeur="5">125</Ydecl>
+				<Ydecl valeur="6">150</Ydecl>
+				<Ydecl valeur="7">175</Ydecl>
+				<Ydecl valeur="8">200</Ydecl>
+				<Ydecl valeur="9">225</Ydecl>
+				<Ydecl valeur="10">250</Ydecl>
+				<Ydecl valeur="11">275</Ydecl>
+				<Ydecl valeur="12">300</Ydecl>
+				<Ydecl valeur="13">325</Ydecl>
+				<Ydecl valeur="14">350</Ydecl>
+			</Ydist>
+			<Ydist valeur="7">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">25</Ydecl>
+				<Ydecl valeur="2">50</Ydecl>
+				<Ydecl valeur="3">75</Ydecl>
+				<Ydecl valeur="4">100</Ydecl>
+				<Ydecl valeur="5">125</Ydecl>
+				<Ydecl valeur="6">150</Ydecl>
+				<Ydecl valeur="7">175</Ydecl>
+				<Ydecl valeur="8">200</Ydecl>
+				<Ydecl valeur="9">225</Ydecl>
+				<Ydecl valeur="10">250</Ydecl>
+				<Ydecl valeur="11">275</Ydecl>
+				<Ydecl valeur="12">300</Ydecl>
+				<Ydecl valeur="13">325</Ydecl>
+				<Ydecl valeur="14">350</Ydecl>
+			</Ydist>
+			<Ydist valeur="8">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">25</Ydecl>
+				<Ydecl valeur="2">50</Ydecl>
+				<Ydecl valeur="3">75</Ydecl>
+				<Ydecl valeur="4">100</Ydecl>
+				<Ydecl valeur="5">125</Ydecl>
+				<Ydecl valeur="6">150</Ydecl>
+				<Ydecl valeur="7">175</Ydecl>
+				<Ydecl valeur="8">200</Ydecl>
+				<Ydecl valeur="9">225</Ydecl>
+				<Ydecl valeur="10">250</Ydecl>
+				<Ydecl valeur="11">275</Ydecl>
+				<Ydecl valeur="12">300</Ydecl>
+				<Ydecl valeur="13">325</Ydecl>
+				<Ydecl valeur="14">350</Ydecl>
+			</Ydist>
+			<Ydist valeur="9">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">50</Ydecl>
+				<Ydecl valeur="2">100</Ydecl>
+				<Ydecl valeur="3">150</Ydecl>
+				<Ydecl valeur="4">200</Ydecl>
+				<Ydecl valeur="5">250</Ydecl>
+				<Ydecl valeur="6">300</Ydecl>
+				<Ydecl valeur="7">350</Ydecl>
+				<Ydecl valeur="8">400</Ydecl>
+				<Ydecl valeur="9">450</Ydecl>
+				<Ydecl valeur="10">500</Ydecl>
+				<Ydecl valeur="11">550</Ydecl>
+				<Ydecl valeur="12">600</Ydecl>
+				<Ydecl valeur="13">650</Ydecl>
+				<Ydecl valeur="14">700</Ydecl>
+			</Ydist>
+			<Ydist valeur="10">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">50</Ydecl>
+				<Ydecl valeur="2">100</Ydecl>
+				<Ydecl valeur="3">150</Ydecl>
+				<Ydecl valeur="4">200</Ydecl>
+				<Ydecl valeur="5">250</Ydecl>
+				<Ydecl valeur="6">300</Ydecl>
+				<Ydecl valeur="7">350</Ydecl>
+				<Ydecl valeur="8">400</Ydecl>
+				<Ydecl valeur="9">450</Ydecl>
+				<Ydecl valeur="10">500</Ydecl>
+				<Ydecl valeur="11">550</Ydecl>
+				<Ydecl valeur="12">600</Ydecl>
+				<Ydecl valeur="13">650</Ydecl>
+				<Ydecl valeur="14">700</Ydecl>
+			</Ydist>
+			<Ydist valeur="11">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">100</Ydecl>
+				<Ydecl valeur="2">200</Ydecl>
+				<Ydecl valeur="3">300</Ydecl>
+				<Ydecl valeur="4">400</Ydecl>
+				<Ydecl valeur="5">500</Ydecl>
+				<Ydecl valeur="6">600</Ydecl>
+				<Ydecl valeur="7">700</Ydecl>
+				<Ydecl valeur="8">800</Ydecl>
+				<Ydecl valeur="9">900</Ydecl>
+				<Ydecl valeur="10">1000</Ydecl>
+				<Ydecl valeur="11">1100</Ydecl>
+				<Ydecl valeur="12">1200</Ydecl>
+				<Ydecl valeur="13">1300</Ydecl>
+				<Ydecl valeur="14">1400</Ydecl>
+			</Ydist>
+			<Ydist valeur="12">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">200</Ydecl>
+				<Ydecl valeur="2">400</Ydecl>
+				<Ydecl valeur="3">600</Ydecl>
+				<Ydecl valeur="4">800</Ydecl>
+				<Ydecl valeur="5">1000</Ydecl>
+				<Ydecl valeur="6">1200</Ydecl>
+				<Ydecl valeur="7">1400</Ydecl>
+				<Ydecl valeur="8">1600</Ydecl>
+				<Ydecl valeur="9">1800</Ydecl>
+				<Ydecl valeur="10">2000</Ydecl>
+				<Ydecl valeur="11">2200</Ydecl>
+				<Ydecl valeur="12">2400</Ydecl>
+				<Ydecl valeur="13">2600</Ydecl>
+				<Ydecl valeur="14">2800</Ydecl>
+			</Ydist>
+			<Ydist valeur="13">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">200</Ydecl>
+				<Ydecl valeur="2">400</Ydecl>
+				<Ydecl valeur="3">600</Ydecl>
+				<Ydecl valeur="4">800</Ydecl>
+				<Ydecl valeur="5">1000</Ydecl>
+				<Ydecl valeur="6">1200</Ydecl>
+				<Ydecl valeur="7">1400</Ydecl>
+				<Ydecl valeur="8">1600</Ydecl>
+				<Ydecl valeur="9">1800</Ydecl>
+				<Ydecl valeur="10">2000</Ydecl>
+				<Ydecl valeur="11">2200</Ydecl>
+				<Ydecl valeur="12">2400</Ydecl>
+				<Ydecl valeur="13">2600</Ydecl>
+				<Ydecl valeur="14">2800</Ydecl>
+			</Ydist>
+			<Ydist valeur="14">
+				<Ydecl valeur="0">0</Ydecl>
+				<Ydecl valeur="1">12.5</Ydecl>
+				<Ydecl valeur="2">25</Ydecl>
+				<Ydecl valeur="3">37.5</Ydecl>
+				<Ydecl valeur="4">50</Ydecl>
+				<Ydecl valeur="5">62.5</Ydecl>
+				<Ydecl valeur="6">75</Ydecl>
+				<Ydecl valeur="7">87.5</Ydecl>
+				<Ydecl valeur="8">100</Ydecl>
+				<Ydecl valeur="9">112.5</Ydecl>
+				<Ydecl valeur="10">125</Ydecl>
+				<Ydecl valeur="11">137.5</Ydecl>
+				<Ydecl valeur="12">150</Ydecl>
+				<Ydecl valeur="13">162.5</Ydecl>
+				<Ydecl valeur="14">175</Ydecl>
+			</Ydist>
+		</tableDecodage>
+		<tableDecodage code="X14TIVD" unite="m">
+			<Y valeur="0">0</Y>
+			<Y valeur="1">200</Y>
+			<Y valeur="2">400</Y>
+			<Y valeur="3">600</Y>
+			<Y valeur="4">800</Y>
+			<Y valeur="5">1000</Y>
+			<Y valeur="6">1200</Y>
+			<Y valeur="7">1400</Y>
+			<Y valeur="8">1600</Y>
+			<Y valeur="9">1800</Y>
+			<Y valeur="10">2000</Y>
+			<Y valeur="11">2200</Y>
+			<Y valeur="12">2400</Y>
+			<Y valeur="13">2600</Y>
+			<Y valeur="14">2800</Y>
+		</tableDecodage>
+		<tableDecodage code="X14Declivite" unite="‰">
+			<Z valeur="1">+35</Z>
+			<Z valeur="2">+30</Z>
+			<Z valeur="3">+25</Z>
+			<Z valeur="4">+20</Z>
+			<Z valeur="5">+15</Z>
+			<Z valeur="6">+10</Z>
+			<Z valeur="7">0</Z>
+			<Z valeur="8">0</Z>
+			<Z valeur="9">-5</Z>
+			<Z valeur="10">-10</Z>
+			<Z valeur="11">-15</Z>
+			<Z valeur="12">-20</Z>
+			<Z valeur="13">-25</Z>
+			<Z valeur="14">-30</Z>
+		</tableDecodage>
+		<tableDecodage code="X14Inclinaison">
+			<Z valeur="1">X14.inclinaison.haut</Z>
+			<Z valeur="2">X14.inclinaison.haut</Z>
+			<Z valeur="3">X14.inclinaison.haut</Z>
+			<Z valeur="4">X14.inclinaison.haut</Z>
+			<Z valeur="5">X14.inclinaison.haut</Z>
+			<Z valeur="6">X14.inclinaison.haut</Z>
+			<Z valeur="7">X14.inclinaison.haut</Z>
+			<Z valeur="8">X14.inclinaison.bas</Z>
+			<Z valeur="9">X14.inclinaison.bas</Z>
+			<Z valeur="10">X14.inclinaison.bas</Z>
+			<Z valeur="11">X14.inclinaison.bas</Z>
+			<Z valeur="12">X14.inclinaison.bas</Z>
+			<Z valeur="13">X14.inclinaison.bas</Z>
+			<Z valeur="14">X14.inclinaison.bas</Z>
+		</tableDecodage>
+	</body>
+	<signature CRC="086c"/>
+</tables-kvb>

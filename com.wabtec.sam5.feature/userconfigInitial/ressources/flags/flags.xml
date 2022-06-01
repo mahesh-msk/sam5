@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by FAIVELEY TRANSPORT (FAIVELEY TRANSPORT) -->
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by PHILIPPE CHRISTIAN (FAIVELEY TRANSPORT TOURS SAS) -->
+<liste-flags xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="flags.xsd">
+	<flag id="0" libelle="{" nomEvt="ApparitionTensionBT"/>
+	<flag id="1" libelle="{" nomEvt="DebutEnr"/>
+	<flag id="2" libelle="{" nomEvt="Mst"/>
+	<flag id="3" libelle="{" nomEvt="Démarrage des enregistrements"/>
+	<flag id="4" libelle="{" nomEvt="EvDebutEnr"/>
+	<flag id="5" libelle="T" nomEvt="HeureApresModification"/>
+	<flag id="6" libelle="T" nomEvt="EvChgtHeure"/>
+	<flag id="7" libelle="T" nomEvt="EvChgHeureTOM"/>
+	<flag id="8" libelle="T" nomEvt="ChgHeure"/>
+	<flag id="9" libelle="T" nomEvt="ChgHeureTMS"/>
+	<flag id="10" libelle="T" nomEvt="EvChgHeureGPS"/>
+	<flag id="11" libelle="T" nomEvt="EvGPSHour"/>
+	<flag id="12" libelle="T" nomEvt="EvChgHeureWeb"/>
+	<flag id="13" libelle="T" nomEvt="EvChgHeureDST"/>
+	<flag id="14" libelle="T" nomEvt="EvChgHeureOBCS"/>
+	<flag id="15" libelle="T" nomEvt="EvChgHeureMVB"/>
+	<flag id="16" libelle="T" nomEvt="EvChgHeureRES"/>
+	<flag id="17" libelle="Rt" nomEvt="RuptureTempsCalculee"/>
+	<flag id="18" libelle="Rd" nomEvt="RuptureDistanceCalculee"/>
+	<flag id="19" libelle="{" nomEvt="CabOnEnginEurotunnel"/>
+	<flag id="20" libelle="{" nomEvt="CabOffEnginEurotunnel"/>
+	<flag id="21" libelle="{" nomEvt="Nouvelle mission"/>
+	<flag id="22" libelle="{" nomEvt="EnrStart"/>
+	<flag id="23" libelle="T" nomEvt="Date/Heure initiale"/>
+	<flag id="24" libelle="T" nomEvt="Date/Heure WEB"/>
+	<flag id="25" libelle="T" nomEvt="Date/Heure OBCS"/>
+	<flag id="26" libelle="T" nomEvt="Date/Heure GPS"/>
+	<flag id="27" libelle="T" nomEvt="Date/Heure MVB"/>
+	<flag id="28" libelle="T" nomEvt="Date/Heure CAN"/>
+	<flag id="29" libelle="T" nomEvt="Changement d'heure été/hiver"/>
+</liste-flags>

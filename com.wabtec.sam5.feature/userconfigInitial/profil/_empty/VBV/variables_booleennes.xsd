@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="liste-VBV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="VBV"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VBV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0"  maxOccurs="2" ref="composant-VBV"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="attlist.VBV"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.VBV">
+    <xs:attribute name="id" use="required"/>
+    <xs:attribute name="nom" use="required"/>
+    <xs:attribute name="operateur"/>
+    <xs:attribute name="valeur"/>
+  </xs:attributeGroup>
+  <xs:element name="composant-VBV">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.composant-VBV"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.composant-VBV">
+    <xs:attribute name="id" use="required"/>
+    <xs:attribute name="nom" use="required"/>
+  </xs:attributeGroup>
+</xs:schema>

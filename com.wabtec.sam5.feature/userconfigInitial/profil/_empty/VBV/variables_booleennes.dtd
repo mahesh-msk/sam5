@@ -1,0 +1,13 @@
+<!ELEMENT liste-VBV (VBV+)>
+<!ELEMENT VBV (composant-VBV+)>
+<!ATTLIST VBV
+	id CDATA #REQUIRED
+	nom CDATA #REQUIRED
+	operateur CDATA #IMPLIED
+	valeur CDATA #IMPLIED
+>
+<!ELEMENT composant-VBV EMPTY>
+<!ATTLIST composant-VBV
+	id CDATA #REQUIRED
+	nom CDATA #REQUIRED
+	>

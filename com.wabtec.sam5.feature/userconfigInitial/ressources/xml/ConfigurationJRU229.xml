@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by PHILIPPE CHRISTIAN (FAIVELEY TRANSPORT TOURS SAS) -->
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by FAIVELEY TRANSPORT (FAIVELEY TRANSPORT) -->
+<configuration-jru xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ConfigurationJRU.xsd">
+	<fichier-description xml-associe="JRU229.xml"/>
+	<table-evenements-variables>
+		<evenement-variables code-evt="1" longueur="0">
+			<!--GENERAL MESSAGE-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="2" longueur="0">
+			<!--DATA ENTRY COMPLETED-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="61600">
+					<!--V_MAXTRAIN (7 bits) -->
+				</variable-jru>
+				<variable-jru code-var="60840">
+					<!--NC_TRAIN (15 bits)-->
+				</variable-jru>
+				<variable-jru code-var="60560">
+					<!--L_TRAIN (12 bits)-->
+				</variable-jru>
+				<variable-jru code-var="104">
+					<!--SERVICE_SECTIONS (3 + n*(10+8) bits) !!! Taille variable => Tableau dynamique-->
+				</variable-jru>
+				<variable-jru code-var="105">
+					<!--EMERGENCY_SECTIONS (3 + n*(10+8) bits) !!! Taille variable => Tableau dynamique-->
+				</variable-jru>
+				<variable-jru code-var="75027">
+					<!--T_CUT_OFF (12 bits)-->
+				</variable-jru>
+				<variable-jru code-var="75028">
+					<!--T_SERVICE_DELAY (12 bits)-->
+				</variable-jru>
+				<variable-jru code-var="75029">
+					<!--T_EMERGENCY_DELAY (12 bits)-->
+				</variable-jru>
+				<variable-jru code-var="60680">
+					<!--M_LOADINGGAUGE (8 bits)-->
+				</variable-jru>
+				<variable-jru code-var="60620">
+					<!--M_AXLELOAD (7 bits)-->
+				</variable-jru>
+				<variable-jru code-var="111">
+					<!--TRACTION_TYPE (5 +n*8 bits) !!! Taille variable => Tableau dynamique-->
+				</variable-jru>
+				<variable-jru code-var="60610">
+					<!--M_AIRTIGHT (2 bits)-->
+				</variable-jru>
+				<variable-jru code-var="60600">
+					<!--M_ADHESION (1 bit)-->
+				</variable-jru>
+				<variable-jru code-var="60911">
+					<!--NID_MN (24 bits)-->
+				</variable-jru>
+				<variable-jru code-var="60960">
+					<!--NID_RBC (14 bits)-->
+				</variable-jru>
+				<variable-jru code-var="60950">
+					<!--NID_RADIO (64 bits)-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="3" longueur="0">
+			<!--EMERGENCY BRAKE ORDER-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="75031">
+					<!--M_BRAKE_ORDER (1 bit)-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="4" longueur="0">
+			<!--SERVICE BRAKE ORDER-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="75031">
+					<!--M_BRAKE_ORDER (1 bit)-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="5" longueur="0">
+			<!--EVENTS-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="75032">
+					<!--M_EVENTS-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="6" longueur="0">
+			<!--TELEGRAM FROM BALISE-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="52000">
+					<!--TELEGRAM_BALISE-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="7" longueur="0">
+			<!--MESSAGE FROM EUROLOOP-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="52001">
+					<!--MESSAGE_EUROLOOP-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="8" longueur="0">
+			<!--MESSAGE FROM RADIO INFILL UNIT-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="52002">
+					<!--MESSAGE_RADIO ??-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="9" longueur="0">
+			<!--MESSAGE FROM RBC-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="52002">
+					<!--MESSAGE_FROM_RBC-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="10" longueur="0">
+			<!--MESSAGE TO RBC-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="52003">
+					<!--MESSAGE_TO_RBC-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="11" longueur="0">
+			<!--DRIVER'S ACTION-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="75111">
+					<!--M_DRIVER_S_ACTION-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="12" longueur="0">
+			<!--BALISE GROUP ERROR-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="60860">
+					<!--NID_C-->
+				</variable-jru>
+				<variable-jru code-var="60850">
+					<!--NID_BG-->
+				</variable-jru>
+				<variable-jru code-var="60640">
+					<!--M_ERROR-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="13" longueur="0">
+			<!--RADIO ERROR-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="60640">
+					<!--M_ERROR-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="14" longueur="0">
+			<!--STM INFORMATION-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="12">
+					<!--A définir !!!!-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="15" longueur="0">
+			<!--DATA FROM EXTERNAL SOURCES-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="65535">
+					<!--PACKET 44 Train to Track-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="16" longueur="0">
+			<!--START DISPLAYING FIXED TEXT MESSAGE  -->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="61360">
+					<!--Q_TEXT-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="17" longueur="0">
+			<!--STOP DISPLAYING FIXED TEXT MESSAGE-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="61360">
+					<!--Q_TEXT-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="18" longueur="0">
+			<!--START DISPLAYING PLAIN TEXT MESSAGE-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="74180">
+					<!--TEXT-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="19" longueur="0">
+			<!--STOP DISPLAYING PLAIN TEXT MESSAGE-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="74180">
+					<!--TEXT-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="20" longueur="0">
+			<!--CURRENT VALUE OF MOST RESTRICTIVE SPEED PROFILE-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="75201">
+					<!--V_MRSP-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="21" longueur="0">
+			<!--TARGET SPEED-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="75211">
+					<!--V_TARGET-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="22" longueur="0">
+			<!--TARGET DISTANCE-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="75221">
+					<!--D_TARGET-->
+				</variable-jru>            
+				<variable-jru code-var="61290">
+					<!--Q_SCALE-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="23" longueur="0">
+			<!--RELEASE SPEED-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="75231">
+					<!--V_RELEASE-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="24" longueur="0">
+			<!--WARNING-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="25" longueur="0">
+			<!--SR SPEED/DISTANCE-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="60250">
+					<!--D_SR-->
+				</variable-jru>
+            <variable-jru code-var="61290">
+					<!--Q_SCALE-->
+				</variable-jru>            
+				<variable-jru code-var="75251">
+					<!--V_SR-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="26" longueur="0">
+			<!--STM SELECTED-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="60980">
+					<!--NID_STM-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="27" longueur="0">
+			<!--PERMITTED SPEED-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="75271">
+					<!--V_PERMITTED-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="196" longueur="0">
+			<!--BRAKE PERCENTAGE INFORMATION (msg SCNF)-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="502">
+					<!--M_TRAIN_BRAKE_PERC-->
+				</variable-jru>
+				<variable-jru code-var="503">
+					<!--M_ZBG_IS-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="197" longueur="0">
+			<!--POSITION DU COMMUTATEUR Z-EXPL (msg SCNF)-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="501">
+					<!--M_EXPL-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="199" longueur="0">
+			<!--CHANGEMENT DE MODE (msg SCNF)-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="500">
+					<!--Q_MANUEL_AUTO-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+		<evenement-variables code-evt="200" longueur="0">
+			<!--CHANGEMENT DE NIVEAU (msg SCNF)-->
+			<liste-variables-jru>
+				<variable-jru code-var="60480">
+					<!--L_MESSAGE_JRU-->
+				</variable-jru>
+				<variable-jru code-var="74030">
+					<!--DATE-->
+				</variable-jru>
+				<variable-jru code-var="74040">
+					<!--TIME-->
+				</variable-jru>
+				<variable-jru code-var="74050">
+					<!--TRAIN_POSITION-->
+				</variable-jru>
+				<variable-jru code-var="61720">
+					<!--V_TRAIN-->
+				</variable-jru>
+				<variable-jru code-var="74071">
+					<!--NID_DRIVER-->
+				</variable-jru>
+				<variable-jru code-var="60920">
+					<!--NID_OPERATIONAL-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60720">
+					<!--M_MODE-->
+				</variable-jru>
+				<variable-jru code-var="60650">
+					<!--M_LEVEL-->
+				</variable-jru>
+				<variable-jru code-var="60980">
+					<!--NID_STM-->
+				</variable-jru>
+				<variable-jru code-var="500">
+					<!--Q_MANUEL_AUTO-->
+				</variable-jru>
+			</liste-variables-jru>
+		</evenement-variables>
+	</table-evenements-variables>
+	<signature CRC="0258"/>
+</configuration-jru>

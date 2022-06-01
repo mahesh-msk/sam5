@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by PHILIPPE CHRISTIAN (FAIVELEY TRANSPORT TOURS SAS) -->
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by FAIVELEY TRANSPORT (FAIVELEY TRANSPORT) -->
+<!--Ce fichier XML décrit les paramètres des fichiers de parcours du TOM NG utilisés par le logiciel SAM 5-->
+<enregistreur-def xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ALL_TOM.xsd">
+	<!--Nom_projet & version XML-->
+	<infos_fichier titre="Pour le TOM NG" versionXML="B00" numplan="ZA5xxxxxx"/>
+	<infos-parcours>
+		<information nom="DiametreRoue"/>
+		<information nom="InfoATP1.PIN"/>
+		<information nom="TEST.texte"/>
+	</infos-parcours>
+	<!--Description enregistreur-->
+	<enregistreur modele="TOM" projet="RD" type="TOM NG" resolution-temps="0.01">
+		<liste-evenements>
+			<evenement nom="DebutEnr" changementHeure="false" ruptureAcquisition="true" code="1">
+				<nom-utilisateur lang="DEF" libelle="Recording start"/>
+				<nom-utilisateur lang="FR" libelle="Début des enregistrements"/>
+				<nom-utilisateur lang="EN" libelle="Recording start"/>
+			</evenement>
+			<evenement nom="ChgtJour" changementHeure="false" code="2">
+				<nom-utilisateur lang="DEF" libelle="Day change"/>
+				<nom-utilisateur lang="FR" libelle="Changement Jour"/>
+				<nom-utilisateur lang="EN" libelle="Day change"/>
+			</evenement>
+			<evenement nom="EvChgtHeure" changementHeure="true" code="3">
+				<nom-utilisateur lang="FR" libelle="Changement Heure "/>
+				<nom-utilisateur lang="EN" libelle="Time change"/>
+				<nom-utilisateur lang="DEF" libelle="Time change"/>
+			</evenement>
+			<evenement nom="EvChgHeureTOM" changementHeure="true" code="4">
+				<nom-utilisateur lang="FR" libelle="Changement d'heure été / hiver"/>
+				<nom-utilisateur lang="EN" libelle="EvChgHeureTOM"/>
+				<nom-utilisateur lang="DEF" libelle="Automatic time change"/>
+			</evenement>
+			<evenement nom="EvChgHeureGPS" changementHeure="true" code="5">
+				<nom-utilisateur lang="FR" libelle="Changement d'heure par GPS"/>
+				<nom-utilisateur lang="EN" libelle="Time change by GPS"/>
+				<nom-utilisateur lang="DEF" libelle="Time change by GPS"/>
+			</evenement>
+			<evenement nom="EvChgHeureMNT" changementHeure="true" code="6">
+				<nom-utilisateur lang="FR" libelle="Changement d'heure par utilisateur"/>
+				<nom-utilisateur lang="EN" libelle="EvChgHeureTOM"/>
+				<nom-utilisateur lang="DEF" libelle="Time change by user"/>
+			</evenement>
+			<evenement nom="DebordementDistance" code="7">
+				<nom-utilisateur lang="FR" libelle="Débordement distance"/>
+				<nom-utilisateur lang="EN" libelle="Distance overflow"/>
+				<nom-utilisateur lang="DEF" libelle="Distance overflow"/>
+			</evenement>
+			<evenement nom="SeuilVitesse" code="20">
+				<nom-utilisateur lang="FR" libelle="Variation vitesse"/>
+				<nom-utilisateur lang="DEF" libelle="Speed variation"/>
+				<nom-utilisateur lang="EN" libelle="Speed variation"/>
+			</evenement>
+			<evenement nom="SeuilAna1" code="200">
+				<nom-utilisateur lang="FR" libelle="Variation Tension Batterie"/>
+				<nom-utilisateur lang="DEF" libelle="Battery voltage variation"/>
+				<nom-utilisateur lang="EN" libelle="Battery voltage variation"/>
+			</evenement>
+			<evenement nom="SeuilAna2" code="201">
+				<nom-utilisateur lang="FR" libelle="Variation Tension +15V"/>
+				<nom-utilisateur lang="DEF" libelle="+15V voltage variation"/>
+				<nom-utilisateur lang="EN" libelle="+15V voltage variation"/>
+			</evenement>
+			<evenement nom="SeuilAna3" code="202">
+				<nom-utilisateur lang="FR" libelle="Variation Tension +12V"/>
+				<nom-utilisateur lang="DEF" libelle="+12V voltage variation"/>
+				<nom-utilisateur lang="EN" libelle="+12V voltage variation"/>
+			</evenement>
+			<evenement nom="SeuilAna4" code="203">
+				<nom-utilisateur lang="FR" libelle="Variation Tension +24V"/>
+				<nom-utilisateur lang="DEF" libelle="+24V voltage variation"/>
+				<nom-utilisateur lang="EN" libelle="+24V voltage variation"/>
+			</evenement>
+			<evenement nom="SeuilAna5" code="204">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 5"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 5 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 5 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna6" code="205">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 6"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 6 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 6 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna7" code="206">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 7"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 7 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 7 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna8" code="207">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 8"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 8 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 8 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna9" code="208">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 9"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 9 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 9 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna10" code="209">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 10"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 10 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 10 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna11" code="210">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 11"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 11 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 11 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna12" code="211">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 12"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 12 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 12 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna13" code="212">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 13"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 13 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 13 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna14" code="213">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 14"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 14 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 14 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna15" code="214">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 15"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 15 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 15 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna16" code="215">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 16"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 16 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 16 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna17" code="216">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 17"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 17 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 17 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna18" code="217">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 18"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 18 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 18 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna19" code="218">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 19"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 19 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 19 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna20" code="219">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 20"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 20 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 20 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna21" code="220">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 21"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 21 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 21 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna22" code="221">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 22"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 22 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 22 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna23" code="222">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 23"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 23 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 23 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna24" code="223">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 24"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 24 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 24 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna25" code="224">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 25"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 25 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 25 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna26" code="225">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 26"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 26 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 26 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna27" code="226">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 27"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 27 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 27 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna28" code="227">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 28"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 28 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 28 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna29" code="228">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 29"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 29 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 29 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna30" code="229">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 30"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 30 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 30 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna31" code="230">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 31"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 31 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 31 variation"/>
+			</evenement>
+			<evenement nom="SeuilAna32" code="231">
+				<nom-utilisateur lang="FR" libelle="Variation Entrée analogique 32"/>
+				<nom-utilisateur lang="DEF" libelle="Analog input 32 variation"/>
+				<nom-utilisateur lang="EN" libelle="Analog input 32 variation"/>
+			</evenement>
+			<evenement nom="EtatMEL1" code="300">
+				<nom-utilisateur lang="FR" libelle="Etat des entrées de la carte MEL1"/>
+				<nom-utilisateur lang="DEF" libelle="MEL1 inputs"/>
+			</evenement>
+			<evenement nom="Test" code="301">
+				<nom-utilisateur lang="DEF" libelle="Evt for complex var Test"/>
+				<nom-utilisateur lang="EN" libelle="Evt for complex var Test"/>
+				<nom-utilisateur lang="FR" libelle="Evt pour Test d'une var complexe"/>
+			</evenement>
+			<evenement nom="InfoGroupEL1" code="302">
+				<nom-utilisateur lang="FR" libelle="Informations entrées logiques"/>
+				<nom-utilisateur lang="DEF" libelle="Digital input informations"/>
+				<nom-utilisateur lang="EN" libelle="Digital input informations"/>
+			</evenement>
+			<evenement nom="VariationEL1" code="321">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 1"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 1variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 1variation"/>
+			</evenement>
+			<evenement nom="VariationEL2" code="322">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 2"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 2 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 2 variation"/>
+			</evenement>
+			<evenement nom="VariationEL3" code="323">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 3"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 3 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 3 variation"/>
+			</evenement>
+			<evenement nom="VariationEL4" code="324">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 4"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 4 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 4 variation"/>
+			</evenement>
+			<evenement nom="VariationEL5" code="325">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 5"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 5 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 5 variation"/>
+			</evenement>
+			<evenement nom="VariationEL6" code="326">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 6"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 6 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 6 variation"/>
+			</evenement>
+			<evenement nom="VariationEL7" code="327">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 7"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 7 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 7 variation"/>
+			</evenement>
+			<evenement nom="VariationEL8" code="328">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 8"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 8 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 8 variation"/>
+			</evenement>
+			<evenement nom="VariationEL9" code="329">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 9"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 9 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 9 variation"/>
+			</evenement>
+			<evenement nom="VariationEL10" code="330">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 10"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 10 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 10 variation"/>
+			</evenement>
+			<evenement nom="VariationEL11" code="331">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 11"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 11 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 11 variation"/>
+			</evenement>
+			<evenement nom="VariationEL12" code="332">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 12"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 12 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 12 variation"/>
+			</evenement>
+			<evenement nom="VariationEL13" code="333">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 13"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 13 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 13 variation"/>
+			</evenement>
+			<evenement nom="VariationEL14" code="334">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 14"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 14 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 14 variation"/>
+			</evenement>
+			<evenement nom="VariationEL15" code="335">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 15"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 15 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 15 variation"/>
+			</evenement>
+			<evenement nom="VariationEL16" code="336">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 16"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 16 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 16 variation"/>
+			</evenement>
+			<evenement nom="VariationEL256" code="576">
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique 256"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 256 variation"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 256 variation"/>
+			</evenement>
+			<evenement nom="InfoGroupTOM" code="500">
+				<nom-utilisateur lang="FR" libelle="Informations TOM"/>
+				<nom-utilisateur lang="DEF" libelle="TOM Informations"/>
+				<nom-utilisateur lang="EN" libelle="TOM Informations"/>
+			</evenement>
+			<evenement nom="InfoGroupAna" code="502">
+				<nom-utilisateur lang="FR" libelle="Informations entrées analogiques"/>
+				<nom-utilisateur lang="EN" libelle="Analog inputs informations"/>
+				<nom-utilisateur lang="DEF" libelle="Analog inputs informations"/>
+			</evenement>
+			<evenement nom="InfoGroupTrain" code="503">
+				<nom-utilisateur lang="FR" libelle="Informations Train"/>
+				<nom-utilisateur lang="EN" libelle="Train informations"/>
+				<nom-utilisateur lang="DEF" libelle="Train informations"/>
+			</evenement>
+			<evenement nom="InfoGroupMission" code="504">
+				<nom-utilisateur lang="FR" libelle="Informations Mission"/>
+				<nom-utilisateur lang="EN" libelle="Mission informations"/>
+				<nom-utilisateur lang="DEF" libelle="Mission informations"/>
+			</evenement>
+			<evenement nom="InfoCalculVitesse" code="21">
+				<nom-utilisateur lang="FR" libelle="Information Vitesse"/>
+				<nom-utilisateur lang="EN" libelle="Speed Information"/>
+				<nom-utilisateur lang="DEF" libelle="Speed Information"/>
+			</evenement>
+			<evenement nom="VariationLongitude" code="2010">
+				<nom-utilisateur lang="FR" libelle="Variation Longitude"/>
+				<nom-utilisateur lang="EN" libelle="Longitude variation"/>
+				<nom-utilisateur lang="DEF" libelle="Longitude variation"/>
+			</evenement>
+			<evenement nom="VariationLatitude" code="2011">
+				<nom-utilisateur lang="FR" libelle="Variation Latitude"/>
+				<nom-utilisateur lang="EN" libelle="Latitude variation"/>
+				<nom-utilisateur lang="DEF" libelle="Latitude variation"/>
+			</evenement>
+			<evenement nom="KVB_dt" code="3000">
+				<nom-utilisateur lang="FR" libelle="KVB_dt"/>
+				<nom-utilisateur lang="EN" libelle="KVB_dt"/>
+				<nom-utilisateur lang="DEF" libelle="KVB_dt"/>
+			</evenement>
+			<evenement nom="KVB_bal3" code="3001">
+				<nom-utilisateur lang="FR" libelle="KVB_bal3"/>
+				<nom-utilisateur lang="EN" libelle="KVB_bal3"/>
+				<nom-utilisateur lang="DEF" libelle="KVB_bal3"/>
+			</evenement>
+			<evenement nom="KVB_bal5" code="3002">
+				<nom-utilisateur lang="FR" libelle="KVB_bal5"/>
+				<nom-utilisateur lang="EN" libelle="KVB_bal5"/>
+				<nom-utilisateur lang="DEF" libelle="KVB_bal5"/>
+			</evenement>
+			<evenement nom="KVB_BS1" code="3003">
+				<nom-utilisateur lang="FR" libelle="KVB_BS1"/>
+				<nom-utilisateur lang="EN" libelle="KVB_BS1"/>
+				<nom-utilisateur lang="DEF" libelle="KVB_BS1"/>
+			</evenement>
+			<evenement nom="KVB_BS2" code="3004">
+				<nom-utilisateur lang="FR" libelle="KVB_BS2"/>
+				<nom-utilisateur lang="EN" libelle="KVB_BS2"/>
+				<nom-utilisateur lang="DEF" libelle="KVB_BS2"/>
+			</evenement>
+			<evenement nom="Test2" code="602">
+				<nom-utilisateur lang="FR" libelle="Evt pour Test2 d'une var complexe"/>
+				<nom-utilisateur lang="EN" libelle="Evt for complex var Test2"/>
+				<nom-utilisateur lang="DEF" libelle="Evt for complex var Test2"/>
+			</evenement>
+			<evenement nom="EvInfoATP1" code="3005">
+				<nom-utilisateur lang="FR" libelle="Info ATP1"/>
+				<nom-utilisateur lang="EN" libelle="Info ATP1"/>
+				<nom-utilisateur lang="DEF" libelle="Info ATP1"/>
+			</evenement>
+			<evenement nom="EvInfoATP2" code="3006">
+				<nom-utilisateur lang="FR" libelle="Info ATP2"/>
+				<nom-utilisateur lang="EN" libelle="Info ATP2"/>
+				<nom-utilisateur lang="DEF" libelle="Info ATP2"/>
+			</evenement>
+			<evenement nom="EvInfoATP3" code="3007">
+				<nom-utilisateur lang="FR" libelle="Info ATP3"/>
+				<nom-utilisateur lang="EN" libelle="Info ATP3"/>
+				<nom-utilisateur lang="DEF" libelle="Info ATP3"/>
+			</evenement>
+		</liste-evenements>
+		<reperes date="Date" temps="Temps" distance="Distance" diametre-roue="DiametreRoue" vitesse="VitesseTOM" tempsAvantChangement="LatchTemps" dateAvantChangement="LatchDate"/>
+		<liste-variables>
+			<variable-discrete nom="MEL" code="300" type="uint16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Valeur MEL1"/>
+			</variable-discrete>
+			<variable-discrete nom="MEL2" code="302" type="uint24" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Valeur MEL2"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique1" code="321" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 1"/>
+				<nom-utilisateur lang="EN" libelle="DI#01:Right doors "/>
+				<nom-utilisateur lang="FR" libelle="EL#01 : Portes droites"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="0" label="Off"/>
+					<table-labels valeur="1" label="On"/>
+				</liste-tablelabels>
+				<liste-tablelabels lang="EN">
+					<table-labels valeur="0" label="Closed"/>
+					<table-labels valeur="1" label="Open"/>
+				</liste-tablelabels>
+				<liste-tablelabels lang="FR">
+					<table-labels valeur="0" label="fermées"/>
+					<table-labels valeur="1" label="ouvertes"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique2" code="322" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 2"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 2"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 2"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique3" code="323" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 3"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 3"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 3"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique4" code="324" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 4"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 4"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 4"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique5" code="325" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 5"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 5"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique6" code="326" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 6"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 6"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 6"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique7" code="327" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 7"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 7"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 7"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique8" code="328" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 8"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 8"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 8"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique9" code="329" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 9"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 9"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 9"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique10" code="330" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 10"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 10"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 10"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique11" code="331" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 11"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 11"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 11"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique12" code="332" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 12"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 12"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 12"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique13" code="333" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 13"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 13"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 13"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique14" code="334" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 14"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 14"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 14"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique15" code="335" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 15"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 15"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 15"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique16" code="336" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 16"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 16"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 16"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique65" code="385" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 65"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 65"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 65"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique66" code="386" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 66"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 66"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 66"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique67" code="387" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 67"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 67"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 67"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique68" code="388" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 68"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 68"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 68"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique69" code="389" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 69"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 69"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 69"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique70" code="390" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 70"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 70"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 70"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique71" code="391" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 71"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 71"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 71"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 71"/>
+				<nom-utilisateur lang="DEF" libelle="Digital Input 71"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique72" code="392" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 72"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 72"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 72"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique73" code="393" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 73"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 73"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 73"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique74" code="394" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 74"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 74"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 74"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique75" code="395" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 75"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 75"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 75"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique76" code="396" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 76"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 76"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique76"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique77" code="397" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 77"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 77"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 77"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique78" code="398" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 78"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 78"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 78"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique79" code="399" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 79"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 79"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 79"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique80" code="400" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 80"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 80"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 80"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique256" code="576" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Digital Input 256"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input 256"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique 256"/>
+			</variable-discrete>
+			<variable-discrete nom="DiametreRoue" code="21" type="uint16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Wheel Diameter"/>
+				<nom-utilisateur lang="EN" libelle="Wheel Diameter"/>
+				<nom-utilisateur lang="FR" libelle="Diamètre de roue"/>
+			</variable-discrete>
+			<variable-discrete nom="NbImpulsions" code="22" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Pulses per revolution"/>
+				<nom-utilisateur lang="EN" libelle="Pulses per revolution"/>
+				<nom-utilisateur lang="FR" libelle="Nombre de tours "/>
+			</variable-discrete>
+			<variable-discrete nom="Longitude" code="2010" type="int32" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Longitude"/>
+				<nom-utilisateur lang="EN" libelle="Longitude"/>
+				<nom-utilisateur lang="FR" libelle="Longitude"/>
+			</variable-discrete>
+			<variable-discrete nom="Latitude" code="2011" type="String" poids-1er-octet="MSB" poids-1er-bit="MSB" taille="12">
+				<nom-utilisateur lang="DEF" libelle="Latitude"/>
+				<nom-utilisateur lang="EN" libelle="Latitude"/>
+				<nom-utilisateur lang="FR" libelle="Latitude"/>
+			</variable-discrete>
+			<variable-discrete nom="Var3000" code="3000" type="int8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Var3000"/>
+				<nom-utilisateur lang="EN" libelle="Var3000"/>
+				<nom-utilisateur lang="FR" libelle="Var3000"/>
+			</variable-discrete>
+			<variable-discrete nom="Var3001" code="3001" type="int8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Var3001"/>
+				<nom-utilisateur lang="EN" libelle="Var3001"/>
+				<nom-utilisateur lang="FR" libelle="Var3001"/>
+			</variable-discrete>
+			<variable-discrete nom="Var3002" code="3002" type="int8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Var3002"/>
+				<nom-utilisateur lang="EN" libelle="Var3002"/>
+				<nom-utilisateur lang="FR" libelle="Var3002"/>
+			</variable-discrete>
+			<variable-discrete nom="Var3003" code="3003" type="int8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Var3003"/>
+				<nom-utilisateur lang="EN" libelle="Var3003"/>
+				<nom-utilisateur lang="FR" libelle="Var3003"/>
+			</variable-discrete>
+			<variable-discrete nom="Var3004" code="3004" type="int8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Var3004"/>
+				<nom-utilisateur lang="EN" libelle="Var3004"/>
+				<nom-utilisateur lang="FR" libelle="Var3004"/>
+			</variable-discrete>
+			<variable-analogique nom="Temps" code="1" type="uint24" coef-directeur="10" offset="0" unite="ms">
+				<nom-utilisateur lang="FR" libelle="Compteur temps"/>
+				<nom-utilisateur lang="EN" libelle="Timer counter"/>
+				<nom-utilisateur lang="DEF" libelle="Timer counter"/>
+			</variable-analogique>
+			<variable-analogique nom="Date" code="2" type="uint16" coef-directeur="1" offset="0" unite="jour">
+				<nom-utilisateur lang="DEF" libelle="Date"/>
+				<nom-utilisateur lang="EN" libelle="Date"/>
+				<nom-utilisateur lang="FR" libelle="Date"/>
+				<nom-utilisateur lang="TR" libelle="Tarihi"/>
+			</variable-analogique>
+			<variable-analogique nom="LatchTemps" code="1001" type="uint24" coef-directeur="10" offset="0" unite="ms">
+				<nom-utilisateur lang="FR" libelle="Latch Compteur temps"/>
+				<nom-utilisateur lang="EN" libelle="Timer counter Latch"/>
+				<nom-utilisateur lang="DEF" libelle="Timer counter Latch"/>
+			</variable-analogique>
+			<variable-analogique nom="LatchDate" code="1002" type="uint16" coef-directeur="1" offset="0" unite="jour">
+				<nom-utilisateur lang="DEF" libelle="Latch Date"/>
+				<nom-utilisateur lang="EN" libelle="Date Latch"/>
+				<nom-utilisateur lang="FR" libelle="Date Latch"/>
+			</variable-analogique>
+			<variable-analogique nom="VitesseTOM" code="20" type="uint16" coef-directeur="0.1" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="Speed"/>
+				<nom-utilisateur lang="EN" libelle="Speed"/>
+				<nom-utilisateur lang="FR" libelle="Vitesse"/>
+			</variable-analogique>
+			<variable-analogique nom="Distance" code="9" type="uint24" coef-directeur="0.001" offset="0" unite="km" nb-decimales="3">
+				<nom-utilisateur lang="DEF" libelle="Distance"/>
+				<nom-utilisateur lang="EN" libelle="Distance"/>
+				<nom-utilisateur lang="FR" libelle="Distance"/>
+				<nom-utilisateur lang="TR" libelle="İzafi mesafe"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana1" code="264" type="real32" coef-directeur="1" offset="0" unite="V" nb-decimales="3">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 1"/>
+				<nom-utilisateur lang="FR" libelle="Tension Batterie"/>
+				<nom-utilisateur lang="EN" libelle="Battery Voltage"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana2" code="265" type="real64" coef-directeur="1" offset="0" unite="V" nb-decimales="3">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 2"/>
+				<nom-utilisateur lang="FR" libelle="Mesure +15V TOM"/>
+				<nom-utilisateur lang="EN" libelle="TOM +15V measurement"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana3" code="266" type="int8" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 3"/>
+				<nom-utilisateur lang="FR" libelle="Mesure +12V TOM"/>
+				<nom-utilisateur lang="EN" libelle="TOM +12V measurement"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana4" code="267" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 4"/>
+				<nom-utilisateur lang="FR" libelle="Mesure +24V TOM"/>
+				<nom-utilisateur lang="EN" libelle="TOM +24V measurement"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana5" code="268" type="int32" coef-directeur="0.001" offset="0" unite="Bar" nb-decimales="2">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 5"/>
+				<nom-utilisateur lang="FR" libelle="Pression frein"/>
+				<nom-utilisateur lang="EN" libelle="Brake pressure"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana6" code="269" type="uint8" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 6"/>
+				<nom-utilisateur lang="FR" libelle="Consigne manipulateur"/>
+				<nom-utilisateur lang="EN" libelle="Manipulator order"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana7" code="270" type="uint16" coef-directeur="1" offset="0" unite="N" poids-1er-octet="LSB" poids-1er-bit="LSB">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 7"/>
+				<nom-utilisateur lang="FR" libelle="Couple moteur"/>
+				<nom-utilisateur lang="EN" libelle="Motor torque"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana8" code="271" type="uint32" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 8"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 8"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 8"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana9" code="272" type="uint8" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 9"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 9"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 9"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana10" code="273" type="uint16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 10"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 10"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 10"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana11" code="274" type="uint24" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 11"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 11"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 11"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana12" code="275" type="real32" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 12"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 12"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 12"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana13" code="276" type="uint64" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 13"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 13"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 13"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana14" code="277" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 14"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 14"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 14"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana15" code="278" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 15"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 15"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 15"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana16" code="279" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 16"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 16"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 16"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana17" code="280" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 17"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 17"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 17"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana18" code="281" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 18"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 18"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 18"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana19" code="282" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 19"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 19"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 19"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana20" code="283" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 20"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 20"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 20"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana21" code="284" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 21"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 21"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 21"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana22" code="285" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 22"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 22"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 22"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana23" code="286" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 23"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 23"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 23"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana24" code="287" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 24"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 24"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 24"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana25" code="288" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 25"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 25"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 25"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana26" code="289" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 26"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 26"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 26"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana27" code="290" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 27"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 27"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 27"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana28" code="291" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 28"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 28"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 28"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana29" code="292" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 29"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 29"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 29"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana30" code="293" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 30"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 30"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 30"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana31" code="294" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 31"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 31"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 31"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana32" code="295" type="int16" coef-directeur="1" offset="0" unite="V">
+				<nom-utilisateur lang="DEF" libelle="Analog Input 32"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input 32"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique 32"/>
+			</variable-analogique>
+			<variable-complexe nom="TEST" code="301" taille="17">
+				<nom-utilisateur lang="DEF" libelle="Var complexe pour Test"/>
+				<nom-utilisateur lang="FR" libelle="Var complexe pour Test"/>
+				<nom-utilisateur lang="EN" libelle="Complex Var for Test"/>
+				<sous-variable>
+					<variable-discrete nom="TEST.var1" type="uintXbits" taille="5">
+						<nom-utilisateur lang="DEF" libelle="Var1 de TEST"/>
+						<nom-utilisateur lang="FR" libelle="Var1 de TEST"/>
+						<nom-utilisateur lang="EN" libelle="Var1 of TEST"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TEST.var2" type="uintXbits" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Var2 de TEST"/>
+						<nom-utilisateur lang="FR" libelle="Var2 de TEST"/>
+						<nom-utilisateur lang="EN" libelle="Var2 of TEST"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="TEST.vitesse" type="uintXbits" taille="15" coef-directeur="0.1" offset="0">
+						<nom-utilisateur lang="DEF" libelle="Vitesse de TEST"/>
+						<nom-utilisateur lang="FR" libelle="Vitesse de TEST"/>
+						<nom-utilisateur lang="EN" libelle="Speed of TEST"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TEST.Event_Number" type="uint32">
+						<nom-utilisateur lang="DEF" libelle="Numéro de l'événement dans TEST"/>
+						<nom-utilisateur lang="FR" libelle="Numéro de l'événement dans TEST"/>
+						<nom-utilisateur lang="EN" libelle="Event number in TEST"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TEST.texte" type="String" taille="10">
+						<nom-utilisateur lang="DEF" libelle="Texte pour TEST"/>
+						<nom-utilisateur lang="FR" libelle="Texte pour TEST"/>
+						<nom-utilisateur lang="EN" libelle="Text for TEST"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="TEST2" code="602" taille="16">
+				<nom-utilisateur lang="DEF" libelle="Var complexe pour Test 2"/>
+				<nom-utilisateur lang="FR" libelle="Var complexe pour Test 2"/>
+				<nom-utilisateur lang="EN" libelle="Complex Var for Test 2"/>
+				<sous-variable>
+					<variable-discrete nom="TEST2.var1" type="BCD8">
+						<nom-utilisateur lang="DEF" libelle="Var1 de TEST2"/>
+						<nom-utilisateur lang="FR" libelle="Var1 de TEST2"/>
+						<nom-utilisateur lang="EN" libelle="Var1 of TEST2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TEST2.var2" type="BCD4">
+						<nom-utilisateur lang="DEF" libelle="Var2 de TEST2"/>
+						<nom-utilisateur lang="FR" libelle="Var2 de TEST2"/>
+						<nom-utilisateur lang="EN" libelle="Var2 of TEST2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TEST2.var3" type="BCD4" poids-1er-bit="LSB">
+						<nom-utilisateur lang="DEF" libelle="Var3 de TEST2"/>
+						<nom-utilisateur lang="FR" libelle="Var3 de TEST2"/>
+						<nom-utilisateur lang="EN" libelle="Var3 of TEST2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TEST2.var4" type="BCD8" poids-1er-bit="LSB">
+						<nom-utilisateur lang="DEF" libelle="Var4 de TEST2"/>
+						<nom-utilisateur lang="FR" libelle="Var4 de TEST2"/>
+						<nom-utilisateur lang="EN" libelle="Var4 of TEST2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="TEST2.texte" type="String" taille="13" poids-1er-octet="LSB">
+						<nom-utilisateur lang="DEF" libelle="Texte pour TEST2"/>
+						<nom-utilisateur lang="FR" libelle="Texte pour TEST2"/>
+						<nom-utilisateur lang="EN" libelle="Text for TEST2"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="InfoATP1" code="3005" taille="11">
+				<nom-utilisateur lang="DEF" libelle="Info ATP1"/>
+				<sous-variable>
+					<variable-discrete nom="InfoATP1.PIN" type="String" taille="3">
+						<nom-utilisateur lang="DEF" libelle="Personal ID"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP1.TrainLength" type="uint16" poids-1er-octet="LSB" poids-1er-bit="LSB">
+						<nom-utilisateur lang="DEF" libelle="Train Length"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP1.PSpeedRest" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="PSR"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP1.TSpeedRest" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="TSR"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="InfoATP1.BrakeRate" type="uint8" unite="%g">
+						<nom-utilisateur lang="DEF" libelle="Brake Rate"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="InfoATP1.MTrainSpeed" type="uint8" unite="mph">
+						<nom-utilisateur lang="DEF" libelle="Max Train Speed"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="InfoATP1.EBrakeRate" type="uint8" unite="ds">
+						<nom-utilisateur lang="DEF" libelle="Emergency Brake Delay"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="InfoATP1.SBrakeDelay" type="uint8" unite="ds">
+						<nom-utilisateur lang="DEF" libelle="Service Brake Delay"/>
+					</variable-analogique>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="InfoATP2" code="3006" taille="15">
+				<nom-utilisateur lang="DEF" libelle="Info ATP2"/>
+				<sous-variable>
+					<variable-discrete nom="InfoATP2.temp" type="String" taille="15">
+						<nom-utilisateur lang="DEF" libelle="Essai pour ATP2"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="InfoATP3" code="3007" taille="12">
+				<nom-utilisateur lang="DEF" libelle="Info ATP3"/>
+				<sous-variable>
+					<variable-analogique nom="InfoATP3.TrainSpeed" type="uint16" coef-directeur="0.01" offset="0" unite="m/s" poids-1er-bit="MSB" poids-1er-octet="MSB">
+						<nom-utilisateur lang="DEF" libelle="MMI.Train Speed"/>
+						<nom-utilisateur lang="EN" libelle="MMI.Train Speed"/>
+						<nom-utilisateur lang="FR" libelle="MMI.Vitesse train"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.ActiveCab" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="MMI.Active Cab"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.Direction" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="Direction ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.reserved1" type="uintXbits" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.EmergencyBrake" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="Emergency Brake ATP3"/>
+						<nom-utilisateur lang="EN" libelle="Emergency Brake ATP3"/>
+						<nom-utilisateur lang="FR" libelle="Frein d'urgence ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.ServiceBrake" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Service Brake ATP3"/>
+						<nom-utilisateur lang="EN" libelle="Service Brake ATP3"/>
+						<nom-utilisateur lang="FR" libelle="Frein de service ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.ATPMode" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="ATP Mode ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.SpeedGreenLeds" type="uintXbits" taille="22">
+						<nom-utilisateur lang="DEF" libelle="Permitted Speed ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.MDI" type="String" taille="3">
+						<nom-utilisateur lang="DEF" libelle="Main Display ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.Warn" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Warning ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.reserved4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserved4 ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.Inter" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Intervention ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.reserved5" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserved5 ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.Trip" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Train Trip ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.reserved6" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserved6 ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.TripOr" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Trip Override ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.reserved7" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserved7 ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.reserved8" type="reserved" taille="8">
+						<nom-utilisateur lang="DEF" libelle="reserved8 ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="InfoATP3.FaultCode" type="uintXbits" taille="8">
+						<nom-utilisateur lang="DEF" libelle="Fault Code ATP3"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-composee nom="MasterController">
+				<nom-utilisateur lang="DEF" libelle="MasterController"/>
+				<liste-sousvar>
+					<sous-var nom="EntreeLogique1"/>
+					<sous-var nom="EntreeLogique2"/>
+					<sous-var nom="EntreeLogique3"/>
+					<sous-var nom="EntreeLogique4"/>
+				</liste-sousvar>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="0,0,0,0" label="UNDEFINED"/>
+					<table-labels valeur="0,0,0,1" label="UNDEFINED"/>
+					<table-labels valeur="0,0,1,0" label="P3"/>
+					<table-labels valeur="0,0,1,1" label="P4"/>
+					<table-labels valeur="0,1,0,0" label="B1"/>
+					<table-labels valeur="0,1,0,1" label="C"/>
+					<table-labels valeur="0,1,1,0" label="P2"/>
+					<table-labels valeur="0,1,1,1" label="P1"/>
+					<table-labels valeur="1,0,0,0" label="UNDEFINED"/>
+					<table-labels valeur="1,0,0,1" label="UNDEFINED"/>
+					<table-labels valeur="1,0,1,0" label="UNDEFINED"/>
+					<table-labels valeur="1,0,1,1" label="UNDEFINED"/>
+					<table-labels valeur="1,1,0,0" label="B2"/>
+					<table-labels valeur="1,1,0,1" label="B3"/>
+					<table-labels valeur="1,1,1,0" label="UNDEFINED"/>
+					<table-labels valeur="1,1,1,1" label="EM"/>
+				</liste-tablelabels>
+			</variable-composee>
+		</liste-variables>
+	</enregistreur>
+	<signature CRC="2b28"/>
+</enregistreur-def>

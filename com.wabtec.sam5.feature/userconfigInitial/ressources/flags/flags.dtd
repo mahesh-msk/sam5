@@ -1,0 +1,7 @@
+<!ELEMENT liste-flags (flag*)>
+<!ELEMENT flag EMPTY>
+<!ATTLIST flag
+	id CDATA #REQUIRED
+	nomEvt CDATA #IMPLIED
+	flagName CDATA #IMPLIED
+	libelle CDATA #REQUIRED>

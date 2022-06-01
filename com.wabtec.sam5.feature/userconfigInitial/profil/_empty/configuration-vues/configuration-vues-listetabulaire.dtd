@@ -1,0 +1,11 @@
+<!-- gestion de la configuration d'une vue -->
+<!ELEMENT vue (filtre-applique?,configuration-colonnes?)>
+<!ELEMENT configuration-colonnes (colonne*)>
+<!ELEMENT colonne EMPTY>
+<!ATTLIST colonne
+	nom CDATA #REQUIRED
+	largeur CDATA #REQUIRED
+	affiche CDATA #REQUIRED>
+<!ELEMENT filtre-applique EMPTY>
+<!ATTLIST filtre-applique
+	nom CDATA #REQUIRED>

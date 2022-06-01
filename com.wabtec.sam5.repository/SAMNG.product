@@ -11,7 +11,7 @@
    </configIni>
 
    <launcherArgs>
-      <programArgsWin>-workspace ../userconfig -data ../userconfig/workspace
+      <programArgsWin>-workspace userconfig -data userconfig/workspace
       </programArgsWin>
       <vmArgsWin>-XX:MaxRAMPercentage=75
 -Duser.language=fr

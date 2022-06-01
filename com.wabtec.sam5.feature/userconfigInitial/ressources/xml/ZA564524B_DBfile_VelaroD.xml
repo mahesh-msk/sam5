@@ -1,0 +1,2583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by PHILIPPE CHRISTIAN (FAIVELEY TRANSPORT TOURS SAS) -->
+<!-- edited with XMLSPY v5 rel. 2 U (http://www.xmlspy.com) by FAIVELEY TRANSPORT (FAIVELEY TRANSPORT) -->
+<!--Ce fichier XML décrit les paramètres des fichiers de parcours de l'ATESS fichier type TOM NG utilisés par le logiciel SAM 5 -->
+<enregistreur-def xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ALL_TOM.xsd">
+	<!--Nom_projet & version XML :
+  titre = indication de l'application (ex : Pour Atess VELARO-D)
+  numplan = référence Faiveley du fichier xml
+  versionXML = version majeure & mineure du fichier sous la forme Xyy : X = lettre, y = chiffre-->
+	<infos_fichier titre="ATESS 3G VELARO-D" numplan=" ZA564524.500" versionXML="B-28"/>
+	<infos-parcours/>
+	<!--Description enregistreur :
+  modele = référence Faiveley du logiciel enregisteur
+  projet = ATESS VELARO-D
+  type = type d'enregistreur (format des données enregistrées)
+  resolution-temps = unité de temps -->
+	<enregistreur modele="ZA562160" projet="VELARO-D" type="TOM NG POUR ENR DB" resolution-temps="1">
+		<liste-evenements>
+			<evenement nom="Démarrage des enregistrements" code="1" ruptureAcquisition="true">
+				<nom-utilisateur lang="DEF" libelle="Beginn der Aufzeichnungen"/>
+				<nom-utilisateur lang="FR" libelle="Début des enregistrements"/>
+				<nom-utilisateur lang="EN" libelle="Recording start"/>
+				<nom-utilisateur lang="DE" libelle="Beginn der Aufzeichnungen"/>
+			</evenement>
+			<evenement nom="Seuil Temps" code="2">
+				<nom-utilisateur lang="DEF" libelle="Zeitschwelle"/>
+				<nom-utilisateur lang="FR" libelle="Seuil temps"/>
+				<nom-utilisateur lang="EN" libelle="Time threshold"/>
+				<nom-utilisateur lang="DE" libelle="Zeitschwelle"/>
+			</evenement>
+			<evenement nom="Seuil vitesse" code="3">
+				<nom-utilisateur lang="DEF" libelle="Geschwindigkeit"/>
+				<nom-utilisateur lang="FR" libelle="Seuil vitesse"/>
+				<nom-utilisateur lang="EN" libelle="Speed threshold"/>
+				<nom-utilisateur lang="DE" libelle="Geschwindigkeit"/>
+			</evenement>
+			<evenement nom="Seuil distance" code="4">
+				<nom-utilisateur lang="DEF" libelle="Entfernungsschwelle"/>
+				<nom-utilisateur lang="FR" libelle="Seuil distance"/>
+				<nom-utilisateur lang="EN" libelle="Distance threshold"/>
+				<nom-utilisateur lang="DE" libelle="Entfernungsschwelle"/>
+			</evenement>
+			<evenement nom="EvChgHeureTOM" code="5" changementHeure="true">
+				<nom-utilisateur lang="DEF" libelle="Änderung der Uhrzeit"/>
+				<nom-utilisateur lang="FR" libelle="Changement d'heure"/>
+				<nom-utilisateur lang="EN" libelle="Time change"/>
+				<nom-utilisateur lang="DE" libelle="Änderung der Uhrzeit"/>
+			</evenement>
+			<evenement nom="Changement de jour" code="6">
+				<nom-utilisateur lang="DEF" libelle="Änderung des Tages"/>
+				<nom-utilisateur lang="FR" libelle="Changement De Jour"/>
+				<nom-utilisateur lang="EN" libelle="Day change"/>
+				<nom-utilisateur lang="DE" libelle="Änderung des Tages"/>
+			</evenement>
+			<evenement nom="Nouvelle mission" code="7" ruptureAcquisition="true">
+				<nom-utilisateur lang="DEF" libelle="Neuer Einsatz"/>
+				<nom-utilisateur lang="FR" libelle="Nouvelle mission"/>
+				<nom-utilisateur lang="EN" libelle="New journey file"/>
+				<nom-utilisateur lang="DE" libelle="Neuer Einsatz"/>
+			</evenement>
+			<evenement nom="SeuilAnaCAN_1" code="8">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN #01"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN #01"/>
+				<nom-utilisateur lang="EN" libelle="Analog input #01 from CAN"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN #01"/>
+			</evenement>
+			<evenement nom="SeuilAnaCAN_2" code="9">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN #02"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN #02"/>
+				<nom-utilisateur lang="EN" libelle="Analog input #02 from CAN"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN #02"/>
+			</evenement>
+			<evenement nom="SeuilAnaCAN_3" code="10">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN #03"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN #03"/>
+				<nom-utilisateur lang="EN" libelle="Analog input #03 from CAN"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN #03"/>
+			</evenement>
+			<evenement nom="SeuilAnaCAN_4" code="11">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN #04"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN #04"/>
+				<nom-utilisateur lang="EN" libelle="Analog input #04 from CAN"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN #04"/>
+			</evenement>
+			<evenement nom="SeuilAnaCAN_5" code="12">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN #05"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN #05"/>
+				<nom-utilisateur lang="EN" libelle="Analog input #05 from CAN"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN #05"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_01" code="13">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#01"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#01"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#01change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#01"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_02" code="14">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#02"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#02"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#02 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#02"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_03" code="15">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#03"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#03"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#03 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#03"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_04" code="16">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#04"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#04"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#04 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#04"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_05" code="17">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#05"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#05"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#05 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#05"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_06" code="18">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#06"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#06"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#06 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#06"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_07" code="19">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#07"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#07"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#07 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#07"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_08" code="20">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#08"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#08"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#08 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#08"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_09" code="21">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#09"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#09"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#09 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#09"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_10" code="22">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#10"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#10"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#10 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#10"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_11" code="23">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#11"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#11"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#11 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#11"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_12" code="24">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#12"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#12"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#12 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#12"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_13" code="25">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#13"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#13"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#13 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#13"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_14" code="26">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#14"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#14"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#14 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#14"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_15" code="27">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#15"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#15"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#15 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#15"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_16" code="28">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#16"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#16"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#16 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#16"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_17" code="29">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#17"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#17"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#17 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#17"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_18" code="30">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#18"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#18"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#18 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#18"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_19" code="31">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#19"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#19"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#19 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#19"/>
+			</evenement>
+			<evenement nom="VariationEL_CAN_20" code="32">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang CAN#20"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique CAN#20"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN#20 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang CAN#20"/>
+			</evenement>
+			<evenement nom="VariationEL_01" code="33">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #01"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #01"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #01 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #01"/>
+			</evenement>
+			<evenement nom="VariationEL_02" code="34">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #02"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #02"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #02 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #02"/>
+			</evenement>
+			<evenement nom="VariationEL_03" code="35">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #03"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #03"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #03 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #03"/>
+			</evenement>
+			<evenement nom="VariationEL_04" code="36">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #04"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #04"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #04 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #04"/>
+			</evenement>
+			<evenement nom="VariationEL_05" code="37">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #05"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #05"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #05 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #05"/>
+			</evenement>
+			<evenement nom="VariationEL_06" code="38">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #06"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #06"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #06 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #06"/>
+			</evenement>
+			<evenement nom="VariationEL_07" code="39">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #07"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #07"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #07 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #07"/>
+			</evenement>
+			<evenement nom="VariationEL_08" code="40">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #08"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #08"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #08 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #08"/>
+			</evenement>
+			<evenement nom="VariationEL_09" code="41">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #09"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #09"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #09 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #09"/>
+			</evenement>
+			<evenement nom="VariationEL_10" code="42">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #10"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #10"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #10 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #10"/>
+			</evenement>
+			<evenement nom="VariationEL_11" code="43">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #11"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #11"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #11 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #11"/>
+			</evenement>
+			<evenement nom="VariationEL_12" code="44">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #12"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #12"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #12 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #12"/>
+			</evenement>
+			<evenement nom="VariationEL_13" code="45">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #13"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #13"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #13 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #13"/>
+			</evenement>
+			<evenement nom="VariationEL_14" code="46">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #14"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #14"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #14 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #14"/>
+			</evenement>
+			<evenement nom="VariationEL_15" code="47">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #15"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #15"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #15 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #15"/>
+			</evenement>
+			<evenement nom="VariationEL_16" code="48">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #16"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #16"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #16 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #16"/>
+			</evenement>
+			<evenement nom="VariationEL_17" code="49">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #17"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #17"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #17 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #17"/>
+			</evenement>
+			<evenement nom="VariationEL_18" code="50">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #18"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #18"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #18 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #18"/>
+			</evenement>
+			<evenement nom="VariationEL_19" code="51">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #19"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #19"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #19 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #19"/>
+			</evenement>
+			<evenement nom="VariationEL_20" code="52">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #20"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #20"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #20 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #20"/>
+			</evenement>
+			<evenement nom="VariationEL_21" code="53">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #21"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #21"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #21 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #21"/>
+			</evenement>
+			<evenement nom="VariationEL_22" code="54">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #22"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #22"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #22 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #22"/>
+			</evenement>
+			<evenement nom="VariationEL_23" code="55">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #23"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #23"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #23 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #23"/>
+			</evenement>
+			<evenement nom="VariationEL_24" code="56">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #24"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #24"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #24 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #24"/>
+			</evenement>
+			<evenement nom="VariationEL_25" code="57">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #25"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #25"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #25 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #25"/>
+			</evenement>
+			<evenement nom="VariationEL_26" code="58">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #26"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #26"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #26 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #26"/>
+			</evenement>
+			<evenement nom="VariationEL_27" code="59">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #27"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #27"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #27 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #27"/>
+			</evenement>
+			<evenement nom="VariationEL_28" code="60">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #28"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #28"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #28 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #28"/>
+			</evenement>
+			<evenement nom="VariationEL_29" code="61">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #29"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #29"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #29 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #29"/>
+			</evenement>
+			<evenement nom="VariationEL_30" code="62">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #30"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #30"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #30 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #30"/>
+			</evenement>
+			<evenement nom="VariationEL_31" code="63">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #31"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #31"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #31 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #31"/>
+			</evenement>
+			<evenement nom="VariationEL_32" code="64">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #32"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #32"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #32 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #32"/>
+			</evenement>
+			<evenement nom="VariationEL_33" code="65">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #33"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #33"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #33 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #33"/>
+			</evenement>
+			<evenement nom="VariationEL_34" code="66">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #34"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #34"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #34 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #34"/>
+			</evenement>
+			<evenement nom="VariationEL_35" code="67">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #35"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #35"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #35 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #35"/>
+			</evenement>
+			<evenement nom="VariationEL_36" code="68">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #36"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #36"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #36 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #36"/>
+			</evenement>
+			<evenement nom="VariationEL_37" code="69">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #37"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #37"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #37 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #37"/>
+			</evenement>
+			<evenement nom="VariationEL_38" code="70">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #38"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #38"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #38 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #38"/>
+			</evenement>
+			<evenement nom="VariationEL_39" code="71">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #39"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #39"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #39 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #39"/>
+			</evenement>
+			<evenement nom="VariationEL_40" code="72">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #40"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #40"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #40 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #40"/>
+			</evenement>
+			<evenement nom="VariationEL_41" code="73">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #41"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #41"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #41 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #41"/>
+			</evenement>
+			<evenement nom="VariationEL_42" code="74">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #42"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #42"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #42 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #42"/>
+			</evenement>
+			<evenement nom="VariationEL_43" code="75">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #43"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #43"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #43 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #43"/>
+			</evenement>
+			<evenement nom="VariationEL_44" code="76">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #44"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #44"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #44 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #44"/>
+			</evenement>
+			<evenement nom="VariationEL_45" code="77">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #45"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #45"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #45 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #45"/>
+			</evenement>
+			<evenement nom="VariationEL_46" code="78">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #46"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #46"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #46 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #46"/>
+			</evenement>
+			<evenement nom="VariationEL_47" code="79">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #47"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #47"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #47 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #47"/>
+			</evenement>
+			<evenement nom="VariationEL_48" code="80">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #48"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #48"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #48 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #48"/>
+			</evenement>
+			<evenement nom="VariationEL_49" code="81">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #49"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #49"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #49 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #49"/>
+			</evenement>
+			<evenement nom="VariationEL_50" code="82">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #50"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #50"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #50 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #50"/>
+			</evenement>
+			<evenement nom="VariationEL_51" code="83">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #51"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #51"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #51 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #51"/>
+			</evenement>
+			<evenement nom="VariationEL_52" code="84">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #52"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #52"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #52 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #52"/>
+			</evenement>
+			<evenement nom="VariationEL_53" code="85">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #53"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #53"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #53 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #53"/>
+			</evenement>
+			<evenement nom="VariationEL_54" code="86">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #54"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #54"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #54 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #54"/>
+			</evenement>
+			<evenement nom="VariationEL_55" code="87">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #55"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #55"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #55 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #55"/>
+			</evenement>
+			<evenement nom="VariationEL_56" code="88">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #56"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #56"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #56 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #56"/>
+			</evenement>
+			<evenement nom="VariationEL_57" code="89">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #57"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #57"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #57 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #57"/>
+			</evenement>
+			<evenement nom="VariationEL_58" code="90">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #58"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #58"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #58 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #58"/>
+			</evenement>
+			<evenement nom="VariationEL_59" code="91">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #59"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #59"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #59 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #59"/>
+			</evenement>
+			<evenement nom="VariationEL_60" code="92">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #60"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #60"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #60 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #60"/>
+			</evenement>
+			<evenement nom="VariationEL_61" code="93">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #61"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #61"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #61 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #61"/>
+			</evenement>
+			<evenement nom="VariationEL_62" code="94">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #62"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #62"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #62 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #62"/>
+			</evenement>
+			<evenement nom="VariationEL_63" code="95">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #63"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #63"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #63 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #63"/>
+			</evenement>
+			<evenement nom="VariationEL_64" code="96">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #64"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #64"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #64 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #64"/>
+			</evenement>
+			<evenement nom="VariationEL_65" code="97">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #65"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #65"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #65 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #65"/>
+			</evenement>
+			<evenement nom="VariationEL_66" code="98">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #66"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #66"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #66 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #66"/>
+			</evenement>
+			<evenement nom="VariationEL_67" code="99">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #67"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #67"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #67 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #67"/>
+			</evenement>
+			<evenement nom="VariationEL_68" code="100">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #68"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #68"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #68 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #68"/>
+			</evenement>
+			<evenement nom="VariationEL_69" code="101">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #69"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #69"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #69 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #69"/>
+			</evenement>
+			<evenement nom="VariationEL_70" code="102">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #70"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #70"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #70 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #70"/>
+			</evenement>
+			<evenement nom="VariationEL_71" code="103">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #71"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #71"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #71 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #71"/>
+			</evenement>
+			<evenement nom="VariationEL_72" code="104">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #72"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #72"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #72 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #72"/>
+			</evenement>
+			<evenement nom="VariationEL_73" code="105">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #73"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #73"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #73 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #73"/>
+			</evenement>
+			<evenement nom="VariationEL_74" code="106">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #74"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #74"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #74 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #74"/>
+			</evenement>
+			<evenement nom="VariationEL_75" code="107">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #75"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #75"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #75 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #75"/>
+			</evenement>
+			<evenement nom="VariationEL_76" code="108">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #76"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #76"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #76 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #76"/>
+			</evenement>
+			<evenement nom="VariationEL_77" code="109">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #77"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #77"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #77 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #77"/>
+			</evenement>
+			<evenement nom="VariationEL_78" code="110">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #78"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #78"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #78 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #78"/>
+			</evenement>
+			<evenement nom="VariationEL_79" code="111">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #79"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #79"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #79 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #79"/>
+			</evenement>
+			<evenement nom="VariationEL_80" code="112">
+				<nom-utilisateur lang="DEF" libelle="Zustandsänderung logischer Eingang #80"/>
+				<nom-utilisateur lang="FR" libelle="Changement Etat Entrée Logique #80"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input #80 change"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #80"/>
+			</evenement>
+			<evenement nom="ZSGM_ATESS_RECORDING_DATA" code="113">
+				<nom-utilisateur lang="DEF" libelle="ZSGM_ATESS_RECORDING_DATA"/>
+			</evenement>
+			<evenement nom="MVB_PORT_19" code="114">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 19"/>
+			</evenement>
+			<evenement nom="MVB_PORT_21" code="115">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 21"/>
+			</evenement>
+			<evenement nom="MVB_PORT_40" code="116">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 40"/>
+			</evenement>
+			<evenement nom="MVB_PORT_61" code="117">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 61"/>
+			</evenement>
+			<evenement nom="MVB_PORT_500" code="118">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 500"/>
+			</evenement>
+			<evenement nom="MVB_PORT_501" code="119">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 501"/>
+			</evenement>
+			<evenement nom="MVB_PORT_502" code="120">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 502"/>
+			</evenement>
+			<evenement nom="MVB_PORT_920" code="121">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 920"/>
+			</evenement>
+			<evenement nom="MVB_PORT_921" code="122">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 921"/>
+			</evenement>
+			<evenement nom="MVB_PORT_922" code="123">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 922"/>
+			</evenement>
+			<evenement nom="MVB_PORT_923" code="124">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 923"/>
+			</evenement>
+			<evenement nom="MVB_PORT_925" code="125">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 925"/>
+			</evenement>
+			<evenement nom="MVB_PORT_952" code="126">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 952"/>
+			</evenement>
+			<evenement nom="MVB_PORT_505" code="127">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 505"/>
+			</evenement>
+			<evenement nom="EL group : #1 to #29" code="128">
+				<nom-utilisateur lang="DEF" libelle="LI#1 - LI#29"/>
+				<nom-utilisateur lang="FR" libelle="EL#1 - EL#29"/>
+				<nom-utilisateur lang="EN" libelle="LI#1 - LI#29"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #1 - #29"/>
+			</evenement>
+			<evenement nom="EL group : #30 to #58" code="129">
+				<nom-utilisateur lang="DEF" libelle="EL#30 - EL#58"/>
+				<nom-utilisateur lang="FR" libelle="EL#30 - EL#58"/>
+				<nom-utilisateur lang="EN" libelle="LI#30 - LI#58"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #30 - #58"/>
+			</evenement>
+			<evenement nom="EL group : #59 to #64" code="130">
+				<nom-utilisateur lang="DEF" libelle="EL#59 - EL#64"/>
+				<nom-utilisateur lang="FR" libelle="EL#59 - EL#64"/>
+				<nom-utilisateur lang="EN" libelle="LI#59 - LI#64"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #59 - #64"/>
+			</evenement>
+			<evenement nom="EL group : #65 to #80" code="131">
+				<nom-utilisateur lang="DEF" libelle="EL#65 - EL#80"/>
+				<nom-utilisateur lang="FR" libelle="EL#65 - EL#80"/>
+				<nom-utilisateur lang="EN" libelle="LI#65 - LI#80"/>
+				<nom-utilisateur lang="DE" libelle="Zustandsänderung logischer Eingang #65 - #80"/>
+			</evenement>
+			<evenement nom="Params mission" code="132">
+				<nom-utilisateur lang="DEF" libelle="journey parameters"/>
+				<nom-utilisateur lang="FR" libelle="paramètres mission"/>
+				<nom-utilisateur lang="EN" libelle="journey parameters"/>
+				<nom-utilisateur lang="DE" libelle="journey parameters"/>
+			</evenement>
+			<evenement nom="BL locale" code="133">
+				<nom-utilisateur lang="DEF" libelle="BL"/>
+				<nom-utilisateur lang="FR" libelle="BL"/>
+				<nom-utilisateur lang="EN" libelle="BL"/>
+				<nom-utilisateur lang="DE" libelle="BL"/>
+			</evenement>
+			<evenement nom="BT" code="134">
+				<nom-utilisateur lang="DEF" libelle="BT"/>
+				<nom-utilisateur lang="FR" libelle="BT"/>
+				<nom-utilisateur lang="EN" libelle="BT"/>
+				<nom-utilisateur lang="DE" libelle="BT"/>
+			</evenement>
+			<evenement nom="Numéro d'engin" code="135">
+				<nom-utilisateur lang="DEF" libelle="Numéro d'engin"/>
+				<nom-utilisateur lang="FR" libelle="Numéro d'engin"/>
+				<nom-utilisateur lang="EN" libelle="Numéro d'engin"/>
+				<nom-utilisateur lang="DE" libelle="Numéro d'engin"/>
+			</evenement>
+			<evenement nom="MVB_PORT_893" code="136">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 893"/>
+			</evenement>
+			<evenement nom="MVB_PORT_953" code="137">
+				<nom-utilisateur lang="DEF" libelle="MVB Port 953"/>
+			</evenement>
+		</liste-evenements>
+		<reperes date="Date" temps="VNSBA_HEURE_MINUIT_10MS" distance="Distance" vitesse="VNSBA_VITESSE_A_ENREGISTRER" dateAvantChangement="VNSBA_DATE_LATCH" tempsAvantChangement="VNSBA_HEURE_MINUIT_10MS_LATCH"/>
+		<liste-variables>
+			<variable-discrete nom="EntreeLogique_ATESS_1" code="1500" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="SO BRS or SO KVB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_2" code="1501" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="SF BRS"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_3" code="1502" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Ack. PB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_4" code="1503" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="SF KVB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_5" code="1504" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="FC PB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_6" code="1505" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Square"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_7" code="1506" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="B into KVB display"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_8" code="1507" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="VACMA EB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_9" code="1508" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="RS EB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_10" code="1509" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="KVB EB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_11" code="1510" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="TVM EB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_12" code="1511" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="SAI"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_13" code="1512" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="MP (CO)I at zero"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_14" code="1513" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="EN" libelle="Lower Panto"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_15" code="1514" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="URG PB1"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_16" code="1515" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Horn"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_17" code="1516" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Brake lever"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_18" code="1517" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Luminous Alarm system"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_19" code="1518" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Backward move"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_20" code="1519" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Radio Alarm"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_21" code="1520" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Panto lowered"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_22" code="1521" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Absence of line voltage"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_23" code="1522" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Null Pull"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_24" code="1523" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="CG pressure low. than 2.5 bars"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_25" code="1524" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="CB opening"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_26" code="1525" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="CB opened"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_27" code="1526" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Z (IS) FEP isolated"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_28" code="1527" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="DAAT EB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_29" code="1528" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="QT open"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_30" code="1529" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="KVB Val"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_31" code="1530" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="TVM armed"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_32" code="1531" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Lever on electrical brake"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_33" code="1532" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="EB train line"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_34" code="1533" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Doors checked closed"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_35" code="1534" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Forward Move"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_36" code="1535" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="EB BI"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_37" code="1536" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Pulling cancelled"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_38" code="1537" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="ETCS EB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_39" code="1538" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Magnetic shoe command"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_40" code="1539" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Sound Generator Insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_41" code="1540" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="KVB Insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_42" code="1541" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="BRS Insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_43" code="1542" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Armed control insulation (through Z-KARM"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_44" code="1543" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 44"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_45" code="1544" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Loss of monitoring for the boggy instability"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_46" code="1545" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 46"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_47" code="1546" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="TBL insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_48" code="1547" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Speed controller insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_49" code="1548" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 49"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_50" code="1549" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 50"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_51" code="1550" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 51"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_52" code="1551" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 52"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_53" code="1552" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Reserve 53"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_54" code="1553" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="CAB A or ETCS1 (through Z-ETCS) insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_55" code="1554" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="VACMA insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_56" code="1555" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="FU-ETCS1 or FU-ETCS2 insulation (through Z(FU)ETCS)"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_57" code="1556" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Sound Generator B Insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_58" code="1557" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="LZB Insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_59" code="1558" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="CAB B or ETCS2 (through Z-ETCS) insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_60" code="1559" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="URG link1 insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_61" code="1560" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="BP(FZ) TBL/LZBT PB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_62" code="1561" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="URG link2 insulation"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_63" code="1562" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="LZB EB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_64" code="1563" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="TBL EB"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_65" code="1564" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 65"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_66" code="1565" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 66"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_67" code="1566" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 67"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_68" code="1567" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 68"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_69" code="1568" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 69"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_70" code="1569" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 70"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_71" code="1570" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 71"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_72" code="1571" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 72"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_73" code="1572" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 73"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_74" code="1573" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 74"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_75" code="1574" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 75"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_76" code="1575" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 76"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_77" code="1576" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 77"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_78" code="1577" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 78"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_79" code="1578" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 79"/>
+			</variable-discrete>
+			<variable-discrete nom="EntreeLogique_ATESS_80" code="1579" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="FR" libelle="Reserve 80"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_CURRENTSPEED" code="3201" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="532_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="VNSBA_TRAIN_ID" code="131" type="uint32" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Vehicule Number"/>
+				<nom-utilisateur lang="EN" libelle="Vehicule Number"/>
+				<nom-utilisateur lang="FR" libelle="Numéro du véhicule"/>
+				<nom-utilisateur lang="DE" libelle="Vehicule Number"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_697" code="697" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="533_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_698" code="698" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="534_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_699" code="699" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="535_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_700" code="700" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="536_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_701" code="701" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="537_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_702" code="702" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="538_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_703" code="703" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="703_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_704" code="704" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="704_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_706" code="706" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="706_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_707" code="707" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="707_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_705" code="705" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="705_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_675" code="675" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Logischer Eingang CAN 01"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN 01"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique CAN 01"/>
+				<nom-utilisateur lang="DE" libelle="Logischer Eingang CAN 01"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_676" code="676" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Fahrgastnotbremse"/>
+				<nom-utilisateur lang="EN" libelle="Passenger alarm signal"/>
+				<nom-utilisateur lang="FR" libelle="Signal d'alarme passagers"/>
+				<nom-utilisateur lang="DE" libelle="Fahrgastnotbremse"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_677" code="677" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="FR 1 besetzt"/>
+				<nom-utilisateur lang="EN" libelle="Cab 1 occupied"/>
+				<nom-utilisateur lang="FR" libelle="Cabine 1 occupé"/>
+				<nom-utilisateur lang="DE" libelle="FR 1 besetzt"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_678" code="678" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="FR 2 besetzt"/>
+				<nom-utilisateur lang="EN" libelle="Cab 2 occupied"/>
+				<nom-utilisateur lang="FR" libelle="Cabine 2 occupé"/>
+				<nom-utilisateur lang="DE" libelle="FR 2 besetzt"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_679" code="679" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Fahrzeug geführt"/>
+				<nom-utilisateur lang="EN" libelle="Vehicle towed"/>
+				<nom-utilisateur lang="FR" libelle="Véhicule mené"/>
+				<nom-utilisateur lang="DE" libelle="Fahrzeug geführt"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_680" code="680" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Rücksetzten Tageskilometer"/>
+				<nom-utilisateur lang="EN" libelle="Journey reset (m)"/>
+				<nom-utilisateur lang="FR" libelle="Remis à zéro parcours (m)"/>
+				<nom-utilisateur lang="DE" libelle="Rücksetzten Tageskilometer"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_681" code="681" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Soll-Fahrrichtung 1"/>
+				<nom-utilisateur lang="EN" libelle="Order of move direction 1"/>
+				<nom-utilisateur lang="FR" libelle="Consigne sens de marche direction 1"/>
+				<nom-utilisateur lang="DE" libelle="Soll-Fahrrichtung 1"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_682" code="682" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Soll-Fahrrichtung 1"/>
+				<nom-utilisateur lang="EN" libelle="Order of move direction 2"/>
+				<nom-utilisateur lang="FR" libelle="Consigne sens de marche direction 2"/>
+				<nom-utilisateur lang="DE" libelle="Soll-Fahrrichtung 1"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_683" code="683" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Türfreigabe Links"/>
+				<nom-utilisateur lang="EN" libelle="Release left doors"/>
+				<nom-utilisateur lang="FR" libelle="Libération portes gauche"/>
+				<nom-utilisateur lang="DE" libelle="Türfreigabe Links"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_684" code="684" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Türfreigabe rechts"/>
+				<nom-utilisateur lang="EN" libelle="Release right doors"/>
+				<nom-utilisateur lang="FR" libelle="Libération portes droites"/>
+				<nom-utilisateur lang="DE" libelle="Türfreigabe rechts"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_685" code="685" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Türen verriegeln"/>
+				<nom-utilisateur lang="EN" libelle="Order of door locking"/>
+				<nom-utilisateur lang="FR" libelle="Ordre verrouillage des portes"/>
+				<nom-utilisateur lang="DE" libelle="Türen verriegeln"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_686" code="686" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Integra Prüfung"/>
+				<nom-utilisateur lang="EN" libelle="Integra test"/>
+				<nom-utilisateur lang="FR" libelle="Essai Integra"/>
+				<nom-utilisateur lang="DE" libelle="Integra Prüfung"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_687" code="687" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Schnellbremsung"/>
+				<nom-utilisateur lang="EN" libelle="Emergency brake"/>
+				<nom-utilisateur lang="FR" libelle="Freinage d'urgence"/>
+				<nom-utilisateur lang="DE" libelle="Schnellbremsung"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_688" code="688" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="FGNB überbrückt"/>
+				<nom-utilisateur lang="EN" libelle="Passenger alarm signal masked"/>
+				<nom-utilisateur lang="FR" libelle="Signal d'alarme passagers ponté"/>
+				<nom-utilisateur lang="DE" libelle="FGNB überbrückt"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_689" code="689" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Fahrschalter Position Null"/>
+				<nom-utilisateur lang="EN" libelle="Lever Pull /Braking pos. zero"/>
+				<nom-utilisateur lang="FR" libelle="Manipulateur Traction /Freinage pos. zéro"/>
+				<nom-utilisateur lang="DE" libelle="Fahrschalter Position Null"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_690" code="690" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Prüfung NBA"/>
+				<nom-utilisateur lang="EN" libelle="NBA test"/>
+				<nom-utilisateur lang="FR" libelle="Essai NBA"/>
+				<nom-utilisateur lang="DE" libelle="Prüfung NBA"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_691" code="691" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Logischer Eingang CAN 17"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN 17"/>
+				<nom-utilisateur lang="FR" libelle="Actionnement pédale homme-mort PdC1"/>
+				<nom-utilisateur lang="DE" libelle="Logischer Eingang CAN 17"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_692" code="692" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Logischer Eingang CAN 18"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN 18"/>
+				<nom-utilisateur lang="FR" libelle="Actionnement pédale homme-mort PdC2"/>
+				<nom-utilisateur lang="DE" libelle="Logischer Eingang CAN 18"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_693" code="693" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Logischer Eingang CAN 19"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN 19"/>
+				<nom-utilisateur lang="FR" libelle="Présence active mécanicien"/>
+				<nom-utilisateur lang="DE" libelle="Logischer Eingang CAN 19"/>
+			</variable-discrete>
+			<variable-discrete nom="Unused_694" code="694" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="Logischer Eingang CAN 20"/>
+				<nom-utilisateur lang="EN" libelle="Digital Input CAN 20"/>
+				<nom-utilisateur lang="FR" libelle="Entrée logique CAN 20"/>
+				<nom-utilisateur lang="DE" libelle="Logischer Eingang CAN 20"/>
+			</variable-discrete>
+			<variable-discrete nom="Unsused_695" code="695" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="695_unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_UTC_TIME" code="3200" type="uint32" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+				<nom-utilisateur lang="EN" libelle="unused"/>
+				<nom-utilisateur lang="FR" libelle="unused"/>
+				<nom-utilisateur lang="DE" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_DISTANCETRIG" code="3202" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_COUNTRYOPERAT" code="3203" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_COUNTRYVOLTAGE" code="3204" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_VARIANT" code="3205" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_STATUS" code="3206" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_DRIVERACTION" code="3207" type="int16" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_C_DRUCK_DG1" code="3208" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_C_DRUCK_DG2" code="3209" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_HL_DRUCK" code="3211" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_CURRENTLIMIT" code="3212" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="F_ZSGM_REC_ANST_GSVENTILE" code="3210" type="uint8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="unused"/>
+			</variable-discrete>
+			<variable-discrete nom="Para_mission_Agent" code="5300" type="String" poids-1er-octet="MSB" poids-1er-bit="MSB" taille="10">
+				<nom-utilisateur lang="DEF" libelle="Agent"/>
+			</variable-discrete>
+			<variable-discrete nom="Para_mission_Depot" code="5301" type="String" poids-1er-octet="MSB" poids-1er-bit="MSB" taille="4">
+				<nom-utilisateur lang="DEF" libelle="Dépôt"/>
+			</variable-discrete>
+			<variable-discrete nom="Para_mission_Depart" code="5302" type="String" poids-1er-octet="MSB" poids-1er-bit="MSB" taille="4">
+				<nom-utilisateur lang="DEF" libelle="Départ"/>
+			</variable-discrete>
+			<variable-discrete nom="Para_mission_Arrivee" code="5303" type="String" poids-1er-octet="MSB" poids-1er-bit="MSB" taille="4">
+				<nom-utilisateur lang="DEF" libelle="Arrivée"/>
+			</variable-discrete>
+			<variable-discrete nom="Para_mission_Via" code="5304" type="String" poids-1er-octet="MSB" poids-1er-bit="MSB" taille="4">
+				<nom-utilisateur lang="DEF" libelle="Via"/>
+			</variable-discrete>
+			<variable-discrete nom="Num_train" code="5305" type="String" poids-1er-octet="MSB" poids-1er-bit="MSB" taille="8">
+				<nom-utilisateur lang="DEF" libelle="Numéro de train"/>
+			</variable-discrete>
+			<variable-discrete nom="BL_locale" code="5306" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="BL locale"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="0" label="hors service"/>
+					<table-labels valeur="1" label="en service"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-discrete nom="BT" code="5307" type="boolean8" poids-1er-octet="MSB" poids-1er-bit="MSB">
+				<nom-utilisateur lang="DEF" libelle="BT"/>
+				<liste-tablelabels lang="DEF">
+					<table-labels valeur="0" label="Disparition tension BT (Temporisation 50 s)"/>
+					<table-labels valeur="1" label="Apparition tension BT"/>
+				</liste-tablelabels>
+			</variable-discrete>
+			<variable-analogique nom="VNSBA_HEURE_MINUIT_10MS" code="14" type="uint24" coef-directeur="10" offset="0" unite="ms">
+				<nom-utilisateur lang="DEF" libelle="Uhrzeit"/>
+				<nom-utilisateur lang="EN" libelle="Time"/>
+				<nom-utilisateur lang="FR" libelle="Heure"/>
+				<nom-utilisateur lang="DE" libelle="Uhrzeit"/>
+			</variable-analogique>
+			<variable-analogique nom="Date" code="2" type="uint16" coef-directeur="1" offset="0" unite="days">
+				<nom-utilisateur lang="DEF" libelle="Datum"/>
+				<nom-utilisateur lang="EN" libelle="Date"/>
+				<nom-utilisateur lang="FR" libelle="Date"/>
+				<nom-utilisateur lang="DE" libelle="Datum"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_HEURE_MINUIT_10MS_LATCH" code="15" type="uint24" coef-directeur="10" offset="0" unite="ms">
+				<nom-utilisateur lang="DEF" libelle="Latch Uhrzeit"/>
+				<nom-utilisateur lang="EN" libelle="Latch Time"/>
+				<nom-utilisateur lang="FR" libelle="Latch Time"/>
+				<nom-utilisateur lang="DE" libelle="Latch Uhrzeit"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_DATE_LATCH" code="16" type="uint16" coef-directeur="1" offset="0" unite="days">
+				<nom-utilisateur lang="DEF" libelle="Latch Datum"/>
+				<nom-utilisateur lang="EN" libelle="Latch Date"/>
+				<nom-utilisateur lang="FR" libelle="Latch Date"/>
+				<nom-utilisateur lang="DE" libelle="Latch Datum"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_VITESSE_A_ENREGISTRER" code="10" type="uint16" coef-directeur="1" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="speed (from EVC)"/>
+			</variable-analogique>
+			<variable-analogique nom="Distance" code="9" type="uint24" coef-directeur="0.001" offset="0" unite="km">
+				<nom-utilisateur lang="DEF" libelle="Entfernung"/>
+				<nom-utilisateur lang="EN" libelle="Distance"/>
+				<nom-utilisateur lang="FR" libelle="Distance"/>
+				<nom-utilisateur lang="DE" libelle="Entfernung"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana1" code="670" type="uint16" coef-directeur="1" offset="0" unite="mBar">
+				<nom-utilisateur lang="DEF" libelle="Druck Hauptleitung"/>
+				<nom-utilisateur lang="FR" libelle="Pression CG"/>
+				<nom-utilisateur lang="EN" libelle="CG Pressure"/>
+				<nom-utilisateur lang="DE" libelle="Druck Hauptleitung"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana2" code="671" type="int16" coef-directeur="0.1" offset="0" unite="%">
+				<nom-utilisateur lang="DEF" libelle="Fahr/Brems sollwert"/>
+				<nom-utilisateur lang="FR" libelle="Consigne manip. Traction-Freinage"/>
+				<nom-utilisateur lang="EN" libelle="Order lever Pull-Braking"/>
+				<nom-utilisateur lang="DE" libelle="Fahr/Brems sollwert"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana3" code="672" type="uint16" coef-directeur="0.1" offset="0" unite="km/h">
+				<nom-utilisateur lang="DEF" libelle="FLG v-Ist "/>
+				<nom-utilisateur lang="FR" libelle="Vitesse actuelle contrôle commande"/>
+				<nom-utilisateur lang="EN" libelle="Current speed control order"/>
+				<nom-utilisateur lang="DE" libelle="FLG v-Ist "/>
+			</variable-analogique>
+			<variable-analogique nom="Ana4" code="673" type="uint32" coef-directeur="1" offset="0" unite="dam">
+				<nom-utilisateur lang="DEF" libelle="km-Stand"/>
+				<nom-utilisateur lang="FR" libelle="Kilométrage "/>
+				<nom-utilisateur lang="EN" libelle="Mileage"/>
+				<nom-utilisateur lang="DE" libelle="km-Stand"/>
+			</variable-analogique>
+			<variable-analogique nom="Ana5" code="674" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_01" code="3100" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_02" code="3101" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_03" code="3102" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_04" code="3103" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_05" code="3104" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_06" code="3105" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_07" code="3106" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_08" code="3107" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_09" code="3108" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_10" code="3109" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_11" code="3110" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_12" code="3111" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_13" code="3112" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_14" code="3113" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_15" code="3114" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_16" code="3115" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_17" code="3116" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_18" code="3117" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_19" code="3118" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_20" code="3119" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_21" code="3120" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_22" code="3121" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_23" code="3122" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_24" code="3123" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-analogique nom="VNSBA_CAN_AI_25" code="3124" type="uint16" coef-directeur="1" offset="0" unite="-">
+				<nom-utilisateur lang="DEF" libelle="Analoger Eingang CAN 5"/>
+				<nom-utilisateur lang="FR" libelle="Entrée analogique CAN 5"/>
+				<nom-utilisateur lang="EN" libelle="Analog Input CAN 5"/>
+				<nom-utilisateur lang="DE" libelle="Analoger Eingang CAN 5"/>
+			</variable-analogique>
+			<variable-complexe nom="MVB_PORT19_EW_ATBL_EW_DSK" code="3300" taille="32">
+				<nom-utilisateur lang="DEF" libelle="EW_ATBL_EW_DSK"/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte0bit7to1" type="reserved" taille="7">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte0bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="Freshness bit"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte1" type="boolean8">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_MESSAGE1_DSK"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte2" type="boolean8">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_MESSAGE2_DSK"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte3" type="boolean8">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_MESSAGE3_DSK"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte4" type="boolean8">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_MESSAGE4_DSK"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte5" type="boolean8">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_MESSAGE5_DSK"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte6" type="boolean8">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_MESSAGE6_DSK"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte7" type="boolean8">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_MESSAGE7_DSK"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte8" type="uint16">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_ATB_Vist"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT19_EW_ATBL_EW_DSK.Byte10to31" type="reserved" taille="176">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2" code="3301" taille="32">
+				<nom-utilisateur lang="DEF" libelle=""/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte0_to_9" type="reserved" taille="80">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte10bit7_to_3" type="reserved" taille="5">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte10bit2" type="boolean1">
+						<!--libelle MVB = F_ZSGM_BedFuehrerbremse-->
+						<nom-utilisateur lang="DEF" libelle="I - [Bed.FBr.]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="I"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte10bit1_to_bit0" type="reserved" taille="2">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte11to14" type="reserved" taille="32">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte15bit7_to_bit5" type="reserved" taille="3">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte15bit4" type="boolean1">
+						<!--libelle MVB = F_ZSGM_Drehrichtung-->
+						<nom-utilisateur lang="DEF" libelle="r - [Drehrich]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="r"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte15bit3_to_0" type="reserved" taille="4">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte16bit7" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_Fahrgastnotbremse"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte16bit6_to_3" type="reserved" taille="4">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte16bit2_to_1" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_AGW_ZSGM_Zugsich2_chk"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="erroneous or suspicious"/>
+							<table-labels valeur="1" label="assumed to be correct"/>
+							<table-labels valeur="2" label="imposed value"/>
+							<table-labels valeur="3" label="undefined"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte16bit0" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT21_EW_ZSGM_EW_Zugsich_2.Byte17_to_31" type="reserved" taille="120">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1" code="3302" taille="32">
+				<nom-utilisateur lang="DEF" libelle=""/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1.Byte0bit7_to_2" type="reserved" taille="6">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1.Byte0bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_Data_Valid"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1.Byte0bit0" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1.Byte1bit7_to_2" type="reserved" taille="6">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1.Byte1bit1_to_0" type="intXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_AGW_ZSGM_Zugsich1_chk"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-analogique nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1.Byte2_to_3" type="uint16" coef-directeur="0.015625" unite="Km/h">
+						<!--LibelleMVB = F_ZSGM_Zugsich_vist-->
+						<nom-utilisateur lang="DEF" libelle="Vist"/>
+					</variable-analogique>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1.Byte4_to_9" type="reserved" taille="48">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1.Byte10to11" type="uint16">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_Zugsich_Weg : current distance"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1.Byte12to17" type="uintXbits" taille="48">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_Zugsich_Zeit: Time in seconds"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT40_EW_ZSGM_EW_Zugsich_1.Byte18to31" type="reserved" taille="112">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_Zugsich_Zeit: Time in seconds"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT61_EW_ATBL_EW_DIS_1" code="3303" taille="32">
+				<nom-utilisateur lang="DEF" libelle="EW_ATBL_EW_DIS_1"/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT61_EW_ATBL_EW_DIS_1.Byte0_to_1" type="uint16">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_MMI_TS_1: Time stamp of the 32CRC coding"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT61_EW_ATBL_EW_DIS_1.Byte2_to_3" type="uint16">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_Trainbr_perc_dr_cf"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT61_EW_ATBL_EW_DIS_1.Byte4_to_5" type="uint16">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_Trainlength_dr_cf"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT61_EW_ATBL_EW_DIS_1.Byte6_to_27" type="reserved" taille="176">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT61_EW_ATBL_EW_DIS_1.Byte28_to_31" type="String" taille="4">
+						<nom-utilisateur lang="DEF" libelle="F_ATBL_MMI_CRC_1"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT500_EW_LZB_Telegramm1" code="3304" taille="32">
+				<nom-utilisateur lang="DEF" libelle=""/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte0_to_1" type="reserved" taille="16">
+						<nom-utilisateur lang="DEF" libelle="F_LZB__Zeitstempel_T1"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte2_to_9" type="reserved" taille="64">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte10bit7_to4" type="reserved" taille="4">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte10bit3_to_0" type="BCD4">
+						<!--libelleMVB="F_LZB__BetriebsartMaster"-->
+						<nom-utilisateur lang="DEF" libelle="BETRART"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="0 = keine Überwachung"/>
+							<table-labels valeur="1" label="1 = passiv"/>
+							<table-labels valeur="2" label="2 = w (Wendezug)"/>
+							<table-labels valeur="3" label="3 = P (Vü100)"/>
+							<table-labels valeur="4" label="4 = E (PZB)"/>
+							<table-labels valeur="5" label="5 = (frei)"/>
+							<table-labels valeur="6" label="6 = Rangieren ohne LZB "/>
+							<table-labels valeur="7" label="7 = Rangieren mit LZB"/>
+							<table-labels valeur="8" label="8 = LZB (L72)"/>
+							<table-labels valeur="9" label="9 = LZB (CE 1)"/>
+							<table-labels valeur="10" label="10 = LZB (CE 2)"/>
+							<table-labels valeur="11" label="11 = LZB (S-Bahn)"/>
+							<table-labels valeur="12" label="Reserved"/>
+							<table-labels valeur="13" label="Reserved"/>
+							<table-labels valeur="14" label="Reserved"/>
+							<table-labels valeur="15" label="Reserved"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte11bit7_to_6" type="reserved" taille="2">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte11bit5" type="boolean1">
+						<!--libelleMVB="F_LZB__HP_Ueberfahren"-->
+						<nom-utilisateur lang="DEF" libelle="H - [Hp-Ue]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="H"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte11bit4_to_3" type="reserved" taille="2">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte11bit2" type="boolean1">
+						<!--libelleMVB="F_LZB__Funktionspruefung"-->
+						<nom-utilisateur lang="DEF" libelle="P [Zfr Fpru]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="P"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte11bit1_to_0" type="reserved" taille="2">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte12_to_14" type="reserved" taille="24">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte15bit7_to_4" type="BCD4">
+						<!--libelleMVB="F_LZB__LM_Ue"-->
+						<nom-utilisateur lang="DEF" libelle="LMUE "/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="0 = Fehler"/>
+							<table-labels valeur="1" label="1 = (frei)"/>
+							<table-labels valeur="2" label='2 = LM "Ü" dunkel'/>
+							<table-labels valeur="3" label="3 = Ü Dauerlicht"/>
+							<table-labels valeur="4" label="4 = (frei)"/>
+							<table-labels valeur="5" label="5 = Ü Blinklicht Frequenz 1"/>
+							<table-labels valeur="6" label="6 = Ü Blinklicht Frequenz 2"/>
+							<table-labels valeur="7" label="Symbol entfernen / dunkel (nicht
+verwendet)"/>
+							<table-labels valeur="8" label="Reserved"/>
+							<table-labels valeur="9" label="Reserved"/>
+							<table-labels valeur="10" label="Reserved"/>
+							<table-labels valeur="11" label="Reserved"/>
+							<table-labels valeur="12" label="Reserved"/>
+							<table-labels valeur="13" label="Blinken Frequenz 1 invers"/>
+							<table-labels valeur="14" label="Blinken Frequenz 2 invers"/>
+							<table-labels valeur="15" label="Reserved"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte15bit3_to_0" type="reserved" taille="4">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte16_to_21" type="reserved" taille="48">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte22bit7" type="boolean1">
+						<!--libelleMVB="F_LZB__Taste_Wachsam"-->
+						<nom-utilisateur lang="DEF" libelle="W [Zw Wachs]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="W"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte22bit6" type="boolean1">
+						<!--libelleMVB="F_LZB__Taste_Frei"-->
+						<nom-utilisateur lang="DEF" libelle="F [Zfr Frei]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="F"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte22bit5" type="boolean1">
+						<!--libelleMVB="F_LZB__Taste_Befehl"-->
+						<nom-utilisateur lang="DEF" libelle="B [Zb Befehl]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="B"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte22bit4" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte22bit3" type="boolean1">
+						<!--libelleMVB="F_LZB__HLL_Gefuellt"-->
+						<nom-utilisateur lang="DEF" libelle="L [Zl Luft]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="L"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte22bit2" type="boolean1">
+						<!--libelleMVB="F_LZB__Indusi_2000Hz"-->
+						<nom-utilisateur lang="DEF" libelle="z [2000Hz]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="z"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte22bit1" type="boolean1">
+						<!--libelleMVB="F_LZB__Indusi_1000Hz"-->
+						<nom-utilisateur lang="DEF" libelle="V [Zv 1000Hz]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="V"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte22bit0" type="boolean1">
+						<!--libelleMVB="F_LZB__Indusi_500Hz"-->
+						<nom-utilisateur lang="DEF" libelle="G [Zg 500Hz]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="G"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte23bit7" type="boolean1">
+						<!--libelleMVB="F_LZB__LZB_StoerSchalter"-->
+						<nom-utilisateur lang="DEF" libelle="L [LZBStatus]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="L"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte23bit6" type="boolean1">
+						<!--libelleMVB="F_LZB__Ind_StoerSchalter"-->
+						<nom-utilisateur lang="DEF" libelle="i [Störaus]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="i"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte23bit5" type="boolean1">
+						<!--libelleMVB="F_LZB__ZB_1000Hz"-->
+						<nom-utilisateur lang="DEF" libelle="v [Zg1 1000]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="v"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte23bit4" type="boolean1">
+						<!--libelleMVB="F_LZB__ZB_500Hz"-->
+						<nom-utilisateur lang="DEF" libelle="g [Zg2 500]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="g"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte23bit3" type="boolean1">
+						<!--libelleMVB="F_LZB__Ind_Restriktiv"-->
+						<nom-utilisateur lang="DEF" libelle="ü [Üw.rest]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="ü"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte23bit2" type="boolean1">
+						<!--libelleMVB="F_LZB__Zugart_O"-->
+						<nom-utilisateur lang="DEF" libelle="O [Zo_obere]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="O"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte23bit1" type="boolean1">
+						<!--libelleMVB="F_LZB__Zugart_M"-->
+						<nom-utilisateur lang="DEF" libelle="M [Zm_mittl]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="M"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte23bit0" type="boolean1">
+						<!--libelleMVB="F_LZB__Zugart_U"-->
+						<nom-utilisateur lang="DEF" libelle="U [Zu_unter]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="U"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte24bit7_to_1" type="reserved" taille="7">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte24bit0" type="boolean1">
+						<!--libelleMVB="F_LZB__Personalwechsel"-->
+						<nom-utilisateur lang="DEF" libelle="p [Pwechsel]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="p"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte25bit7_to_4" type="reserved" taille="4">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte25bit3" type="boolean1">
+						<!--libelleMVB="F_LZB__Fuehrerstand_2"-->
+						<nom-utilisateur lang="DEF" libelle="2 [Zf2 Fst2]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="2"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte25bit2" type="boolean1">
+						<!--libelleMVB="F_LZB__Fuehrerstand_1"-->
+						<nom-utilisateur lang="DEF" libelle="1 [Zf1 Fst1]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="1"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte25bit1" type="boolean1">
+						<!--libelleMVB="F_LZB__Vziel_Sziel_dunkel"-->
+						<nom-utilisateur lang="DEF" libelle="D Dunkel"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="D"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte25bit0" type="boolean1">
+						<!--libelleMVB="F_LZB__Zwangsbremse"-->
+						<nom-utilisateur lang="DEF" libelle="Z [Zz Z Br.]"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="-"/>
+							<table-labels valeur="1" label="Z"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte26_to_27" type="reserved" taille="16">
+						<nom-utilisateur lang="DEF" libelle="F_LZB__Zeitstempel_T1impl"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT500_EW_LZB_Telegramm1.byte28_to_31" type="reserved" taille="32">
+						<nom-utilisateur lang="DEF" libelle="F_LZB__CRC_T1"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT501_EW_LZB_Telegramm2" code="3305" taille="32">
+				<nom-utilisateur lang="DEF" libelle=""/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte0_to_1" type="uint16">
+						<nom-utilisateur lang="DEF" libelle="F_LZB__Zeitstempel_T2"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte2_to_7" type="reserved" taille="48">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte8" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="F_LZB__Bremsverzoegerung"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte9_to_16" type="reserved" taille="64">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte17bit7_to_4" type="reserved" taille="4">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte17bit3_to_0" type="BCD4">
+						<!--Libelle MVB = F_LZB__ZD_Bremsart-->
+						<nom-utilisateur lang="DEF" libelle="BRA"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte18" type="uint8">
+						<!--Libelle MVB = F_LZB__ZD_Bremshunderstel-->
+						<nom-utilisateur lang="DEF" libelle="BRH"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte19" type="uint8">
+						<!--Libelle MVB = F_LZB__ZD_Vmax-->
+						<nom-utilisateur lang="DEF" libelle="VMZ"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte20" type="uint8">
+						<!--Libelle MVB = F_LZB__ZD_Zuglaenge-->
+						<nom-utilisateur lang="DEF" libelle="ZL"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte21_to_27" type="reserved" taille="56">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT501_EW_LZB_Telegramm2.byte28_to_31" type="uint32">
+						<nom-utilisateur lang="DEF" libelle="F_LZB__CRC_T2"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT502_EW_LZB_Telegramm3" code="3306" taille="32">
+				<nom-utilisateur lang="DEF" libelle="EW_LZB_Telegramm3"/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte0" type="uint16">
+						<nom-utilisateur lang="DEF" libelle="F_LZB__Zeitstempel_T3"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte2_to_14" type="reserved" taille="104">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte15bit7" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="S8/Wart"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte15bit6" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="S7"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte15bit5" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="S6/Rech"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte15bit4" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="S5"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte15bit3" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="S4"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte15bit2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="S3/LL"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte15bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="S2/Wegm"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte15bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="S1/Indus"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT502_EW_LZB_Telegramm3.byte16_to_31" type="reserved" taille="128">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT505_EW_LZB_Telegramm6" code="3307" taille="32">
+				<nom-utilisateur lang="DEF" libelle="EW_LZB_Telegramm6"/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT505_EW_LZB_Telegramm6.byte0_to_1" type="uint16">
+						<nom-utilisateur lang="DEF" libelle="F_LZB__Zeitstempel_T6"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT505_EW_LZB_Telegramm6.byte2" type="reserved" taille="8">
+						<nom-utilisateur lang="DEF" libelle="spare"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT505_EW_LZB_Telegramm6.byte3bit2_to_7" type="reserved" taille="6">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT505_EW_LZB_Telegramm6.byte3bit1" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="F_LZB__STM_TEST_ACTIVE"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT505_EW_LZB_Telegramm6.byte3bit0" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT505_EW_LZB_Telegramm6.byte4_to_9" type="reserved" taille="48">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT505_EW_LZB_Telegramm6.byte10" type="uint16">
+						<nom-utilisateur lang="DEF" libelle="F_LZB__Zeitstempel_T6impl"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT505_EW_LZB_Telegramm6.byte12_to_15" type="uint32">
+						<nom-utilisateur lang="DEF" libelle="F_LZB_CRC_T6"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT505_EW_LZB_Telegramm6.byte16_to_31" type="reserved" taille="128">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT920_EW_ZSGM_F_an_G" code="3308" taille="32">
+				<nom-utilisateur lang="DEF" libelle="EW_ZSGM_F_an_G"/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT920_EW_ZSGM_F_an_G.byte0_to_15" type="reserved" taille="128">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT920_EW_ZSGM_F_an_G.byte16bit7_to_6" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_AGW_ZSGM_F_an_G_chk"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT920_EW_ZSGM_F_an_G.byte16bit5_to_4" type="reserved" taille="2">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT920_EW_ZSGM_F_an_G.byte16bit3_to_0" type="BCD4">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_ZugSysVorwahl"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="unknown"/>
+							<table-labels valeur="1" label="15kV DB"/>
+							<table-labels valeur="2" label="15kV SBB"/>
+							<table-labels valeur="3" label="25kV NS"/>
+							<table-labels valeur="4" label="1,5KV NS"/>
+							<table-labels valeur="5" label="25kV SNCB"/>
+							<table-labels valeur="6" label="3kV SNCB"/>
+							<table-labels valeur="7" label="25kV SNCF LGV"/>
+							<table-labels valeur="8" label="25kV SNCF"/>
+							<table-labels valeur="9" label="1,5kV SNCF"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT920_EW_ZSGM_F_an_G.byte17_to_31" type="reserved" taille="120">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT921_EW_DIS1_EW_ATSZ" code="3309" taille="32">
+				<nom-utilisateur lang="DEF" libelle="EW_DIS1_EW_ATSZ"/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte0_to_1" type="String" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_DIS1_SNCF_TfNation"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte2bits7_to_4" type="reserved" taille="4">
+						<nom-utilisateur lang="DEF" libelle="Reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte2bits3_to_2" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_AGW_DIS1_SNCF_chk"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="erroneous or suspicious"/>
+							<table-labels valeur="1" label="assumed to be correct"/>
+							<table-labels valeur="2" label="imposed value"/>
+							<table-labels valeur="3" label="undefined"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte2bits1" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="Reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte2bits0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="F_DIS1_DataValid"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte3" type="reserved" taille="8">
+						<nom-utilisateur lang="DEF" libelle="Reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte4_to_7" type="String" taille="4">
+						<nom-utilisateur lang="DEF" libelle="F_DIS1_SNCF_Depot"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte8_to_11" type="String" taille="4">
+						<nom-utilisateur lang="DEF" libelle="F_DIS1_SNCF_Abfahrt"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte12_to_15" type="String" taille="4">
+						<nom-utilisateur lang="DEF" libelle="F_DIS1_SNCF_Ankunft"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte16_to_19" type="String" taille="4">
+						<nom-utilisateur lang="DEF" libelle="F_DIS1_SNCF_Via"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT921_EW_DIS1_EW_ATSZ.byte20_to_31" type="reserved" taille="96">
+						<nom-utilisateur lang="DEF" libelle="Reserved"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT922_EW_ZSGM_EW_ATSZ" code="3310" taille="32">
+				<nom-utilisateur lang="DEF" libelle="EW_ZSGM_EW_ATSZ"/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT922_EW_ZSGM_EW_ATSZ.byte0" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_CT1_1"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="1" label="Normal position"/>
+							<table-labels valeur="2" label="Power reduction 1"/>
+							<table-labels valeur="4" label="Power reduction 2"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT922_EW_ZSGM_EW_ATSZ.byte1" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_CT1_2"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="1" label="At least one axle blocked"/>
+							<table-labels valeur="2" label="Bogie instability"/>
+							<table-labels valeur="4" label="AFB system active"/>
+							<table-labels valeur="8" label="SAFI inhibition"/>
+							<table-labels valeur="16" label="EB by FIS loop"/>
+							<table-labels valeur="32" label="EB by…"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT922_EW_ZSGM_EW_ATSZ.byte2" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_CT1_3"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="1" label="Switch SB-ventil on isolated position"/>
+							<table-labels valeur="2" label="Switch SBS on isolated position"/>
+							<table-labels valeur="4" label="Switch BGS on isolated position"/>
+							<table-labels valeur="8" label="Switch FÜS on isolated position"/>
+							<table-labels valeur="16" label="Switch Not-Aus-Schleife on isolated position"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT922_EW_ZSGM_EW_ATSZ.byte3" type="uint8">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_CT2"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="1" label="No catenary voltage on train"/>
+							<table-labels valeur="2" label="At least one pantograph raised on train"/>
+							<table-labels valeur="4" label="Braking active"/>
+							<table-labels valeur="8" label="All doors are closed"/>
+							<table-labels valeur="16" label="FIS activation"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT922_EW_ZSGM_EW_ATSZ.byte4bit7b6" type="uintXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_AGW_ZSGM_ATESS_chk"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="erroneous or suspicious"/>
+							<table-labels valeur="1" label="assumed to be correct"/>
+							<table-labels valeur="2" label="imposed value"/>
+							<table-labels valeur="3" label="undefined"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT922_EW_ZSGM_EW_ATSZ.byte4bit5_to_0" type="reserved" taille="6">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT922_EW_ZSGM_EW_ATSZ.byte4bit5_to_31" type="reserved" taille="216">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT923_EW_ZBFM_EW_TFMMI" code="3311" taille="32">
+				<nom-utilisateur lang="DEF" libelle="EW_ZBFM_EW_TFMMI"/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT923_EW_ZBFM_EW_TFMMI.byte0_to_20" type="reserved" taille="168">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT923_EW_ZBFM_EW_TFMMI.byte21bit7b6" type="intXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_AGW_ZSGM_ZBFM_chk"/>
+						<liste-tablelabels lang="DEF">
+							<table-labels valeur="0" label="erroneous or suspicious"/>
+							<table-labels valeur="1" label="assumed to be correct"/>
+							<table-labels valeur="2" label="imposed value"/>
+							<table-labels valeur="3" label="undefined"/>
+						</liste-tablelabels>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT923_EW_ZBFM_EW_TFMMI.byte21bit5_to_3" type="reserved" taille="3">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT923_EW_ZBFM_EW_TFMMI.byte21bi2" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="F_ZBFM_Tf_Notruf_Taste"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT923_EW_ZBFM_EW_TFMMI.byte21bit1" type="reserved" taille="1">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT923_EW_ZBFM_EW_TFMMI.byte21bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="F_ZBFM_SIFA_Ruf_ausgelst"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT923_EW_ZBFM_EW_TFMMI.byte22_to_31" type="reserved" taille="80">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT925_EW_DIS1_EW_BSGM" code="3312" taille="32">
+				<nom-utilisateur lang="DEF" libelle="EW_DIS1_EW_BSGM"/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT925_EW_DIS1_EW_BSGM.byte0_to_3" type="reserved" taille="32">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT925_EW_DIS1_EW_BSGM.byte4_bit7b6" type="intXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_DIS1_SK_WBFreigeben"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT925_EW_DIS1_EW_BSGM.byte4_bit5b4" type="intXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_DIS1_SK_WBSperren"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT925_EW_DIS1_EW_BSGM.byte4_bit3_to_0" type="reserved" taille="4">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT925_EW_DIS1_EW_BSGM.byte5_bit7b6" type="intXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_AGW_DIS1_BSGM_chk"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT925_EW_DIS1_EW_BSGM.byte5_bit5_to_2" type="reserved" taille="4">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT925_EW_DIS1_EW_BSGM.byte5_bit1_to_0" type="intXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_DIS1_SK_WBFreigebenSBBB"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT925_EW_DIS1_EW_BSGM.byte6_to_7" type="reserved" taille="16">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT925_EW_DIS1_EW_BSGM.byte8_to_31" type="reserved" taille="192">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT952_EW_ZSGM_KONFIGINFO_1" code="3313" taille="32">
+				<nom-utilisateur lang="DEF" libelle=""/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT952_EW_ZSGM_KONFIGINFO_1.byte0_to_3" type="uint32">
+						<!--Libelle MVB = F_ZSGM_BetrieblicheNr-->
+						<nom-utilisateur lang="DEF" libelle="Zug-Nr"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT952_EW_ZSGM_KONFIGINFO_1.byte4" type="reserved" taille="8">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT952_EW_ZSGM_KONFIGINFO_1.byte5bit7_to_6" type="intXbits" taille="2">
+						<nom-utilisateur lang="DEF" libelle="F_AGW_ZSGM_KonfInfo_chk"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT952_EW_ZSGM_KONFIGINFO_1.byte5bit5_to_0" type="reserved" taille="6">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT952_EW_ZSGM_KONFIGINFO_1.byte6_to_7" type="reserved" taille="16">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT952_EW_ZSGM_KONFIGINFO_1.byte8_to_11" type="uint32">
+						<!--Libelle MVB = F_ZSGM_TfNummer-->
+						<nom-utilisateur lang="DEF" libelle="TFN"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT952_EW_ZSGM_KONFIGINFO_1.byte12_to_15" type="reserved" taille="32">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT952_EW_ZSGM_KONFIGINFO_1.byte16_to_19" type="uint32">
+						<nom-utilisateur lang="DEF" libelle="F_ZSGM_Wg1UICWgNrEigenVz"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT952_EW_ZSGM_KONFIGINFO_1.byte20_to_31" type="reserved" taille="96">
+						<nom-utilisateur lang="DEF" libelle="reserve"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT893_ETCS_DMI_DATA" code="3314" taille="32">
+				<nom-utilisateur lang="DEF" libelle="ETCS_DMI_DATA"/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT893_ETCS_DMI_DATA.byte0_to_3" type="uint32">
+						<nom-utilisateur lang="DEF" libelle="F_DMI_TrainRunningNumber"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT893_ETCS_DMI_DATA.byte4_to_7" type="uint32">
+						<nom-utilisateur lang="DEF" libelle="F_DMI_DriverId"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT893_ETCS_DMI_DATA.byte8bit7_to_1" type="reserved" taille="7">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT893_ETCS_DMI_DATA.byte8bit0" type="boolean1">
+						<nom-utilisateur lang="DEF" libelle="F_DMI_DataValid"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT893_ETCS_DMI_DATA.byte9_to_31" type="reserved" taille="184">
+						<nom-utilisateur lang="DEF" libelle="Reserved2"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+			<variable-complexe nom="MVB_PORT953_EW_ZSGM_KONFIGINFO_3" code="3315" taille="32">
+				<nom-utilisateur lang="DEF" libelle=""/>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT953_EW_ZSGM_KONFIGINFO_3.byte0_to_15" type="reserved" taille="128">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT953_EW_ZSGM_KONFIGINFO_3.byte16_to_19" type="uint32">
+						<!--libelle MVB = F_ZSGM_Wg1UICWgNrEigTeTZD-->
+						<nom-utilisateur lang="DEF" libelle="Tfz-Nr"/>
+					</variable-discrete>
+				</sous-variable>
+				<sous-variable>
+					<variable-discrete nom="MVB_PORT953_EW_ZSGM_KONFIGINFO_3.byte20_to_31" type="reserved" taille="96">
+						<nom-utilisateur lang="DEF" libelle="reserved"/>
+					</variable-discrete>
+				</sous-variable>
+			</variable-complexe>
+		</liste-variables>
+	</enregistreur>
+	<signature CRC="274c"/>
+</enregistreur-def>

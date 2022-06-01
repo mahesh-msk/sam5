@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="liste-flags">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="flag"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="flag">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.flag"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.flag">
+    <xs:attribute name="id" use="required" type="xs:int"/>
+    <xs:attribute name="nomEvt" use="required" type="xs:string"/>
+    <xs:attribute name="libelle" use="required" type="xs:string"/>
+  </xs:attributeGroup>
+</xs:schema>

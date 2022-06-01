@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<!-- gestion de la configuration d'une vue -->
+ <xs:element name="vue-annotation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="configuration-colonnes-annotations"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="configuration-colonnes-annotations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="col"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="col">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.col"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.col">
+    <xs:attribute name="nom" use="required"/>
+    <xs:attribute name="largeur" use="required"/>
+  </xs:attributeGroup>
+</xs:schema>

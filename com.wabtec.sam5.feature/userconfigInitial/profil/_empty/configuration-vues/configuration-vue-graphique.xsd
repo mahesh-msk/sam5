@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- gestion de la configuration d'une vue -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="vue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="filtre-applique"/>
+        <xs:element minOccurs="0" ref="options"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="filtre-applique">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.filtre-applique"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.filtre-applique">
+    <xs:attribute name="nom" use="required" type="xs:string"/>
+  </xs:attributeGroup>
+  <xs:element name="options">
+    <xs:complexType>
+      <xs:attributeGroup ref="attlist.options"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="attlist.options">
+    <xs:attribute name="axe" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="temps"/>
+          <xs:enumeration value="distance"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="echantillonnage" use="required" type="xs:boolean"/>
+    <xs:attribute name="fond_blanc" use="required" type="xs:boolean"/>
+    <xs:attribute name="legende" use="required" type="xs:boolean"/>
+    <xs:attribute name="marches_escalier" use="required" type="xs:boolean"/>
+    <xs:attribute name="marqueurs" use="required" type="xs:boolean"/>
+    <xs:attribute name="mode" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="ligne"/>
+          <xs:enumeration value="point"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="ref_zero_digit" use="required" type="xs:boolean"/>
+    <xs:attribute name="ruptures_temps" use="required" type="xs:boolean"/>
+    <xs:attribute name="ruptures_distance" use="required" type="xs:boolean"/>
+  </xs:attributeGroup>
+</xs:schema>
