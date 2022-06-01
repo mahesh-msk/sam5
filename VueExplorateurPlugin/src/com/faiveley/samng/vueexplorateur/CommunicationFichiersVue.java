@@ -118,12 +118,16 @@ public class CommunicationFichiersVue {
 		} 
 		else
 		{
+			if (level == 0)
+			{
+				// Display error only for first level (not when folder are empty like myImages...
 			MessageBox msgBox = new MessageBox(Display.getCurrent().getActiveShell(), SWT.ERROR | SWT.OK);
 			msgBox.setText(Messages.getString("WorkspaceLoad.1")); //$NON-NLS-1$
 			
 			msgBox.setMessage(Messages.getString("WorkspaceLoad.2")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
 			
 			msgBox.open();
+			}
 		}
 							
 		// Return the head of the tree
