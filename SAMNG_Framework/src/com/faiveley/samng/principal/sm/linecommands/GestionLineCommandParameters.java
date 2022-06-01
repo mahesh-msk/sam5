@@ -40,6 +40,7 @@ public class GestionLineCommandParameters {
 	private static String filtre = "-filt"; //$NON-NLS-1$
 	private static String rapport = "-rp"; //$NON-NLS-1$
 	private static String clearPersistedState = "-clearPersistedState"; //$NON-NLS-1$
+	private static String nl = "-nl"; //$NON-NLS-1$
 
 	private static String filename_long = "--filename"; //$NON-NLS-1$
 	private static String offsetMessage_long = "--offset"; //$NON-NLS-1$
@@ -54,6 +55,7 @@ public class GestionLineCommandParameters {
 	private static String nomfichier = "";
 	private static int indiceMsg = -1;
 	private static String nomPerspect = "";
+	private static String language = "";
 	private static boolean Annot_Lect_seule = false;
 
 	private static boolean isExport = false;
@@ -186,6 +188,18 @@ public class GestionLineCommandParameters {
 				} else if (args[i].equals(clearPersistedState)) {
 					auMoinsUnArgument = true;
 					// Issue 1101 : Rien de special à faire, géré à la création du workbench
+				}else if (args[i].equals(nl)) {
+					auMoinsUnArgument = true;
+					// si l'argument nom de perspective n'est pas pr�sent
+					if (i >= args.length - 1) {
+						erreur = true;
+						msgErreur = "Error : The language and country after -nl parameter must be specified. Ex : en_US, es_ES, fr_FR";  //$NON-NLS-1$
+						break;
+					} else {
+						language = args[i + 1];
+						i++;
+					}
+					// Issue 1114 : gérer le paramètre -nl
 				} else if (args[i].equals(perspective) || args[i].equals(perspective_long)) {
 					auMoinsUnArgument = true;
 					// si l'argument nom de perspective n'est pas pr�sent
