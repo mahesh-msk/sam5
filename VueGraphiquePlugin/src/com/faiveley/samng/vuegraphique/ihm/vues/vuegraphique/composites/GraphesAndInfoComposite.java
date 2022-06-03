@@ -183,9 +183,12 @@ public class GraphesAndInfoComposite extends Composite implements IZoomChangeLis
 	
 	@Override
 	public void setMenu(Menu menu) {
-		graphe.setMenu(menu);
-		info.setMenu(menu);
-		super.setMenu(menu);
+		if (!isDisposed())
+		{
+			graphe.setMenu(menu);
+			info.setMenu(menu);
+			super.setMenu(menu);
+		}
 	}
 	
 	@Override

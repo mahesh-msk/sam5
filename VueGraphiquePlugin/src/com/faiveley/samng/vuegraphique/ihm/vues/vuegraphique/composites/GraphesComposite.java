@@ -107,7 +107,7 @@ public class GraphesComposite extends Composite {
 				continue;
 			}
 			
-			//si pas de variable renseignées on ne l'ajoute pas			
+			//si pas de variable renseignï¿½es on ne l'ajoute pas			
 			if (!gfc.contientUneVariableRenseignee()) {
 				continue;
 			}
@@ -156,10 +156,13 @@ public class GraphesComposite extends Composite {
 
 	@Override
 	public void setMenu(Menu menu) {
-		for(int i = 0; i<numGraphes; i++) {
-			graphesGui[i].setMenu(menu);
+		if (!isDisposed())
+		{
+			for(int i = 0; i<numGraphes; i++) {
+				graphesGui[i].setMenu(menu);
+			}
+			super.setMenu(menu);
 		}
-		super.setMenu(menu);
 	}
 
 	public void redrawGraphes(boolean redrawCourbes) {
