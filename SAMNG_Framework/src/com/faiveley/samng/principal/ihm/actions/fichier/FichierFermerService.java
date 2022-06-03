@@ -83,7 +83,8 @@ public class FichierFermerService {
 				sura.run();
 			}
 		}
-
+		ActivatorData.getInstance().getGestionnaireMarqueurs().clear();
+		
 		try {
 			ActivatorData.getInstance().getProviderVBVs().getGestionnaireVbvs().enregistrerVBV();
 		} catch (ParseurXMLException e1) {

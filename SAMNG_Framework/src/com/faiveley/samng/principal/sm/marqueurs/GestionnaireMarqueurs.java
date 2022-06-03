@@ -20,7 +20,7 @@ import com.faiveley.samng.principal.sm.repertoires.RepertoiresAdresses;
  * les remarques utilisateurs"
  * @author olivier
  * @version 1.0
- * @created 06-déc.-2007 11:12:40
+ * @created 06-dï¿½c.-2007 11:12:40
  */
 public class GestionnaireMarqueurs {
 	private List<AMarqueur> listeMarqueurs = new Vector<AMarqueur>();
@@ -151,8 +151,8 @@ public class GestionnaireMarqueurs {
 	
 	
 	/**
-	 * charge tous les marqueurs en mémoire en utilisant la classe ParseurMarqueurs
-	 * charge à partir du fichier xml correspondant au fichier binaire
+	 * charge tous les marqueurs en mï¿½moire en utilisant la classe ParseurMarqueurs
+	 * charge ï¿½ partir du fichier xml correspondant au fichier binaire
 	 * 
 	 * @param fichier
 	 */
@@ -223,7 +223,7 @@ public class GestionnaireMarqueurs {
 	}
 
 	/**
-	 * Défini si une sauvegarde des marqueurs est nécessaire
+	 * Dï¿½fini si une sauvegarde des marqueurs est nï¿½cessaire
 	 * @return
 	 */
 	public boolean isModifications(){
@@ -245,10 +245,10 @@ public class GestionnaireMarqueurs {
 	}
 
 	public void clear() {
-//		listeMarqueurs.clear();
-//		mapMarqueurs.clear();
-//		parser=null;
-//		initialListeMarqueurs.clear();
-//		dernierMarqueurAjoute = null;		
+		listeMarqueurs.clear();
+		mapMarqueurs.clear();
+		parser=null;
+		initialListeMarqueurs.clear();
+		dernierMarqueurAjoute = null;		
 	}
 }

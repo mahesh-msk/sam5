@@ -871,6 +871,9 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 	public void selectionChanged(IWorkbenchPart part, ISelection selection) {
 		//avoid handling events sent by this view
 
+		if (markersTable != null && markersTable.isDisposed())
+			return;
+		
 		//positionnement offset
 		if (GestionLineCommandParameters.getIndiceMsg()!=-1 && oneTimeOffset) {
 			try {
@@ -1044,8 +1047,17 @@ IMarqueursListener, ICapturable,IRepereChangedListener,ISaveablePart2, IDataChan
 	}
 
 	public void onDataChange() {
-		if (!this.markersTable.isDisposed()) {
+		if (!this.markersTable.isDisposed()) 
+		{
 			enregistrerConfigurationColonne();
+	
+			// Clear the market table if the number of markers is 0
+			if ((ActivatorData.getInstance().getGestionnaireMarqueurs().getMarqueurs().length == 0))
+			{
+				markersTable.removeAll();
+			}
+
+			updateTable();
 		}
 	}
 
