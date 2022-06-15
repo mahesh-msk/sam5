@@ -30,9 +30,6 @@ public class FichierFermerAction extends Action {
 		} else {
 			FichierFermerService.getInstance().closeFile();
 			
-			// Remove also the window for filter as they are store in the model for a same file.
-			ShowFilterWindowHelper.removeAllFilterWindowsInApplication();
-
 		}
 	}
 	

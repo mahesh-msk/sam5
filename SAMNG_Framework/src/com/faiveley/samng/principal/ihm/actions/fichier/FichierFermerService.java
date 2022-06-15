@@ -20,6 +20,7 @@ import org.eclipse.ui.WorkbenchException;
 
 import com.faiveley.samng.principal.data.ActivatorData;
 import com.faiveley.samng.principal.ihm.Activator;
+import com.faiveley.samng.principal.ihm.actions.filtre.ShowFilterWindowHelper;
 import com.faiveley.samng.principal.ihm.actions.profil.GestionnaireProfil;
 import com.faiveley.samng.principal.ihm.perspectives.PerspectiveAccueil;
 import com.faiveley.samng.principal.ihm.perspectives.PerspectiveGestionDesMissions;
@@ -131,6 +132,10 @@ public class FichierFermerService {
 		ActivatorData.getInstance().getBarAdvisor().setActionsEnabled(false);
 
 		GestionnaireProfil.getInstance().resetProfil();
+		
+		// Remove also the window for filter as they are store in the model for a same file.
+		ShowFilterWindowHelper.removeAllFilterWindowsInApplication();
+
 	}
 		
 	private void closePerspectives(boolean sauvegarderVueAccueil) {
