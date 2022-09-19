@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+   <ListeMission>
+      <Mission id="m0" numero="0">
+         <DateDebut>2010-01-01T00:00:30.26Z</DateDebut>
+         <DateFin>2010-01-01T00:00:32.53Z</DateFin>
+         <OffsetDebut>1918</OffsetDebut>
+         <OffsetFin>5070</OffsetFin>
+         <IdMessageDebut>1918</IdMessageDebut>
+         <ListeSegment>
+            <Segment numero="0">
+               <OffsetDebut>1918</OffsetDebut>
+               <OffsetFin>5070</OffsetFin>
+               <IdMessageDebut>1918</IdMessageDebut>
+               <DateDebut>2010-01-01T00:00:30.26Z</DateDebut>
+               <DateFin>2010-01-01T00:00:32.53Z</DateFin>
+            </Segment>
+         </ListeSegment>
+      </Mission>
+      <Mission id="m1" numero="1">
+         <DateDebut>2019-12-18T11:04:00.88Z</DateDebut>
+         <DateFin>2019-12-18T12:28:00.19Z</DateFin>
+         <OffsetDebut>5070</OffsetDebut>
+         <OffsetFin>190510</OffsetFin>
+         <IdMessageDebut>5070</IdMessageDebut>
+         <ListeSegment>
+            <Segment numero="0">
+               <OffsetDebut>5070</OffsetDebut>
+               <OffsetFin>189374</OffsetFin>
+               <IdMessageDebut>5070</IdMessageDebut>
+               <DateDebut>2019-12-18T11:04:00.88Z</DateDebut>
+               <DateFin>2019-12-18T12:26:43.97Z</DateFin>
+            </Segment>
+            <Segment numero="1">
+               <OffsetDebut>189374</OffsetDebut>
+               <OffsetFin>190510</OffsetFin>
+               <IdMessageDebut>189374</IdMessageDebut>
+               <DateDebut>2019-12-18T12:26:43.97Z</DateDebut>
+               <DateFin>2019-12-18T12:28:00.19Z</DateFin>
+            </Segment>
+         </ListeSegment>
+      </Mission>
+      <Mission id="m2" numero="2">
+         <DateDebut>2010-01-01T00:00:30.66Z</DateDebut>
+         <DateFin>2010-01-01T00:00:30.67Z</DateFin>
+         <OffsetDebut>190510</OffsetDebut>
+         <OffsetFin>190814</OffsetFin>
+         <IdMessageDebut>190510</IdMessageDebut>
+         <ListeSegment>
+            <Segment numero="0">
+               <OffsetDebut>190510</OffsetDebut>
+               <OffsetFin>190814</OffsetFin>
+               <IdMessageDebut>190510</IdMessageDebut>
+               <DateDebut>2010-01-01T00:00:30.66Z</DateDebut>
+               <DateFin>2010-01-01T00:00:30.67Z</DateFin>
+            </Segment>
+         </ListeSegment>
+      </Mission>
+   </ListeMission>
+   <ListeRegoupementTemps>
+      <RegroupementTemps id="r0" numero="0">
+         <Mois>2010-01-01T00:00:30.26Z</Mois>
+         <ListeMission>
+            <Mission reference="m0"/>
+         </ListeMission>
+      </RegroupementTemps>
+      <RegroupementTemps id="r1" numero="1">
+         <Mois>2019-12-18T11:04:00.88Z</Mois>
+         <ListeMission>
+            <Mission reference="m1"/>
+         </ListeMission>
+      </RegroupementTemps>
+      <RegroupementTemps id="r2" numero="2">
+         <Mois>2010-01-01T00:00:30.66Z</Mois>
+         <ListeMission>
+            <Mission reference="m2"/>
+         </ListeMission>
+      </RegroupementTemps>
+   </ListeRegoupementTemps>
+</document>

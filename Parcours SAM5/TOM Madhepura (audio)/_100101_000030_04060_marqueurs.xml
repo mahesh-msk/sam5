@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<liste xsi:noNamespaceSchemaLocation="marqueurs.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <marqueur idMessage="144798" nom="Synchro Horn" commentaire="Horn ON"/>
+</liste>
